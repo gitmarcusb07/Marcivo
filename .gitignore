@@ -1,0 +1,28 @@
+# Secrets — NEVER commit (TMDB key, site configs)
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+backend/dist/
+*.tsbuildinfo
+
+# Runtime data
+HLS_CACHE/
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+test-run.log
+test-run.err.log
+
+# Editor/OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

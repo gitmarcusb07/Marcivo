@@ -1,0 +1,362 @@
+import "dotenv/config";
+import * as dns from "node:dns";
+// api.themoviedb.org's IPv6 path is broken on some networks (ECONNRESET
+// while IPv4 works fine). Prefer IPv4 process-wide so TMDB/AniList/site
+// fetches don't die on the dead v6 path and classification keeps working.
+try { dns.setDefaultResultOrder("ipv4first"); } catch {}
+import express from "express";
+import cors from "cors";
+import { tmdbHome, tmdbSearch, tmdbDetail, tmdbShowcase, tmdbBrowse, tmdbSeason, BrowseCat } from "./tmdb.js";
+import { anilistHome, anilistSearch, anilistDetail } from "./anilist.js";
+import { searchSites, lookupResult, expandExactVariants, expandOne, registerResults } from "./siteSearch.js";
+import {
+  normalizeQuery, classify, groupForClass, groupForPriority, groupSiteIds,
+  originOf, originSiteIds, isExactVersion, sourceNameFor, logSearch, ContentGroup,
+} from "./identity.js";
+import { enqueueResolve, getJob, preResolve, getMetrics } from "./resolver.js";
+import { streamProxy } from "./stream.js";
+import { HLSManager } from "./hls.js";
+import { LITE } from "./lite.js";
+import * as fs from "fs";
+import * as path from "path";
+
+const hls = new HLSManager({
+  cacheDir: process.env.HLS_CACHE_DIR || "./HLS_CACHE",
+  segmentTime: parseInt(process.env.HLS_SEGMENT_TIME || "4", 10),
+  sessionTtl: parseInt(process.env.HLS_SESSION_TTL || "21600", 10),
+  maxJobs: parseInt(process.env.HLS_MAX_CONCURRENT_JOBS || "1", 10),
+  convertTimeout: parseInt(process.env.HLS_CONVERT_TIMEOUT || "7200", 10),
+  progressive: (process.env.HLS_PROGRESSIVE || "true").toLowerCase() !== "false",
+});
+// LITE: no ffmpeg on the free tier — skip the sweeper entirely.
+if (!LITE) {
+  hls.startup();
+  process.on("SIGINT", () => hls.shutdown());
+  process.on("SIGTERM", () => hls.shutdown());
+}
+
+const app = express();
+app.use(cors({ origin: (process.env.FRONTEND_ORIGIN || "*") === "*" ? "*" : (process.env.FRONTEND_ORIGIN || "").split(",") }));
+app.use(express.json({ limit: "256kb" }));
+
+const BUILD = "2026-09-30-fastwatch1";
+
+app.get("/health", (_req, res) => res.json({ ok: true, time: new Date().toISOString(), build: BUILD, lite: LITE }));
+
+app.get("/api/health/sites", async (_req, res) => {
+  const r = await searchSites("test").catch((e) => ({ status: "error", error: String(e).slice(0, 200) }));
+  res.json(r);
+});
+
+app.get("/api/home", async (req, res) => {
+  try {
+    const tab = String(req.query.tab || "mixed");
+    if (tab === "anime") {
+      const a = await anilistHome();
+      return res.json({ tab, anime: a });
+    }
+    if (tab === "movies") {
+      const [m, showcase] = await Promise.all([
+        tmdbHome(),
+        tmdbShowcase().catch(() => ({ trendingWeek: [], popular2026: [], newReleases: [] })),
+      ]);
+      return res.json({ tab, tmdb: m, showcase });
+    }
+    const [m, a] = await Promise.all([
+      tmdbHome().catch((e) => ({ trending: [], moviesPopular: [], seriesPopular: [], moviesTop: [], _error: String(e?.message || e).slice(0, 160) })),
+      anilistHome().catch(() => ({ top: [], seasonal: [] })),
+    ]);
+    res.json({ tab: "mixed", tmdb: m, anime: a });
+  } catch (e: any) {
+    res.status(500).json({ error: String(e?.message || e).slice(0, 300) });
+  }
+});
+
+app.get("/api/search", async (req, res) => {
+  const q = String(req.query.q || "").trim();
+  if (!q) return res.json({ results: [] });
+  const debug = String(req.query.debug || "") === "1";
+  try {
+    // Phase 1: metadata (TMDB movie/series + AniList anime) doubles as the
+    // classifier — zero extra API cost. Phase 2 searches only the matching
+    // source group (anime → PirateXPlay/Gokuhd, else PRMovies/Vega/Rog).
+    const nq = normalizeQuery(q);
+    const [tmdb, anime] = await Promise.all([
+      tmdbSearch(q).catch(() => []),
+      anilistSearch(q).catch(() => []),
+    ]);
+    const cls = classify(nq, tmdb, anime);
+    const group: ContentGroup = groupForClass(cls);
+    // Origin routing: Hollywood movies go to Vegamovies only, Bollywood to
+    // RogMovies only (env-overridable). Anime keeps its own pool; anything
+    // without a clear origin uses the full group pool.
+    const origin = cls === "anime" ? "" : originOf(tmdb);
+    const originSites = originSiteIds(origin as any);
+    const siteIds = originSites.length ? originSites : groupSiteIds(group);
+    const sites = await searchSites(q, siteIds, undefined, { group, debug })
+      .catch(() => ({ status: "unavailable", results: [] }));
+    const list = (sites as any)?.results || [];
+    const grouped = (sites as any)?.grouped || [];
+    try { if ((sites as any)?.status === "ok") preResolve(list.map((r: any) => r.url)); } catch {}
+    logSearch(q, nq, cls, group, ((sites as any)?.per_site || []), list.length, grouped.length || list.length,
+      (grouped.length ? grouped : list).map((r: any) => `${r.title || ""}`.slice(0, 60)));
+    const out: any = { query: q, tmdb, anime, sites: list, grouped, siteStatus: (sites as any)?.status || "unavailable", classification: cls, group };
+    if (debug && (sites as any)?.debug) out.debug = (sites as any).debug;
+    res.json(out);
+  } catch (e: any) {
+    res.status(500).json({ error: String(e?.message || e).slice(0, 300) });
+  }
+});
+
+app.get("/api/detail/:kind/:id", async (req, res) => {
+  const { kind, id } = req.params;
+  try {
+    if (kind === "anime") return res.json(await anilistDetail(id));
+    if (kind === "movie" || kind === "tv") return res.json(await tmdbDetail(kind, id));
+    res.status(400).json({ error: "kind must be movie|tv|anime" });
+  } catch (e: any) {
+    res.status(500).json({ error: String(e?.message || e).slice(0, 300) });
+  }
+});
+
+app.get("/api/tv/:id/season/:n", async (req, res) => {
+  try {
+    res.json(await tmdbSeason(req.params.id, parseInt(req.params.n, 10)));
+  } catch (e: any) {
+    res.status(500).json({ error: String(e?.message || e).slice(0, 300) });
+  }
+});
+
+app.get("/api/browse/:cat", async (req, res) => {
+  const cat = String(req.params.cat || "") as BrowseCat;
+  if (!["movies", "series", "hollywood", "bollywood"].includes(cat)) {
+    return res.status(400).json({ error: "cat must be movies|series|hollywood|bollywood" });
+  }
+  try {
+    res.json(await tmdbBrowse(cat));
+  } catch (e: any) {
+    res.status(500).json({ error: String(e?.message || e).slice(0, 300) });
+  }
+});
+
+app.get("/api/site-search", async (req, res) => {
+  const q = String(req.query.q || "").trim();
+  if (!q) return res.json({ status: "empty", results: [] });
+  const debug = String(req.query.debug || "") === "1";
+  // Explicit site filter (e.g. Hollywood->[4,1]) wins; otherwise the
+  // content-group pool applies: anime → PirateXPlay/Gokuhd only,
+  // movie → PRMovies/Vega/Rog only.
+  let sites = String(req.query.sites || "").split(",").map((s) => parseInt(s.trim(), 10)).filter((n) => n >= 1 && n <= 8);
+  const group = groupForPriority(String(req.query.priority || ""));
+  if (!sites.length && group) sites = groupSiteIds(group);
+  try {
+    const val: any = await searchSites(q, sites.length ? sites : undefined, undefined, group ? { group, debug } : { debug });
+    // Exact mode (detail page): the app knows the clicked title+year+kind
+    // from TMDB/AniList — keep ONLY versions of that exact movie. Similar
+    // names, other years, and other titles are dropped. The unfiltered cache
+    // stays intact; pre-resolution warms exactly what the user will tap.
+    const exact = String(req.query.exact || "") === "1";
+    const exactYear = String(req.query.year || "").trim();
+    const exactType = String(req.query.type || "").trim().toLowerCase();
+    if (val?.status === "ok" && exact) {
+      const runExact = async (searchQ: string) => {
+        const v: any = searchQ === q ? val : await searchSites(searchQ, sites.length ? sites : undefined, undefined, group ? { group, debug } : { debug });
+        if (v?.status !== "ok") return v;
+        const raw = (v.results || []).length;
+        const kept = (v.results || []).filter((r: any) =>
+          isExactVersion(String(r.title || ""), String(r.year || ""), String(r.type || r.kind || ""), { title: q, year: exactYear || undefined, type: exactType || undefined })
+        );
+        // Fan out: one button per quality variant on the content page(s),
+        // exactly like the site lists them. Falls back to base rows when the
+        // page layout yields nothing (still playable).
+        let rows = kept;
+        let expanded = false;
+        try {
+          const ex = await expandExactVariants(kept, { title: q, year: exactYear || undefined, type: exactType || undefined });
+          if (ex.expanded) {
+            rows = ex.rows;
+            try { registerResults(ex.rows as any); } catch {}
+            expanded = true;
+          }
+        } catch {}
+        v.results = rows;
+        const keep = new Set(rows.map((r: any) => r.content_id));
+        v.grouped = (v.grouped || []).filter((g: any) => keep.has(g.content_id));
+        (v as any)._exact = { before: raw, expanded };
+        return v;
+      };
+      let out: any = await runExact(q);
+      // Recall retry: the site's own search can miss long titles — retry once
+      // with a shortened query ("Name: Subtitle" → "Name"), still filtered
+      // against the FULL title so precision never drops.
+      let searched = q;
+      if (!(out.results || []).length) {
+        const short = q.split(/[:–—\-|(]/)[0].trim().split(/\s+/).slice(0, 4).join(" ");
+        if (short && short.toLowerCase() !== q.toLowerCase()) {
+          const retry: any = await runExact(short).catch(() => null);
+          if (retry && (retry.results || []).length) {
+            out = retry;
+            searched = short;
+            try { registerResults((out.results || []) as any); } catch {}
+          }
+        }
+      }
+      const usedIds = sites.length ? sites : [];
+      // Merge retry payload into the response shape.
+      if (out !== val) {
+        val.results = out.results;
+        val.grouped = out.grouped;
+        val.per_site = out.per_site || val.per_site;
+      }
+      val.exact = {
+        title: q, year: exactYear, type: exactType,
+        before: (out as any)._exact?.before ?? (val.results || []).length,
+        after: (val.results || []).length,
+        expanded: !!(out as any)._exact?.expanded,
+        searched,
+        sites: usedIds.map((id) => sourceNameFor(id)),
+      };
+      delete (val as any)._exact;
+      delete (out as any)._exact;
+    }
+    // Background pre-resolution (never blocks search): top results start
+    // resolving now so Watch can hit the temporary cache later.
+    try { if (val?.status === "ok") preResolve((val.results || []).map((r: any) => r.url)); } catch {}
+    if (val?.status === "ok") {
+      logSearch(q, normalizeQuery(q), group === "anime" ? "anime" : group === "movie" ? "movie" : "unknown",
+        group || "unknown", val.per_site || [], (val.results || []).length, ((val.grouped || []).length || (val.results || []).length),
+        ((val.grouped || val.results || []) as any[]).map((r: any) => `${r.title || ""}`.slice(0, 60)));
+    }
+    res.json(val);
+  } catch (e: any) {
+    res.status(500).json({ status: "error", error: String(e?.message || e).slice(0, 300) });
+  }
+});
+
+// Episode quality fan-out: expand one registered content page into its
+// per-quality variants (480p/720p/1080p), validated against the series
+// title + season — never another season or show.
+app.get("/api/variants", async (req, res) => {
+  const rid = String(req.query.result_id || "");
+  const hit = lookupResult(rid);
+  if (!hit) return res.status(404).json({ error: "result not found/expired — re-run search" });
+  const seasonRaw = String(req.query.season || "");
+  const season = /^\d{1,2}$/.test(seasonRaw) ? parseInt(seasonRaw, 10) : undefined;
+  const q = {
+    title: String(req.query.title || hit.title),
+    year: String(req.query.year || "") || undefined,
+    type: String(req.query.type || hit.type || ""),
+    season,
+  };
+  const base: any = {
+    title: hit.title, url: hit.url, source_url: hit.url, score: 0, match: 0,
+    site_id: hit.site_id, site_name: hit.site_name, kind: hit.type === "series" ? "series" : "movie",
+    type: hit.type, content_id: hit.content_id, result_id: hit.result_id,
+    source_result_id: hit.result_id, year: hit.year, origin: "mixed",
+    source: String(hit.site_name || "").toLowerCase(),
+  };
+  try {
+    const rows = await expandOne(base, q);
+    try { registerResults(rows as any); } catch {}
+    res.json({ status: "ok", variants: rows });
+  } catch (e: any) {
+    res.status(500).json({ status: "error", error: String(e?.message || e).slice(0, 200) });
+  }
+});
+
+// §16/17 exact-identity lookup: frontend resolves the clicked card without a
+// fresh generic title search. Returns the registered source page.
+app.get("/api/result/:id", (req, res) => {
+  const id = String(req.params.id || "");
+  const hit = lookupResult(id);
+  if (!hit) return res.status(404).json({ error: "result not found/expired — re-run search" });
+  res.json({ status: "ok", result: hit });
+});
+
+app.post("/api/resolve", (req, res) => {
+  // §16/17/48 — Watch must carry identity. Preferred: { result_id } (exact
+  // source page from the registry). Legacy: { sourceUrl }. We NEVER perform
+  // a fresh generic title search here — that caused wrong-result bugs.
+  let sourceUrl = String(req.body?.sourceUrl || "").trim();
+  const resultId = String(req.body?.result_id || req.body?.resultId || "").trim();
+  let identity: any = null;
+  if (resultId) {
+    const hit = lookupResult(resultId);
+    if (!hit) return res.status(404).json({ error: "result_id not found/expired — re-run search and tap the card again" });
+    sourceUrl = hit.url;
+    identity = { result_id: hit.result_id, content_id: hit.content_id, source_result_id: hit.result_id };
+  }
+  if (!sourceUrl.startsWith("http")) return res.status(400).json({ error: "sourceUrl must be http(s) or provide a valid result_id" });
+  // Seekable upgrade: re-resolve past the fast HTTP lanes (whose files never
+  // honor Range) to a seekable bridge link, in background. Overwrites the
+  // cache entry so later taps get it directly.
+  const upgrade = !!req.body?.seekableUpgrade;
+  // Cache-first + deduped: returns {status:"ready",url} immediately on a
+  // cache hit, or the shared in-flight job when resolution is running.
+  const job = enqueueResolve(sourceUrl, upgrade ? { background: true, skipFast: true, fresh: true } : {});
+  const out: any = { jobId: job.id, status: job.status, url: job.url || undefined, stage: (job as any).stage || undefined, seekable: (job as any).seekable };
+  if (identity) { out.result_id = identity.result_id; out.content_id = identity.content_id; }
+  res.json(out);
+});
+
+app.get("/api/resolve/:id", (req, res) => {
+  const j = getJob(req.params.id);
+  if (!j) return res.status(404).json({ error: "job not found/expired" });
+  res.json(j);
+});
+
+// Resolution performance metrics (counts + timings only, never URLs).
+app.get("/api/metrics", (_req, res) => {
+  res.json(getMetrics());
+});
+
+// LITE: video bytes never transit the free instance (bandwidth cap) — the
+// frontend plays direct URLs instead and treats this 501 as "no proxy here".
+app.get("/api/stream", LITE
+  ? (_req, res) => res.status(501).json({ error: "stream proxy disabled (lite mode)" })
+  : streamProxy);
+
+// Multi-audio HLS: probe + background convert; player polls until ready.
+app.get("/api/hls-status", async (req, res) => {
+  const media = String(req.query.url || "").trim();
+  if (!media.startsWith("http") || media.length > 4096) return res.status(400).json({ status: "invalid", error: "bad url" });
+  if (media.toLowerCase().endsWith(".m3u8")) {
+    return res.json({ status: "hls", sid: "", audios: [], master: media, error: "" });
+  }
+  if (LITE || (process.env.HLS_ENABLED || "true").toLowerCase() === "false") {
+    return res.json({ status: "disabled", sid: "", audios: [], master: "", error: "" });
+  }
+  try {
+    res.json(await hls.status(media));
+  } catch (e: any) {
+    res.json({ status: "failed", sid: "", audios: [], master: "", error: String(e?.message || e).slice(0, 200) });
+  }
+});
+
+app.get("/hls/:sid/:name", (req, res) => {
+  const sid = String(req.params.sid || "");
+  const name = String(req.params.name || "");
+  const dir = hls.sessionDir(sid);
+  if (!dir || !hls.allowedFile(name)) return res.status(404).send("Not found.");
+  const p = path.resolve(path.join(dir, name));
+  if (!p.startsWith(dir + path.sep) && p !== path.join(dir, name)) return res.status(404).send("Not found.");
+  if (!fs.existsSync(p)) return res.status(404).send("Not found.");
+  try { hls.touch(sid); } catch {}
+  if (name.endsWith(".m3u8")) {
+    res.setHeader("Content-Type", "application/vnd.apple.mpegurl");
+    try {
+      if (fs.readFileSync(p, "utf8").includes("#EXT-X-ENDLIST")) res.setHeader("Cache-Control", "public, max-age=3600");
+      else res.setHeader("Cache-Control", "no-cache, no-store");
+    } catch {}
+  } else {
+    res.setHeader("Content-Type", "video/MP2T");
+    res.setHeader("Cache-Control", "public, max-age=31536000");
+  }
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.sendFile(p);
+});
+
+const port = parseInt(process.env.PORT || "3001", 10);
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Marcivo backend on 0.0.0.0:${port}`);
+});

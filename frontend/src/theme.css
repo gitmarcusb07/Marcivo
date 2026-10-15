@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --netflix: #e50914;
+  --ink: #141414;
+}
+
+html, body, #root {
+  margin: 0;
+  min-height: 100%;
+  background: var(--ink);
+  color: #fff;
+  font-family: Inter, "Netflix Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.font-display {
+  font-family: "Bebas Neue", Inter, sans-serif;
+  letter-spacing: 0.04em;
+}
+
+/* skeleton shimmer */
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+/* Marcivo skeleton v2: dark stage + diagonal red light sweep + soft pulse */
+@keyframes marcivoSweep {
+  0% { background-position: -600px 0, 0 0; }
+  100% { background-position: 600px 0, 0 0; }
+}
+@keyframes marcivoPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.72; }
+}
+.skeleton {
+  background-image:
+    linear-gradient(115deg, transparent 30%, rgba(229, 9, 20, 0.28) 42%, rgba(255, 120, 130, 0.45) 50%, rgba(229, 9, 20, 0.28) 58%, transparent 70%),
+    linear-gradient(180deg, #1b0e11 0%, #12090c 100%);
+  background-size: 900px 100%, 100% 100%;
+  animation: marcivoSweep 1.8s infinite linear, marcivoPulse 2.4s ease-in-out infinite;
+  border-radius: 12px;
+  border: 1px solid rgba(229, 9, 20, 0.22);
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.55);
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.hero-glow {
+  background:
+    radial-gradient(600px 300px at 70% 0%, rgba(229, 9, 20, 0.35), transparent),
+    radial-gradient(500px 300px at 20% 100%, rgba(229, 9, 20, 0.25), transparent),
+    #0a0a12;
+}
+
+/* header credit flip (Developed by Marcus <-> Instagram) */
+@keyframes creditFlip {
+  0% { opacity: 0; transform: translateY(8px); }
+  15% { opacity: 1; transform: translateY(0); }
+  85% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-8px); }
+}
+.credit-flip {
+  animation: creditFlip 5s ease-in-out infinite;
+}
+
+/* player range sliders */
+.tp-range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+}
+.tp-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #e50914;
+  border: 2px solid #0b0b0e;
+  box-shadow: 0 2px 8px rgba(229, 9, 20, 0.5);
+  cursor: pointer;
+}
+.tp-range::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #e50914;
+  border: 2px solid #0b0b0e;
+  cursor: pointer;
+}
+
+/* header brand: looping color-changing gradient (no logo) */
+.brand-loop {
+  background: linear-gradient(90deg, #e50914, #f59e0b, #c084fc, #e50914);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: brandLoop 6s linear infinite;
+  filter: drop-shadow(0 0 10px rgba(229, 9, 20, 0.35));
+}
+@keyframes brandLoop {
+  to { background-position: 300% center; }
+}
+
+/* home tagline: looping shimmer */
+.tagline-shimmer {
+  background: linear-gradient(90deg, #6b7280 0%, #ffffff 25%, #c084fc 50%, #ffffff 75%, #6b7280 100%);
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: tagShimmer 5s linear infinite;
+}
+@keyframes tagShimmer {
+  to { background-position: 220% center; }
+}
+
+/* Netflix-style animated splash: letters ignite in sequence, then fade */
+.splash-root {
+  animation: splashOut 0.5s ease-in 2.3s forwards;
+  overflow: hidden;
+}
+@keyframes splashOut {
+  to { opacity: 0; visibility: hidden; }
+}
+.splash-letter {
+  font-size: clamp(56px, 16vw, 110px);
+  line-height: 1;
+  color: #0d0d12;
+  text-shadow: 0 0 0 transparent;
+  opacity: 0.25;
+  animation: splashIgnite 0.55s ease-out forwards;
+}
+@keyframes splashIgnite {
+  0% { opacity: 0.25; color: #0d0d12; text-shadow: none; transform: scale(1.15); }
+  60% { opacity: 1; color: #e9d5ff; transform: scale(1); }
+  100% {
+    opacity: 1;
+    color: #f5edff;
+    text-shadow:
+      0 0 12px #b45cff,
+      0 0 34px #962fbf,
+      0 0 70px #7a1fa2;
+  }
+}
+.splash-sweep {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 90px;
+  background: linear-gradient(100deg, transparent, rgba(200, 130, 255, 0.35), transparent);
+  animation: splashSweep 1.9s ease-in-out 0.2s forwards;
+  opacity: 0;
+}
+/* fanning light beams behind the letters (Netflix-ident homage) */
+.splash-rays {
+  position: absolute;
+  width: 140vmax;
+  height: 140vmax;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(150, 60, 220, 0.14) 8deg,
+    transparent 16deg,
+    transparent 30deg,
+    rgba(200, 130, 255, 0.12) 38deg,
+    transparent 46deg,
+    transparent 60deg,
+    rgba(150, 60, 220, 0.14) 68deg,
+    transparent 76deg,
+    transparent 90deg,
+    rgba(200, 130, 255, 0.12) 98deg,
+    transparent 106deg,
+    transparent 120deg,
+    rgba(150, 60, 220, 0.14) 128deg,
+    transparent 136deg,
+    transparent 150deg,
+    rgba(200, 130, 255, 0.12) 158deg,
+    transparent 166deg,
+    transparent 180deg,
+    rgba(150, 60, 220, 0.14) 188deg,
+    transparent 196deg,
+    transparent 210deg,
+    rgba(200, 130, 255, 0.12) 218deg,
+    transparent 226deg,
+    transparent 240deg,
+    rgba(150, 60, 220, 0.14) 248deg,
+    transparent 256deg,
+    transparent 270deg,
+    rgba(200, 130, 255, 0.12) 278deg,
+    transparent 286deg,
+    transparent 300deg,
+    rgba(150, 60, 220, 0.14) 308deg,
+    transparent 316deg,
+    transparent 330deg,
+    rgba(200, 130, 255, 0.12) 338deg,
+    transparent 346deg
+  );
+  animation: splashRays 2.6s ease-out forwards;
+  opacity: 0;
+}
+@keyframes splashRays {
+  0% { opacity: 0; transform: scale(0.6) rotate(-8deg); }
+  25% { opacity: 1; }
+  100% { opacity: 0.9; transform: scale(1.15) rotate(4deg); }
+}
+.splash-zoom {
+  animation: splashZoom 2.6s ease-out forwards;
+}
+@keyframes splashZoom {
+  from { transform: scale(1.12); }
+  to { transform: scale(1); }
+}
+@keyframes splashSweep {
+  0% { left: -100px; opacity: 0; }
+  20% { opacity: 1; }
+  100% { left: 110%; opacity: 0; }
+}

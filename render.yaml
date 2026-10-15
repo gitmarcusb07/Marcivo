@@ -1,0 +1,48 @@
+# Render free-tier backend (Hobby plan, no credit card).
+# Dashboard → New → Blueprint → point at this repo.
+#
+# LITE_MODE=1 is the whole point: no Playwright, no python bridge, no video
+# proxy, no HLS — HTTP-only resolve lanes + metadata, which fits the free
+# instance (0.1 vCPU / 512 MB). Set the rest in the Render dashboard env vars.
+services:
+  - type: web
+    name: marcivo-backend
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: LITE_MODE
+        value: "1"
+      # playwright's postinstall would download ~150 MB of browsers we never
+      # launch here — skip it (LITE_MODE already gates the browser lanes).
+      - key: PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD
+        value: "1"
+      # Set these in the Render dashboard (SecretFile / sync:false):
+      - key: TMDB_API_KEY
+        sync: false
+      # Your Cloudflare Pages URL — CORS allowlist. No trailing slash.
+      - key: FRONTEND_ORIGIN
+        sync: false
+      - key: SITE1_BASE_URL
+        sync: false
+      - key: SITE1_SEARCH_PATH
+        sync: false
+      - key: SITE2_BASE_URL
+        sync: false
+      - key: SITE2_SEARCH_PATH
+        sync: false
+      - key: SITE3_BASE_URL
+        sync: false
+      - key: SITE3_SEARCH_PATH
+        sync: false
+      - key: SITE4_BASE_URL
+        sync: false
+      - key: SITE4_SEARCH_PATH
+        sync: false
+      - key: SITE5_BASE_URL
+        sync: false
+      - key: SITE5_SEARCH_PATH
+        sync: false
