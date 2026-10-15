@@ -49,7 +49,7 @@ Notes:
 1. Cloudflare dashboard → **Workers & Pages → Create → Pages → Connect to Git**.
 2. Build settings:
    - Framework preset: **Vite**
-   - Build command: `npm run build` (run in `frontend/` — set root dir to `frontend` if prompted)
+   - Build command: `cd frontend && npm install && npm run build`
    - Build output directory: `frontend/dist`
 3. Environment variables (build-time):
    - `VITE_API` = `https://<your-app>.onrender.com` (no trailing slash)

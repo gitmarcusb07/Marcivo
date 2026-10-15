@@ -20,7 +20,7 @@ export const API_BASE = BASE;
 let caps = { lite: false };
 export function isLite() { return caps.lite; }
 export function loadCaps() {
-  return fetch(`${BASE}/health`, { signal: AbortSignal.timeout(8000) })
+  return fetch(`${BASE}/health`, { signal: AbortSignal.timeout(90000) })
     .then((r) => (r.ok ? r.json() : null))
     .then((h) => { if (h && typeof h.lite === "boolean") caps = { lite: h.lite }; })
     .catch(() => {});
@@ -65,7 +65,9 @@ export async function checkBackend(timeoutMs = 8000): Promise<boolean> {
 }
 
 // Backend identity (build tag) — tells us which server code the app hits.
-export async function backendInfo(timeoutMs = 8000): Promise<{ ok: boolean; build: string }> {
+// 90s default: the free Render instance sleeps after ~15 min idle and takes
+// ~50-60s to wake — an 8s budget made every cold open look "unreachable".
+export async function backendInfo(timeoutMs = 90000): Promise<{ ok: boolean; build: string }> {
   try {
     const r = await j<{ ok: boolean; build?: string }>(`/health`, undefined, timeoutMs);
     return { ok: !!r.ok, build: String((r as any)?.build || "?") };
