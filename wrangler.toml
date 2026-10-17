@@ -1,16 +1,9 @@
-# Cloudflare Worker that serves the built Marcivo site as static assets.
-#
-# This is the config the Cloudflare Git-build wizard (Workers "Connect a
-# repository") reads when it runs `npx wrangler deploy` from the repo root.
-# `not_found_handling` is the SPA fallback: any path without a matching file
-# returns index.html so React Router can handle /detail/..., /watch/... etc.
-#
-# Note: frontend/wrangler.toml is a *different* config for the *Pages* flavor
-# of the project (used by `npx wrangler pages deploy` from frontend/). Keep
-# both; they never collide because each is read from its own directory.
+
 name = "marcivo"
 compatibility_date = "2025-01-01"
+main = "worker.js"
 
 [assets]
 directory = "./frontend/dist"
 not_found_handling = "single-page-application"
+run_worker_first = ["/sitemap.xml"]
