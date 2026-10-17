@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { api, API_BASE, backendInfo } from "../lib/api";
 import { SearchBar } from "../components/ui";
+import AdSlot from "../ads/AdSlot";
 
 function Row({ k, v, good }: { k: string; v: string; good?: boolean }) {
   return (
@@ -38,6 +39,8 @@ export default function StatusPage() {
     <div className="max-w-7xl mx-auto px-4 pb-16">
       <SearchBar placeholder="Search movies, series..." />
       <h1 className="font-display text-3xl mt-4">Site Status</h1>
+      {/* Mobile banner under the title. */}
+      <AdSlot name="status_banner" className="mt-4" />
       <p className="text-xs text-muted mt-1 break-all">{API_BASE}</p>
 
       <div className="mt-3 bg-card border border-white/10 rounded-xl px-4 py-2">

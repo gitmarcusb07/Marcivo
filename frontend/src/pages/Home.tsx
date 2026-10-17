@@ -64,6 +64,10 @@ export default function Home() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 pb-16">
+      {/* Content column + tall skyscraper rail. The rail is sticky so the ad
+          stays in view while the rows scroll past it. */}
+      <div className="flex gap-6 items-start">
+        <div className="min-w-0 flex-1">
       <SearchBar placeholder="Search movies, series..." />
 
       {tab === "movies" && (
@@ -141,7 +145,13 @@ export default function Home() {
         <AdSlot name="home_mid" className="mt-6" />
         <Row title="Seasonal Anime" items={anime.seasonal} onPick={pick} />
       </>)}
+        </div>
 
+        {/* Tall skyscraper rail — hidden on the player page like all ads. */}
+        <aside className="hidden xl:block w-[176px] shrink-0 sticky top-20">
+          <AdSlot name="home_tall" />
+        </aside>
+      </div>
     </div>
   );
 }

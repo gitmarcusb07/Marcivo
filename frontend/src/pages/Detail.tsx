@@ -70,7 +70,7 @@ export default function Detail() {
       <button onClick={() => nav(-1)} className="text-muted text-sm">← Back</button>
       <div className="mt-2 flex flex-col md:flex-row gap-4">
         <img src={d.poster} alt={d.title} className="w-40 md:w-56 rounded-xl bg-card" />
-        <div className="flex-1">
+        <div className="flex-1 min-w-0">
           <h1 className="font-display text-3xl">{d.title}</h1>
           <div className="text-muted text-sm mt-1">{[d.year, d.rating ? `★ ${d.rating}` : "", (d.genres || []).join(", ")].filter(Boolean).join(" • ")}</div>
           <p className="text-sm mt-3 text-gray-200">{d.overview}</p>
@@ -82,6 +82,11 @@ export default function Detail() {
             >{saved ? "✓ My List" : "+ My List"}</button>
           </div>
         </div>
+
+        {/* Tall skyscraper rail beside the poster + details. */}
+        <aside className="hidden xl:block w-[176px] shrink-0 sticky top-20">
+          <AdSlot name="detail_sidebar" />
+        </aside>
       </div>
 
       {/* Seasons & Episodes (series only) */}

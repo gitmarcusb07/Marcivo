@@ -9,6 +9,7 @@ import StatusPage from "./pages/StatusPage";
 import SiteNav from "./components/SiteNav";
 import SiteFooter from "./components/SiteFooter";
 import AdSlot from "./ads/AdSlot";
+import SmartLink from "./ads/SmartLink";
 
 const TITLES: Record<string, string> = {
   "/": "Marcivo — Watch Movies, Series & Anime Online",
@@ -48,6 +49,10 @@ export default function App() {
             <Route path="/status" element={<StatusPage />} />
           </Routes>
         </main>
+        {/* Smartlink sits above the footer banner on every non-player page. */}
+        <SmartLink className="max-w-7xl mx-auto px-4 w-full" />
+        {/* Smartlink sits above the footer banner on every non-player page. */}
+        <SmartLink className="max-w-7xl mx-auto px-4 w-full" />
         <AdSlot name="footer" className="max-w-7xl mx-auto px-4 w-full" />
         <SiteFooter />
       </div>

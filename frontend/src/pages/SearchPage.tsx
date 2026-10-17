@@ -3,6 +3,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { api, API_BASE, watchUrl, prewarm } from "../lib/api";
 import { prettyVersion } from "../lib/format";
 import { SearchBar, Card } from "../components/ui";
+import AdSlot from "../ads/AdSlot";
 
 export default function SearchPage() {
   const [sp] = useSearchParams();
@@ -25,7 +26,11 @@ export default function SearchPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 pb-16">
+      <div className="flex gap-6 items-start">
+        <div className="min-w-0 flex-1">
       <SearchBar initial={q} key={q} />
+      {/* Rectangle unit between the search bar and the results grid. */}
+      <AdSlot name="search_mid" className="mt-4" />
       <h1 className="font-display text-2xl mt-4">Results for “{q}”</h1>
       {loading && <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-3 mt-3">{Array.from({ length: 12 }).map((_, i) => <div key={i} className="skeleton aspect-[2/3]" />)}</div>}
       {!loading && (
@@ -99,6 +104,13 @@ export default function SearchPage() {
         </div>
       )}
       {!loading && data && !all.length && !sites.length && <p className="text-muted mt-3">No results. Try another spelling.</p>}
+        </div>
+
+        {/* Tall skyscraper rail beside the results. */}
+        <aside className="hidden xl:block w-[176px] shrink-0 sticky top-20">
+          <AdSlot name="search_sidebar" />
+        </aside>
+      </div>
     </div>
   );
 }

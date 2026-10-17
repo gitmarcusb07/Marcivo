@@ -19,7 +19,7 @@ function ensureLoader() {
  * innerHTML does NOT run the scripts (browsers ignore script tags injected
  * that way), so we split the snippet: markup goes in as HTML, scripts are
  * re-created as real <script> elements in order. That is what makes an
- * Adstra/Adsterra unit actually render.
+ * Adsterra unit actually render.
  */
 function mountSnippet(host: HTMLElement, html: string) {
   const doc = new DOMParser().parseFromString(html, "text/html");
