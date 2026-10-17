@@ -1,4 +1,3 @@
-
 name = "marcivo"
 compatibility_date = "2025-01-01"
 main = "worker.js"
@@ -6,4 +5,4 @@ main = "worker.js"
 [assets]
 directory = "./frontend/dist"
 not_found_handling = "single-page-application"
-run_worker_first = ["/sitemap.xml"]
+run_worker_first = ["/sitemap.xml", "/robots.txt"]
