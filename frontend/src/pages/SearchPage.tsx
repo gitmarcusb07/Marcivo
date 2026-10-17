@@ -4,6 +4,7 @@ import { api, API_BASE, watchUrl, prewarm } from "../lib/api";
 import { prettyVersion } from "../lib/format";
 import { SearchBar, Card } from "../components/ui";
 import AdSlot from "../ads/AdSlot";
+import Seo from "../seo/Seo";
 
 export default function SearchPage() {
   const [sp] = useSearchParams();
@@ -26,6 +27,11 @@ export default function SearchPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 pb-16">
+      <Seo
+        title={q ? `Search: ${q.slice(0, 60)} — Marcivo` : "Search — Marcivo"}
+        description="Search movies, web series and anime across every source Marcivo indexes — one query, all available versions."
+        robots="noindex,follow"
+      />
       <div className="flex gap-6 items-start">
         <div className="min-w-0 flex-1">
       <SearchBar initial={q} key={q} />

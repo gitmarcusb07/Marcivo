@@ -6,8 +6,8 @@ import * as dns from "node:dns";
 try { dns.setDefaultResultOrder("ipv4first"); } catch {}
 import express from "express";
 import cors from "cors";
-import { tmdbHome, tmdbSearch, tmdbDetail, tmdbShowcase, tmdbBrowse, tmdbSeason, BrowseCat } from "./tmdb.js";
-import { anilistHome, anilistSearch, anilistDetail } from "./anilist.js";
+import { tmdbHome, tmdbSearch, tmdbDetail, tmdbShowcase, tmdbBrowse, tmdbSeason, tmdbUpcoming, BrowseCat } from "./tmdb.js";
+import { anilistHome, anilistSearch, anilistDetail, anilistUpcoming } from "./anilist.js";
 import { searchSites, lookupResult, expandExactVariants, expandOne, registerResults } from "./siteSearch.js";
 import {
   normalizeQuery, classify, groupForClass, groupForPriority, groupSiteIds,
@@ -40,7 +40,7 @@ const app = express();
 app.use(cors({ origin: (process.env.FRONTEND_ORIGIN || "*") === "*" ? "*" : (process.env.FRONTEND_ORIGIN || "").split(",") }));
 app.use(express.json({ limit: "256kb" }));
 
-const BUILD = "2026-09-30-fastwatch1";
+const BUILD = "2026-10-17-seo1";
 
 app.get("/health", (_req, res) => res.json({ ok: true, time: new Date().toISOString(), build: BUILD, lite: LITE }));
 
@@ -48,6 +48,11 @@ app.get("/sitemap.xml", async (_req, res) => {
   try {
     const urls = new Set<string>([
       `${SEO_SITE_URL}/`,
+      `${SEO_SITE_URL}/free-movies`,
+      `${SEO_SITE_URL}/watch-free`,
+      `${SEO_SITE_URL}/upcoming`,
+      `${SEO_SITE_URL}/upcoming/shows`,
+      `${SEO_SITE_URL}/upcoming/anime`,
       `${SEO_SITE_URL}/category/movies`,
       `${SEO_SITE_URL}/category/series`,
       `${SEO_SITE_URL}/category/hollywood`,
@@ -78,6 +83,37 @@ app.get("/sitemap.xml", async (_req, res) => {
           );
         }
       }
+    }
+
+    // Extra detail-page coverage: titles that are on the way (their pages rank
+    // the moment they release) and the anime catalogue (TMDB browse has none).
+    const addItems = (items: any[], fallbackKind?: string) => {
+      for (const item of items || []) {
+        const kind = fallbackKind || String(item?.kind || "");
+        const id = String(item?.id || "");
+        if (!id || !["movie", "tv", "anime"].includes(kind)) continue;
+        urls.add(`${SEO_SITE_URL}/detail/${kind}/${encodeURIComponent(id)}`);
+      }
+    };
+    const [upMov, upTv, upAnime, animeHome, home] = await Promise.allSettled([
+      tmdbUpcoming("movie"),
+      tmdbUpcoming("tv"),
+      anilistUpcoming(),
+      anilistHome(),
+      tmdbHome(),
+    ]);
+    if (upMov.status === "fulfilled") addItems(upMov.value);
+    if (upTv.status === "fulfilled") addItems(upTv.value);
+    if (upAnime.status === "fulfilled") addItems(upAnime.value);
+    if (animeHome.status === "fulfilled") {
+      addItems(animeHome.value.top);
+      addItems(animeHome.value.seasonal);
+    }
+    if (home.status === "fulfilled") {
+      addItems(home.value.trending);
+      addItems(home.value.moviesPopular);
+      addItems(home.value.seriesPopular);
+      addItems(home.value.moviesTop);
     }
 
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -126,6 +162,20 @@ app.get("/api/home", async (req, res) => {
     res.json({ tab: "mixed", tmdb: m, anime: a });
   } catch (e: any) {
     res.status(500).json({ error: String(e?.message || e).slice(0, 300) });
+  }
+});
+
+// Titles on the way — powers the /upcoming, /upcoming/shows and
+// /upcoming/anime SEO pages (and their sitemap entries).
+app.get("/api/upcoming", async (req, res) => {
+  const type = String(req.query.type || "movie").toLowerCase();
+  try {
+    if (type === "anime") return res.json({ type, items: await anilistUpcoming() });
+    if (type === "tv" || type === "series") return res.json({ type: "tv", items: await tmdbUpcoming("tv") });
+    if (type === "movie") return res.json({ type: "movie", items: await tmdbUpcoming("movie") });
+    res.status(400).json({ error: "type must be movie|tv|anime" });
+  } catch (e: any) {
+    res.status(500).json({ type, items: [], error: String(e?.message || e).slice(0, 300) });
   }
 });
 

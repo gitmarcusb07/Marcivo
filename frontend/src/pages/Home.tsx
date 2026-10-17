@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { api, API_BASE, backendInfo } from "../lib/api";
 import { SearchBar, Row, RowSkeleton } from "../components/ui";
 import TrendingHero from "../components/TrendingHero";
 import AdSlot from "../ads/AdSlot";
+import Seo, { SITE_URL } from "../seo/Seo";
 
 type Tab = "movies" | "anime";
 
@@ -64,6 +65,23 @@ export default function Home() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 pb-16">
+      <Seo
+        title="Watch Movies Online Free — Movies, Series & Anime | Marcivo"
+        description="Browse trending movies, web series and anime in one place — compare every available version and press play. Free to use, no account needed."
+        path="/"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Marcivo",
+          url: `${SITE_URL}/`,
+          potentialAction: {
+            "@type": "SearchAction",
+            target: { "@type": "EntryPoint", urlTemplate: `${SITE_URL}/search?q={search_term_string}` },
+            "query-input": "required name=search_term_string",
+          },
+        }}
+      />
+      <h1 className="sr-only">Watch Movies Online Free — Movies, Web Series and Anime on Marcivo</h1>
       {/* Content column + tall skyscraper rail. The rail is sticky so the ad
           stays in view while the rows scroll past it. */}
       <div className="flex gap-6 items-start">
@@ -145,6 +163,22 @@ export default function Home() {
         <AdSlot name="home_mid" className="mt-6" />
         <Row title="Seasonal Anime" items={anime.seasonal} onPick={pick} />
       </>)}
+
+      {/* Free / upcoming hub links — the SEO content pages, linked site-wide. */}
+      {!loading && !err && (
+        <div className="mt-6 bg-card border border-white/10 rounded-xl px-4 py-3 text-sm text-gray-300">
+          <span className="text-muted">Free &amp; upcoming:</span>{" "}
+          <Link to="/watch-free" className="hover:text-white underline decoration-white/30">How to watch movies free</Link>
+          {" · "}
+          <Link to="/free-movies" className="hover:text-white underline decoration-white/30">Free movies &amp; shows</Link>
+          {" · "}
+          <Link to="/upcoming" className="hover:text-white underline decoration-white/30">Upcoming movies</Link>
+          {" · "}
+          <Link to="/upcoming/shows" className="hover:text-white underline decoration-white/30">Upcoming series</Link>
+          {" · "}
+          <Link to="/upcoming/anime" className="hover:text-white underline decoration-white/30">Upcoming anime</Link>
+        </div>
+      )}
 
       {/* Native banner closes out the home content column, on both tabs. */}
       {!loading && !err && <AdSlot name="home_native" className="mt-6" />}

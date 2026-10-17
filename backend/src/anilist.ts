@@ -171,3 +171,59 @@ export async function anilistDetail(id: string): Promise<any> {
   cache.set(ck, { expires: Date.now() + TTL_MS, value: out });
   return out;
 }
+
+export interface UpcomingAnimeItem extends AnimeItem {
+  /** Full ISO start date when known (YYYY-MM-DD), else "". */
+  date: string;
+  /** "Fall 2026" / "2026" / "" — season known but not the day. */
+  seasonLabel: string;
+}
+
+const SEASON_NAMES: Record<string, string> = { WINTER: "Winter", SPRING: "Spring", SUMMER: "Summer", FALL: "Fall" };
+
+const UPCOMING_FIELDS = `
+  id
+  title { romaji english }
+  coverImage { large extraLarge }
+  startDate { year month day }
+  seasonYear
+  season
+  averageScore
+  description
+  genres
+  format
+`;
+
+// Titles that haven't aired yet — powers the /upcoming/anime page and the
+// sitemap's anime coverage ("when it comes, watch it here").
+export async function anilistUpcoming(): Promise<UpcomingAnimeItem[]> {
+  const ck = "upcoming";
+  const hit = cache.get(ck);
+  if (hit && hit.expires > Date.now()) return hit.value;
+  const gql = `
+    query ($perPage: Int) {
+      Page(page: 1, perPage: $perPage) {
+        media(type: ANIME, status: NOT_YET_RELEASED, sort: [POPULARITY_DESC]) { ${UPCOMING_FIELDS} }
+      }
+    }`;
+  try {
+    const data = await graphql(gql, { perPage: 40 });
+    const items = ((data?.Page?.media || []) as any[])
+      .map((m: any) => {
+        const it = norm(m) as UpcomingAnimeItem;
+        const sd = m?.startDate || {};
+        it.date = sd.year && sd.month && sd.day
+          ? `${sd.year}-${String(sd.month).padStart(2, "0")}-${String(sd.day).padStart(2, "0")}`
+          : "";
+        const season = SEASON_NAMES[String(m?.season || "").toUpperCase()] || "";
+        const y = String(m?.seasonYear || sd.year || "");
+        it.seasonLabel = season && y ? `${season} ${y}` : y;
+        return it;
+      })
+      .filter((x) => x.id && String(x.format || "").toUpperCase() !== "MUSIC");
+    cache.set(ck, { expires: Date.now() + Math.max(TTL_MS, 1800 * 1000), value: items });
+    return items;
+  } catch {
+    return [];
+  }
+}

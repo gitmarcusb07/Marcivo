@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { api, API_BASE, backendInfo } from "../lib/api";
 import { SearchBar } from "../components/ui";
 import AdSlot from "../ads/AdSlot";
+import Seo from "../seo/Seo";
 
 function Row({ k, v, good }: { k: string; v: string; good?: boolean }) {
   return (
@@ -37,6 +38,11 @@ export default function StatusPage() {
   const hitRate = m ? `${Math.round((m.cacheHitRate || 0) * 100)}%` : "—";
   return (
     <div className="max-w-7xl mx-auto px-4 pb-16">
+      <Seo
+        title="Status — Marcivo"
+        description="Marcivo service status — backend connectivity, uptime and performance metrics."
+        robots="noindex,follow"
+      />
       <SearchBar placeholder="Search movies, series..." />
       <h1 className="font-display text-3xl mt-4">Site Status</h1>
       {/* Mobile banner under the title. */}

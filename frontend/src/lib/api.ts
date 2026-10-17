@@ -129,6 +129,8 @@ export function watchUrl(kind: string, id: string, r: { result_id?: string; cont
 export const api = {
   home: (tab: string) => j<any>(`/api/home?tab=${encodeURIComponent(tab)}`),
   browse: (cat: string) => j<any>(`/api/browse/${encodeURIComponent(cat)}`),
+  /** Titles on the way (movie | tv | anime) — powers the /upcoming pages. */
+  upcoming: (type: string) => j<any>(`/api/upcoming?type=${encodeURIComponent(type)}`),
   search: (q: string) => j<any>(`/api/search?q=${encodeURIComponent(q)}`),
   detail: (kind: string, id: string) => j<any>(`/api/detail/${kind}/${id}`),
   tvSeason: (id: string, n: number) => j<any>(`/api/tv/${id}/season/${n}`),

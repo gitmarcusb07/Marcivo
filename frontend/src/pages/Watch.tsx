@@ -4,6 +4,7 @@ import { api, findVersion, CAT_SITES, isLite } from "../lib/api";
 import { prettyVersion } from "../lib/format";
 import { addToList } from "../store/continueWatching";
 import TeraPlayer from "../components/TeraPlayer";
+import Seo from "../seo/Seo";
 
 const STAGES = ["Finding best server…", "Opening page…", "Generating link…", "Fetching playable URL…"];
 
@@ -318,6 +319,11 @@ export default function Watch() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 pb-10">
+      <Seo
+        title={headerTitle && headerTitle !== "Watch" ? `Watch ${headerTitle} Online | Marcivo`.slice(0, 70) : "Watch — Marcivo"}
+        description="Pick a version and the player opens right in your browser — no account, no install."
+        robots="noindex,follow"
+      />
       <div className="flex gap-4 items-start">
         {d?.poster && <img src={d.poster} alt={headerTitle} className="w-24 rounded-lg bg-card" />}
         <div className="min-w-0">

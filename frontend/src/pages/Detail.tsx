@@ -4,6 +4,7 @@ import { api, CAT_SITES, watchUrl, prewarm } from "../lib/api";
 import { prettyVersion } from "../lib/format";
 import { toggleInList, getList } from "../store/continueWatching";
 import AdSlot from "../ads/AdSlot";
+import Seo, { SITE_URL, breadcrumbLd } from "../seo/Seo";
 
 export default function Detail() {
   const { kind = "", id = "" } = useParams();
@@ -54,6 +55,30 @@ export default function Detail() {
       .finally(() => setLoading(false));
   }, [kind, id, cat, loadVersions]);
 
+  // Per-title SEO metadata — handed to the shared <Seo> manager at render
+  // time. The canonical URL uses the stable public detail route, never
+  // query parameters such as ?cat=.
+  const seoName = d ? String(d.title || "").trim() : "";
+  const seoYear = d?.year ? ` (${d.year})` : "";
+  const seoKindLabel = kind === "anime" || d?.kind === "anime" ? "Anime" : d?.kind === "tv" || kind === "tv" ? "TV Series" : "Movie";
+  const seoOverview = d ? String(d.overview || "").replace(/\s+/g, " ").trim() : "";
+  const seoDescription = (seoOverview || `Release info, cast and every available version of ${seoName || "this title"} on Marcivo — free to use, no account needed.`).slice(0, 300);
+  const seoPoster = d && typeof d.poster === "string" && /^https:\/\//i.test(d.poster) ? d.poster : undefined;
+  const seoSchemaType = seoKindLabel === "Anime" && String(d?.format || "").toUpperCase() === "MOVIE" ? "Movie" : seoKindLabel === "Movie" ? "Movie" : "TVSeries";
+  const seoSchema: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": seoSchemaType,
+    name: seoName || "Movie or series",
+    url: `${SITE_URL}/detail/${encodeURIComponent(kind)}/${encodeURIComponent(id)}`,
+    description: seoDescription,
+  };
+  if (d?.year && /^\d{4}$/.test(String(d.year))) seoSchema.datePublished = String(d.year);
+  if (seoPoster) seoSchema.image = seoPoster;
+  if (Array.isArray(d?.genres) && d.genres.length) seoSchema.genre = d.genres;
+  if (Array.isArray(d?.cast) && d.cast.length) {
+    seoSchema.actor = d.cast.slice(0, 10).map((name: string) => ({ "@type": "Person", name }));
+  }
+
   // Episodes for the chosen season (TMDB).
   useEffect(() => {
     if (kind !== "tv" || season === null) return;
@@ -67,6 +92,18 @@ export default function Detail() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 pb-16">
+      <Seo
+        title={`${seoName}${seoYear} — ${seoKindLabel} Info, Cast & Where to Watch | Marcivo`}
+        description={seoDescription}
+        image={seoPoster}
+        jsonLd={[
+          breadcrumbLd([
+            { name: "Home", path: "/" },
+            { name: seoName || "Title", path: `/detail/${kind}/${id}` },
+          ]),
+          seoSchema,
+        ]}
+      />
       <button onClick={() => nav(-1)} className="text-muted text-sm">← Back</button>
       <div className="mt-2 flex flex-col md:flex-row gap-4">
         <img src={d.poster} alt={d.title} className="w-40 md:w-56 rounded-xl bg-card" />

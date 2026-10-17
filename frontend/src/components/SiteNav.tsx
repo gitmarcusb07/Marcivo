@@ -54,6 +54,8 @@ const LINKS = [
   { to: "/category/movies", label: "Movies" },
   { to: "/category/series", label: "Series" },
   { to: "/?tab=anime", label: "Anime", anime: true },
+  { to: "/free-movies", label: "Free Movies" },
+  { to: "/upcoming", label: "Upcoming", prefix: true },
   { to: "/search", label: "Search" },
   { to: "/status", label: "Status" },
 ];
@@ -76,7 +78,13 @@ export default function SiteNav() {
         <nav className="flex-1 min-w-0 overflow-x-auto no-scrollbar">
           <ul className="flex items-center gap-1 text-sm font-semibold">
             {LINKS.map((l) => {
-              const active = l.anime ? isAnime : l.to === "/" ? isMoviesHome : loc.pathname === l.to;
+              const active = l.anime
+                ? isAnime
+                : l.to === "/"
+                  ? isMoviesHome
+                  : "prefix" in l && l.prefix
+                    ? loc.pathname.startsWith(l.to)
+                    : loc.pathname === l.to;
               return (
                 <li key={l.label}>
                   <NavLink

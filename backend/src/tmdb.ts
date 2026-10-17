@@ -291,3 +291,60 @@ export async function tmdbBrowse(cat: BrowseCat): Promise<{ cat: BrowseCat; titl
   cacheSet(ck, outB, 300);
   return outB;
 }
+
+export interface UpcomingItem extends MediaItem {
+  /** Full ISO release date when known (YYYY-MM-DD), else "". */
+  date: string;
+}
+
+function normUpcoming(m: any, kind: "movie" | "tv"): UpcomingItem {
+  const item = norm(m, kind);
+  const raw = String((m?.release_date ?? m?.first_air_date ?? "") as string);
+  const iso = /^\d{4}-\d{2}-\d{2}$/.test(raw) ? raw : "";
+  return { ...item, year: iso ? iso.slice(0, 4) : item.year, date: iso };
+}
+
+// "Upcoming" lists for the /upcoming SEO pages + sitemap. /movie/upcoming is
+// US-theatrical-centric, so a date-filtered discover feed widens the net; TV
+// uses a first-air-date filter. Released titles are dropped — this list is
+// strictly what's on the way. One shared 30-min cache (endpoint + sitemap).
+export async function tmdbUpcoming(kind: "movie" | "tv"): Promise<UpcomingItem[]> {
+  const ck = `upcoming:${kind}`;
+  const hit = cacheGet<UpcomingItem[]>(ck);
+  if (hit) return hit;
+
+  const today = new Date().toISOString().slice(0, 10);
+  let raw: any[] = [];
+  if (kind === "movie") {
+    const [up, disc] = await Promise.allSettled([
+      get("/movie/upcoming", { region: "US" }),
+      get("/discover/movie", { "primary_release_date.gte": today, sort_by: "popularity.desc" }),
+    ]);
+    raw = [
+      ...(up.status === "fulfilled" ? up.value?.results || [] : []),
+      ...(disc.status === "fulfilled" ? disc.value?.results || [] : []),
+    ];
+  } else {
+    const disc = await get("/discover/tv", { "first_air_date.gte": today, sort_by: "popularity.desc" })
+      .catch(() => ({ results: [] }));
+    raw = disc.results || [];
+  }
+
+  const seen = new Set<string>();
+  const items: UpcomingItem[] = [];
+  for (const m of raw) {
+    const id = String(m?.id || "");
+    if (!id || seen.has(id)) continue;
+    const it = normUpcoming(m, kind);
+    if (!it.title || it.title === "Untitled") continue;
+    if (it.date && it.date < today) continue; // strictly on-the-way titles
+    seen.add(id);
+    items.push(it);
+  }
+  // Soonest first; titles without a firm date close the list.
+  items.sort((a, b) => (a.date && b.date ? (a.date < b.date ? -1 : a.date > b.date ? 1 : 0) : a.date ? -1 : b.date ? 1 : 0));
+
+  const out = items.slice(0, 40);
+  cacheSet(ck, out, 1800);
+  return out;
+}
