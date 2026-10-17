@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { SearchBar } from "../components/ui";
+import AdBand from "../ads/AdBand";
 import Seo, { breadcrumbLd, faqLd } from "../seo/Seo";
 
 const Y = new Date().getFullYear();
@@ -156,6 +157,9 @@ export default function WatchFree() {
           </details>
         ))}
       </div>
+
+      {/* Full ad set on this page too. */}
+      <AdBand slots={["home_mid", "search_mid", "search_sidebar", "home_tall", "status_banner", "home_native"]} className="mt-8" />
 
       <p className="text-xs text-muted mt-8">
         Marcivo does not host any files — it links to media indexed from third-party sources. Availability and legality

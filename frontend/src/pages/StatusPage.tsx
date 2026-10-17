@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { api, API_BASE, backendInfo } from "../lib/api";
 import { SearchBar } from "../components/ui";
 import AdSlot from "../ads/AdSlot";
+import AdBand from "../ads/AdBand";
 import Seo from "../seo/Seo";
 
 function Row({ k, v, good }: { k: string; v: string; good?: boolean }) {
@@ -70,6 +71,9 @@ export default function StatusPage() {
       {!loading && !info.ok && (
         <p className="text-red-400 text-sm mt-3">The backend did not answer. It may still be waking up — hit Refresh in a minute, or check the service on Render.</p>
       )}
+
+      {/* Remaining units — this page must carry the full ad set. */}
+      <AdBand slots={["home_mid", "search_mid", "search_sidebar", "home_tall", "home_native"]} className="mt-8" />
     </div>
   );
 }

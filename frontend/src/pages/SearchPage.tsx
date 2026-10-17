@@ -4,6 +4,7 @@ import { api, API_BASE, watchUrl, prewarm } from "../lib/api";
 import { prettyVersion } from "../lib/format";
 import { SearchBar, Card } from "../components/ui";
 import AdSlot from "../ads/AdSlot";
+import AdBand from "../ads/AdBand";
 import Seo from "../seo/Seo";
 
 export default function SearchPage() {
@@ -117,6 +118,9 @@ export default function SearchPage() {
           <AdSlot name="search_sidebar" />
         </aside>
       </div>
+
+      {/* Remaining units — this page must carry the full ad set. */}
+      <AdBand slots={["home_mid", "home_tall", "status_banner", "home_native"]} className="mt-8" />
     </div>
   );
 }

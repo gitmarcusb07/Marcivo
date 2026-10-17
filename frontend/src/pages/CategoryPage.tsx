@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { api } from "../lib/api";
 import { SearchBar, Row } from "../components/ui";
 import AdSlot from "../ads/AdSlot";
+import AdBand from "../ads/AdBand";
 import Seo, { breadcrumbLd } from "../seo/Seo";
 
 const PILLS = [
@@ -86,6 +87,9 @@ export default function CategoryPage() {
       {(data?.rows || []).map((row: any) => (
         <Row key={row.title} title={row.title} items={row.items} onPick={(it: any) => nav(`/detail/${it.kind}/${it.id}?cat=${cat}`)} />
       ))}
+
+      {/* Remaining units — this page must carry the full ad set. */}
+      <AdBand slots={["search_mid", "search_sidebar", "home_tall", "status_banner", "home_native"]} className="mt-8" />
     </div>
   );
 }

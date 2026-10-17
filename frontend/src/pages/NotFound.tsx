@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import AdBand from "../ads/AdBand";
 import Seo from "../seo/Seo";
 
 const LINKS = [
@@ -30,6 +31,9 @@ export default function NotFound() {
           </Link>
         ))}
       </div>
+
+      {/* Full ad set on the 404 page too. */}
+      <AdBand slots={["home_mid", "search_mid", "search_sidebar", "home_tall", "status_banner", "home_native"]} className="mt-8 text-left" />
     </div>
   );
 }

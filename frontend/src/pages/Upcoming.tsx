@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { api } from "../lib/api";
 import { SearchBar } from "../components/ui";
+import AdBand from "../ads/AdBand";
 import Seo, { SITE_URL, breadcrumbLd, faqLd } from "../seo/Seo";
 
 const Y = new Date().getFullYear();
@@ -206,6 +207,9 @@ export default function Upcoming({ section }: { section: UpcomingSection }) {
         the{" "}
         <Link to="/watch-free" className="underline hover:text-white">free watching guide</Link>.
       </div>
+
+      {/* Full ad set on this page too. */}
+      <AdBand slots={["home_mid", "search_mid", "search_sidebar", "home_tall", "status_banner", "home_native"]} className="mt-8" />
 
       <h2 className="font-display text-2xl mt-8">
         {section === "movies" ? "Upcoming movies — FAQ" : section === "shows" ? "Upcoming shows — FAQ" : "Upcoming anime — FAQ"}

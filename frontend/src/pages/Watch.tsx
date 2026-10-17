@@ -4,6 +4,7 @@ import { api, findVersion, CAT_SITES, isLite } from "../lib/api";
 import { prettyVersion } from "../lib/format";
 import { addToList } from "../store/continueWatching";
 import TeraPlayer from "../components/TeraPlayer";
+import AdBand from "../ads/AdBand";
 import Seo from "../seo/Seo";
 
 const STAGES = ["Finding best server…", "Opening page…", "Generating link…", "Fetching playable URL…"];
@@ -432,6 +433,9 @@ export default function Watch() {
           <button onClick={() => nav(-1)} className="mt-3 px-5 py-2 rounded-lg bg-netflix font-bold text-sm">← Other versions</button>
         </div>
       )}
+
+      {/* Full ad set — banners sit below the player, never over it. */}
+      <AdBand slots={["home_mid", "search_mid", "search_sidebar", "home_tall", "status_banner", "home_native"]} className="mt-8" />
     </div>
   );
 }

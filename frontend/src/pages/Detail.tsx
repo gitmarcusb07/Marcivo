@@ -4,6 +4,7 @@ import { api, CAT_SITES, watchUrl, prewarm } from "../lib/api";
 import { prettyVersion } from "../lib/format";
 import { toggleInList, getList } from "../store/continueWatching";
 import AdSlot from "../ads/AdSlot";
+import AdBand from "../ads/AdBand";
 import Seo, { SITE_URL, breadcrumbLd } from "../seo/Seo";
 
 export default function Detail() {
@@ -224,6 +225,9 @@ export default function Detail() {
           </div>
         </>
       )}
+
+      {/* Remaining units — this page must carry the full ad set. */}
+      <AdBand slots={["home_mid", "search_sidebar", "status_banner", "home_native"]} className="mt-8" />
     </div>
   );
 }

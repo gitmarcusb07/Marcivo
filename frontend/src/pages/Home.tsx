@@ -4,6 +4,7 @@ import { api, API_BASE, backendInfo } from "../lib/api";
 import { SearchBar, Row, RowSkeleton } from "../components/ui";
 import TrendingHero from "../components/TrendingHero";
 import AdSlot from "../ads/AdSlot";
+import AdBand from "../ads/AdBand";
 import Seo, { SITE_URL } from "../seo/Seo";
 
 type Tab = "movies" | "anime";
@@ -182,6 +183,9 @@ export default function Home() {
 
       {/* Native banner closes out the home content column, on both tabs. */}
       {!loading && !err && <AdSlot name="home_native" className="mt-6" />}
+
+      {/* Remaining units — this page must carry the full ad set. */}
+      {!loading && !err && <AdBand slots={["search_mid", "search_sidebar", "status_banner"]} className="mt-8" />}
         </div>
 
         {/* Tall skyscraper rail — hidden on the player page like all ads. */}

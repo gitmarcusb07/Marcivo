@@ -4,8 +4,15 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 const IG_URL = "https://instagram.com/ig__marcus";
 
 // Header credit: alternates every 5s between "Developed by Marcus" and the
-// Instagram badge. Click opens the profile in a new tab.
-export function CreditToggle() {
+// Instagram badge. Click opens the profile in a new tab. Visibility is
+// controlled by the caller; `center` centers the content (mobile strip).
+export function CreditToggle({
+  className = "",
+  center = false,
+}: {
+  className?: string;
+  center?: boolean;
+}) {
   const [ig, setIg] = useState(false);
   useEffect(() => {
     const t = setInterval(() => setIg((v) => !v), 5000);
@@ -16,12 +23,14 @@ export function CreditToggle() {
       href={IG_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="relative h-6 w-40 text-right overflow-hidden hidden lg:block"
+      className={`relative block h-6 w-40 overflow-hidden ${className}`}
       aria-label="Developer Instagram"
     >
       <span
         key={ig ? "ig" : "dev"}
-        className="credit-flip absolute inset-0 flex items-center justify-end gap-1.5 text-xs font-bold tracking-wide"
+        className={`credit-flip absolute inset-0 flex items-center gap-1.5 text-xs font-bold tracking-wide ${
+          center ? "justify-center" : "justify-end"
+        }`}
       >
         {ig ? (
           <>
@@ -99,7 +108,15 @@ export default function SiteNav() {
           </ul>
         </nav>
 
-        <CreditToggle />
+        <CreditToggle className="hidden lg:block" />
+      </div>
+
+      {/* Mobile credit strip — the same alternating "Developed by Marcus" /
+          Instagram badge, visible on phones where the top row has no room. */}
+      <div className="lg:hidden border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 h-7 flex items-center justify-center">
+          <CreditToggle center />
+        </div>
       </div>
     </header>
   );

@@ -6,8 +6,11 @@
  * Popunder and Social Bar are loaded directly from index.html.
  * Their GLOBAL_ADS switches are false below to prevent duplicate injection.
  *
- * WHY /watch/ IS AD-FREE
- * The player page stays clean; other pages can carry ads.
+ * COVERAGE
+ * Every page carries the full set of ten units. Pages render their own
+ * contextual slots (hero banner, sidebar rails, …) and then top up with an
+ * <AdBand> — see AdBand.tsx — for whichever units they don't already show.
+ * The watch/player page gets the standard banners below the player too.
  */
 
 export const ADS_ON = import.meta.env.VITE_ADS_ENABLED !== "0";
@@ -176,8 +179,12 @@ export const SLOTS: Record<SlotName, Slot> = {
   ),
 };
 
-/** The watch/player page carries no ad slots. */
-export const AD_FREE_PATHS = [/^\/watch(\/|$)/];
+/**
+ * No page is excluded: the player carries the standard banner set below the
+ * video, and every other route tops up with <AdBand>. Add a regex here if a
+ * page should ever go ad-free again (e.g. /^\/watch(\/|$)/).
+ */
+export const AD_FREE_PATHS: RegExp[] = [];
 
 /**
  * Smartlink

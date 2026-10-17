@@ -1,7 +1,12 @@
 # Ads — current state (Adsterra)
 
-All ten approved units are wired and deployed. This file is the reference for
-what is live, where each unit sits, and how to change it.
+All ten approved units are wired and deployed on every page. This file is the
+reference for what is live, where each unit sits, and how to change it.
+
+**Coverage:** each page renders its own contextual slots (see table) and then
+tops up with `<AdBand>` (`frontend/src/ads/AdBand.tsx`) for whichever units it
+doesn't already show — so the seven banner/native units plus popunder, social
+bar and smartlink load on every route, and no unit ever loads twice on one page.
 
 ## What is live
 
@@ -65,11 +70,12 @@ VITE_AD_LOADER_SRC=    # optional site-wide loader URL (unused — see below)
 Env values are baked into the JS bundle at build time, so after changing one
 you must rebuild. Per-slot, flip the first argument of any `slot(...)`.
 
-## The player page is deliberately ad-free
+## The player carries the standard banner set too
 
-`/watch/...` renders no ads at all — the network flags video pages, and an
-overlay on the player drives users away. `AD_FREE_PATHS` in `config.ts` is the
-list; add a regex there to protect another page.
+`/watch/...` shows the same banner/native set as every other page — placed
+below the player, never over it — plus the shell's popunder and social bar.
+`AD_FREE_PATHS` in `config.ts` is empty; add a regex there (for example
+`/^\/watch(\/|$)/`) to make a page ad-free again.
 
 ## Fill rate and a new domain
 
