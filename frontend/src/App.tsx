@@ -9,6 +9,7 @@ import StatusPage from "./pages/StatusPage";
 import SiteNav from "./components/SiteNav";
 import SiteFooter from "./components/SiteFooter";
 import AdSlot from "./ads/AdSlot";
+import GlobalAds from "./ads/GlobalAds";
 import SmartLink from "./ads/SmartLink";
 
 const TITLES: Record<string, string> = {
@@ -35,6 +36,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <DocumentTitle />
+      <GlobalAds />
       <div className="min-h-screen flex flex-col">
         <SiteNav />
         {/* Leaderboard under the navbar — hidden on the player page. */}

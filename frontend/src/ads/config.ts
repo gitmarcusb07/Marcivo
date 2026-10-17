@@ -79,11 +79,11 @@ const banner = (key: string, width: number, height: number): string =>
 
 /**
  * Native Banner differs from the banners: no atOptions, just an async loader
- * plus the container div it fills. The div must follow the script so it exists
- * by the time the loader runs.
+ * plus the container div it fills. Put the container first so it exists before
+ * the external script can execute (mountSnippet waits for external scripts).
  */
 const native = (key: string): string =>
-  `<script async="async" data-cfasync="false" src="https://bancadeltempoidea.org/21/${key}"></script>\n<div id="container-${key}"></div>`;
+  `<div id="container-${key}"></div>\n<script async="async" data-cfasync="false" src="https://bancadeltempoidea.org/21/${key}"></script>`;
 
 // The six banner units Adsterra approved for marcivo.teraplayer.in.
 const U = {
@@ -157,18 +157,19 @@ export const SMARTLINK = {
 export const GLOBAL_ADS = {
   popunder: {
     on: true,
-    /** Paste the popunder snippet here (it goes in <head>, one per page). */
-    code: "",
+    // Injected after document.body exists; never inserted as a blocking head script.
+    code: `<script data-cfasync="false" src="https://aarems.org/1/27d26b3ba6949ebe07b45fb0eb3b808f"></script>`,
   },
   socialBar: {
     on: true,
-    /** Paste the social bar snippet here (it goes above </body>). */
-    code: "",
+    // Injected once after document.body exists.
+    code: `<script data-cfasync="false" src="https://bancadeltempoidea.org/14/c97d04e3a9a8c98c6e7855a54ae9d1b8"></script>`,
   },
   nativeBanner: {
-    on: true,
-    /** Paste the native banner snippet here (script + container div). */
-    code: "",
+    // This exact native unit is already used by SLOTS.home_native.
+    // Keep this global copy disabled to prevent loading the same unit twice.
+    on: false,
+    code: `<script async="async" data-cfasync="false" src="https://bancadeltempoidea.org/21/de668932bebe103b63ba4e82327428aa"></script><div id="container-de668932bebe103b63ba4e82327428aa"></div>`,
   },
 };
 
