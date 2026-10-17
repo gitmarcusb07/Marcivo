@@ -5,12 +5,12 @@ Two pieces:
 | Piece | Host | Plan limits |
 |---|---|---|
 | `backend/` (Express API) | **Render** — Hobby free web service | 0.1 vCPU, 512 MB RAM, sleeps after 15 min idle, ~60 s cold start, 750 instance-hours/mo |
-| `frontend/` (Vite/React site) | **Cloudflare Pages** | Unlimited bandwidth, no sleep |
+| `frontend/` (Vite/React site) | **Cloudflare** — Worker with static assets | Unlimited bandwidth, no sleep |
 
 Live URLs:
 - `https://marcivo-backend.onrender.com` — API
-- `https://marcivo.pages.dev` — the website (Pages gives you this automatically)
-- plus your own subdomain (below), e.g. `https://watch.yourdomain.com`
+- `https://marcivo.teraplayer.in` — the website
+- `https://marcivo.pages.dev` — spare deployment in the other Cloudflare account
 
 ## Why LITE_MODE exists
 
@@ -42,59 +42,64 @@ Local dev is unchanged: `LITE_MODE` off, everything works as before.
 3. Check `https://marcivo-backend.onrender.com/health` →
    `{"ok":true,...,"lite":true}`.
 
-## 2. Frontend → Cloudflare Pages
+## 2. Frontend → Cloudflare (Worker with static assets)
 
-**Workers & Pages → Create → Pages → Connect to Git**, then:
+**Workers & Pages → Create → Connect a repository** → `gitmarcus07/Marcivo`, then:
 
-- Root directory: `frontend`
-- Framework preset: **Vite**
-- Build command: `npm install && npm run build`
-- Build output directory: `dist`
+- Build command: `cd frontend && npm install && npm run build`
+- Deploy command: `npx wrangler deploy`
+- Preview command: `npx wrangler pages dev dist` *(only used if preview builds are on)*
+- Enable Preview builds: off
+- Environment variables (Production **and** Preview):
+  - `VITE_API` = `https://marcivo-backend.onrender.com`
+  - `VITE_ADS_ENABLED` = `1`
 
-Environment variables (build-time, both live under Settings → Environment
-variables → Production **and** Preview):
+The repo's **root `wrangler.toml`** does the rest: it points the Worker at
+`./frontend/dist` and sets `not_found_handling = "single-page-application"`,
+so deep links (`/detail/movie/603`, `/watch/...`) return `index.html` and
+React Router takes over. That replaces the old `public/_redirects` rule,
+which Workers' asset server rejects as an infinite loop — the file is gone on
+purpose, don't re-add it.
 
-| Key | Value |
-|---|---|
-| `VITE_API` | `https://marcivo-backend.onrender.com` (no trailing slash) |
-| `VITE_ADS_ENABLED` | `1` |
-| `VITE_AD_LOADER_SRC` | *(optional — network loader URL; slot code goes in `src/ads/config.ts`, see [ADS.md](ADS.md))* |
-
-Deploy. `public/_redirects` already rewrites every path to `index.html`, so
-deep links (`/detail/movie/603`, `/watch/...`) survive a browser reload.
-
-The site is live at **`https://marcivo.pages.dev`** immediately.
+The site is live at the `marcivo.<workers.dev>` URL Cloudflare assigns — that
+URL keeps working even after you attach your own domain.
 
 > Git integration needs one-time permission for the repo. Prefer no Git
 > connection? Deploy straight from your machine instead:
 > ```
-> cd frontend
-> npm run build
-> npx wrangler pages deploy dist
+> cd frontend && npm run build && cd ..
+> npx wrangler deploy
 > ```
-> (`frontend/wrangler.toml` already points at the right output folder.)
+> (the **root** `wrangler.toml` is what the deploy reads — `frontend/wrangler.toml`
+> is only for the legacy Pages flavor.)
 
 ## 3. Add your own subdomain
 
-You already host two sites on Cloudflare, so your DNS is already there — the
-custom domain costs nothing and hides the `pages.dev` name.
+Your live domain is **`marcivo.teraplayer.in`**. Two hard rules learned the
+hard way:
 
-1. Cloudflare dashboard → **Workers & Pages** → `marcivo` → **Custom domains**
-   → **Set up a custom domain**.
-2. Enter the subdomain you want, e.g. `watch.yourdomain.com`
-   (pick whichever of your two domains should carry it).
-3. Cloudflare creates the DNS record and issues the TLS certificate itself —
-   no CNAME to copy, usually live in under a minute.
-4. Go back to Render and **add that domain to `FRONTEND_ORIGIN`** (comma
-   separated, alongside `https://marcivo.pages.dev`). The API only answers
-   CORS requests from origins on that list, and skipping this step is the #1
-   reason "the site loads but nothing fetches" after adding a domain.
-5. Commit the canonical URL in `frontend/index.html`
-   (`<link rel="canonical">` and `og:url`) to your new subdomain, then
-   redeploy so search engines index the real address.
+- **The domain must live in the same Cloudflare account as the project.**
+  `teraplayer.in` is in the `Tgbot9878` account (the one with the tunnel and
+  the Marcivo project) — keep it there. Moving it to another account breaks
+  `api.teraplayer.in`, because a Cloudflare Tunnel is bound to the account
+  that created it (Error 1033).
+- Nameservers for `teraplayer.in` stay at `ricardo` / `rosa`.
 
-`marcivo.pages.dev` keeps working alongside it — both can point at the same
-project.
+With that in place:
+
+1. **Workers & Pages → `marcivo` → Domains → Set up a custom domain**
+2. Pick `teraplayer.in`, type `marcivo` → activates `marcivo.teraplayer.in`
+3. Cloudflare creates the DNS record and issues TLS itself — no CNAME to copy
+4. Render → `marcivo-backend` → Environment → **`FRONTEND_ORIGIN`**:
+   ```
+   https://marcivo.teraplayer.in,https://marcivo.pages.dev
+   ```
+   (comma separated, no trailing slashes) → Save. The API only answers CORS
+   requests from origins on that list; skipping this is the #1 reason "the
+   site loads but nothing fetches" after adding a domain.
+5. Update the canonical URL in `frontend/index.html`
+   (`<link rel="canonical">` and `og:url`) to `https://marcivo.teraplayer.in/`,
+   then redeploy so search engines index the real address.
 
 ## 4. Ads
 
