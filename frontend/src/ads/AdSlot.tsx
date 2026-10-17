@@ -15,26 +15,67 @@ function ensureLoader() {
 }
 
 /**
+ * WHY SLOTS MOUNT ONE AT A TIME
+ *
+ * Every banner snippet is two scripts: an inline one that assigns the GLOBAL
+ * `window.atOptions`, then a loader that READS `atOptions` when it executes.
+ * The inline script runs the instant it is inserted, but a script with `src`
+ * only runs once its bytes arrive — which is later, and out of order.
+ *
+ * So mounting four slots at once did this:
+ *   slot A writes atOptions=A, queues loader A
+ *   slot B writes atOptions=B          <-- clobbers A
+ *   loader A finally runs, reads B     <-- asks for the wrong unit
+ * The network gets a config/URL key mismatch and serves nothing: an empty
+ * box behind the "ADVERTISEMENT" label.
+ *
+ * Serialising the mounts — write one config, wait for its loader to actually
+ * execute, then write the next — gives each loader the config it was built
+ * for. The 5s escape hatch stops one stalled unit from blocking the rest.
+ */
+let mountQueue: Promise<void> = Promise.resolve();
+function enqueueMount(task: () => Promise<void>) {
+  mountQueue = mountQueue.then(task, task);
+}
+
+/**
  * Ad networks hand you a snippet containing <script> tags. Dropping that into
  * innerHTML does NOT run the scripts (browsers ignore script tags injected
  * that way), so we split the snippet: markup goes in as HTML, scripts are
- * re-created as real <script> elements in order. That is what makes an
- * Adsterra unit actually render.
+ * re-created as real <script> elements in order. Resolves once the snippet's
+ * `src` script has executed (or failed), so the caller can release the next.
  */
-function mountSnippet(host: HTMLElement, html: string) {
+function mountSnippet(host: HTMLElement, html: string): Promise<void> {
   const doc = new DOMParser().parseFromString(html, "text/html");
   host.innerHTML = "";
+  let settled: Promise<void> = Promise.resolve();
+
   doc.body.childNodes.forEach((node) => {
     if (node.nodeName === "SCRIPT") {
       const old = node as HTMLScriptElement;
       const s = document.createElement("script");
       for (const a of Array.from(old.attributes)) s.setAttribute(a.name, a.value);
       s.text = old.text;
-      host.appendChild(s);
+      host.appendChild(s); // inline → runs now; with src → starts loading
+      if (old.src) {
+        settled = new Promise<void>((resolve) => {
+          let done = false;
+          const finish = () => {
+            if (done) return;
+            done = true;
+            resolve();
+          };
+          s.addEventListener("load", finish);
+          s.addEventListener("error", finish);
+          setTimeout(finish, 5000);
+        });
+      }
     } else {
       host.appendChild(node);
     }
   });
+
+  return settled;
 }
 
 interface Props {
@@ -62,9 +103,14 @@ export default function AdSlot({ name, className = "" }: Props) {
 
   useEffect(() => {
     if (!active || !ref.current || ref.current.dataset.mounted) return;
-    ref.current.dataset.mounted = "1";
+    const host = ref.current;
+    host.dataset.mounted = "1";
     ensureLoader();
-    mountSnippet(ref.current, code);
+    enqueueMount(async () => {
+      // Navigated away while queued behind another unit — nothing to fill.
+      if (!host.isConnected) return;
+      await mountSnippet(host, code);
+    });
     setPreview(false);
   }, [active, code]);
 

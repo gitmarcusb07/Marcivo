@@ -51,8 +51,6 @@ export default function App() {
         </main>
         {/* Smartlink sits above the footer banner on every non-player page. */}
         <SmartLink className="max-w-7xl mx-auto px-4 w-full" />
-        {/* Smartlink sits above the footer banner on every non-player page. */}
-        <SmartLink className="max-w-7xl mx-auto px-4 w-full" />
         <AdSlot name="footer" className="max-w-7xl mx-auto px-4 w-full" />
         <SiteFooter />
       </div>
