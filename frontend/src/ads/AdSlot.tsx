@@ -1,132 +1,220 @@
+
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { ADS_ON, AD_FREE_PATHS, LOADER_SRC, SLOTS, type SlotName } from "./config";
+import {
+  ADS_ON,
+  AD_FREE_PATHS,
+  LOADER_SRC,
+  SLOTS,
+  type SlotName,
+} from "./config";
 
-// The network loader (<script src=...>) is injected into <head> exactly once
-// per page load, and only when at least one visible slot has code to fill it.
+// Inject the optional site-wide loader only once.
 let loaderRequested = false;
+
 function ensureLoader() {
   if (loaderRequested || !LOADER_SRC) return;
+
   loaderRequested = true;
-  const s = document.createElement("script");
-  s.src = LOADER_SRC;
-  s.async = true;
-  document.head.appendChild(s);
+
+  const script = document.createElement("script");
+  script.src = LOADER_SRC;
+  script.async = true;
+  script.onload = () => {
+    console.info("[MARCIVO ADS] Global loader loaded.");
+  };
+  script.onerror = () => {
+    loaderRequested = false;
+    console.error("[MARCIVO ADS] Global loader failed:", LOADER_SRC);
+  };
+
+  document.head.appendChild(script);
 }
 
-/**
- * WHY SLOTS MOUNT ONE AT A TIME
- *
- * Every banner snippet is two scripts: an inline one that assigns the GLOBAL
- * `window.atOptions`, then a loader that READS `atOptions` when it executes.
- * The inline script runs the instant it is inserted, but a script with `src`
- * only runs once its bytes arrive — which is later, and out of order.
- *
- * So mounting four slots at once did this:
- *   slot A writes atOptions=A, queues loader A
- *   slot B writes atOptions=B          <-- clobbers A
- *   loader A finally runs, reads B     <-- asks for the wrong unit
- * The network gets a config/URL key mismatch and serves nothing: an empty
- * box behind the "ADVERTISEMENT" label.
- *
- * Serialising the mounts — write one config, wait for its loader to actually
- * execute, then write the next — gives each loader the config it was built
- * for. The 5s escape hatch stops one stalled unit from blocking the rest.
- */
+// Serialize ad mounts so banner units that use window.atOptions
+// do not overwrite one another's configuration before loading.
 let mountQueue: Promise<void> = Promise.resolve();
+
 function enqueueMount(task: () => Promise<void>) {
   mountQueue = mountQueue.then(task, task);
 }
 
 /**
- * Ad networks hand you a snippet containing <script> tags. Dropping that into
- * innerHTML does NOT run the scripts (browsers ignore script tags injected
- * that way), so we split the snippet: markup goes in as HTML, scripts are
- * re-created as real <script> elements in order. Resolves once the snippet's
- * `src` script has executed (or failed), so the caller can release the next.
+ * Parse an ad snippet and recreate its scripts as real script elements.
+ * HTML inserted through innerHTML alone does not execute script tags.
  */
-function mountSnippet(host: HTMLElement, html: string): Promise<void> {
+function mountSnippet(
+  host: HTMLElement,
+  html: string
+): Promise<void> {
   const doc = new DOMParser().parseFromString(html, "text/html");
-  host.innerHTML = "";
-  let settled: Promise<void> = Promise.resolve();
+  const nodes = Array.from(doc.body.childNodes);
 
-  doc.body.childNodes.forEach((node) => {
-    if (node.nodeName === "SCRIPT") {
-      const old = node as HTMLScriptElement;
-      const s = document.createElement("script");
-      for (const a of Array.from(old.attributes)) s.setAttribute(a.name, a.value);
-      s.text = old.text;
-      host.appendChild(s); // inline → runs now; with src → starts loading
-      if (old.src) {
-        settled = new Promise<void>((resolve) => {
-          let done = false;
-          const finish = () => {
-            if (done) return;
-            done = true;
-            resolve();
-          };
-          s.addEventListener("load", finish);
-          s.addEventListener("error", finish);
-          setTimeout(finish, 5000);
-        });
+  host.replaceChildren();
+
+  const loadScript = (
+    old: HTMLScriptElement
+  ): Promise<void> => {
+    return new Promise((resolve) => {
+      const script = document.createElement("script");
+
+      for (const attr of Array.from(old.attributes)) {
+        script.setAttribute(attr.name, attr.value);
       }
-    } else {
-      host.appendChild(node);
-    }
-  });
 
-  return settled;
+      let finished = false;
+
+      const finish = () => {
+        if (finished) return;
+        finished = true;
+        resolve();
+      };
+
+      if (old.src) {
+        // Preserve ordering between scripts in this snippet.
+        script.async = false;
+        script.addEventListener("load", finish, { once: true });
+        script.addEventListener("error", finish, { once: true });
+        setTimeout(finish, 10000);
+      }
+
+      script.textContent = old.textContent;
+
+      host.appendChild(script);
+
+      if (!old.src) {
+        finish();
+      }
+    });
+  };
+
+  return nodes.reduce<Promise<void>>(
+    (promise, node) =>
+      promise.then(async () => {
+        if (node.nodeName === "SCRIPT") {
+          await loadScript(node as HTMLScriptElement);
+        } else {
+          host.appendChild(node.cloneNode(true));
+        }
+      }),
+    Promise.resolve()
+  );
 }
 
 interface Props {
   name: SlotName;
-  /** Extra classes for the wrapper (spacing, alignment). */
   className?: string;
 }
 
-/**
- * One named ad box. Renders nothing at all when the ad system is off, the slot
- * is switched off, the current page is ad-free (the player), or no code has
- * been pasted for this slot yet — so the layout never grows an empty gap.
- */
-export default function AdSlot({ name, className = "" }: Props) {
+export default function AdSlot({
+  name,
+  className = "",
+}: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const [preview, setPreview] = useState(false);
-  // Router context: re-renders on every navigation, so an ad mounted on the
-  // home page is torn down the moment the player page takes over.
   const { pathname } = useLocation();
 
   const cfg = SLOTS[name];
-  const adFree = AD_FREE_PATHS.some((re) => re.test(pathname));
+  const adFree = AD_FREE_PATHS.some((re) =>
+    re.test(pathname)
+  );
+
   const code = (cfg?.code || "").trim();
-  const active = ADS_ON && cfg?.on && !adFree && !!code;
+  const active =
+    ADS_ON && !!cfg?.on && !adFree && !!code;
 
   useEffect(() => {
-    if (!active || !ref.current || ref.current.dataset.mounted) return;
+    if (!active || !ref.current) return;
+
     const host = ref.current;
-    host.dataset.mounted = "1";
-    ensureLoader();
-    enqueueMount(async () => {
-      // Navigated away while queued behind another unit — nothing to fill.
-      if (!host.isConnected) return;
-      await mountSnippet(host, code);
-    });
-    setPreview(false);
-  }, [active, code]);
 
-  // Dev-only: show the reserved box so slots are easy to place before the
-  // network has approved the site and handed over real code.
+    // Do not mount the same slot twice.
+    if (host.dataset.mounted === "1") return;
+
+    host.dataset.mounted = "1";
+
+    ensureLoader();
+
+    enqueueMount(async () => {
+      // The user may have navigated away while waiting in the queue.
+      if (!host.isConnected) {
+        delete host.dataset.mounted;
+        return;
+      }
+
+      try {
+        console.info("[MARCIVO ADS] Mounting slot:", name);
+
+        await mountSnippet(host, code);
+
+        const scripts = Array.from(
+          host.querySelectorAll("script")
+        ).map((script) => script.src || "[inline script]");
+
+        console.info("[MARCIVO ADS] Mount completed:", {
+          slot: name,
+          scripts,
+          container: host.querySelector('[id^="container-"]')?.id,
+        });
+
+        // A native snippet has an external loader and a container.
+        // An empty script list indicates that mounting did not complete
+        // as expected for a script-based slot.
+        if (!host.querySelector("script[src]")) {
+          delete host.dataset.mounted;
+          console.error(
+            "[MARCIVO ADS] No external script was mounted:",
+            name
+          );
+        }
+      } catch (error) {
+        delete host.dataset.mounted;
+        console.error(
+          "[MARCIVO ADS] Mount failed:",
+          name,
+          error
+        );
+      }
+    });
+
+    setPreview(false);
+  }, [active, code, name]);
+
+  // Show empty-slot previews only during local development.
   useEffect(() => {
-    setPreview(import.meta.env.DEV && ADS_ON && cfg?.on && !adFree && !code);
+    setPreview(
+      import.meta.env.DEV &&
+        ADS_ON &&
+        !!cfg?.on &&
+        !adFree &&
+        !code
+    );
   }, [cfg, adFree, code]);
 
-  if (!ADS_ON || !cfg?.on || adFree) return null;
-  if (!code && !preview) return null;
+  if (!ADS_ON || !cfg?.on || adFree) {
+    return null;
+  }
+
+  if (!code && !preview) {
+    return null;
+  }
 
   return (
-    <div className={`ad-slot ${className}`} data-ad-slot={name}>
-      <div className="ad-slot-label">{preview ? `AD SLOT — ${cfg.label} (paste code in src/ads/config.ts)` : "Advertisement"}</div>
-      <div ref={ref} className="ad-slot-body" style={{ minHeight: cfg.height }} />
+    <div
+      className={`ad-slot ${className}`}
+      data-ad-slot={name}
+    >
+      <div className="ad-slot-label">
+        {preview
+          ? `AD SLOT — ${cfg.label} (paste code in src/ads/config.ts)`
+          : "Advertisement"}
+      </div>
+
+      <div
+        ref={ref}
+        className="ad-slot-body"
+        style={{ minHeight: cfg.height }}
+      />
     </div>
   );
 }
