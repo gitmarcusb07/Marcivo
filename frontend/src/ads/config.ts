@@ -40,6 +40,7 @@ export const LOADER_SRC = import.meta.env.VITE_AD_LOADER_SRC || "";
 export type SlotName =
   | "header"
   | "home_mid"
+  | "home_native"
   | "home_tall"
   | "category_mid"
   | "search_mid"
@@ -76,6 +77,14 @@ const slot = (on: boolean, height: number, label: string, code = ""): Slot => ({
 const banner = (key: string, width: number, height: number): string =>
   `<script>\n  atOptions = {\n    'key' : '${key}',\n    'format' : 'iframe',\n    'height' : ${height},\n    'width' : ${width},\n    'params' : {}\n  };\n</script>\n<script src="https://bancadeltempoidea.org/22/${key}"></script>`;
 
+/**
+ * Native Banner differs from the banners: no atOptions, just an async loader
+ * plus the container div it fills. The div must follow the script so it exists
+ * by the time the loader runs.
+ */
+const native = (key: string): string =>
+  `<script async="async" data-cfasync="false" src="https://bancadeltempoidea.org/21/${key}"></script>\n<div id="container-${key}"></div>`;
+
 // The six banner units Adsterra approved for marcivo.teraplayer.in.
 const U = {
   b728: "43b766b0835d4c7a5e30aa2d13c3f30a", // 728x90  leaderboard
@@ -84,6 +93,7 @@ const U = {
   b160x300: "7cf528556da300cc500ab8f9ead22dff", // 160x300 skyscraper
   b160x600: "4226127ec737d1de5cef772a9232785c", // 160x600 tall skyscraper
   b320: "4ef4f0b0935ec684339cf9385d358dc4", // 320x50  mobile banner
+  native: "de668932bebe103b63ba4e82327428aa", // native banner (4:1)
 };
 
 export const SLOTS: Record<SlotName, Slot> = {
@@ -92,6 +102,9 @@ export const SLOTS: Record<SlotName, Slot> = {
 
   // Home, between the trending hero and the first poster row.
   home_mid: slot(true, 100, "Home mid banner 468x60", banner(U.b468, 468, 60)),
+
+  // Home native banner (4:1 widget) under the poster rows.
+  home_native: slot(true, 170, "Home native banner (4:1)", native(U.native)),
 
   // Home sidebar skyscraper, beside the poster rows.
   home_tall: slot(true, 620, "Home tall skyscraper 160x600", banner(U.b160x600, 160, 600)),

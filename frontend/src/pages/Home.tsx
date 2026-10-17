@@ -145,6 +145,9 @@ export default function Home() {
         <AdSlot name="home_mid" className="mt-6" />
         <Row title="Seasonal Anime" items={anime.seasonal} onPick={pick} />
       </>)}
+
+      {/* Native banner closes out the home content column, on both tabs. */}
+      {!loading && !err && <AdSlot name="home_native" className="mt-6" />}
         </div>
 
         {/* Tall skyscraper rail — hidden on the player page like all ads. */}
