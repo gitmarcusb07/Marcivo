@@ -1,54 +1,57 @@
-# Adding ads (Adstra / Adsterra)
+# Ads — current state (Adsterra)
 
-Marcivo has five named ad slots already placed in the layout. You paste your
-network's code in **one file** — `frontend/src/ads/config.ts` — and redeploy.
-No layout file needs touching.
+All ten approved units are wired and deployed. This file is the reference for
+what is live, where each unit sits, and how to change it.
 
-## The slots
+## What is live
 
-| Slot | Where it shows | Default height |
+| Slot | Page | Unit | Size |
+|---|---|---|---|
+| `header` | Every page | Leaderboard | 728x90 |
+| `footer` | Every page | Leaderboard | 728x90 |
+| `home_mid` | Home | Banner | 468x60 |
+| `home_tall` | Home | Tall skyscraper | 160x600 |
+| `category_mid` | Movies / Series / Hollywood / Bollywood | Banner | 468x60 |
+| `search_mid` | Search | Rectangle | 300x250 |
+| `search_sidebar` | Search | Skyscraper | 160x300 |
+| `detail_below` | Detail | Rectangle | 300x250 |
+| `detail_sidebar` | Detail | Tall skyscraper | 160x600 |
+| `status_banner` | Status | Mobile banner | 320x50 |
+
+Plus three units that are page-wide rather than slot-based, all in
+`frontend/index.html`:
+
+| Unit | Where in `index.html` | Notes |
 |---|---|---|
-| `header` | Under the navbar — every page except the player | 100px |
-| `home_mid` | Home, between the trending hero and the poster rows | 110px |
-| `category_mid` | Category pages (Movies / Series / Hollywood / Bollywood) | 110px |
-| `detail_below` | Detail page, under "Available versions" | 110px |
-| `footer` | Above the site footer — every page | 100px |
+| Popunder | in `<head>` | Fires on the first click, one per page |
+| Social Bar | above `</body>` | Sticky bar pinned to the bottom |
+| Native Banner | script + container div | Placed inline in the home content |
 
-The player page (`/watch/...`) is deliberately ad-free: ad networks routinely
-flag video pages, and an overlay on the player drives users away.
+The smartlink (`https://directyp.org/4/fc0dd4b54c04ab68608a74812af26351`) renders
+as a small "Watch free — no sign-up" button above the footer banner on every
+non-player page.
 
-Every slot reserves a fixed-height box, so switching ads on or off never
-shifts the page or breaks the layout. With no code pasted, a slot renders
-nothing at all.
+## Where to change anything
 
-## Where to paste the code
-
-Open `frontend/src/ads/config.ts`. Each slot looks like this:
+`frontend/src/ads/config.ts` — the only file for the ten banner slots.
 
 ```ts
-header: slot(true, 100, "Leaderboard — under the navbar (all pages)"),
+header: slot(true, 100, "Header leaderboard 728x90", banner(U.b728, 728, 90)),
+//       ^ on/off  ^ reserved height                              ^ key + size
 ```
 
-Paste the unit snippet the network gives you into the fourth argument:
+Swap a unit by changing the key in the `U` map, or set the first argument to
+`false` to hide just that slot. The popunder, social bar and native banner
+live in `frontend/index.html` instead.
 
-```ts
-header: slot(true, 100, "Leaderboard", `
-  <script>
-    atOptions = { key: "abcdef1234", format: "iframe", height: 90, width: 728 };
-  </script>
-  <script src="https://www.highperformanceformat.com/abcdef1234/invoke.js"></script>
-`),
-```
-
-Two things the code handles for you, which are the usual reasons an ad "does
-nothing" when pasted into React:
+Two things the mounting code handles for you, which are the usual reasons an
+ad "does nothing" when pasted into React:
 
 - `<script>` tags inside a pasted snippet are **re-created as real script
   elements**, so they actually execute (browsers ignore scripts injected as
   plain HTML).
-- If your network gives one site-wide loader tag, put its URL in
-  `VITE_AD_LOADER_SRC` in `frontend/.env` instead — it is injected once into
-  `<head>` before any slot fills.
+- The two-part snippet (config script, then loader script) is emitted **in
+  that order**, because the loader reads `atOptions` as it runs.
 
 ## Turning ads on / off
 
@@ -56,32 +59,20 @@ nothing" when pasted into React:
 
 ```
 VITE_ADS_ENABLED=1     # 1 = show ads, 0 = hide every slot (no layout gap)
-VITE_AD_LOADER_SRC=    # optional site-wide loader URL
+VITE_AD_LOADER_SRC=    # optional site-wide loader URL (unused — see below)
 ```
 
-Per-slot, set the first argument of any `slot(...)` to `false` to hide just
-that one.
+Env values are baked into the JS bundle at build time, so after changing one
+you must rebuild. Per-slot, flip the first argument of any `slot(...)`.
 
-**Env values are baked into the JS bundle at build time.** After changing
-either file you must redeploy (or hit "Retry build" in Cloudflare Pages) —
-editing the env var alone does nothing to a live site.
+## The player page is deliberately ad-free
 
-## Before you paste real code
+`/watch/...` renders no ads at all — the network flags video pages, and an
+overlay on the player drives users away. `AD_FREE_PATHS` in `config.ts` is the
+list; add a regex there to protect another page.
 
-Run `npm run dev` in `frontend/`. Every slot renders a dashed box labelled
-"AD SLOT — …", so you can check the placement and spacing first. Those
-preview boxes never ship: they only exist in dev, and vanish the moment real
-code is pasted.
+## Fill rate and a new domain
 
-## Ad networks and a new site
-
-Adstra and Adsterra both review sites before serving paid ads, and both care
-about traffic + content. On a brand-new domain you may see:
-
-- **blank slots for the first day or two** — normal, the crawler hasn't run yet;
-- **low fill rate** — a new site with little traffic often gets public-service
-  or house ads first. The slots still render, they just fill with something
-  cheap until volume builds.
-
-Keep `VITE_ADS_ENABLED=1` and the slots in place either way — the layout is
-already sized for them.
+A fresh domain usually shows blank or house ads for the first day or two while
+the crawler runs, then fills properly once traffic builds. Keep the slots in
+place either way — the layout already reserves the height, so nothing shifts.
