@@ -3,6 +3,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { api, API_BASE, backendInfo } from "../lib/api";
 import { SearchBar, Row, RowSkeleton } from "../components/ui";
 import TrendingHero from "../components/TrendingHero";
+import AdSlot from "../ads/AdSlot";
 
 type Tab = "movies" | "anime";
 
@@ -33,7 +34,7 @@ export default function Home() {
     const info = await backendInfo();
     setBackend(info.ok ? "up" : "down");
     if (!info.ok) {
-      setErr(`Cannot reach backend at ${API_BASE}. Start it on your laptop (npm run dev in Marcivo/backend) and keep phone on the same network.`);
+      setErr(`Cannot reach backend at ${API_BASE}. ${info.error ? `(${info.error})` : ""}`);
       setLoading(false);
       return;
     }
@@ -62,7 +63,7 @@ export default function Home() {
   const anime = data?.anime;
 
   return (
-    <div className="max-w-5xl mx-auto p-3 pb-24">
+    <div className="max-w-7xl mx-auto px-4 pb-16">
       <SearchBar placeholder="Search movies, series..." />
 
       {tab === "movies" && (
@@ -99,13 +100,15 @@ export default function Home() {
             <TrendingHero items={showcase.trendingWeek || []} onWatch={pick} />
           </div>
 
+          <AdSlot name="home_mid" className="mt-6" />
+
           <div className="flex items-end justify-between mt-6 mb-2">
             <h2 className="font-display text-2xl">POPULAR MOVIES</h2>
             <button onClick={() => nav("/category/movies")} className="text-sm text-gray-300">See More ›</button>
           </div>
           <div className="flex gap-3 overflow-x-auto no-scrollbar pb-1">
             {(showcase.popular2026 || []).map((it: any) => (
-              <button key={`pop-${it.id}`} onClick={() => pick(it)} className="w-32 md:w-40 shrink-0 text-left">
+              <button key={`pop-${it.id}`} onClick={() => pick(it)} className="w-32 md:w-40 lg:w-44 shrink-0 text-left">
                 <div className="aspect-[2/3] rounded-xl overflow-hidden bg-card border border-white/10">
                   {(it.thumb || it.poster) && <img src={it.thumb || it.poster} alt={it.title} loading="lazy" decoding="async" className="w-full h-full object-cover" />}
                 </div>
@@ -121,7 +124,7 @@ export default function Home() {
           </div>
           <div className="flex gap-3 overflow-x-auto no-scrollbar pb-1">
             {(showcase.newReleases || []).map((it: any) => (
-              <button key={`new-${it.id}`} onClick={() => pick(it)} className="w-32 md:w-40 shrink-0 text-left">
+              <button key={`new-${it.id}`} onClick={() => pick(it)} className="w-32 md:w-40 lg:w-44 shrink-0 text-left">
                 <div className="aspect-[2/3] rounded-xl overflow-hidden bg-card border border-white/10">
                   {(it.thumb || it.poster) && <img src={it.thumb || it.poster} alt={it.title} loading="lazy" decoding="async" className="w-full h-full object-cover" />}
                 </div>
@@ -135,6 +138,7 @@ export default function Home() {
 
       {!loading && !err && tab === "anime" && anime && (<>
         <Row title="Top Anime" items={anime.top} onPick={pick} />
+        <AdSlot name="home_mid" className="mt-6" />
         <Row title="Seasonal Anime" items={anime.seasonal} onPick={pick} />
       </>)}
 

@@ -122,104 +122,26 @@ html, body, #root {
   to { background-position: 220% center; }
 }
 
-/* Netflix-style animated splash: letters ignite in sequence, then fade */
-.splash-root {
-  animation: splashOut 0.5s ease-in 2.3s forwards;
+/* ── Ad slots ─────────────────────────────────────────────────────────────
+   Fixed-height boxes so an ad loading (or not loading) never shifts the
+   layout. The label only shows in dev preview, before real ad code exists. */
+.ad-slot { margin: 0 auto; width: 100%; text-align: center; }
+.ad-slot-label {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+.ad-slot-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #17171b 0%, #121216 100%);
+  border: 1px dashed rgba(255, 255, 255, 0.12);
 }
-@keyframes splashOut {
-  to { opacity: 0; visibility: hidden; }
-}
-.splash-letter {
-  font-size: clamp(56px, 16vw, 110px);
-  line-height: 1;
-  color: #0d0d12;
-  text-shadow: 0 0 0 transparent;
-  opacity: 0.25;
-  animation: splashIgnite 0.55s ease-out forwards;
-}
-@keyframes splashIgnite {
-  0% { opacity: 0.25; color: #0d0d12; text-shadow: none; transform: scale(1.15); }
-  60% { opacity: 1; color: #e9d5ff; transform: scale(1); }
-  100% {
-    opacity: 1;
-    color: #f5edff;
-    text-shadow:
-      0 0 12px #b45cff,
-      0 0 34px #962fbf,
-      0 0 70px #7a1fa2;
-  }
-}
-.splash-sweep {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 90px;
-  background: linear-gradient(100deg, transparent, rgba(200, 130, 255, 0.35), transparent);
-  animation: splashSweep 1.9s ease-in-out 0.2s forwards;
-  opacity: 0;
-}
-/* fanning light beams behind the letters (Netflix-ident homage) */
-.splash-rays {
-  position: absolute;
-  width: 140vmax;
-  height: 140vmax;
-  background: conic-gradient(
-    from 0deg,
-    transparent 0deg,
-    rgba(150, 60, 220, 0.14) 8deg,
-    transparent 16deg,
-    transparent 30deg,
-    rgba(200, 130, 255, 0.12) 38deg,
-    transparent 46deg,
-    transparent 60deg,
-    rgba(150, 60, 220, 0.14) 68deg,
-    transparent 76deg,
-    transparent 90deg,
-    rgba(200, 130, 255, 0.12) 98deg,
-    transparent 106deg,
-    transparent 120deg,
-    rgba(150, 60, 220, 0.14) 128deg,
-    transparent 136deg,
-    transparent 150deg,
-    rgba(200, 130, 255, 0.12) 158deg,
-    transparent 166deg,
-    transparent 180deg,
-    rgba(150, 60, 220, 0.14) 188deg,
-    transparent 196deg,
-    transparent 210deg,
-    rgba(200, 130, 255, 0.12) 218deg,
-    transparent 226deg,
-    transparent 240deg,
-    rgba(150, 60, 220, 0.14) 248deg,
-    transparent 256deg,
-    transparent 270deg,
-    rgba(200, 130, 255, 0.12) 278deg,
-    transparent 286deg,
-    transparent 300deg,
-    rgba(150, 60, 220, 0.14) 308deg,
-    transparent 316deg,
-    transparent 330deg,
-    rgba(200, 130, 255, 0.12) 338deg,
-    transparent 346deg
-  );
-  animation: splashRays 2.6s ease-out forwards;
-  opacity: 0;
-}
-@keyframes splashRays {
-  0% { opacity: 0; transform: scale(0.6) rotate(-8deg); }
-  25% { opacity: 1; }
-  100% { opacity: 0.9; transform: scale(1.15) rotate(4deg); }
-}
-.splash-zoom {
-  animation: splashZoom 2.6s ease-out forwards;
-}
-@keyframes splashZoom {
-  from { transform: scale(1.12); }
-  to { transform: scale(1); }
-}
-@keyframes splashSweep {
-  0% { left: -100px; opacity: 0; }
-  20% { opacity: 1; }
-  100% { left: 110%; opacity: 0; }
-}
+.ad-slot-body:empty { display: none; }
+.ad-slot-body > * { max-width: 100%; }
+

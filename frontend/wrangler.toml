@@ -1,0 +1,7 @@
+# Cloudflare Pages project for the Marcivo website.
+# Lets `npx wrangler pages deploy dist` work from frontend/ for direct uploads.
+# Git-connected Pages builds ignore this and use the dashboard build settings
+# (root directory `frontend`, output `dist`).
+name = "marcivo"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = "dist"

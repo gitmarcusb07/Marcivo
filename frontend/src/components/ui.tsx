@@ -50,7 +50,7 @@ export function SearchBar({ initial = "", placeholder = "SEARCH" }: { initial?: 
   };
 
   return (
-    <div className="relative sticky top-0 z-20">
+    <div className="relative z-30">
       <form
         className="bg-searchbar/95 backdrop-blur border border-netflix/60 rounded-full flex items-center gap-3 px-4 py-3"
         onSubmit={(e) => { e.preventDefault(); go(q); }}
@@ -97,7 +97,7 @@ export function SearchBar({ initial = "", placeholder = "SEARCH" }: { initial?: 
 export function Card({ item, onClick }: { item: any; onClick?: () => void }) {
   const img = item.thumb || item.poster;
   return (
-    <button onClick={onClick} className="w-28 md:w-36 shrink-0 text-left group">
+    <button onClick={onClick} className="w-32 md:w-36 lg:w-40 shrink-0 text-left group">
       <div className="aspect-[2/3] rounded-lg overflow-hidden bg-card">
         {img ? (
           <img src={img} alt={item.title} loading="lazy" decoding="async" className="w-full h-full object-cover group-active:scale-95 transition" />

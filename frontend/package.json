@@ -7,16 +7,9 @@
     "dev": "vite --host 0.0.0.0 --port 5173",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 0.0.0.0 --port 5173",
-    "typecheck": "tsc --noEmit",
-    "cap:sync": "capacitor sync android",
-    "apk:debug": "npm run build && capacitor sync android"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@capacitor/android": "^6.2.2",
-    "@capacitor/app": "^6.0.3",
-    "@capacitor/browser": "^6.0.6",
-    "@capacitor/cli": "^6.2.2",
-    "@capacitor/core": "^6.2.2",
     "hls.js": "^1.7.3",
     "lucide-react": "^1.49.0",
     "react": "^18.3.1",

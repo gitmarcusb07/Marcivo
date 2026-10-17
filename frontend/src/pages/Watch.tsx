@@ -317,7 +317,7 @@ export default function Watch() {
   const headerBadges = pvHead.badges;
 
   return (
-    <div className="max-w-5xl mx-auto p-3 pb-10">
+    <div className="max-w-5xl mx-auto px-4 pb-10">
       <div className="flex gap-4 items-start">
         {d?.poster && <img src={d.poster} alt={headerTitle} className="w-24 rounded-lg bg-card" />}
         <div className="min-w-0">

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { api } from "../lib/api";
 import { SearchBar, Row } from "../components/ui";
+import AdSlot from "../ads/AdSlot";
 
 const PILLS = [
   { id: "movies", label: "Movies" },
@@ -29,7 +30,7 @@ export default function CategoryPage() {
   }, [cat]);
 
   return (
-    <div className="max-w-5xl mx-auto p-3 pb-24">
+    <div className="max-w-7xl mx-auto px-4 pb-16">
       <SearchBar placeholder="Search movies, series..." />
       <div className="flex items-center gap-3 mt-4 mb-1">
         <button onClick={() => nav(-1)} className="text-muted">←</button>
@@ -46,6 +47,7 @@ export default function CategoryPage() {
           >{p.label}</button>
         ))}
       </div>
+      <AdSlot name="category_mid" className="mt-4" />
       {loading && <div className="skeleton h-48 mt-4" />}
       {!loading && !data && <p className="text-muted mt-4">Failed to load. Check backend and retry.</p>}
       {(data?.rows || []).map((row: any) => (

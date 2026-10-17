@@ -3,6 +3,7 @@ import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { api, CAT_SITES, watchUrl, prewarm } from "../lib/api";
 import { prettyVersion } from "../lib/format";
 import { toggleInList, getList } from "../store/continueWatching";
+import AdSlot from "../ads/AdSlot";
 
 export default function Detail() {
   const { kind = "", id = "" } = useParams();
@@ -61,11 +62,11 @@ export default function Detail() {
   }, [kind, id, season]);
 
 
-  if (loading) return <div className="max-w-5xl mx-auto p-3"><div className="skeleton h-72" /><div className="skeleton h-6 mt-3" /></div>;
+  if (loading) return <div className="max-w-7xl mx-auto px-4"><div className="skeleton h-72" /><div className="skeleton h-6 mt-3" /></div>;
   if (!d) return <div className="p-6">Failed to load. <button className="underline" onClick={() => nav(-1)}>Back</button></div>;
 
   return (
-    <div className="max-w-5xl mx-auto p-3 pb-24">
+    <div className="max-w-7xl mx-auto px-4 pb-16">
       <button onClick={() => nav(-1)} className="text-muted text-sm">← Back</button>
       <div className="mt-2 flex flex-col md:flex-row gap-4">
         <img src={d.poster} alt={d.title} className="w-40 md:w-56 rounded-xl bg-card" />
@@ -166,12 +167,14 @@ export default function Detail() {
         })}
       </div>
 
+      <AdSlot name="detail_below" className="mt-6" />
+
       {!!d.similar?.length && (
         <>
           <h2 className="font-display text-2xl mt-6">More like this</h2>
           <div className="flex gap-3 overflow-x-auto no-scrollbar mt-2">
             {d.similar.map((s: any) => (
-              <button key={`${s.kind}-${s.id}`} onClick={() => nav(`/detail/${s.kind}/${s.id}`)} className="w-28 shrink-0 text-left">
+              <button key={`${s.kind}-${s.id}`} onClick={() => nav(`/detail/${s.kind}/${s.id}`)} className="w-32 md:w-36 shrink-0 text-left">
                 <div className="aspect-[2/3] bg-card rounded-lg overflow-hidden">{(s.thumb || s.poster) && <img src={s.thumb || s.poster} loading="lazy" decoding="async" className="w-full h-full object-cover" />}</div>
                 <div className="text-xs mt-1 truncate">{s.title}</div>
               </button>

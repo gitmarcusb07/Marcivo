@@ -24,12 +24,12 @@ export default function SearchPage() {
   const sites = (data?.sites || []) as any[];
 
   return (
-    <div className="max-w-5xl mx-auto p-3 pb-24">
+    <div className="max-w-7xl mx-auto px-4 pb-16">
       <SearchBar initial={q} key={q} />
       <h1 className="font-display text-2xl mt-4">Results for “{q}”</h1>
-      {loading && <div className="grid grid-cols-3 md:grid-cols-6 gap-3 mt-3">{Array.from({ length: 12 }).map((_, i) => <div key={i} className="skeleton aspect-[2/3]" />)}</div>}
+      {loading && <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-3 mt-3">{Array.from({ length: 12 }).map((_, i) => <div key={i} className="skeleton aspect-[2/3]" />)}</div>}
       {!loading && (
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-3 mt-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-3 mt-3">
           {all.map((it: any) => (
             <Card key={`${it.kind}-${it.id}`} item={it} onClick={() => nav(`/detail/${it.kind}/${it.id}`)} />
           ))}

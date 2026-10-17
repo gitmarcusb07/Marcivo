@@ -67,12 +67,14 @@ export async function checkBackend(timeoutMs = 8000): Promise<boolean> {
 // Backend identity (build tag) — tells us which server code the app hits.
 // 90s default: the free Render instance sleeps after ~15 min idle and takes
 // ~50-60s to wake — an 8s budget made every cold open look "unreachable".
-export async function backendInfo(timeoutMs = 90000): Promise<{ ok: boolean; build: string }> {
+// `error` carries the raw fetch failure (TLS, DNS, CORS, timeout…) so the
+// UI can show the real cause instead of a generic "unreachable".
+export async function backendInfo(timeoutMs = 90000): Promise<{ ok: boolean; build: string; error: string }> {
   try {
     const r = await j<{ ok: boolean; build?: string }>(`/health`, undefined, timeoutMs);
-    return { ok: !!r.ok, build: String((r as any)?.build || "?") };
-  } catch {
-    return { ok: false, build: "?" };
+    return { ok: !!r.ok, build: String((r as any)?.build || "?"), error: "" };
+  } catch (e: any) {
+    return { ok: false, build: "?", error: String(e?.message || e).slice(0, 300) };
   }
 }
 

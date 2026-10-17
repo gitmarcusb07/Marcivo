@@ -35,9 +35,9 @@ export default function StatusPage() {
 
   const hitRate = m ? `${Math.round((m.cacheHitRate || 0) * 100)}%` : "—";
   return (
-    <div className="max-w-5xl mx-auto p-3 pb-28">
+    <div className="max-w-7xl mx-auto px-4 pb-16">
       <SearchBar placeholder="Search movies, series..." />
-      <h1 className="font-display text-3xl mt-4">App Status</h1>
+      <h1 className="font-display text-3xl mt-4">Site Status</h1>
       <p className="text-xs text-muted mt-1 break-all">{API_BASE}</p>
 
       <div className="mt-3 bg-card border border-white/10 rounded-xl px-4 py-2">
@@ -59,7 +59,7 @@ export default function StatusPage() {
 
       <button onClick={load} className="mt-4 px-6 py-2 rounded-lg bg-netflix font-bold text-sm">↻ Refresh</button>
       {!loading && !info.ok && (
-        <p className="text-red-400 text-sm mt-3">Start the backend on your laptop (`npm run dev` in Marcivo/backend) and keep the phone on the same network.</p>
+        <p className="text-red-400 text-sm mt-3">The backend did not answer. It may still be waking up — hit Refresh in a minute, or check the service on Render.</p>
       )}
     </div>
   );
