@@ -19,6 +19,7 @@ import { HLSManager } from "./hls.js";
 import { LITE } from "./lite.js";
 import * as fs from "fs";
 import * as path from "path";
+const SEO_SITE_URL = "https://marcivo.teraplayer.in";
 
 const hls = new HLSManager({
   cacheDir: process.env.HLS_CACHE_DIR || "./HLS_CACHE",
@@ -42,6 +43,62 @@ app.use(express.json({ limit: "256kb" }));
 const BUILD = "2026-09-30-fastwatch1";
 
 app.get("/health", (_req, res) => res.json({ ok: true, time: new Date().toISOString(), build: BUILD, lite: LITE }));
+
+app.get("/sitemap.xml", async (_req, res) => {
+  try {
+    const urls = new Set<string>([
+      `${SEO_SITE_URL}/`,
+      `${SEO_SITE_URL}/category/movies`,
+      `${SEO_SITE_URL}/category/series`,
+      `${SEO_SITE_URL}/category/hollywood`,
+      `${SEO_SITE_URL}/category/bollywood`,
+    ]);
+
+    // Fetch real catalog titles from TMDB.
+    const categories: BrowseCat[] = [
+      "movies",
+      "series",
+      "hollywood",
+      "bollywood",
+    ];
+
+    const results = await Promise.allSettled(
+      categories.map((category) => tmdbBrowse(category))
+    );
+
+    for (const result of results) {
+      if (result.status !== "fulfilled") continue;
+
+      for (const row of result.value.rows) {
+        for (const item of row.items) {
+          if (!item.id || !["movie", "tv"].includes(item.kind)) continue;
+
+          urls.add(
+            `${SEO_SITE_URL}/detail/${item.kind}/${encodeURIComponent(item.id)}`
+          );
+        }
+      }
+    }
+
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${[...urls]
+  .map(
+    (url) =>
+      `  <url><loc>${url}</loc></url>`
+  )
+  .join("\n")}
+</urlset>`;
+
+    res.setHeader("Content-Type", "application/xml; charset=utf-8");
+    res.setHeader("Cache-Control", "public, max-age=3600");
+    res.send(xml);
+  } catch (error) {
+    console.error("[SEO] Sitemap generation failed:", error);
+    res.status(500).type("text/plain").send("Could not generate sitemap");
+  }
+});
+
 
 app.get("/api/health/sites", async (_req, res) => {
   const r = await searchSites("test").catch((e) => ({ status: "error", error: String(e).slice(0, 200) }));
