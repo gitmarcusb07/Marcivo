@@ -9,7 +9,7 @@ import {
   type SlotName,
 } from "./config";
 
-// Inject the optional site-wide loader only once.
+// Inject the optional global loader only once.
 let loaderRequested = false;
 
 function ensureLoader() {
@@ -20,19 +20,23 @@ function ensureLoader() {
   const script = document.createElement("script");
   script.src = LOADER_SRC;
   script.async = true;
+
   script.onload = () => {
     console.info("[MARCIVO ADS] Global loader loaded.");
   };
+
   script.onerror = () => {
     loaderRequested = false;
-    console.error("[MARCIVO ADS] Global loader failed:", LOADER_SRC);
+    console.error(
+      "[MARCIVO ADS] Global loader failed:",
+      LOADER_SRC
+    );
   };
 
   document.head.appendChild(script);
 }
 
-// Serialize ad mounts so banner units that use window.atOptions
-// do not overwrite one another's configuration before loading.
+// Serialize slots because banner units may share window.atOptions.
 let mountQueue: Promise<void> = Promise.resolve();
 
 function enqueueMount(task: () => Promise<void>) {
@@ -40,61 +44,79 @@ function enqueueMount(task: () => Promise<void>) {
 }
 
 /**
- * Parse an ad snippet and recreate its scripts as real script elements.
- * HTML inserted through innerHTML alone does not execute script tags.
+ * Insert snippet markup and recreate script elements.
+ * Scripts with src are awaited before the next script is inserted.
  */
 function mountSnippet(
   host: HTMLElement,
   html: string
 ): Promise<void> {
-  const doc = new DOMParser().parseFromString(html, "text/html");
-  const nodes = Array.from(doc.body.childNodes);
+  const doc = new DOMParser().parseFromString(
+    html,
+    "text/html"
+  );
 
+  const nodes = Array.from(doc.body.childNodes);
   host.replaceChildren();
 
-  const loadScript = (
-    old: HTMLScriptElement
-  ): Promise<void> => {
-    return new Promise((resolve) => {
-      const script = document.createElement("script");
-
-      for (const attr of Array.from(old.attributes)) {
-        script.setAttribute(attr.name, attr.value);
-      }
-
-      let finished = false;
-
-      const finish = () => {
-        if (finished) return;
-        finished = true;
-        resolve();
-      };
-
-      if (old.src) {
-        // Preserve ordering between scripts in this snippet.
-        script.async = false;
-        script.addEventListener("load", finish, { once: true });
-        script.addEventListener("error", finish, { once: true });
-        setTimeout(finish, 10000);
-      }
-
-      script.textContent = old.textContent;
-
-      host.appendChild(script);
-
-      if (!old.src) {
-        finish();
-      }
-    });
-  };
-
   return nodes.reduce<Promise<void>>(
-    (promise, node) =>
-      promise.then(async () => {
-        if (node.nodeName === "SCRIPT") {
-          await loadScript(node as HTMLScriptElement);
-        } else {
+    (chain, node) =>
+      chain.then(async () => {
+        if (node.nodeName !== "SCRIPT") {
           host.appendChild(node.cloneNode(true));
+          return;
+        }
+
+        const original = node as HTMLScriptElement;
+        const script = document.createElement("script");
+
+        for (const attr of Array.from(original.attributes)) {
+          script.setAttribute(attr.name, attr.value);
+        }
+
+        if (original.src) {
+          script.async = false;
+
+          await new Promise<void>((resolve) => {
+            let finished = false;
+
+            const finish = () => {
+              if (finished) return;
+              finished = true;
+              resolve();
+            };
+
+            script.addEventListener("load", finish, {
+              once: true,
+            });
+
+            script.addEventListener("error", finish, {
+              once: true,
+            });
+
+            // A stalled request must not block every remaining slot.
+            const timeout = window.setTimeout(finish, 10000);
+
+            const originalFinish = finish;
+            const settle = () => {
+              window.clearTimeout(timeout);
+              originalFinish();
+            };
+
+            script.addEventListener("load", settle, {
+              once: true,
+            });
+
+            script.addEventListener("error", settle, {
+              once: true,
+            });
+
+            script.textContent = original.textContent;
+            host.appendChild(script);
+          });
+        } else {
+          script.textContent = original.textContent;
+          host.appendChild(script);
         }
       }),
     Promise.resolve()
@@ -115,28 +137,40 @@ export default function AdSlot({
   const { pathname } = useLocation();
 
   const cfg = SLOTS[name];
-  const adFree = AD_FREE_PATHS.some((re) =>
-    re.test(pathname)
+
+  const adFree = AD_FREE_PATHS.some((pattern) =>
+    pattern.test(pathname)
   );
 
   const code = (cfg?.code || "").trim();
+
   const active =
-    ADS_ON && !!cfg?.on && !adFree && !!code;
+    ADS_ON &&
+    !!cfg?.on &&
+    !adFree &&
+    !!code;
 
   useEffect(() => {
-    if (!active || !ref.current) return;
-
     const host = ref.current;
 
-    // Do not mount the same slot twice.
+    if (!active || !host) return;
+
     if (host.dataset.mounted === "1") return;
 
     host.dataset.mounted = "1";
 
+    console.info("[MARCIVO ADS] Slot activation:", {
+      name,
+      active,
+      codeLength: code.length,
+      pathname,
+      mounted: host.dataset.mounted,
+    });
+
     ensureLoader();
 
     enqueueMount(async () => {
-      // The user may have navigated away while waiting in the queue.
+      // Skip a slot if navigation removed its element.
       if (!host.isConnected) {
         delete host.dataset.mounted;
         return;
@@ -149,19 +183,23 @@ export default function AdSlot({
 
         const scripts = Array.from(
           host.querySelectorAll("script")
-        ).map((script) => script.src || "[inline script]");
+        ).map((script) => ({
+          src: script.src || "[inline script]",
+          connected: script.isConnected,
+        }));
 
         console.info("[MARCIVO ADS] Mount completed:", {
           slot: name,
           scripts,
-          container: host.querySelector('[id^="container-"]')?.id,
+          container:
+            host.querySelector('[id^="container-"]')?.id ??
+            null,
+          html: host.innerHTML,
         });
 
-        // A native snippet has an external loader and a container.
-        // An empty script list indicates that mounting did not complete
-        // as expected for a script-based slot.
         if (!host.querySelector("script[src]")) {
           delete host.dataset.mounted;
+
           console.error(
             "[MARCIVO ADS] No external script was mounted:",
             name
@@ -169,6 +207,7 @@ export default function AdSlot({
         }
       } catch (error) {
         delete host.dataset.mounted;
+
         console.error(
           "[MARCIVO ADS] Mount failed:",
           name,
@@ -178,9 +217,9 @@ export default function AdSlot({
     });
 
     setPreview(false);
-  }, [active, code, name]);
+  }, [active, code, name, pathname]);
 
-  // Show empty-slot previews only during local development.
+  // Show placeholders only during local development.
   useEffect(() => {
     setPreview(
       import.meta.env.DEV &&
