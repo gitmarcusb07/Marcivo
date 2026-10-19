@@ -134,6 +134,8 @@ interface SiteCfg {
   base_url: string;
   search_path: string;
   name: string;
+  /** Require a year/quality tag in result titles (SITE{n}_STRICT_TITLE). */
+  strict_title: boolean;
 }
 
 const cache = new Map<string, { expires: number; value: any }>();
@@ -207,7 +209,8 @@ function siteConfigs(): SiteCfg[] {
     const b = (process.env[`SITE${i}_BASE_URL`] || "").trim().replace(/\/$/, "");
     const p = (process.env[`SITE${i}_SEARCH_PATH`] || defaults[i]).trim();
     const n = (process.env[`SITE${i}_NAME`] || `Site ${i}`).trim();
-    if (b && p) out.push({ id: i, base_url: b, search_path: p, name: n });
+    const strict = (process.env[`SITE${i}_STRICT_TITLE`] || "").trim().toLowerCase() === "true";
+    if (b && p) out.push({ id: i, base_url: b, search_path: p, name: n, strict_title: strict });
   }
   return out;
 }
@@ -224,7 +227,7 @@ function buildSearchUrl(base: string, path: string, q: string) {
     season marker. Blog clones (fake PRMovies) serve articles without any. */
 export const CONTENT_SIGNAL = /\b((?:19|20)\d{2})\b|480p|720p|1080p|2160p|4k|blu-?ray|web-?dl|webrip|hdrip|hdts|hdtc|hdcam|dvdrip|season\s*\d|s\d+\s*e\d+|episode\s*\d+|complete|web[\s-]*series/i;
 
-function extractHtml(html: string, base: string, q: string, siteId = 0) {
+function extractHtml(html: string, base: string, q: string, strictTitle = false) {
   const $ = cheerio.load(html);
   const seen = new Set<string>();
   const cands: SiteResult[] = [];
@@ -250,10 +253,11 @@ function extractHtml(html: string, base: string, q: string, siteId = 0) {
     if (/^(next|prev|previous|»|«|›|‹|\d+|read more(\.\.\.)?|more)$/i.test(title)) return;
     // Blog-clone articles (fake PRMovies): never real playable content.
     if (ARTICLE_TITLE.test(title)) return;
-    // PRMovies slot (site 4) is a known blog-clone risk: require a content
-    // signal so articles can never surface as versions. Other sites keep the
-    // permissive filter (anime titles often lack years).
-    if (siteId === 4 && !CONTENT_SIGNAL.test(title)) return;
+    // Optional per-site hardening (SITE{n}_STRICT_TITLE=true): require a
+    // content signal (year/quality) so blog-clone articles can never surface
+    // as versions. Off by default — real sites (e.g. the PRMovies slot after
+    // it was swapped) often have bare titles like "Inception online free".
+    if (strictTitle && !CONTENT_SIGNAL.test(title)) return;
     const s = score(title, q, href);
     if (s <= 0) return;
     seen.add(href);
@@ -305,7 +309,7 @@ async function searchOne(site: SiteCfg, q: string) {
     if (ct.includes("json") || looksJson) {
       try { const out: SiteResult[] = []; walkJson(JSON.parse(body), site.base_url, q, out); results = out; } catch { results = []; }
     }
-    if (!results.length && typeof r.data === "string") results = extractHtml(r.data, site.base_url, q, site.id);
+    if (!results.length && typeof r.data === "string") results = extractHtml(r.data, site.base_url, q, site.strict_title);
     const perSite = Math.max(1, parseInt(process.env.SITE_MAX_RESULTS_PER_SITE || "8", 10));
     const best = new Map<string, SiteResult>();
     for (const it of results) {
