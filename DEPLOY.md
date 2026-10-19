@@ -124,6 +124,8 @@ redeploy — see [ADS.md](ADS.md).
 - **Social image**: `frontend/public/og.png` (1200×630) is the default
   `og:image`/`twitter:image`; detail pages swap in the title's poster.
   Regenerate it after brand-copy changes: `cd backend && node scripts/og-image.mjs`.
+  Favicon/PWA icons (`icon-192/512`, `apple-touch-icon`, `favicon-48`)
+  regenerate with `node scripts/site-icons.mjs`.
 
 ## Gotchas
 

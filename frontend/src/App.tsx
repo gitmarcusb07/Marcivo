@@ -20,7 +20,7 @@ const Upcoming = lazy(() => import("./pages/Upcoming"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const TITLES: Record<string, string> = {
-  "/": "Watch Movies Online Free — Movies, Series & Anime | Marcivo",
+  "/": "Marcivo — Watch Movies Online Free | Movies, Series & Anime",
   "/search": "Search — Marcivo",
   "/status": "Status — Marcivo",
   "/category/movies": "Movies — Marcivo",

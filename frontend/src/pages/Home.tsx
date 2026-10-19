@@ -67,8 +67,8 @@ export default function Home() {
   return (
     <div className="max-w-7xl mx-auto px-4 pb-16">
       <Seo
-        title="Watch Movies Online Free — Movies, Series & Anime | Marcivo"
-        description="Browse trending movies, web series and anime in one place — compare every available version and press play. Free to use, no account needed."
+        title="Marcivo — Watch Movies Online Free | Movies, Series & Anime"
+        description="Marcivo lines up trending movies, web series and anime in one place — compare every available version and press play. Free to use, no account needed."
         path="/"
         jsonLd={[
           {
@@ -76,6 +76,7 @@ export default function Home() {
             "@type": "WebSite",
             "@id": `${SITE_URL}/#website`,
             name: "Marcivo",
+            alternateName: "Marcivo Movies",
             url: `${SITE_URL}/`,
             potentialAction: {
               "@type": "SearchAction",
@@ -89,7 +90,7 @@ export default function Home() {
             "@id": `${SITE_URL}/#organization`,
             name: "Marcivo",
             url: `${SITE_URL}/`,
-            logo: { "@type": "ImageObject", url: `${SITE_URL}/og.png`, width: 1200, height: 630 },
+            logo: { "@type": "ImageObject", url: `${SITE_URL}/icon-512.png`, width: 512, height: 512 },
           },
         ]}
       />
