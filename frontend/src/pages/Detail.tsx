@@ -167,10 +167,16 @@ export default function Detail() {
       {/* Exact versions of this title — one button per quality, like the site */}
       <h2 className="font-display text-2xl mt-6">Available versions{sitesScope && sitesScope !== d.title ? ` — ${sitesScope}` : ""}</h2>
       {!sites && <div className="skeleton h-12 mt-2" />}
-      {sites && sites.status !== "ok" && <p className="text-muted text-sm mt-2">Site search: {sites.status}. Check backend .env sites.</p>}
+      {sites && sites.status !== "ok" && (
+        <p className="text-muted text-sm mt-2">
+          ⚠️ {sites.provider ? `${sites.provider} search` : "Site search"} is unavailable right now ({sites.status}) — try again in a moment.
+        </p>
+      )}
       {sites?.results?.length === 0 && sites.status === "ok" && (
         <p className="text-muted text-sm mt-2">
-          {sites?.exact ? `Not available on ${(sites.exact.sites || []).join(", ") || "your sites"} yet.` : "No versions found on your sites."}
+          {sites?.exact
+            ? `Not available on ${(sites.exact.sites || []).join(", ") || sites.provider || "your sites"} yet.`
+            : `No versions found${sites?.provider ? ` on ${sites.provider}` : ""}.`}
         </p>
       )}
       <div className="grid gap-2 mt-2">

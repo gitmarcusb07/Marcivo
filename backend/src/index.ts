@@ -11,7 +11,8 @@ import { anilistHome, anilistSearch, anilistDetail, anilistUpcoming } from "./an
 import { searchSites, lookupResult, expandExactVariants, expandOne, registerResults } from "./siteSearch.js";
 import {
   normalizeQuery, classify, groupForClass, groupForPriority, groupSiteIds,
-  originOf, originSiteIds, isExactVersion, sourceNameFor, logSearch, ContentGroup,
+  originOf, exclusiveSiteId, providerSiteIds, isExactVersion, isCatalogExact,
+  sourceNameFor, logSearch, ContentGroup,
 } from "./identity.js";
 import { enqueueResolve, getJob, preResolve, getMetrics } from "./resolver.js";
 import { streamProxy } from "./stream.js";
@@ -40,7 +41,7 @@ const app = express();
 app.use(cors({ origin: (process.env.FRONTEND_ORIGIN || "*") === "*" ? "*" : (process.env.FRONTEND_ORIGIN || "").split(",") }));
 app.use(express.json({ limit: "256kb" }));
 
-const BUILD = "2026-10-17-seo1";
+const BUILD = "2026-10-19-cinegram1";
 
 app.get("/health", (_req, res) => res.json({ ok: true, time: new Date().toISOString(), build: BUILD, lite: LITE }));
 
@@ -194,12 +195,12 @@ app.get("/api/search", async (req, res) => {
     ]);
     const cls = classify(nq, tmdb, anime);
     const group: ContentGroup = groupForClass(cls);
-    // Origin routing: Hollywood movies go to Vegamovies only, Bollywood to
-    // RogMovies only (env-overridable). Anime keeps its own pool; anything
-    // without a clear origin uses the full group pool.
+    // Provider routing: the default exclusive mode pins EVERY movie/series
+    // query to the single configured provider site — origin routing
+    // (Hollywood→Vegamovies) and shared group pools are bypassed. Anime
+    // keeps its own pool. (EXCLUSIVE_SITE=0 restores legacy routing.)
     const origin = cls === "anime" ? "" : originOf(tmdb);
-    const originSites = originSiteIds(origin as any);
-    const siteIds = originSites.length ? originSites : groupSiteIds(group);
+    const siteIds = providerSiteIds(group, origin as any);
     const sites = await searchSites(q, siteIds, undefined, { group, debug })
       .catch(() => ({ status: "unavailable", results: [] }));
     const list = (sites as any)?.results || [];
@@ -207,7 +208,12 @@ app.get("/api/search", async (req, res) => {
     try { if ((sites as any)?.status === "ok") preResolve(list.map((r: any) => r.url)); } catch {}
     logSearch(q, nq, cls, group, ((sites as any)?.per_site || []), list.length, grouped.length || list.length,
       (grouped.length ? grouped : list).map((r: any) => `${r.title || ""}`.slice(0, 60)));
-    const out: any = { query: q, tmdb, anime, sites: list, grouped, siteStatus: (sites as any)?.status || "unavailable", classification: cls, group };
+    const exId = exclusiveSiteId();
+    const out: any = {
+      query: q, tmdb, anime, sites: list, grouped,
+      siteStatus: (sites as any)?.status || "unavailable", classification: cls, group,
+      provider: exId ? sourceNameFor(exId) : "",
+    };
     if (debug && (sites as any)?.debug) out.debug = (sites as any).debug;
     res.json(out);
   } catch (e: any) {
@@ -250,28 +256,39 @@ app.get("/api/site-search", async (req, res) => {
   const q = String(req.query.q || "").trim();
   if (!q) return res.json({ status: "empty", results: [] });
   const debug = String(req.query.debug || "") === "1";
-  // Explicit site filter (e.g. Hollywood->[4,1]) wins; otherwise the
-  // content-group pool applies: anime → PirateXPlay/Gokuhd only,
-  // movie → PRMovies/Vega/Rog only.
+  // Explicit site filter (e.g. Hollywood->[4,1]) wins in legacy mode;
+  // otherwise the content-group pool applies: anime → PirateXPlay/Gokuhd
+  // only, movie → PRMovies/Vega/Rog only. In the default exclusive-provider
+  // mode every non-anime query is pinned to the single provider site, so
+  // caller-supplied pools can never route the default flow elsewhere.
   let sites = String(req.query.sites || "").split(",").map((s) => parseInt(s.trim(), 10)).filter((n) => n >= 1 && n <= 8);
   const group = groupForPriority(String(req.query.priority || ""));
   if (!sites.length && group) sites = groupSiteIds(group);
+  const exSite = exclusiveSiteId();
+  if (exSite && group !== "anime") sites = [exSite];
   try {
-    const val: any = await searchSites(q, sites.length ? sites : undefined, undefined, group ? { group, debug } : { debug });
+    let val: any = await searchSites(q, sites.length ? sites : undefined, undefined, group ? { group, debug } : { debug });
     // Exact mode (detail page): the app knows the clicked title+year+kind
     // from TMDB/AniList — keep ONLY versions of that exact movie. Similar
-    // names, other years, and other titles are dropped. The unfiltered cache
-    // stays intact; pre-resolution warms exactly what the user will tap.
+    // names, other years, and other titles are dropped. Exact filtering runs
+    // on COPIES: the shared cached payload must never be narrowed, or every
+    // later search for the same query would come back empty.
     const exact = String(req.query.exact || "") === "1";
     const exactYear = String(req.query.year || "").trim();
     const exactType = String(req.query.type || "").trim().toLowerCase();
+    const copyOf = (src: any) => ({ ...src, results: [...(src?.results || [])], grouped: [...(src?.grouped || [])] });
     if (val?.status === "ok" && exact) {
       const runExact = async (searchQ: string) => {
-        const v: any = searchQ === q ? val : await searchSites(searchQ, sites.length ? sites : undefined, undefined, group ? { group, debug } : { debug });
-        if (v?.status !== "ok") return v;
+        const rawV: any = searchQ === q ? val : await searchSites(searchQ, sites.length ? sites : undefined, undefined, group ? { group, debug } : { debug });
+        if (rawV?.status !== "ok") return rawV;
+        const v: any = copyOf(rawV);
         const raw = (v.results || []).length;
         const kept = (v.results || []).filter((r: any) =>
           isExactVersion(String(r.title || ""), String(r.year || ""), String(r.type || r.kind || ""), { title: q, year: exactYear || undefined, type: exactType || undefined })
+          // Catalog sources (the exclusive provider) title pages plainly
+          // ("Inception online free") — no year tag, so the year gate above
+          // would drop every row. Its own rows compare stripped titles.
+          || (exSite && r.site_id === exSite && isCatalogExact(String(r.title || ""), q))
         );
         // Fan out: one button per quality variant on the content page(s),
         // exactly like the site lists them. Falls back to base rows when the
@@ -309,12 +326,9 @@ app.get("/api/site-search", async (req, res) => {
         }
       }
       const usedIds = sites.length ? sites : [];
-      // Merge retry payload into the response shape.
-      if (out !== val) {
-        val.results = out.results;
-        val.grouped = out.grouped;
-        val.per_site = out.per_site || val.per_site;
-      }
+      // Respond with a merged COPY — never write narrowed rows back into the
+      // shared cached payload (that empties later searches for this query).
+      val = copyOf(out);
       val.exact = {
         title: q, year: exactYear, type: exactType,
         before: (out as any)._exact?.before ?? (val.results || []).length,
@@ -334,6 +348,9 @@ app.get("/api/site-search", async (req, res) => {
         group || "unknown", val.per_site || [], (val.results || []).length, ((val.grouped || []).length || (val.results || []).length),
         ((val.grouped || val.results || []) as any[]).map((r: any) => `${r.title || ""}`.slice(0, 60)));
     }
+    // Name the sole provider (default flow) so the app can show clear
+    // empty/failure messages instead of silently switching sources.
+    if (exSite && val && typeof val === "object" && !(val as any).provider) (val as any).provider = sourceNameFor(exSite);
     res.json(val);
   } catch (e: any) {
     res.status(500).json({ status: "error", error: String(e?.message || e).slice(0, 300) });

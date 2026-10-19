@@ -185,22 +185,15 @@ function cinegramEpisodes(html: string): CinegramEp[] {
   return out;
 }
 
-/** Resolve a cinegram detail page to the source's own player embed URL.
-    season/episode are optional (series default to the first listed episode). */
-async function cinegramEmbed(sourceUrl: string, job: Job, season?: number, episode?: number): Promise<string> {
-  const ua = process.env.SITE_USER_AGENT || "Mozilla/5.0 (Windows NT 10.0; Win64; x64)";
-  const page = await axios.get(sourceUrl, { timeout: 15000, headers: { "User-Agent": ua }, maxRedirects: 5, validateStatus: () => true });
-  const html = typeof page.data === "string" ? page.data : "";
-  if (page.status >= 400 || !html) throw new Error("Cinegram page unreachable — try another version");
+/** Build the source's public player-embed URL from a detail page's HTML.
+    Pure (no network): /tv/ pages select the requested episode (default:
+    first listed episode), everything else uses the movie page's own TMDB
+    id. Exported for unit tests — cinegramEmbed calls it unchanged. */
+export function cinegramEmbedUrlFromHtml(html: string, pathname: string, season?: number, episode?: number): string {
   // Only an actual Cloudflare interstitial counts — bot-management script
   // tags ("/cdn-cgi/challenge-platform/…") appear on normal pages too.
   const challenged = () => /just a moment|cf_chl_opt|challenges\.cloudflare\.com/i.test(html);
   const challengeErr = "Cinegram is challenging requests right now — try again in a moment";
-
-  let pathname = "/";
-  try { pathname = new URL(sourceUrl).pathname; } catch {}
-
-  let embedUrl = "";
   if (/^\/tv\//i.test(pathname)) {
     const eps = cinegramEpisodes(html);
     if (!eps.length) throw new Error(challenged() ? challengeErr : "No episode list found on this Cinegram page — layout may have changed");
@@ -210,12 +203,24 @@ async function cinegramEmbed(sourceUrl: string, job: Job, season?: number, episo
       if (!hit) throw new Error(`Episode S${season}E${episode} isn't listed on Cinegram — try another episode`);
       pick = hit;
     }
-    embedUrl = `https://ythd.org/embed/${pick.t}/${pick.s}-${pick.e}/`;
-  } else {
-    const t = cinegramMovieTmdbId(html);
-    if (!t) throw new Error(challenged() ? challengeErr : "Couldn't locate the Cinegram player for this title — layout may have changed");
-    embedUrl = `https://ythd.org/embed/${t}`;
+    return `https://ythd.org/embed/${pick.t}/${pick.s}-${pick.e}/`;
   }
+  const t = cinegramMovieTmdbId(html);
+  if (!t) throw new Error(challenged() ? challengeErr : "Couldn't locate the Cinegram player for this title — layout may have changed");
+  return `https://ythd.org/embed/${t}`;
+}
+
+/** Resolve a cinegram detail page to the source's own player embed URL.
+    season/episode are optional (series default to the first listed episode). */
+async function cinegramEmbed(sourceUrl: string, job: Job, season?: number, episode?: number): Promise<string> {
+  const ua = process.env.SITE_USER_AGENT || "Mozilla/5.0 (Windows NT 10.0; Win64; x64)";
+  const page = await axios.get(sourceUrl, { timeout: 15000, headers: { "User-Agent": ua }, maxRedirects: 5, validateStatus: () => true });
+  const html = typeof page.data === "string" ? page.data : "";
+  if (page.status >= 400 || !html) throw new Error("Cinegram page unreachable — try another version");
+
+  let pathname = "/";
+  try { pathname = new URL(sourceUrl).pathname; } catch {}
+  const embedUrl = cinegramEmbedUrlFromHtml(html, pathname, season, episode);
 
   // Reachability check only: the embed shell is generic, so this catches
   // outages — title/episode availability is decided inside the embed at
@@ -793,7 +798,7 @@ function readyJob(url: string, source: string, seekable?: boolean, embed?: boole
 /** Cache/dedup key. Whole-series source pages (cinegram /tv/) carry every
     episode on ONE URL, so a requested episode must neither share nor read the
     plain default entry — otherwise S5E3 would get the cached S1E1 embed. */
-function resolveKey(sourceUrl: string, season?: number, episode?: number): string {
+export function resolveKey(sourceUrl: string, season?: number, episode?: number): string {
   const base = normKey(sourceUrl);
   if (season && episode && isCinegram(sourceUrl)) return `${base}|s${season}e${episode}`;
   return base;

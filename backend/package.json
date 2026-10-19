@@ -8,7 +8,7 @@
     "start": "tsx src/index.ts",
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc --noEmit",
-    "test": "tsx tests/identity.test.ts"
+    "test": "tsx tests/identity.test.ts && tsx tests/provider-routing.test.ts"
   },
   "dependencies": {
     "axios": "^1.7.7",

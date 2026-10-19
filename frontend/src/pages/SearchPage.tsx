@@ -25,6 +25,12 @@ export default function SearchPage() {
   // fall back to flat site rows for older backends.
   const grouped = (data?.grouped || []) as any[];
   const sites = (data?.sites || []) as any[];
+  // Exclusive-provider flow: the backend pins movie/series queries to one
+  // provider and names it here (data.provider). Failures and empty results
+  // get their own clear message below — never a silent provider switch.
+  const provider = String((data as any)?.provider || "").trim();
+  const noVersions = !grouped.length && !sites.length;
+  const sourceNames = Array.from(new Map(sites.map((s: any) => [s.site_id, String(s.site_name || "")])).values()).filter(Boolean);
 
   return (
     <div className="max-w-7xl mx-auto px-4 pb-16">
@@ -49,7 +55,7 @@ export default function SearchPage() {
       )}
       {!loading && data && (!!grouped.length || !!sites.length) && (
         <>
-          <h2 className="font-display text-2xl mt-6">Available versions — PRMovies • PirateXPlay • Vegamovies • RogMovies • Gokuhd</h2>
+          <h2 className="font-display text-2xl mt-6">Available versions{sourceNames.length ? ` — ${sourceNames.join(" • ")}` : ""}</h2>
           <div className="grid gap-2 mt-2">
             {(grouped.length ? grouped : sites.map((r: any) => ({
               content_id: r.content_id || r.result_id || r.url,
@@ -110,7 +116,17 @@ export default function SearchPage() {
           <button onClick={() => window.location.reload()} className="mt-3 px-5 py-2 rounded-lg bg-netflix font-bold text-sm">↻ Retry</button>
         </div>
       )}
-      {!loading && data && !all.length && !sites.length && <p className="text-muted mt-3">No results. Try another spelling.</p>}
+      {!loading && data && noVersions && (
+        data.siteStatus && data.siteStatus !== "ok" ? (
+          <p className="text-muted mt-3">⚠️ {provider ? `${provider} search` : "Site search"} is unavailable right now — please try again in a moment.</p>
+        ) : (
+          <p className="text-muted mt-3">
+            {all.length
+              ? `No versions${provider ? ` available on ${provider}` : ""} for this title yet.`
+              : `No results${provider ? ` on ${provider}` : ""} for “${q}”. Try another spelling.`}
+          </p>
+        )
+      )}
         </div>
 
         {/* Tall skyscraper rail beside the results. */}

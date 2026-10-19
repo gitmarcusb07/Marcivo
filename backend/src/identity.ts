@@ -88,6 +88,28 @@ export function originOf(tmdb: any[]): ContentOrigin {
   return "";
 }
 
+/** Exclusive provider (default flow): movie/series search AND playback
+    resolve through ONE site slot — caller-supplied pools (origin routing,
+    group pools, frontend source lists) are ignored for every non-anime
+    query. EXCLUSIVE_SITE=<id> selects the slot (default 4, the streaming
+    slot); 0/empty restores the legacy multi-provider routing. Anime always
+    keeps its own pool. */
+export function exclusiveSiteId(): number {
+  const raw = process.env.EXCLUSIVE_SITE;
+  if (raw === undefined) return 4;
+  const n = parseInt(String(raw).trim(), 10);
+  return n >= 1 && n <= 8 ? n : 0;
+}
+
+/** Site pool for one search/playback routing decision. */
+export function providerSiteIds(group: ContentGroup, origin: ContentOrigin = ""): number[] {
+  if (group === "anime") return groupSiteIds(group);
+  const ex = exclusiveSiteId();
+  if (ex) return [ex];
+  const originSites = originSiteIds(origin);
+  return originSites.length ? originSites : groupSiteIds(group);
+}
+
 /** Streaming/download orientation for a site id (falls back across groups). */
 export function sourceTypeFor(siteId: number): "streaming" | "download" {
   for (const g of Object.values(SOURCE_GROUPS)) {
@@ -460,6 +482,19 @@ export function isExactVersion(
   const sim = titleSimilarity(qTitle, siteTitle);
   if (query.year) return sim >= 0.8;
   return sim >= 0.85;
+}
+
+/** Catalog-exact match for TMDB-backed sources (the exclusive provider):
+    their pages are titled plainly ("Inception online free") — no year or
+    quality tags — so isExactVersion's year gate would drop every row in
+    exact mode. Compare stripped titles instead; different cores (spin-offs,
+    extras, other years) never match. */
+export function isCatalogExact(siteTitle: string, queryTitle: string): boolean {
+  const strip = (t: string) =>
+    normalizeTitle(String(t || "").replace(/\s*[-–—|]?\s*online free\s*$/i, "")).replace(/^(the|a|an)\s+/, "");
+  const a = strip(siteTitle);
+  const b = strip(queryTitle);
+  return !!a && !!b && a === b;
 }
 
 // --- Classification from already-fetched metadata (zero extra API cost) ---
