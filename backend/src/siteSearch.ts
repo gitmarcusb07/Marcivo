@@ -193,7 +193,7 @@ function normalise(href: string, base: string): string | null {
   } catch { return null; }
 }
 
-function siteConfigs(): SiteCfg[] {
+export function siteConfigs(): SiteCfg[] {
   const defaults: Record<number, string> = {
     1: "/?s={query}",
     2: "/ts-search.php?q={query}&page=1",
@@ -215,7 +215,7 @@ function siteConfigs(): SiteCfg[] {
   return out;
 }
 
-function buildSearchUrl(base: string, path: string, q: string) {
+export function buildSearchUrl(base: string, path: string, q: string) {
   const enc = encodeURIComponent(q);
   let p = path;
   if (p.includes("{query}")) p = p.replace("{query}", enc);
@@ -227,10 +227,70 @@ function buildSearchUrl(base: string, path: string, q: string) {
     season marker. Blog clones (fake PRMovies) serve articles without any. */
 export const CONTENT_SIGNAL = /\b((?:19|20)\d{2})\b|480p|720p|1080p|2160p|4k|blu-?ray|web-?dl|webrip|hdrip|hdts|hdtc|hdcam|dvdrip|season\s*\d|s\d+\s*e\d+|episode\s*\d+|complete|web[\s-]*series/i;
 
+/** Nav/pagination anchor titles ("Next", "»", page numbers) — never content. */
+const NAV_TITLE = /^(next|prev|previous|»|«|›|‹|\d+|read more(\.\.\.)?|more)$/i;
+
+/** Structural card-grid extractor for sources whose search pages render
+    content cards (verified against BoredFlix's live DOM): results live in
+    `aside.main` as `div.item` cards — `.poster img[data-src]` (the real
+    poster URL; `src` is a lazy-load placeholder), `.meta > div > span`
+    (year, type, duration) and `.meta > a` (title + URL). The gate requires
+    BOTH card markers, so flat-theme sources (Vega/Rog/PirateX/Cinegram have
+    zero `div.item` cards) keep their existing extraction path untouched. */
+export function extractCardResults(html: string, base: string, q: string, strictTitle = false): SiteResult[] {
+  const $ = cheerio.load(html);
+  return cardRowsFrom($, base, q, strictTitle);
+}
+
+function cardRowsFrom($: any, base: string, q: string, strictTitle: boolean): SiteResult[] {
+  const out: SiteResult[] = [];
+  try {
+    if (!$(".item .poster").length || !$(".item .meta .type").length) return out;
+    // Search results live in the main column; the sidebar carousels ("Top
+    // Boredflix", "Recently Updated") reuse the same card markup and must
+    // never leak in as results. Fall back to the whole document when the
+    // layout differs (the gate above still guarantees a real card grid).
+    const scope: any = $("aside.main").length ? $("aside.main") : $.root();
+    const seen = new Set<string>();
+    scope.find(".item").each((_: any, el: any) => {
+      const $el = $(el);
+      const titleA = $el.find(".meta > a[href]").first();
+      const href = String(titleA.attr("href") || $el.find(".poster a[href]").first().attr("href") || "");
+      const url = normalise(href, base);
+      if (!url || seen.has(url)) return;
+      const title = clean(titleA.text() || $el.find(".poster img").attr("alt") || "");
+      if (title.length < 2 || title.length > 300) return;
+      if (NAV_TITLE.test(title)) return;
+      if (ARTICLE_TITLE.test(title)) return;
+      if (strictTitle && !CONTENT_SIGNAL.test(title)) return;
+      const s = score(title, q, url);
+      if (s <= 0) return;
+      const img = $el.find(".poster img").first();
+      const rawPoster = String(img.attr("data-src") || img.attr("src") || "").trim();
+      const poster = /^https?:\/\//i.test(rawPoster) ? rawPoster : "";
+      // Type marker tells movies from season grids ("SS 5" = 5 seasons,
+      // "EP 16" = 16 episodes) — never guessed from a bare title.
+      const typeTxt = clean($el.find(".meta .type").first().text());
+      const kind: "movie" | "series" = /^(ss\b|s\d+\b|seasons?\b|series\b|tv\b)/i.test(typeTxt) ? "series" : "movie";
+      const ym = clean($el.find(".meta > div > span").first().text()).match(/\b((?:19|20)\d{2})\b/);
+      seen.add(url);
+      out.push({
+        title, url, score: s, site_id: 0, site_name: "", kind, origin: "mixed",
+        poster, year: ym ? ym[1] : "",
+      });
+    });
+  } catch { /* malformed HTML → no rows, never a throw */ }
+  return out;
+}
+
 function extractHtml(html: string, base: string, q: string, strictTitle = false) {
   const $ = cheerio.load(html);
   const seen = new Set<string>();
   const cands: SiteResult[] = [];
+  // Card-grid sources parse first: structured cards carry their own
+  // title/poster/year/type, and their URLs are then skipped by the anchor
+  // scan below so the cleaner rows always win.
+  for (const c of cardRowsFrom($, base, q, strictTitle)) { seen.add(c.url); cands.push(c); }
   let anchors = $("article a[href], .post a[href], .entry a[href], .movie a[href], .item a[href], .card a[href], main a[href]");
   if (!anchors.length) anchors = $("a[href]");
   anchors.each((_, el) => {
@@ -250,7 +310,7 @@ function extractHtml(html: string, base: string, q: string, strictTitle = false)
       title = imgAlt.length >= 2 ? imgAlt : near;
     }
     if (title.length < 2 || title.length > 300) return;
-    if (/^(next|prev|previous|»|«|›|‹|\d+|read more(\.\.\.)?|more)$/i.test(title)) return;
+    if (NAV_TITLE.test(title)) return;
     // Blog-clone articles (fake PRMovies): never real playable content.
     if (ARTICLE_TITLE.test(title)) return;
     // Optional per-site hardening (SITE{n}_STRICT_TITLE=true): require a
@@ -288,9 +348,35 @@ function walkJson(v: any, base: string, q: string, out: SiteResult[]) {
   }
 }
 
+/** Short, safe description of a failed site fetch: HTTP status, Cloudflare
+    mitigation tag and the tag-stripped opening words of the body — enough
+    to tell a WAF/bot block from an origin error in logs and API responses. */
+export function describeFetchFailure(status: number, body: string, cfMitigated?: string): string {
+  const head = String(body || "")
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 90);
+  const cf = String(cfMitigated || "").trim();
+  const cfTag = cf ? (cf === "challenge" ? " (Cloudflare challenge)" : ` (Cloudflare ${cf})`) : "";
+  return `HTTP ${status}${cfTag}${head ? `: ${head}` : ""}`;
+}
+
+/** One-line description of a transport-level fetch error (timeout, DNS,
+    TLS, connection reset) for logs and API responses. */
+export function describeFetchError(err: any): string {
+  const code = String(err?.code || err?.name || "network error").trim();
+  const msg = String(err?.message || "").replace(/\s+/g, " ").trim();
+  if (!msg || msg === code) return code.slice(0, 110);
+  return `${code}: ${msg.slice(0, 90)}`.slice(0, 130);
+}
+
 async function searchOne(site: SiteCfg, q: string) {
   const url = buildSearchUrl(site.base_url, site.search_path, q);
   const timeout = Math.max(5, parseInt(process.env.SITE_TIMEOUT || "15", 10)) * 1000;
+  const t0 = Date.now();
   try {
     const r = await axios.get(url, {
       timeout,
@@ -301,7 +387,11 @@ async function searchOne(site: SiteCfg, q: string) {
       maxRedirects: 5,
       validateStatus: () => true,
     });
-    if (r.status >= 400) return { status: "unavailable" as const, results: [] as SiteResult[] };
+    if (r.status >= 400) {
+      const desc = describeFetchFailure(r.status, typeof r.data === "string" ? r.data : JSON.stringify(r.data || ""), String((r.headers as any)?.["cf-mitigated"] || ""));
+      console.warn(`[site-search] ${site.name} unavailable — ${desc} (${Date.now() - t0}ms, ${url})`);
+      return { status: "unavailable" as const, results: [] as SiteResult[], error: desc };
+    }
     const body = typeof r.data === "string" ? r.data : JSON.stringify(r.data);
     let results: SiteResult[] = [];
     const ct = String(r.headers["content-type"] || "");
@@ -320,7 +410,9 @@ async function searchOne(site: SiteCfg, q: string) {
     list.forEach((x) => {
       x.site_id = site.id;
       x.site_name = site.name;
-      x.kind = guessKind(x.title);
+      // Title heuristics add the series signal; a card-declared series type
+      // (e.g. BoredFlix's "SS 5" marker) is never downgraded by a bare title.
+      x.kind = x.kind === "series" || guessKind(x.title) === "series" ? "series" : "movie";
       // Detail-page convention: a /tv/<slug> page is a series even when the
       // card title carries no season tag (source titles often omit them).
       if (x.kind === "movie") {
@@ -329,8 +421,10 @@ async function searchOne(site: SiteCfg, q: string) {
       x.origin = originFor(site.id);
     });
     return { status: "ok" as const, results: list };
-  } catch {
-    return { status: "unavailable" as const, results: [] as SiteResult[] };
+  } catch (e: any) {
+    const desc = describeFetchError(e);
+    console.warn(`[site-search] ${site.name} fetch failed — ${desc} (${Date.now() - t0}ms, ${url})`);
+    return { status: "unavailable" as const, results: [] as SiteResult[], error: desc };
   }
 }
 
@@ -396,14 +490,23 @@ export async function searchSites(rawQuery: string, onlySiteIds?: number[], prio
   }
 
   const settled = await Promise.all(sites.map((s) => searchOne(s, q)));
-  const perSite = sites.map((s, i) => ({
-    site: s.name,
-    status: (settled[i] as any)?.status || "unavailable",
-    count: ((settled[i] as any)?.results || []).length,
-  }));
+  const perSite = sites.map((s, i) => {
+    const r: any = settled[i];
+    return {
+      site: s.name,
+      status: r?.status || "unavailable",
+      count: (r?.results || []).length,
+      // Specific failure reason (HTTP status / Cloudflare block / timeout)
+      // so /api/health/sites and /api/site-search are self-diagnosing.
+      ...(r?.error ? { error: String(r.error) } : {}),
+    };
+  });
   const available = settled.filter((r) => r.status !== "unavailable").length;
   if (!available) {
-    const v = { status: "unavailable", results: [], site_count: sites.length, per_site: perSite };
+    // Bubble the first concrete reason (e.g. `HTTP 403 (Cloudflare challenge):
+    // Access denied`) so API responses and logs are self-diagnosing.
+    const firstErr = String((perSite.find((p: any) => p.error) as any)?.error || "");
+    const v = { status: "unavailable", results: [], site_count: sites.length, per_site: perSite, error: firstErr };
     return v;
   }
   // URL dedupe first (identical pages), keeping the better score.
@@ -423,10 +526,13 @@ export async function searchSites(rawQuery: string, onlySiteIds?: number[], prio
     const meta = parseMeta(it.title);
     const type = group === "anime" ? "anime" : it.kind;
     it.type = type;
-    it.year = meta.year || "";
+    // Structured card adapters (e.g. BoredFlix) may carry the release year on
+    // the card itself; a year inside the title still wins.
+    const yr = meta.year || (/^\d{4}$/.test(String(it.year || "")) ? String(it.year) : "");
+    it.year = yr;
     it.result_id = resultId(it.site_id, it.url);
-    it.content_id = contentId(type, it.title, meta.year, meta.season, meta.episode);
-    it.match = matchScore(nq, it.title, { year: meta.year, type, season: meta.season });
+    it.content_id = contentId(type, it.title, yr || undefined, meta.season, meta.episode);
+    it.match = matchScore(nq, it.title, { year: yr || undefined, type, season: meta.season });
     // §14 full normalized schema — same contract for every adapter.
     it.source = sourceNameFor(it.site_id).toLowerCase();
     it.source_type = sourceTypeFor(it.site_id);
@@ -437,9 +543,10 @@ export async function searchSites(rawQuery: string, onlySiteIds?: number[], prio
     it.country = "";
     it.season = meta.season;
     it.episode = meta.episode;
-    // Source pages rarely expose a reliable poster: leave empty so the UI
-    // falls back to the metadata (TMDB/AniList) poster. Never copy a poster
-    // from an unrelated search result.
+    // Posters: structured card adapters (e.g. BoredFlix) may supply the
+    // card's own poster; flat-theme sources leave it empty so the UI falls
+    // back to metadata (TMDB/AniList). Never copy a poster from an
+    // unrelated search result.
     if (typeof it.poster !== "string") it.poster = "";
     if (typeof it.backdrop !== "string") it.backdrop = "";
     if (typeof it.description !== "string") it.description = "";

@@ -213,6 +213,9 @@ app.get("/api/search", async (req, res) => {
       query: q, tmdb, anime, sites: list, grouped,
       siteStatus: (sites as any)?.status || "unavailable", classification: cls, group,
       provider: exId ? sourceNameFor(exId) : "",
+      // Specific failure reason when the provider is unreachable (HTTP
+      // status / Cloudflare block / timeout) — never a generic message.
+      providerError: String((sites as any)?.error || ""),
     };
     if (debug && (sites as any)?.debug) out.debug = (sites as any).debug;
     res.json(out);

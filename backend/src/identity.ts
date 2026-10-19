@@ -17,12 +17,17 @@ export interface SourceDef {
 
 export type ContentGroup = "movie" | "anime" | "unknown";
 
-/** Movie/series share one pool; anime has its own pool. */
+/** Movie/series share one pool; anime has its own pool. New optional slots
+    append at the END of a pool so existing priorities never shift: BoredFlix
+    (id 6, streaming) joins movie + unknown pools only, participates in
+    multi-provider mode only when SITE6_BASE_URL is set, and stays inert in
+    the default EXCLUSIVE_SITE flow (which pins every non-anime query). */
 export const SOURCE_GROUPS: Record<ContentGroup, SourceDef[]> = {
   movie: [
     { id: 4, name: "PRMovies", type: "streaming", priority: 1 },
     { id: 1, name: "Vegamovies", type: "download", priority: 2 },
     { id: 2, name: "RogMovies", type: "download", priority: 3 },
+    { id: 6, name: "BoredFlix", type: "streaming", priority: 4 },
   ],
   anime: [
     { id: 5, name: "PirateXPlay", type: "streaming", priority: 1 },
@@ -34,6 +39,7 @@ export const SOURCE_GROUPS: Record<ContentGroup, SourceDef[]> = {
     { id: 1, name: "Vegamovies", type: "download", priority: 3 },
     { id: 2, name: "RogMovies", type: "download", priority: 4 },
     { id: 3, name: "Gokuhd", type: "download", priority: 5 },
+    { id: 6, name: "BoredFlix", type: "streaming", priority: 6 },
   ],
 };
 
@@ -43,6 +49,7 @@ export const CONTENT_SOURCES: Record<string, { name: string; type: "streaming" |
     { name: "prmovies", type: "streaming", priority: 1 },
     { name: "vegamovies", type: "download", priority: 2 },
     { name: "rogmovies", type: "download", priority: 3 },
+    { name: "boredflix", type: "streaming", priority: 4 },
   ],
   anime: [
     { name: "piratepixels", type: "streaming", priority: 1 },
@@ -52,8 +59,8 @@ export const CONTENT_SOURCES: Record<string, { name: string; type: "streaming" |
 
 /** §42 final source priority — single source of truth (derived from SOURCE_GROUPS). */
 export const SOURCE_PRIORITY: Record<string, Record<string, number>> = {
-  movie: { prmovies: 1, vegamovies: 2, rogmovies: 3 },
-  series: { prmovies: 1, vegamovies: 2, rogmovies: 3 },
+  movie: { prmovies: 1, vegamovies: 2, rogmovies: 3, boredflix: 4 },
+  series: { prmovies: 1, vegamovies: 2, rogmovies: 3, boredflix: 4 },
   anime: { piratepixels: 1, gokuhd: 2 },
 };
 

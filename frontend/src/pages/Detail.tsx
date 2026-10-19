@@ -20,6 +20,9 @@ export default function Detail() {
   const [season, setSeason] = useState<number | null>(null);
   const [seasonData, setSeasonData] = useState<any>(null);
   const [seasonLoading, setSeasonLoading] = useState(false);
+  // Short form of the site-search failure reason (e.g. `HTTP 403 (Cloudflare
+  // challenge)`) for the versions list message.
+  const sitesErrShort = String((sites as any)?.error || "").split(": ")[0].trim();
 
   const loadVersions = useCallback((title: string, scopeLabel: string, meta?: { year?: string; type?: string; lang?: string }) => {
     setSites(null);
@@ -169,7 +172,8 @@ export default function Detail() {
       {!sites && <div className="skeleton h-12 mt-2" />}
       {sites && sites.status !== "ok" && (
         <p className="text-muted text-sm mt-2">
-          ⚠️ {sites.provider ? `${sites.provider} search` : "Site search"} is unavailable right now ({sites.status}) — try again in a moment.
+          ⚠️ {sites.provider ? `${sites.provider} search` : "Site search"} is unavailable right now
+          {sitesErrShort ? ` — ${sitesErrShort}` : ""}. Try again in a moment.
         </p>
       )}
       {sites?.results?.length === 0 && sites.status === "ok" && (

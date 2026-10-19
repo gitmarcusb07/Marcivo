@@ -29,6 +29,9 @@ export default function SearchPage() {
   // provider and names it here (data.provider). Failures and empty results
   // get their own clear message below — never a silent provider switch.
   const provider = String((data as any)?.provider || "").trim();
+  // Short form of the backend's failure reason (e.g. `HTTP 403 (Cloudflare
+  // challenge)`) — meaningful, without dumping the page snippet into the UI.
+  const providerError = String((data as any)?.providerError || "").split(": ")[0].trim();
   const noVersions = !grouped.length && !sites.length;
   const sourceNames = Array.from(new Map(sites.map((s: any) => [s.site_id, String(s.site_name || "")])).values()).filter(Boolean);
 
@@ -118,7 +121,10 @@ export default function SearchPage() {
       )}
       {!loading && data && noVersions && (
         data.siteStatus && data.siteStatus !== "ok" ? (
-          <p className="text-muted mt-3">⚠️ {provider ? `${provider} search` : "Site search"} is unavailable right now — please try again in a moment.</p>
+          <p className="text-muted mt-3">
+            ⚠️ {provider ? `${provider} search` : "Site search"} is unavailable right now
+            {providerError ? ` — ${providerError}` : ""}. Please try again in a moment.
+          </p>
         ) : (
           <p className="text-muted mt-3">
             {all.length
