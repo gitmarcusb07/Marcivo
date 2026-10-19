@@ -70,17 +70,28 @@ export default function Home() {
         title="Watch Movies Online Free — Movies, Series & Anime | Marcivo"
         description="Browse trending movies, web series and anime in one place — compare every available version and press play. Free to use, no account needed."
         path="/"
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "Marcivo",
-          url: `${SITE_URL}/`,
-          potentialAction: {
-            "@type": "SearchAction",
-            target: { "@type": "EntryPoint", urlTemplate: `${SITE_URL}/search?q={search_term_string}` },
-            "query-input": "required name=search_term_string",
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": `${SITE_URL}/#website`,
+            name: "Marcivo",
+            url: `${SITE_URL}/`,
+            potentialAction: {
+              "@type": "SearchAction",
+              target: { "@type": "EntryPoint", urlTemplate: `${SITE_URL}/search?q={search_term_string}` },
+              "query-input": "required name=search_term_string",
+            },
           },
-        }}
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": `${SITE_URL}/#organization`,
+            name: "Marcivo",
+            url: `${SITE_URL}/`,
+            logo: { "@type": "ImageObject", url: `${SITE_URL}/og.png`, width: 1200, height: 630 },
+          },
+        ]}
       />
       <h1 className="sr-only">Watch Movies Online Free — Movies, Web Series and Anime on Marcivo</h1>
       {/* Content column + tall skyscraper rail. The rail is sticky so the ad

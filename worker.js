@@ -1,4 +1,6 @@
 const BACKEND = "https://marcivo-backend.onrender.com";
+const SITE = "https://marcivo.teraplayer.in";
+const DEFAULT_OG = `${SITE}/og.png`;
 
 // Content pages whose <head> is pre-rendered for crawlers and social
 // scrapers that don't run JavaScript. Values mirror each page's <Seo>
@@ -26,17 +28,113 @@ function seoPages() {
       title: `Upcoming Anime ${y} — Release Schedule & Where to Watch | Marcivo`,
       description: `Upcoming anime of ${y} — the season's most anticipated new series and movies with release dates, and where to watch them the moment they air.`,
     },
+    // Mirror CategoryPage's SEO map.
+    "/category/movies": {
+      title: "Movies — Watch Movies Online Free | Marcivo",
+      description: "Browse movies on Marcivo — popular films, top rated picks, now playing and coming soon. Every title lines up its available versions so you can press play.",
+    },
+    "/category/series": {
+      title: "Web Series — Watch TV Series Online Free | Marcivo",
+      description: "Watch web series and TV shows online — popular series, top rated shows and what's airing now, each with its available versions lined up.",
+    },
+    "/category/hollywood": {
+      title: "Hollywood Movies & Series — Watch Online | Marcivo",
+      description: "Hollywood movies and series in English — browse what's available now, with every version of each title lined up on its page.",
+    },
+    "/category/bollywood": {
+      title: "Bollywood & Hindi Movies — Watch Online | Marcivo",
+      description: "Bollywood and Hindi movies and series — browse what's available now, with every version of each title lined up on its page.",
+    },
   };
+}
+
+// Core pages for the sitemap fallback — only used when the backend is
+// unreachable (a stale-but-valid sitemap beats a 500 to the crawler).
+function fallbackSitemap() {
+  const paths = [
+    "/",
+    "/free-movies",
+    "/watch-free",
+    "/upcoming",
+    "/upcoming/shows",
+    "/upcoming/anime",
+    "/category/movies",
+    "/category/series",
+    "/category/hollywood",
+    "/category/bollywood",
+  ];
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${paths.map((p) => `  <url><loc>${SITE}${p}</loc></url>`).join("\n")}
+</urlset>`;
+}
+
+// The SPA shell (the assets layer redirects /index.html → /).
+function shell(request, url, env) {
+  return env.ASSETS.fetch(new Request(new URL("/", url), request));
+}
+
+// Rewrite the shared head tags for one page. `spec.image` must be absolute.
+function injectHead(page, spec) {
+  let rw = new HTMLRewriter()
+    .on("title", { element(el) { el.setInnerContent(spec.title); } })
+    .on('meta[name="description"]', { element(el) { el.setAttribute("content", spec.description); } })
+    .on('meta[property="og:title"]', { element(el) { el.setAttribute("content", spec.title); } })
+    .on('meta[property="og:description"]', { element(el) { el.setAttribute("content", spec.description); } })
+    .on('meta[property="og:url"]', { element(el) { el.setAttribute("content", spec.canonical); } })
+    .on('meta[property="og:image"]', { element(el) { el.setAttribute("content", spec.image); } })
+    .on('meta[property="og:image:alt"]', { element(el) { el.setAttribute("content", spec.title); } })
+    .on('meta[name="twitter:title"]', { element(el) { el.setAttribute("content", spec.title); } })
+    .on('meta[name="twitter:description"]', { element(el) { el.setAttribute("content", spec.description); } })
+    .on('meta[name="twitter:image"]', { element(el) { el.setAttribute("content", spec.image); } })
+    .on('link[rel="canonical"]', { element(el) { el.setAttribute("href", spec.canonical); } });
+  if (spec.ogType) {
+    rw = rw.on('meta[property="og:type"]', { element(el) { el.setAttribute("content", spec.ogType); } });
+  }
+  return rw.transform(page);
+}
+
+// Per-title metadata for /detail/…, straight from the backend detail API.
+// Edge-cached (free host cold-starts; title/overview/poster barely change).
+// Any error or slow response → null → the plain shell is served, exactly as
+// before this feature existed.
+async function detailMeta(kind, id) {
+  try {
+    const res = await fetch(`${BACKEND}/api/detail/${kind}/${encodeURIComponent(id)}`, {
+      cf: { cacheEverything: true, cacheTtl: 21600 },
+      signal: AbortSignal.timeout(2500),
+    });
+    if (!res.ok) return null;
+    const d = await res.json();
+    const name = String(d?.title || "").trim();
+    if (!name) return null;
+    const year = /^\d{4}$/.test(String(d?.year || "")) ? ` (${d.year})` : "";
+    const label = kind === "anime" ? "Anime" : kind === "tv" ? "TV Series" : "Movie";
+    const overview = String(d?.overview || "").replace(/\s+/g, " ").trim();
+    const description = (overview || `Release info, cast and every available version of ${name} on Marcivo — free to use, no account needed.`).slice(0, 300);
+    const poster = typeof d?.poster === "string" && /^https:\/\//i.test(d.poster) ? d.poster : "";
+    const isMovie = kind === "movie" || (kind === "anime" && String(d?.format || "").toUpperCase() === "MOVIE");
+    return {
+      title: `${name}${year} — ${label} Info, Cast & Where to Watch | Marcivo`,
+      description,
+      canonical: `${SITE}/detail/${kind}/${encodeURIComponent(id)}`,
+      image: poster || DEFAULT_OG,
+      ogType: isMovie ? "video.movie" : "video.tv_show",
+    };
+  } catch {
+    return null;
+  }
 }
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    const isRead = request.method === "GET" || request.method === "HEAD";
 
     // Serve robots.txt as plain text.
     if (url.pathname === "/robots.txt") {
       return new Response(
-        "User-agent: *\nAllow: /\nSitemap: https://marcivo.teraplayer.in/sitemap.xml\n",
+        "User-agent: *\nAllow: /\n\n# Player pages are utility pages, not search landing pages.\nDisallow: /watch/\nDisallow: /api/\n\nSitemap: https://marcivo.teraplayer.in/sitemap.xml\n",
         {
           status: 200,
           headers: {
@@ -47,15 +145,31 @@ export default {
       );
     }
 
-    // Serve the dynamic sitemap from the backend.
+    // Serve the dynamic sitemap from the backend, edge-cached; fall back to
+    // the core list if the backend is cold or down.
     if (url.pathname === "/sitemap.xml") {
-      const response = await fetch(`${BACKEND}/sitemap.xml`);
-
-      return new Response(response.body, {
-        status: response.status,
+      try {
+        const response = await fetch(`${BACKEND}/sitemap.xml`, {
+          cf: { cacheEverything: true, cacheTtl: 21600 },
+          signal: AbortSignal.timeout(10000),
+        });
+        if (response.ok) {
+          return new Response(response.body, {
+            status: 200,
+            headers: {
+              "Content-Type": "application/xml; charset=utf-8",
+              "Cache-Control": "public, max-age=3600",
+            },
+          });
+        }
+      } catch {
+        // fall through to the local fallback
+      }
+      return new Response(fallbackSitemap(), {
+        status: 200,
         headers: {
           "Content-Type": "application/xml; charset=utf-8",
-          "Cache-Control": "public, max-age=3600",
+          "Cache-Control": "public, max-age=600",
         },
       });
     }
@@ -66,23 +180,35 @@ export default {
       return fetch(new Request(backendUrl, request));
     }
 
-    // Pre-render <head> for the content pages (run_worker_first covers the
-    // exact paths). Non-JS crawlers get the right title/description/canonical
-    // up front; the SPA still boots client-side exactly as before.
+    // Per-title pages: the shell's head gets the title's own meta so shares
+    // and non-JS crawlers read it without booting the SPA.
+    const detail = url.pathname.match(/^\/detail\/(movie|tv|anime)\/([^/]+)\/?$/);
+    if (detail && request.method === "GET") {
+      const kind = detail[1];
+      let id = detail[2];
+      try {
+        id = decodeURIComponent(id);
+      } catch {
+        // Malformed escape — serve the plain shell.
+      }
+      const pagePromise = shell(request, url, env);
+      const meta = /^[\w-]{1,40}$/.test(id) ? await detailMeta(kind, id) : null;
+      const page = await pagePromise;
+      if (meta && page.ok) return injectHead(page, meta);
+      return page;
+    }
+
+    // Static content pages (run_worker_first covers the exact paths).
     const seo = seoPages()[url.pathname];
-    if (seo && (request.method === "GET" || request.method === "HEAD")) {
-      // Fetch the SPA shell (the assets layer redirects /index.html → /).
-      const page = await env.ASSETS.fetch(new Request(new URL("/", url), request));
+    if (seo && isRead) {
+      const page = await shell(request, url, env);
       if (page.ok) {
-        const canonical = `https://marcivo.teraplayer.in${url.pathname}`;
-        return new HTMLRewriter()
-          .on("title", { element(el) { el.setInnerContent(seo.title); } })
-          .on('meta[name="description"]', { element(el) { el.setAttribute("content", seo.description); } })
-          .on('meta[property="og:title"]', { element(el) { el.setAttribute("content", seo.title); } })
-          .on('meta[property="og:description"]', { element(el) { el.setAttribute("content", seo.description); } })
-          .on('meta[property="og:url"]', { element(el) { el.setAttribute("content", canonical); } })
-          .on('link[rel="canonical"]', { element(el) { el.setAttribute("href", canonical); } })
-          .transform(page);
+        return injectHead(page, {
+          title: seo.title,
+          description: seo.description,
+          canonical: `${SITE}${url.pathname}`,
+          image: DEFAULT_OG,
+        });
       }
     }
 

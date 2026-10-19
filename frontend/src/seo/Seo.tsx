@@ -4,14 +4,14 @@ import { useLocation } from "react-router-dom";
 /** Public production origin — every canonical/OG URL is absolute. */
 export const SITE_URL = "https://marcivo.teraplayer.in";
 
-const DEFAULT_IMAGE = "/m-logo.svg";
+const DEFAULT_IMAGE = "/og.png";
 
 export interface SeoProps {
   title: string;
   description: string;
   /** Canonical path override; defaults to the current location's pathname. */
   path?: string;
-  /** Absolute or root-relative image; defaults to the Marcivo logo. */
+  /** Absolute or root-relative image; defaults to the site OG image. */
   image?: string;
   type?: string;
   /** robots meta; defaults to fully indexable. Reviewer pages pass noindex. */
@@ -75,9 +75,11 @@ export default function Seo({
     upsertMeta("property", "og:description", description);
     upsertMeta("property", "og:url", canonical);
     upsertMeta("property", "og:image", abs(image));
-    upsertMeta("name", "twitter:card", image !== DEFAULT_IMAGE ? "summary_large_image" : "summary");
+    upsertMeta("property", "og:image:alt", `${title} — Marcivo`);
+    upsertMeta("name", "twitter:card", "summary_large_image");
     upsertMeta("name", "twitter:title", title);
     upsertMeta("name", "twitter:description", description);
+    upsertMeta("name", "twitter:image", abs(image));
     upsertLink("canonical", canonical);
 
     let script = document.getElementById("seo-jsonld") as HTMLScriptElement | null;

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { api, CAT_SITES, watchUrl, prewarm } from "../lib/api";
 import { prettyVersion } from "../lib/format";
 import { toggleInList, getList } from "../store/continueWatching";
@@ -108,7 +108,15 @@ export default function Detail() {
           seoSchema,
         ]}
       />
-      <button onClick={() => nav(-1)} className="text-muted text-sm">← Back</button>
+      <div className="flex items-center justify-between gap-3">
+        <button onClick={() => nav(-1)} className="text-muted text-sm shrink-0">← Back</button>
+        {/* Visible breadcrumb to match the BreadcrumbList JSON-LD above. */}
+        <nav aria-label="Breadcrumb" className="text-xs text-muted flex items-center gap-1.5 min-w-0">
+          <Link to="/" className="hover:text-white shrink-0">Home</Link>
+          <span aria-hidden="true">›</span>
+          <span className="text-gray-300 truncate">{seoName || "Title"}</span>
+        </nav>
+      </div>
       <div className="mt-2 flex flex-col md:flex-row gap-4">
         <img src={d.poster} alt={d.title} className="w-40 md:w-56 rounded-xl bg-card" />
         <div className="flex-1 min-w-0">
