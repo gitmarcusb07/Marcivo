@@ -317,7 +317,17 @@ async function searchOne(site: SiteCfg, q: string) {
       if (!old || it.score > old.score) best.set(it.url, it);
     }
     const list = [...best.values()].sort((a, b) => b.score - a.score || a.title.localeCompare(b.title)).slice(0, perSite);
-    list.forEach((x) => { x.site_id = site.id; x.site_name = site.name; x.kind = guessKind(x.title); x.origin = originFor(site.id); });
+    list.forEach((x) => {
+      x.site_id = site.id;
+      x.site_name = site.name;
+      x.kind = guessKind(x.title);
+      // Detail-page convention: a /tv/<slug> page is a series even when the
+      // card title carries no season tag (source titles often omit them).
+      if (x.kind === "movie") {
+        try { if (/^\/tv\//i.test(new URL(x.url).pathname)) x.kind = "series"; } catch {}
+      }
+      x.origin = originFor(site.id);
+    });
     return { status: "ok" as const, results: list };
   } catch {
     return { status: "unavailable" as const, results: [] as SiteResult[] };

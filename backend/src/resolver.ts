@@ -70,6 +70,8 @@ export interface Job {
   source: string;
   /** whether the playable URL honors Range requests (seekable timeline). */
   seekable?: boolean;
+  /** true when url is the source's own player embed (iframe), not a file. */
+  embed?: boolean;
 }
 
 const jobs = new Map<string, Job>();
@@ -77,7 +79,7 @@ const jobs = new Map<string, Job>();
 // --- Temporary stream cache (in-process TTL, no permanent storage) ---
 // Playable URLs are temporary (~3h observed), so entries expire via a
 // conservative configurable TTL that stays well under source expiry.
-interface StreamEntry { url: string; resolvedAt: number; expiresAt: number; seekable?: boolean; }
+interface StreamEntry { url: string; resolvedAt: number; expiresAt: number; seekable?: boolean; embed?: boolean; }
 const streamCache = new Map<string, StreamEntry>();
 // sourceUrl -> in-flight job (request deduplication: many watchers, one resolver).
 const inflight = new Map<string, Job>();
@@ -135,6 +137,98 @@ export function getMetrics() {
 /** Host-only identifier for logs (never log full temporary URLs/tokens). */
 export function hostOf(u: string): string {
   try { return new URL(u).hostname.toLowerCase(); } catch { return "invalid-url"; }
+}
+
+// --- Cinegram: authorized-embed lane (source-specific) ---------------------
+// Direct-stream extraction is not offered by this source's public interface:
+// its play flow sits behind a fingerprint-gated AJAX call (cinemov.php /
+// cinetv.php) and nested third-party players that mint IP-bound signed tokens
+// at playback time. The source's own implementation frames a public embed
+// (https://ythd.org/embed/…, no X-Frame-Options/CSP), so Marcivo uses that
+// same embed: the player session (tokens, playlists, segments) is created
+// inside the user's browser at playback time. Nothing is captured, cached or
+// hardcoded — only the public TMDB id already present in the detail page HTML
+// builds the embed URL.
+function cinegramHosts(): string[] {
+  return (process.env.WATCH_CINEGRAM_HOSTS || "cinegram.tv").split(",").map((s) => s.trim().toLowerCase()).filter(Boolean);
+}
+function isCinegram(u: string): boolean {
+  const h = hostOf(u);
+  return cinegramHosts().some((d) => h === d || h.endsWith("." + d));
+}
+
+// Movie pages hand their TMDB id to the player AJAX inline (observed:
+// $.get('/ajax/cinemov.php', {"t": '27205'}, …)). Series pages list every
+// episode as anchors with data-tmdbid / data-season / data-episode.
+function cinegramMovieTmdbId(html: string): string | null {
+  // Positive ids only: soft-404 pages serve a template with {"t": '0'} and a
+  // bogus embed would render an empty player.
+  const m = html.match(/cinemov\.php[^}]{0,80}?["']t["']\s*:\s*['"]([1-9]\d{0,9})['"]/i);
+  return m ? m[1] : null;
+}
+
+interface CinegramEp { t: string; s: number; e: number; }
+function cinegramEpisodes(html: string): CinegramEp[] {
+  const $ = cheerio.load(html);
+  const out: CinegramEp[] = [];
+  const seen = new Set<string>();
+  $("a[data-tmdbid]").each((_, el) => {
+    const t = String($(el).attr("data-tmdbid") || "").trim();
+    const s = parseInt(String($(el).attr("data-season") || ""), 10);
+    const e = parseInt(String($(el).attr("data-episode") || ""), 10);
+    if (!/^[1-9]\d{0,9}$/.test(t) || !Number.isInteger(s) || !Number.isInteger(e) || s < 1 || e < 1) return;
+    const k = `${s}|${e}`;
+    if (seen.has(k)) return;
+    seen.add(k);
+    out.push({ t, s, e });
+  });
+  return out;
+}
+
+/** Resolve a cinegram detail page to the source's own player embed URL.
+    season/episode are optional (series default to the first listed episode). */
+async function cinegramEmbed(sourceUrl: string, job: Job, season?: number, episode?: number): Promise<string> {
+  const ua = process.env.SITE_USER_AGENT || "Mozilla/5.0 (Windows NT 10.0; Win64; x64)";
+  const page = await axios.get(sourceUrl, { timeout: 15000, headers: { "User-Agent": ua }, maxRedirects: 5, validateStatus: () => true });
+  const html = typeof page.data === "string" ? page.data : "";
+  if (page.status >= 400 || !html) throw new Error("Cinegram page unreachable — try another version");
+  // Only an actual Cloudflare interstitial counts — bot-management script
+  // tags ("/cdn-cgi/challenge-platform/…") appear on normal pages too.
+  const challenged = () => /just a moment|cf_chl_opt|challenges\.cloudflare\.com/i.test(html);
+  const challengeErr = "Cinegram is challenging requests right now — try again in a moment";
+
+  let pathname = "/";
+  try { pathname = new URL(sourceUrl).pathname; } catch {}
+
+  let embedUrl = "";
+  if (/^\/tv\//i.test(pathname)) {
+    const eps = cinegramEpisodes(html);
+    if (!eps.length) throw new Error(challenged() ? challengeErr : "No episode list found on this Cinegram page — layout may have changed");
+    let pick = [...eps].sort((a, b) => a.s - b.s || a.e - b.e)[0];
+    if (season && episode) {
+      const hit = eps.find((x) => x.s === season && x.e === episode);
+      if (!hit) throw new Error(`Episode S${season}E${episode} isn't listed on Cinegram — try another episode`);
+      pick = hit;
+    }
+    embedUrl = `https://ythd.org/embed/${pick.t}/${pick.s}-${pick.e}/`;
+  } else {
+    const t = cinegramMovieTmdbId(html);
+    if (!t) throw new Error(challenged() ? challengeErr : "Couldn't locate the Cinegram player for this title — layout may have changed");
+    embedUrl = `https://ythd.org/embed/${t}`;
+  }
+
+  // Reachability check only: the embed shell is generic, so this catches
+  // outages — title/episode availability is decided inside the embed at
+  // playback time (nothing here is a captured stream URL or token).
+  job.stage = "validating";
+  const er = await axios.get(embedUrl, { timeout: 12000, headers: { "User-Agent": ua }, maxRedirects: 5, validateStatus: () => true });
+  if (er.status >= 400 || typeof er.data !== "string" || !/<iframe/i.test(er.data)) {
+    throw new Error("Cinegram's player embed didn't respond — try another version");
+  }
+  job.embed = true;
+  job.stage = "ready";
+  console.log(`[resolve] cinegram embed ready: ${hostOf(sourceUrl)}`);
+  return embedUrl;
 }
 
 // --- Bounded scheduler: at most N resolutions at once; 1 slot reserved for taps ---
@@ -610,8 +704,15 @@ async function playwrightResolve(contentUrl: string, job?: Job): Promise<string>
 // fallbacks. Every lane's URL is validated; a dead link falls through to the
 // next lane instead of failing the whole job (fixes "all qualities dead"
 // when G-Direct hands back expired file links).
-async function runPipeline(sourceUrl: string, job: Job, background = false, skipFast = false): Promise<string> {
+async function runPipeline(sourceUrl: string, job: Job, background = false, skipFast = false, season?: number, episode?: number): Promise<string> {
   if ((process.env.WATCH_ENABLED || "true").toLowerCase() !== "true") throw new Error("WATCH_ENABLED=false");
+  // Cinegram (source-specific): plays through its own embed — no direct file
+  // URL exists at this layer. Short-circuit before the file lanes so they
+  // never spend minutes hunting for a link that isn't there.
+  if (isCinegram(sourceUrl) && !(job as any).cancelled) {
+    job.stage = "fast-path";
+    return await cinegramEmbed(sourceUrl, job, season, episode);
+  }
   const t00 = Date.now();
   const elapsed = () => Date.now() - t00;
   // Validate one candidate: ok → adopt it; dead/invalid → fall through.
@@ -685,50 +786,61 @@ async function runPipeline(sourceUrl: string, job: Job, background = false, skip
   throw new Error("Stream link is dead — try another version");
 }
 
-function readyJob(url: string, source: string, seekable?: boolean): Job {
-  return { id: "cache-" + Math.random().toString(36).slice(2, 10), status: "ready", url, error: "", created: Date.now(), stage: "cache", source, seekable };
+function readyJob(url: string, source: string, seekable?: boolean, embed?: boolean): Job {
+  return { id: "cache-" + Math.random().toString(36).slice(2, 10), status: "ready", url, error: "", created: Date.now(), stage: "cache", source, seekable, embed };
 }
 
-export function enqueueResolve(sourceUrl: string, opts: { background?: boolean; skipFast?: boolean; fresh?: boolean } = {}): Job {
+/** Cache/dedup key. Whole-series source pages (cinegram /tv/) carry every
+    episode on ONE URL, so a requested episode must neither share nor read the
+    plain default entry — otherwise S5E3 would get the cached S1E1 embed. */
+function resolveKey(sourceUrl: string, season?: number, episode?: number): string {
+  const base = normKey(sourceUrl);
+  if (season && episode && isCinegram(sourceUrl)) return `${base}|s${season}e${episode}`;
+  return base;
+}
+
+export function enqueueResolve(sourceUrl: string, opts: { background?: boolean; skipFast?: boolean; fresh?: boolean; season?: number; episode?: number } = {}): Job {
   const now = Date.now();
   const source = hostOf(sourceUrl);
-  const key = normKey(sourceUrl);
+  const key = resolveKey(sourceUrl, opts.season, opts.episode);
+  const plainKey = normKey(sourceUrl);
   // 1. Temporary cache lookup (conservative TTL, well under source expiry).
   // fresh=true (seekable upgrade) bypasses the read — the cached entry is
   // the unseekable fast link we're trying to replace (the write below
   // overwrites it, so future taps get the seekable URL directly).
-  const hit = opts.fresh ? undefined : streamCache.get(key) || streamCache.get(sourceUrl);
+  // The raw-URL fallback only applies to plain (non episode-scoped) keys.
+  const hit = opts.fresh ? undefined : streamCache.get(key) || (key === plainKey ? streamCache.get(sourceUrl) : undefined);
   if (hit) {
     const remaining = hit.expiresAt - now;
     if (remaining > refreshThresholdMs()) {
       metrics.cacheHits++;
       console.log(`[resolve] cache HIT: ${source} expires_in=${Math.round(remaining / 1000)}s`);
-      return readyJob(hit.url, source, hit.seekable);
+      return readyJob(hit.url, source, hit.seekable, hit.embed);
     }
     if (remaining > 0) {
       // Stale-while-refresh: still usable → return now, refresh behind.
       metrics.cacheHits++;
       console.log(`[resolve] cache STALE (refresh in bg): ${source} expires_in=${Math.round(remaining / 1000)}s`);
-      if (!inflight.has(key)) enqueueFresh(sourceUrl, true);
-      return readyJob(hit.url, source, hit.seekable);
+      if (!inflight.has(key)) enqueueFresh(sourceUrl, true, false, opts.season, opts.episode);
+      return readyJob(hit.url, source, hit.seekable, hit.embed);
     }
     streamCache.delete(key);
     streamCache.delete(sourceUrl);
   }
   metrics.cacheMisses++;
   // 2. Deduplication: an identical resolution already running → share it.
-  const existing = inflight.get(key) || inflight.get(sourceUrl);
+  const existing = inflight.get(key) || (key === plainKey ? inflight.get(sourceUrl) : undefined);
   if (existing && existing.status === "working") {
     metrics.deduped++;
     console.log(`[resolve] dedup: sharing in-flight job for ${source}`);
     return existing;
   }
-  return enqueueFresh(sourceUrl, !!opts.background, !!opts.skipFast);
+  return enqueueFresh(sourceUrl, !!opts.background, !!opts.skipFast, opts.season, opts.episode);
 }
 
-function enqueueFresh(sourceUrl: string, background: boolean, skipFast = false): Job {
+function enqueueFresh(sourceUrl: string, background: boolean, skipFast = false, season?: number, episode?: number): Job {
   const source = hostOf(sourceUrl);
-  const key = normKey(sourceUrl);
+  const key = resolveKey(sourceUrl, season, episode);
   const id = Math.random().toString(36).slice(2, 10);
   const job: Job = { id, status: "working", url: "", error: "", created: Date.now(), stage: "queued", source };
   jobs.set(id, job);
@@ -740,11 +852,11 @@ function enqueueFresh(sourceUrl: string, background: boolean, skipFast = false):
     const queueWait = Date.now() - t0;
     try {
       const url = await withTimeout(
-        runPipeline(sourceUrl, job, background, skipFast),
+        runPipeline(sourceUrl, job, background, skipFast, season, episode),
         resolverTimeoutMs(background) + 15000,
         "Resolution timed out — try another version"
       );
-      streamCache.set(key, { url, resolvedAt: Date.now(), expiresAt: Date.now() + streamTtlMs(), seekable: job.seekable });
+      streamCache.set(key, { url, resolvedAt: Date.now(), expiresAt: Date.now() + streamTtlMs(), seekable: job.seekable, embed: job.embed });
       job.status = "ready"; job.url = url; job.stage = "ready";
       metrics.resolved++;
       if (background) metrics.preResolved++;

@@ -142,18 +142,20 @@ export const api = {
   variants: (result_id: string, q: { title?: string; year?: string; type?: string; season?: number }) =>
     j<any>(`/api/variants?result_id=${encodeURIComponent(result_id)}${q.title ? `&title=${encodeURIComponent(q.title)}` : ""}${q.year ? `&year=${encodeURIComponent(q.year)}` : ""}${q.type ? `&type=${encodeURIComponent(q.type)}` : ""}${q.season !== undefined ? `&season=${q.season}` : ""}`),
   // Cache-first: may return {status:"ready",url} immediately (no polling).
-  resolve: (sourceUrl: string) =>
-    j<{ jobId: string; status: string; url?: string; stage?: string }>(`/api/resolve`, {
+  // Optional {season, episode}: whole-series pages resolved for one episode
+  // (ignored by sources without episode-scoped playback).
+  resolve: (sourceUrl: string, episode?: { season?: number; episode?: number }) =>
+    j<{ jobId: string; status: string; url?: string; stage?: string; embed?: boolean }>(`/api/resolve`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ sourceUrl }),
+      body: JSON.stringify({ sourceUrl, season: episode?.season, episode: episode?.episode }),
     }),
   /** §16 preferred path: resolve THAT specific source result by result_id. */
-  resolveById: (result_id: string, content_id?: string) =>
-    j<{ jobId: string; status: string; url?: string; stage?: string }>(`/api/resolve`, {
+  resolveById: (result_id: string, content_id?: string, episode?: { season?: number; episode?: number }) =>
+    j<{ jobId: string; status: string; url?: string; stage?: string; embed?: boolean }>(`/api/resolve`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ result_id, content_id }),
+      body: JSON.stringify({ result_id, content_id, season: episode?.season, episode: episode?.episode }),
     }),
   /** Seekable upgrade: re-resolve past the fast lanes to a Range-capable
       link, in background. Overwrites the cache entry when ready. */
@@ -203,6 +205,22 @@ export async function findVersion(title: string, s: number, e: number, sites?: n
     // S/E tags exist at all (e.g. anime absolute numbering); broader queries
     // must not resolve a generic title as the episode.
     if (i === 0 && list.length) return { result: list[0], query: queries[i] };
+  }
+  // Pass 2 (last resort): whole-series pages that carry every episode on one
+  // URL (Cinegram /tv/ pages) are valid episode sources even though their
+  // titles never carry S/E tags — the resolver selects the requested episode
+  // at playback time. Exact S/E matches above always win.
+  const isFullSeriesPage = (r: any) => {
+    try {
+      const u = new URL(String(r?.url || r?.source_url || ""));
+      return /(^|\.)cinegram\.tv$/i.test(u.hostname) && /^\/tv\//i.test(u.pathname);
+    } catch { return false; }
+  };
+  for (const r of settled) {
+    if (r.status !== "fulfilled" || (r.value as any)?.status !== "ok") continue;
+    const list = (r.value as any).results || [];
+    const full = list.find(isFullSeriesPage);
+    if (full) return { result: full, query: title };
   }
   return null;
 }

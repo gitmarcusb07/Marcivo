@@ -20,10 +20,14 @@ export default function Watch() {
   const epParam = sp.get("ep") || ""; // e.g. S1E3
   const cat = sp.get("cat") || "";
   const labelParam = sp.get("t") || "";
+  // Requested episode scope (e.g. S1E3) — forwarded to resolve so
+  // whole-series source pages can select that exact episode at resolve time.
+  const epSE = (() => { const m = epParam.match(/S(\d+)E(\d+)/i); return m ? { season: parseInt(m[1], 10), episode: parseInt(m[2], 10) } : {}; })();
   const [d, setD] = useState<any>(null);
   const [stage, setStage] = useState(0);
   const [statusLine, setStatusLine] = useState("");
   const [video, setVideo] = useState("");
+  const [embedUrl, setEmbedUrl] = useState("");
   const [versionTitle, setVersionTitle] = useState(labelParam);
   const [hlsMaster, setHlsMaster] = useState<string | null>(null);
   const [hlsAudios, setHlsAudios] = useState<any[]>([]);
@@ -32,7 +36,7 @@ export default function Watch() {
   const [err, setErr] = useState("");
   const [fatal, setFatal] = useState("");
   const [busy, setBusy] = useState(false);
-  const [lastIdentity, setLastIdentity] = useState<{ result_id: string; content_id: string; url: string; title: string; alts: { result_id: string; url: string }[] } | null>(null);
+  const [lastIdentity, setLastIdentity] = useState<{ result_id: string; content_id: string; url: string; title: string; season?: number; episode?: number; alts: { result_id: string; url: string }[] } | null>(null);
   const [exactTitle, setExactTitle] = useState("");
   const timer = useRef<any>(null);
   const hlsTimer = useRef<any>(null);
@@ -59,23 +63,27 @@ export default function Watch() {
   // in-flight job every 2s. Server fails jobs fast (~150s cap), so the
   // client gives up with a clear message instead of hanging for minutes.
   // §16/48: prefers result_id (exact source page); never title-searches.
-  async function resolveOne(ident: { result_id?: string; content_id?: string; url?: string }): Promise<{ url: string; seekable?: boolean }> {
+  async function resolveOne(ident: { result_id?: string; content_id?: string; url?: string; season?: number; episode?: number }): Promise<{ url: string; seekable?: boolean; embed?: boolean }> {
+    const se = ident.season || ident.episode ? { season: ident.season, episode: ident.episode } : undefined;
     const r = ident.result_id
-      ? await api.resolveById(ident.result_id, ident.content_id)
-      : await api.resolve(ident.url || "");
-    // Non-seekable upstreams restart from 0 on seek — route them through the
-    // Range-capable proxy upfront so the timeline just works. A seekable
-    // upgrade swaps in later when the bridge delivers one.
-    // LITE deployments have no proxy (route answers 501) — play direct.
-    const viaProxy = (u: string, seekable: any) => ({ url: seekable === false && !isLite() ? api.streamUrl(u) : u, seekable });
-    if (r.status === "ready" && r.url) return viaProxy(r.url, (r as any).seekable);
+      ? await api.resolveById(ident.result_id, ident.content_id, se)
+      : await api.resolve(ident.url || "", se);
+    // Embed results are the source's own player session (iframe) — served
+    // as-is: no proxy, no Range concerns. Files: non-seekable upstreams
+    // restart from 0 on seek — route them through the Range-capable proxy
+    // upfront so the timeline just works. A seekable upgrade swaps in later
+    // when the bridge delivers one. LITE deployments have no proxy (route
+    // answers 501) — play direct.
+    const map = (u: string, seekable: any, embed?: boolean) =>
+      embed ? { url: u, embed: true } : { url: seekable === false && !isLite() ? api.streamUrl(u) : u, seekable };
+    if (r.status === "ready" && r.url) return map(r.url, (r as any).seekable, (r as any).embed);
     const jobId = r.jobId;
     for (let i = 0; i < 90; i++) {
       await new Promise((r2) => setTimeout(r2, 2000));
       const j = await api.job(jobId);
       if (j.status === "ready") {
         if (!j.url) throw new Error("Empty stream result — try another version");
-        return viaProxy(j.url as string, (j as any).seekable);
+        return map(j.url as string, (j as any).seekable, (j as any).embed);
       }
       if (j.status === "failed") throw new Error(j.error || "Resolve failed — try another version");
     }
@@ -86,10 +94,10 @@ export default function Watch() {
       alone (usually an instant cache HIT); alternates join the race after 12s
       only if nobody won yet. Firing all 3 at once filled every server slot
       and slowed the primary down. Losers keep warming the cache in bg. */
-  function resolveIdentity(ident: { result_id?: string; content_id?: string; url?: string }, alts: { result_id?: string; content_id?: string; url?: string }[] = []): Promise<{ url: string; seekable?: boolean }> {
+  function resolveIdentity(ident: { result_id?: string; content_id?: string; url?: string; season?: number; episode?: number }, alts: { result_id?: string; content_id?: string; url?: string }[] = []): Promise<{ url: string; seekable?: boolean; embed?: boolean }> {
     const first = (ident.result_id || ident.url) ? [ident] : [];
     const rest = alts.filter((a) => a.result_id || a.url);
-    return new Promise<{ url: string; seekable?: boolean }>((resolve, reject) => {
+    return new Promise<{ url: string; seekable?: boolean; embed?: boolean }>((resolve, reject) => {
       let settled = false;
       let pending = 0;
       let lastErr: any = new Error("No source selected");
@@ -101,7 +109,7 @@ export default function Watch() {
         if (ok) resolve(v);
         else reject(v);
       };
-      const launch = (a: { result_id?: string; content_id?: string; url?: string }) => {
+      const launch = (a: { result_id?: string; content_id?: string; url?: string; season?: number; episode?: number }) => {
         pending++;
         resolveOne(a).then((v) => {
           pending--;
@@ -199,21 +207,23 @@ export default function Watch() {
   // §26 watch source selection: preferred source first, then legitimate
   // fallbacks in priority order. Uses the clicked item directly (no stale
   // global selected-item state).
-  async function startFromSource(sourceUrl: string, vTitle: string, opts?: { result_id?: string; content_id?: string; alts?: { result_id: string; url: string }[] }) {
+  async function startFromSource(sourceUrl: string, vTitle: string, opts?: { result_id?: string; content_id?: string; alts?: { result_id: string; url: string }[]; season?: number; episode?: number }) {
     const ident = {
       result_id: opts?.result_id || "",
       content_id: opts?.content_id || "",
       url: sourceUrl,
       title: vTitle,
+      season: opts?.season,
+      episode: opts?.episode,
       alts: opts?.alts || [],
     };
-    setBusy(true); setErr(""); setFatal(""); setVideo("");
+    setBusy(true); setErr(""); setFatal(""); setVideo(""); setEmbedUrl("");
     setLastIdentity(ident);
     // Use the clicked result directly — never a stale selectedMovie.
     setVersionTitle(vTitle);
     setStage(0);
     timer.current = setInterval(() => setStage((s) => Math.min(s + 1, STAGES.length - 1)), 5000);
-    const primary = { result_id: ident.result_id, content_id: ident.content_id, url: ident.url };
+    const primary = { result_id: ident.result_id, content_id: ident.content_id, url: ident.url, season: ident.season, episode: ident.episode };
     const attempts = [{ result_id: ident.result_id, content_id: ident.content_id, url: ident.url }, ...ident.alts]
       .filter((a) => a.result_id || (a as any).url);
     if (!attempts.length) {
@@ -232,17 +242,26 @@ export default function Watch() {
       hlsAsked.current = false;
       setUpgradeUrl(null);
       setHlsMaster(null); setHlsAudios([]); setHlsQualities([]); setHlsNote("");
-      setVideo(url);
-      addToList("continue", `${kind}:${id}`);
-      // Non-seekable fast file? Upgrade it behind the scenes.
-      if (got.seekable === false && sourceUrl) {
-        watchUpgrade(sourceUrl, url);
+      if (got.embed) {
+        // Source's own player (iframe) — nothing to proxy or upgrade.
+        setEmbedUrl(url);
+        setVideo("");
+      } else {
+        setEmbedUrl("");
+        setVideo(url);
       }
-      // Engine starts after playback is rolling (never fights resolutions).
-      clearTimeout(hlsDelay.current);
-      hlsDelay.current = setTimeout(() => {
-        try { if (videoUrlRef.current === url) watchHls(url); } catch {}
-      }, 12000);
+      addToList("continue", `${kind}:${id}`);
+      if (!got.embed) {
+        // Non-seekable fast file? Upgrade it behind the scenes.
+        if (got.seekable === false && sourceUrl) {
+          watchUpgrade(sourceUrl, url);
+        }
+        // Engine starts after playback is rolling (never fights resolutions).
+        clearTimeout(hlsDelay.current);
+        hlsDelay.current = setTimeout(() => {
+          try { if (videoUrlRef.current === url) watchHls(url); } catch {}
+        }, 12000);
+      }
     } catch (e: any) {
       clearInterval(timer.current);
       setStatusLine("");
@@ -291,6 +310,8 @@ export default function Watch() {
         await startFromSource(base.url || base.source_url, `${d.title} • S${s}E${e} — ${String(base.title || "").slice(0, 80)}`, {
           result_id: base.result_id,
           content_id: base.content_id,
+          season: s,
+          episode: e,
         });
       }
     } catch (e2: any) {
@@ -340,23 +361,23 @@ export default function Watch() {
         </div>
       </div>
 
-      {!video && !hasSource && epParam && (
+      {!video && !embedUrl && !hasSource && epParam && (
         <button
           onClick={() => { epStarted.current = false; startFromEpisode(); }}
           disabled={busy || !d}
           className="mt-4 w-full md:w-auto px-8 py-3 rounded-xl bg-netflix font-bold disabled:opacity-50"
         >{busy ? "Fetching…" : `▶ Play ${epParam}`}</button>
       )}
-      {!video && hasSource && (
+      {!video && !embedUrl && hasSource && (
         <button
-          onClick={() => startFromSource(srcParam, labelParam || exactTitle, { result_id: resultIdParam, content_id: contentIdParam, alts: parseAlts() })}
+          onClick={() => startFromSource(srcParam, labelParam || exactTitle, { result_id: resultIdParam, content_id: contentIdParam, alts: parseAlts(), ...epSE })}
           disabled={busy}
           className="mt-4 w-full md:w-auto px-8 py-3 rounded-xl bg-netflix font-bold disabled:opacity-50"
         >{busy ? "Fetching…" : "▶ Watch"}</button>
       )}
       {!hasSource && !epParam && <p className="text-muted text-sm mt-2">No source selected. Go back to Detail → pick a version or episode.</p>}
 
-      {!video && !busy && !err && epChoice && (
+      {!video && !embedUrl && !busy && !err && epChoice && (
         <div className="mt-4">
           <div className="text-sm text-muted">Choose quality for S{epChoice.s}E{epChoice.e}</div>
           <div className="grid gap-2 mt-2">
@@ -366,6 +387,8 @@ export default function Watch() {
                 onClick={() => startFromSource(v.url, `${d?.title || ""} • S${epChoice.s}E${epChoice.e} — ${String(v.title || "").slice(0, 80)}`, {
                   result_id: v.result_id,
                   content_id: v.content_id,
+                  season: epChoice.s,
+                  episode: epChoice.e,
                 })}
                 className="text-left bg-card border border-netflix/30 rounded-xl px-4 py-3 active:border-netflix flex items-center gap-3"
               >
@@ -397,8 +420,8 @@ export default function Watch() {
             <button
               onClick={() => {
                 if (epParam && !hasSource) { epStarted.current = false; startFromEpisode(); }
-                else if (lastIdentity) startFromSource(lastIdentity.url, lastIdentity.title, { result_id: lastIdentity.result_id, content_id: lastIdentity.content_id, alts: lastIdentity.alts });
-                else if (hasSource) startFromSource(srcParam, labelParam || exactTitle, { result_id: resultIdParam, content_id: contentIdParam, alts: parseAlts() });
+                else if (lastIdentity) startFromSource(lastIdentity.url, lastIdentity.title, { result_id: lastIdentity.result_id, content_id: lastIdentity.content_id, alts: lastIdentity.alts, season: lastIdentity.season, episode: lastIdentity.episode });
+                else if (hasSource) startFromSource(srcParam, labelParam || exactTitle, { result_id: resultIdParam, content_id: contentIdParam, alts: parseAlts(), ...epSE });
               }}
               className="px-5 py-2 rounded-lg bg-netflix font-bold text-sm"
             >↻ Retry</button>
@@ -407,6 +430,27 @@ export default function Watch() {
         </div>
       )}
 
+      {embedUrl && !fatal && (
+        <>
+          <div className="mt-4 relative w-full overflow-hidden rounded-xl bg-black" style={{ aspectRatio: "16 / 9" }}>
+            <iframe
+              src={embedUrl}
+              title={versionTitle || "Player"}
+              className="absolute inset-0 w-full h-full"
+              referrerPolicy="origin"
+              allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+              allowFullScreen
+              frameBorder={0}
+            />
+          </div>
+          <div className="flex items-center justify-between gap-3 mt-2">
+            <p className="text-xs text-muted">Playing via the source's own player — video never passes through Marcivo servers.</p>
+            {lastIdentity?.url ? (
+              <a href={lastIdentity.url} target="_blank" rel="noopener noreferrer" className="text-xs text-muted underline shrink-0">Open on source ↗</a>
+            ) : null}
+          </div>
+        </>
+      )}
       {video && !fatal && (
         <>
           <div className="mt-4">

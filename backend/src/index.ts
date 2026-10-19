@@ -398,10 +398,17 @@ app.post("/api/resolve", (req, res) => {
   // honor Range) to a seekable bridge link, in background. Overwrites the
   // cache entry so later taps get it directly.
   const upgrade = !!req.body?.seekableUpgrade;
+  // Optional episode scope (whole-series source pages): the resolver picks
+  // that exact episode at playback time; ignored by other sources.
+  const season = /^\d{1,2}$/.test(String(req.body?.season ?? "")) ? parseInt(String(req.body.season), 10) : undefined;
+  const episode = /^\d{1,3}$/.test(String(req.body?.episode ?? "")) ? parseInt(String(req.body.episode), 10) : undefined;
   // Cache-first + deduped: returns {status:"ready",url} immediately on a
   // cache hit, or the shared in-flight job when resolution is running.
-  const job = enqueueResolve(sourceUrl, upgrade ? { background: true, skipFast: true, fresh: true } : {});
+  const job = enqueueResolve(sourceUrl, upgrade
+    ? { background: true, skipFast: true, fresh: true }
+    : { ...(season ? { season } : {}), ...(episode ? { episode } : {}) });
   const out: any = { jobId: job.id, status: job.status, url: job.url || undefined, stage: (job as any).stage || undefined, seekable: (job as any).seekable };
+  if ((job as any).embed) out.embed = true;
   if (identity) { out.result_id = identity.result_id; out.content_id = identity.content_id; }
   res.json(out);
 });
