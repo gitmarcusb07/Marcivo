@@ -6,5 +6,9 @@
 // The HTTP lanes (fast-path + G-Direct) and TMDB/AniList metadata stay on —
 // those are plain axios fetches that fit comfortably in the free plan.
 // Off by default: local dev behaves exactly as before.
-export const LITE =
-  ["1", "true", "yes", "on"].includes(String(process.env.LITE_MODE || "").trim().toLowerCase());
+// Exported as a function too: the Cinejoy search slot evaluates the flag at
+// call time (tests flip LITE_MODE; prod env never changes at runtime).
+export function liteFlag(v?: string) {
+  return ["1", "true", "yes", "on"].includes(String(v || "").trim().toLowerCase());
+}
+export const LITE = liteFlag(process.env.LITE_MODE);

@@ -1,6 +1,7 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
 import { tmdbSearch } from "./tmdb.js";
+import { liteFlag } from "./lite.js";
 import {
   normalizeQuery, parseMeta, contentId, resultId, matchScore,
   priorityRank, groupForPriority, ContentGroup, groupByContent,
@@ -438,6 +439,15 @@ export function cinejoyResultsFromTmdb(
 
 async function searchCinejoy(site: SiteCfg, q: string) {
   const t0 = Date.now();
+  // Cinejoy's stream URL exists only inside the site's own obfuscated player,
+  // so playback needs the Playwright lanes. On a LITE deployment (browser
+  // lanes off) a Cinejoy card could never resolve — don't surface one.
+  // Call-time flag: tests flip LITE_MODE in-process.
+  if (liteFlag(process.env.LITE_MODE)) {
+    const error = "lite mode — Cinejoy playback needs the browser lanes (LITE_MODE=0)";
+    console.warn(`[site-search] ${site.name} unavailable — ${error}`);
+    return { status: "unavailable" as const, results: [] as SiteResult[], error };
+  }
   if (!(process.env.TMDB_API_KEY || "").trim()) {
     const error = "TMDB_API_KEY not set — Cinejoy search is TMDB-backed";
     console.warn(`[site-search] ${site.name} unavailable — ${error}`);

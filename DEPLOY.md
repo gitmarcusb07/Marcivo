@@ -119,10 +119,13 @@ redeploy — see [ADS.md](ADS.md).
 - **Env changes need a rebuild**: `VITE_*` values are compiled into the JS
   bundle. Saving an env var in Pages does nothing until the next build —
   trigger one with **Retry deployment** or any push.
-- **Playwright browsers on Render**: native builds don't keep `~/.cache`, so
-  the blueprint pins `PLAYWRIGHT_BROWSERS_PATH=/opt/render/project/.cache/playwright`
-  and installs Chromium in the build command (`npm ci && npx playwright install chromium`).
-  Remove either and every browser lane dies with `Executable doesn't exist`.
+- **Cinejoy (site 7) is off by design in LITE**: its stream URL exists only
+  inside the site's own obfuscated player, so playback needs the Playwright
+  lanes, and the search slot self-disables under LITE (no unplayable cards).
+  To enable it on a bigger instance: `LITE_MODE=0`, set `SITE7_*`, install
+  Chromium in the build (`npm ci && npx playwright install chromium`) with
+  `PLAYWRIGHT_BROWSERS_PATH=/opt/render/project/.cache/playwright` — native
+  builds don't keep `~/.cache`.
 - **A version that won't play**: that source needs a browser lane
   (Playwright), which LITE can't run — pick another quality; HTTP-lane
   sources play fine.

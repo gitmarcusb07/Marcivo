@@ -402,6 +402,17 @@ async function withEnvAsync(vars: Record<string, string | undefined>, fn: () => 
   const noCfg: any = await withEnvAsync({ SITE7_BASE_URL: undefined }, () => searchSites("pushpa", [7], undefined, { group: "movie" }));
   assert.equal(noCfg.status, "not_configured");
   console.log(`ok ${++n} - unconfigured Cinejoy slot → not_configured (graceful)`);
+
+  // LITE deployments have the browser lanes off; a configured Cinejoy must
+  // still degrade gracefully — search included — instead of surfacing cards
+  // that could never play.
+  const lite: any = await withEnvAsync(
+    { SITE7_BASE_URL: "https://cinejoy.pk", SITE7_NAME: "Cinejoy", TMDB_API_KEY: "test-key", LITE_MODE: "1" },
+    () => searchSites("cinejoy-lite-fixture", [7], undefined, { group: "movie" }),
+  );
+  assert.equal(lite.status, "unavailable");
+  assert.ok(/lite mode/.test(String(lite.error || "")), JSON.stringify(lite));
+  console.log(`ok ${++n} - LITE deployment → Cinejoy unavailable (browser lanes off, graceful)`);
 }
 
 console.log(`\nAll ${n} provider-routing tests passed.`);
