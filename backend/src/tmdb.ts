@@ -205,6 +205,25 @@ async function discover(kind: "movie" | "tv", params: Record<string, string>, li
   return withGenres(items, raw, kind);
 }
 
+// Extra catalogue coverage for the sitemap: pages of most-popular titles on
+// top of what the browse rows already surface. Returns ids only — the
+// sitemap builds detail URLs from them (the URL set dedupes).
+export async function tmdbDiscoverIds(kind: "movie" | "tv", pages: number[]): Promise<string[]> {
+  const path = kind === "tv" ? "/discover/tv" : "/discover/movie";
+  const results = await Promise.allSettled(
+    pages.map((p) => get(path, { sort_by: "popularity.desc", "vote_count.gte": "10", page: String(p) }))
+  );
+  const ids: string[] = [];
+  for (const r of results) {
+    if (r.status !== "fulfilled") continue;
+    for (const m of ((r.value?.results || []) as any[])) {
+      const id = String(m?.id || "");
+      if (id) ids.push(id);
+    }
+  }
+  return ids;
+}
+
 // Home showcase: trending-week hero (top 10 movies) + popular 2026 + new releases.
 export async function tmdbShowcase() {
   const ck = "showcase";

@@ -28,6 +28,7 @@ export default function SiteFooter() {
           <ul className="grid gap-1.5 text-gray-300">
             <li><Link to="/watch-free" className="hover:text-white">How to Watch Free</Link></li>
             <li><Link to="/free-movies" className="hover:text-white">Free Movies &amp; Shows</Link></li>
+            <li><Link to="/download-movies" className="hover:text-white">Download Movies</Link></li>
             <li><Link to="/upcoming" className="hover:text-white">Upcoming Movies</Link></li>
             <li><Link to="/upcoming/shows" className="hover:text-white">Upcoming Series</Link></li>
             <li><Link to="/upcoming/anime" className="hover:text-white">Upcoming Anime</Link></li>

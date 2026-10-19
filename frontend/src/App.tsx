@@ -16,6 +16,7 @@ const CategoryPage = lazy(() => import("./pages/CategoryPage"));
 const StatusPage = lazy(() => import("./pages/StatusPage"));
 const WatchFree = lazy(() => import("./pages/WatchFree"));
 const FreeMovies = lazy(() => import("./pages/FreeMovies"));
+const DownloadMovies = lazy(() => import("./pages/DownloadMovies"));
 const Upcoming = lazy(() => import("./pages/Upcoming"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -28,6 +29,7 @@ const TITLES: Record<string, string> = {
   "/category/hollywood": "Hollywood — Marcivo",
   "/category/bollywood": "Bollywood — Marcivo",
   "/free-movies": "Free Movies & Shows — Watch Movies Online Free | Marcivo",
+  "/download-movies": "Download Movies & Web Series — Every Available Version | Marcivo",
   "/watch-free": "How to Watch Movies Online Free | Marcivo",
   "/upcoming": "Upcoming Movies — Marcivo",
   "/upcoming/shows": "Upcoming Web Series & TV Shows — Marcivo",
@@ -65,6 +67,7 @@ export default function App() {
               <Route path="/detail/:kind/:id" element={<Detail />} />
               <Route path="/watch/:kind/:id" element={<Watch />} />
               <Route path="/free-movies" element={<FreeMovies />} />
+              <Route path="/download-movies" element={<DownloadMovies />} />
               <Route path="/watch-free" element={<WatchFree />} />
               <Route path="/upcoming" element={<Upcoming section="movies" />} />
               <Route path="/upcoming/shows" element={<Upcoming section="shows" />} />

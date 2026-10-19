@@ -185,6 +185,8 @@ export default function Home() {
           {" · "}
           <Link to="/free-movies" className="hover:text-white underline decoration-white/30">Free movies &amp; shows</Link>
           {" · "}
+          <Link to="/download-movies" className="hover:text-white underline decoration-white/30">Download movies &amp; series</Link>
+          {" · "}
           <Link to="/upcoming" className="hover:text-white underline decoration-white/30">Upcoming movies</Link>
           {" · "}
           <Link to="/upcoming/shows" className="hover:text-white underline decoration-white/30">Upcoming series</Link>

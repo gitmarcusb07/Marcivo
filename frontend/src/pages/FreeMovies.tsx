@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { api } from "../lib/api";
 import { SearchBar, Row, RowSkeleton } from "../components/ui";
 import AdBand from "../ads/AdBand";
-import Seo, { SITE_URL, breadcrumbLd } from "../seo/Seo";
+import Seo, { SITE_URL, breadcrumbLd, faqLd } from "../seo/Seo";
 
 const Y = new Date().getFullYear();
 
@@ -14,6 +14,13 @@ const FAQ_HOW = [
   { n: "1", h: "Search or browse", p: "Start from the rows below or search any movie, series or anime by name." },
   { n: "2", h: "Compare versions", p: "Each title lists the versions that exist right now — 480p to 2160p, with audio details." },
   { n: "3", h: "Press play", p: "Pick one and the player opens in your browser. No install, no sign-up, works on mobile." },
+];
+
+const FAQ_FREE = [
+  { q: "Are the movies on Marcivo really free?", a: "Yes — Marcivo is free to use with no account. It collects the versions that exist on indexed sources and links to them; you press play right in your browser." },
+  { q: "Do I need to install an app or sign up?", a: "No — everything runs in the browser on desktop and mobile. No install, no sign-up, nothing to download first." },
+  { q: "Can I download a movie instead of streaming?", a: "Often, yes — many versions are direct video files, and you can save them from the player in your browser. Availability depends on the source; the download guide walks through it." },
+  { q: "Why does a title show no versions?", a: "That means no indexed source carries it yet — common right after a release is announced. The upcoming pages track what's on the way so you know when to check back." },
 ];
 
 export default function FreeMovies() {
@@ -43,6 +50,7 @@ export default function FreeMovies() {
       { name: "Home", path: "/" },
       { name: "Free Movies & Shows", path: "/free-movies" },
     ]),
+    faqLd(FAQ_FREE),
     ...(itemList.length
       ? [{
           "@context": "https://schema.org",
@@ -105,22 +113,29 @@ export default function FreeMovies() {
         <Row key={row.title} title={row.title} items={row.items} onPick={(it: any) => nav(`/detail/${it.kind}/${it.id}`)} />
       ))}
 
-      {!!rows.length && (
-        <>
-          <h2 className="font-display text-2xl mt-8">Keep exploring</h2>
-          <div className="flex flex-wrap gap-2 mt-3">
-            <Link to="/watch-free" className="px-5 py-2.5 rounded-full bg-card border border-white/10 font-semibold text-sm hover:border-white/30">How to watch free — full guide</Link>
-            <Link to="/upcoming" className="px-5 py-2.5 rounded-full bg-card border border-white/10 font-semibold text-sm hover:border-white/30">Upcoming movies</Link>
-            <Link to="/upcoming/shows" className="px-5 py-2.5 rounded-full bg-card border border-white/10 font-semibold text-sm hover:border-white/30">Upcoming series</Link>
-            <Link to="/upcoming/anime" className="px-5 py-2.5 rounded-full bg-card border border-white/10 font-semibold text-sm hover:border-white/30">Upcoming anime</Link>
-            <Link to="/category/hollywood" className="px-5 py-2.5 rounded-full bg-card border border-white/10 font-semibold text-sm hover:border-white/30">Hollywood</Link>
-            <Link to="/category/bollywood" className="px-5 py-2.5 rounded-full bg-card border border-white/10 font-semibold text-sm hover:border-white/30">Bollywood</Link>
-          </div>
-          <p className="text-xs text-muted mt-6">
-            Updated for {Y}. Marcivo does not host any files — it links to media indexed from third-party sources.
-          </p>
-        </>
-      )}
+      <h2 className="font-display text-2xl mt-8">Frequently asked questions</h2>
+      <div className="grid gap-2 mt-3">
+        {FAQ_FREE.map((f) => (
+          <details key={f.q} className="bg-card border border-white/10 rounded-xl px-4 py-3">
+            <summary className="font-semibold text-sm cursor-pointer">{f.q}</summary>
+            <p className="text-sm text-gray-300 mt-2">{f.a}</p>
+          </details>
+        ))}
+      </div>
+
+      <h2 className="font-display text-2xl mt-8">Keep exploring</h2>
+      <div className="flex flex-wrap gap-2 mt-3">
+        <Link to="/download-movies" className="px-5 py-2.5 rounded-full bg-card border border-white/10 font-semibold text-sm hover:border-white/30">Download movies &amp; series</Link>
+        <Link to="/watch-free" className="px-5 py-2.5 rounded-full bg-card border border-white/10 font-semibold text-sm hover:border-white/30">How to watch free — full guide</Link>
+        <Link to="/upcoming" className="px-5 py-2.5 rounded-full bg-card border border-white/10 font-semibold text-sm hover:border-white/30">Upcoming movies</Link>
+        <Link to="/upcoming/shows" className="px-5 py-2.5 rounded-full bg-card border border-white/10 font-semibold text-sm hover:border-white/30">Upcoming series</Link>
+        <Link to="/upcoming/anime" className="px-5 py-2.5 rounded-full bg-card border border-white/10 font-semibold text-sm hover:border-white/30">Upcoming anime</Link>
+        <Link to="/category/hollywood" className="px-5 py-2.5 rounded-full bg-card border border-white/10 font-semibold text-sm hover:border-white/30">Hollywood</Link>
+        <Link to="/category/bollywood" className="px-5 py-2.5 rounded-full bg-card border border-white/10 font-semibold text-sm hover:border-white/30">Bollywood</Link>
+      </div>
+      <p className="text-xs text-muted mt-6">
+        Updated for {Y}. Marcivo does not host any files — it links to media indexed from third-party sources.
+      </p>
 
       {/* Full ad set — rendered even while the catalogue loads or fails. */}
       <AdBand slots={["home_mid", "search_mid", "search_sidebar", "home_tall", "status_banner", "home_native"]} className="mt-8" />

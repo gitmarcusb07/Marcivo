@@ -142,6 +142,7 @@ export default function WatchFree() {
       <h2 className="font-display text-2xl mt-8">Start watching</h2>
       <div className="flex flex-wrap gap-2 mt-3">
         <Link to="/free-movies" className="px-5 py-2.5 rounded-full bg-netflix font-bold text-sm">Free movies & shows</Link>
+        <Link to="/download-movies" className="px-5 py-2.5 rounded-full bg-card border border-white/10 font-semibold text-sm hover:border-white/30">Download movies & series</Link>
         <Link to="/category/movies" className="px-5 py-2.5 rounded-full bg-card border border-white/10 font-semibold text-sm hover:border-white/30">Browse movies</Link>
         <Link to="/category/series" className="px-5 py-2.5 rounded-full bg-card border border-white/10 font-semibold text-sm hover:border-white/30">Browse web series</Link>
         <Link to="/?tab=anime" className="px-5 py-2.5 rounded-full bg-card border border-white/10 font-semibold text-sm hover:border-white/30">Browse anime</Link>

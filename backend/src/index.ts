@@ -6,7 +6,7 @@ import * as dns from "node:dns";
 try { dns.setDefaultResultOrder("ipv4first"); } catch {}
 import express from "express";
 import cors from "cors";
-import { tmdbHome, tmdbSearch, tmdbDetail, tmdbShowcase, tmdbBrowse, tmdbSeason, tmdbUpcoming, BrowseCat } from "./tmdb.js";
+import { tmdbHome, tmdbSearch, tmdbDetail, tmdbShowcase, tmdbBrowse, tmdbSeason, tmdbUpcoming, tmdbDiscoverIds, BrowseCat } from "./tmdb.js";
 import { anilistHome, anilistSearch, anilistDetail, anilistUpcoming } from "./anilist.js";
 import { searchSites, lookupResult, expandExactVariants, expandOne, registerResults } from "./siteSearch.js";
 import {
@@ -41,7 +41,7 @@ const app = express();
 app.use(cors({ origin: (process.env.FRONTEND_ORIGIN || "*") === "*" ? "*" : (process.env.FRONTEND_ORIGIN || "").split(",") }));
 app.use(express.json({ limit: "256kb" }));
 
-const BUILD = "2026-10-19-cinegram1";
+const BUILD = "2026-10-19-seo2";
 
 app.get("/health", (_req, res) => res.json({ ok: true, time: new Date().toISOString(), build: BUILD, lite: LITE }));
 
@@ -50,6 +50,7 @@ app.get("/sitemap.xml", async (_req, res) => {
     const urls = new Set<string>([
       `${SEO_SITE_URL}/`,
       `${SEO_SITE_URL}/free-movies`,
+      `${SEO_SITE_URL}/download-movies`,
       `${SEO_SITE_URL}/watch-free`,
       `${SEO_SITE_URL}/upcoming`,
       `${SEO_SITE_URL}/upcoming/shows`,
@@ -84,6 +85,19 @@ app.get("/sitemap.xml", async (_req, res) => {
           );
         }
       }
+    }
+
+    // Deeper coverage: pages of most-popular titles beyond the browse rows,
+    // so more detail pages are discoverable (the Set above dedupes).
+    const [popMovie, popTv] = await Promise.allSettled([
+      tmdbDiscoverIds("movie", [1, 2, 3, 4, 5, 6]),
+      tmdbDiscoverIds("tv", [1, 2, 3, 4, 5, 6]),
+    ]);
+    if (popMovie.status === "fulfilled") {
+      for (const id of popMovie.value) urls.add(`${SEO_SITE_URL}/detail/movie/${encodeURIComponent(id)}`);
+    }
+    if (popTv.status === "fulfilled") {
+      for (const id of popTv.value) urls.add(`${SEO_SITE_URL}/detail/tv/${encodeURIComponent(id)}`);
     }
 
     // Extra detail-page coverage: titles that are on the way (their pages rank

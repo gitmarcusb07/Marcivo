@@ -12,6 +12,10 @@ function seoPages() {
       title: "Free Movies & Shows — Watch Movies Online Free | Marcivo",
       description: "Free movies and shows to watch online — trending films, popular web series and anime in one place. Compare every available version and press play. Free to use, no account needed.",
     },
+    "/download-movies": {
+      title: "Download Movies & Web Series — Every Available Version | Marcivo",
+      description: "Looking for movies to download? Marcivo finds every available version of a title — compare quality, audio and size, then save or stream it in your browser. Free, no account needed.",
+    },
     "/watch-free": {
       title: `How to Watch Movies Online Free — ${y} Guide | Marcivo`,
       description: "How to watch movies online free: where free streaming actually comes from, how to avoid dead links, and how Marcivo lines up every available version of a title so you can press play in one search.",
@@ -54,6 +58,7 @@ function fallbackSitemap() {
   const paths = [
     "/",
     "/free-movies",
+    "/download-movies",
     "/watch-free",
     "/upcoming",
     "/upcoming/shows",
