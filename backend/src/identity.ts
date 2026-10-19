@@ -98,6 +98,11 @@ export function sourceTypeFor(siteId: number): "streaming" | "download" {
 }
 
 export function sourceNameFor(siteId: number): string {
+  // The .env adapter name is the source of truth (SITE{id}_NAME): swapping a
+  // slot must not leave a stale name from the static table in normalized
+  // results/labels. Fall back to the built-in table when no env name is set.
+  const env = (process.env[`SITE${siteId}_NAME`] || "").trim();
+  if (env) return env;
   for (const g of Object.values(SOURCE_GROUPS)) {
     const f = g.find((s) => s.id === siteId);
     if (f) return f.name;
