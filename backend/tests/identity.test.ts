@@ -51,13 +51,13 @@ t("season/episode extraction", () => {
 t("Dune classifies MOVIE, no anime sources", () => {
   const tmdb = [{ kind: "movie", title: "Dune", year: "2021" }];
   assert.equal(classify(normalizeQuery("Dune"), tmdb, []), "movie");
-  assert.deepEqual(groupSiteIds(groupForClass("movie")), [4, 1, 2, 6]);
+  assert.deepEqual(groupSiteIds(groupForClass("movie")), [7, 4, 1, 2, 6]);
 });
 
 t("Stranger Things classifies SERIES, movie pool", () => {
   const tmdb = [{ kind: "tv", title: "Stranger Things", year: "2016" }];
   assert.equal(classify(normalizeQuery("Stranger Things"), tmdb, []), "series");
-  assert.deepEqual(groupSiteIds(groupForClass("series")), [4, 1, 2, 6]);
+  assert.deepEqual(groupSiteIds(groupForClass("series")), [7, 4, 1, 2, 6]);
 });
 
 // --- Test 4/5: anime classification + anime-only pool, priority order ---
@@ -90,7 +90,7 @@ t("exact tie: series-like anime wins, film defers to catalog", () => {
 
 t("unknown query searches every group", () => {
   assert.equal(classify(normalizeQuery("xqzzt"), [], []), "unknown");
-  assert.deepEqual(groupSiteIds("unknown"), [4, 5, 1, 2, 3, 6]);
+  assert.deepEqual(groupSiteIds("unknown"), [7, 4, 5, 1, 2, 3, 6]);
 });
 
 // --- Test 2/3: year-aware content identity ---
@@ -134,17 +134,21 @@ t("exact year match outranks loose match", () => {
 
 t("central priority config: streaming first, never reversed", () => {
   const m = SOURCE_GROUPS.movie;
-  assert.deepEqual(m.map((s) => s.name), ["PRMovies", "Vegamovies", "RogMovies", "BoredFlix"]);
+  assert.deepEqual(m.map((s) => s.name), ["Cinejoy", "PRMovies", "Vegamovies", "RogMovies", "BoredFlix"]);
   assert.equal(m[0].type, "streaming");
   const a = SOURCE_GROUPS.anime;
   assert.deepEqual(a.map((s) => s.name), ["PirateXPlay", "Gokuhd"]);
   assert.equal(a[0].type, "streaming");
+  // Cinejoy leads the movie + unknown pools; below it the existing relative
+  // order is preserved (4 before 1, 2 before 6).
+  assert.ok(priorityRank("movie", 7) < priorityRank("movie", 4));
   assert.ok(priorityRank("movie", 4) < priorityRank("movie", 1));
   assert.ok(priorityRank("anime", 5) < priorityRank("anime", 3));
   assert.equal(priorityRank("anime", 1), 999); // movie source sorts last in anime group
-  // BoredFlix appends last: it never displaces an existing source, and it is
-  // not part of the anime pool.
-  assert.equal(m[3].type, "streaming");
+  assert.equal(priorityRank("anime", 7), 999); // Cinejoy never joins the anime pool
+  // BoredFlix stays the last slot: it never displaces an existing source,
+  // and it is not part of the anime pool.
+  assert.equal(m[4].type, "streaming");
   assert.ok(priorityRank("movie", 2) < priorityRank("movie", 6));
   assert.equal(priorityRank("anime", 6), 999);
 });
@@ -159,14 +163,15 @@ t("title similarity sane", () => {
 
 // --- §2/§42 central config aliases stay in sync ---
 t("CONTENT_SOURCES + SOURCE_PRIORITY mirror SOURCE_GROUPS", () => {
-  assert.deepEqual(CONTENT_SOURCES.movie_series.map((s) => s.name), ["prmovies", "vegamovies", "rogmovies", "boredflix"]);
+  assert.deepEqual(CONTENT_SOURCES.movie_series.map((s) => s.name), ["cinejoy", "prmovies", "vegamovies", "rogmovies", "boredflix"]);
   assert.equal(CONTENT_SOURCES.movie_series[0].type, "streaming");
-  assert.equal(CONTENT_SOURCES.movie_series[3].type, "streaming");
+  assert.equal(CONTENT_SOURCES.movie_series[4].type, "streaming");
   assert.deepEqual(CONTENT_SOURCES.anime.map((s) => s.name), ["piratepixels", "gokuhd"]);
-  assert.deepEqual(Object.keys(SOURCE_PRIORITY.movie).sort(), ["boredflix", "prmovies", "rogmovies", "vegamovies"]);
-  assert.deepEqual(Object.keys(SOURCE_PRIORITY.series).sort(), ["boredflix", "prmovies", "rogmovies", "vegamovies"]);
+  assert.deepEqual(Object.keys(SOURCE_PRIORITY.movie).sort(), ["boredflix", "cinejoy", "prmovies", "rogmovies", "vegamovies"]);
+  assert.deepEqual(Object.keys(SOURCE_PRIORITY.series).sort(), ["boredflix", "cinejoy", "prmovies", "rogmovies", "vegamovies"]);
+  assert.ok(SOURCE_PRIORITY.movie.cinejoy < SOURCE_PRIORITY.movie.prmovies);
   assert.ok(SOURCE_PRIORITY.movie.prmovies < SOURCE_PRIORITY.movie.vegamovies);
-  assert.ok(SOURCE_PRIORITY.movie.rogmovies < SOURCE_PRIORITY.movie.boredflix); // new slot appends last
+  assert.ok(SOURCE_PRIORITY.movie.rogmovies < SOURCE_PRIORITY.movie.boredflix); // BoredFlix stays last
   assert.ok(SOURCE_PRIORITY.anime.piratepixels < SOURCE_PRIORITY.anime.gokuhd);
 });
 

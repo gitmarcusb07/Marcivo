@@ -236,6 +236,131 @@ async function cinegramEmbed(sourceUrl: string, job: Job, season?: number, episo
   return embedUrl;
 }
 
+// --- Cinejoy: public-player lane (source-specific) --------------------------
+// Cinejoy's /watch/movie|tv/… page is the source's authorized public player
+// URL; it refuses framing (X-Frame-Options: DENY), and the stream negotiation
+// runs inside that page (server list + an in-page obfuscated handshake) before
+// the site's own player requests a plain, cookie-less HLS master on the CDN
+// it picks. The lane drives the public page in the app's browser lane — the
+// same viewer flow — and captures only the HLS URL the site's own player
+// requests: no tokens are decrypted, no anti-bot layer is reverse-engineered,
+// nothing is hardcoded. The captured link is validated before it is served.
+function cinejoyHosts(): string[] {
+  return (process.env.WATCH_CINEJOY_HOSTS || "cinejoy.pk").split(",").map((s) => s.trim().toLowerCase()).filter(Boolean);
+}
+export function isCinejoy(u: string): boolean {
+  const h = hostOf(u);
+  return cinejoyHosts().some((d) => h === d || h.endsWith("." + d));
+}
+
+/** Cinejoy page → the site's own watch (player) URL. Pure, exported for
+    tests. Detail pages carry "<tmdbId>-<slug>"; the slug is cosmetic.
+      /movie/<id>[-slug]     → /watch/movie/<id>
+      /series/<id>[-slug]    → /watch/tv/<id>/<season|1>/<episode|1>
+      /watch/movie/<id>      → kept (normalized)
+      /watch/tv/<id>/<s>/<e> → kept
+    Anything else is not a playable Cinejoy page → null. Defaulting series to
+    S1E1 mirrors the site: its own Play button on a series page opens S1E1. */
+export function cinejoyWatchUrlFromSource(sourceUrl: string, season?: number, episode?: number): string | null {
+  let u: URL;
+  try { u = new URL(sourceUrl); } catch { return null; }
+  const p = u.pathname;
+  let m = p.match(/^\/watch\/movie\/(\d{1,10})(?:-[^/]+)?(?:\/|$)/);
+  if (m) return `${u.origin}/watch/movie/${m[1]}`;
+  m = p.match(/^\/watch\/tv\/(\d{1,10})(?:-[^/]+)?\/(\d{1,2})\/(\d{1,3})(?:\/|$)/);
+  if (m) return `${u.origin}/watch/tv/${m[1]}/${m[2]}/${m[3]}`;
+  m = p.match(/^\/movie\/(\d{1,10})(?:[-/]|$)/);
+  if (m) return `${u.origin}/watch/movie/${m[1]}`;
+  m = p.match(/^\/series\/(\d{1,10})(?:[-/]|$)/);
+  if (m) {
+    const s = season && season >= 1 ? Math.min(season, 99) : 1;
+    const e = episode && episode >= 1 ? Math.min(episode, 999) : 1;
+    return `${u.origin}/watch/tv/${m[1]}/${s}/${e}`;
+  }
+  return null;
+}
+
+/** Server-side check that the captured link really is an HLS master: the CDN
+    is plain and cookie-less (Access-Control-Allow-Origin: *), so a direct
+    fetch must succeed and start with the HLS tag. Playlists may be served
+    with a non-standard content-type (.jpg path quirk), so only the body
+    decides — never the header. */
+async function cinejoyValidateStream(u: string): Promise<boolean> {
+  try {
+    const ctl = new AbortController();
+    const t = setTimeout(() => ctl.abort(), 10000);
+    try {
+      const r = await fetch(u, {
+        signal: ctl.signal,
+        headers: {
+          "User-Agent": process.env.SITE_USER_AGENT || "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+          Connection: "close",
+        },
+        redirect: "follow",
+      });
+      if (r.status !== 200 && r.status !== 206) return false;
+      const text = (await r.text()).slice(0, 512);
+      return text.startsWith("#EXTM3U");
+    } finally {
+      clearTimeout(t);
+    }
+  } catch { return false; }
+}
+
+/** Resolve a Cinejoy page to its playable HLS URL (episode-scoped for
+    series). The player session is negotiated inside the page itself; only
+    the resulting public HLS URL is captured and cached temporarily. */
+async function cinejoyResolve(sourceUrl: string, job: Job, season?: number, episode?: number): Promise<string> {
+  const watchUrl = cinejoyWatchUrlFromSource(sourceUrl, season, episode);
+  if (!watchUrl) throw new Error("Cinejoy page isn't playable — open its movie/series page");
+  const browser = await getBrowser();
+  const navTimeout = Math.max(5, parseInt(process.env.WATCH_NAV_TIMEOUT || "15", 10)) * 1000;
+  const budget = Math.max(15000, Math.min(120000, parseInt(process.env.WATCH_CINEJOY_BUDGET || "60", 10) * 1000));
+  const context = await browser.newContext({
+    userAgent: process.env.SITE_USER_AGENT || "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+  });
+  await context.route("**/*", (route: any) => {
+    const t = route.request().resourceType();
+    const u = route.request().url();
+    if (t === "image" || t === "font" || isTracking(u)) return route.abort();
+    return route.continue();
+  });
+  let master: string | null = null;
+  context.on("response", (res: any) => {
+    try {
+      const u = String(res.url());
+      if (!master && /\.m3u8(\?|#|$)/i.test(u)) master = u;
+    } catch {}
+  });
+  try {
+    const page = await context.newPage();
+    const resp = await page.goto(watchUrl, { waitUntil: "domcontentloaded", timeout: navTimeout }).catch(() => null);
+    if (resp && resp.status() >= 400) {
+      throw new Error(`Cinejoy returned HTTP ${resp.status()} — try another version`);
+    }
+    job.stage = "cinejoy-player";
+    // The page negotiates its servers then starts hls.js — the master request
+    // follows within seconds; a title without sources never emits one.
+    const deadline = Date.now() + budget;
+    while (Date.now() < deadline) {
+      if ((job as any).cancelled) throw new Error("cancelled");
+      if (master) {
+        job.stage = "validating";
+        if (await cinejoyValidateStream(master)) break;
+        master = null; // dead session → keep listening for the next one
+      }
+      await page.waitForTimeout(500);
+    }
+    if (!master) throw new Error("Cinejoy's player didn't start a stream — try another version");
+    job.seekable = true; // HLS: timeline + quality ladder via hls.js
+    job.stage = "ready";
+    console.log(`[resolve] cinejoy ready: ${hostOf(sourceUrl)} stream=${hostOf(master)}`);
+    return master;
+  } finally {
+    await context.close().catch(() => {});
+  }
+}
+
 // --- Bounded scheduler: at most N resolutions at once; 1 slot reserved for taps ---
 // Background pre-resolves may only occupy maxConcurrency-1 slots, so a user
 // tap never queues behind 2x165s background jobs (the 3-4min bug).
@@ -718,6 +843,14 @@ async function runPipeline(sourceUrl: string, job: Job, background = false, skip
     job.stage = "fast-path";
     return await cinegramEmbed(sourceUrl, job, season, episode);
   }
+  // Cinejoy (source-specific): the site's own watch page negotiates the
+  // stream; the lane captures (and validates) the HLS URL its player
+  // requests. Short-circuit so the file lanes never hunt for a link that
+  // doesn't exist on those pages.
+  if (isCinejoy(sourceUrl) && !(job as any).cancelled) {
+    job.stage = "cinejoy";
+    return await cinejoyResolve(sourceUrl, job, season, episode);
+  }
   const t00 = Date.now();
   const elapsed = () => Date.now() - t00;
   // Validate one candidate: ok → adopt it; dead/invalid → fall through.
@@ -795,12 +928,13 @@ function readyJob(url: string, source: string, seekable?: boolean, embed?: boole
   return { id: "cache-" + Math.random().toString(36).slice(2, 10), status: "ready", url, error: "", created: Date.now(), stage: "cache", source, seekable, embed };
 }
 
-/** Cache/dedup key. Whole-series source pages (cinegram /tv/) carry every
-    episode on ONE URL, so a requested episode must neither share nor read the
-    plain default entry — otherwise S5E3 would get the cached S1E1 embed. */
+/** Cache/dedup key. Whole-series source pages (cinegram /tv/ pages, Cinejoy
+    /series/ pages) carry every episode on ONE URL, so a requested episode
+    must neither share nor read the plain default entry — otherwise S5E3
+    would get the cached S1E1 stream/embed. */
 export function resolveKey(sourceUrl: string, season?: number, episode?: number): string {
   const base = normKey(sourceUrl);
-  if (season && episode && isCinegram(sourceUrl)) return `${base}|s${season}e${episode}`;
+  if (season && episode && (isCinegram(sourceUrl) || isCinejoy(sourceUrl))) return `${base}|s${season}e${episode}`;
   return base;
 }
 

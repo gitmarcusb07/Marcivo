@@ -200,6 +200,10 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
     setLevels([]);
     setActiveLevel(-1);
     setHlsOn(false);
+    // Direct .m3u8 source (e.g. Cinejoy): Chrome/Firefox can't play HLS in a
+    // native <video>, so attach hls.js here. Safari (no MSE) keeps native
+    // playback through v.src below.
+    const hlsDirect = /\.m3u8(\?|#|$)/i.test(directUrl || "") && Hls.isSupported();
     let resumePending = false;
     if (resumeKeyRef.current) {
       try {
@@ -251,6 +255,9 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
     const onWait = () => setBuffering(true);
     const onCanPlay = () => setBuffering(false);
     const onNativeError = () => {
+      // hls.js-managed sources recover in their own error handler — a native
+      // <video> proxy retry can't fix an MSE stream.
+      if (hlsDirect) { surfaceError(); return; }
       // One proxy retry before surfacing (mirrors old player behavior).
       // LITE: no proxy on the backend (501) — surface immediately, no retry.
       if (!proxiedRef.current && directUrl && !isLite()) {
@@ -271,7 +278,39 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
       if (!autoPlay || resumePending) return;
       v.play().catch(() => {});
     };
-    v.src = directUrl || "";
+    if (hlsDirect) {
+      const dh = new Hls({ enableWorker: true });
+      hls = dh;
+      hlsRef.current = dh;
+      dh.on(Hls.Events.MANIFEST_PARSED, () => {
+        setBuffering(false);
+        attemptAutoplay();
+      });
+      dh.on(Hls.Events.ERROR, (_e: any, data: any) => {
+        if (!data?.fatal) return;
+        if (retriesRef.current < 2) {
+          retriesRef.current += 1;
+          try {
+            if (data.type === Hls.ErrorTypes.NETWORK_ERROR) { dh.startLoad(); return; }
+            if (data.type === Hls.ErrorTypes.MEDIA_ERROR) { dh.recoverMediaError(); return; }
+          } catch {}
+        }
+        try { dh.destroy(); } catch {}
+        hlsRef.current = null;
+        hls = null;
+        surfaceError();
+      });
+      try {
+        dh.loadSource(directUrl);
+        dh.attachMedia(v);
+      } catch {
+        hlsRef.current = null;
+        hls = null;
+        v.src = directUrl || "";
+      }
+    } else {
+      v.src = directUrl || "";
+    }
     attemptAutoplay();
     v.addEventListener("play", onPlay);
     v.addEventListener("pause", onPause);

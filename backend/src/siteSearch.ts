@@ -1,5 +1,6 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
+import { tmdbSearch } from "./tmdb.js";
 import {
   normalizeQuery, parseMeta, contentId, resultId, matchScore,
   priorityRank, groupForPriority, ContentGroup, groupByContent,
@@ -201,7 +202,7 @@ export function siteConfigs(): SiteCfg[] {
     4: "/?s={query}",
     5: "/?s={query}",
     6: "/ts-search.php?q={query}&page=1",
-    7: "/ts-search.php?q={query}&page=1",
+    7: "/search?q={query}",
     8: "/ts-search.php?q={query}&page=1",
   };
   const out: SiteCfg[] = [];
@@ -373,7 +374,90 @@ export function describeFetchError(err: any): string {
   return `${code}: ${msg.slice(0, 90)}`.slice(0, 130);
 }
 
+// --- Cinejoy adapter (slot 7) ----------------------------------------------
+// Cinejoy is a TMDB-backed client-side app: its /search page is a shell that
+// queries TMDB (search/multi) inside the browser and renders the cards
+// client-side — a server-side fetch of that URL returns no results. The
+// adapter mirrors the site's own search client exactly: TMDB search results
+// mapped to Cinejoy page URLs (/movie/<tmdbId>-<slug>, /series/<tmdbId>-<slug>).
+// Playability is decided at resolve time by the site's own player (see the
+// resolver's Cinejoy lane). TMDB_API_KEY is the same key the rest of the
+// backend already uses for metadata/classification.
+
+/** Kebab slug for Cinejoy's cosmetic URL tail (their slug after the TMDB id). */
+export function cinejoySlug(title: string): string {
+  const s = String(title || "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 80);
+  return s || "title";
+}
+
+/** TMDB search items → normalized Cinejoy results (pure; exported for tests).
+    Only movie/tv entries with a numeric TMDB id and a real title survive;
+    people/empty entries are dropped and URLs are deduped. */
+export function cinejoyResultsFromTmdb(
+  items: any[],
+  site: { id: number; name: string; base_url: string },
+  q: string,
+  limit = 25
+): SiteResult[] {
+  const base = String(site.base_url || "").replace(/\/+$/, "");
+  const seen = new Set<string>();
+  const out: SiteResult[] = [];
+  for (const it of items || []) {
+    const kind: "movie" | "series" | "" = it?.kind === "movie" ? "movie" : it?.kind === "tv" ? "series" : "";
+    if (!kind) continue;
+    const id = String(it?.id || "");
+    if (!/^\d{1,10}$/.test(id)) continue;
+    const title = String(it?.title || "").trim();
+    if (title.length < 2 || title.length > 300) continue;
+    const year = /^\d{4}$/.test(String(it?.year || "")) ? String(it.year) : "";
+    const url = `${base}/${kind === "series" ? "series" : "movie"}/${id}-${cinejoySlug(title)}${year ? "-" + year : ""}`;
+    if (seen.has(url)) continue;
+    seen.add(url);
+    const poster = typeof it?.poster === "string" && /^https?:\/\//i.test(it.poster) ? it.poster : "";
+    out.push({
+      title, url,
+      score: Math.max(1, score(title, q, url)),
+      site_id: site.id,
+      site_name: site.name,
+      kind,
+      origin: "mixed",
+      poster,
+      year,
+      description: typeof it?.overview === "string" ? it.overview : "",
+    });
+    if (out.length >= limit) break;
+  }
+  return out;
+}
+
+async function searchCinejoy(site: SiteCfg, q: string) {
+  const t0 = Date.now();
+  if (!(process.env.TMDB_API_KEY || "").trim()) {
+    const error = "TMDB_API_KEY not set — Cinejoy search is TMDB-backed";
+    console.warn(`[site-search] ${site.name} unavailable — ${error}`);
+    return { status: "unavailable" as const, results: [] as SiteResult[], error };
+  }
+  try {
+    const items = await tmdbSearch(q);
+    const limit = Math.max(1, parseInt(process.env.SITE_MAX_RESULTS_PER_SITE || "8", 10));
+    return { status: "ok" as const, results: cinejoyResultsFromTmdb(items as any[], site, q, limit) };
+  } catch (e: any) {
+    const desc = `TMDB: ${String(e?.message || e).replace(/\s+/g, " ").slice(0, 110)}`;
+    console.warn(`[site-search] ${site.name} unavailable — ${desc} (${Date.now() - t0}ms)`);
+    return { status: "unavailable" as const, results: [] as SiteResult[], error: desc };
+  }
+}
+
 async function searchOne(site: SiteCfg, q: string) {
+  // Slot 7 (Cinejoy): client-rendered TMDB search — never fetched as HTML
+  // (the shell carries no results). See the adapter notes above.
+  if (site.id === 7) return searchCinejoy(site, q);
   const url = buildSearchUrl(site.base_url, site.search_path, q);
   const timeout = Math.max(5, parseInt(process.env.SITE_TIMEOUT || "15", 10)) * 1000;
   const t0 = Date.now();

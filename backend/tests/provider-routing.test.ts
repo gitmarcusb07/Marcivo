@@ -1,9 +1,9 @@
-// Exclusive-provider routing + Cinegram embed/cache unit tests (no network).
+// Exclusive-provider routing + Cinegram/Cinejoy unit tests (no network).
 // Run: npx tsx tests/provider-routing.test.ts
 import { strict as assert } from "assert";
-import { exclusiveSiteId, providerSiteIds, isCatalogExact } from "../src/identity.js";
-import { cinegramEmbedUrlFromHtml, resolveKey } from "../src/resolver.js";
-import { siteConfigs, buildSearchUrl, describeFetchFailure, describeFetchError, extractCardResults, searchSites } from "../src/siteSearch.js";
+import { exclusiveSiteId, providerSiteIds, isCatalogExact, contentId, groupByContent } from "../src/identity.js";
+import { cinegramEmbedUrlFromHtml, cinejoyWatchUrlFromSource, isCinejoy, resolveKey } from "../src/resolver.js";
+import { siteConfigs, buildSearchUrl, describeFetchFailure, describeFetchError, extractCardResults, cinejoySlug, cinejoyResultsFromTmdb, searchSites } from "../src/siteSearch.js";
 
 let n = 0;
 const t = (name: string, fn: () => void) => { fn(); n++; console.log(`ok ${n} - ${name}`); };
@@ -44,14 +44,16 @@ t("anime keeps its own pool (PirateXPlay/Gokuhd) in exclusive mode", () => {
   });
 });
 
-// --- Restore path: a deliberate config change brings the old routing back ---
-t("EXCLUSIVE_SITE=0 restores legacy routing (other integrations intact)", () => {
+// --- Restore path: a deliberate config change brings legacy routing back,
+// with Cinejoy (SITE7) as the default-FIRST provider for movies/series ---
+t("EXCLUSIVE_SITE=0 restores legacy routing with Cinejoy first", () => {
   withEnv({ EXCLUSIVE_SITE: "0", HOLLYWOOD_SITES: "1", BOLLYWOOD_SITES: "2" }, () => {
     assert.equal(exclusiveSiteId(), 0);
-    assert.deepEqual(providerSiteIds("movie"), [4, 1, 2, 6]);
-    assert.deepEqual(providerSiteIds("movie", "hollywood"), [1]);
-    assert.deepEqual(providerSiteIds("movie", "bollywood"), [2]);
-    assert.deepEqual(providerSiteIds("anime"), [5, 3]);
+    assert.deepEqual(providerSiteIds("movie"), [7, 4, 1, 2, 6]);
+    assert.deepEqual(providerSiteIds("unknown"), [7, 4, 5, 1, 2, 3, 6]);
+    assert.deepEqual(providerSiteIds("movie", "hollywood"), [7, 1]); // Cinejoy first, origin fallback intact
+    assert.deepEqual(providerSiteIds("movie", "bollywood"), [7, 2]);
+    assert.deepEqual(providerSiteIds("anime"), [5, 3]); // anime pool untouched
   });
 });
 
@@ -152,16 +154,16 @@ t("fetch diagnostics are meaningful and never dump raw HTML", () => {
 // --- BoredFlix (SITE6): additional provider — config-gated, never exclusive ---
 t("BoredFlix joins movie+unknown pools last; exclusive mode ignores it", () => {
   withEnv({ EXCLUSIVE_SITE: "0", SITE6_BASE_URL: "https://boredflix.mobi" }, () => {
-    assert.deepEqual(providerSiteIds("movie"), [4, 1, 2, 6]);
-    assert.deepEqual(providerSiteIds("unknown"), [4, 5, 1, 2, 3, 6]);
+    assert.deepEqual(providerSiteIds("movie"), [7, 4, 1, 2, 6]);
+    assert.deepEqual(providerSiteIds("unknown"), [7, 4, 5, 1, 2, 3, 6]);
   });
   withEnv({ EXCLUSIVE_SITE: undefined, SITE6_BASE_URL: "https://boredflix.mobi" }, () => {
     assert.deepEqual(providerSiteIds("movie"), [4]); // default flow: Cinegram only
     assert.deepEqual(providerSiteIds("anime"), [5, 3]); // anime pool untouched
   });
   withEnv({ EXCLUSIVE_SITE: "0", SITE6_BASE_URL: "https://boredflix.mobi" }, () => {
-    assert.deepEqual(providerSiteIds("movie", "hollywood"), [1]); // origin routing intact
-    assert.deepEqual(providerSiteIds("movie", "bollywood"), [2]);
+    assert.deepEqual(providerSiteIds("movie", "hollywood"), [7, 1]); // origin fallback intact, Cinejoy first
+    assert.deepEqual(providerSiteIds("movie", "bollywood"), [7, 2]);
   });
 });
 
@@ -245,6 +247,122 @@ t("BoredFlix parsing handles missing posters, empty/malformed HTML, junk links",
   assert.deepEqual(extractCardResults(offHost, "https://boredflix.mobi", "pushpa"), []);
 });
 
+// --- Cinejoy (SITE7): default-first provider in multi mode, never exclusive.
+// Its search page is a client-side app querying TMDB in the browser, so the
+// backend adapter mirrors that client (TMDB search → Cinejoy page URLs).
+t("Cinejoy first for movie/series; an explicit EXCLUSIVE_SITE is never overridden", () => {
+  withEnv({ EXCLUSIVE_SITE: "4" }, () => {
+    assert.deepEqual(providerSiteIds("movie"), [4]); // configured exclusive provider wins
+    assert.deepEqual(providerSiteIds("movie", "hollywood"), [4]);
+    assert.deepEqual(providerSiteIds("unknown"), [4]);
+  });
+  withEnv({ EXCLUSIVE_SITE: "7" }, () => {
+    assert.deepEqual(providerSiteIds("movie"), [7]); // Cinejoy CAN be the exclusive provider
+  });
+  withEnv({ EXCLUSIVE_SITE: "0" }, () => {
+    assert.deepEqual(providerSiteIds("movie"), [7, 4, 1, 2, 6]);
+    assert.deepEqual(providerSiteIds("unknown"), [7, 4, 5, 1, 2, 3, 6]);
+    assert.deepEqual(providerSiteIds("anime"), [5, 3]); // anime untouched
+  });
+});
+
+t("duplicate titles: Cinejoy sorts first in the merged source list", () => {
+  const cid = contentId("movie", "Dune", "2021");
+  const flat: any[] = [
+    { content_id: cid, result_id: "4:a", title: "Dune (2021)", year: "2021", type: "movie", site_id: 4, site_name: "Cinegram", url: "https://cinegram.tv/dune", match: 70 },
+    { content_id: cid, result_id: "7:b", title: "Dune (2021)", year: "2021", type: "movie", site_id: 7, site_name: "Cinejoy", url: "https://cinejoy.pk/movie/438631-dune-2021", match: 70 },
+  ];
+  const g = groupByContent(flat, "movie");
+  assert.equal(g.length, 1);
+  assert.deepEqual(g[0].sources.map((s) => s.site_id), [7, 4]);
+  assert.equal(g[0].result_id, "7:b"); // preferred source = the Cinejoy card
+});
+
+t("SITE7 env reads correctly and builds the Cinejoy search URL", () => {
+  withEnv({
+    SITE7_BASE_URL: "https://cinejoy.pk/",
+    SITE7_SEARCH_PATH: "/search?q={query}",
+    SITE7_NAME: "Cinejoy",
+  }, () => {
+    const cfg = siteConfigs().find((s) => s.id === 7) as any;
+    assert.ok(cfg, "site 7 must be configured");
+    assert.equal(cfg.name, "Cinejoy");
+    assert.equal(cfg.base_url, "https://cinejoy.pk");
+    const u = new URL(buildSearchUrl(cfg.base_url, cfg.search_path, "Pushpa 2"));
+    assert.equal(u.origin + u.pathname, "https://cinejoy.pk/search");
+    assert.equal(u.searchParams.get("q"), "Pushpa 2");
+  });
+  withEnv({ SITE7_BASE_URL: "" }, () => {
+    assert.equal(siteConfigs().find((s) => s.id === 7), undefined);
+  });
+});
+
+t("Cinejoy search URL construction encodes spaces, punctuation, non-English", () => {
+  assert.equal(buildSearchUrl("https://cinejoy.pk", "/search?q={query}", "pushpa"), "https://cinejoy.pk/search?q=pushpa");
+  const u1 = new URL(buildSearchUrl("https://cinejoy.pk", "/search?q={query}", "Dune: Part Two"));
+  assert.equal(u1.searchParams.get("q"), "Dune: Part Two");
+  assert.ok(/q=Dune%3A(?:%20|\+)Part(?:%20|\+)Two/.test(u1.search), u1.search);
+  const u2 = new URL(buildSearchUrl("https://cinejoy.pk", "/search?q={query}", "君の名は。"));
+  assert.equal(u2.searchParams.get("q"), "君の名は。");
+  const u3 = new URL(buildSearchUrl("https://cinejoy.pk", "/search?q={query}", "Amélie & Co."));
+  assert.equal(u3.searchParams.get("q"), "Amélie & Co.");
+});
+
+t("Cinejoy TMDB mapping: movie/tv URLs, slug, poster/year, junk dropped", () => {
+  const site = { id: 7, name: "Cinejoy", base_url: "https://cinejoy.pk" };
+  const items = [
+    { id: 1020818, kind: "movie", title: "Pushpa 2: The Rule", year: "2024", poster: "https://image.tmdb.org/t/p/w500/x.jpg", overview: "…" },
+    { id: 37854, kind: "tv", title: "One Piece", year: "1999", poster: "https://image.tmdb.org/t/p/w500/op.jpg" },
+    { id: 1020818, kind: "movie", title: "Pushpa 2: The Rule", year: "2024" }, // duplicate id → deduped
+    { id: 0, kind: "movie", title: "Broken", year: "2020" }, // no valid id
+    { id: 9, kind: "person", title: "Someone" }, // people never surface
+    { id: 11, kind: "movie", title: "", year: "2020" }, // no title
+    { id: 12, kind: "movie", title: "No Year Movie", year: "", poster: "not-a-url" },
+  ];
+  const rows = cinejoyResultsFromTmdb(items as any, site, "pushpa", 10);
+  assert.equal(rows.length, 3);
+  assert.equal(rows[0].url, "https://cinejoy.pk/movie/1020818-pushpa-2-the-rule-2024");
+  assert.equal(rows[0].kind, "movie");
+  assert.equal(rows[0].poster, "https://image.tmdb.org/t/p/w500/x.jpg");
+  assert.equal(rows[0].year, "2024");
+  assert.equal(rows[0].site_id, 7);
+  assert.equal(rows[0].site_name, "Cinejoy");
+  assert.ok(rows[0].score > 0);
+  assert.equal(rows[1].url, "https://cinejoy.pk/series/37854-one-piece-1999");
+  assert.equal(rows[1].kind, "series");
+  assert.equal(rows[2].url, "https://cinejoy.pk/movie/12-no-year-movie");
+  assert.equal(rows[2].poster, "");
+  assert.equal(rows[2].year, "");
+  assert.equal(cinejoySlug("Amélie & Co."), "amelie-co");
+});
+
+t("Cinejoy page → watch URL: movies, episodes, slug-cosmetic, passthrough", () => {
+  assert.equal(cinejoyWatchUrlFromSource("https://cinejoy.pk/movie/969681-spider-man-brand-new-day-2026"), "https://cinejoy.pk/watch/movie/969681");
+  assert.equal(cinejoyWatchUrlFromSource("https://cinejoy.pk/movie/969681"), "https://cinejoy.pk/watch/movie/969681");
+  assert.equal(cinejoyWatchUrlFromSource("https://cinejoy.pk/series/37854-one-piece-1999", 1, 1), "https://cinejoy.pk/watch/tv/37854/1/1");
+  assert.equal(cinejoyWatchUrlFromSource("https://cinejoy.pk/series/37854-one-piece-1999", 2, 5), "https://cinejoy.pk/watch/tv/37854/2/5");
+  assert.equal(cinejoyWatchUrlFromSource("https://cinejoy.pk/series/37854-one-piece-1999"), "https://cinejoy.pk/watch/tv/37854/1/1"); // site default: S1E1
+  assert.equal(cinejoyWatchUrlFromSource("https://cinejoy.pk/watch/tv/1399-game-of-thrones/1/2"), "https://cinejoy.pk/watch/tv/1399/1/2");
+  assert.equal(cinejoyWatchUrlFromSource("https://cinejoy.pk/watch/movie/969681"), "https://cinejoy.pk/watch/movie/969681");
+  assert.equal(cinejoyWatchUrlFromSource("https://cinejoy.pk/lists"), null);
+  assert.equal(cinejoyWatchUrlFromSource("not a url"), null);
+});
+
+t("cinejoy episode keys are S/E-scoped; non-cinejoy hosts untouched", () => {
+  withEnv({ WATCH_CINEJOY_HOSTS: "cinejoy.pk" }, () => {
+    assert.ok(isCinejoy("https://cinejoy.pk/series/37854-one-piece-1999"));
+    assert.ok(isCinejoy("https://www.cinejoy.pk/movie/969681-x"));
+    assert.ok(!isCinejoy("https://cinegram.tv/tv/9488-breaking-bad"));
+    const url = "https://cinejoy.pk/series/37854-one-piece-1999";
+    assert.notEqual(resolveKey(url, 1, 1), resolveKey(url, 1, 2));
+    assert.equal(resolveKey(url, 1, 2), resolveKey(url, 1, 2));
+    const movie = "https://cinejoy.pk/movie/969681-spider-man-brand-new-day-2026";
+    assert.equal(resolveKey(movie), resolveKey(movie));
+    const vega = "https://vegamovies.gallery/download-breaking-bad-s01";
+    assert.equal(resolveKey(vega, 1, 2), resolveKey(vega));
+  });
+});
+
 async function withEnvAsync(vars: Record<string, string | undefined>, fn: () => Promise<any>) {
   const saved = new Map<string, string | undefined>();
   for (const k of Object.keys(vars)) {
@@ -266,6 +384,24 @@ async function withEnvAsync(vars: Record<string, string | undefined>, fn: () => 
   const dis: any = await withEnvAsync({ SITE_SEARCH_ENABLED: "false" }, () => searchSites("pushpa", [6], undefined, { group: "movie" }));
   assert.equal(dis.status, "disabled");
   console.log(`ok ${++n} - SITE_SEARCH_ENABLED=false → disabled (graceful)`);
+
+  // Cinejoy fallback: no TMDB key → the Cinejoy slot degrades to a concrete,
+  // self-diagnosing "unavailable" (never a generic failure, never throws).
+  const noKey: any = await withEnvAsync(
+    { SITE7_BASE_URL: "https://cinejoy.pk", SITE7_NAME: "Cinejoy", TMDB_API_KEY: undefined },
+    () => searchSites("cinejoy-no-key-fixture", [7], undefined, { group: "movie" }),
+  );
+  assert.equal(noKey.status, "unavailable");
+  assert.ok(/TMDB_API_KEY not set/.test(String(noKey.error || "")), JSON.stringify(noKey));
+  assert.ok(
+    Array.isArray(noKey.per_site) && noKey.per_site.some((p: any) => p.site === "Cinejoy" && p.status === "unavailable"),
+    JSON.stringify(noKey.per_site),
+  );
+  console.log(`ok ${++n} - Cinejoy without TMDB key → unavailable with concrete reason (graceful)`);
+
+  const noCfg: any = await withEnvAsync({ SITE7_BASE_URL: undefined }, () => searchSites("pushpa", [7], undefined, { group: "movie" }));
+  assert.equal(noCfg.status, "not_configured");
+  console.log(`ok ${++n} - unconfigured Cinejoy slot → not_configured (graceful)`);
 }
 
 console.log(`\nAll ${n} provider-routing tests passed.`);

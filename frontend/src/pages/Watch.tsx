@@ -257,10 +257,14 @@ export default function Watch() {
           watchUpgrade(sourceUrl, url);
         }
         // Engine starts after playback is rolling (never fights resolutions).
+        // HLS sources already carry their own quality ladder (the player
+        // attaches hls.js) — the file prober/converter doesn't apply.
         clearTimeout(hlsDelay.current);
-        hlsDelay.current = setTimeout(() => {
-          try { if (videoUrlRef.current === url) watchHls(url); } catch {}
-        }, 12000);
+        if (!/\.m3u8(\?|#|$)/i.test(url)) {
+          hlsDelay.current = setTimeout(() => {
+            try { if (videoUrlRef.current === url) watchHls(url); } catch {}
+          }, 12000);
+        }
       }
     } catch (e: any) {
       clearInterval(timer.current);

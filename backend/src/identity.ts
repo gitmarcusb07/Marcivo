@@ -17,39 +17,44 @@ export interface SourceDef {
 
 export type ContentGroup = "movie" | "anime" | "unknown";
 
-/** Movie/series share one pool; anime has its own pool. New optional slots
-    append at the END of a pool so existing priorities never shift: BoredFlix
-    (id 6, streaming) joins movie + unknown pools only, participates in
-    multi-provider mode only when SITE6_BASE_URL is set, and stays inert in
-    the default EXCLUSIVE_SITE flow (which pins every non-anime query). */
+/** Movie/series share one pool; anime has its own pool. Cinejoy (id 7,
+    streaming) is the default-FIRST provider for movie/series/unknown queries
+    in multi-provider mode (EXCLUSIVE_SITE=0); it is inert when SITE7_BASE_URL
+    is empty and never overrides an explicitly configured EXCLUSIVE_SITE.
+    BoredFlix (id 6, streaming) stays the last optional slot. New optional
+    download slots append at the END of a pool so existing relative priorities
+    below Cinejoy never shift. */
 export const SOURCE_GROUPS: Record<ContentGroup, SourceDef[]> = {
   movie: [
-    { id: 4, name: "PRMovies", type: "streaming", priority: 1 },
-    { id: 1, name: "Vegamovies", type: "download", priority: 2 },
-    { id: 2, name: "RogMovies", type: "download", priority: 3 },
-    { id: 6, name: "BoredFlix", type: "streaming", priority: 4 },
+    { id: 7, name: "Cinejoy", type: "streaming", priority: 1 },
+    { id: 4, name: "PRMovies", type: "streaming", priority: 2 },
+    { id: 1, name: "Vegamovies", type: "download", priority: 3 },
+    { id: 2, name: "RogMovies", type: "download", priority: 4 },
+    { id: 6, name: "BoredFlix", type: "streaming", priority: 5 },
   ],
   anime: [
     { id: 5, name: "PirateXPlay", type: "streaming", priority: 1 },
     { id: 3, name: "Gokuhd", type: "download", priority: 2 },
   ],
   unknown: [
-    { id: 4, name: "PRMovies", type: "streaming", priority: 1 },
-    { id: 5, name: "PirateXPlay", type: "streaming", priority: 2 },
-    { id: 1, name: "Vegamovies", type: "download", priority: 3 },
-    { id: 2, name: "RogMovies", type: "download", priority: 4 },
-    { id: 3, name: "Gokuhd", type: "download", priority: 5 },
-    { id: 6, name: "BoredFlix", type: "streaming", priority: 6 },
+    { id: 7, name: "Cinejoy", type: "streaming", priority: 1 },
+    { id: 4, name: "PRMovies", type: "streaming", priority: 2 },
+    { id: 5, name: "PirateXPlay", type: "streaming", priority: 3 },
+    { id: 1, name: "Vegamovies", type: "download", priority: 4 },
+    { id: 2, name: "RogMovies", type: "download", priority: 5 },
+    { id: 3, name: "Gokuhd", type: "download", priority: 6 },
+    { id: 6, name: "BoredFlix", type: "streaming", priority: 7 },
   ],
 };
 
 /** §2 central source configuration (single source of truth). Alias of SOURCE_GROUPS. */
 export const CONTENT_SOURCES: Record<string, { name: string; type: "streaming" | "download"; priority: number }[]> = {
   movie_series: [
-    { name: "prmovies", type: "streaming", priority: 1 },
-    { name: "vegamovies", type: "download", priority: 2 },
-    { name: "rogmovies", type: "download", priority: 3 },
-    { name: "boredflix", type: "streaming", priority: 4 },
+    { name: "cinejoy", type: "streaming", priority: 1 },
+    { name: "prmovies", type: "streaming", priority: 2 },
+    { name: "vegamovies", type: "download", priority: 3 },
+    { name: "rogmovies", type: "download", priority: 4 },
+    { name: "boredflix", type: "streaming", priority: 5 },
   ],
   anime: [
     { name: "piratepixels", type: "streaming", priority: 1 },
@@ -59,8 +64,8 @@ export const CONTENT_SOURCES: Record<string, { name: string; type: "streaming" |
 
 /** §42 final source priority — single source of truth (derived from SOURCE_GROUPS). */
 export const SOURCE_PRIORITY: Record<string, Record<string, number>> = {
-  movie: { prmovies: 1, vegamovies: 2, rogmovies: 3, boredflix: 4 },
-  series: { prmovies: 1, vegamovies: 2, rogmovies: 3, boredflix: 4 },
+  movie: { cinejoy: 1, prmovies: 2, vegamovies: 3, rogmovies: 4, boredflix: 5 },
+  series: { cinejoy: 1, prmovies: 2, vegamovies: 3, rogmovies: 4, boredflix: 5 },
   anime: { piratepixels: 1, gokuhd: 2 },
 };
 
@@ -114,7 +119,13 @@ export function providerSiteIds(group: ContentGroup, origin: ContentOrigin = "")
   const ex = exclusiveSiteId();
   if (ex) return [ex];
   const originSites = originSiteIds(origin);
-  return originSites.length ? originSites : groupSiteIds(group);
+  const pool = originSites.length ? originSites : groupSiteIds(group);
+  // Cinejoy (slot 7) is searched FIRST for everything non-anime in legacy
+  // multi-provider mode; the pool below stays the fallback order untouched
+  // (origin routing included). An unconfigured slot 7 is filtered out by
+  // siteConfigs(), so this stays inert until SITE7_BASE_URL is set, and an
+  // explicitly configured EXCLUSIVE_SITE (above) is never overridden.
+  return pool.includes(7) ? pool : [7, ...pool];
 }
 
 /** Streaming/download orientation for a site id (falls back across groups). */
