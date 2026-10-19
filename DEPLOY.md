@@ -119,6 +119,10 @@ redeploy — see [ADS.md](ADS.md).
 - **Env changes need a rebuild**: `VITE_*` values are compiled into the JS
   bundle. Saving an env var in Pages does nothing until the next build —
   trigger one with **Retry deployment** or any push.
+- **Playwright browsers on Render**: native builds don't keep `~/.cache`, so
+  the blueprint pins `PLAYWRIGHT_BROWSERS_PATH=/opt/render/project/.cache/playwright`
+  and installs Chromium in the build command (`npm ci && npx playwright install chromium`).
+  Remove either and every browser lane dies with `Executable doesn't exist`.
 - **A version that won't play**: that source needs a browser lane
   (Playwright), which LITE can't run — pick another quality; HTTP-lane
   sources play fine.

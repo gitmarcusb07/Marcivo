@@ -1,25 +1,33 @@
-# Render free-tier backend (Hobby plan, no credit card).
+# Render backend (Hobby plan, no credit card).
 # Dashboard → New → Blueprint → point at this repo.
 #
-# LITE_MODE=1 is the whole point: no Playwright, no python bridge, no video
-# proxy, no HLS — HTTP-only resolve lanes + metadata, which fits the free
-# instance (0.1 vCPU / 512 MB). Set the rest in the Render dashboard env vars.
+# The resolver's browser lanes (Cinejoy playback, vcloud fallbacks) need
+# Chromium on the instance. Render's native builds throw away ~/.cache between
+# build and runtime, so the browser is pinned under /opt/render/project —
+# PLAYWRIGHT_BROWSERS_PATH + the build step below handle that. LITE_MODE gates
+# every browser lane off (HTTP-only profile, for a free instance). Set the
+# remaining secret/URL values in the Render dashboard env vars.
 services:
   - type: web
     name: marcivo-backend
     runtime: node
     plan: free
     rootDir: backend
-    buildCommand: npm ci
+    buildCommand: npm ci && npx playwright install chromium
     startCommand: npm start
     healthCheckPath: /health
     envVars:
+      # "0" keeps the Playwright lanes reachable (needed for Cinejoy playback).
       - key: LITE_MODE
-        value: "1"
-      # playwright's postinstall would download ~150 MB of browsers we never
-      # launch here — skip it (LITE_MODE already gates the browser lanes).
+        value: "0"
+      # npm's postinstall would duplicate the download — the explicit build
+      # step below installs into PLAYWRIGHT_BROWSERS_PATH instead.
       - key: PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD
         value: "1"
+      # Only /opt/render/project survives the build → runtime handoff. This is
+      # the path Render support recommends for Playwright browsers.
+      - key: PLAYWRIGHT_BROWSERS_PATH
+        value: "/opt/render/project/.cache/playwright"
       # Set these in the Render dashboard (SecretFile / sync:false):
       - key: TMDB_API_KEY
         sync: false

@@ -486,8 +486,17 @@ async function getBrowser() {
   if (!browserPromise) {
     browserPromise = (async () => {
       const { chromium } = await import("playwright");
-      const b = await chromium.launch({ headless: (process.env.WATCH_HEADLESS || "true").toLowerCase() !== "false" });
-      return b;
+      const headless = (process.env.WATCH_HEADLESS || "true").toLowerCase() !== "false";
+      try {
+        return await chromium.launch({ headless });
+      } catch (e: any) {
+        // Deployed containers (Render) may lack the kernel features Chromium's
+        // sandbox needs ("No usable sandbox", "Operation not permitted") —
+        // retry once without it rather than failing the whole lane.
+        if (!/sandbox|SUID|permission|not permitted/i.test(String(e?.message || e))) throw e;
+        console.log("[browser] sandbox launch failed — retrying without sandbox");
+        return await chromium.launch({ headless, chromiumSandbox: false });
+      }
     })().catch((e) => { browserPromise = null; throw e; });
   }
   return browserPromise;
