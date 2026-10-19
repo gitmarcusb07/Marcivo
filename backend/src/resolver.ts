@@ -77,7 +77,7 @@ const jobs = new Map<string, Job>();
 // --- Temporary stream cache (in-process TTL, no permanent storage) ---
 // Playable URLs are temporary (~3h observed), so entries expire via a
 // conservative configurable TTL that stays well under source expiry.
-interface StreamEntry { url: string; resolvedAt: number; expiresAt: number; }
+interface StreamEntry { url: string; resolvedAt: number; expiresAt: number; seekable?: boolean; }
 const streamCache = new Map<string, StreamEntry>();
 // sourceUrl -> in-flight job (request deduplication: many watchers, one resolver).
 const inflight = new Map<string, Job>();
@@ -685,8 +685,8 @@ async function runPipeline(sourceUrl: string, job: Job, background = false, skip
   throw new Error("Stream link is dead — try another version");
 }
 
-function readyJob(url: string, source: string): Job {
-  return { id: "cache-" + Math.random().toString(36).slice(2, 10), status: "ready", url, error: "", created: Date.now(), stage: "cache", source };
+function readyJob(url: string, source: string, seekable?: boolean): Job {
+  return { id: "cache-" + Math.random().toString(36).slice(2, 10), status: "ready", url, error: "", created: Date.now(), stage: "cache", source, seekable };
 }
 
 export function enqueueResolve(sourceUrl: string, opts: { background?: boolean; skipFast?: boolean; fresh?: boolean } = {}): Job {
@@ -703,14 +703,14 @@ export function enqueueResolve(sourceUrl: string, opts: { background?: boolean; 
     if (remaining > refreshThresholdMs()) {
       metrics.cacheHits++;
       console.log(`[resolve] cache HIT: ${source} expires_in=${Math.round(remaining / 1000)}s`);
-      return readyJob(hit.url, source);
+      return readyJob(hit.url, source, hit.seekable);
     }
     if (remaining > 0) {
       // Stale-while-refresh: still usable → return now, refresh behind.
       metrics.cacheHits++;
       console.log(`[resolve] cache STALE (refresh in bg): ${source} expires_in=${Math.round(remaining / 1000)}s`);
       if (!inflight.has(key)) enqueueFresh(sourceUrl, true);
-      return readyJob(hit.url, source);
+      return readyJob(hit.url, source, hit.seekable);
     }
     streamCache.delete(key);
     streamCache.delete(sourceUrl);
@@ -744,7 +744,7 @@ function enqueueFresh(sourceUrl: string, background: boolean, skipFast = false):
         resolverTimeoutMs(background) + 15000,
         "Resolution timed out — try another version"
       );
-      streamCache.set(key, { url, resolvedAt: Date.now(), expiresAt: Date.now() + streamTtlMs() });
+      streamCache.set(key, { url, resolvedAt: Date.now(), expiresAt: Date.now() + streamTtlMs(), seekable: job.seekable });
       job.status = "ready"; job.url = url; job.stage = "ready";
       metrics.resolved++;
       if (background) metrics.preResolved++;
