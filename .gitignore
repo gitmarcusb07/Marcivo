@@ -26,3 +26,5 @@ test-run.err.log
 Thumbs.db
 .vscode/
 .idea/
+frontend/node_modules - Copy/
+.wrangler/

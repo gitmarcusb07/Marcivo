@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Player pages are utility pages, not search landing pages.
+Disallow: /watch/
+
+Sitemap: https://marcivo.teraplayer.in/sitemap.xml
