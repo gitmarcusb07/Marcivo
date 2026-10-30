@@ -33,6 +33,87 @@
 
 export const posts = [
   {
+    slug: "patrick-stewart-dies-86-star-trek-picard-xmen-professor-x",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/87/Patrick_Stewart_by_Gage_Skidmore_2.jpg",
+    imageAlt: "Patrick Stewart speaking at San Diego Comic-Con in 2019",
+    title: "Patrick Stewart Dies at 86: Star Trek's Captain Picard and X-Men's Professor X Remembered",
+    description:
+      "Patrick Stewart dies at 86: the Star Trek and X-Men legend passed away at his Los Angeles home on October 28, 2026, after Alzheimer's and Lewy body dementia.",
+    excerpt:
+      "Sir Patrick Stewart, the Star Trek captain and X-Men professor loved by generations of fans, has died at 86 after a brief illness with Alzheimer's disease and Lewy body dementia.",
+    date: "2026-10-30",
+    category: "Pop Culture",
+    sections: [
+      {
+        type: "p",
+        text: "Patrick Stewart dies at 86. The British actor best known as Captain Jean-Luc Picard in Star Trek and Professor Charles Xavier in the X-Men films passed away at his home in Los Angeles on Wednesday, October 28, 2026, his spokesperson confirmed. His death was announced on Thursday, October 29, 2026, through a statement on his official social media accounts, which said he died after a \"brief and poignant journey\" with Alzheimer's disease and Lewy body dementia, surrounded by family and friends.",
+      },
+      { type: "h2", text: "Patrick Stewart dies: the key facts" },
+      {
+        type: "list",
+        items: [
+          "Died on October 28, 2026, at his home in Los Angeles, aged 86.",
+          "Cause of death: Alzheimer's disease and Lewy body dementia, according to his longtime spokesperson Kelly Bush Novak.",
+          "His death was announced on October 29, 2026, through his official social media accounts.",
+          "He is survived by his wife, singer Sunny Ozell, and his two children from his first marriage.",
+          "In lieu of flowers, memorial contributions were requested to the Johns Hopkins Alzheimer's Disease Research Center Fund and the Alzheimer's Foundation of America Caregiver Resources.",
+        ],
+      },
+      { type: "h2", text: "From a Yorkshire mill town to the captain's chair" },
+      {
+        type: "p",
+        text: "Patrick Stewart was born on July 13, 1940, in Mirfield, West Yorkshire, and built his career as a classically trained stage actor, performing Shakespeare long before he became a screen star. His international breakthrough came in 1987, when he was cast as Captain Jean-Luc Picard in Star Trek: The Next Generation. The series ran for seven seasons and 178 episodes and led to four feature films, and Picard's thoughtful command style, along with his famous order \"Make it so\", made Stewart one of science fiction's most recognisable faces. He returned to the role decades later in Star Trek: Picard, which ran from 2020 to 2023.",
+      },
+      { type: "h2", text: "Professor X: the heart of the X-Men" },
+      {
+        type: "p",
+        text: "Stewart reached a second generation of fans as Professor Charles Xavier, the founder of the X-Men, first playing the role in X-Men in 2000 and returning across the franchise, including X-Men: Days of Future Past and Logan in 2017. His calm authority gave the mutant saga its moral centre, and his final appearance as the character is set to be in Marvel's Avengers: Doomsday, due in December 2026, a farewell that fans will now watch with very different eyes.",
+      },
+      { type: "h2", text: "Tributes: \"the most beloved actor\"" },
+      {
+        type: "p",
+        text: "Tributes poured in from across the Star Trek and Marvel worlds within hours of the announcement. His close friend and X-Men co-star Sir Ian McKellen called him \"the most beloved actor\" and said he \"wore his heart on his sleeve, which made him a man to rely on, to admire and in my case, love\". William Shatner, the original Captain Kirk, described Stewart as \"a friend, a colleague, and a magnificent actor\" who \"brought intelligence, grace, and a deep sense of humanity to everything he did\". George Takei said fans mourn \"a true and irreplaceable legend\" and that, as Picard, Stewart \"inspired a whole next generation of star-gazers\". Hugh Jackman, his Wolverine co-star, wrote: \"We lost one of the greats of stage and screen today. And, in my book, a tremendous friend and man. I learned so much from him.\" Marvel Studios said Stewart brought Professor Xavier to life with \"extraordinary grace, intelligence, and humanity\", and Logan director James Mangold praised him as \"a brilliant and tireless actor, a great collaborator and a gentle soul\".",
+      },
+      { type: "h2", text: "A knighthood, a memoir, and a life off screen" },
+      {
+        type: "p",
+        text: "In 2010, Queen Elizabeth II knighted Stewart for his services to drama, an honour he called the grandest thing that had professionally happened to him. He married singer Sunny Ozell in 2013, with McKellen officiating at the ceremony, and in 2023 he published his memoir, Making It So, telling his own story from a Yorkshire childhood to the captain's chair and beyond.",
+      },
+      { type: "h2", text: "How to revisit Patrick Stewart's best work" },
+      {
+        type: "steps",
+        items: [
+          "Start with Star Trek: The Next Generation (1987-1994), the series that made Picard a household name.",
+          "Continue with Star Trek: Picard (2020-2023) to see the captain's later years and farewell.",
+          "Watch X-Men (2000) through Logan (2017) to follow Professor Xavier's full arc.",
+          "Read his 2023 memoir, Making It So, for his own account of the journey from the Yorkshire stage to Hollywood.",
+          "Look out for Avengers: Doomsday, due in December 2026, his final appearance as Professor Xavier.",
+        ],
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "What was Patrick Stewart's cause of death?",
+            a: "Alzheimer's disease and Lewy body dementia, according to his longtime spokesperson Kelly Bush Novak, who described it as a \"brief and poignant journey\".",
+          },
+          {
+            q: "How old was Patrick Stewart when he died?",
+            a: "He was 86. He was born on July 13, 1940, in Mirfield, West Yorkshire, and died on October 28, 2026, at his home in Los Angeles.",
+          },
+          {
+            q: "Will Patrick Stewart appear in Avengers: Doomsday?",
+            a: "Yes, reports say his final appearance as Professor Charles Xavier will be in Marvel's Avengers: Doomsday, due in December 2026.",
+          },
+          {
+            q: "What is Patrick Stewart best known for?",
+            a: "Captain Jean-Luc Picard in Star Trek: The Next Generation and its films and Star Trek: Picard, and Professor Charles Xavier in the X-Men films.",
+          },
+        ],
+      },
+    ],
+  },
+  {
     slug: "new-ott-releases-this-weekend-october-30-2026",
     image: "https://www.ottrelease.com/wp-content/uploads/2026/10/akka.jpg",
     imageAlt: "Akka, the Netflix crime thriller leading this weekend's new OTT releases",
