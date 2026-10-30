@@ -67,6 +67,7 @@ const LINKS = [
   { to: "/upcoming", label: "Upcoming", prefix: true },
   { to: "/search", label: "Search" },
   { to: "/status", label: "Status" },
+  { to: "/blog", label: "Blog" },
 ];
 
 // Website navbar: sticky, wordmark left, section links right. The link row
