@@ -156,6 +156,93 @@ export const posts = [
     ],
   },
   {
+    slug: "cyclone-arnab-odisha-floods-october-30-2026",
+    image: "https://cf-images.assettype.com/nationalherald%2F2023-05%2F865b069a-9ebf-4400-a50a-1e9c47067e69%2FFvlh9_paAAAXpRr.jpg?rect=0%2C21%2C1080%2C567&w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
+    imageAlt: "Satellite view of Cyclone Arnab over the Bay of Bengal near India's east coast",
+    title: "Cyclone Arnab Odisha Floods (October 30, 2026): 59,000 Evacuated, 1,000+ Villages Hit as CM Plans Aerial Survey",
+    description:
+      "Cyclone Arnab Odisha floods: 59,028 people evacuated, 1,000+ villages affected in Ganjam and Gajapati, trains cancelled, and a CM aerial survey today.",
+    excerpt:
+      "Cyclone Arnab has weakened, but its rains have flooded more than 1,000 villages in Odisha, forced over 59,000 people to safety, and disrupted trains and roads across the south of the state.",
+    date: "2026-10-30",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "The Cyclone Arnab Odisha floods are now the story coming out of the storm. Cyclone Arnab itself has weakened over central India, but the danger in Odisha has shifted from wind to water. Torrential rain on Thursday, October 29, 2026, sent rivers into spate, cut off villages, washed away stretches of road, and forced a rescue operation across nine districts. On Friday, October 30, 2026, Chief Minister Mohan Charan Majhi is scheduled to visit the worst-hit districts, Ganjam and Gajapati, to assess the damage from the air and review relief work on the ground.",
+      },
+      { type: "h2", text: "Cyclone Arnab Odisha floods: the key numbers" },
+      {
+        type: "list",
+        items: [
+          "59,028 people evacuated to safety across nine districts in Odisha, including 11,882 from Ganjam.",
+          "More than 1,000 villages affected: 299 villages across 22 blocks in Ganjam and 711 villages across seven blocks in Gajapati.",
+          "313 rescue teams deployed: nine National Disaster Response Force teams, 60 Odisha Disaster Rapid Action Force teams and 244 fire services teams.",
+          "3,001 pregnant women among those evacuated in Odisha, according to the state government.",
+          "Patrapur recorded 546 mm of rain and Sorada 503 mm in the 24 hours ending at 8.30 am on Thursday.",
+          "36 trains cancelled, 30 diverted and eight regulated or rescheduled on the Howrah-Chennai route.",
+        ],
+      },
+      { type: "h2", text: "Ganjam and Gajapati: where the flooding is worst" },
+      {
+        type: "p",
+        text: "Ganjam and Gajapati have borne the brunt of the flooding. In Ganjam, floods affected 208 gram panchayats across 22 blocks, with 22 villages reported marooned. In Gajapati, rising water from the Vansadhara and Mahendratanaya rivers inundated low-lying villages, including around Kashinagar, and left residents stranded in several blocks. Schools and colleges in both districts stay closed until October 31.",
+      },
+      { type: "h2", text: "Why the rain was so extreme" },
+      {
+        type: "p",
+        text: "The rainfall totals explain why rivers rose so fast. Patrapur in Ganjam recorded 546 mm in 24 hours, Sorada recorded 503 mm, and G Udayagiri in Kandhamal recorded 462.4 mm. Extremely heavy rainfall above 200 mm was recorded at 15 places across Ganjam, Gajapati and Kandhamal in the same period. That volume of water pushed several rivers past their danger marks, including the Rushikulya, flowing at about 19 metres at Purushottampur, above its danger level.",
+      },
+      { type: "h2", text: "Roads, rail and rescue operations" },
+      {
+        type: "p",
+        text: "Road and rail links have taken extensive damage. A stretch of National Highway 326 in Gajapati district was washed away, disrupting the route between Ganjam and Mohana, and floodwater near railway bridges and submerged tracks disrupted services on the Howrah-Chennai route. The East Coast Railway cancelled 24 trains and diverted 22, while the South Coast Railway cancelled 12 and diverted eight. Rescue teams are working in difficult conditions: an Indian Coast Guard helicopter winched six people, including two children, from a flooded public health centre at Jagmohan in Dharakote, while efforts to reach more than 2,000 people stranded in cut-off villages in Ganjam have been affected by low cloud cover.",
+      },
+      { type: "h2", text: "CM aerial survey and central assistance" },
+      {
+        type: "p",
+        text: "Chief Minister Mohan Charan Majhi, accompanied by Revenue and Disaster Management Minister Suresh Pujari, is scheduled to conduct an aerial survey of Ganjam and Gajapati on Friday, October 30, 2026, and later land at Rangeilunda to hold discussions with officials and review relief and rescue operations. Union Home Minister Amit Shah has spoken to the chief ministers of Odisha, Andhra Pradesh, Chhattisgarh and Puducherry and assured central assistance, and inter-ministerial teams are expected to visit the affected states to assess the damage.",
+      },
+      { type: "h2", text: "Andhra Pradesh: damage put at Rs 4,600 crore" },
+      {
+        type: "p",
+        text: "Neighbouring Andhra Pradesh has also been badly hit. Chief Minister N Chandrababu Naidu has put the preliminary damage in Andhra Pradesh at Rs 4,600 crore, after an aerial survey of cyclone-hit areas in the Krishna and Godavari regions. Power infrastructure losses alone are estimated at Rs 500 crore, crops across 2.24 lakh hectares have been affected, and the casualty figure given for Andhra Pradesh was seven. The Indian Coast Guard also airlifted all 20 crew members of the bulk carrier Sigma Pearl, stranded off the Andhra coast, and in Andhra Pradesh 3,100 pregnant women were shifted to hospitals as a precaution.",
+      },
+      { type: "h2", text: "What happens next for Odisha" },
+      {
+        type: "p",
+        text: "The weather threat is not yet over. The India Meteorological Department has said a separate low-pressure area over the South Andaman Sea is likely to intensify into a depression over the southeast Bay of Bengal around October 31, and it is expected to move west-northwestwards. That system could bring another spell of rain to south Odisha in early November, so residents in flood-affected districts should keep following official weather and district advisories, even as the immediate rescue and relief operation continues and the authorities assess the full damage.",
+      },
+      { type: "h2", text: "If you are in or travelling to the affected areas" },
+      {
+        type: "steps",
+        items: [
+          "Check the latest official train and road updates before travelling on the Howrah-Chennai route or through Ganjam and Gajapati, as cancellations and diversions are still in force.",
+          "Do not try to cross flooded roads, bridges or causeways, and avoid driving through water where the depth or current is unclear.",
+          "Follow district and disaster management advisories on school closures, shelter locations and evacuation instructions, rather than rumours on social media.",
+          "If you are in a low-lying or riverside area and water is rising, move to higher ground and contact local rescue teams rather than waiting for the water to recede.",
+        ],
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "How many people have been evacuated in the Cyclone Arnab Odisha floods?",
+            a: "According to the Odisha government, 59,028 people have been evacuated to safety across nine districts, including 11,882 from Ganjam and 3,001 pregnant women.",
+          },
+          {
+            q: "Which districts are worst affected by Cyclone Arnab in Odisha?",
+            a: "Ganjam and Gajapati are the worst affected, with more than 1,000 villages affected between them, followed by heavy rain in Kandhamal, Malkangiri, Koraput, Nabarangpur, Rayagada, Kalahandi and Nuapada.",
+          },
+          {
+            q: "Are trains running on the Howrah-Chennai route?",
+            a: "Services have been disrupted: 36 trains were cancelled, 30 diverted and eight regulated or rescheduled after the Bahuda river crossed the danger mark at railway bridges in Ganjam, so check the latest railway updates before travelling.",
+          },
+        ],
+      },
+    ],
+  },
+  {
     slug: "new-ott-releases-this-weekend-october-30-2026",
     image: "https://www.ottrelease.com/wp-content/uploads/2026/10/akka.jpg",
     imageAlt: "Akka, the Netflix crime thriller leading this weekend's new OTT releases",
