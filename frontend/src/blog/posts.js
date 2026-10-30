@@ -33,6 +33,99 @@
 
 export const posts = [
   {
+    slug: "eetha-trailer-shraddha-kapoor-vithabai-december-4",
+    image: "https://images.indianexpress.com/2026/10/eetha.jpg?w=1024",
+    imageAlt: "Shraddha Kapoor as Vithabai performing Lavani on stage in Eetha",
+    title: "Eetha Trailer Out: Shraddha Kapoor as Lavani Legend Vithabai, Release Date and Trailer Breakdown",
+    description:
+      "Eetha trailer out: Shraddha Kapoor plays Lavani legend Vithabai in Laxman Utekar's biopic, releasing in theatres on December 4, 2026.",
+    excerpt:
+      "The Eetha trailer is out: Shraddha Kapoor transforms into legendary Tamasha and Lavani performer Vithabai Bhau Mang Narayangaonkar in Laxman Utekar's biopic, releasing in theatres on December 4, 2026.",
+    date: "2026-10-30",
+    category: "Pop Culture",
+    sections: [
+      {
+        type: "p",
+        text: "The Eetha trailer is out, and it has quickly become one of the most talked-about Bollywood trailers of the day. Released on Friday, October 30, 2026, the trailer introduces Shraddha Kapoor as Vithabai Bhau Mang Narayangaonkar, the legendary Marathi Tamasha and Lavani performer whose life story is at the heart of this biographical musical drama. Directed by Laxman Utekar and backed by Maddock Films and Kathputli Creations, Eetha releases in theatres on December 4, 2026.",
+      },
+      { type: "h2", text: "Eetha trailer: what the trailer shows" },
+      {
+        type: "p",
+        text: "The Eetha trailer opens where Vithabai lived her life: on stage. Shraddha appears in traditional Lavani attire, performing before a large, cheering crowd, with shots of audiences holding up lights and elaborate performance spaces setting the scale of the Tamasha world. The music, composed by Ajay-Atul, drives the stage sequences, and the trailer moves between grand public performances and quieter, more painful moments away from the spotlight, presenting Vithabai as both a celebrated artist and a woman carrying heavy personal struggles.",
+      },
+      {
+        type: "p",
+        text: "Two trailer dialogues have already stood out to viewers. In one, Vithabai says that her trust was her pride, and when that trust broke, everything broke with it, pointing to betrayal at the centre of her story. In another, she declares that even destiny cannot beat her in a dance battle, and that if she dies while dancing, she will become an example rather than being called helpless. The trailer also shows her defending her traditional Navvari saree, calling it the pride and identity of the Maharashtrian people, when someone questions her attire. Together, these moments frame Eetha as a story about art, dignity and survival, not just a rise-to-fame biopic.",
+      },
+      {
+        type: "p",
+        text: "The trailer also offers glimpses of Vithabai's family and personal relationships, with Randeep Hooda and Mohammed Zeeshan Ayyub in brief shots. Running for nearly three minutes, it traces her journey from early struggle through fame, and into the challenges she faces when the spotlight begins to fade.",
+      },
+      { type: "h2", text: "Who was Vithabai Narayangaonkar, the real Eetha?" },
+      {
+        type: "p",
+        text: "Vithabai Bhau Mang Narayangaonkar was one of Maharashtra's most celebrated Tamasha and Lavani performers. Born in Pandharpur in 1935, she grew up in a family of folk artistes and began performing at a young age, eventually becoming a major force in Maharashtra's folk theatre tradition. One widely recounted story has her going into labour during a Tamasha performance, delivering her baby backstage, and preparing to return to the stage until the audience learnt what had happened and insisted she rest. That incident was also shown in the film's teaser, released earlier in 2026.",
+      },
+      {
+        type: "p",
+        text: "Behind the applause, Vithabai's personal life was far from easy. Accounts describe a troubled marriage in which her husband controlled her earnings and subjected her to abuse. She also faced financial difficulties late in life, and died in January 2002, with reports at the time saying her family struggled to pay her hospital bills. She had also worked for Tamasha artistes' welfare and helped secure pensions for them from the state government.",
+      },
+      { type: "h2", text: "Eetha trailer cast and crew" },
+      {
+        type: "list",
+        items: [
+          "Shraddha Kapoor as Vithabai Bhau Mang Narayangaonkar, the legendary Tamasha and Lavani performer.",
+          "Directed by Laxman Utekar and written by Kshitij Patwardhan.",
+          "Produced by Dinesh Vijan, Laxman Utekar and Karishma Sharma under Maddock Films and Kathputli Creations.",
+          "Supporting cast includes Randeep Hooda, Mohammed Zeeshan Ayyub, Nana Patekar, Siddharth Jadhav, Anant Joshi, Akshara Singh and Ulka Gupta.",
+          "Music and background score composed by Ajay-Atul, with cinematography by Akash Agrawal.",
+          "The film reunites Utekar with Maddock Films after Luka Chuppi, Mimi, Zara Hatke Zara Bachke and Chhaava, and marks Shraddha's reunion with Maddock after the Stree franchise.",
+        ],
+      },
+      { type: "h2", text: "Eetha release date: when does Eetha release in theatres?" },
+      {
+        type: "p",
+        text: "Eetha is scheduled to release in theatres on December 4, 2026. The film was originally planned for an August 2026 release before being moved to December, and the trailer launch on October 30, held at an event in Mumbai, marks the start of its final promotional run. The trailer has received a UA 16+ certification and runs for approximately three minutes, giving audiences a substantial first look at the film's scale, performances and music rather than a short teaser-style glimpse.",
+      },
+      {
+        type: "p",
+        text: "For Shraddha Kapoor, Eetha is a clear departure from her recent mainstream work. After the blockbuster success of Stree 2 in 2024, this role places her at the centre of a performance-driven biographical narrative rooted in Maharashtra's traditions, with Lavani dance and folk music doing much of the storytelling. That shift is a big part of why the Eetha trailer is drawing attention.",
+      },
+      { type: "h2", text: "What to watch for in the Eetha trailer" },
+      {
+        type: "steps",
+        items: [
+          "Watch the opening stage sequences for how the film recreates the Tamasha world, from the costumes and choreography to the crowd's energy.",
+          "Listen for the two standout dialogues about trust and about dying while dancing, which set up the film's emotional core.",
+          "Look for the contrast between Vithabai's public triumphs and her private hardships, including her family relationships and financial struggles.",
+          "Note the supporting cast in brief trailer shots, especially Randeep Hooda and Mohammed Zeeshan Ayyub, whose roles will shape the personal side of the story.",
+          "Keep December 4, 2026 in mind: with the trailer out now, expect songs, posters and further promos in the weeks leading up to the theatrical release.",
+        ],
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "When is the Eetha trailer out?",
+            a: "The Eetha trailer was released on October 30, 2026, by Maddock Films, ahead of the film's theatrical release on December 4, 2026.",
+          },
+          {
+            q: "Who does Shraddha Kapoor play in Eetha?",
+            a: "Shraddha Kapoor plays Vithabai Bhau Mang Narayangaonkar, the legendary Marathi Tamasha and Lavani performer, in Laxman Utekar's biographical drama.",
+          },
+          {
+            q: "When does Eetha release in theatres?",
+            a: "Eetha is scheduled to release in theatres on December 4, 2026. It was originally planned for August 2026 before being moved to December.",
+          },
+          {
+            q: "Who directed Eetha?",
+            a: "Eetha is directed by Laxman Utekar, written by Kshitij Patwardhan, and produced by Dinesh Vijan, Laxman Utekar and Karishma Sharma under Maddock Films and Kathputli Creations.",
+          },
+        ],
+      },
+    ],
+  },
+  {
     slug: "elder-scrolls-vi-sentinel-reported-title-hammerfell-november",
     image: "https://www.dexerto.com/cdn-image/wp-content/uploads/2026/08/12/Elder-Scrolls-6-fans-convinced-theyve-uncovered-the-name-after-Xbox-CEO-clue.jpg?width=1200&quality=60&format=auto",
     imageAlt: "The Elder Scrolls VI logo over its teaser landscape",
