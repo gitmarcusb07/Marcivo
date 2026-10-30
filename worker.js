@@ -152,21 +152,34 @@ export default {
 
     // Serve the dynamic sitemap from the backend, edge-cached; fall back to
     // the core list if the backend is cold or down.
+    // The backend now serves a cached sitemap immediately (see backend
+    // sitemap cache), but a cold Render instance can still be slow, so:
+    // (1) give it 30s instead of 10s, and (2) if it fails, serve the last
+    // good sitemap from the edge cache instead of the 11-URL fallback —
+    // a stale sitemap with title URLs beats a fresh one without them.
     if (url.pathname === "/sitemap.xml") {
       try {
-        const response = await fetch(`${BACKEND}/sitemap.xml`, {
-          cf: { cacheEverything: true, cacheTtl: 21600 },
-          signal: AbortSignal.timeout(10000),
-        });
-        if (response.ok) {
-          return new Response(response.body, {
-            status: 200,
-            headers: {
-              "Content-Type": "application/xml; charset=utf-8",
-              "Cache-Control": "public, max-age=3600",
-            },
+        const cache = caches.default;
+        const cacheKey = new Request(`${SITE}/sitemap.xml`, request);
+        const cached = await cache.match(cacheKey);
+        try {
+          const response = await fetch(`${BACKEND}/sitemap.xml`, {
+            cf: { cacheEverything: true, cacheTtl: 21600 },
+            signal: AbortSignal.timeout(30000),
           });
+          if (response.ok) {
+            const toCache = response.clone();
+            const headers = new Headers(toCache.headers);
+            headers.set("Cache-Control", "public, max-age=3600");
+            const cacheable = new Response(toCache.body, { status: 200, headers });
+            // Do not let a cache-put failure break the crawler response.
+            try { await cache.put(cacheKey, cacheable.clone()); } catch {}
+            return cacheable;
+          }
+        } catch {
+          // Backend fetch failed — fall through to the edge cache below.
         }
+        if (cached) return cached;
       } catch {
         // fall through to the local fallback
       }
@@ -221,3 +234,4 @@ export default {
     return env.ASSETS.fetch(request);
   },
 };
+
