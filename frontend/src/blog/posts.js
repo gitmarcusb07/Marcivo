@@ -33,6 +33,97 @@
 
 export const posts = [
   {
+    slug: "pubg-netflix-live-action-series-donald-glover",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/578080/library_hero.jpg",
+    imageAlt: "PUBG: Battlegrounds key art showing a player in a battleground landscape",
+    title: "PUBG Netflix Series Announced: Donald Glover to Write, Direct and Star in Live-Action Adaptation",
+    description:
+      "PUBG Netflix series announced: Donald Glover will write, direct, executive produce and star in KRAFTON's live-action PUBG adaptation. No release date yet.",
+    excerpt:
+      "KRAFTON and Netflix have announced a live-action PUBG series, with Donald Glover set to write, direct, executive produce and star in it.",
+    date: "2026-10-30",
+    category: "Gaming",
+    sections: [
+      {
+        type: "p",
+        text: "The PUBG Netflix series is officially in development. KRAFTON and Netflix have announced a live-action television adaptation of PUBG: Battlegrounds, the battle royale game that popularised the genre, with Donald Glover attached to write, direct, executive produce and star in it. No release date, plot details or additional cast have been announced yet, so this is an early-stage announcement rather than a finished show ready to stream.",
+      },
+      { type: "h2", text: "PUBG Netflix series: what KRAFTON and Netflix announced" },
+      {
+        type: "p",
+        text: "According to the announcement reported on October 29 and 30, 2026, PUBG is in development as a live-action series at Netflix. KRAFTON, the Seoul-headquartered company behind PUBG, is developing the series with its entertainment entity LV3H, which is involved in both development and production. The project is part of KRAFTON's push to expand the PUBG property beyond games into original entertainment content.",
+      },
+      { type: "h2", text: "Who is making the PUBG Netflix series" },
+      {
+        type: "list",
+        items: [
+          "Donald Glover will write, direct, executive produce and star in the series. He is best known for Atlanta and Community, and is a two-time Emmy and Golden Globe winner.",
+          "Stephen Glover, his brother and Atlanta collaborator, will write and executive produce.",
+          "Michael Schaefer (NEON TV) and Fam Udeorji (Gilga) will executive produce.",
+          "Taeseok Jang and Sujin Lee will executive produce for LV3H, KRAFTON's entertainment arm.",
+          "No other cast has been announced yet; Glover is the only confirmed actor.",
+        ],
+      },
+      { type: "h2", text: "What is PUBG, and why a live-action series makes sense" },
+      {
+        type: "p",
+        text: "PUBG, short for PlayerUnknown's Battlegrounds and now known as PUBG: Battlegrounds, launched in 2017 and became the game that brought the battle royale format to a global audience. In a typical match, 100 players drop onto a large map, gather weapons and supplies, and survive as the playable area keeps shrinking until only one player or team remains. The famous phrase winner winner, chicken dinner, shown when a player wins a match, has become part of gaming culture far beyond PUBG itself.",
+      },
+      { type: "h2", text: "Why Donald Glover is a surprising but fitting choice" },
+      {
+        type: "p",
+        text: "Donald Glover is not the first name most gamers would have predicted for a PUBG adaptation, and that is part of why the announcement has travelled so fast. Glover created and starred in Atlanta, a series praised for mixing comedy, drama and surreal storytelling, and he has worked across television, film and music. A straight, military-style action retelling of PUBG would be the safe option. Glover's involvement suggests Netflix and KRAFTON may be aiming for something more character-led and distinctive, though that is an expectation based on his past work, not a confirmed creative direction for this series.",
+      },
+      { type: "h2", text: "PUBG Netflix series release date: what we know so far" },
+      {
+        type: "p",
+        text: "There is no PUBG Netflix series release date yet. KRAFTON and Netflix have announced the project and its lead creative team, but they have not shared when filming will begin or when the series will arrive on Netflix. Because the project is only in development, with no plot or further casting announced, fans should expect a wait rather than a quick launch. The sensible way to follow it is to watch for the next official update: a plot synopsis, additional casting, or the start of production.",
+      },
+      { type: "h2", text: "What the PUBG Netflix series means for fans in India" },
+      {
+        type: "p",
+        text: "PUBG has a complicated history in India, which is why this announcement is being followed closely by Indian gamers. PUBG: Battlegrounds itself is available in India on PC and console, while BGMI, or Battlegrounds Mobile India, is KRAFTON's sibling battle royale game made for players in India. A Netflix series, unlike a game, does not depend on which version is installed on your phone: if and when the PUBG Netflix series releases, it would stream on Netflix like any other Netflix original, subject to Netflix's usual availability in India.",
+      },
+      { type: "h2", text: "PUBG on screen before: the earlier animated project" },
+      {
+        type: "p",
+        text: "This is not the first time a PUBG screen adaptation has been discussed. An animated PUBG project was announced years ago, with Adi Shankar attached, but that version went quiet and the new Netflix announcement makes no mention of it. The live-action series therefore appears to be a fresh start for PUBG on screen, with a new creative team and a new home at Netflix, rather than a continuation of the earlier animated plan.",
+      },
+      { type: "h2", text: "How to watch the PUBG Netflix series when it releases" },
+      {
+        type: "steps",
+        items: [
+          "Wait for an official release date from KRAFTON or Netflix; no date has been announced yet.",
+          "When it is listed, search for PUBG on Netflix to find its official page and trailer.",
+          "Add it to your watchlist on Netflix to get notified when it is available.",
+          "Watch the official trailer when it drops; it will confirm tone and characters better than rumours.",
+          "Follow KRAFTON and Netflix for casting and plot updates, not unverified leaks.",
+        ],
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Is there a PUBG Netflix series?",
+            a: "Yes. KRAFTON and Netflix have announced a live-action PUBG series in development, with Donald Glover to write, direct, executive produce and star.",
+          },
+          {
+            q: "Who is starring in the PUBG Netflix series?",
+            a: "Donald Glover is the only confirmed actor so far; Stephen Glover will write and executive produce.",
+          },
+          {
+            q: "What is the PUBG Netflix series release date?",
+            a: "No release date has been announced yet; the series is in early development with no timeline shared.",
+          },
+          {
+            q: "Will the PUBG Netflix series be available in India?",
+            a: "Netflix originals normally stream in India, but this can only be confirmed once Netflix lists the series.",
+          },
+        ],
+      },
+    ],
+  },
+  {
     slug: "eetha-trailer-shraddha-kapoor-vithabai-december-4",
     image: "https://images.indianexpress.com/2026/10/eetha.jpg?w=1024",
     imageAlt: "Shraddha Kapoor as Vithabai performing Lavani on stage in Eetha",
