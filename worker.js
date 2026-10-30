@@ -116,19 +116,60 @@ async function detailMeta(kind, id) {
     const year = /^\d{4}$/.test(String(d?.year || "")) ? ` (${d.year})` : "";
     const label = kind === "anime" ? "Anime" : kind === "tv" ? "TV Series" : "Movie";
     const overview = String(d?.overview || "").replace(/\s+/g, " ").trim();
-    const description = (overview || `Release info, cast and every available version of ${name} on Marcivo — free to use, no account needed.`).slice(0, 300);
+    // Language signal from TMDB/AniList original language — only data the
+    // page already carries. This is what title-specific searches actually
+    // contain ("Hindi movie", "Hindi dubbed"), unlike the generic title.
+    const langMap = { hi: "Hindi", en: "English", ja: "Japanese", es: "Spanish", ko: "Korean", fr: "French", ta: "Tamil", te: "Telugu", ml: "Malayalam", bn: "Bengali", mr: "Marathi", pa: "Punjabi", ur: "Urdu" };
+    const langLabel = langMap[String(d?.lang || "").toLowerCase()] || "";
+    const langPrefix = langLabel ? `${langLabel} ` : "";
+    const description = (langLabel ? `${langLabel} ${label.toLowerCase()}: ` : "") + (overview || `Release info, cast and every available version of ${name} on Marcivo — free to use, no account needed.`);
     const poster = typeof d?.poster === "string" && /^https:\/\//i.test(d.poster) ? d.poster : "";
     const isMovie = kind === "movie" || (kind === "anime" && String(d?.format || "").toUpperCase() === "MOVIE");
+    const genres = Array.isArray(d?.genres) ? d.genres.filter((g) => typeof g === "string").slice(0, 8) : [];
+    const cast = Array.isArray(d?.cast) ? d.cast.filter((c) => typeof c === "string").slice(0, 8) : [];
     return {
-      title: `${name}${year} — ${label} Info, Cast & Where to Watch | Marcivo`,
-      description,
+      title: `${name}${year} — ${langPrefix}${label} Info, Cast & Where to Watch | Marcivo`,
+      description: description.slice(0, 300),
       canonical: `${SITE}/detail/${kind}/${encodeURIComponent(id)}`,
       image: poster || DEFAULT_OG,
       ogType: isMovie ? "video.movie" : "video.tv_show",
+      // Summary body for crawlers (fix 2) — same data as the head, no
+      // invented claims. Qualities are NOT included here: the worker never
+      // loads the versions list, so it cannot know them.
+      name,
+      year: String(d?.year || ""),
+      label,
+      langLabel,
+      overview,
+      genres,
+      cast,
     };
   } catch {
     return null;
   }
+}
+
+
+// Server-rendered summary in the shell body for crawlers that do not run
+// JavaScript (fix 2). The React app replaces this content on hydration for
+// real users, so it never changes what a visitor sees — it only gives a
+// non-JS crawler a real body instead of an empty <div id="root">.
+// Only data already returned by the detail API is used; nothing invented.
+function escHtml(s) {
+  return String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+function injectSummary(page, meta) {
+  const bits = [`<section data-crawler-summary="true">`, `<h1>${escHtml(meta.name)}</h1>`];
+  const metaLine = [meta.year, meta.langLabel, meta.label, ...(meta.genres || [])].filter(Boolean).join(" • ");
+  if (metaLine) bits.push(`<p>${escHtml(metaLine)}</p>`);
+  if (meta.image && meta.image !== DEFAULT_OG) bits.push(`<img src="${escHtml(meta.image)}" alt="${escHtml(meta.name)}" />`);
+  if (meta.overview) bits.push(`<p>${escHtml(meta.overview)}</p>`);
+  if (meta.cast && meta.cast.length) bits.push(`<p>Cast: ${escHtml(meta.cast.join(", "))}</p>`);
+  bits.push(`</section>`);
+  const rw = new HTMLRewriter().on("body", {
+    element(el) { el.append(bits.join(""), { html: true }); },
+  });
+  return rw.transform(page);
 }
 
 export default {
@@ -212,7 +253,7 @@ export default {
       const pagePromise = shell(request, url, env);
       const meta = /^[\w-]{1,40}$/.test(id) ? await detailMeta(kind, id) : null;
       const page = await pagePromise;
-      if (meta && page.ok) return injectHead(page, meta);
+      if (meta && page.ok) return injectSummary(injectHead(page, meta), meta);
       return page;
     }
 
