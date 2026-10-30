@@ -59,6 +59,9 @@ async function generateSitemapXml(): Promise<string> {
       `${SEO_SITE_URL}/category/series`,
       `${SEO_SITE_URL}/category/hollywood`,
       `${SEO_SITE_URL}/category/bollywood`,
+      `${SEO_SITE_URL}/blog`,
+      `${SEO_SITE_URL}/blog/new-ott-releases-this-weekend-october-30-2026`,
+      `${SEO_SITE_URL}/blog/watch-terabox-video-online-without-app`,
     ]);
 
     // Fetch real catalog titles from TMDB.
