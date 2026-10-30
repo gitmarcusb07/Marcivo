@@ -1,0 +1,59 @@
+# Deploy the Marcivo Cloudflare Worker (frontend + worker.js) on every push to main.
+#
+# Why this exists: the Cloudflare dashboard's GitHub connection is not working
+# for this repo, so the Worker at marcivo.teraplayer.in was frozen on an old
+# build while marcivo.pages.dev kept updating. This workflow replaces that
+# connection: GitHub builds the frontend and runs `wrangler deploy` itself.
+#
+# Required GitHub repo secrets (Settings > Secrets and variables > Actions):
+#   CLOUDFLARE_API_TOKEN  — API token with "Edit Cloudflare Workers"
+#                            permission for the account that owns the Worker
+#                            (dash.cloudflare.com > My Profile > API Tokens).
+#   CLOUDFLARE_ACCOUNT_ID — the account ID shown in the Cloudflare dashboard.
+# Build-time env (VITE_*) is compiled into the bundle, so it is set here,
+# not in the Cloudflare dashboard. Values are public URLs/flags, not secrets.
+name: Deploy Marcivo to Cloudflare Workers
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "frontend/**"
+      - "worker.js"
+      - "wrangler.toml"
+      - ".github/workflows/deploy.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Build frontend
+        working-directory: frontend
+        env:
+          VITE_API: https://marcivo-backend.onrender.com
+          VITE_ADS_ENABLED: "1"
+        run: |
+          npm ci
+          npm run build
+
+      - name: Deploy Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # Runs `wrangler deploy` from the repo root, so it reads the root
+          # wrangler.toml (main = worker.js, assets = ./frontend/dist).
