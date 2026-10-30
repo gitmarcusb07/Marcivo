@@ -19,11 +19,14 @@ const FreeMovies = lazy(() => import("./pages/FreeMovies"));
 const DownloadMovies = lazy(() => import("./pages/DownloadMovies"));
 const Upcoming = lazy(() => import("./pages/Upcoming"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const BlogList = lazy(() => import("./pages/BlogList"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
 
 const TITLES: Record<string, string> = {
   "/": "Marcivo — Watch Movies Online Free | Movies, Series & Anime",
   "/search": "Search — Marcivo",
   "/status": "Status — Marcivo",
+  "/blog": "Blog — Marcivo",
   "/category/movies": "Movies — Marcivo",
   "/category/series": "Web Series — Marcivo",
   "/category/hollywood": "Hollywood — Marcivo",
@@ -73,6 +76,8 @@ export default function App() {
               <Route path="/upcoming/shows" element={<Upcoming section="shows" />} />
               <Route path="/upcoming/anime" element={<Upcoming section="anime" />} />
               <Route path="/status" element={<StatusPage />} />
+              <Route path="/blog" element={<BlogList />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
