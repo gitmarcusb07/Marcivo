@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { api, CAT_SITES, watchUrl, prewarm } from "../lib/api";
 import { prettyVersion } from "../lib/format";
 import { toggleInList, getList } from "../store/continueWatching";
@@ -10,7 +10,11 @@ import Seo, { SITE_URL, breadcrumbLd } from "../seo/Seo";
 export default function Detail() {
   const { kind = "", id = "" } = useParams();
   const [sp] = useSearchParams();
-  const cat = sp.get("cat") || "";
+  // Category context now travels in navigation state, not ?cat= — so
+  // category clicks no longer mint ?cat= detail URLs that Google reports
+  // as alternate-canonical duplicates. Old ?cat= links still work.
+  const locState = useLocation().state as { cat?: string } | null;
+  const cat = locState?.cat || sp.get("cat") || "";
   const nav = useNavigate();
   const [d, setD] = useState<any>(null);
   const [sites, setSites] = useState<any>(null);
@@ -66,7 +70,19 @@ export default function Detail() {
   const seoYear = d?.year ? ` (${d.year})` : "";
   const seoKindLabel = kind === "anime" || d?.kind === "anime" ? "Anime" : d?.kind === "tv" || kind === "tv" ? "TV Series" : "Movie";
   const seoOverview = d ? String(d.overview || "").replace(/\s+/g, " ").trim() : "";
-  const seoDescription = (seoOverview || `Release info, cast and every available version of ${seoName || "this title"} on Marcivo — free to use, no account needed.`).slice(0, 300);
+  // Language signal (fix 3): TMDB/AniList original language, same mapping
+  // as the worker's detailMeta — keep both in sync.
+  const seoLangMap: Record<string, string> = { hi: "Hindi", en: "English", ja: "Japanese", es: "Spanish", ko: "Korean", fr: "French", ta: "Tamil", te: "Telugu", ml: "Malayalam", bn: "Bengali", mr: "Marathi", pa: "Punjabi", ur: "Urdu" };
+  const seoLangLabel = d ? (seoLangMap[String(d.lang || "").toLowerCase()] || "") : "";
+  // Quality signal (fix 3): ONLY qualities actually present in the loaded
+  // versions list — never a hard-coded quality. Updates the head once the
+  // versions load, since Seo re-renders with new props.
+  const seoQualities = Array.from(new Set((sites?.results || []).map((r: any) => {
+    const qm = String(r.quality || r.title || "").match(/\b(2160p|1080p|720p|480p|360p|4K)\b/i);
+    return qm ? qm[1].toUpperCase() : "";
+  }).filter(Boolean)));
+  const seoDescriptionBase = (seoLangLabel ? `${seoLangLabel} ${seoKindLabel.toLowerCase()}: ` : "") + (seoOverview || `Release info, cast and every available version of ${seoName || "this title"} on Marcivo — free to use, no account needed.`);
+  const seoDescription = (seoQualities.length ? `${seoDescriptionBase} Available in ${seoQualities.join(", ")}.` : seoDescriptionBase).slice(0, 300);
   const seoPoster = d && typeof d.poster === "string" && /^https:\/\//i.test(d.poster) ? d.poster : undefined;
   const seoSchemaType = seoKindLabel === "Anime" && String(d?.format || "").toUpperCase() === "MOVIE" ? "Movie" : seoKindLabel === "Movie" ? "Movie" : "TVSeries";
   const seoSchema: Record<string, unknown> = {
@@ -97,7 +113,7 @@ export default function Detail() {
   return (
     <div className="max-w-7xl mx-auto px-4 pb-16">
       <Seo
-        title={`${seoName}${seoYear} — ${seoKindLabel} Info, Cast & Where to Watch | Marcivo`}
+        title={`${seoName}${seoYear} — ${seoLangLabel ? `${seoLangLabel} ` : ""}${seoKindLabel} Info, Cast & Where to Watch | Marcivo`}
         description={seoDescription}
         image={seoPoster}
         jsonLd={[
