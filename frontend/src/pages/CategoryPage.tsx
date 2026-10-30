@@ -117,7 +117,7 @@ export default function CategoryPage() {
       {loading && <div className="skeleton h-48 mt-4" />}
       {!loading && !data && <p className="text-muted mt-4">Failed to load. Check backend and retry.</p>}
       {(data?.rows || []).map((row: any) => (
-        <Row key={row.title} title={row.title} items={row.items} onPick={(it: any) => nav(`/detail/${it.kind}/${it.id}?cat=${cat}`)} />
+        <Row key={row.title} title={row.title} items={row.items} onPick={(it: any) => nav(`/detail/${it.kind}/${it.id}`, { state: { cat } })} />
       ))}
 
       {SEO[cat]?.faq && (
