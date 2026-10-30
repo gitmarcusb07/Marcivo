@@ -45,7 +45,7 @@ const BUILD = "2026-10-19-seo2";
 
 app.get("/health", (_req, res) => res.json({ ok: true, time: new Date().toISOString(), build: BUILD, lite: LITE }));
 
-app.get("/sitemap.xml", async (_req, res) => {
+async function generateSitemapXml(): Promise<string> {
   try {
     const urls = new Set<string>([
       `${SEO_SITE_URL}/`,
@@ -141,11 +141,59 @@ ${[...urls]
   .join("\n")}
 </urlset>`;
 
-    res.setHeader("Content-Type", "application/xml; charset=utf-8");
-    res.setHeader("Cache-Control", "public, max-age=3600");
-    res.send(xml);
+    return xml;
   } catch (error) {
     console.error("[SEO] Sitemap generation failed:", error);
+    throw error;
+  }
+}
+
+// Sitemap cache: the full generation makes many TMDB/AniList calls and the
+// free Render instance cold-starts slowly, so a fresh generation routinely
+// exceeded the Cloudflare Worker's 10s sitemap timeout and Google only ever
+// saw the 11-URL fallback. Serve the last good sitemap immediately and
+// refresh it in the background instead of blocking crawlers on generation.
+let sitemapCache: string | null = null;
+let sitemapCacheAt = 0;
+let sitemapGenerating = false;
+const SITEMAP_TTL_MS = 6 * 60 * 60 * 1000;
+function refreshSitemapInBackground() {
+  if (sitemapGenerating) return;
+  sitemapGenerating = true;
+  generateSitemapXml()
+    .then((xml) => { sitemapCache = xml; sitemapCacheAt = Date.now(); })
+    .catch((e) => console.error("[SEO] Background sitemap refresh failed:", e))
+    .finally(() => { sitemapGenerating = false; });
+}
+// Warm the cache at startup so the first crawler request after a cold start
+// does not have to wait for a full generation.
+refreshSitemapInBackground();
+
+app.get("/sitemap.xml", async (_req, res) => {
+  res.setHeader("Content-Type", "application/xml; charset=utf-8");
+  if (sitemapCache) {
+    // Serve stale immediately; refresh in background if older than TTL.
+    if (Date.now() - sitemapCacheAt > SITEMAP_TTL_MS) refreshSitemapInBackground();
+    res.setHeader("Cache-Control", "public, max-age=3600");
+    res.send(sitemapCache);
+    return;
+  }
+  if (sitemapGenerating) {
+    // Generation is already running (startup warm-up); do not start a
+    // second one and do not 500 — the core list is valid, if incomplete.
+    res.setHeader("Cache-Control", "public, max-age=60");
+    res.send(`<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${["/", "/free-movies", "/download-movies", "/watch-free", "/upcoming", "/upcoming/shows", "/upcoming/anime", "/category/movies", "/category/series", "/category/hollywood", "/category/bollywood"].map((p) => `  <url><loc>${SEO_SITE_URL}${p}</loc></url>`).join("\n")}
+</urlset>`);
+    return;
+  }
+  try {
+    const xml = await generateSitemapXml();
+    sitemapCache = xml; sitemapCacheAt = Date.now();
+    res.setHeader("Cache-Control", "public, max-age=3600");
+    res.send(xml);
+  } catch {
     res.status(500).type("text/plain").send("Could not generate sitemap");
   }
 });
