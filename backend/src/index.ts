@@ -63,6 +63,7 @@ async function generateSitemapXml(): Promise<string> {
       `${SEO_SITE_URL}/blog/new-ott-releases-this-weekend-october-30-2026`,
       `${SEO_SITE_URL}/blog/patrick-stewart-dies-86-star-trek-picard-xmen-professor-x`,
       `${SEO_SITE_URL}/blog/watch-terabox-video-online-without-app`,
+      `${SEO_SITE_URL}/blog/elder-scrolls-vi-sentinel-reported-title-hammerfell-november`,
     ]);
 
     // Fetch real catalog titles from TMDB.
