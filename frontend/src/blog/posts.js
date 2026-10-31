@@ -33,6 +33,111 @@
 
 export const posts = [
   {
+    slug: "im-game-ott-release-jiohotstar-november-6-2026",
+    image: "https://www.pinkvilla.com/images/2026-10/529669661_im-game-ott-webp.webp",
+    imageAlt: "Dulquer Salmaan as Dan in I'm Game, walking through a grand doorway in a beige jacket",
+    title: "I'm Game OTT Release: Dulquer Salmaan's Film Streams on JioHotstar From November 6, 2026",
+    description:
+      "I'm Game OTT release confirmed: Dulquer Salmaan's fantasy action film streams on JioHotstar from November 6, 2026, in five languages.",
+    excerpt:
+      "Dulquer Salmaan's I'm Game will stream on JioHotstar from November 6, 2026, in Malayalam, Hindi, Tamil, Telugu and Kannada.",
+    date: "2026-10-31",
+    category: "Cinema",
+    sections: [
+      {
+        type: "p",
+        text: "The I'm Game OTT release is now confirmed. Dulquer Salmaan's Malayalam fantasy action film will premiere on JioHotstar on November 6, 2026, just two months after its theatrical release on September 3, 2026. JioHotstar announced the date on October 31, 2026, with the tagline, The game is about to begin, and the film will be available in five languages: Malayalam, Hindi, Tamil, Telugu and Kannada.",
+      },
+      { type: "h2", text: "I'm Game OTT release date and platform" },
+      {
+        type: "p",
+        text: "JioHotstar confirmed the I'm Game OTT release date through its official announcement on October 31, 2026, reported the same day by Pinkvilla, The Week, Filmibeat and other entertainment outlets. JioHotstar is the only streaming home announced for the film so far, so viewers should look for it there rather than on another service.",
+      },
+      {
+        type: "list",
+        items: [
+          "OTT release date: November 6, 2026.",
+          "Streaming platform: JioHotstar.",
+          "Languages: Malayalam, Hindi, Tamil, Telugu and Kannada.",
+          "Theatrical release date: September 3, 2026.",
+          "Director: Nahas Hidhayath.",
+          "Production: Wayfarer Films, produced by Dulquer Salmaan and Jom Varghese.",
+        ],
+      },
+      { type: "h2", text: "What is I'm Game about? The story of Dan and Vicky's hand" },
+      {
+        type: "p",
+        text: "I'm Game follows Dan, played by Dulquer Salmaan, a spoiled and irresponsible young man whose obsession with making a fortune comes from his desire to prove himself to his wealthy, disapproving father. Addicted to high-stakes money-making and driven by blind faith in luck, Dan becomes deeply involved in the cricket world and piles up enormous debts through his reckless lifestyle.",
+      },
+      {
+        type: "p",
+        text: "Dan's life takes an unexpected turn when he is involved in a serious road accident that leaves one of his arms beyond recovery. Doctors manage to save him, and he undergoes a hand transplant. But soon after regaining consciousness, he discovers that his new hand behaves independently, moving against his will and displaying extraordinary strength. He eventually learns that the hand belonged to Vicky, a celebrated cricketer who passed away under mysterious circumstances, and that Vicky's lingering consciousness remains connected to the hand, driven by an overwhelming desire to punish those responsible for his fate.",
+      },
+      {
+        type: "p",
+        text: "Dan is unwillingly drawn into Vicky's unfinished battle against Toni, a powerful figure controlling an extensive cricket network. With the help of Isha, a physiotherapist who helps him understand his unusual condition, Dan uncovers the truth behind Vicky's past, moves beyond his selfish ambitions, and uses his newfound abilities to confront Toni and bring down his network.",
+      },
+      { type: "h2", text: "I'm Game cast and crew" },
+      {
+        type: "p",
+        text: "I'm Game stars Dulquer Salmaan in the lead role as Dan, and it marks his return to Malayalam cinema after King of Kotha in 2023. The film is directed by Nahas Hidhayath, who made his directorial debut with the action entertainer RDX in 2023, and the screenplay is penned by Sajeer Baba, Ismail Aboobacker and Bilal Moidu. The music is composed by Jakes Bejoy, Jimshi Khalid handles the cinematography, and Chaman Chacko serves as the editor.",
+      },
+      {
+        type: "list",
+        items: [
+          "Dulquer Salmaan as Dan, the lead role.",
+          "Antony Varghese Pepe, Mysskin and Kathir in key roles.",
+          "Kayadu Lohar, Samyuktha Viswanathan, Vinay Forrt and Parth Tiwari in the ensemble cast.",
+          "Directed by Nahas Hidhayath, produced by Dulquer Salmaan and Jom Varghese under Wayfarer Films.",
+          "Music by Jakes Bejoy, cinematography by Jimshi Khalid, editing by Chaman Chacko.",
+        ],
+      },
+      { type: "h2", text: "How to watch I'm Game on JioHotstar" },
+      {
+        type: "p",
+        text: "JioHotstar has already confirmed the date, so the film should appear on the platform on November 6, 2026 itself. Follow these steps when it releases.",
+      },
+      {
+        type: "steps",
+        items: [
+          "Open the JioHotstar app on your phone, tablet or smart TV, or open the JioHotstar website on your computer.",
+          "Sign in to your JioHotstar account.",
+          "Search for I'm Game in the search bar.",
+          "Pick your preferred language version from Malayalam, Hindi, Tamil, Telugu or Kannada, where available.",
+          "Press play and watch the film from November 6, 2026.",
+        ],
+      },
+      { type: "h3", text: "Which language version of I'm Game should you pick?" },
+      {
+        type: "p",
+        text: "I'm Game is originally a Malayalam film, so the Malayalam version is closest to how it was made. But the Hindi, Tamil, Telugu and Kannada versions let viewers across India watch it in the language they are most comfortable with, which is one reason the OTT release is expected to reach a much wider audience than the theatrical run did.",
+      },
+      { type: "h2", text: "Why the I'm Game OTT release matters" },
+      {
+        type: "p",
+        text: "The OTT release gives I'm Game a second chance with audiences. The Week reported that the film's theatrical run did not meet expectations despite its ambitious scale and high production budget, even though the fantasy premise, the Dulquer Salmaan star power and the cricket-world setting drew plenty of attention before release.",
+      },
+      {
+        type: "p",
+        text: "The timing helps too. A November 6 premiere puts I'm Game in front of viewers heading into the weekend, and the wait since its September 3 theatrical release has been short. If it clicks with streaming audiences, its unusual premise, a man sharing his body with a dead cricketer's vengeful hand, is exactly the kind of story people recommend to friends.",
+      },
+      { type: "h2", text: "I'm Game OTT release: frequently asked questions" },
+      {
+        type: "faq",
+        items: [
+          { q: "When is the I'm Game OTT release date?", a: "I'm Game will premiere on JioHotstar on November 6, 2026." },
+          { q: "Where can I watch I'm Game online?", a: "I'm Game will stream on JioHotstar, which is the platform announced for its digital premiere." },
+          { q: "In which languages will I'm Game stream on JioHotstar?", a: "I'm Game will be available in Malayalam, Hindi, Tamil, Telugu and Kannada." },
+          { q: "Who stars in I'm Game?", a: "Dulquer Salmaan stars as Dan, alongside Antony Varghese Pepe, Mysskin, Kayadu Lohar, Samyuktha Viswanathan, Kathir, Vinay Forrt and Parth Tiwari." },
+          { q: "Who directed I'm Game?", a: "I'm Game is directed by Nahas Hidhayath and produced by Dulquer Salmaan and Jom Varghese under Wayfarer Films." },
+          { q: "What is I'm Game about?", a: "I'm Game follows Dan, a reckless young man who receives a hand transplant after an accident, only to discover the hand belonged to a cricketer named Vicky, whose consciousness drives him to take revenge on a powerful cricket network." },
+          { q: "When did I'm Game release in theatres?", a: "I'm Game released in theatres on September 3, 2026, before its November 6, 2026 OTT premiere on JioHotstar." },
+        ],
+      },
+    ],
+  },
+
+  {
     slug: "spider-man-brand-new-day-rerelease-new-footage",
     image: "https://image.tmdb.org/t/p/w1280/bjiS5ipwxb9JFy3XRRN4OAilSeX.jpg",
     imageAlt: "Official Spider-Man: Brand New Day poster showing Tom Holland's Spider-Man in close-up",
