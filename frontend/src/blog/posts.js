@@ -33,6 +33,114 @@
 
 export const posts = [
   {
+    slug: "jumanji-open-world-trailer-release-date-december-25-2026",
+    image: "https://i.ytimg.com/vi/qy7vHLyVBAc/maxresdefault.jpg",
+    imageAlt: "Official Jumanji Open World new trailer key art showing Dwayne Johnson, Karen Gillan, Jack Black and Kevin Hart with jungle creatures in a city",
+    title: "Jumanji Open World Trailer: Release Date December 25, 2026, Cast and What the New Trailer Reveals",
+    description:
+      "Jumanji Open World trailer is out: the game breaks free into the real world. Release date December 25, 2026, full cast, India languages and trailer details.",
+    excerpt:
+      "The new Jumanji Open World trailer shows the game breaking free of its console and unleashing its chaos into the real world, ahead of its Christmas Day release on December 25, 2026.",
+    date: "2026-10-31",
+    category: "Cinema",
+    sections: [
+      {
+        type: "p",
+        text: "The Jumanji Open World trailer has given fans the clearest look yet at the final chapter of the modern Jumanji trilogy, and the big twist is right there in the premise: this time, the game does not wait for anyone to pick up a controller. Sony Pictures released the new trailer on October 28, 2026, and it shows Jumanji breaking free of its console and spilling its creatures, rules and chaos into the real world. The film arrives in theatres on December 25, 2026, Christmas Day, and in India it will release in English, Hindi, Tamil and Telugu. Sony is billing it with the tagline, “Two worlds collide. One final game.”",
+      },
+      {
+        type: "h2",
+        text: "Jumanji Open World trailer: what the new footage actually shows",
+      },
+      {
+        type: "p",
+        text: "The trailer opens around Christmas in a snowy, ordinary-looking city, before jungle animals start rampaging through suburbia. Spencer Gilpin, played by Alex Wolff, warns that Jumanji has spilt into their world, and the danger becomes personal when his mother Janice, played by Marin Hinkle, gets sucked into the game. The trailer then flips the usual formula: instead of teenagers being pulled into a video game, the game's avatars are now walking around in the real world, behaving stiffly and oddly, as if stuck in a limited demo mode, which is where much of the comedy comes from.",
+      },
+      {
+        type: "list",
+        items: [
+          "Jungle animals, including ostriches and other creatures, escape into city streets during the Christmas season.",
+          "Spencer Gilpin warns that the game is beginning to bleed into the real world.",
+          "Spencer's mother Janice is pulled into the game.",
+          "The familiar avatars appear in the real world, behaving strangely.",
+          "The trailer closes on “one final game,” the last film in the modern trilogy.",
+        ],
+      },
+      {
+        type: "p",
+        text: "The official synopsis puts it simply: the heroes have escaped the jungles of Jumanji before, but this time the game comes to us, breaking free of its console and unleashing its chaos into our world. That removes the safety net of the earlier films, where the danger was mostly contained inside the game. Here, there is no console to switch off, because the jungle has arrived in the players' own neighbourhood.",
+      },
+      {
+        type: "h2",
+        text: "Who is back in Jumanji Open World",
+      },
+      {
+        type: "p",
+        text: "Director Jake Kasdan returns for the third time, after both Welcome to the Jungle and The Next Level, and he co-wrote the screenplay with Jeff Pinkner and Scott Rosenberg, based on Chris Van Allsburg's book Jumanji.",
+      },
+      {
+        type: "list",
+        items: [
+          "Dwayne Johnson as Dr. Xander “Smolder” Bravestone.",
+          "Kevin Hart as Franklin “Mouse” Finbar.",
+          "Jack Black as Professor Sheldon “Shelly” Oberon.",
+          "Karen Gillan as Ruby Roundhouse.",
+          "Alex Wolff, Madison Iseman, Morgan Turner and Ser'Darius Blain as the original young players.",
+          "Nick Jonas, Danny DeVito, Awkwafina and Rhys Darby also return, with newcomers including Burn Gorman, Nasim Pedrad, Brittany O'Grady, Lamorne Morris and Bebe Neuwirth.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Jumanji Open World release date in India and languages",
+      },
+      {
+        type: "p",
+        text: "Jumanji Open World will release in cinemas on December 25, 2026. Sony Pictures Entertainment India has confirmed the same date for India, with versions in English, Hindi, Tamil and Telugu. The film was originally planned for December 11, but its date was moved by two weeks in March 2026 to Christmas Day, and its full title was revealed at CinemaCon in April 2026.",
+      },
+      {
+        type: "h2",
+        text: "How to watch the Jumanji Open World trailer",
+      },
+      {
+        type: "steps",
+        items: [
+          "Go to YouTube and search for the official Sony Pictures or Sony Pictures India channel.",
+          "Search for “Jumanji: Open World new trailer” on the channel to find the October 28 trailer.",
+          "Pick your language version: the Hindi trailer is also available from Sony Pictures India, along with the English version.",
+          "Watch for the Christmas-city opening and the avatars' arrival in the real world.",
+          "Avoid re-uploaded copies if you want the clean official trailer.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Why the Jumanji Open World trailer is trending now",
+      },
+      {
+        type: "p",
+        text: "The trailer is trending in India this week, with the Hindi trailer ranking among the top trending videos on YouTube in India since October 30. Timing helps: a Christmas blockbuster trailer in late October gives fans almost two months to talk about it and plan a holiday cinema trip. The farewell angle helps too, with the tagline “Two worlds collide. One final game” framing this as a last visit to familiar characters. And the twist itself is easy to share: ostriches in a city street look very different from a standard jungle adventure teaser.",
+      },
+      {
+        type: "h2",
+        text: "What we still do not know about Jumanji Open World",
+      },
+      {
+        type: "p",
+        text: "Sony has not yet announced a runtime or age rating, and those details are expected closer to release. How the game escapes, and how the players plan to send it back, are also being kept for the film itself. What is confirmed is the director, the returning cast, the December 25, 2026 release date, the India languages, and the central idea that the game is no longer contained.",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "When is the Jumanji Open World release date?", a: "Jumanji Open World releases in theatres on December 25, 2026, Christmas Day, including in India." },
+          { q: "What is the Jumanji Open World trailer about?", a: "The trailer shows Jumanji breaking free of its console, with jungle creatures and the game's avatars appearing in the real world during Christmas." },
+          { q: "Who stars in Jumanji Open World?", a: "Dwayne Johnson, Kevin Hart, Jack Black and Karen Gillan return as the main avatars, alongside Alex Wolff, Madison Iseman, Morgan Turner, Ser'Darius Blain, Nick Jonas, Danny DeVito and Awkwafina." },
+          { q: "Who directed Jumanji Open World?", a: "Jake Kasdan directed it and co-wrote it with Jeff Pinkner and Scott Rosenberg." },
+          { q: "In which languages will Jumanji Open World release in India?", a: "Sony Pictures Entertainment India will release the film in English, Hindi, Tamil and Telugu on December 25, 2026." },
+          { q: "Is Jumanji Open World the last Jumanji movie?", a: "Sony bills it as the final instalment of the modern trilogy with Johnson, Hart, Black and Gillan." },
+        ],
+      },
+    ],
+  },
+  {
     slug: "death-stranding-isolations-anime-teaser-disney-plus-2027",
     image: "https://media.dotesports.com/wp-content/uploads/2026/10/Death-Stranding-Anime.webp",
     imageAlt: "Official Death Stranding Isolations teaser key art from Kojima Productions, showing the anime's desolate world",
