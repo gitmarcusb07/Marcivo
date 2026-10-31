@@ -33,6 +33,98 @@
 
 export const posts = [
   {
+    slug: "death-stranding-isolations-anime-teaser-disney-plus-2027",
+    image: "https://media.dotesports.com/wp-content/uploads/2026/10/Death-Stranding-Anime.webp",
+    imageAlt: "Official Death Stranding Isolations teaser key art from Kojima Productions, showing the anime's desolate world",
+    title: "Death Stranding Isolations Teaser: Kojima's Hand-Drawn Anime Comes to Disney+ in 2027",
+    description:
+      "Death Stranding Isolations teaser is out: Kojima Productions' hand-drawn anime streams on Disney+ in 2027 with a new story and 'My mom became a crater.'",
+    excerpt:
+      "Kojima Productions has unveiled the first teaser for Death Stranding Isolations, a hand-drawn 2D anime set in the Death Stranding universe that will stream on Disney+ in 2027.",
+    date: "2026-10-31",
+    category: "Gaming",
+    sections: [
+      {
+        type: "p",
+        text: "The Death Stranding Isolations teaser is finally here. Kojima Productions unveiled the first teaser for Death Stranding Isolations, its hand-drawn 2D anime series, during the studio's 10th anniversary celebration, Beyond the Strand, in Tokyo on October 30, 2026. The roughly 45-second teaser confirms a completely original story set in the world of Death Stranding, streaming on Disney+ in 2027. It does not star Sam Porter Bridges. Instead, it follows new characters in the same broken world, and its opening line has already become the teaser's most quoted moment: \u201cMy mom became a crater.\u201d",
+      },
+      { type: "h2", text: "Death Stranding Isolations teaser: what the 45 seconds actually show" },
+      {
+        type: "p",
+        text: "The teaser opens on a lone porter standing on a ridge above an enormous crater, a thin beam of light rising from the centre, before cutting to a sleeping blonde girl wearing a visor marked with the word \u201cSLEEP\u201d. Around her, the signature horrors of the Death Stranding universe bleed into everyday spaces: black handprints press through glass, dark hands surge from the ground, and the girl wakes gasping from a nightmare in a storeroom lined with green-lit jars. The final cards carry the title logo and the words \u201cExclusively on Disney+ in 2027\u201d, with Hulu branding also appearing in the teaser.",
+      },
+      {
+        type: "list",
+        items: [
+          "A porter overlooking a vast crater, the aftermath of a Voidout, the explosion left when a BT catches a living person.",
+          "A young girl asleep in a bunk, wearing a visor that reads \u201cSLEEP\u201d, who wakes gasping from a nightmare.",
+          "Black tar handprints and surging dark hands, the visual language of BTs, the stranded souls of the dead.",
+          "A shelf holding a figure of Ludens, Kojima Productions' mascot.",
+          "A closing title card confirming a 2027 premiere on Disney+, with no exact date yet announced.",
+        ],
+      },
+      {
+        type: "p",
+        text: "The most striking choice is the animation itself. Where the games use realistic, motion-captured performances and vast 3D landscapes, Isolations uses traditional, hand-drawn 2D animation with painted backgrounds: a smaller, more intimate story told in a style closer to a nightmare remembered than a blockbuster played.",
+      },
+      { type: "h2", text: "A new story in the same world, not Sam Bridges' story" },
+      {
+        type: "p",
+        text: "According to Kojima Productions' official synopsis, Death Stranding Isolations is set in North America immediately after Sam Porter Bridges reconnects the continent through the Chiral Network in the first game. But it tells a standalone story about different people facing the same question Sam faced: what does connection cost, and what happens to those who refuse it? It centres on a young girl who lost her mother in the aftermath of the Death Stranding, an event summed up in the teaser's opening line. Shaped by that loss, she has grown comfortable in isolation and reluctant to connect with others. Her journey introduces a small ensemble, including a wise old man who tries to connect people differently from Sam, a female soldier caught in an endless cycle of war, and a boy consumed by resentment towards the world. Together, they revisit the games' central theme, isolation versus human connection, from the perspective of ordinary people rather than a legendary porter.",
+      },
+      { type: "h2", text: "Who is making Death Stranding Isolations" },
+      {
+        type: "p",
+        text: "The teaser credits, revealed in full for the first time, confirm a heavyweight animation team. Hideo Kojima, the creator of Death Stranding, serves as executive producer. Takayuki Sano directs, with animation by Japanese studio E&H Production, known for Ninja Kamui and Bullet/Bullet. Series composition and screenplay come from author Tow Ubukata, while Ilya Kuvshinov provides the original character designs. This is being positioned as an anime in its own right, not just a promotional extra for the games.",
+      },
+      {
+        type: "list",
+        items: [
+          "Executive producer: Hideo Kojima, creator of Death Stranding.",
+          "Director: Takayuki Sano, with animation by E&H Production.",
+          "Series composition and screenplay: Tow Ubukata.",
+          "Original character designs: Ilya Kuvshinov.",
+          "Animation style: traditional, hand-drawn 2D with painted backgrounds.",
+        ],
+      },
+      { type: "h2", text: "Death Stranding Isolations release date and what is still unknown" },
+      {
+        type: "p",
+        text: "So far, Kojima Productions has confirmed only a 2027 window for Death Stranding Isolations on Disney+, with no exact premiere date, episode count or voice cast announced yet. The project was first teased during a Disney+ Originals event in Hong Kong last year, as the studio's first global streaming partnership with Disney+, and the October 30 teaser is the first full look at what it has produced. Further details are expected through Kojima Productions' official website and YouTube channel closer to release.",
+      },
+      { type: "h2", text: "Why the Death Stranding Isolations teaser matters" },
+      {
+        type: "p",
+        text: "Death Stranding has always been a franchise about connection, and Isolations turns that theme inward. The games asked players to walk across a ruined America rebuilding links between isolated shelters. The anime asks what happens to the people who watched that rebuilding from the sidelines and chose, or were forced, to stay apart. That is a braver premise than a straight adaptation, and the teaser's focus on a grieving girl rather than a hero with a cargo pack suggests Kojima Productions knows it. With more than 20 million cumulative players across the games, according to figures cited in coverage, the audience for this story already exists. What remains now is the longer wait until 2027, when the full series arrives on Disney+.",
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "When does Death Stranding Isolations release?",
+            a: "Death Stranding Isolations is scheduled to premiere on Disney+ in 2027. Kojima Productions has not yet announced an exact release date.",
+          },
+          {
+            q: "Is Death Stranding Isolations a retelling of the games?",
+            a: "No. It tells a new, standalone story with new characters, set in the same world after Sam Porter Bridges reconnects North America in the first game.",
+          },
+          {
+            q: "Who is the main character of Death Stranding Isolations?",
+            a: "The teaser centres on a young girl who lost her mother in the aftermath of the Death Stranding. She is reluctant to connect with others and prefers isolation.",
+          },
+          {
+            q: "Who is directing Death Stranding Isolations?",
+            a: "Takayuki Sano directs, with animation by E&H Production. Hideo Kojima is executive producer, Tow Ubukata handles screenplay, and Ilya Kuvshinov provides the character designs.",
+          },
+          {
+            q: "Where can I watch the Death Stranding Isolations teaser?",
+            a: "Kojima Productions released the official teaser on its YouTube channel on October 30, 2026.",
+          },
+        ],
+      },
+    ],
+  },
+  {
     slug: "ffxiv-evercold-release-date-february-23-2027-zephyr-job",
     image: "https://media.fullcleared.com/2026/10/31024433/ffxiv-evercold-gets-a-date-reveals-crossbow-job-zephyr-1536x864.jpg",
     imageAlt: "Zephyr, the new crossbow job in Final Fantasy XIV: Evercold, with an avian familiar (official Square Enix art)",
