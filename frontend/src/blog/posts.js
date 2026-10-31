@@ -33,6 +33,115 @@
 
 export const posts = [
   {
+    slug: "pm-kisan-24th-instalment-status-check-2000-october-30",
+    image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1600&q=80",
+    imageAlt: "A tractor working in a green farm field in India",
+    title: "PM Kisan 24th Instalment Status Check: Rs 2,000 Released on October 30, How to Check Your Payment",
+    description:
+      "PM Kisan 24th instalment status check: Rs 2,000 released on October 30 to 9.34 crore farmers. Check beneficiary status and e-KYC if payment is pending.",
+    excerpt:
+      "The PM Kisan 24th instalment of Rs 2,000 was released on October 30, 2026, and eligible farmers can check their beneficiary status on the official PM-KISAN portal.",
+    date: "2026-10-31",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "The PM Kisan 24th instalment status check is the question most farmers are asking this morning, and the short answer is simple: the money has been released, and your payment status can be checked online in a few minutes. Prime Minister Narendra Modi released the 24th instalment of the Pradhan Mantri Kisan Samman Nidhi (PM-KISAN) scheme on October 30, 2026, at an event in Banaskantha district in Gujarat. Under this instalment, Rs 2,000 was transferred directly to eligible farmers, with more than Rs 18,680 crore released to over 9.34 crore farmer families. If the amount has not yet appeared in your account, check your beneficiary status on the official portal first: a pending e-KYC, an unlinked bank account, or a land-record check can hold up an individual payment even after the instalment has been released.",
+      },
+      { type: "h2", text: "PM Kisan 24th instalment: key details" },
+      {
+        type: "list",
+        items: [
+          "Instalment: 24th instalment of PM-KISAN, released on October 30, 2026.",
+          "Amount per farmer: Rs 2,000, paid by direct benefit transfer into the bank account.",
+          "Total released: more than Rs 18,680 crore to over 9.34 crore farmer families.",
+          "Released by: Prime Minister Narendra Modi, at an event in Banaskantha, Gujarat.",
+          "Annual help under the scheme: Rs 6,000 per eligible farmer family, paid in three equal instalments of Rs 2,000 every four months.",
+          "Who gets it: eligible landholding farmer families whose records, e-KYC and bank details are in order. Release of the instalment does not by itself guarantee payment to every registered farmer.",
+        ],
+      },
+      { type: "h2", text: "How to check PM Kisan 24th instalment status" },
+      {
+        type: "p",
+        text: "The most reliable way to check is the official PM-KISAN portal, under the Farmers Corner section. It shows your registration details, e-KYC status and the status of each instalment, so it tells you whether the problem is a delay or a verification issue. Keep your PM-KISAN registration number ready; if you do not remember it, the portal has an option to look it up.",
+      },
+      {
+        type: "steps",
+        items: [
+          "Open the official PM-KISAN portal and go to the Farmers Corner section on the homepage.",
+          "Select Know Your Status to check your beneficiary and payment status.",
+          "Enter your registration number and complete the verification shown on the screen.",
+          "Check the instalment-wise details: look for the 24th instalment entry and whether it is shown as paid, pending or held for verification.",
+          "If the status shows a problem with e-KYC, Aadhaar seeding or land records, fix that item first, then check again after the record is updated.",
+        ],
+      },
+      { type: "h2", text: "Why some farmers may not have received Rs 2,000 yet" },
+      {
+        type: "p",
+        text: "A released instalment and a credited payment are two different steps, and several routine checks sit between them. Farmers whose e-KYC is incomplete, whose bank account is not seeded with Aadhaar, or whose land records are not linked on the portal can face delays, and in some cases benefits are temporarily withheld while physical verification is completed. The portal status, not rumours on social media, is the place to find the real reason.",
+      },
+      {
+        type: "list",
+        items: [
+          "e-KYC not completed: e-KYC is mandatory for PM-KISAN beneficiaries, and an incomplete e-KYC is one of the most common reasons for a held payment.",
+          "Aadhaar not linked to the bank account: the payment is made by direct benefit transfer, so the bank account must be Aadhaar-seeded and ready for DBT.",
+          "Land records not seeded: the farmer's land details must be linked on the PM-KISAN portal, and mismatches can hold the payment.",
+          "Verification hold: benefits can be withheld temporarily where suspected eligibility cases are under physical verification.",
+        ],
+      },
+      { type: "h2", text: "How to complete PM Kisan e-KYC" },
+      {
+        type: "p",
+        text: "If your status points to e-KYC, completing it is usually the fastest fix. There are three accepted routes.",
+      },
+      {
+        type: "steps",
+        items: [
+          "OTP-based e-KYC: complete it on the official PM-KISAN portal using the one-time password sent to your Aadhaar-linked mobile number.",
+          "Face authentication: use the PM-KISAN mobile app, which supports face authentication for e-KYC.",
+          "Biometric e-KYC: visit your nearest Common Service Centre, where staff can complete biometric verification for you.",
+        ],
+      },
+      { type: "h2", text: "What to do if your PM Kisan 24th instalment is still pending" },
+      {
+        type: "steps",
+        items: [
+          "Check your status first on the portal and note exactly which item is marked pending: e-KYC, Aadhaar seeding, land seeding or verification.",
+          "Fix that specific item, whether it is e-KYC on the portal, Aadhaar seeding at your bank, or a land-record correction through your state authorities.",
+          "Do not pay anyone who promises to release your instalment for a fee: the scheme does not work through agents charging for payment release.",
+          "Never share your OTP, bank password or Aadhaar details with callers or messages claiming to be from PM-KISAN. Official status checks happen on the portal, not through a link sent by an unknown number.",
+          "If the portal still shows a verification hold after you have corrected your details, contact your local agriculture office or Common Service Centre with your registration number and the exact status shown.",
+        ],
+      },
+      { type: "h2", text: "PM Kisan 24th instalment: what this means for farmers" },
+      {
+        type: "p",
+        text: "For eligible families, the 24th instalment is the latest Rs 2,000 part of the Rs 6,000 annual support that PM-KISAN provides to help with farming and household needs. Make sure the portal entry you are reading is for the 24th instalment, and keep your e-KYC and bank details updated so the next instalment is not held up for the same reason.",
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "When was the PM Kisan 24th instalment released?",
+            a: "The 24th instalment was released on October 30, 2026, by Prime Minister Narendra Modi at an event in Banaskantha, Gujarat.",
+          },
+          {
+            q: "How much money do farmers get in the PM Kisan 24th instalment?",
+            a: "Eligible farmers receive Rs 2,000 in this instalment. PM-KISAN provides Rs 6,000 a year in three equal instalments of Rs 2,000.",
+          },
+          {
+            q: "How do I check my PM Kisan 24th instalment status?",
+            a: "Go to the official PM-KISAN portal, open Farmers Corner, select Know Your Status, enter your registration number and check the instalment-wise payment details.",
+          },
+          {
+            q: "Why has my PM Kisan payment not come yet?",
+            a: "The most common reasons are incomplete e-KYC, a bank account not seeded with Aadhaar, land records not linked on the portal, or a verification hold. Your portal status will show which one applies to you.",
+          },
+        ],
+      },
+    ],
+  },
+  {
     slug: "isro-nvs-03-launch-gslv-f18-navic-success",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/GSLV_F16_during_Liftoff_carrying_NISAR.webp/1280px-GSLV_F16_during_Liftoff_carrying_NISAR.webp",
     imageAlt: "A GSLV rocket lifting off from Sriharikota, the same launch site used for the GSLV-F18 NVS-03 mission",
