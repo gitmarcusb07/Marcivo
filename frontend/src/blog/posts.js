@@ -33,6 +33,112 @@
 
 export const posts = [
   {
+    slug: "manisha-bhanwala-first-indian-woman-wrestling-world-champion",
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/9b/ManishaBhanwala.jpg",
+    imageAlt: "Manisha Bhanwala at the 2025 Asian Championships (file photo)",
+    title: "Manisha Bhanwala Makes History: First Indian Woman to Win Wrestling World Championship Gold",
+    description:
+      "Manisha Bhanwala became the first Indian woman to win wrestling World Championships gold, beating Abigail Nette 8-6 in Astana after trailing 0-6.",
+    excerpt:
+      "Manisha Bhanwala became the first Indian woman to win a wrestling World Championships gold medal, beating Abigail Nette of the USA 8-6 in the 59kg final in Astana.",
+    date: "2026-10-31",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "Manisha Bhanwala has written her name into Indian sporting history. The 29-year-old wrestler from Haryana became the first Indian woman ever to win a gold medal at the Senior World Wrestling Championships, beating Abigail Nette of the United States 8-6 in the women's freestyle 59kg final in Astana, Kazakhstan, on Friday, October 30, 2026. It was a final that looked lost before it truly began: Manisha trailed 0-6, then fought back point by point to take the gold.",
+      },
+      { type: "h2", text: "Manisha Bhanwala's historic final: from 0-6 down to 8-6 gold" },
+      {
+        type: "p",
+        text: "The final against Nette, the Pan-American champion from the USA, started in the worst possible way for the Indian. Nette raced to a 6-0 lead, and the gold looked to be slipping away. But Manisha refused to panic. She started her comeback with a takedown, and when the American camp challenged the call, the appeal failed, adding another point to the Indian's tally. She clawed her way level at 6-6, then produced the decisive score in the dying moments to seal an 8-6 victory. When the final whistle sounded, she jumped in celebration, bowed down and kissed the mat.",
+      },
+      {
+        type: "p",
+        text: "The win makes Manisha only the second Indian wrestler in history to win a World Championships gold medal, after two-time Olympic medallist Sushil Kumar, who won the men's 66kg title in Moscow in 2010. Before her triumph, no Indian woman had ever stood on top of the podium at the Senior World Championships.",
+      },
+      { type: "h2", text: "Manisha Bhanwala's road to the world title in Astana" },
+      {
+        type: "p",
+        text: "Manisha's run through the 59kg bracket was dominant from the start. She moved to the non-Olympic 59kg category for this edition after previously wrestling at 57kg and 62kg, and the decision paid off in full. Her path to the final looked like this:",
+      },
+      {
+        type: "list",
+        items: [
+          "Round of 16: Victory by fall over Laurence Beauregard of Canada.",
+          "Quarterfinal: A 6-0 win over Bolortuya Khurelkhuu of Mongolia.",
+          "Semifinal: Victory by technical superiority over local favourite Altyn Shagayeva of Kazakhstan.",
+          "Final: An 8-6 comeback win over Abigail Nette of the United States, after trailing 0-6.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Reaching the final alone was a landmark: Manisha became only the third Indian woman ever to reach a World Championships final. Neelam Sirohi and Kajal Dhochak had also reached gold-medal bouts at the same championships, making it the first edition in which three Indian women wrestled for gold. Manisha made sure the campaign ended with gold rather than silver.",
+      },
+      { type: "h2", text: "India's record four medals at the 2026 World Championships" },
+      {
+        type: "p",
+        text: "Manisha's gold capped a record campaign for the Indian women's team, which finished the championships in Astana with four medals, the country's best-ever haul at the event. The full medal list tells the story of a team performing together, not just one star:",
+      },
+      {
+        type: "list",
+        items: [
+          "Gold: Manisha Bhanwala, women's freestyle 59kg.",
+          "Silver: Neelam Sirohi, women's freestyle 50kg.",
+          "Silver: Kajal Dhochak, women's freestyle 76kg.",
+          "Bronze: Tanu Sharma, women's freestyle 72kg.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Union Sports Minister Mansukh Mandaviya was among the first to congratulate Manisha, calling her victory a historic moment for Indian wrestling. Across the country, the win was celebrated as a breakthrough for women's sport in India.",
+      },
+      { type: "h2", text: "The story behind the gold: a father's dream" },
+      {
+        type: "p",
+        text: "Manisha's journey to the top of the world podium was anything but straightforward. Born in Rohtak district in Haryana, she took up wrestling at the age of 17, which is considered late for the sport, initially to get fit at her father's urging. Finding the right weight category to suit her height proved a long struggle, and she moved between categories several times during her career.",
+      },
+      {
+        type: "p",
+        text: "The hardest chapter came in 2022, when her father Suresh died suddenly on the very day she was due to leave for the Asian Championships in Mongolia. Manisha almost quit wrestling after that loss. Instead, she carried the dream forward: before leaving for Astana she had photographs of her parents printed on a white T-shirt, intending to win the gold and show that T-shirt to the world. After the final whistle, she did exactly that, holding it up for everyone to see.",
+      },
+      { type: "h2", text: "Why Manisha Bhanwala's gold matters for Indian wrestling" },
+      {
+        type: "p",
+        text: "A first world title changes what young wrestlers believe is possible. Indian women's wrestling has produced Asian champions, Commonwealth medallists and Olympic medallists, but the World Championships gold had remained out of reach. Manisha's win removes that barrier, and it does so in a style that will inspire: a late starter, a wrestler who changed weights repeatedly, and a finalist who refused to accept a 6-0 deficit as defeat. It is also a team story, with four medals showing depth across weight categories rather than a single success.",
+      },
+      {
+        type: "p",
+        text: "For Manisha herself, the gold is the biggest medal of her career so far, adding to her 2025 Asian Championships title at 62kg and her 2016 South Asian Games gold. At 29, she has now done something no Indian woman had done before, on the biggest stage her sport offers outside the Olympics.",
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Who is Manisha Bhanwala?",
+            a: "Manisha Bhanwala is a 29-year-old Indian freestyle wrestler from Rohtak, Haryana, who became the first Indian woman to win a World Championships gold medal, in the 59kg category at Astana in 2026.",
+          },
+          {
+            q: "Who did Manisha Bhanwala beat in the World Championships final?",
+            a: "She beat Abigail Nette of the United States 8-6 in the women's freestyle 59kg final, coming back from a 0-6 deficit to win the gold.",
+          },
+          {
+            q: "How many medals did India win at the 2026 World Wrestling Championships?",
+            a: "India won four medals in women's wrestling: one gold (Manisha Bhanwala, 59kg), two silvers (Neelam Sirohi, 50kg, and Kajal Dhochak, 76kg) and one bronze (Tanu Sharma, 72kg).",
+          },
+          {
+            q: "Who was the only other Indian wrestling world champion before Manisha?",
+            a: "Sushil Kumar, who won the men's 66kg gold at the 2010 World Championships in Moscow. Manisha is the second Indian overall, and the first Indian woman, to win a world title.",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: "Manisha Bhanwala's name now sits alongside Sushil Kumar's in the record books, and her comeback in Astana will be remembered as one of the great finals in Indian wrestling history.",
+      },
+    ],
+  },
+  {
     slug: "pm-kisan-24th-instalment-status-check-2000-october-30",
     image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1600&q=80",
     imageAlt: "A tractor working in a green farm field in India",

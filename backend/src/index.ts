@@ -60,6 +60,7 @@ async function generateSitemapXml(): Promise<string> {
       `${SEO_SITE_URL}/category/hollywood`,
       `${SEO_SITE_URL}/category/bollywood`,
       `${SEO_SITE_URL}/blog`,
+      `${SEO_SITE_URL}/blog/manisha-bhanwala-first-indian-woman-wrestling-world-champion`,
       `${SEO_SITE_URL}/blog/pm-kisan-24th-instalment-status-check-2000-october-30`,
       `${SEO_SITE_URL}/blog/isro-nvs-03-launch-gslv-f18-navic-success`,
       `${SEO_SITE_URL}/blog/pubg-netflix-live-action-series-donald-glover`,
