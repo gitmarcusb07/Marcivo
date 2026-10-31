@@ -33,6 +33,103 @@
 
 export const posts = [
   {
+    slug: "spider-man-brand-new-day-rerelease-new-footage",
+    image: "https://image.tmdb.org/t/p/w1280/bjiS5ipwxb9JFy3XRRN4OAilSeX.jpg",
+    imageAlt: "Official Spider-Man: Brand New Day poster showing Tom Holland's Spider-Man in close-up",
+    title: "Spider-Man Brand New Day Rerelease Reportedly Planned With New Footage",
+    description:
+      "Spider-Man Brand New Day rerelease is reportedly planned with new footage, including a cut Rosario Dawson cameo, as the $2.5 billion hit chases Avatar.",
+    excerpt:
+      "Sony is reportedly planning a Spider-Man: Brand New Day rerelease with new footage, including a cut Rosario Dawson cameo as Claire Temple, after the film earned about $2.5 billion worldwide.",
+    date: "2026-10-31",
+    category: "Cinema",
+    sections: [
+      {
+        type: "p",
+        text: "The Spider-Man Brand New Day rerelease is reportedly on its way. According to a report from Deadline, picked up by Polygon on October 30, 2026, Sony Pictures is planning to bring Spider-Man: Brand New Day back to theatres with new footage added, giving the biggest superhero hit of 2026 another run at the box office. Sony has not officially confirmed the rerelease or announced a date, so everything about the extended version so far comes from that report. But the idea is already sending fans into overdrive, because the extra footage is said to include a cut cameo that connects directly to the wider Marvel Cinematic Universe.",
+      },
+      { type: "h2", text: "Spider-Man Brand New Day rerelease: what the new footage reportedly includes" },
+      {
+        type: "p",
+        text: "The headline detail is Rosario Dawson's Claire Temple, also known as Night Nurse. Dawson played Temple across Marvel's Netflix shows, including Daredevil, Jessica Jones, Luke Cage, Iron Fist and The Defenders, where she was the street-level heroes' trusted medical contact. Dawson has said she filmed a scene for Brand New Day that was cut from the theatrical version, and Deadline's report says that scene is now expected to return.",
+      },
+      {
+        type: "p",
+        text: "That matters more than a simple deleted scene. Bringing Claire Temple into a Tom Holland Spider-Man film would tie the Netflix Marvel corner of the universe to the big-screen Spider-Man story in a way fans have waited years to see. Deadline's report also says there will be more surprises beyond the Temple cameo, though it does not name them.",
+      },
+      {
+        type: "list",
+        items: [
+          "A restored cameo from Rosario Dawson as Claire Temple, also known as Night Nurse.",,
+          "Dawson previously confirmed she filmed a scene cut from the theatrical release.",,
+          "The report says the extra footage will include more surprises beyond the Temple cameo.",
+        ],
+      },
+      { type: "h2", text: "Why Sony would bring Brand New Day back to theatres" },
+      {
+        type: "p",
+        text: "Sony has done this before with Tom Holland's Spider-Man films. The studio released an extended cut of Spider-Man: Far From Home and a More Fun Stuff Version of Spider-Man: No Way Home, both adding deleted scenes to lure audiences back. The timing also follows Marvel Studios' own move: Avengers: Endgame returned as Endgame: Encore with a few minutes of additional footage, and it topped the weekend box office again.",
+      },
+      {
+        type: "p",
+        text: "The numbers explain the temptation. Brand New Day has earned about 2.5 billion dollars worldwide, according to Box Office Mojo figures cited by Polygon, including 958 million dollars in North America, the highest domestic total to date. Worldwide it sits third all time, behind only Avatar and Avengers: Endgame, trailing Avatar by about 428 million dollars, a gap the rerelease is unlikely to close completely.",
+      },
+      { type: "h2", text: "What we know about the original film" },
+      {
+        type: "p",
+        text: "Spider-Man: Brand New Day arrived in theatres on July 31, 2026, directed by Destin Daniel Cretton and starring Tom Holland as Peter Parker. The film picks up with Peter fighting crime full time as Spider-Man in a world that no longer remembers him, after the memory wipe at the end of No Way Home. Alongside Holland, the cast includes Zendaya as MJ, Jacob Batalon as Ned Leeds, Jon Bernthal as Frank Castle, Sadie Sink and Mark Ruffalo as Bruce Banner.",
+      },
+      {
+        type: "p",
+        text: "After its theatrical run, the film moved to digital platforms on October 6, 2026, and a 4K Ultra HD, Blu-ray and DVD release is scheduled for December 15, 2026. Fans now want to know whether the extra footage will appear in theatres first, on disc later, or both, and Sony has not said yet.",
+      },
+      { type: "h2", text: "Spider-Man Brand New Day rerelease date: what is not confirmed yet" },
+      {
+        type: "p",
+        text: "For now, the honest answer to most questions about the rerelease is that nobody outside Sony knows. There is no confirmed rerelease date, no confirmed runtime, and no studio-confirmed list of added scenes. The Deadline report describes a plan, not a finished announcement, and plans for extended cuts can change before they reach theatres.",
+      },
+      {
+        type: "p",
+        text: "What is confirmed is the film's extraordinary run: a two-month theatrical performance that made it the biggest domestic hit on record and the third-biggest worldwide release ever. Any rerelease would be building on that, not rescuing a struggling film. Sony only needs to give audiences one new reason to see it again.",
+      },
+      { type: "h2", text: "Why fans are talking about the Night Nurse cameo" },
+      {
+        type: "p",
+        text: "Claire Temple has a long Marvel history. In the comics, the Night Nurse tended to the medical needs of New York City's vigilante heroes, a role Dawson's version carried into the Netflix shows, where she patched up Daredevil, Jessica Jones, Luke Cage and Iron Fist. Restoring her scene would acknowledge that street-level history inside a theatrical Spider-Man film, and it fits Brand New Day's tone, with Peter operating as a neighbourhood hero rather than an Avenger in a cosmic event.",
+      },
+      {
+        type: "p",
+        text: "Until Sony confirms the plan, treat the news as a strong, well-sourced report rather than a done deal. But the pieces line up: a record-breaking film, a studio with a history of extended Spider-Man cuts, a cut cameo from a beloved character, and Endgame: Encore showing audiences will still turn up for a few extra minutes.",
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Is the Spider-Man Brand New Day rerelease confirmed?",
+            a: "Not by Sony. It is reported by Deadline and covered by Polygon on October 30, 2026, but Sony has not confirmed it or announced a date.",
+          },,
+          {
+            q: "What new footage will the rerelease include?",
+            a: "According to the report, a cut cameo from Rosario Dawson as Claire Temple, also known as Night Nurse, plus more surprises that have not been named.",
+          },,
+          {
+            q: "Who is Claire Temple?",
+            a: "Claire Temple, played by Rosario Dawson, was the medical contact for Marvel's Netflix heroes in Daredevil, Jessica Jones, Luke Cage, Iron Fist and The Defenders.",
+          },,
+          {
+            q: "How much has Brand New Day earned?",
+            a: "About 2.5 billion dollars worldwide, including 958 million dollars in North America, the highest domestic total to date and third-highest worldwide.",
+          },,
+          {
+            q: "When is the rerelease date?",
+            a: "No rerelease date has been announced. The film released in theatres on July 31, 2026, arrived on digital on October 6, 2026, and is due on 4K, Blu-ray and DVD on December 15, 2026.",
+          },
+        ],
+      },
+    ],
+  },
+
+  {
     slug: "jumanji-open-world-trailer-release-date-december-25-2026",
     image: "https://i.ytimg.com/vi/qy7vHLyVBAc/maxresdefault.jpg",
     imageAlt: "Official Jumanji Open World new trailer key art showing Dwayne Johnson, Karen Gillan, Jack Black and Kevin Hart with jungle creatures in a city",
