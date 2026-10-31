@@ -60,6 +60,7 @@ async function generateSitemapXml(): Promise<string> {
       `${SEO_SITE_URL}/category/hollywood`,
       `${SEO_SITE_URL}/category/bollywood`,
       `${SEO_SITE_URL}/blog`,
+      `${SEO_SITE_URL}/blog/isro-nvs-03-launch-gslv-f18-navic-success`,
       `${SEO_SITE_URL}/blog/pubg-netflix-live-action-series-donald-glover`,
       `${SEO_SITE_URL}/blog/eetha-trailer-shraddha-kapoor-vithabai-december-4`,
       `${SEO_SITE_URL}/blog/new-ott-releases-this-weekend-october-30-2026`,

@@ -33,6 +33,94 @@
 
 export const posts = [
   {
+    slug: "isro-nvs-03-launch-gslv-f18-navic-success",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/GSLV_F16_during_Liftoff_carrying_NISAR.webp/1280px-GSLV_F16_during_Liftoff_carrying_NISAR.webp",
+    imageAlt: "A GSLV rocket lifting off from Sriharikota, the same launch site used for the GSLV-F18 NVS-03 mission",
+    title: "ISRO NVS-03 Launch Success: GSLV-F18 Puts NavIC Satellite in Orbit",
+    description:
+      "ISRO NVS-03 launch success: GSLV-F18 placed the 2,250-kg NavIC satellite in orbit on October 30, restoring India's navigation constellation.",
+    excerpt:
+      "ISRO's GSLV-F18 successfully placed the NVS-03 navigation satellite into its intended orbit late on October 30, 2026, giving India's NavIC system a much-needed boost.",
+    date: "2026-10-31",
+    category: "Tech",
+    sections: [
+      {
+        type: "p",
+        text: "The ISRO NVS-03 launch has ended in success. Late on Friday night, October 30, 2026, the Indian Space Research Organisation's GSLV-F18 rocket lifted off from Sriharikota carrying the NVS-03 navigation satellite, and within minutes the mission was declared a success. For India's homegrown navigation system, NavIC, this was not just another launch: it was the mission meant to pull the constellation back from a difficult stretch marked by ageing satellites and a failed orbit-raising attempt. In the early hours of Saturday, October 31, ISRO confirmed that NVS-03 was in its intended orbit.",
+      },
+      { type: "h2", text: "ISRO NVS-03 launch: what happened overnight" },
+      {
+        type: "p",
+        text: "GSLV-F18 lifted off at 11:51 pm IST on October 30 from the Second Launch Pad at the Satish Dhawan Space Centre in Sriharikota, Andhra Pradesh, after a 24-hour countdown. ISRO's live coverage had begun at 11:20 pm, and the rocket climbed into the night sky on schedule. About 18 minutes after liftoff, the vehicle placed NVS-03 into its intended geosynchronous transfer orbit. At 12:23 am IST on October 31, ISRO announced on X: Mission Success, confirming that GSLV-F18 had successfully placed NVS-03 in the intended orbit. ISRO Chairman Dr. V. Narayanan said the vehicle had precisely injected the 2,250-kg satellite into its intended elliptical orbit, and congratulated the ISRO teams, industry partners and academic partners behind the mission.",
+      },
+      { type: "h2", text: "What is NVS-03, and why did NavIC need it?" },
+      {
+        type: "p",
+        text: "NVS-03 is the third satellite in ISRO's second-generation navigation series, built to ensure continuity of services from the Indian Regional Navigation Satellite System, now known as NavIC, short for Navigation with Indian Constellation. NavIC provides position, navigation and timing services over India and up to about 1,500 km beyond the country's borders, reducing dependence on foreign navigation systems such as the United States' GPS. NVS-03 carries an indigenous atomic clock alongside procured atomic clocks, and it adds the L1 navigation signal to the existing L5 and S signals.",
+      },
+      {
+        type: "p",
+        text: "The launch mattered so much because NavIC had been running short of healthy satellites. NVS-02, launched in January 2025, could not raise its orbit after its onboard engines failed to fire, severely limiting its usefulness. Another older satellite, IRNSS-1F, completed its 10-year mission life in March 2026, and ISRO later said its procured atomic clock had stopped functioning. Before NVS-03, only three satellites were left providing position, navigation and timing services: IRNSS-1B, IRNSS-1I and NVS-01. ISRO described the NVS-03 success as restoring the constellation to its minimum operational configuration of four satellites.",
+      },
+      { type: "h2", text: "GSLV-F18 mission facts" },
+      {
+        type: "list",
+        items: [
+          "Launch vehicle: GSLV-F18, the 20th flight of India's Geosynchronous Satellite Launch Vehicle.",
+          "Satellite: NVS-03, weighing about 2,250 kg, the third satellite in the second-generation NavIC series.",
+          "Liftoff: 11:51 pm IST on October 30, 2026, from the Second Launch Pad at Satish Dhawan Space Centre, Sriharikota.",
+          "Rocket: a roughly 50-metre-tall, three-stage vehicle with a lift-off mass of about 420 tonnes.",
+          "Target orbit: a geosynchronous transfer orbit with a planned perigee of 170 km and apogee of 37,023 km.",
+          "Flight time to separation: about 18 minutes, including the cryogenic upper stage performing normally.",
+          "Turnaround: ISRO said the mission was completed within 56 days of the previous GSLV launch, the shortest such gap so far.",
+          "Next in series: NVS-04 and NVS-05, which the government has said are at an advanced stage of realisation.",
+        ],
+      },
+      { type: "h2", text: "What happens next for NVS-03" },
+      {
+        type: "p",
+        text: "A successful launch is only the first step. NVS-03 must now use its own propulsion to raise its orbit from the transfer orbit towards its final geosynchronous slot, and then go through testing and commissioning before it can enter regular service. That is worth remembering before expecting an immediate change on your phone: a navigation satellite only starts helping users once it has been checked out in its final orbit and its signals have been validated. ISRO has also made clear that more satellites are still needed for a robust, redundant constellation, with NVS-04 and NVS-05 planned to follow.",
+      },
+      { type: "h2", text: "What the ISRO NVS-03 launch means for everyday users in India" },
+      {
+        type: "p",
+        text: "For most people, NavIC works quietly in the background. Its signals support navigation and timing services used in areas such as transport, mapping, disaster management and other civilian and strategic applications, and a stronger constellation means more reliable coverage over India and the surrounding region. The addition of the L1 signal on NVS-03 is also significant, because L1 is a widely used civilian navigation frequency, which should make NavIC signals easier for a broader range of receivers to use. None of this changes overnight, and ISRO has not announced a date for NVS-03 to begin operational service.",
+      },
+      { type: "h2", text: "How to follow NVS-03 updates" },
+      {
+        type: "steps",
+        items: [
+          "Follow ISRO's official announcements for confirmation that NVS-03 has reached its final orbit.",
+          "Watch for updates on orbit-raising and commissioning, which come before the satellite enters service.",
+          "Look out for news on NVS-04 and NVS-05, the next satellites planned for the NavIC constellation.",
+          "Be cautious about social media claims on NavIC coverage: trust ISRO's statements over unverified posts.",
+          "Check whether your device or app lists NavIC support before assuming a new satellite changes your navigation.",
+        ],
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Was the ISRO NVS-03 launch successful?",
+            a: "Yes. GSLV-F18 lifted off at 11:51 pm IST on October 30, 2026, and ISRO confirmed at 12:23 am IST on October 31 that NVS-03 had been placed in its intended orbit.",
+          },
+          {
+            q: "What is NVS-03?",
+            a: "NVS-03 is the third satellite in ISRO's second-generation NavIC navigation series. It weighs about 2,250 kg, carries an indigenous atomic clock alongside procured clocks, and adds the L1 signal to the existing L5 and S signals.",
+          },
+          {
+            q: "Why is NVS-03 important for NavIC?",
+            a: "NavIC had slipped below the strength needed for reliable standalone positioning after the NVS-02 orbit-raising failure and the end of older satellites' mission lives. ISRO said NVS-03 restores the constellation to its minimum operational configuration of four satellites.",
+          },
+          {
+            q: "Will NavIC work better immediately after the launch?",
+            a: "Not immediately. NVS-03 must still raise its orbit to its final geosynchronous slot and complete testing and commissioning before it enters regular service.",
+          },
+        ],
+      },
+    ],
+  },
+  {
     slug: "pubg-netflix-live-action-series-donald-glover",
     image: "https://cdn.cloudflare.steamstatic.com/steam/apps/578080/library_hero.jpg",
     imageAlt: "PUBG: Battlegrounds key art showing a player in a battleground landscape",
