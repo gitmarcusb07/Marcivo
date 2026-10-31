@@ -33,6 +33,97 @@
 
 export const posts = [
   {
+    slug: "ffxiv-evercold-release-date-february-23-2027-zephyr-job",
+    image: "https://media.fullcleared.com/2026/10/31024433/ffxiv-evercold-gets-a-date-reveals-crossbow-job-zephyr-1536x864.jpg",
+    imageAlt: "Zephyr, the new crossbow job in Final Fantasy XIV: Evercold, with an avian familiar (official Square Enix art)",
+    title: "FFXIV Evercold Release Date: February 23, 2027, Plus New Zephyr Job Revealed at Fan Fest Tokyo",
+    description:
+      "FFXIV Evercold release date is February 23, 2027, with early access from February 19. Pre-orders open November 4, and the new Zephyr job joins the expansion.",
+    excerpt:
+      "Square Enix has confirmed the FFXIV Evercold release date as February 23, 2027, with early access from February 19, and revealed the new crossbow job Zephyr at Fan Festival 2026 in Tokyo.",
+    date: "2026-10-31",
+    category: "Gaming",
+    sections: [
+      {
+        type: "p",
+        text: "The FFXIV Evercold release date is finally official. Square Enix confirmed during the Fan Festival 2026 keynote in Tokyo that Final Fantasy XIV: Evercold, the sixth expansion for its long-running MMORPG, will launch on February 23, 2027. Players who pre-order will get in four days earlier, with early access beginning on February 19, 2027, and pre-orders open on November 4, 2026. Evercold was first revealed in April 2026 at the Anaheim Fan Festival with only a January 2027 window attached, so Tokyo was always the event where fans expected the exact day. It delivered that and more, opening the keynote with the expansion's full opening cinematic and revealing Evercold's second new job, Zephyr, a crossbow-wielding ranged damage dealer with a bird companion.",
+      },
+      { type: "h2", text: "FFXIV Evercold release date: the key dates to remember" },
+      {
+        type: "list",
+        items: [
+          "Full launch: February 23, 2027, on PS5, PS4, Xbox Series X|S, Switch 2, Windows, Mac and Steam.",
+          "Early access: February 19, 2027, for players who pre-order.",
+          "Pre-orders open: November 4, 2026.",
+          "Previous window: January 2027, announced at Anaheim in April 2026, so the shift is roughly four weeks.",
+        ],
+      },
+      {
+        type: "p",
+        text: "The move from January to late February is a delay, but only a small one by MMO standards, and Square Enix presented it that way on stage. Producer and director Naoki Yoshida, known to players as Yoshi-P, said the extra time was about giving players the best possible experience, and keynote coverage describes the team as needing a little more time to polish the expansion. Nothing in the Tokyo announcement suggested rework or cut content. Instead, the keynote was full of finished-looking material, from the opening cinematic to the new job reveal, which points to a game in its final polish phase rather than one in trouble.",
+      },
+      { type: "h2", text: "Meet Zephyr: Evercold's new crossbow job" },
+      {
+        type: "p",
+        text: "The other headline from Tokyo was Zephyr, the second of Evercold's two new jobs. Zephyr is a physical ranged DPS job that fights with a crossbow, supported in battle by an avian familiar called a Nephele. The reveal trailer shows a hooded, blue-robed character firing the crossbow while the bird dives on targets, and Yoshida walked on stage in the job's outfit to present it. The crossbow is a new weapon type for Final Fantasy XIV: Bard uses a bow, Machinist uses guns and Dancer throws chakrams, so Zephyr fills a gap players have talked about for years.",
+      },
+      {
+        type: "list",
+        items: [
+          "Role: physical ranged DPS, attacking from distance.",
+          "Weapon: crossbow, with support from the Nephele avian familiar.",
+          "Starting level: 90, with its job quest chain beginning in Gridania.",
+          "Battle mode: playable only in Evolved Mode, the new battle system.",
+          "Partner job: joins Bastion, the dual-greatshield tank revealed in Berlin in July 2026.",
+        ],
+      },
+      {
+        type: "p",
+        text: "The Evolved Mode restriction is worth understanding before you plan a job change. Evercold arrives alongside Final Fantasy XIV version 8.0, which introduces a battle-system overhaul with two modes: Evolved Mode, the new system, and Reborn Mode, which keeps the current combat system for players who do not want the overhaul. Both new jobs, Zephyr and Bastion, are only playable in Evolved Mode. Square Enix has not yet published Zephyr's full action list, but the trailer makes its identity clear: a mobile ranged fighter whose bird companion is part of the damage, not just decoration.",
+      },
+      { type: "h2", text: "What else the Tokyo keynote revealed about Evercold" },
+      {
+        type: "p",
+        text: "Evercold begins a new chapter called the Godless Realms Saga and takes the Warrior of Light to the Fourth, a reflection of the world that players have never explored before. The expansion raises the level cap from 100 to 110, and the keynote introduced Sessrymnir, the Realmship of Earth, joining Naglfar, the Realmship of Water, and Hringhorni, the Realmship of Fire, as the floating vessels players will spend much of the expansion aboard above the frozen wastes of the Fourth. Beyond the main story, Evercold will include a Neon Genesis Evangelion crossover raid series, titled Ghosts of Desire, and a Final Fantasy VII remake trilogy crossover raid series.",
+      },
+      { type: "h2", text: "Evercold editions, Collector's Box and pre-order details" },
+      {
+        type: "p",
+        text: "Pre-orders open on November 4, 2026, and pre-ordering is what qualifies you for the February 19 early access period, so players who want to start on day one of early access should be ready when pre-orders go live. Square Enix has already shown the Collector's Bundle, which combines a physical Collector's Box with the Digital Collector's Edition. The physical box includes a Warrior of Light Reaper statue, a special art box featuring artwork by Yoshitaka Amano, a tapestry of the Fourth, an Ethos metal keychain and a Köttr mini plush. The digital items are the Valhallar Odin mount, the Entreat Crystal emote and the Crystal Skyltborg weapon for Bastion.",
+      },
+      { type: "h2", text: "Why a four-week delay is good news in disguise" },
+      {
+        type: "p",
+        text: "It is easy to read any delay as bad news, but for Final Fantasy XIV players the context is reassuring. The expansion was announced with only a month-long window, not a date, and Tokyo delivered a specific day plus a full opening cinematic, a second job and a working pre-order schedule. That is the shape of a normal final stretch, not a project in crisis. For now, mark February 23, 2027 in the calendar and set a reminder for November 4.",
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "What is the FFXIV Evercold release date?",
+            a: "Final Fantasy XIV: Evercold launches on February 23, 2027. Early access for pre-orders begins on February 19, 2027.",
+          },
+          {
+            q: "When do FFXIV Evercold pre-orders open?",
+            a: "Pre-orders open on November 4, 2026. Pre-ordering is required to qualify for early access.",
+          },
+          {
+            q: "What is the new Zephyr job in Evercold?",
+            a: "Zephyr is a physical ranged DPS job that wields a crossbow and fights alongside an avian familiar called a Nephele. It starts at level 90 and is playable only in Evolved Mode.",
+          },
+          {
+            q: "Was Evercold delayed?",
+            a: "Yes, by about four weeks. It was announced with a January 2027 window in April 2026, and the Tokyo keynote moved it to February 23, 2027, to allow more polish time.",
+          },
+          {
+            q: "Which platforms will Evercold launch on?",
+            a: "PlayStation 5, PlayStation 4, Xbox Series X|S, Nintendo Switch 2, Windows, Mac and Steam.",
+          },
+        ],
+      },
+    ],
+  },
+  {
     slug: "manisha-bhanwala-first-indian-woman-wrestling-world-champion",
     image: "https://upload.wikimedia.org/wikipedia/commons/9/9b/ManishaBhanwala.jpg",
     imageAlt: "Manisha Bhanwala at the 2025 Asian Championships (file photo)",
