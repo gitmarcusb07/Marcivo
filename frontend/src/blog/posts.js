@@ -33,6 +33,123 @@
 
 export const posts = [
   {
+    slug: "scene-trailer-suriya-release-date-november-6-2026",
+    image: "https://i.ytimg.com/vi/LM4ByXufv2w/maxresdefault.jpg",
+    imageAlt: "Suriya as Inbaraj in the official Scene trailer key art, with the film title and 6th November Diwali release date",
+    title: "Scene Trailer: Suriya's Action Entertainer Releases November 6, 2026 for Diwali",
+    description:
+      "Scene trailer is out: Suriya stars as cop Inbaraj in Jithu Madhavan's Diwali action entertainer, releasing in theatres on November 6, 2026.",
+    excerpt:
+      "Suriya's Scene trailer is out, and the Jithu Madhavan action entertainer releases in theatres worldwide on November 6, 2026, for Diwali.",
+    date: "2026-10-31",
+    category: "Cinema",
+    sections: [
+      {
+        type: "p",
+        text: "The Scene trailer is out, giving fans their clearest look yet at Suriya's Diwali release. The makers of the Jithu Madhavan film released the trailer on Saturday, October 31, 2026, ahead of its theatrical release on November 6, 2026. Suriya shared it on X with the message, “Murder. Mystery. Madness… and a whole lot of laughter! Enjoy #Scene in theatres with friends and family! With Love from us to you. In cinemas from 6th Nov 2026! #DiwaliRelease.” That line sums up the trailer: a murder investigation wrapped in comedy and action.",
+      },
+      {
+        type: "h2",
+        text: "Scene trailer release date and Diwali theatrical release",
+      },
+      {
+        type: "p",
+        text: "The Scene trailer arrived on the day of the film's audio and trailer launch event in Chennai, held at the Sairam Institute from 5 pm on October 31, 2026. The production house had announced the trailer would drop at 7:30 pm that evening, and it did, to a wave of fan reaction online. The film releases worldwide on November 6, 2026, for the Deepavali weekend, alongside the Sundar C and Nayanthara film Mookuthi Amman 2.",
+      },
+      {
+        type: "list",
+        items: [
+          "Scene trailer release date: October 31, 2026.",
+          "Scene theatrical release date: November 6, 2026, worldwide, for Diwali.",
+          "Lead actor: Suriya as Inbaraj, a police officer.",
+          "Female lead: Nazriya Nazim as Maya.",
+          "Antagonist: Naslen as Eeswaran.",
+          "Director: Jithu Madhavan, in his Tamil cinema debut.",
+          "Produced by Suriya and Jyotika, Zhagaram Studios and 2D Entertainment.",
+          "Music: Sushin Shyam.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Scene trailer story: Inbaraj quits the force, then gets pulled back in",
+      },
+      {
+        type: "p",
+        text: "The Scene trailer begins with Inbaraj, played by Suriya, resigning from the police force, surprising his seniors, colleagues and subordinates. He wants to relax at home, but his superior officer Stephen, played by Lal, keeps ordering him back. When policemen are sent to arrest him, Inbaraj refuses to cooperate, and when an officer threatens to carry him if needed, he raises his arms and legs as if asking to be carried. They do exactly that, in one of the trailer's funniest sequences.",
+      },
+      {
+        type: "p",
+        text: "At Stephen's office, Inbaraj says he plans to join politics after quitting the force. Soon, though, Stephen asks him to come out of retirement to investigate a murder, and that case becomes the story's spine, mixing humour with tension.",
+      },
+      {
+        type: "h2",
+        text: "Scene trailer: Maya, the house help who is much more than she seems",
+      },
+      {
+        type: "p",
+        text: "A big talking point is Nazriya Nazim's Maya. Inbaraj advertises for a house help, and Maya turns up for the job. At first she seems to be just that, but the trailer soon shows her in action sequences, fighting attackers in a rare action role, with real mystery around who she is. The trailer does not explain her backstory, and that mystery should be a major draw on release.",
+      },
+      {
+        type: "h2",
+        text: "Scene trailer villain: Naslen as Eeswaran, the 'equal' adversary",
+      },
+      {
+        type: "p",
+        text: "Naslen plays Eeswaran, the film's antagonist, and the Scene trailer positions him as an 'equal' adversary to Suriya's cop. The trailer suggests that only a person of equal intelligence to Eeswaran, described as a ruthless and sharp criminal, can bring him to justice. Eeswaran himself considers Inbaraj a worthy opponent, but Inbaraj, in his typical maverick style, questions that idea, asking, “Am I your equal?” An earlier character video for Eeswaran had already described him as a “faceless, emotionless, inhuman predator,” and the trailer keeps that menace intact, including a chilling moment where Eeswaran tells someone not to be scared, saying he will not kill them, and asks them to get the vehicle started.",
+      },
+      {
+        type: "h2",
+        text: "Scene cast and crew",
+      },
+      {
+        type: "p",
+        text: "Scene was tentatively called Suriya 47 before its title was announced, and it has been one of the year's most anticipated projects since the Suriya and Jithu Madhavan collaboration was first discussed. Jithu, known for Romancham and Aavesham, makes his Tamil debut here. The film went on floors with a traditional pooja in December last year.",
+      },
+      {
+        type: "list",
+        items: [
+          "Suriya as Inbaraj, the lead role.",
+          "Nazriya Nazim as Maya, the female lead.",
+          "Naslen as Eeswaran, the antagonist.",
+          "Lal as Stephen, Inbaraj's senior officer.",
+          "Anandraj, John Vijay and Raj Priyan in pivotal roles.",
+          "Music by Sushin Shyam, a frequent collaborator of Jithu Madhavan.",
+          "Cinematography by Vineeth Augustian, editing by Ajmal Sabu, action by Chethan D'Souza.",
+        ],
+      },
+      {
+        type: "h3",
+        text: "The Singam callback at the end of the Scene trailer",
+      },
+      {
+        type: "p",
+        text: "The Scene trailer ends with a callback that long-time Suriya fans will catch instantly. Inbaraj delivers a version of the iconic Durai Singam line, “Ongi adicha ondra ton weight da!”, which translates to, “If I punch you hard, it carries the weight of one and a half tons!” It is a deliberate nod to Suriya's Singam cop avatar, and it frames Inbaraj as a hero in that same larger-than-life tradition, even though Scene's tone is far more playful than a straight police drama.",
+      },
+      {
+        type: "h2",
+        text: "Scene trailer reaction and what to expect on November 6",
+      },
+      {
+        type: "p",
+        text: "Early reaction has focused on Suriya's comic timing as the reluctant cop, Nazriya's unexpected action turn, and the cat-and-mouse dynamic between Inbaraj and Eeswaran. The trailer promises a fun-filled action entertainer, not a dark thriller, with light moments running through a gripping investigation. That balance, praised in Jithu's earlier films, is why the trailer has travelled so fast.",
+      },
+      {
+        type: "p",
+        text: "The trailer keeps its surprises back: Maya's mystery, the Inbaraj-Eeswaran collision and the murder case all stay hidden until November 6, when Scene enters release week as one of the year's most talked-about Tamil films.",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "When is the Scene release date?", a: "Scene releases in theatres worldwide on November 6, 2026, for Diwali." },
+          { q: "When was the Scene trailer released?", a: "The Scene trailer was released on October 31, 2026, at the film's audio and trailer launch event in Chennai." },
+          { q: "Who directs Scene?", a: "Scene is directed by Jithu Madhavan, known for Romancham and Aavesham, in his Tamil cinema debut." },
+          { q: "Who stars in Scene?", a: "Suriya stars as Inbaraj, Nazriya Nazim plays Maya, and Naslen plays the antagonist Eeswaran. Lal, Anandraj, John Vijay and Raj Priyan are also in the cast." },
+          { q: "What is Scene about?", a: "Scene follows Inbaraj, a police officer who quits the force but is pulled back to investigate a murder, crossing paths with Maya and the criminal Eeswaran." },
+        ],
+      },
+    ],
+  },
+  {
     slug: "im-game-ott-release-jiohotstar-november-6-2026",
     image: "https://www.pinkvilla.com/images/2026-10/529669661_im-game-ott-webp.webp",
     imageAlt: "Dulquer Salmaan as Dan in I'm Game, walking through a grand doorway in a beige jacket",

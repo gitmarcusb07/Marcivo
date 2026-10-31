@@ -60,6 +60,7 @@ async function generateSitemapXml(): Promise<string> {
       `${SEO_SITE_URL}/category/hollywood`,
       `${SEO_SITE_URL}/category/bollywood`,
       `${SEO_SITE_URL}/blog`,
+      `${SEO_SITE_URL}/blog/scene-trailer-suriya-release-date-november-6-2026`,
       `${SEO_SITE_URL}/blog/im-game-ott-release-jiohotstar-november-6-2026`,
       `${SEO_SITE_URL}/blog/spider-man-brand-new-day-rerelease-new-footage`,
       `${SEO_SITE_URL}/blog/jumanji-open-world-trailer-release-date-december-25-2026`,
