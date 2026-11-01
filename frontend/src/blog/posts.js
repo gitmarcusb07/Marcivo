@@ -33,103 +33,117 @@
 
 export const posts = [
   {
-    slug: "ramayana-part-1-advance-booking-63-crore-november-1-2026",
-    image: "https://images.filmibeat.com/ph-big/2026/10/ramayana-the-introduction-movie-20261793360080_7.jpg",
-    imageAlt: "Ranbir Kapoor as Lord Ram in the official Ramayana: Part 1 poster, ahead of the film's November 5, 2026 release",
-    title: "Ramayana Advance Booking Crosses Rs 63 Crore Worldwide Ahead of November 5 Release",
+    slug: "azam-khan-14-day-judicial-custody-ed-jauhar-university-november-1-2026",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/c6/Mohammad_Azam_Khan_1.jpg",
+    imageAlt: "Samajwadi Party leader Azam Khan speaking into a microphone, file photo",
+    title: "Azam Khan Judicial Custody: SP Leader Sent to 14 Days in Jail in ED Jauhar University Case",
     description:
-      "Ramayana advance booking has crossed Rs 63 crore worldwide, with Rs 34 crore from India, ahead of the Ranbir Kapoor epic's November 5 release.",
+      "Azam Khan judicial custody: SP leader sent to 14-day judicial custody by a Ghaziabad PMLA court in the ED Jauhar University money laundering case.",
     excerpt:
-      "Ramayana: Part 1 has crossed Rs 63 crore in worldwide advance bookings, led by Rs 34 crore from India, four days before its November 5, 2026 release.",
+      "A Ghaziabad PMLA court sent Azam Khan to 14-day judicial custody on November 1, 2026, a day after he walked out of Rampur jail on bail and was taken into ED custody.",
     date: "2026-11-01",
-    category: "Cinema",
+    category: "News",
     sections: [
       {
         type: "p",
-        text: "Ramayana advance booking has crossed Rs 63 crore worldwide, and the numbers are still climbing. With four days to go before release, Nitesh Tiwari's Ramayana: Part 1, starring Ranbir Kapoor as Rama, Sai Pallavi as Sita and Yash as Ravana, has sold more than 7.64 lakh tickets in India alone, according to Sacnilk figures reported by The Week on November 1, 2026.",
+        text: "Azam Khan judicial custody is the big breaking news out of Uttar Pradesh today, Sunday, November 1, 2026. A special Prevention of Money Laundering Act (PMLA) court in Ghaziabad has sent senior Samajwadi Party leader and former Uttar Pradesh minister Azam Khan to 14 days of judicial custody in the Enforcement Directorate's money laundering case linked to Mohammad Ali Jauhar University and the Jauhar Trust. The order came barely a day after Khan walked out of Rampur jail on bail, only to be taken into ED custody right outside the jail gate.",
       },
       {
         type: "h2",
-        text: "Ramayana advance booking: the latest worldwide numbers",
+        text: "Azam Khan judicial custody: what the Ghaziabad court ordered",
       },
       {
         type: "p",
-        text: "According to Sacnilk figures reported by The Week on the afternoon of November 1, 2026, Ramayana: Part 1 has reached approximately Rs 63.48 crore gross worldwide: about Rs 34.01 crore from India and around Rs 29.47 crore from overseas. In India, it has sold more than 7.64 lakh tickets across 23,199 shows, covering every date open for booking, not just opening day. Bookings are still open, so treat these as a November 1 snapshot, not a final total.",
+        text: "According to the Free Press Journal and The Times of India, both reporting on November 1, 2026, the special PMLA court in Ghaziabad ordered 14-day judicial custody for Azam Khan on Sunday. He will be lodged in Dasna District Jail in Ghaziabad, not Rampur jail, from where he had been released barely a day earlier. The court also directed the jail superintendent to ensure Khan receives all necessary medical care under prison rules, including his prescribed medicines. He will be produced before the court again on November 13, 2026.",
+      },
+      {
+        type: "p",
+        text: "One distinction matters here. The ED had sought custody to question Khan, and his lawyers opposed the remand plea. What the court granted was judicial custody, meaning Khan stays in jail while the investigation continues, rather than in ED custody for interrogation.",
+      },
+      {
+        type: "h2",
+        text: "Inside the court hearing: 10.30 am production, 90-minute arguments",
+      },
+      {
+        type: "p",
+        text: "The Times of India reports that the ED produced Khan before the special court at around 10.30 am on Sunday amid tight security, with five ED vehicles and more than 100 police and paramilitary personnel escorting him. After about 90 minutes of arguments, the court passed its order.",
+      },
+      {
+        type: "p",
+        text: "As he arrived, Khan appeared calm. When journalists asked whether he wanted to say something, he replied in Hindi, \"Ab kya reh gaya hai bolne ko,\" meaning \"What is left to say now?\" The Free Press Journal similarly records him answering \"What is there to say?\" to reporters.",
+      },
+      {
+        type: "h2",
+        text: "How Azam Khan went from freedom to custody in less than a day",
+      },
+      {
+        type: "p",
+        text: "The custody order follows a dramatic 24 hours. On October 29, 2026, the Allahabad High Court suspended Khan's 10-year sentence in the two PAN card cases and granted bail to him and his son, former MLA Abdullah Azam Khan. The father and son walked out of Rampur jail at around 7.15 pm on Saturday, October 31, after nearly 11 months in custody. As he stepped out, Khan told reporters his only offence was that he, a Muslim, had established a university and built schools for children.",
+      },
+      {
+        type: "p",
+        text: "His freedom lasted only minutes. An ED team waiting outside Rampur jail took him into custody in the separate money laundering case, even as his son headed home. He was taken to the ED headquarters in Delhi, examined at RML Hospital after complaining of chest and stomach pain, cleared by specialists, and questioned again, with the agency reportedly putting more than 50 questions to him.",
+      },
+      {
+        type: "h2",
+        text: "What the ED alleges in the Jauhar University case",
+      },
+      {
+        type: "p",
+        text: "The ED's case, registered in 2019 under the Prevention of Money Laundering Act, concerns the Maulana Mohammad Ali Jauhar Trust and the university in Rampur that Khan founded and where he serves as honorary chancellor. The agency alleges diversion of government funds meant for public works, illegal occupation of farmers' land, and illegal collections from contractors during construction, with alleged proceeds of crime of Rs 426 crore. It had earlier attached the university's land and buildings.",
+      },
+      {
+        type: "p",
+        text: "These are allegations under investigation, and judicial custody is not a conviction. Khan has not been convicted in this money laundering case, and his legal team has called the detention illegal and politically motivated, a claim the agency and the ruling party reject.",
+      },
+      {
+        type: "h2",
+        text: "Political reactions: SP cries vendetta, BJP says law is equal for all",
+      },
+      {
+        type: "p",
+        text: "Samajwadi Party leaders have accused the government of political vendetta, with general secretary Shivpal Singh Yadav alleging the ED acted at its behest to arrest Khan right after his release. BJP leaders have defended the action, with Uttar Pradesh minister AK Sharma saying the law applies equally to everyone.",
+      },
+      {
+        type: "h2",
+        text: "Azam Khan judicial custody: what happens next",
       },
       {
         type: "list",
         items: [
-          "Worldwide advance booking gross: approximately Rs 63.48 crore",
-          "India advance booking gross: approximately Rs 34.01 crore, from more than 7.64 lakh tickets across 23,199 shows",
-          "Overseas advance booking gross: approximately Rs 29.47 crore (about $3.50 million)",
-          "Opening day (November 5) advance booking in India: approximately Rs 22.77 crore gross",
-          "Premium formats (IMAX and Dolby) on opening day: approximately Rs 4.74 crore"
+          "Khan stays in judicial custody at Dasna District Jail, Ghaziabad, with court-directed medical care under prison rules.",
+          "He will be produced before the special PMLA court again on November 13, 2026.",
+          "The ED's investigation into the alleged money trail, land deals and fund sources behind Jauhar University and the Trust continues.",
+          "The political fallout is set to continue, with the SP framing the arrest as vendetta and the BJP insisting it is straightforward law enforcement."
         ],
       },
       {
-        type: "h2",
-        text: "Ramayana day 1 advance booking in India",
-      },
-      {
         type: "p",
-        text: "The opening day alone accounts for most of the Indian total. For Thursday, November 5, advance bookings in India had reached approximately Rs 22.77 crore gross by the afternoon of November 1. A morning snapshot, reported by Business Today from Sacnilk data, put day 1 at over Rs 22 crore, with about 4.9 lakh tickets sold including blocked seats across 12,631 shows. Premium formats are a big part of the story: IMAX and Dolby shows alone have contributed about Rs 4.74 crore to day 1.",
-      },
-      {
-        type: "h2",
-        text: "Which cities and languages are driving Ramayana advance booking",
-      },
-      {
-        type: "p",
-        text: "Hindi is carrying the film: about Rs 28.65 crore, or around 84 per cent of the Indian total across all dates, followed by Kannada at about Rs 3.46 crore and Telugu at about Rs 1.66 crore. On day 1, Hindi stood at about Rs 18.20 crore, or 82 per cent of the day 1 gross. By state, Maharashtra leads with about Rs 6.99 crore, followed by Delhi at about Rs 5.74 crore and Karnataka at about Rs 5.62 crore. Among cities, the National Capital Region (NCR) leads with about Rs 5.74 crore, ahead of Mumbai at about Rs 4.54 crore. For day 1, NCR contributed about Rs 3.45 crore and Bengaluru about Rs 3.27 crore with a high 31 per cent occupancy, while Hyderabad stood out at about 38 per cent occupancy.",
-      },
-      {
-        type: "h2",
-        text: "Ramayana overseas advance booking: North America leads",
-      },
-      {
-        type: "p",
-        text: "Overseas, the film has collected approximately $3.50 million, or about Rs 29.47 crore. North America is the biggest overseas market at around $2.58 million, followed by the United Kingdom at approximately $351,000 and Australia and New Zealand together at about $313,000. The November 4 paid premieres alone have generated more than $1 million. The overseas opening weekend is currently estimated at $2.85 million to $3 million on existing bookings, with more growth expected when the Middle East opens sales.",
-      },
-      {
-        type: "h2",
-        text: "The film itself: cast, director and release date",
-      },
-      {
-        type: "p",
-        text: "Ramayana: Part 1 is directed by Nitesh Tiwari, best known for Dangal and Chhichhore, and produced by Namit Malhotra's Prime Focus Studios with Yash's Monster Mind Creations. The music is by A. R. Rahman and Hans Zimmer. Ranbir Kapoor plays Rama, Sai Pallavi plays Sita, Yash plays Ravana, Sunny Deol plays Hanuman and Ravi Dubey plays Lakshman. The film releases in five languages and is the first part of a planned two-part adaptation, with part two expected in 2027. Reports put the combined budget of both parts at around Rs 4,000 crore, but the makers have not confirmed a budget.",
-      },
-      {
-        type: "h2",
-        text: "How to book Ramayana tickets for November 5",
-      },
-      {
-        type: "steps",
-        items: [
-          "Open your usual movie ticket booking app or website and search for Ramayana.",
-          "Pick your city and cinema, then choose November 5, 2026, for opening day, or November 4 for overseas paid premieres where available.",
-          "Choose your format: standard, IMAX or Dolby. Premium formats are selling fastest and cost more.",
-          "Select your seats early for popular shows, since top cities already report high day 1 occupancy, and check the timing and language before paying."
-        ],
-      },
-      {
-        type: "h2",
-        text: "What the Ramayana advance booking numbers mean, and what they do not",
-      },
-      {
-        type: "p",
-        text: "Advance booking is a demand signal, not a final verdict. A strong pre-sale total means audiences have committed money before reviews or word of mouth, which is why trade watchers treat it as the best early indicator of opening day. Trade estimates reported by The Week suggest a worldwide opening day of more than Rs 200 crore if momentum continues, but that is an estimate, not a guarantee. Blocked seats, which cinemas hold back and may later release, also lift gross figures slightly above tickets actually sold. The honest reading: with Rs 63 crore banked worldwide, Ramayana: Part 1 is heading for a huge opening.",
-      },
-      {
-        type: "h2",
-        text: "Ramayana advance booking FAQs",
+        text: "A leader who walked free on Saturday evening after nearly 11 months is back behind bars on Sunday, in a different jail and a different case, until at least November 13.",
       },
       {
         type: "faq",
         items: [
-          { q: "How much is the Ramayana advance booking total so far?", a: "As of the afternoon of November 1, 2026, about Rs 63.48 crore worldwide, including about Rs 34.01 crore from India and about Rs 29.47 crore overseas, as per Sacnilk figures reported by The Week." },
-          { q: "When is Ramayana: Part 1 releasing?", a: "Ramayana: Part 1 releases in India on November 5, 2026, in Hindi, Tamil, Telugu, Kannada and Malayalam, with paid premiere screenings overseas on November 4." },
-          { q: "Who stars in Ramayana: Part 1?", a: "Ranbir Kapoor plays Rama, Sai Pallavi plays Sita, Yash plays Ravana, Sunny Deol plays Hanuman and Ravi Dubey plays Lakshman. It is directed by Nitesh Tiwari, with music by A. R. Rahman and Hans Zimmer." },
-          { q: "Will the Ramayana advance booking total rise before release?", a: "Yes, almost certainly. Bookings are still open and the totals here are a November 1 snapshot, so the final advance total will be higher, especially once Middle East sales open." }
+          {
+            q: "Why was Azam Khan sent to judicial custody?",
+            a: "A special PMLA court in Ghaziabad sent him to 14-day judicial custody on November 1, 2026, in the ED's money laundering case linked to Jauhar University and the Jauhar Trust.",
+          },
+          {
+            q: "Is Azam Khan in ED custody or judicial custody?",
+            a: "Judicial custody. The ED sought custody to question him, but the court ordered judicial custody, so he will be lodged in Dasna District Jail, Ghaziabad.",
+          },
+          {
+            q: "When will Azam Khan be produced in court again?",
+            a: "He will be produced before the special PMLA court again on November 13, 2026.",
+          },
+          {
+            q: "Why was Azam Khan arrested a day after his release?",
+            a: "He was released from Rampur jail on October 31 after the Allahabad High Court suspended his sentence in the two PAN card cases. Minutes later, the ED took him into custody in the separate Jauhar University money laundering case.",
+          },
+          {
+            q: "What does the ED allege against Azam Khan?",
+            a: "The ED alleges diversion of government funds, illegal occupation of farmers' land and illegal collections from contractors in building Jauhar University, with alleged proceeds of crime of Rs 426 crore. These are allegations, not a conviction in this case.",
+          }
         ],
       },
     ],
