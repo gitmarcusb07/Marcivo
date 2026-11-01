@@ -33,6 +33,108 @@
 
 export const posts = [
   {
+    slug: "pikmin-day-direct-november-1-pikmin-day-nintendo",
+    image: "https://i.ytimg.com/vi/7-1lQh551UY/maxresdefault.jpg",
+    imageAlt: "Official Pikmin Day Direct key art with the red, blue and yellow Pikmin forming 11.1 and the Nintendo logo",
+    title: "Pikmin Day Direct: Nintendo Declares November 1 Pikmin Day in Surprise Showcase",
+    description:
+      "Pikmin Day Direct surprise: Nintendo declares November 1 Pikmin Day, with a Pikmin 4 Switch 2 demo on November 2 and Hello! Pikmin shorts.",
+    excerpt:
+      "Nintendo has surprised fans with a Pikmin Day Direct on October 31, 2026, declaring November 1 as Pikmin Day and confirming a free Pikmin 4 Switch 2 demo for November 2.",
+    date: "2026-11-01",
+    category: "Gaming",
+    sections: [
+      {
+        type: "p",
+        text: "The Pikmin Day Direct is one of the biggest surprise gaming announcements of October 31, 2026. Nintendo quietly posted a roughly nine-and-a-half-minute Pikmin presentation to YouTube, with minimal prior notice, and in it, series creator Shigeru Miyamoto declared that November 1 will henceforth be known as Pikmin Day. Today is therefore the first-ever Pikmin Day, and the Direct sets up a packed fortnight: a free Pikmin 4 demo on November 2, the full Nintendo Switch 2 edition on November 12, a new Pikmin Bloom feature this winter, and a brand-new series of animated shorts.",
+      },
+      {
+        type: "h2",
+        text: "Pikmin Day Direct: why November 1 is Pikmin Day",
+      },
+      {
+        type: "p",
+        text: "Miyamoto opened the Pikmin Day Direct by explaining the date, and it is pure Pikmin logic. In the first Pikmin game, three Pikmin colours made their debut: red, blue and yellow. Stand those three Pikmin side by side, Miyamoto said, and they resemble the number 1 three times over, making 11.1, or November 1. From 2026 onwards, November 1 is therefore Pikmin Day, an annual celebration of the franchise, which is now 25 years old after debuting on the GameCube in 2001.",
+      },
+      {
+        type: "list",
+        items: [
+          "Pikmin Day Direct date: October 31, 2026, posted to YouTube with minimal prior notice.",
+          "Pikmin Day: November 1, every year from 2026, declared by Shigeru Miyamoto.",
+          "Why November 1: the original red, blue and yellow Pikmin resemble 11.1.",
+          "Direct length: just over nine minutes, entirely focused on Pikmin.",
+          "Franchise age: Pikmin debuted on GameCube in 2001, making it 25 years old in 2026.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Pikmin Day Direct: Pikmin 4 Switch 2 demo on November 2",
+      },
+      {
+        type: "p",
+        text: "The most immediately useful announcement in the Pikmin Day Direct is the free demo. A demo of Pikmin 4 - Nintendo Switch 2 Edition + Dandori Academy launches on November 2, 2026, letting Switch 2 owners try the game before its full release. The demo includes the opening area, Sun-Speckled Terrace, plus two Dandori Academy stages, and save data from the demo can be carried over to the full game.",
+      },
+      {
+        type: "p",
+        text: "The Switch 2 version lets players use the console's built-in microphone to give voice commands to Oatchi, the space dog companion, such as rush and go to work. Dandori Academy, the new mode bundled with the Switch 2 edition, is built around planning the most efficient treasure-collecting route, then testing it in timed examinations held on Fridays, Saturdays and Sundays, where players can earn medals.",
+      },
+      {
+        type: "h2",
+        text: "Pikmin 4 Switch 2 Edition release date: November 12, 2026",
+      },
+      {
+        type: "p",
+        text: "Pikmin 4 - Nintendo Switch 2 Edition + Dandori Academy launches on November 12, 2026. The edition was first announced during Nintendo's September 2026 Direct, and the Pikmin Day Direct served as a refresher and a deeper walkthrough rather than a new reveal. The Direct also noted that all four mainline Pikmin entries are playable across Nintendo Switch and Nintendo Switch 2.",
+      },
+      {
+        type: "p",
+        text: "One point to be clear about: the Pikmin Day Direct did not announce Pikmin 5 or any new mainline Pikmin game. The showcase was about Pikmin Day itself, the Pikmin 4 Switch 2 edition, Pikmin Bloom and the new shorts, not a sequel reveal.",
+      },
+      {
+        type: "h2",
+        text: "Pikmin Bloom Secret Caves coming in winter 2026",
+      },
+      {
+        type: "p",
+        text: "Mobile players got the biggest new feature in the Pikmin Day Direct. Pikmin Bloom, Nintendo's augmented-reality smartphone game from 2021, will add Secret Caves in winter 2026. A cinematic trailer in the Direct showed the new underground expeditions, where players send their Pikmin into caves to explore, battle creatures and collect treasure.",
+      },
+      {
+        type: "p",
+        text: "Players will also be able to obtain special cave maps for Pikmin Bloom through Dandori Academy examinations in the Switch 2 edition and through Postcards. Nintendo has not given a specific date for Secret Caves beyond winter 2026.",
+      },
+      {
+        type: "h2",
+        text: "Hello! Pikmin shorts: a new animated series starts now",
+      },
+      {
+        type: "p",
+        text: "The Pikmin Day Direct closed with a charming surprise of its own: Hello! Pikmin, a new series of animated Pikmin short films. Miyamoto introduced Japanese actress Fuka Koshiba, whose hand-knitted Pikmin hats shared on social media caught his eye, to help present the first short. It follows a Pikmin hiding from a suspiciously sneaky toad, and it is the first of many.",
+      },
+      {
+        type: "p",
+        text: "Nintendo plans another Hello! Pikmin short later in November, followed by monthly shorts starting in December through the Nintendo Today! app and other Nintendo channels.",
+      },
+      {
+        type: "h2",
+        text: "Pikmin Day Direct reaction: a small showcase with a big idea",
+      },
+      {
+        type: "p",
+        text: "Reaction has focused less on any single game announcement and more on the idea itself: Nintendo inventing a new annual holiday for one of its most beloved franchises, via a shadow-dropped showcase. The mix of a demo date, a mobile update and a shorts series gives players something to do on Pikmin Day itself.",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "What is Pikmin Day?", a: "November 1, declared by Nintendo in the Pikmin Day Direct on October 31, 2026, because the original red, blue and yellow Pikmin resemble 11.1." },
+          { q: "When is the Pikmin 4 Switch 2 demo release date?", a: "November 2, 2026, with the Sun-Speckled Terrace opening area and two Dandori Academy stages; demo save data transfers to the full game." },
+          { q: "When does Pikmin 4 Switch 2 Edition release?", a: "Pikmin 4 - Nintendo Switch 2 Edition + Dandori Academy releases on November 12, 2026." },
+          { q: "What is Pikmin Bloom Secret Caves?", a: "A new Pikmin Bloom feature coming in winter 2026, adding underground expeditions where Pikmin explore, battle creatures and collect treasure; cave maps come via Dandori Academy examinations and Postcards." },
+          { q: "What is Hello! Pikmin?", a: "A new series of animated Pikmin shorts from the Pikmin Day Direct, starting with a Pikmin hiding from a suspiciously sneaky toad, with another short later in November and monthly shorts from December via the Nintendo Today! app and other channels." },
+          { q: "Did the Pikmin Day Direct announce Pikmin 5?", a: "No. It focused on Pikmin Day, Pikmin 4 Switch 2 Edition, Pikmin Bloom and the Hello! Pikmin shorts." },
+        ],
+      },
+    ],
+  },  {
     slug: "scene-trailer-suriya-release-date-november-6-2026",
     image: "https://i.ytimg.com/vi/LM4ByXufv2w/maxresdefault.jpg",
     imageAlt: "Suriya as Inbaraj in the official Scene trailer key art, with the film title and 6th November Diwali release date",
