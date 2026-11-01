@@ -33,6 +33,117 @@
 
 export const posts = [
   {
+    slug: "ind-vs-nz-5th-t20i-seifert-93-new-zealand-win-series-3-2",
+    image: "https://aniportalimages.s3.amazonaws.com/media/details/ANI-20260128170746.jpg",
+    imageAlt: "Glenn Phillips, New Zealand's Player of the Series, raises his bat after reaching a fifty",
+    title: "IND vs NZ 5th T20I: Seifert's 93 Powers New Zealand to 7-Wicket Win as India Take Series 3-2",
+    description:
+      "IND vs NZ 5th T20I result: Tim Seifert's 93 and Glenn Phillips' 65 not out powered New Zealand to a 7-wicket win in Hamilton, but India took the series 3-2.",
+    excerpt:
+      "New Zealand beat India by seven wickets in the fifth T20I at Hamilton on November 1, 2026, but India still claimed the five-match series 3-2.",
+    date: "2026-11-01",
+    category: "Sports",
+    sections: [
+      {
+        type: "p",
+        text: "The IND vs NZ 5th T20I ended with a New Zealand win, but India still lifted the trophy. At Seddon Park in Hamilton on Sunday, November 1, 2026, New Zealand chased down India's 191 for 8 with 12 balls to spare, finishing on 195 for 3 in 18 overs to win by seven wickets. Tim Seifert smashed 93 off 50 balls, Glenn Phillips finished unbeaten on 65 off 38, and Phillips ended the series with a world-record 341 runs.",
+      },
+      {
+        type: "h2",
+        text: "IND vs NZ 5th T20I result and full scorecard",
+      },
+      {
+        type: "p",
+        text: "New Zealand captain Mitchell Santner won the toss and chose to bowl first, with India batting first for the first time in the series. India were 112 for 2 after 10.1 overs and looked set for 200, but finished on 191 for 8.",
+      },
+      {
+        type: "list",
+        items: [
+          "India: 191 for 8 in 20 overs (Ishan Kishan 61 off 32, Shreyas Iyer 50, Adam Milne 4 for 19)",
+          "New Zealand: 195 for 3 in 18 overs (Tim Seifert 93 off 50, Glenn Phillips 65 not out off 38)",
+          "Result: New Zealand won by 7 wickets, with 12 balls remaining",
+          "Series result: India won the five-match series 3-2",
+          "Player of the Match: Adam Milne (4 for 19); Player of the Series: Glenn Phillips (341 runs)"
+        ],
+      },
+      {
+        type: "h2",
+        text: "How India reached 191 for 8 after a flying start",
+      },
+      {
+        type: "p",
+        text: "India lost both openers cheaply inside the powerplay to the New Zealand quicks. Ishan Kishan and captain Shreyas Iyer then rebuilt in style, adding 93 runs for the third wicket and taking India to 112 for 2. Kishan smashed 61 off 32 balls with five fours and five sixes, while Iyer played a quickfire fifty, and at one stage India looked certain to pass 200.",
+      },
+      {
+        type: "p",
+        text: "Adam Milne was the star with the ball, taking 4 for 19 in four overs, including both openers in the powerplay and two more at the death. Nathan Smith took 2 for 28 and Blair Tickner two wickets, and India faded in the death overs after Kishan and Iyer fell.",
+      },
+      {
+        type: "h2",
+        text: "Seifert's 93 turns the chase after an early let-off",
+      },
+      {
+        type: "p",
+        text: "New Zealand's chase began shakily, with Finn Allen falling for 2 to Arshdeep Singh. Then came the moment that decided the match: Tim Seifert, on 13, offered a simple catch that Naman Dhir shelled at deep point in the fourth over. Seifert made India pay, taking his side to 59 for 1 by the end of the powerplay and finishing with 11 fours and five sixes in his 93 off 50 balls.",
+      },
+      {
+        type: "p",
+        text: "Seifert first added 73 runs with Daryl Mitchell for the second wicket, then 86 runs with Glenn Phillips for the third. At one stage New Zealand needed 111 off 69 balls, but the pair never let the asking rate climb. Seifert fell seven runs short of what would have been his maiden T20I hundred, but Phillips stayed calm and sealed the win with a boundary. Reaching 192 in 18 overs made it the fastest chase of 190-plus against India in T20Is, measured by overs.",
+      },
+      {
+        type: "h2",
+        text: "Glenn Phillips breaks Phil Salt's world record with 341 runs",
+      },
+      {
+        type: "p",
+        text: "The biggest individual story belongs to Glenn Phillips. His unbeaten 65 in Hamilton took his series total to 341 runs, breaking Phil Salt's world record of 331 runs in a bilateral T20I series, set against the West Indies in 2023. Phillips is also the first New Zealand batter to pass 300 runs in a bilateral T20I series, and the first with four fifty-plus scores in one series against India.",
+      },
+      {
+        type: "p",
+        text: "His scores across the five matches tell the story of a remarkable run: 82 not out, 70, 17, 107 and 65 not out, with one century and three fifties. Mohammad Rizwan's 316 against England in 2022 is now third on the all-time list. Phillips was named Player of the Series, while Adam Milne's 4 for 19 earned him Player of the Match in the finale.",
+      },
+      {
+        type: "h2",
+        text: "What the IND vs NZ 5th T20I result means for the ODI series",
+      },
+      {
+        type: "p",
+        text: "For India, the series win softens back-to-back defeats to close the T20I leg: a 3-2 win is a solid return from a tough away tour. For New Zealand, two straight wins to finish are a welcome boost, and Phillips's form plus Milne's pace give them momentum. Both teams now turn to the ODI leg, starting Wednesday, November 4 at Eden Park in Auckland.",
+      },
+      {
+        type: "p",
+        text: "The series also produced striking team numbers for India: 142 sixes against one opposition in a calendar year, and 400 sixes in 40 T20Is in 2026, a first. The batting firepower is clearly there; Hamilton turned on the death overs and one dropped catch.",
+      },
+      {
+        type: "h2",
+        text: "How to follow the IND vs NZ ODI series",
+      },
+      {
+        type: "steps",
+        items: [
+          "First ODI: Wednesday, November 4, 2026, at Eden Park in Auckland.",
+          "Watch on Sony Sports Network TV channels or Sony LIV, which have shown this tour's matches.",
+          "Key battles: Glenn Phillips against India's spinners, and Adam Milne's pace against the top order.",
+          "Check team news before each game: India rotated players through the T20I series."
+        ],
+      },
+      {
+        type: "h2",
+        text: "IND vs NZ 5th T20I FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "Who won the IND vs NZ 5th T20I?", a: "New Zealand won by seven wickets, chasing India's 191 for 8 with 12 balls to spare and finishing on 195 for 3 in 18 overs." },
+          { q: "Who won the IND vs NZ T20I series?", a: "India won the five-match series 3-2, winning the first three matches before New Zealand won the last two." },
+          { q: "What world record did Glenn Phillips break?", a: "Phillips scored 341 runs in the series, the most ever in a bilateral T20I series, breaking Phil Salt's 331 against the West Indies in 2023." },
+          { q: "Who was the Player of the Match and Player of the Series?", a: "Adam Milne was Player of the Match for his 4 for 19, and Glenn Phillips was Player of the Series for his record 341 runs." },
+          { q: "When does the IND vs NZ ODI series start?", a: "The five-match ODI series starts on Wednesday, November 4, 2026, with the first ODI at Eden Park in Auckland." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "cyclone-murasu-red-alert-andhra-pradesh-november-3-landfall",
     image: "https://imagesvs.oneindia.com/img/2026/11/cyclone2-81171793529629.jpg",
     imageAlt: "Cyclone Murasu over the Bay of Bengal, as pictured in news coverage on November 1, 2026",

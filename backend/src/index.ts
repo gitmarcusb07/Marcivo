@@ -61,6 +61,7 @@ async function generateSitemapXml(): Promise<string> {
       `${SEO_SITE_URL}/category/bollywood`,
       `${SEO_SITE_URL}/blog`,
       `${SEO_SITE_URL}/blog/cyclone-murasu-red-alert-andhra-pradesh-november-3-landfall`,
+      `${SEO_SITE_URL}/blog/ind-vs-nz-5th-t20i-seifert-93-new-zealand-win-series-3-2`,
       `${SEO_SITE_URL}/blog/ramayana-part-1-advance-booking-63-crore-november-1-2026`,
       `${SEO_SITE_URL}/blog/azam-khan-14-day-judicial-custody-ed-jauhar-university-november-1-2026`,
       `${SEO_SITE_URL}/blog/farah-khan-dilip-viral-video-privacy-response-november-1-2026`,
