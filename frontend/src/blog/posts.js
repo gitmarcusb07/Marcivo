@@ -33,6 +33,108 @@
 
 export const posts = [
   {
+    slug: "cyclone-murasu-red-alert-andhra-pradesh-november-3-landfall",
+    image: "https://imagesvs.oneindia.com/img/2026/11/cyclone2-81171793529629.jpg",
+    imageAlt: "Cyclone Murasu over the Bay of Bengal, as pictured in news coverage on November 1, 2026",
+    title: "Cyclone Murasu: Red Alert in Andhra Pradesh, Landfall Between Nellore and Narsapur on November 3",
+    description:
+      "Cyclone Murasu has triggered a red alert in Andhra Pradesh, with landfall between Nellore and Narsapur forecast for November 3 and winds up to 120 kmph.",
+    excerpt:
+      "Cyclone Murasu, named on November 1, is forecast to cross the south Andhra Pradesh coast between Nellore and Narsapur on November 3 as a severe cyclonic storm.",
+    date: "2026-11-01",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "Cyclone Murasu is now the storm to watch on India's east coast. The deep depression over the Bay of Bengal intensified into Cyclone Murasu at 11:30 am on Sunday, November 1, 2026, the India Meteorological Department (IMD) confirmed, and within hours Andhra Pradesh was put on red alert, Odisha ordered evacuations from vulnerable areas, and fishermen were told to stay off the sea until Wednesday. It follows Cyclone Arnab by days, while parts of both states are still recovering.",
+      },
+      {
+        type: "h2",
+        text: "Cyclone Murasu: where it is now and where it is headed",
+      },
+      {
+        type: "p",
+        text: "At 11:30 am on November 1, Cyclone Murasu lay centred over the southwest and adjoining west-central Bay of Bengal, near latitude 12.1 degrees north and longitude 85.3 degrees east, according to the IMD. That put it about 560 km east-southeast of Chennai and 630 km east-southeast of Nellore, moving west-northwest at about 23 kmph. The IMD expects it to intensify further into a severe cyclonic storm over the west-central Bay of Bengal around the morning of November 2, then turn northwest and cross the south Andhra Pradesh coast between Nellore and Narsapur.",
+      },
+      {
+        type: "h2",
+        text: "Cyclone Murasu landfall date, time and wind speed",
+      },
+      {
+        type: "p",
+        text: "Cyclone Murasu is forecast to cross the south Andhra Pradesh coast between Nellore and Narsapur during the night of November 2 and the early hours of November 3, with the IMD's 2:30 pm bulletin on November 1 narrowing the window to 11:30 pm on Monday to 4 am on Tuesday. At landfall it is expected to be a severe cyclonic storm, with sustained wind speeds of 100 to 110 kmph, gusting to 120 kmph. The IMD also warns of a one-metre storm surge flooding low-lying south coastal Andhra Pradesh, most of all in Bapatla, Krishna and Prakasam.",
+      },
+      {
+        type: "list",
+        items: [
+          "Named: 11:30 am, Sunday, November 1, 2026, over the southwest and adjoining west-central Bay of Bengal",
+          "Severe cyclonic storm stage: expected around the morning of Monday, November 2",
+          "Landfall window: 11:30 pm on November 2 to 4 am on November 3, between Nellore and Narsapur",
+          "Landfall winds: 100 to 110 kmph, gusting to 120 kmph"
+        ],
+      },
+      {
+        type: "h2",
+        text: "Cyclone Murasu red alert: which Andhra Pradesh districts are affected",
+      },
+      {
+        type: "p",
+        text: "The Meteorological Centre in Visakhapatnam has issued a red alert for coastal Andhra Pradesh for November 2 and 3, with an orange alert for the Rayalaseema region for the next two days. For Monday, November 2, the IMD has put five districts on red alert for extremely heavy rainfall, meaning more than 204 mm in a day: Krishna, Guntur, Bapatla, Prakasam and Nellore. Residents in Krishna, Guntur and Bapatla have been warned not to step outside unless there is an emergency. Seven districts are on orange alert for Monday, East Godavari, West Godavari, Eluru, NTR, Palnadu, Tirupati and Chittoor, and a yellow alert covers Alluri Sitarama Raju, Kakinada, Konaseema, Nandyal, Kadapa and Annamayya. On Tuesday, the red alert shifts to Alluri Sitarama Raju and Eluru.",
+      },
+      {
+        type: "h2",
+        text: "Cyclone Murasu rainfall forecast for Andhra Pradesh, Odisha and Tamil Nadu",
+      },
+      {
+        type: "p",
+        text: "Heavy to very heavy rainfall is forecast across coastal Andhra Pradesh and Rayalaseema on November 2 and 3, with extremely heavy rainfall possible in isolated areas. Monday's heaviest rain is expected in West Godavari, Eluru, NTR, Krishna, Guntur, Bapatla, Palnadu, Prakasam, Nellore and Tirupati. Odisha's rain increases on November 3 and 4, and northern Tamil Nadu may see moderate rain.",
+      },
+      {
+        type: "h2",
+        text: "Cyclone Murasu Odisha alert and evacuations",
+      },
+      {
+        type: "p",
+        text: "Odisha has placed its southern region on high alert and ordered the evacuation of people from low-lying areas and hilly terrain, Disaster Management Minister Suresh Pujari said. The state is still running Arnab relief operations in Ganjam and Gajapati. In Andhra Pradesh, residents from low-lying areas are being asked to evacuate and arrangements are being made for them, according to the state disaster management authority. Fishermen have been told not to venture into the sea until Wednesday.",
+      },
+      {
+        type: "h2",
+        text: "Why is it called Cyclone Murasu, and what happened with Cyclone Arnab",
+      },
+      {
+        type: "p",
+        text: "Cyclone Murasu was named by India from the list of names prepared for the North Indian Ocean under the World Meteorological Organization and the United Nations Economic and Social Commission for Asia and the Pacific. In Tamil, Murasu means an ancient drum, traditionally used in villages to spread important information and alert people to danger, including natural disasters. A name is assigned once a system reaches cyclonic storm intensity. It follows Cyclone Arnab, which brought heavy rainfall and flooding to both states in late October. Officials warn infrastructure already strained by Arnab could be hit again.",
+      },
+      {
+        type: "h2",
+        text: "Cyclone Murasu safety steps: what residents should do now",
+      },
+      {
+        type: "steps",
+        items: [
+          "Follow only official IMD bulletins and state advisories, not unverified social media messages.",
+          "If you live in a low-lying or coastal area, be ready to move if an evacuation order is issued.",
+          "Keep water, food, medicines, documents and a charged phone ready before November 2.",
+          "Do not step outside during the red-alert period unless there is an emergency, and stay away from the sea and flooded roads.",
+          "Fishermen should not venture into the sea until Wednesday, as advised by the IMD and the state disaster management authority."
+        ],
+      },
+      {
+        type: "h2",
+        text: "Cyclone Murasu FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "When will Cyclone Murasu make landfall?", a: "Cyclone Murasu is forecast to cross the south Andhra Pradesh coast between Nellore and Narsapur between 11:30 pm on November 2 and 4 am on November 3, 2026, as a severe cyclonic storm." },
+          { q: "How strong will Cyclone Murasu be at landfall?", a: "The IMD forecasts sustained winds of 100 to 110 kmph, gusting to 120 kmph, with a storm surge of about one metre above normal tide flooding low-lying areas of south coastal Andhra Pradesh." },
+          { q: "Which districts are on red alert for Cyclone Murasu?", a: "For Monday, November 2, Krishna, Guntur, Bapatla, Prakasam and Nellore are on red alert for extremely heavy rainfall. On Tuesday, November 3, the red alert moves to Alluri Sitarama Raju and Eluru." },
+          { q: "What does the name Murasu mean?", a: "Murasu, contributed by India, is the Tamil word for an ancient drum traditionally used to spread important information and alert villages to danger." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "ramayana-part-1-advance-booking-63-crore-november-1-2026",
     image: "https://images.filmibeat.com/ph-big/2026/10/ramayana-the-introduction-movie-20261793360080_7.jpg",
     imageAlt: "Ranbir Kapoor as Lord Ram in the official Ramayana: Part 1 poster, ahead of the film's November 5, 2026 release",
