@@ -33,6 +33,96 @@
 
 export const posts = [
   {
+    slug: "mahadev-betting-app-sourabh-chandrakar-extradited-oman-cbi-raipur-november-1-2026",
+    image: "https://img.republicworld.com/all_images/2026/11/cbi-extradites-mahadev-app-kingpin-sourabh-chandrakar-from-oman-1793541224570-1280x720.webp?w=1280&h=720&q=75&format=webp",
+    imageAlt: "Sourabh Chandrakar flanked by CBI officials after being extradited to India from Oman",
+    title: "Sourabh Chandrakar Extradited: Mahadev Betting App Kingpin Brought Back From Oman, To Face Raipur Court on November 2",
+    description:
+      "Sourabh Chandrakar extradited: the CBI has brought the alleged Mahadev betting app kingpin back from Oman, and he faces a Raipur court on November 2.",
+    excerpt:
+      "The CBI has extradited Sourabh Chandrakar, the alleged promoter of the Mahadev Online Book betting syndicate, from Oman to India, and he will be produced before a special court in Raipur on November 2, 2026.",
+    date: "2026-11-01",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "Sourabh Chandrakar has been extradited to India in one of the country's largest alleged betting scandals. The Central Bureau of Investigation (CBI) announced on Sunday, November 1, 2026, that it has successfully secured the extradition of Chandrakar, the alleged promoter of the Mahadev Online Book (MOB) illegal betting syndicate, from the Sultanate of Oman. A CBI team deputed to Oman escorted him back to India, and he will now be produced before the CBI Special Court in Raipur, Chhattisgarh, on Monday, November 2.",
+      },
+      {
+        type: "h2",
+        text: "Sourabh Chandrakar extradited: how the CBI brought him back from Oman",
+      },
+      {
+        type: "p",
+        text: "The extradition followed a long trail across countries. According to the CBI, Chandrakar, who hails from Durg in Chhattisgarh, was located and detained by the Royal Oman Police after an Interpol Red Corner Notice was issued against him. The CBI and the Enforcement Directorate (ED) then sent formal extradition proposals to Oman, along with the evidence gathered during their investigations. The request was pursued with other central agencies, the Interpol National Central Bureau and the Oman authorities, and once approved, a CBI team travelled to Muscat and escorted Chandrakar back to India.",
+      },
+      {
+        type: "p",
+        text: "The CBI described the extradition as a significant milestone in India's efforts to bring back fugitives accused of running transnational criminal enterprises against Indian citizens from abroad. The agency also thanked the Government of Oman and the Royal Oman Police. Before he is taken to Raipur, Chandrakar will undergo a medical examination and be taken there after obtaining transit remand, the CBI said.",
+      },
+      {
+        type: "p",
+        text: "This was not the first attempt to bring Chandrakar back. Authorities in the United Arab Emirates briefly detained him in October 2024 following an Interpol Red Notice and placed him under house arrest, but that extradition did not materialise. He was later traced to Oman, where the Royal Oman Police detained him, setting up the extradition now completed.",
+      },
+      {
+        type: "h2",
+        text: "What is the Mahadev betting app case?",
+      },
+      {
+        type: "p",
+        text: "The Mahadev Online Book case concerns an alleged illegal online betting syndicate pegged at around Rs 6,000 crore, which investigators say was one of the largest such networks in the country. According to the CBI, the syndicate operated from outside India and offered illegal betting on cricket, football, card games and other events through franchised panels and branches across India, which enrolled users and collected their stakes.",
+      },
+      {
+        type: "p",
+        text: "Chandrakar allegedly set up the betting network along with co-founder Ravi Uppal, with the duo reported to have operated from Dubai after moving there around 2019. The CBI took over the Mahadev Online Book cases at the Chhattisgarh government's request in 2024, while the ED has separately probed the money-laundering angle.",
+      },
+      {
+        type: "p",
+        text: "The financial trail alleged by investigators is central to the case. The CBI has said the proceeds of the illegal betting were routed through a large number of mule bank accounts, layered through multiple transactions and moved abroad through hawala channels. Investigators have also alleged that a portion of the proceeds was used to pay protection money to public servants so the syndicate could operate without hindrance.",
+      },
+      {
+        type: "h2",
+        text: "Sourabh Chandrakar extradited: the charges he faces",
+      },
+      {
+        type: "list",
+        items: [
+          "Two CBI cases: Chandrakar is wanted in two CBI cases in which chargesheets have already been filed, and he is among the key accused named in them.",
+          "One ED case: he is also an accused in a separate ED case in which a prosecution complaint has been filed, and the ED has attached several properties in India and abroad linked to the alleged syndicate.",
+          "The statutes: the CBI has filed chargesheets under the Prevention of Corruption Act, 1988, and provisions of the Indian Penal Code relating to criminal conspiracy, cheating and forgery, along with the Chhattisgarh Gambling (Prohibition) Act.",
+          "The alleged scale: the Mahadev Online Book syndicate is pegged at around Rs 6,000 crore.",
+          "The next court date: after a medical examination and transit remand, Chandrakar is scheduled to be produced before the CBI Special Judge in Raipur on Monday, November 2, 2026."
+        ],
+      },
+      {
+        type: "h2",
+        text: "What happens next in the Mahadev app case",
+      },
+      {
+        type: "p",
+        text: "With Chandrakar now back in India, attention turns to the proceedings before the special CBI court in Raipur and to the questioning investigators are expected to carry out into the alleged syndicate and its financial network. His production before the court on November 2 will be the first formal step in the Indian proceedings, and the ED's separate money-laundering case will continue alongside the CBI cases.",
+      },
+      {
+        type: "p",
+        text: "It is important to keep the legal position clear. Chandrakar is described by the agencies as the alleged kingpin and promoter of the syndicate, and the chargesheets and prosecution complaint set out the allegations against him. He has not been convicted in these cases. What is confirmed as of November 1, 2026, is the extradition itself: the alleged Mahadev app kingpin is back in India, and his first court appearance is set for November 2.",
+      },
+      {
+        type: "h2",
+        text: "Sourabh Chandrakar extradited FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "Who is Sourabh Chandrakar?", a: "Sourabh Chandrakar, from Durg in Chhattisgarh, is described by the CBI as the promoter of the alleged Mahadev Online Book betting syndicate, pegged at around Rs 6,000 crore." },
+          { q: "Why was Sourabh Chandrakar extradited from Oman?", a: "He was detained by the Royal Oman Police after an Interpol Red Corner Notice, and India secured his extradition after the CBI and ED sent formal proposals with evidence to Oman." },
+          { q: "When will Sourabh Chandrakar appear in court?", a: "After a medical examination and transit remand, Chandrakar is scheduled to be produced before the CBI Special Judge in Raipur, Chhattisgarh, on Monday, November 2, 2026." },
+          { q: "What cases does Sourabh Chandrakar face?", a: "He is wanted in two CBI cases with chargesheets filed and one ED case with a prosecution complaint filed, with charges including criminal conspiracy, cheating and forgery and the Prevention of Corruption Act, 1988." },
+          { q: "What is the Mahadev betting app case about?", a: "The case concerns an alleged illegal online betting syndicate offering betting on cricket, football, card games and other events through franchised panels across India, with proceeds allegedly routed through mule accounts and hawala channels." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "rc17-ram-charan-sukumar-launch-chiranjeevi-clap-anirudh",
     image: "https://cdn.123telugu.com/content/wp-content/uploads/2026/11/RC-17.webp",
     imageAlt: "Ram Charan and Sukumar at the RC17 launch ceremony in Hyderabad on November 1, 2026",
