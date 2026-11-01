@@ -33,6 +33,99 @@
 
 export const posts = [
   {
+    slug: "rc17-ram-charan-sukumar-launch-chiranjeevi-clap-anirudh",
+    image: "https://cdn.123telugu.com/content/wp-content/uploads/2026/11/RC-17.webp",
+    imageAlt: "Ram Charan and Sukumar at the RC17 launch ceremony in Hyderabad on November 1, 2026",
+    title: "RC17 Launched: Ram Charan and Sukumar Reunite as Chiranjeevi Gives the Mega Clap, Anirudh Reportedly on Music",
+    description:
+      "RC17 launch: Ram Charan and Sukumar's film began with a grand pooja in Hyderabad on November 1, 2026, with Chiranjeevi giving the first clap.",
+    excerpt:
+      "Ram Charan and director Sukumar officially launched their new film RC17 with a grand pooja ceremony in Hyderabad on November 1, 2026, with Megastar Chiranjeevi giving the ceremonial first clap.",
+    date: "2026-11-01",
+    category: "Cinema",
+    sections: [
+      {
+        type: "p",
+        text: "RC17 is officially underway. Ram Charan and director Sukumar launched their much-awaited film, tentatively titled RC17, with a grand pooja ceremony in Hyderabad on Sunday, November 1, 2026, more than two years after the project was first announced. Megastar Chiranjeevi, Ram Charan's father, gave the ceremonial first clap and performed the traditional coconut-breaking ritual, formally launching a film carrying high expectations in Telugu cinema.",
+      },
+      {
+        type: "h2",
+        text: "RC17 launch: what happened at the Hyderabad pooja ceremony",
+      },
+      {
+        type: "p",
+        text: "The RC17 launch ceremony began at around 10:50 am in Hyderabad, according to reports of the event, with the team gathering for the traditional pooja before filming starts. The clip shared by Mythri Movie Makers showed Ram Charan arriving at the venue, greeting the team and lighting the ceremonial lamp. Chiranjeevi then sounded the clapboard, and the makers summed up the moment in their post: the journey of RC17 begins with the MEGA CLAP, with the megastar blessing the entire team. The film carries the tagline You Can Imagine, and the makers have said shooting will take place at Ramoji Film City, with the remaining cast and crew to be announced in the coming days.",
+      },
+      {
+        type: "p",
+        text: "The launch was a star-studded industry affair. Along with Chiranjeevi, Ram Charan and Sukumar, those present included directors Harish Shankar, Buchi Babu Sana, Gopichand Malineni and Maruthi, producer Naga Vamsi, and producers Naveen Yerneni and Y. Ravi Shankar of Mythri Movie Makers. The film is bankrolled by Mythri Movie Makers in association with Sukumar Writings and T-Series Films.",
+      },
+      {
+        type: "h2",
+        text: "Why the Ram Charan and Sukumar reunion matters after Rangasthalam",
+      },
+      {
+        type: "p",
+        text: "The RC17 pairing matters because Ram Charan and Sukumar have not made a film together since Rangasthalam in 2018, the village drama that became a blockbuster and remains one of the most loved films of both men's careers. Its success is exactly why expectations for RC17 are so high. The two first confirmed their reunion in March 2024, when Ram Charan shared a photograph with Sukumar, and the project has been discussed by fans ever since.",
+      },
+      {
+        type: "p",
+        text: "Reports of the launch say Ram Charan is undergoing a major transformation for the role and will be seen in a completely new look, with the film expected to feature him in a rugged, never-before-seen avatar. One report of the launch says the team plans to complete the shoot by the end of 2027 and release the film in 2028, though the makers have not yet announced a release date themselves, so fans should treat that window as a reported plan rather than a confirmed date.",
+      },
+      {
+        type: "h2",
+        text: "RC17 music: Anirudh Ravichander reportedly joins, a break from Sukumar's DSP tradition",
+      },
+      {
+        type: "p",
+        text: "The biggest talking point from the RC17 launch, beyond the clap itself, is the music. Multiple reports say Anirudh Ravichander has joined RC17 as its music composer, which would mark a major shift: Sukumar has traditionally collaborated with Devi Sri Prasad (DSP) for his films, and Anirudh teaming up with Sukumar for the first time is itself a headline. Cinematographer Ratnavelu is also reported to be on board to handle the visuals. Some reports present Anirudh's involvement as confirmed, while others describe it as reported rather than officially confirmed by the makers, so the careful reading is that Anirudh is reported to be composing RC17, with a formal announcement from the team still awaited.",
+      },
+      {
+        type: "p",
+        text: "The composer news also connects RC17 to one of Bollywood's biggest upcoming films. Reports say Anirudh has stepped away from Shah Rukh Khan's King, directed by Siddharth Anand, due to scheduling conflicts, with the same reports linking his RC17 commitment to that decision. King is scheduled to release in cinemas on December 24, 2026, and its first song is reported to arrive on November 2, Shah Rukh Khan's birthday.",
+      },
+      {
+        type: "h2",
+        text: "RC17 cast, crew and what happens next",
+      },
+      {
+        type: "list",
+        items: [
+          "Title: RC17 (working title), with the tagline You Can Imagine.",
+          "Lead and director: Ram Charan reunites with director Sukumar after Rangasthalam (2018).",
+          "Launch: grand pooja ceremony in Hyderabad on November 1, 2026, with Chiranjeevi giving the first clap.",
+          "Producers: Mythri Movie Makers, in association with Sukumar Writings and T-Series Films.",
+          "Reported crew: Anirudh Ravichander reported as music composer, Ratnavelu reported as cinematographer.",
+          "Filming location: Ramoji Film City, Hyderabad, as stated by the makers at launch.",
+          "Reported plan: shoot to be completed by the end of 2027 with a 2028 release, according to one launch report, not yet confirmed by the makers.",
+          "Still to come: remaining cast and crew announcements, first look, and an official release date."
+        ],
+      },
+      {
+        type: "h2",
+        text: "What RC17 means for Telugu cinema's 2028 slate",
+      },
+      {
+        type: "p",
+        text: "RC17 arrives at a moment when Telugu cinema's biggest stars are lining up large-scale projects years in advance, and a Ram Charan and Sukumar reunion naturally sits near the top of that slate. For RC17, though, the launch is only the starting gun. The first look, the remaining cast, and the first glimpse of Ram Charan's new avatar will decide whether the film lives up to the excitement of its pooja ceremony.",
+      },
+      {
+        type: "h2",
+        text: "RC17 FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "What is RC17?", a: "RC17 is the working title of Ram Charan's new film directed by Sukumar, produced by Mythri Movie Makers with Sukumar Writings and T-Series Films, launched in Hyderabad on November 1, 2026." },
+          { q: "Who gave the first clap for RC17?", a: "Megastar Chiranjeevi, Ram Charan's father, gave the ceremonial first clap and performed the coconut-breaking ritual at the Hyderabad launch ceremony." },
+          { q: "Is Anirudh Ravichander composing RC17's music?", a: "Multiple reports say Anirudh Ravichander is on board as RC17's composer, though some reports describe it as reported rather than officially confirmed by the makers. Ratnavelu is also reported as the film's cinematographer." },
+          { q: "When will RC17 release?", a: "No official release date has been announced. One launch report says the team plans to finish shooting by the end of 2027 and release the film in 2028, but that should be treated as a reported plan for now." },
+          { q: "Why is RC17 such a big deal?", a: "It reunites Ram Charan and Sukumar for the first time since their 2018 blockbuster Rangasthalam, and it comes more than two years after the project was first announced in March 2024." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "ind-vs-nz-5th-t20i-seifert-93-new-zealand-win-series-3-2",
     image: "https://aniportalimages.s3.amazonaws.com/media/details/ANI-20260128170746.jpg",
     imageAlt: "Glenn Phillips, New Zealand's Player of the Series, raises his bat after reaching a fifty",
