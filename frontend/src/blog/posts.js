@@ -33,6 +33,118 @@
 
 export const posts = [
   {
+    slug: "binance-hack-6-3-billion-fbi-north-korea-withdrawals-november-1-2026",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/57/Binance_Logo.png",
+    imageAlt: "The gold Binance logo, the cryptocurrency exchange hit by the October 2026 hack",
+    title: "Binance Hack: $6.3 Billion Stolen, FBI Blames North Korea, 90% Recovered as Withdrawals Reopen November 1",
+    description:
+      "Binance hack update: $6.3 billion stolen, FBI blames North Korea's TraderTraitor, 90% replenished and withdrawals reopening November 1, 2026.",
+    excerpt:
+      "Binance says it has replenished 90% of the roughly $6.3 billion stolen in its October 2026 hack, as the FBI blames North Korea and withdrawals reopen in phases from November 1, 2026.",
+    date: "2026-11-01",
+    category: "Tech",
+    sections: [
+      {
+        type: "p",
+        text: "The Binance hack is the biggest crypto story of the week. Binance, the world's largest crypto exchange, says it has replenished 90% of the roughly $6.3 billion stolen from its hot wallets on October 29, 2026. The FBI has blamed North Korea's TraderTraitor group, and withdrawals reopen in phases from Sunday, November 1, 2026.",
+      },
+      {
+        type: "h2",
+        text: "Binance hack: what happened on October 29, 2026",
+      },
+      {
+        type: "p",
+        text: "Binance reported a cyberattack on its hot wallets, the internet-connected wallets used for withdrawals. TRM Labs says the transfers began at 20:05 UTC on October 29, around 1.35 am IST on October 30, and most of the theft happened within about 20 minutes. Binance puts the loss at approximately $6.3 billion; TRM Labs calculates about $6.36 billion and Elliptic about $6.43 billion. Either way, it is the largest crypto exchange theft on record, roughly four times the approximately $1.5 billion Bybit theft of February 2025. Binance then suspended withdrawals for security checks, while deposits kept working.",
+      },
+      {
+        type: "h2",
+        text: "FBI blames North Korea's TraderTraitor for the Binance hack",
+      },
+      {
+        type: "p",
+        text: "On Saturday, October 31, 2026, the FBI said North Korea was responsible for the theft of more than $6 billion from Binance on or about October 29, naming the activity TraderTraitor. The FBI said members of the unit were observed converting stolen assets into Ethereum, and warned that further laundering is expected. TRM Labs, Chainalysis and Elliptic had attributed it to TraderTraitor earlier, with high confidence, but no government had formally attributed it until now.",
+      },
+      {
+        type: "h2",
+        text: "How did the attackers get in?",
+      },
+      {
+        type: "p",
+        text: "Binance co-CEO Richard Teng described a complex attack involving a compromised laptop and malicious software designed to delete evidence. Binance first identified a potentially compromised laptop belonging to an engineer running its systems, then found more breach points. It says it has found no evidence of leaked wallet private keys, and a full post-mortem is still to come. TRM Labs points to a compromise of Binance's signing infrastructure, not a break of Bitcoin's or Ethereum's ledgers. On Ethereum, the attackers used EIP-7702 authorisations to install instructions that could drain wallets.",
+      },
+      {
+        type: "h2",
+        text: "Binance hack recovery: 90% replenished, 10 major tokens fully backed",
+      },
+      {
+        type: "p",
+        text: "In its third security update on October 31, Binance said it had replenished 90% of the stolen assets, up from about 80% before. Teng said on X that users will not bear the impact, and Binance is committed to covering the remaining 10% in less liquid tokens. Binance also confirmed 10 major cryptocurrencies are now fully backed at 100%: Bitcoin (BTC), Ethereum (ETH), Tether (USDT), BNB, Solana (SOL), USD Coin (USDC), XRP, USD1, RLUSD and ZEC.",
+      },
+      {
+        type: "h2",
+        text: "Where the recovery money comes from: SAFU, Futures fund and treasury",
+      },
+      {
+        type: "p",
+        text: "Binance says it has set aside more than $6.34 billion of company funds to cover the losses, from three sources: a partial deployment of its Secure Asset Fund for Users (SAFU), a portion of its Futures Insurance Fund, and its corporate treasury. SAFU, created in July 2018, is an emergency reserve funded from trading fees. Binance says it will deploy part of SAFU over the next 24 hours and restore the fund to approximately $1 billion.",
+      },
+      {
+        type: "h2",
+        text: "About $3 billion frozen is not the same as recovered",
+      },
+      {
+        type: "p",
+        text: "Binance reports approximately $3 billion frozen, working with law enforcement and intelligence firms; Elliptic independently identified $2.84 billion, 94% of it stablecoins. Frozen is not the same as returned.",
+      },
+      {
+        type: "h2",
+        text: "Binance withdrawals reopen November 1: what to expect",
+      },
+      {
+        type: "p",
+        text: "Binance says it remains on track to reopen withdrawals on Sunday, November 1, 2026, in phases and subject to security checks. Expect a token-by-token restart, possible queues and possibly lower limits at first. It has also taken a fresh proof-of-reserves snapshot as of 00:00 UTC on October 31; the full zero-knowledge proof, letting holders of the 10 fully backed tokens verify backing of at least 1:1, is expected by November 3, 2026. Proof of reserves is useful, but it is not a financial statement audit.",
+      },
+      {
+        type: "h2",
+        text: "What Binance users should do now",
+      },
+      {
+        type: "steps",
+        items: [
+          "Check notices only through Binance's official app or website, and ignore unsolicited messages offering recovery help.",
+          "Never share your wallet private keys or recovery phrase with anyone, including anyone offering paid recovery help.",
+          "Keep copies of your statements and transaction records from around October 29, 2026.",
+          "When withdrawals reopen, double-check the address and network before confirming, as a wrong one can mean a permanent loss.",
+          "Expect queues and a phased restart: if your token is not available immediately, wait for Binance's next official update.",
+          "Once the proof-of-reserves report is published, check whether your holdings are covered."
+        ],
+      },
+      {
+        type: "h2",
+        text: "What the Binance hack means for Indian users",
+      },
+      {
+        type: "p",
+        text: "India has already seen a major custody breach: Elliptic estimated approximately $235 million stolen from WazirX on July 18, 2024. Registration with India's Financial Intelligence Unit is not a guarantee against theft or reimbursement, and the Finance Ministry has warned there may be no regulatory recourse for crypto losses.",
+      },
+      {
+        type: "h2",
+        text: "Binance hack FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "How much was stolen in the Binance hack?", a: "Binance estimates approximately $6.3 billion, while TRM Labs estimates $6.36 billion and Elliptic $6.43 billion." },
+          { q: "Who does the FBI blame for the Binance hack?", a: "On October 31, 2026, the FBI blamed North Korea's state-sponsored TraderTraitor group, saying its members were observed converting stolen assets into Ethereum." },
+          { q: "Is my money safe on Binance after the hack?", a: "Binance says users will not bear the impact, with 90% replenished. Watch the proof-of-reserves report due by November 3 and whether withdrawals work normally." },
+          { q: "When will Binance withdrawals resume?", a: "Binance says it remains on track to reopen withdrawals in phases from Sunday, November 1, 2026, subject to security checks. Expect a token-by-token restart and possible queues." },
+          { q: "What is SAFU in the Binance hack recovery?", a: "SAFU, the Secure Asset Fund for Users, is Binance's emergency reserve from July 2018. Binance is using part of it, plus its Futures fund and treasury, and will restore it to about $1 billion." },
+          { q: "Has the stolen crypto been recovered?", a: "Not in full. About $3 billion is frozen, but frozen assets are not yet returned funds. Binance is buying replacements and says 90% has been replenished." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "pikmin-day-direct-november-1-pikmin-day-nintendo",
     image: "https://i.ytimg.com/vi/7-1lQh551UY/maxresdefault.jpg",
     imageAlt: "Official Pikmin Day Direct key art with the red, blue and yellow Pikmin forming 11.1 and the Nintendo logo",
