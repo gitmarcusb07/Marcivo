@@ -33,6 +33,99 @@
 
 export const posts = [
   {
+    slug: "fortnite-treasure-hunters-one-piece-season-live-november-1-2026",
+    image: "https://i.ytimg.com/vi/WKTOfvqL-bc/maxresdefault.jpg",
+    imageAlt: "Official Fortnite Treasure Hunters key art with Monkey D. Luffy, Buggy, Zoro and the Straw Hat crew over the new pirate island",
+    title: "Fortnite Treasure Hunters One Piece Season Goes Live Today: v43.00 Downtime, Skins, Map and India Timings",
+    description:
+      "Fortnite Treasure Hunters One Piece season goes live November 1, 2026: v43.00 downtime, India timings, Battle Pass and Shop skins, and the Crossbones Isle map.",
+    excerpt:
+      "Fortnite's Treasure Hunters mini-season goes live today, November 1, 2026, as the v43.00 update takes servers offline from 10:30 AM IST and brings the One Piece crossover, a new 80-player island and Devil Fruit mythics.",
+    date: "2026-11-01",
+    category: "Gaming",
+    sections: [
+      {
+        type: "p",
+        text: "Fortnite Treasure Hunters, the One Piece mini-season, goes live today, Sunday, November 1, 2026, and players in India are watching the clock. Epic Games has taken Fortnite offline for the v43.00 update, with downtime starting at 10:30 AM IST, as the game swaps its Chapter 7 Season 4 Override island for a brand-new pirate island built around the Straw Hat Pirates. The Treasure Hunters season closes out Chapter 7 and runs until December 5, 2026, when Epic has confirmed a live end event. Below: the downtime and India timings, the Battle Pass and Item Shop skins, the new map, and the Devil Fruit mythics.",
+      },
+      {
+        type: "h2",
+        text: "Fortnite Treasure Hunters downtime today: India timings and when servers return",
+      },
+      {
+        type: "p",
+        text: "Epic's Fortnite Status account confirmed that downtime for v43.00 begins at 1 AM ET on November 1, with matchmaking ending shortly beforehand. In India that works out to a 10:30 AM IST start, and reports put the expected maintenance window at roughly three hours, until about 1:30 PM IST. New seasons usually take a few hours to come back online, and Epic can extend maintenance if the update hits problems, so the exact moment servers reopen is not fixed in advance. The safest check is the official Fortnite Status account, which posts when matchmaking closes and when servers are back. Players who pre-downloaded the v43.00 update can jump in as soon as servers reopen.",
+      },
+      {
+        type: "h2",
+        text: "Fortnite One Piece skins: Battle Pass and Item Shop schedule",
+      },
+      {
+        type: "p",
+        text: "Epic has split the One Piece roster between the Battle Pass and the Item Shop, and the split matters because the most wanted character is not in the pass. The Treasure Hunters Battle Pass names Portgas D. Ace and Nico Robin as its One Piece headliners, alongside new anime-styled looks for Jonesy, Cuddle Team Leader and Charlotte. Monkey D. Luffy, Nami and Usopp arrive in the Item Shop at season launch on November 1, so Luffy is a Shop purchase, not a Battle Pass reward. Roronoa Zoro, Sanji and a Chopper Sidekick follow on November 7, and Buggy the Clown is listed for November 13. Beyond One Piece, the season brings pirate Hatsune Miku, Kasane Teto, Lil Uzi Vert and A$AP Rocky, with A$AP Rocky and Lil Uzi Vert also getting their own locations on the new map. Epic has not published individual V-Bucks prices for every Shop outfit in its season announcement, so treat fan-made price lists as unconfirmed until the Shop itself refreshes.",
+      },
+      {
+        type: "list",
+        items: [
+          "Treasure Hunters Battle Pass: Portgas D. Ace, Nico Robin, plus anime looks for Jonesy, Cuddle Team Leader and Charlotte",
+          "Item Shop at launch, November 1: Monkey D. Luffy, Nami and Usopp",
+          "Item Shop, November 7: Roronoa Zoro, Sanji and a Chopper Sidekick",
+          "Item Shop, November 13: Buggy the Clown",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Crossbones Isle: Fortnite's new 80-player map and its One Piece locations",
+      },
+      {
+        type: "p",
+        text: "Treasure Hunters replaces the usual 100-player island with Crossbones Isle, a smaller skull-shaped island built for 80 players, with 12 named points of interest. The map is packed with places One Piece fans will recognise: Loguetown, Arlong Park and Windmill Village, plus the Baratie, alongside treasure-themed spots like The Chest. The Going Merry, the Straw Hats' first ship, replaces the Battle Bus for the season, carrying players over the island before they drop. The smaller player count and tighter map are designed to make treasure hunts and crew fights break out faster than on a full-size island, which fits a mini-season built around racing rival crews to loot.",
+      },
+      {
+        type: "h2",
+        text: "One Piece mythics, Devil Fruits and weekly captains in Treasure Hunters",
+      },
+      {
+        type: "p",
+        text: "The October 30 gameplay trailer confirmed Devil Fruits as new mythic items: Luffy's Gum-Gum Fruit powers, Ace's Flame-Flame Fruit, Zoro's Three Sword Style and Usopp's Slingshot are all in, alongside a Shock Rocket tied to the season's battleship location. Epic's plan is that each week a new captain arrives with their own crew and point of interest, with the Straw Hats and A$AP Rocky leading week one and the first Captain's Day scheduled for 9 AM ET on November 1. The mini-season runs for just over a month and ends with a Chapter 7 live event on Saturday, December 5, 2026, though Epic has not revealed the event's start time or details yet. The season was first teased on October 24, when the Going Merry sailed out of the fog in-game, and the full season trailer followed on October 27.",
+      },
+      {
+        type: "h2",
+        text: "How to play Fortnite Treasure Hunters in India today",
+      },
+      {
+        type: "steps",
+        items: [
+          "Update Fortnite to v43.00 on your platform, or let the pre-downloaded update apply once maintenance ends.",
+          "Wait out the downtime, which began at 10:30 AM IST on November 1 and is expected to last roughly three hours; check the Fortnite Status account for the all-clear.",
+          "Before spending V-Bucks, check whether the outfit you want is in the Battle Pass or the Item Shop: Ace and Robin are in the pass, while Luffy, Nami and Usopp are Shop items at launch.",
+          "Drop on Crossbones Isle, hunt treasure chests, and try the Devil Fruit mythics and weekly captain events as they rotate through the season.",
+        ],
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "When does Fortnite Treasure Hunters start in India?",
+            a: "Downtime for the v43.00 update began at 10:30 AM IST on November 1, 2026, and is expected to last roughly three hours. The season is playable once Epic confirms servers are back online.",
+          },
+          {
+            q: "Is Luffy in the Treasure Hunters Battle Pass?",
+            a: "No. Luffy arrives in the Item Shop at season launch on November 1. Portgas D. Ace and Nico Robin are the One Piece characters in the Battle Pass.",
+          },
+          {
+            q: "When does the Fortnite Treasure Hunters season end?",
+            a: "The mini-season ends on December 5, 2026, with a Chapter 7 live event. Epic has not yet revealed the event's start time or details.",
+          },
+          {
+            q: "Is Fortnite Treasure Hunters free to play?",
+            a: "Fortnite Battle Royale is free to play, and the Treasure Hunters island is part of the game. The Battle Pass and Item Shop outfits are paid extras bought with V-Bucks.",
+          },
+        ],
+      },
+    ],
+  },
+  {
     slug: "binance-hack-6-3-billion-fbi-north-korea-withdrawals-november-1-2026",
     image: "https://upload.wikimedia.org/wikipedia/commons/5/57/Binance_Logo.png",
     imageAlt: "The gold Binance logo, the cryptocurrency exchange hit by the October 2026 hack",
