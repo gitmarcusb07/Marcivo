@@ -33,6 +33,95 @@
 
 export const posts = [
   {
+    slug: "florida-learjet-crash-palm-beach-9-killed-november-1-2026",
+    image: "https://img.mathrubhumi.com/view/acePublic/alias/contentid/1uu9x9ji7s3askm6ioy/1/florida-small-plane-crash.webp?f=3%3A2&q=0.75&w=900",
+    imageAlt: "Emergency responders at the Florida Learjet crash site in Palm Beach County, where a private jet crashed on November 1, 2026",
+    title: "Florida Learjet Crash: All 9 Killed as Bahamas-Bound Jet Nosedives Into Palm Beach County",
+    description: "Florida Learjet crash: all 9 aboard a Bahamas-bound Learjet 60 died after it nosedived into Palm Beach County on November 1, officials confirm.",
+    excerpt: "All nine people aboard a Bahamas-bound Learjet 60 were killed when the jet nosedived into a Palm Beach County neighbourhood on November 1, 2026.",
+    date: "2026-11-02",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "The Florida Learjet crash is the breaking story dominating news feeds this morning. All nine people aboard a private Learjet 60 were killed on Sunday, November 1, 2026, when the Bahamas-bound jet nosedived into Palm Beach County, Florida, and erupted into a fireball. US Transportation Secretary Sean Duffy confirmed there were no survivors, calling the disaster a “horrific tragedy”. Dashcam and bystander videos of the plunge have since gone viral."
+      },
+      {
+        type: "h2",
+        text: "What happened in the Florida Learjet crash"
+      },
+      {
+        type: "p",
+        text: "According to the Federal Aviation Administration (FAA), the Learjet 60 had departed Austin-Bergstrom International Airport in Texas and was headed to North Eleuthera Airport in the Bahamas. The aircraft, tail number N722BD, crashed at about 12:50 pm Eastern Time on Sunday near Military Trail and 10th Avenue North, in the Cresthaven area near Greenacres, 7 miles southwest of West Palm Beach. Bystander video captured the jet plunging from the sky before exploding near the roadway. The impact left a large, fiery crater in the pavement as thick black smoke engulfed the area. The jet narrowly missed nearby homes, coming down feet from houses and inches from passing vehicles. The Palm Beach County Sheriff’s Office closed roads in both directions and firefighters rushed to the scene."
+      },
+      {
+        type: "h2",
+        text: "The final minutes: icing, turbulence and a mayday call"
+      },
+      {
+        type: "p",
+        text: "Air traffic control recordings captured by LiveATC.net, reported by CNN and other outlets, reveal a flight in trouble in its final minutes. At 35,000 feet, the pilot reported light, clear ice, moderate turbulence bouncing the plane by up to 700 feet, and an outside temperature of minus 47 degrees Celsius. After reporting precipitation and requesting to climb 2,000 feet, the pilot declared an emergency. “We’re descending 8,000 – mayday, mayday – we’re descending 10,000 feet per minute,” the pilot radioed. Moments later: “We are in an overspeed condition descending 20,000 feet per minute.” Reports put the descent rate as high as 30,000 feet per minute, far beyond the aircraft’s design limits, and CNN cites ADS-B Exchange data showing a 27,000-foot descent in one minute before tracking cut off. The pilot banked sharply right before the jet crashed steeply into the ground, with a final acknowledgement: “We’re going to crash into the ground.” There were scattered storms in the area, and the plane had passed through a stronger storm cell minutes before descending. It is not yet clear whether the weather contributed, and investigators have not said what caused the crash."
+      },
+      {
+        type: "h2",
+        text: "Florida Learjet crash: what is confirmed and what is not"
+      },
+      {
+        type: "list",
+        items: [
+          "Confirmed: All nine people aboard the Learjet 60 were killed, US Transportation Secretary Sean Duffy confirmed.",
+          "Confirmed: The jet departed Austin-Bergstrom International Airport for the Bahamas and crashed at about 12:50 pm Eastern Time on November 1 near Military Trail and 10th Avenue North in Palm Beach County. Its tail number was N722BD.",
+          "Confirmed: The FAA is sending a team to support the NTSB, which is leading the investigation. Investigators were due at the site on Sunday and Monday, with a news conference planned for Monday.",
+          "Confirmed: No deaths or injuries on the ground were immediately reported, Governor Ron DeSantis said, but about 600 people needed shelter because the crash scene blocks a nearby mobile home park entrance.",
+          "Not confirmed: The cause. Officials have not said what made the jet go down, and it is not established that icing or storms caused it.",
+          "Not confirmed: The identities of the nine aboard, how many were passengers and crew, and the operator. Officials had not released those details.",
+          "Not confirmed: Whether a flight recorder survived the explosion, or whether a cockpit voice recorder was on board. CNN notes this was unclear."
+        ]
+      },
+      {
+        type: "h2",
+        text: "The toll on the ground: 600 people evacuated"
+      },
+      {
+        type: "p",
+        text: "No deaths or injuries on the ground were immediately reported, but the crash upended life for hundreds nearby. About 600 residents of a mobile home community needed shelter because the crash scene blocks the entrance to the park and they could not stay there, with residents sent to two shelters while the site is investigated. All northbound and southbound lanes of Military Trail were closed until further notice. Governor DeSantis, who visited the scene, called it a “cataclysmic plane crash” and said: “It looked like a missile going down and left a big crater on the side of the road.” A local resident, Andrew Mannino, told CNN: “I heard and felt the boom. The power immediately went out and is still out.”"
+      },
+      {
+        type: "h2",
+        text: "Why the Florida Learjet crash video went viral"
+      },
+      {
+        type: "p",
+        text: "The footage spread fast because it is horrifyingly close to everyday life: cars on an ordinary road, a jet falling from the sky beside them, a fireball, and a crater where the road used to be. CNN reports the crash is the second deadliest in the United States this year according to NTSB records, following June’s skydiving plane crash in Butler, Missouri, which killed 12 people, and the worst crash involving a Learjet 60 according to Flight Safety Foundation data, after a 2008 Learjet 60 crash that killed four. With a news conference planned for Monday, more details – including the identities of those aboard and the first findings – are expected in the coming days, and this story is still developing."
+      },
+      {
+        type: "h2",
+        text: "Florida Learjet crash FAQs"
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "What happened in the Florida Learjet crash?",
+            a: "A Bahamas-bound Learjet 60 carrying nine people nosedived into a Palm Beach County neighbourhood on November 1, 2026, erupting into a fireball. All nine aboard were killed, Secretary Sean Duffy confirmed."
+          },
+          {
+            q: "Where did the Florida Learjet crash happen?",
+            a: "Near Military Trail and 10th Avenue North, in the Cresthaven area near Greenacres, 7 miles southwest of West Palm Beach, after departing Austin, Texas, for the Bahamas."
+          },
+          {
+            q: "Who died in the Florida Learjet crash?",
+            a: "All nine aboard died, but officials had not released their identities, or said how many were passengers and crew."
+          },
+          {
+            q: "What caused the Florida Learjet crash?",
+            a: "The cause is under investigation by the NTSB, supported by the FAA. The pilot reported icing and turbulence and declared an emergency, but investigators have not said what caused the crash."
+          }
+        ]
+      }
+    ]
+  },
+  {
     slug: "pv-sindhu-lakshya-sen-hylo-open-2026-double-titles-germany",
     image: "https://images.mykhel.com/img/2026/11/hylo-open-12791793554662.jpg",
     imageAlt: "PV Sindhu and Lakshya Sen, the Hylo Open 2026 singles champions, pictured in tournament coverage",
