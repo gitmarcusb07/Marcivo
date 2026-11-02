@@ -33,6 +33,159 @@
 
 export const posts = [
   {
+    slug: "rohtang-pass-maggi-seller-15000-daily-off-season-viral-november-2-2026",
+    image: "https://www.plattershare.com/storage/2025/05/Street-Style-Tadka-Maggi.webp",
+    imageAlt: "A bowl of street-style Maggi noodles, like the plates sold at the viral Rohtang Pass stall",
+    title: "Rohtang Pass Maggi Seller Racks Up Rs 15,000 a Day in Off-Season Sales, Viral Video Shows",
+    description:
+      "A Rohtang Pass Maggi seller's off-season sales of Rs 14,000-15,000 a day have gone viral after creator Harsh Chauhan shared the stall's daily numbers.",
+    excerpt:
+      "A Maggi seller at Himachal Pradesh's Rohtang Pass has gone viral for selling 60-70 plates of Maggi and around 200 cups of tea a day, even in the off-season.",
+    date: "2026-11-02",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "The Rohtang Pass Maggi seller is the internet's favourite small-business story today. A roadside vendor at the high Himachal Pradesh mountain pass has gone viral after content creator Harsh Chauhan asked him a simple question during the off-season: how much do you actually sell in a day? The answer, around 60 to 70 plates of Maggi and nearly 200 cups of tea every single day, has travelled across Instagram and news sites on November 2, 2026, turning a tiny stall at a famous mountain pass into a talking point about small businesses.",
+      },
+      {
+        type: "h2",
+        text: "Rohtang Pass Maggi seller: the viral video and the daily numbers",
+      },
+      {
+        type: "p",
+        text: "The story came to light when Chauhan, who posts as @harshreturns, stopped at the stall during a visit to Rohtang Pass and got curious about how the vendor manages when tourist footfall is low. In the video, he asks the seller how much he earns. The vendor's first answer is modest: it is the off-season, so there is not much earning at this time. Pressed for the actual figures, though, he shares numbers that surprised Chauhan and everyone watching. The vendor says he sells around 60 to 70 plates of Maggi and approximately 200 cups of tea every day, plus a few orders for eggs, though demand for eggs is considerably lower than for Maggi and tea.",
+      },
+      {
+        type: "list",
+        items: [
+          "Maggi: 60-70 plates a day, priced at Rs 100 per plate.",
+          "Tea: around 200 cups a day, priced at Rs 40 per cup.",
+          "Extras: a few egg orders a day, on top of the Maggi and tea sales.",
+          "Estimated daily turnover: Rs 14,000 to Rs 15,000, before any costs are deducted."
+        ],
+      },
+      {
+        type: "p",
+        text: "The maths behind the headline figure is simple, and Chauhan lays it out in the caption of his Instagram video. Sixty plates of Maggi at Rs 100 each come to Rs 6,000, and seventy plates come to Rs 7,000. Two hundred cups of tea at Rs 40 each add Rs 8,000. Put together, that is Rs 14,000 to Rs 15,000 a day in gross sales, and that is before the small number of egg orders is counted. Chauhan's own caption puts it plainly: he and his team went to Rohtang Pass and asked a Maggi seller about his turnover during the off-season, and the seller's own figures produced an estimated daily sales total of around Rs 14,000 to Rs 15,000 per day.",
+      },
+      {
+        type: "h2",
+        text: "Rs 14,000-15,000 is turnover, not profit: the costs behind the Rohtang Pass stall",
+      },
+      {
+        type: "p",
+        text: "The most important detail in this story is also the easiest to miss: Rs 14,000 to Rs 15,000 is the stall's estimated daily turnover, not the vendor's take-home profit. Every outlet carrying the story makes the same distinction, and so do the commenters. Ingredients have to be bought, gas and equipment maintained, and supplies hauled up to a high-altitude pass where the weather is harsh and the work is physically demanding. Several users in the comments made exactly this point, noting that transporting goods to such a remote location costs extra and that the real income, after expenses, would look very different from the gross figure.",
+      },
+      {
+        type: "p",
+        text: "There is also a verification caveat worth stating plainly. The figures come from the vendor himself, as reported by Chauhan in his video, and the news outlets covering the story note that the claims have not been independently verified. That does not make the story false, but the Rs 14,000 to Rs 15,000 figure should be read as the vendor's own account of his daily sales, not as an audited business record.",
+      },
+      {
+        type: "h2",
+        text: "Why the Rohtang Pass Maggi seller video struck a chord",
+      },
+      {
+        type: "p",
+        text: "Part of the appeal is the setting. A hot plate of Maggi at a cold mountain pass is a ritual for generations of Indian travellers, and Rohtang Pass, the high crossing above Manali, is one of the places where that ritual is most famous. Part of it is the off-season twist: these are not peak-summer numbers with crowds everywhere, but the sales of a quiet period, when the vendor himself says business is slow. And part of it is Chauhan's closing line, which has become the story's tagline: so, this is the thing, no business is small.",
+      },
+      {
+        type: "h2",
+        text: "What the off-season numbers suggest about peak season",
+      },
+      {
+        type: "p",
+        text: "Chauhan himself points to the obvious next question. In his caption he writes that this is just the off-season, and asks viewers to imagine the turnover during peak tourist season, when Rohtang Pass fills with travellers heading between Manali and the high valleys beyond. No peak-season figure has been shared, so any number would be a guess, but the logic is clear: if a quiet-period day already produces 60 to 70 plates and 200 cups of tea, a busy summer day at one of Himachal Pradesh's most visited passes would be expected to produce considerably more.",
+      },
+      {
+        type: "h2",
+        text: "Rohtang Pass Maggi seller FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "How much does the Rohtang Pass Maggi seller make a day?", a: "His estimated daily turnover is Rs 14,000 to Rs 15,000 in the off-season. That is gross sales, not profit, since ingredient, transport and stall costs still have to be deducted." },
+          { q: "How many plates of Maggi and cups of tea does he sell daily?", a: "Around 60 to 70 plates of Maggi at Rs 100 per plate, and approximately 200 cups of tea at Rs 40 per cup, plus a few egg orders." },
+          { q: "Who shared the viral Rohtang Pass Maggi seller video?", a: "Content creator Harsh Chauhan, who posts as @harshreturns, shared the video of his conversation with the vendor on Instagram." },
+          { q: "Where is Rohtang Pass?", a: "Rohtang Pass is a high mountain pass in Himachal Pradesh, above Manali, and a popular stop for tourists travelling to the high valleys beyond." },
+          { q: "Are the Rs 15,000-a-day figures verified?", a: "The figures are the vendor's own account, as shared in Chauhan's video. News outlets covering the story note the claims have not been independently verified." }
+        ],
+      },
+    ],
+  },
+  {
+    slug: "chicken-leg-piece-ulhas-kamthe-death-rumours-alive-november-2-2026",
+    image: "https://images.loksattaimg.com/2023/06/Ulhaskamathe9.jpeg",
+    imageAlt: "Food influencer Ulhas Kamthe, known as the Chicken Leg Piece guy, who has dismissed rumours of his death",
+    title: "Chicken Leg Piece Ulhas Kamthe Death Rumours Debunked: 'I Am Alive', Says Influencer",
+    description:
+      "Ulhas Kamthe death rumours are false: the Chicken Leg Piece influencer has posted videos confirming he is alive and well after a panic attack at a premiere.",
+    excerpt:
+      "Food influencer Ulhas Kamthe, famous as the Chicken Leg Piece guy, has dismissed viral rumours claiming he died, confirming he is alive and well.",
+    date: "2026-11-02",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "The Ulhas Kamthe death rumours spreading across social media on November 2, 2026 are false. The food influencer known to millions as the Chicken Leg Piece guy has posted videos confirming he is alive, healthy and doing well, after an undated hospital video was shared online with claims that he had died of a heart attack. The real story is far less alarming: Kamthe suffered a panic attack during a horror film premiere, was checked at a Mumbai hospital, and was discharged within about an hour. His own message to fans was blunt: he is absolutely fine, and he is alive.",
+      },
+      {
+        type: "h2",
+        text: "Ulhas Kamthe death rumours: how an old hospital video sparked false claims",
+      },
+      {
+        type: "p",
+        text: "The confusion began when footage of Kamthe being taken to hospital started circulating again on social media, this time without a date, a caption or any explanation of what had happened. Stripped of context, the clip was paired with sensational claims that the influencer had suffered a fatal heart attack, and the story spread quickly across Instagram and YouTube, leaving fans panicked. The hospital clip itself was real, but the story attached to it was not. It showed a genuine medical visit from an earlier event, not a new emergency, and certainly not a death. Kamthe himself later noted that the false news had been coming for the last two days, which shows how long an out-of-context clip can keep circulating before the person at the centre of it manages to correct the record.",
+      },
+      {
+        type: "h2",
+        text: "What really happened at the Jhaad Phoonk premiere",
+      },
+      {
+        type: "p",
+        text: "The hospital visit dates back to the premiere screening of the horror film Jhaad Phoonk in Mumbai, an event also spelled Zaad-Phoonk in some reports. Kamthe had been reluctant to attend in the first place because he does not handle horror films well, but he agreed to come after a member of the film's team personally invited him. During one of the film's most terrifying scenes, he suffered a sudden anxiety-induced panic attack and fainted in his seat. Members of the film's team, including director Rajan Ramgopal Varma, stepped in immediately and rushed him to Kokilaben Hospital in Mumbai. Emergency doctors examined him, identified the episode as a panic attack, and discharged him after about an hour once his vital signs had stabilised. In the clarification video, Kamthe appeared alongside members of the film's crew to explain what had taken place and to put the death rumours to rest.",
+      },
+      {
+        type: "h2",
+        text: "'Abhi toh main zinda hoon': Kamthe's own response to the death rumours",
+      },
+      {
+        type: "p",
+        text: "Kamthe addressed the rumours directly in a video shared on his Instagram, telling followers that he is absolutely fit and normal and thanking them for their love and concern. His words in the video were simple and memorable: abhi toh main zinda hoon, meaning he is still alive. He thanked the people who had called and messaged him after seeing the footage, and said he was deeply grateful for how much they cared. He has since also shared further videos, including clips from a restaurant opening, showing him out and about and in good health. The message across all of them is consistent: the death reports were wrong, and he is doing completely fine.",
+      },
+      {
+        type: "h2",
+        text: "Panic attack vs heart attack: why the two get confused",
+      },
+      {
+        type: "p",
+        text: "One reason the false story travelled so fast is that a panic attack can look terrifyingly like a cardiac emergency. A panic attack triggers a sudden wave of intense fear, flooding the body with adrenaline even when there is no physical danger, and it can bring a pounding heart, cold sweats, dizziness, shaking, shortness of breath, nausea and sharp chest tightness. A heart attack, by contrast, is a life-threatening emergency caused by blocked blood flow to the heart muscle, and its warning signs, chest pressure, breathlessness, nausea and a rapid pulse, overlap heavily with those of a panic attack. Health experts stress that the two should never be confused by guesswork: persistent chest pain, or discomfort spreading to the arm, jaw or back, always demands immediate emergency medical care, whatever the suspected cause.",
+      },
+      {
+        type: "h2",
+        text: "Who is Ulhas Kamthe, the Chicken Leg Piece guy?",
+      },
+      {
+        type: "p",
+        text: "Kamthe is a food influencer and content creator from Mumbai, Maharashtra, who built a massive online following through his distinct food videos, particularly clips of him enthusiastically eating large platters of chicken and mutton. His energetic style and his repeated spotlight on chicken leg pieces turned him into an instantly recognisable personality across social media, and his catchphrase made him famous far beyond food-video circles. Some reports spell his surname Kamte. That familiarity is exactly why the false death reports generated such an immediate reaction: when a face millions of people recognise appears in a hospital video, the worst interpretation spreads before the facts can catch up. In the end, this story had a simple, relief-filled resolution. Kamthe had a panic attack at a movie, got checked out by doctors, went home, and is doing completely fine.",
+      },
+      {
+        type: "h2",
+        text: "Ulhas Kamthe death rumours FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "Is Ulhas Kamthe dead?", a: "No. Ulhas Kamthe is alive and well. He has posted videos confirming this himself, saying he is absolutely fit and normal." },
+          { q: "What actually happened to Ulhas Kamthe at the film premiere?", a: "He suffered an anxiety-induced panic attack during a scary scene at the Jhaad Phoonk premiere in Mumbai, fainted, was taken to Kokilaben Hospital, and was discharged after about an hour." },
+          { q: "Did Ulhas Kamthe have a heart attack?", a: "No. Doctors identified the episode as a panic attack, not a heart attack. The heart-attack claim came from social media posts sharing the hospital video without context." },
+          { q: "What did Ulhas Kamthe say about the death rumours?", a: "In his video he said he is absolutely fine and alive, thanked fans for their concern, and said he was grateful for their love." },
+          { q: "What is Jhaad Phoonk?", a: "Jhaad Phoonk, also spelled Zaad-Phoonk in some reports, is a Hindi horror film whose premiere Kamthe attended. The film released on JioHotstar on October 30, 2026." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "strait-of-hormuz-tanker-explosions-oil-prices-november-2-2026",
     image: "https://images.investinglive.com/images/Strait%20of%20Hormuz_id_6881abc9-fc01-4219-b86c-567046ca794c_size975.jpg",
     imageAlt: "An oil tanker transiting the Strait of Hormuz, the strategic waterway at the centre of the November 2026 tanker explosions",
