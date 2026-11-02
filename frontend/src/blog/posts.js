@@ -33,6 +33,106 @@
 
 export const posts = [
   {
+    slug: "strait-of-hormuz-tanker-explosions-oil-prices-november-2-2026",
+    image: "https://images.investinglive.com/images/Strait%20of%20Hormuz_id_6881abc9-fc01-4219-b86c-567046ca794c_size975.jpg",
+    imageAlt: "An oil tanker transiting the Strait of Hormuz, the strategic waterway at the centre of the November 2026 tanker explosions",
+    title: "Strait of Hormuz Tanker Explosions: Oil Above $110 as Trump Threatens Iran and Two-Day Reopening Plan Emerges",
+    description: "Strait of Hormuz tanker explosions: Iran claims two tankers hit mines as oil trades above $110 and a two-day reopening plan is floated.",
+    excerpt: "Iran claims two oil tankers, including a supertanker, exploded after hitting mines in the Strait of Hormuz, as oil trades above $110 a barrel and a two-day plan to reopen the waterway is floated.",
+    date: "2026-11-02",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "The Strait of Hormuz tanker explosions are the world story to watch on Monday, November 2, 2026. Iran's Islamic Revolutionary Guard Corps (IRGC) Navy claims two oil tankers, including a supertanker, exploded after striking naval mines while sailing what it calls an unauthorised route through the Strait of Hormuz, one of the world's most important oil export routes. The claim, reported late on Sunday, November 1, has pushed the waterway back to the centre of a war that began in February 2026, sent oil prices above $110 a barrel, and drawn a fresh military threat from United States President Donald Trump. What actually happened to the tankers is still not independently confirmed."
+      },
+      {
+        type: "h2",
+        text: "What Iran claims happened in the Strait of Hormuz"
+      },
+      {
+        type: "p",
+        text: "According to Press TV, citing a statement from the IRGC Navy's Public Relations Office, the two tankers were transiting the Strait of Hormuz through a route Iran had not authorised. The IRGC Navy alleged that both vessels had switched off their navigation and identification systems and ignored repeated warnings against using restricted routes. One of the tankers, a supertanker, suffered a powerful explosion and was engulfed in flames, the statement said, and both vessels were brought to a halt. Iran's account is a claim, not an independently verified fact: no vessel names, nationalities, casualty figures or damage details have been confirmed by outside sources. Iran has controlled passage through the Strait since February 28, 2026, when it barred safe passage for vessels belonging to or affiliated with Israel and the United States after their joint strikes on Iranian territory, and it insists vessels may only use northern lanes it approves, while the United States pushes vessels toward lanes on the southern side of the Strait."
+      },
+      {
+        type: "h2",
+        text: "A second, separate report: the UKMTO projectile warning"
+      },
+      {
+        type: "p",
+        text: "Separately, the United Kingdom Maritime Trade Operations (UKMTO) centre reported an incident in the Strait of Hormuz on November 1. In a warning issued at approximately 1509 UTC, UKMTO said the master of a merchant vessel had relayed a Mayday call on VHF channel 16 stating that another vessel had been struck by an unknown projectile. UKMTO advised vessels transiting the area to exercise caution and report suspicious activity while authorities investigate. It has not been confirmed whether the projectile report and the IRGC's mine claim describe the same incident or two different ones, and that distinction is important: a mine strike and a projectile strike are different kinds of attack with different implications. Saudi Arabia and the United Arab Emirates have also condemned the targeting of the Al Mayeda liquefied natural gas (LNG) carrier, owned by Qatar Gas Transport Company, in the waters of the Arabian Gulf, with Saudi Arabia's Foreign Ministry saying it rejected violations threatening maritime navigation and global energy supplies and expressing solidarity with Qatar."
+      },
+      {
+        type: "h2",
+        text: "Why the Strait of Hormuz tanker explosions matter for oil prices"
+      },
+      {
+        type: "p",
+        text: "The Strait of Hormuz is the narrow channel between Iran and Oman through which a huge share of the world's seaborne oil and gas must pass. On Monday, Brent crude traded around $110 to $112 a barrel and United States West Texas Intermediate crude traded around $102 a barrel, after Brent ended October at its highest level in six months. Prices actually eased by more than 1 percent on Monday, with Brent down $1.59 to $111.84 a barrel and WTI down $1.56 to $102.56 a barrel by 0011 GMT, as traders reacted to the Doha talks rather than to the explosions alone. Tim Waterer, chief market analyst at KCM Trade, told Reuters the move was a technical pullback after strong gains, with hopes of diplomatic progress and the absence of any meaningful military escalation over the weekend taking some of the immediate heat out of prices. He also warned rhetoric around Iran could push Brent toward $120 after the November 3 midterm elections."
+      },
+      {
+        type: "h2",
+        text: "Trump's warning and the two-day plan to reopen the Strait"
+      },
+      {
+        type: "p",
+        text: "President Trump has renewed threats of military action against Iran, saying Washington may eventually have to give Tehran what he called the hammer, as Tehran warned that any new war could last longer than the last one. Iran's Supreme Leader, Ayatollah Mojtaba Khamenei, issued a statement on Saturday ordering the armed forces to be prepared to respond to any attacks, warning of an immediate military response without geographical limits. Trump has said the United States will not launch new attacks on Iran before the midterm vote, and that talks with Tehran have been productive, though he has not ruled out further military action afterwards. United States Secretary of State Marco Rubio said on Saturday that Trump had not decided whether to launch new strikes, but would prefer to resolve the conflict diplomatically. Meanwhile, Iranian Foreign Minister Abbas Araghchi said Qatar-mediated talks had produced a two-day plan: on the first day, the United States would implement a set of measures, and on the second day, the Strait of Hormuz would reopen and transit would return to its previous state. The plan is a proposal, not an agreed deal: reported Iranian conditions include new shipping routes, unfrozen funds, an end to regional wars including in Lebanon, lifting the maritime blockade, exemptions for Iranian oil exports, and removing new post-Islamabad Memorandum sanctions. Washington has not publicly accepted it, and the third-day Doha talks have reached no conclusion on the wider war."
+      },
+      {
+        type: "h2",
+        text: "Strait of Hormuz tanker explosions: what is confirmed and what is not"
+      },
+      {
+        type: "list",
+        items: [
+          "Claimed, not confirmed: The IRGC Navy claims two tankers, including a supertanker, exploded after hitting naval mines on an unauthorised route in the Strait of Hormuz, with their navigation systems switched off. No vessel names, flags, casualty figures or damage details have been independently confirmed.",
+          "Confirmed: UKMTO issued a warning on November 1 at about 1509 UTC about an incident in the Strait, relaying a Mayday report that another vessel had been struck by an unknown projectile. Whether this is the same incident as the IRGC claim is not confirmed.",
+          "Confirmed: Saudi Arabia and the UAE condemned the targeting of the Qatari LNG carrier Al Mayeda in the Arabian Gulf, and Saudi Arabia called for urgent international action to ensure maritime security.",
+          "Confirmed: Brent crude traded above $110 a barrel and WTI above $101 a barrel on Monday, November 2, easing more than 1 percent as Qatar-mediated talks continued, after Brent ended October at a six-month high.",
+          "Confirmed: Iranian and Qatari officials held a third straight day of talks in Doha aimed at ending the US-Israeli war on Iran, and Iran has floated a two-day plan to reopen the Strait. The plan is a proposal, not an agreed deal.",
+          "Not confirmed: The cause of the explosions, the identity and condition of the tankers and their crews, and whether any oil spill or environmental damage occurred. US Central Command has previously denied Iranian accounts of tankers hitting mines, and the two sides have long given conflicting narratives of incidents in the Strait."
+        ]
+      },
+      {
+        type: "h2",
+        text: "What happens next in the Strait of Hormuz"
+      },
+      {
+        type: "p",
+        text: "Three things will decide whether this story escalates or eases. First, whether independent sources identify the tankers, confirm casualties and establish what actually hit them, mine or projectile, because that evidence will settle which account is credible. Second, whether ships actually start moving through the Strait without incident, which would do more to calm oil markets than any statement: talk moves prices for a day or two, but tankers moving safely would move them for months. Third, what happens after the United States midterm elections on November 3, when Trump's pledge not to launch new attacks before the vote expires and his warning about giving Tehran the hammer will be tested. This story is still developing, and updates on vessel identification, the Doha talks and oil prices will follow as they are confirmed."
+      },
+      {
+        type: "h2",
+        text: "Strait of Hormuz tanker explosions FAQs"
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "What happened in the Strait of Hormuz tanker explosions?",
+            a: "Iran's IRGC Navy claims two oil tankers, including a supertanker, exploded after hitting naval mines on an unauthorised route through the Strait of Hormuz on November 1, 2026. The claim is not independently confirmed, and UKMTO separately reported a vessel struck by an unknown projectile."
+          },
+          {
+            q: "How have oil prices reacted to the Hormuz tanker explosions?",
+            a: "Brent crude traded around $110 to $112 a barrel and US crude around $102 a barrel on Monday, November 2, easing more than 1 percent as Qatar-mediated talks continued, after Brent ended October at a six-month high."
+          },
+          {
+            q: "What is the two-day plan to reopen the Strait of Hormuz?",
+            a: "Iranian Foreign Minister Abbas Araghchi said Qatar-mediated talks produced a two-day plan: the US implements a set of measures on day one, and the Strait reopens on day two. It is a proposal, not an agreed deal, and Washington has not publicly accepted it."
+          },
+          {
+            q: "Is the Strait of Hormuz closed?",
+            a: "No confirmed closure has been reported. Iran restricts passage for Israel- and US-affiliated vessels and insists on its approved northern lanes, while the US pushes southern lanes, and shipping continues under severe threat warnings and rising insurance costs."
+          },
+          {
+            q: "What did Trump say about Iran after the tanker explosions?",
+            a: "President Trump renewed threats of military action, saying Washington may eventually have to give Tehran the hammer, while also saying the US will not launch new attacks before the November 3 midterm elections."
+          }
+        ]
+      }
+    ]
+  },
+  {
     slug: "florida-learjet-crash-palm-beach-9-killed-november-1-2026",
     image: "https://img.mathrubhumi.com/view/acePublic/alias/contentid/1uu9x9ji7s3askm6ioy/1/florida-small-plane-crash.webp?f=3%3A2&q=0.75&w=900",
     imageAlt: "Emergency responders at the Florida Learjet crash site in Palm Beach County, where a private jet crashed on November 1, 2026",
