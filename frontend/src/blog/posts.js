@@ -33,6 +33,111 @@
 
 export const posts = [
   {
+    slug: "delhi-police-protest-headquarters-transfers-acp-sho-november-2-2026",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/c0/Delhi_police_headquarters.JPG",
+    imageAlt: "Delhi Police headquarters building (file photo)",
+    title: "Delhi Police Protest: Cops Protest Outside Their Own Headquarters Over ACP, SHO Transfers",
+    description:
+      "Delhi Police protest on November 2: around 80 personnel gathered outside PHQ over the transfers of ACP Manasvi Vashistha and SHO Arun Kumar.",
+    excerpt:
+      "Around 80 Delhi Police personnel gathered outside police headquarters on November 2, 2026, demanding a meeting with the Commissioner over the transfers of two officers after the Shahdara police station scuffle.",
+    date: "2026-11-02",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "A Delhi Police protest took place outside the force's own headquarters on Monday, November 2, 2026, in an unusual show of dissent that quickly went viral. Around 80 to 100 personnel gathered outside Gate No. 1 of the Delhi Police Headquarters (PHQ), demanding that two transferred officers be reinstated and seeking a meeting with the Police Commissioner. Senior officers tried to persuade them to take their grievances inside, but the gathering continued for hours before the group went in for a meeting.",
+      },
+      {
+        type: "h2",
+        text: "Delhi Police protest: what happened outside headquarters today",
+      },
+      {
+        type: "p",
+        text: "The Indian Express put the gathering at around 80 personnel on the footpath outside Gate No. 1, while The Hindu put it at around 100, including women officers holding placards. They assembled around 8 am after messages circulated in Delhi Police WhatsApp groups calling on staff to gather to support the two officers and seek restoration of their previous postings.",
+      },
+      {
+        type: "p",
+        text: "Deputy Commissioner of Police (New Delhi) Sachin Sharma reached the spot soon after the personnel assembled and spoke to ACP Manasvi Vashistha, one of the transferred officers. Sharma urged the personnel not to stage a protest and reminded them of the discipline expected of a police force. He asked some of them to accompany him inside, but initially no one was ready to go in. The protesters demanded a Sampark Sabha, an interactive meeting with the Commissioner.",
+      },
+      {
+        type: "p",
+        text: "NewsBytes reported that around 11:30 am, Vashistha and the other personnel were eventually inside headquarters to meet the Commissioner. The Indian Express had earlier reported that no senior official had stepped out to address the gathering. The outcome of the meeting had not been confirmed in the reports checked.",
+      },
+      {
+        type: "h2",
+        text: "Delhi Police protest: which officers were transferred and why",
+      },
+      {
+        type: "p",
+        text: "The two officers at the centre of the Delhi Police protest are ACP Manasvi Vashistha and Inspector Arun Kumar. Vashistha was posted as the Sub-Divisional Police Officer of Gandhi Nagar in the Shahdara subdivision, while Kumar was the Station House Officer (SHO) of Shahdara police station. On October 28, 2026, Vashistha was transferred to the Special Police Unit for Women and Children (SPUWAC), and Kumar was moved to the Delhi Police Security Branch.",
+      },
+      {
+        type: "p",
+        text: "The transfers followed an incident at Shahdara police station on October 23, 2026, in which an advocate allegedly sustained a serious head injury during a scuffle between police officers and lawyers. That triggered an indefinite strike by Delhi's district court lawyers, who called it off on October 28 after the transfer orders were issued. Exactly what happened inside the station remains contested.",
+      },
+      {
+        type: "h2",
+        text: "Delhi Police protest: the claims on both sides of the Shahdara scuffle",
+      },
+      {
+        type: "p",
+        text: "The protest is rooted in a dispute over who was at fault on October 23. Lawyers accused the officers of assaulting an advocate, and India TV reported that they accused ACP Vashistha of brandishing a pistol. Those are allegations, not findings established in the reports checked.",
+      },
+      {
+        type: "p",
+        text: "On the police side, a sub-inspector at the gathering told reporters that a 30-minute video showed men in black coats assaulting the ACP and the SHO. That is the officer's account; the video has not been independently verified in the reporting checked. In a video circulated on October 31, ACP Vashistha thanked colleagues for their support and sought an open discussion with the Commissioner, with video conferencing for those who could not attend.",
+      },
+      {
+        type: "p",
+        text: "The protesters' demands were procedural as much as personal: a direct hearing with the Commissioner and clarity on the transfers.",
+      },
+      {
+        type: "h2",
+        text: "Delhi Police protest: why it matters beyond one transfer order",
+      },
+      {
+        type: "p",
+        text: "A protest by police personnel outside their own headquarters is rare, which is why this drew so much attention. Police grievances are normally raised through the chain of command, not on the street, so a placard gathering outside PHQ puts the leadership under public pressure to respond.",
+      },
+      {
+        type: "p",
+        text: "The timing added to the sensitivity. The Indian Express reported that district DCPs and unit heads had been asked to ensure their staff did not reach the PHQ for the proposed protest, yet the gathering still took place. It also comes a day before Lieutenant Governor Taranjit Singh Sandhu's scheduled interaction with Delhi Police personnel on November 3 at 4 pm at Utsav Sadan, Kingsway Camp.",
+      },
+      {
+        type: "h2",
+        text: "Delhi Police protest: what happens next",
+      },
+      {
+        type: "list",
+        items: [
+          "The Commissioner meeting: whether the November 2 meeting produces any assurance on the transfers or a Sampark Sabha is the key next development.",
+          "The November 3 interaction: Lieutenant Governor Taranjit Singh Sandhu is scheduled to meet Delhi Police personnel at Utsav Sadan, Kingsway Camp, at 4 pm.",
+          "The Shahdara case: any inquiry findings on the October 23 scuffle will shape whether the transfers stand.",
+          "Discipline questions: whether any action follows against personnel who protested outside headquarters remains open."
+        ],
+      },
+      {
+        type: "p",
+        text: "For now, the verified picture is this: personnel protested outside PHQ on November 2 over two transfer orders, senior officers urged them inside, and by late morning the group had gone in to meet the Commissioner. What that meeting decides has not yet been reported, and any claim of reinstatement should be treated as unconfirmed until officially confirmed.",
+      },
+      {
+        type: "h2",
+        text: "Delhi Police protest FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "Why did Delhi Police personnel protest on November 2, 2026?", a: "They were protesting the October 28 transfers of ACP Manasvi Vashistha and Inspector Arun Kumar, and demanding a Commissioner meeting and restoration of their postings." },
+          { q: "What happened at Shahdara police station on October 23?", a: "A scuffle between police officers and lawyers allegedly left an advocate with a serious head injury. Lawyers struck indefinitely, calling it off on October 28 after the transfers." },
+          { q: "Where did the Delhi Police protest take place?", a: "Outside Gate No. 1 of the Delhi Police Headquarters (PHQ), where around 80 to 100 personnel gathered from about 8 am on November 2." },
+          { q: "Were the transferred officers reinstated?", a: "No reinstatement has been confirmed. Around 11:30 am the personnel went inside PHQ to meet the Commissioner, but the outcome had not been publicly reported." },
+          { q: "What is a Sampark Sabha?", a: "It is an interactive meeting, in this case sought with the Police Commissioner, where personnel can raise concerns directly with senior leadership." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "delhi-guwahati-bullet-train-corridor-approved-route-travel-time",
     image: "https://www.punenow.com/wp-content/uploads/2026/02/Mumbai-Pune-Bullet-Train.jpg",
     imageAlt: "A modern high-speed bullet train at a station platform (representational image)",
