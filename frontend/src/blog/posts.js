@@ -33,6 +33,101 @@
 
 export const posts = [
   {
+    slug: "pv-sindhu-lakshya-sen-hylo-open-2026-double-titles-germany",
+    image: "https://images.mykhel.com/img/2026/11/hylo-open-12791793554662.jpg",
+    imageAlt: "PV Sindhu and Lakshya Sen, the Hylo Open 2026 singles champions, pictured in tournament coverage",
+    title: "PV Sindhu and Lakshya Sen Win Hylo Open 2026: India's Historic Double Titles in Germany",
+    description:
+      "PV Sindhu and Lakshya Sen won the Hylo Open 2026 singles titles in Germany, beating Line Kjaersfeldt and Jonatan Christie in straight games on November 1.",
+    excerpt:
+      "PV Sindhu and Lakshya Sen swept both singles titles at the Hylo Open 2026 in Saarbrucken, Germany, on Sunday, November 1.",
+    date: "2026-11-02",
+    category: "Sports",
+    sections: [
+      {
+        type: "p",
+        text: "PV Sindhu and Lakshya Sen have given Indian badminton a Super Sunday to remember. At the Hylo Open 2026 in Saarbrucken, Germany, on Sunday, November 1, Sindhu and Sen both won their singles finals in straight games, sweeping the women's and men's titles at the BWF Super 500 tournament. Sindhu beat Denmark's Line Hojmark Kjaersfeldt 21-12, 21-14, and Sen beat Indonesia's Jonatan Christie 21-17, 21-10. Each final lasted just 39 minutes. It is the first time in four years that two Indian shuttlers have won singles titles at the same BWF World Tour event at Super 500 level or above, and it caps a remarkable fortnight for Sindhu and ends a year-long title wait for Sen.",
+      },
+      {
+        type: "h2",
+        text: "Hylo Open 2026: PV Sindhu beats Line Kjaersfeldt in the women's final",
+      },
+      {
+        type: "p",
+        text: "PV Sindhu, the second seed and world No. 8, set the tone for India's double. She took control early against Kjaersfeldt, the world No. 25 from Denmark, after the first game was tied at five-all, and never let the Dane back into the match. Sindhu had lost just once to Kjaersfeldt in seven meetings before the final, and she played like it, staying in front throughout the second game to close out a 21-12, 21-14 win in 39 minutes. She won every match at the tournament in straight games, including a semi-final win over compatriot Anmol Kharb.",
+      },
+      {
+        type: "p",
+        text: "This is Sindhu's second title of the season, after the Japan Open Super 750 in July, and her first season since 2022 with multiple BWF World Tour titles. It follows a runner-up finish at the French Open last week, where she lost to world No. 1 An Se-young of South Korea, so the Hylo Open win completes an impressive two-week run. Sindhu now has seven BWF World Tour titles in total. The win also earned her 9,200 ranking points, keeping her in contention for the season-ending BWF World Tour Finals. After the final she credited her team's planning and stressed staying calm.",
+      },
+      {
+        type: "h2",
+        text: "Hylo Open 2026: Lakshya Sen beats Jonatan Christie in the men's final",
+      },
+      {
+        type: "p",
+        text: "Lakshya Sen completed the double later in the day with an equally commanding display. The seventh seed and world No. 14 started fast against Christie, opening up an 8-4 lead with deft net play and sharp angles, before the Indonesian fought back with a run of points to lead 9-8. Sen recovered his composure, regained control through solid defence and well-directed smashes, and took the first game 21-17. The second game was far more one-sided: Sen raised his intensity, turned defence into counter-attack, and sealed the title 21-10 in 39 minutes.",
+      },
+      {
+        type: "p",
+        text: "The win ends a title drought that stretched back to the Australian Open in November 2025, and it is Sen's first tournament victory of the season. It is also his second Hylo Open crown, after his first in 2019 when the tournament was rated a Super 100 event, and it levels his career head-to-head record against Christie at 4-4. Sen now has five BWF World Tour titles, plus two Super 100 crowns. He had reached the All England final earlier in 2026 but had struggled for consistency since, in a season disrupted by injuries.",
+      },
+      {
+        type: "h2",
+        text: "Hylo Open 2026 results: full scores from both finals",
+      },
+      {
+        type: "list",
+        items: [
+          "Women's singles final: PV Sindhu (India, 2nd seed) beat Line Hojmark Kjaersfeldt (Denmark) 21-12, 21-14 in 39 minutes.",
+          "Men's singles final: Lakshya Sen (India, 7th seed) beat Jonatan Christie (Indonesia) 21-17, 21-10 in 39 minutes.",
+          "Tournament: Hylo Open 2026, BWF Super 500, at the Saarlandhalle in Saarbrucken, Germany, with a prize pool of USD 500,000.",
+          "Sindhu's season so far: Japan Open champion in July, French Open runner-up last week, Hylo Open champion on November 1.",
+          "Sen's season so far: All England finalist earlier in 2026, Hylo Open champion on November 1, his first title since November 2025."
+        ],
+      },
+      {
+        type: "h2",
+        text: "Why the Hylo Open 2026 double matters for Indian badminton",
+      },
+      {
+        type: "p",
+        text: "A double like this is rare because it needs two players to peak in the same week. Sindhu's win shows her late-season form is real: two titles and a French Open final in a short stretch, after a difficult 2025 campaign, is a player rediscovering her rhythm, not enjoying one good week. Sen's win matters differently: he has reached finals all year, as at the All England Championships, but converting finals into titles after injury interruptions is the step he needed, and he took it.",
+      },
+      {
+        type: "p",
+        text: "There is also a practical prize beyond the trophies. Sindhu's 9,200 ranking points strengthen her bid for the season-ending World Tour Finals. For Sen, a title and a level head-to-head against a top Indonesian rival are exactly the confidence boost players want before the closing stretch of a season.",
+      },
+      {
+        type: "h2",
+        text: "How to follow PV Sindhu and Lakshya Sen after the Hylo Open 2026",
+      },
+      {
+        type: "steps",
+        items: [
+          "Watch the updated BWF rankings, where Sindhu's 9,200 points should improve her World Tour Finals qualification position.",
+          "Follow the next BWF World Tour events, where both champions are likely to be seeded against the same top rivals.",
+          "Rewatch the two turning points: Sindhu pulling away after five-all, and Sen steadying himself after Christie led 9-8.",
+          "Keep an eye on the World Tour Finals race, which now shapes the rest of both players' seasons."
+        ],
+      },
+      {
+        type: "h2",
+        text: "Hylo Open 2026 FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "Who won the Hylo Open 2026 singles titles?", a: "India's PV Sindhu won the women's title and Lakshya Sen won the men's title, both on November 1, 2026." },
+          { q: "What were the Hylo Open 2026 final scores?", a: "Sindhu beat Line Hojmark Kjaersfeldt 21-12, 21-14, and Sen beat Jonatan Christie 21-17, 21-10. Both finals lasted 39 minutes." },
+          { q: "Is this PV Sindhu's first title of 2026?", a: "No. It is her second title of the season after the Japan Open in July." },
+          { q: "When did Lakshya Sen last win a title before the Hylo Open 2026?", a: "At the Australian Open in November 2025, so the Hylo Open ended a year-long wait." },
+          { q: "What level is the Hylo Open?", a: "The Hylo Open is a BWF Super 500 tournament, held at the Saarlandhalle in Saarbrucken, Germany, with a prize pool of USD 500,000." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "amitabh-bachchan-bulletproof-glass-jalsa-fans-november-1-2026",
     image: "https://feeds.abplive.com/onecms/images/uploaded-images/2026/11/02/7e24009b68128a6c655395487a23330717935835107991347_original.png?impolicy=abp_cdn&imwidth=1200&height=675",
     imageAlt: "Amitabh Bachchan greeting fans from behind a transparent bulletproof enclosure outside his Mumbai home Jalsa",
