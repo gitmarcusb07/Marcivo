@@ -33,6 +33,229 @@
 
 export const posts = [
   {
+    slug: "punjab-aap-mlas-join-bjp-2027-polls-november-2-2026",
+    image: "https://cdn.indiavoice.com/wp-content/uploads/2022/03/PB-VIDHAN.jpg",
+    imageAlt: "Punjab Legislative Assembly (file photo)",
+    title: "Punjab AAP MLAs Join BJP: 3 Rebel MLAs Quit Ahead of 2027 Polls",
+    description:
+      "Punjab AAP MLAs join BJP on November 2: three sitting MLAs quit the ruling party and joined the BJP ahead of the 2027 Punjab Assembly elections.",
+    excerpt:
+      "Three sitting Punjab AAP MLAs joined the BJP in New Delhi on November 2, 2026, dealing a setback to the ruling party months before the 2027 Assembly elections.",
+    date: "2026-11-02",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "Three Punjab AAP MLAs join BJP ranks on Monday, November 2, 2026, in a major setback for the ruling Aam Aadmi Party (AAP) ahead of the 2027 Punjab Assembly elections. Kunwar Vijay Pratap Singh, Harmeet Singh Pathanmajra and Chetan Singh Jouramajra joined the Bharatiya Janata Party (BJP) at its New Delhi headquarters, in the presence of Punjab in-charge Satish Poonia and Punjab BJP president Kewal Singh Dhillon.",
+      },
+      {
+        type: "p",
+        text: "The defections came days after AAP released its first list of 40 candidates for the 2027 elections. The departing leaders accused the Bhagwant Mann government of failing on drugs, law and order and debt, while AAP accused the BJP of recruiting leaders who had left or been expelled by other parties. Claims that more MLAs could follow are, for now, claims, not confirmed defections.",
+      },
+      {
+        type: "h2",
+        text: "Punjab AAP MLAs join BJP: what happened in Delhi today",
+      },
+      {
+        type: "p",
+        text: "The BJP announced the inductions on its official X account on November 2, naming all three leaders. The Hindu, Business Today, The Times of India and The New Indian Express all reported the joining the same day.",
+      },
+      {
+        type: "p",
+        text: "Pathanmajra and Jouramajra had resigned from AAP's primary membership on Sunday, November 1. Singh announced on Monday that he had resigned from the Punjab Legislative Assembly itself, sharing his letter to Speaker Kultar Singh Sandhwan on Facebook. It said the resignation took effect from November 1, 2026.",
+      },
+      {
+        type: "p",
+        text: "By the afternoon, the story was still developing: news agency IANS reported that AAP had begun preparing to seek the disqualification of two of the MLAs who quit on Sunday. That reported move, if filed, would test whether the switch triggers anti-defection proceedings.",
+      },
+      {
+        type: "h2",
+        text: "Punjab AAP MLAs join BJP: who are the three leaders",
+      },
+      {
+        type: "p",
+        text: "Kunwar Vijay Pratap Singh was the AAP MLA from Amritsar North and a former IPS officer who probed the 2015 Kotkapura and Behbal Kalan police-firing cases. He was suspended from AAP in June 2025, reportedly for five years, over alleged anti-party activities.",
+      },
+      {
+        type: "p",
+        text: "Harmeet Singh Pathanmajra represented Sanaur and Chetan Singh Jouramajra represented Samana, both in Patiala district. Jouramajra was a Cabinet minister from January 2023 to September 2024. Neither seat figured in AAP's first candidate list, and the party had appointed new constituency in-charges in both.",
+      },
+      {
+        type: "h2",
+        text: "Punjab AAP MLAs join BJP: why they say they quit",
+      },
+      {
+        type: "p",
+        text: "The three leaders gave overlapping reasons, all aimed at the Mann government's record. Pathanmajra and Jouramajra said the party had failed to fulfil its 2022 promises, particularly making Punjab drug-free. They also raised law and order, farmers' issues, rising debt and shortages in schools and hospitals.",
+      },
+      {
+        type: "p",
+        text: "Pathanmajra said Punjab was now known as Udta Punjab and should become Ubharta Punjab, and he alleged the government had taken on around Rs 2.5 lakh crore in loans. That loan figure is his allegation, not a verified figure. Jouramajra alleged a mining mafia and scams in government schemes, and said Punjab needed a double-engine government, meaning the same party at the Centre and in the state.",
+      },
+      {
+        type: "p",
+        text: "Singh was the most blunt. He described his five years in AAP as an internship that had now ended, said the party was finished in Punjab in practical terms, and held national convenor Arvind Kejriwal and Chief Minister Bhagwant Mann responsible. He predicted a BJP double-engine government after the next election. Those are his political claims, which AAP rejects.",
+      },
+      {
+        type: "h2",
+        text: "Punjab AAP MLAs join BJP: how AAP hit back",
+      },
+      {
+        type: "p",
+        text: "AAP's Punjab chief Aman Arora accused the BJP of inducting leaders who had left or been expelled by other parties, while spokesperson Kuldeep Singh Dhaliwal mocked the BJP as a kabaad di dukaan, or junk shop. The party's line is that these were already sidelined figures, not a collapse of its core.",
+      },
+      {
+        type: "p",
+        text: "Congress MP Manish Tewari called Aaya Ram, Gaya Ram politics damaging, while Shiromani Akali Dal leader Daljit Singh Cheema predicted more exits once the Model Code of Conduct comes into force. That is a prediction, not a fact.",
+      },
+      {
+        type: "h2",
+        text: "Punjab AAP MLAs join BJP: what it means for the 2027 election",
+      },
+      {
+        type: "p",
+        text: "In 2022, AAP won 92 of the 117 seats, far above the majority mark of 59, while Congress won 18, the Shiromani Akali Dal three and the BJP just two. Even after losing three MLAs, AAP would still hold a large majority, so the defections do not by themselves threaten the government. Their importance is political: they signal dissent and feed an anti-incumbency narrative.",
+      },
+      {
+        type: "p",
+        text: "The elections are due in early 2027, with polling expected around February to March, and the Assembly's term ends on March 16, 2027. Jouramajra suggested some ticket-holders might relinquish their tickets and join the BJP. Whether that happens will test whether November 2 was a one-day story or a larger exodus.",
+      },
+      {
+        type: "h2",
+        text: "Punjab AAP MLAs join BJP: what happens next",
+      },
+      {
+        type: "list",
+        items: [
+          "The Speaker's decision on Singh's Assembly resignation.",
+          "Disqualification petitions: whether AAP follows through on the reported plan for the MLAs who quit on Sunday.",
+          "More exits or not: whether any other AAP leader actually switches, as the departing leaders predict.",
+          "Candidate lists: how AAP fills Samana and Sanaur, and whether the BJP fields any of the three.",
+          "The campaign narrative: whether drugs, debt and law and order define the Punjab election, as the defectors argue."
+        ],
+      },
+      {
+        type: "p",
+        text: "For now, the verified picture is this: three sitting Punjab MLAs quit AAP and joined the BJP in Delhi on November 2, citing unfulfilled promises and governance failures, and AAP has hit back while reportedly preparing a disqualification move. Claims of a wider exodus remain unproved.",
+      },
+      {
+        type: "h2",
+        text: "Punjab AAP MLAs join BJP FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "Which Punjab AAP MLAs joined the BJP?", a: "Kunwar Vijay Pratap Singh (Amritsar North), Harmeet Singh Pathanmajra (Sanaur) and Chetan Singh Jouramajra (Samana)." },
+          { q: "When did the three leaders quit AAP?", a: "Pathanmajra and Jouramajra resigned from AAP on Sunday, November 1, while Singh announced his resignation from the Punjab Assembly on Monday, November 2." },
+          { q: "Why did the Punjab AAP MLAs join the BJP?", a: "They cited unfulfilled 2022 promises, drugs, law and order, rising debt and governance failures." },
+          { q: "Does this threaten the AAP government in Punjab?", a: "No: AAP won 92 of 117 seats in 2022, well above the majority mark of 59." },
+          { q: "When are the next Punjab Assembly elections?", a: "Early 2027, with polling expected around February to March; the Assembly's term ends on March 16, 2027." }
+        ],
+      },
+    ],
+  },
+  {
+    slug: "phantom-blade-zero-4-million-copies-72-hours-steam-peak-november-2-2026",
+    image: "https://gmedia.playstation.com/is/image/SIEPDC/phantom-blade-zero-store-artwork-01-en-26feb26?$1200px$",
+    imageAlt: "Phantom Blade Zero official PlayStation store artwork",
+    title: "Phantom Blade Zero Sells 4 Million Copies in 72 Hours as Steam Peak Passes 833,000",
+    description:
+      "Phantom Blade Zero 4 million copies sold in 72 hours, developer S-GAME announced on November 2, with a Steam peak of 833,921 players.",
+    excerpt:
+      "S-GAME's wuxia action RPG Phantom Blade Zero has sold over 4 million copies in its first 72 hours, with a record Steam peak of 833,921 concurrent players.",
+    date: "2026-11-02",
+    category: "Gaming",
+    sections: [
+      {
+        type: "p",
+        text: "Phantom Blade Zero 4 million copies sold in just 72 hours: developer S-GAME announced the milestone on November 2, 2026, confirming one of the biggest game launches of the year. The wuxia action RPG, available on PlayStation 5 and PC, also peaked at 833,921 concurrent players on Steam on November 1, putting it among the most-played games in Steam's history.",
+      },
+      {
+        type: "p",
+        text: "The announcement came from the game's official X account, which thanked players for what it called overwhelming support. Gadgets 360, Dot Esports, Insider Gaming, GameWatcher and GamingBolt all reported the same figure on November 2, and the game was trending in gaming coverage on the day, making this a genuine same-day gaming story rather than a routine sales update.",
+      },
+      {
+        type: "h2",
+        text: "Phantom Blade Zero 4 million copies: the launch numbers",
+      },
+      {
+        type: "p",
+        text: "The headline numbers are striking. Phantom Blade Zero sold over 4 million copies across all platforms in its first three days, according to S-GAME, without a platform-by-platform breakdown. On Steam alone, the game reached an all-time peak of 833,921 concurrent players on November 1, according to SteamDB charts cited by multiple outlets, after passing 700,000 concurrent players on launch day itself.",
+      },
+      {
+        type: "p",
+        text: "Review scores help explain the momentum. The game holds a Metacritic score of 88, with user scores of 8.8 on PC and 9.3 on PS5 reported by Inven Global, and IGN awarded it 9 out of 10, praising its smooth combat and memorable boss battles. GamingBolt noted that the Steam peak made it the 14th most-played title in the platform's history, and Gadgets 360 reported it was among the most played games on Steam right now, behind only the free-to-play multiplayer giant Counter-Strike 2.",
+      },
+      {
+        type: "h2",
+        text: "Phantom Blade Zero 4 million copies: what kind of game is it",
+      },
+      {
+        type: "p",
+        text: "Phantom Blade Zero is a wuxia action-adventure game inspired by Chinese martial arts, from Chinese studio S-GAME. Players follow Soul, an assassin on a quest to clear his name after being accused of his mentor's murder, through fast-paced combat and boss encounters in an ink-wash-inspired world. It is the studio's first major release outside mobile gaming, which makes the scale of the launch even more notable.",
+      },
+      {
+        type: "p",
+        text: "The game launched on PlayStation 5 and PC via Steam and the Epic Games Store, as a digital-only release, with the standard edition priced at $59.99. A physical PlayStation 5 edition is scheduled for 2027. The launch had been delayed from September 9 to late October so the studio could ship a stronger version rather than relying on post-launch patches, a decision that appears to have paid off in both reviews and sales.",
+      },
+      {
+        type: "h2",
+        text: "Phantom Blade Zero 4 million copies: why the launch was so big",
+      },
+      {
+        type: "p",
+        text: "The demand was visible before launch. The game had topped three million wishlists across PS5 and PC by September, and market research firm Alinea Analytics estimated it had sold around 850,000 digital copies ahead of launch, with about 73.8 percent on Steam and 26.2 percent on PS5. That estimate is not S-GAME's own figure, but it shows how much pre-release momentum the game carried.",
+      },
+      {
+        type: "p",
+        text: "Phantom Blade Zero also follows in the footsteps of other Chinese breakout hits. Game Science's Black Myth: Wukong sold ten million copies in its first four days in 2024 and became the second most-played title of all time on Steam, while Wuchang: Fallen Feathers was another major Chinese release in 2025. Phantom Blade Zero is not at that level yet, but a 4-million-copy opening weekend puts it firmly in the same conversation.",
+      },
+      {
+        type: "h2",
+        text: "Phantom Blade Zero 4 million copies: not a flawless launch",
+      },
+      {
+        type: "p",
+        text: "It has not been entirely smooth. GameWatcher reported that performance complaints had not disappeared entirely, and that the studio had acknowledged further bug fixes were needed. The developer also warned that Nvidia's 621.01 driver was causing performance instability, recommending affected players roll back to version 617.42 with a clean installation.",
+      },
+      {
+        type: "p",
+        text: "Alongside the sales announcement, S-GAME said it had recorded player feedback and was working on optimisations, with a further round of fixes for more obvious bugs planned for the near future. For a game selling at this pace, how quickly those fixes land will matter almost as much as the opening weekend.",
+      },
+      {
+        type: "h2",
+        text: "Phantom Blade Zero 4 million copies: what happens next",
+      },
+      {
+        type: "list",
+        items: [
+          "Bug-fix updates: S-GAME's promised optimisation and bug-fix rounds, and whether performance complaints fade.",
+          "The next sales milestone: whether the game pushes past 5 million copies and towards the 1-million concurrent player mark on Steam.",
+          "The physical edition: the PlayStation 5 physical release scheduled for 2027, which could bring a second sales wave.",
+          "Awards season: with a Metacritic score of 88 and an IGN 9 out of 10, the game is now firmly in year-end best-game conversations."
+        ],
+      },
+      {
+        type: "p",
+        text: "For now, the verified picture is this: Phantom Blade Zero sold over 4 million copies in 72 hours, peaked at 833,921 concurrent players on Steam, and earned some of the strongest reviews of 2026. It is one of the fastest-selling games of the year, and the launch weekend has made S-GAME a studio to watch.",
+      },
+      {
+        type: "h2",
+        text: "Phantom Blade Zero 4 million copies FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "How many copies has Phantom Blade Zero sold?", a: "Over 4 million copies in its first 72 hours, according to developer S-GAME's announcement on November 2, 2026." },
+          { q: "What is Phantom Blade Zero's Steam peak player count?", a: "833,921 concurrent players on November 1, 2026, according to SteamDB charts cited by multiple gaming outlets." },
+          { q: "What platforms is Phantom Blade Zero on?", a: "PlayStation 5 and PC via Steam and the Epic Games Store, as a digital-only release for now, with a physical PS5 edition scheduled for 2027." },
+          { q: "What is Phantom Blade Zero about?", a: "It is a wuxia action RPG where players follow Soul, an assassin trying to clear his name after being accused of his mentor's murder." },
+          { q: "How much does Phantom Blade Zero cost?", a: "The standard edition costs $59.99 on PlayStation 5 and PC." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "delhi-police-protest-headquarters-transfers-acp-sho-november-2-2026",
     image: "https://upload.wikimedia.org/wikipedia/commons/c/c0/Delhi_police_headquarters.JPG",
     imageAlt: "Delhi Police headquarters building (file photo)",
