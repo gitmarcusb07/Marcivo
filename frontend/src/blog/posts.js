@@ -33,97 +33,130 @@
 
 export const posts = [
   {
-    slug: "rishabh-pant-fails-fitness-test-new-zealand-tour-second-test-november-2-2026",
-    image: "https://media.crictracker.com/media/attachments/1750506721747_Rishabh-Pant.jpeg",
-    imageAlt: "Rishabh Pant in India colours (file photo)",
-    title: "Rishabh Pant Fails Fitness Test Ahead of New Zealand Tour: Second Chance to Prove Readiness",
+    slug: "delhi-aqi-today-very-poor-first-time-season-grap-stage-2-november-2-2026",
+    image: "https://i.natgeofe.com/n/a295913d-5a4c-4e2f-93f0-731a95d8d8e3/1-delhi-smog.jpg?w=1280&",
+    imageAlt: "Delhi skyline shrouded in thick smog (file photo)",
+    title: "Delhi AQI Today: Air Turns 'Very Poor' for the First Time This Season as GRAP Stage 2 Kicks In",
     description:
-      "Rishabh Pant fitness test: India keeper reportedly failed his first BCCI assessment in Bengaluru and must clear a second test to tour New Zealand.",
+      "Delhi AQI today crossed 300 into 'very poor' for the first time this season on November 2, 2026. Check area-wise readings, GRAP rules and health tips.",
     excerpt:
-      "Rishabh Pant has reportedly failed his first fitness test at the BCCI Centre of Excellence in Bengaluru, leaving his New Zealand tour place to a second assessment within two days.",
+      "Delhi's air quality slipped into the 'very poor' category for the first time this season on November 2, 2026, with the city's AQI recorded at 312 in the morning.",
     date: "2026-11-02",
-    category: "Sports",
+    category: "News",
     sections: [
       {
         type: "p",
-        text: "Rishabh Pant fitness test news broke on November 2, 2026, with reports saying India's star wicketkeeper-batter failed his first fitness assessment at the BCCI Centre of Excellence in Bengaluru on Sunday, November 1. According to ESPNcricinfo, whose report was carried by News18, ABP Live, CricTracker, the Free Press Journal and others through the afternoon, Pant has been given another chance to prove his fitness before he can board the flight to New Zealand for the two-Test series. His place on that tour now depends on a second assessment, expected within the next two days.",
+        text: "Delhi AQI today has turned 'very poor' for the first time this season. On Monday, November 2, 2026, Delhi's overall Air Quality Index (AQI) was 312 at 9 am, per Central Pollution Control Board (CPCB) data reported by PTI, putting the capital in the 301 to 400 'very poor' band. The Indian Express reported a morning reading of 310, up from 277 a day earlier. In short, the air is unhealthy for prolonged outdoor exposure today, and the stricter GRAP stage now applies.",
       },
       {
         type: "p",
-        text: "This is important precision: the reports describe a failed first test and a second chance, not a final ruling-out. No BCCI statement confirming the result was quoted in the November 2 coverage, and head coach Gautam Gambhir said on Sunday that he had no information about Pant's availability. The BCCI medical team's second test will settle whether he joins the squad in New Zealand.",
+        text: "This is not a one-station spike. Readings above 300 were reported across the city, neighbouring Noida also entered the 'very poor' category at 311, and Delhi Traffic Police stepped up enforcement of vehicle restrictions that came into force on November 1. The slide came a day after Delhi's Winter Action Plan took effect.",
       },
       {
         type: "h2",
-        text: "Rishabh Pant fitness test: how the injury happened",
+        text: "Delhi AQI today: area-wise readings on November 2, 2026",
       },
       {
         type: "p",
-        text: "Pant's fitness battle traces back to a side strain he suffered during the Irani Cup in early October, while leading Rest of India against Jammu and Kashmir in Srinagar. He has been out of competitive action since then. On October 23 he reported to the BCCI Centre of Excellence in Bengaluru, where he has been working through a structured rehabilitation programme that, according to the reports, has included both batting drills and wicketkeeping sessions.",
-      },
-      {
-        type: "p",
-        text: "The selectors had already flagged the uncertainty when they picked the squads: Pant was named in India's Test squad for New Zealand and in the India A squad, but with an asterisk against his name marking his selection as subject to fitness. He was also ruled out of the first two four-day tour fixtures between India A and New Zealand A, with uncapped Kumar Kushagra brought in as cover. The first fitness test at the Centre of Excellence was therefore always going to be a decisive checkpoint, and the reported failure means the asterisk stays in place for now.",
-      },
-      {
-        type: "h2",
-        text: "Rishabh Pant fitness test: what the second test decides",
-      },
-      {
-        type: "p",
-        text: "If Pant clears the second assessment, the reported plan is for him to join the India A squad for the third four-day match against New Zealand A in Lincoln, which starts on November 7 and runs to November 10. That match would serve as his preparation and match practice ahead of the Test series itself. If he does not clear it, his trip to New Zealand, and his availability for the Tests, would be in serious doubt, and the team management would have to lean on its backup options behind the stumps.",
+        text: "CPCB Sameer app and station readings on November 2 show how widespread the deterioration was. These are morning readings, not the full-day average published later, so areas may move by evening. Most of the city sat in the 'poor' or 'very poor' range, with several hotspots near the top of the 'very poor' band.",
       },
       {
         type: "list",
         items: [
-          "First fitness test: reportedly failed on Sunday, November 1, at the BCCI Centre of Excellence in Bengaluru.",
-          "Second fitness test: expected within the next two days, to decide whether Pant can travel to New Zealand.",
-          "India A third four-day match: New Zealand A vs India A in Lincoln, November 7 to 10, if Pant is cleared.",
-          "First Test: India vs New Zealand at the Basin Reserve, Wellington, starting November 19.",
-          "Second Test: India vs New Zealand in Christchurch, starting November 27."
+          "Rohini: 396 (very poor), the highest reported",
+          "Alipur: 375 (very poor) and Vivek Vihar: 370 (very poor)",
+          "Chandni Chowk: 358, ITO: 349 and Akshardham: 349 (all very poor)",
+          "Jawaharlal Nehru Stadium: 343 (very poor) and India Gate and Janpath: 335 (very poor)",
+          "Burari: 308 (very poor), Aya Nagar: 276 (poor) and IGI Airport Terminal 3: 263 (poor)",
+          "Noida: 311 (very poor); Ghaziabad at 278 and Gurugram at 230 were 'poor'",
         ],
       },
       {
-        type: "h2",
-        text: "Rishabh Pant fitness test: who keeps wicket if he misses out",
-      },
-      {
         type: "p",
-        text: "Dhruv Jurel is the designated backup wicketkeeper in India's main Test squad for New Zealand, and he has already stepped in behind the stumps in the India A fixtures that Pant missed. Jurel's presence means India are not left without a specialist keeper, but Pant's absence would still be a major blow: he is the first-choice keeper-batter, a match-winner in Test cricket, and a senior voice in the dressing room. That is why the second test matters so much, and why the reports on November 2 spread so quickly among Indian cricket fans.",
-      },
-      {
-        type: "p",
-        text: "Fast bowler Jasprit Bumrah, by contrast, departed for New Zealand on Sunday and is pencilled in for the same third four-day match in Lincoln, according to CricTracker. Pant's reported setback shows how finely balanced India's preparations remain less than three weeks before the Wellington Test.",
+        text: "For context, the CPCB scale runs from 0 to 50 for 'good' to 401 to 500 for 'severe'. Delhi at 312 sits just inside the 'very poor' band, but Rohini, at 396, was close to 'severe', which is why your local reading can feel quite different from the city average.",
       },
       {
         type: "h2",
-        text: "Rishabh Pant fitness test: what happens next",
+        text: "What GRAP Stage 2 means for Delhi",
+      },
+      {
+        type: "p",
+        text: "The Graded Response Action Plan (GRAP) is Delhi's staged emergency framework, operated by the Commission for Air Quality Management (CAQM). Stage 2 is associated with the 'very poor' band of 301 to 400, and the CAQM's sub-committee invokes it based on readings and forecasts. Reports on November 2 said crossing 300 activated Stage 2, adding stricter curbs on top of Stage 1 restrictions that began on November 1.",
+      },
+      {
+        type: "p",
+        text: "The most visible change concerns vehicles. The Indian Express reported that, under the revised GRAP, petrol and diesel vehicles registered outside Delhi that do not meet BS-VI standards are barred from entering the capital until January 31, 2027, while electric and CNG vehicles are exempt. Non-BS-VI commercial goods vehicles and buses face restrictions too. Delhi Traffic Police said they checked 7,279 vehicles on November 1, turned back 714 and impounded 38.",
       },
       {
         type: "list",
         items: [
-          "Second assessment: the BCCI medical team is expected to test Pant again within two days of the reported first-test failure.",
-          "Travel decision: clearance from that test determines whether Pant boards the flight to New Zealand.",
-          "Lincoln match: if cleared, Pant is expected to play the third India A four-day match against New Zealand A from November 7.",
-          "Wellington Test: the first Test begins on November 19, and Pant's participation depends on fitness clearance and match readiness.",
-          "Official word: fans should watch for a BCCI or team-management update, since the November 2 reports are based on the ESPNcricinfo report rather than a formal board announcement."
+          "Stage 1 came into force on November 1, with Stage 2 associated with the 'very poor' 301 to 400 band",
+          "Non-BS-VI petrol and diesel vehicles registered outside Delhi are barred from entry until January 31, 2027",
+          "Electric and CNG vehicles are exempt from the entry restriction",
+          "Delhi Traffic Police checked 7,279 vehicles on November 1, turning back 714 and impounding 38",
         ],
       },
       {
-        type: "p",
-        text: "For now, the verified picture is this: Rishabh Pant reportedly failed his first fitness test at the BCCI Centre of Excellence in Bengaluru on November 1 while recovering from a side strain, and he will get a second test within two days that decides his New Zealand tour. Nothing is final yet, and that second assessment is the moment that will settle whether one of India's most important Test players makes the trip.",
+        type: "h2",
+        text: "How to check Delhi AQI today for your area",
+      },
+      {
+        type: "steps",
+        items: [
+          "Open the CPCB Sameer app or website and find your nearest monitoring station, since readings vary sharply by area.",
+          "Check the AQI number and category, not just the colour, and note whether it is live or a daily average.",
+          "Compare your area with the city average: 396 and 242 mean very different precautions on the same day.",
+          "Recheck in the evening, because morning readings and the 4 pm average can differ, and GRAP follows official readings.",
+        ],
       },
       {
         type: "h2",
-        text: "Rishabh Pant fitness test FAQs",
+        text: "How to protect yourself when Delhi AQI is very poor",
+      },
+      {
+        type: "p",
+        text: "Health advisories warn that prolonged exposure at this level can cause respiratory illness, and people with asthma or heart conditions, children and older adults should take extra care. These are general precautions, not medical advice.",
+      },
+      {
+        type: "list",
+        items: [
+          "Limit prolonged outdoor exertion, especially in the morning, and move workouts indoors where possible.",
+          "Wear a well-fitting mask outdoors if you must be out long, and keep windows closed during the worst hours.",
+          "Use an air purifier indoors if you have one, and avoid indoor smoke from incense, candles or frying without ventilation.",
+          "Watch for persistent coughing, wheezing or breathlessness, and seek medical advice if they worsen.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Why does Delhi's air get worse in November?",
+      },
+      {
+        type: "p",
+        text: "Delhi's air typically deteriorates as winter sets in: calm winds and cooler temperatures trap pollutants close to the ground instead of dispersing them, while emissions from vehicles, construction dust and other sources continue. That is why a clean October can be followed by a sharp slide in early November. Weather played a role on November 2 too: the minimum at Safdarjung was 16.4 degrees Celsius, slightly above normal, and no rainfall was recorded at the city's five stations in the 24 hours to 8.30 am, so no rain washed pollutants away.",
       },
       {
         type: "faq",
         items: [
-          { q: "Did Rishabh Pant fail his fitness test for the New Zealand tour?", a: "According to ESPNcricinfo, as reported on November 2, Pant failed his first fitness test at the BCCI Centre of Excellence in Bengaluru on November 1. He has not been ruled out yet." },
-          { q: "Will Rishabh Pant get another fitness test?", a: "Yes. Reports say the BCCI medical team will arrange a second fitness test within the next two days to decide whether he can travel to New Zealand." },
-          { q: "What injury has kept Rishabh Pant out?", a: "A side strain suffered during the Irani Cup in early October, while leading Rest of India against Jammu and Kashmir in Srinagar." },
-          { q: "If cleared, when will Rishabh Pant play next?", a: "He is expected to join India A for the third four-day match against New Zealand A in Lincoln, starting November 7, as preparation for the Tests." },
-          { q: "When does the India vs New Zealand Test series start?", a: "The first Test begins in Wellington on November 19, followed by the second Test in Christchurch on November 27." }
+          {
+            q: "What is Delhi AQI today?",
+            a: "Delhi's overall AQI was 312 at 9 am on November 2, 2026, its first 'very poor' day this season, per CPCB data reported by PTI.",
+          },
+          {
+            q: "What does 'very poor' AQI mean?",
+            a: "On the CPCB scale, 'very poor' is 301 to 400. Prolonged exposure can cause respiratory illness, especially for children, older adults and people with breathing or heart conditions.",
+          },
+          {
+            q: "Is GRAP Stage 2 in force in Delhi?",
+            a: "Reports said crossing 300 activated GRAP Stage 2, the stage for the 301 to 400 band. The CAQM decides the stage from official readings and forecasts, so check the latest announcement before travelling.",
+          },
+          {
+            q: "Which Delhi areas had the worst AQI on November 2?",
+            a: "Rohini was highest at 396, followed by Alipur at 375, Vivek Vihar at 370, Chandni Chowk at 358, and ITO and Akshardham at 349 each.",
+          },
+          {
+            q: "Are vehicles from outside Delhi banned?",
+            a: "Non-BS-VI petrol and diesel vehicles registered outside Delhi are barred from entry until January 31, 2027, under the revised GRAP curbs. Electric and CNG vehicles are exempt.",
+          },
         ],
       },
     ],
