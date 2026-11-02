@@ -33,6 +33,91 @@
 
 export const posts = [
   {
+    slug: "amitabh-bachchan-bulletproof-glass-jalsa-fans-november-1-2026",
+    image: "https://feeds.abplive.com/onecms/images/uploaded-images/2026/11/02/7e24009b68128a6c655395487a23330717935835107991347_original.png?impolicy=abp_cdn&imwidth=1200&height=675",
+    imageAlt: "Amitabh Bachchan greeting fans from behind a transparent bulletproof enclosure outside his Mumbai home Jalsa",
+    title: "Amitabh Bachchan Bulletproof Glass Jalsa: Big B Greets Fans Behind Protective Shield After Threat Reports",
+    description:
+      "Amitabh Bachchan greeted fans from behind bulletproof glass at Jalsa on November 1, in a viral Sunday moment following a reported threat to his home.",
+    excerpt:
+      "Amitabh Bachchan greeted fans outside Jalsa on November 1 from behind a transparent bulletproof enclosure, with son Abhishek Bachchan beside him.",
+    date: "2026-11-02",
+    category: "Cinema",
+    sections: [
+      {
+        type: "p",
+        text: "Amitabh Bachchan bulletproof glass Jalsa is the image everyone is talking about this morning. On Sunday, November 1, 2026, Amitabh Bachchan stepped out for his weekly fan greeting outside his Mumbai home, Jalsa, and waved to the crowd from behind a transparent bulletproof enclosure. A video of the moment, shared by news agency ANI, has since gone viral on social media. His son, Abhishek Bachchan, stood beside him during the interaction, while security personnel managed the crowd and moved the enclosure. The extra security comes after a reported threat email mentioned Bachchan's home in October, though it is not confirmed that the glass was installed because of that email.",
+      },
+      {
+        type: "h2",
+        text: "What happened at Jalsa on November 1",
+      },
+      {
+        type: "p",
+        text: "Bachchan has for decades stepped out of Jalsa on Sunday evenings to wave to fans who gather at the bungalow's gate in Juhu, Mumbai. On November 1 he followed the same tradition, but with one visible change: a protective glass screen on three sides of his usual wheeled pedestal. In the viral video, security personnel can be seen manually moving the protective enclosure while Bachchan stands inside it and waves at the crowd. ABP Live reports that Abhishek Bachchan accompanied his father, stood a little behind him and kept an eye on the crowd, with security staff stationed nearby.",
+      },
+      {
+        type: "h2",
+        text: "Why the bulletproof glass appeared: the reported threat email",
+      },
+      {
+        type: "p",
+        text: "Reports link the heightened security to a threatening email received in October. According to NDTV, on October 23 security agencies and the Mumbai Police were placed on high alert after an email sent to Mumbai Mayor Ritu Tawde threatened bomb blasts at her office, Bachchan's home and the venue of singer Diljit Dosanjh's concert. It threatened to target Jalsa between October 31 and November 27 and warned of a grenade attack on a school on October 31, and an attack during Dosanjh's November 27 concert in the Mahalaxmi Racecourse area, according to police cited by NDTV. Officials stepped up security at the named places and launched an investigation to trace the email's origin and sender. What remains unconfirmed is the direct reason for the glass itself: NDTV states that it was not clear whether the bulletproofing move was part of a state measure or Bachchan's personal decision, and ABP Live describes the enclosure as reportedly added as an extra security measure.",
+      },
+      {
+        type: "h2",
+        text: "Tiger Shroff firing in Juhu: the other security worry",
+      },
+      {
+        type: "p",
+        text: "The glass screen also appeared two weeks after actor Tiger Shroff was shot at in Juhu, NDTV notes. Shroff was shot at on the evening of October 18 when he was returning from a football game in Juhu. According to NDTV, two men fired multiple rounds at his BMW, and one attacker then pointed a gun directly at Shroff, but the weapon jammed, leaving the actor unharmed, while his driver and a bystander were injured. NDTV reports that the Lawrence Bishnoi gang claimed responsibility for the attack, and that a dozen arrests have been made so far. None of the reports published so far say the Jalsa glass was a direct response to the Shroff incident, and that link should not be assumed.",
+      },
+      {
+        type: "h2",
+        text: "Amitabh Bachchan bulletproof glass Jalsa: what is confirmed and what is not",
+      },
+      {
+        type: "list",
+        items: [
+          "Confirmed: On November 1, Bachchan greeted fans outside Jalsa from behind a transparent bulletproof enclosure on three sides of his wheeled pedestal, with Abhishek Bachchan beside him.",
+          "Confirmed: A video of the greeting, posted by ANI, has gone viral, and was covered by NDTV, ABP Live, Moneycontrol, Oneindia and Gulf News on November 1 and the morning of November 2.",
+          "Reported: A threatening email on October 23 mentioned Bachchan's home, Jalsa, and warned of attacks between October 31 and November 27. Police launched an investigation and stepped up security at the places named.",
+          "Not confirmed: Whether the glass was installed on police advice or as a personal precaution. Reports explicitly say this is unclear.",
+          "Not confirmed: Any claim that the glass proves a specific, imminent threat. The email is part of an ongoing police investigation, and no report cited here confirms who sent it."
+        ],
+      },
+      {
+        type: "h2",
+        text: "The Sunday tradition at Jalsa, and why this one felt different",
+      },
+      {
+        type: "p",
+        text: "The Sunday greeting outside Jalsa is one of Bollywood's longest-running fan rituals. For decades, fans have gathered outside the gate on Sunday evenings, and Bachchan has stepped out to wave to them. That is why the November 1 appearance drew so much attention: the ritual was the same, but the setting was visibly different, with a transparent barrier between the actor and the crowd.",
+      },
+      {
+        type: "h2",
+        text: "Why the Amitabh Bachchan bulletproof glass video went viral",
+      },
+      {
+        type: "p",
+        text: "The video went viral because it combined three things at once: a beloved, decades-old tradition, a striking visual change, and a worrying backstory. The timing added to the reaction, with the appearance coming just days after the reported threat window opened on October 31, and two weeks after the firing incident involving Tiger Shroff in the same Juhu neighbourhood.",
+      },
+      {
+        type: "h2",
+        text: "Amitabh Bachchan bulletproof glass Jalsa FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "Why did Amitabh Bachchan greet fans from behind bulletproof glass?", a: "On November 1, Bachchan greeted fans outside Jalsa from behind a transparent bulletproof enclosure. Reports say the extra security follows a threatening email in October that mentioned his home, but it is not confirmed whether the glass was a police measure or a personal precaution." },
+          { q: "What did the reported threat email say about Jalsa?", a: "According to reports, an email on October 23 threatened bomb blasts at the Mumbai mayor's office, Bachchan's home and a concert venue, and warned of an attack on Jalsa between October 31 and November 27. Police launched an investigation and stepped up security." },
+          { q: "Who was with Amitabh Bachchan at Jalsa on November 1?", a: "His son, Abhishek Bachchan, accompanied him, standing behind him while security personnel managed the crowd and moved the enclosure." },
+          { q: "Is the Sunday greeting at Jalsa a regular tradition?", a: "Yes. Bachchan has for decades stepped out of Jalsa on Sunday evenings to wave to fans gathered outside the gate, and the November 1 greeting followed that tradition with the added bulletproof enclosure." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "severe-cyclone-murasu-andhra-coast-tonight-landfall-november-2-2026",
     image: "https://imagesvs.oneindia.com/img/2026/11/cyclone2-81171793529629.jpg",
     imageAlt: "Cyclone Murasu over the Bay of Bengal and flooding on a road, as pictured in news coverage",
