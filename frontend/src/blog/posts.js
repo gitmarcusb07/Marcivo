@@ -33,6 +33,97 @@
 
 export const posts = [
   {
+    slug: "severe-cyclone-murasu-andhra-coast-tonight-landfall-november-2-2026",
+    image: "https://imagesvs.oneindia.com/img/2026/11/cyclone2-81171793529629.jpg",
+    imageAlt: "Cyclone Murasu over the Bay of Bengal and flooding on a road, as pictured in news coverage",
+    title: "Severe Cyclone Murasu: Andhra Coast Braces Tonight as Storm Nears Ongole, Landfall 11:30 PM to 4 AM",
+    description:
+      "Severe Cyclone Murasu is nearing the Andhra coast tonight, with landfall close to Ongole between 11:30 pm and 4 am and winds up to 120 kmph.",
+    excerpt:
+      "Severe Cyclone Murasu, confirmed by the IMD's 5 am bulletin on November 2, is set to cross the south Andhra Pradesh coast close to Ongole tonight.",
+    date: "2026-11-02",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "Severe Cyclone Murasu is now a confirmed severe cyclonic storm, not just a forecast. The India Meteorological Department (IMD) said in its 5 am bulletin on Monday, November 2, 2026, that Murasu had strengthened into a severe cyclonic storm by 2:30 am and is heading northwest towards the south Andhra Pradesh coast. Landfall is expected tonight, between 11:30 pm on November 2 and 4 am on November 3, close to Ongole, between Nellore and Narsapur, with winds of 100 to 110 kmph, gusting to 120 kmph. This updates the November 1 post, which forecast severe strength for Monday morning: the overnight bulletin confirms it, with the crossing point narrowed to near Ongole.",
+      },
+      {
+        type: "h2",
+        text: "Severe Cyclone Murasu: where it is now",
+      },
+      {
+        type: "p",
+        text: "At 2:30 am on November 2, Severe Cyclonic Storm Murasu lay over the west-central and adjoining southwest Bay of Bengal, near 13.6 degrees north and 82.5 degrees east, according to the IMD bulletin. That put it about 260 km east-northeast of Chennai, 290 km east-southeast of Nellore and 330 km southeast of Ongole. It had moved nearly northwestwards at about 20 kmph during the previous six hours, and is very likely to keep moving northwestwards. At 2:30 am its sustained winds were 90 to 100 kmph, gusting to 110 kmph, below the stronger winds expected at landfall tonight.",
+      },
+      {
+        type: "h2",
+        text: "Severe Cyclone Murasu landfall tonight: time, place and wind speed",
+      },
+      {
+        type: "p",
+        text: "The IMD's landfall forecast is unchanged in timing but sharper in location: Severe Cyclone Murasu is very likely to cross the south Andhra coast close to Ongole, between Nellore and Narsapur, between 11:30 pm on Monday, November 2, and 4 am on Tuesday, November 3, with sustained winds of 100 to 110 kmph, gusting to 120 kmph. The IMD also warns of a 1.0 to 1.5 metre storm surge at landfall, very likely to flood low-lying south coastal Andhra Pradesh, highest in Bapatla and also in Krishna and Prakasam. Along the Andhra coast, winds of 65 to 75 kmph are expected by noon, 80 to 90 kmph from evening, and 100 to 110 kmph from midnight into early Tuesday.",
+      },
+      {
+        type: "h2",
+        text: "Severe Cyclone Murasu red alerts and rainfall for November 2 and 3",
+      },
+      {
+        type: "p",
+        text: "The IMD has issued a red alert for Andhra Pradesh and north Tamil Nadu, with heavy to very heavy rainfall very likely over coastal Andhra Pradesh, Rayalaseema and Telangana on November 2 and 3. For Monday, the five districts on red alert for extremely heavy rainfall are Krishna, Guntur, Bapatla, Prakasam and Nellore, the same districts named on Sunday. North Tamil Nadu and Puducherry face winds of 60 to 70 kmph, gusting to 80 kmph, from Monday evening into Tuesday morning. In Telangana, an orange alert covers six districts and a yellow alert five for Monday, according to The Hindu's morning digest. Odisha's rain increases on November 3 and 4, and its southern region remains on high alert, with evacuations from vulnerable areas.",
+      },
+      {
+        type: "h2",
+        text: "Severe Cyclone Murasu school closures and transport disruption today",
+      },
+      {
+        type: "p",
+        text: "Chennai and Tiruvallur collectors have announced schools and colleges closed on Monday, November 2, because of heavy rain from Murasu, The Hindu reports. In Odisha, Malkangiri has closed schools and colleges from November 2 to 4. Students in Andhra Pradesh should check their district collector's announcements for late orders. Cautionary signals have been hoisted at seven Andhra ports, and travellers should expect delays and avoid coastal roads and flooded stretches once winds pick up in the evening.",
+      },
+      {
+        type: "h2",
+        text: "What has changed since yesterday's Cyclone Murasu forecast",
+      },
+      {
+        type: "list",
+        items: [
+          "Status: a cyclonic storm on Sunday; by 2:30 am Monday a severe cyclonic storm, confirmed in the IMD's 5 am bulletin.",
+          "Track: turned northwest and slowed to about 20 kmph, bringing it closer to Chennai and the south Andhra coast.",
+          "Crossing point: narrowed from the Nellore-Narsapur stretch to close to Ongole, between 11:30 pm Monday and 4 am Tuesday.",
+          "Storm surge: now 1.0 to 1.5 metres above tide, highest in Bapatla and also in Krishna and Prakasam.",
+          "Warnings: the red-message cyclone warning for the Andhra and north Tamil Nadu coasts remains, and fishermen must stay off the Andhra coast until Wednesday afternoon."
+        ],
+      },
+      {
+        type: "h2",
+        text: "Severe Cyclone Murasu safety steps and helplines",
+      },
+      {
+        type: "steps",
+        items: [
+          "Follow only official IMD and state advisories, and check the IMD's next bulletin, due at 8:30 am Monday, for any change in track or timing.",
+          "If you live in a low-lying or coastal area in Krishna, Guntur, Bapatla, Prakasam or Nellore, be ready to move early if evacuation is ordered; do not wait for landfall.",
+          "Stay indoors once red-alert winds arrive, away from the sea, flooded roads and weak structures, with water, food, medicines, documents and a charged phone ready.",
+          "Fishermen must not venture into the sea: the IMD advice covers the Andhra coast until Wednesday afternoon.",
+          "For emergencies, use 112, the Andhra Pradesh helpline 1070, or toll-free 1800-425-0101. Andhra Pradesh has positioned 12 NDRF and SDRF teams, and Odisha's Rayagada district has deployed all 11 fire station teams with heavy machinery."
+        ],
+      },
+      {
+        type: "h2",
+        text: "Severe Cyclone Murasu FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "When will Severe Cyclone Murasu make landfall?", a: "Severe Cyclone Murasu is forecast to cross the south Andhra coast close to Ongole, between Nellore and Narsapur, between 11:30 pm on November 2 and 4 am on November 3, 2026." },
+          { q: "How strong will Severe Cyclone Murasu be at landfall?", a: "The IMD forecasts sustained winds of 100 to 110 kmph, gusting to 120 kmph, at landfall, with a 1.0 to 1.5 metre storm surge flooding low-lying south coastal Andhra Pradesh." },
+          { q: "Which districts are on red alert for Severe Cyclone Murasu today?", a: "For Monday, November 2, Krishna, Guntur, Bapatla, Prakasam and Nellore are on red alert for extremely heavy rainfall, with orange alerts in six Telangana districts and yellow alerts in five more." },
+          { q: "Are schools closed because of Severe Cyclone Murasu?", a: "Schools and colleges in Chennai and Tiruvallur are closed on Monday, November 2, and in Odisha's Malkangiri from November 2 to 4. Check your district collector's announcement for other districts." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "king-tu-mil-jaaye-song-out-shah-rukh-khan-deepika-padukone-november-2-2026",
     image: "https://i.ytimg.com/vi/BPZkZpGMpXA/maxresdefault.jpg",
     imageAlt: "Shah Rukh Khan and Deepika Padukone in the official video of Tu Mil Jaaye from King",
