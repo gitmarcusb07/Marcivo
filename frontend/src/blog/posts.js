@@ -33,6 +33,88 @@
 
 export const posts = [
   {
+    slug: "jhunjhunu-electrocution-8-workers-killed-rajasthan-november-2-2026",
+    image: "https://imgs.etvbharat.com/etvbharat/prod-images/02-11-2026/1200-675-28016904-thumbnail-16x9-ht-current-aspera.jpg",
+    imageAlt: "High-tension power lines, like the overhead line a road-construction machine touched in Jhunjhunu, Rajasthan",
+    title: "Jhunjhunu Electrocution: 8 Workers Killed in Rajasthan as Machine Touches High-Tension Wire",
+    description:
+      "The Jhunjhunu electrocution killed eight workers on a road project in Rajasthan on November 2, 2026, after a gravel-mixing machine hit a high-tension line.",
+    excerpt:
+      "Eight workers were electrocuted to death in Rajasthan's Jhunjhunu district on November 2, 2026, after a gravel-mixing machine came into contact with an overhead high-tension power line.",
+    date: "2026-11-02",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "The Jhunjhunu electrocution has killed eight workers in Rajasthan on November 2, 2026, after a gravel-mixing machine at a road construction site came into contact with an overhead high-tension power line. Police said the accident happened in Chhapoli village, under the Udaipurwati police station area of Jhunjhunu district, on Monday, and the news was first reported by national outlets in the early afternoon. The deaths have triggered grief in the village and fresh questions about safety at small, community-led construction works carried out close to live power lines.",
+      },
+      {
+        type: "h2",
+        text: "Jhunjhunu electrocution: what happened in Chhapoli village",
+      },
+      {
+        type: "p",
+        text: "According to police, the workers were engaged in a road construction project in Chhapoli village, near Kadam Kund, when the machine being used to mix gravel touched an overhead high-tension line. Udaipurwati station house officer Rampal said the machine came into contact with the line, causing electric current to pass through the equipment and electrocuting the workers operating around it. ETV Bharat reports that the line carried 11,000 volts, and that the current instantly electrified the aggregate-mixing machinery. The exact sequence of events that brought the machine into contact with the wire is still being established, police said, and authorities are assessing the circumstances and the safety arrangements at the site.",
+      },
+      {
+        type: "list",
+        items: [
+          "Place: Chhapoli village, near Kadam Kund, under Udaipurwati police station, Jhunjhunu district, Rajasthan.",
+          "Work: a community-led road construction project, with local residents building the road.",
+          "Equipment: a gravel-mixing, or aggregate-mixing, machine used at the site.",
+          "Cause reported: the machine came into contact with an overhead high-tension power line, reported as an 11,000-volt line.",
+          "Deaths: at least eight workers killed, according to police, as reported by PTI-based outlets."
+        ],
+      },
+      {
+        type: "h2",
+        text: "Eight killed, three critically injured: the casualty figures so far",
+      },
+      {
+        type: "p",
+        text: "Police have confirmed eight deaths in the Jhunjhunu electrocution, a figure carried by multiple outlets reporting PTI inputs, including India TV, The New Indian Express and Orissa Post. ETV Bharat additionally reports that three other workers were critically injured and were taken to hospital for treatment, with District Collector Arun Garg saying the injured were undergoing treatment and their condition was critical. Because the first reports are still being updated, with ETV Bharat itself marking its story as developing, the casualty picture should be read as eight confirmed deaths plus critically injured workers under treatment, rather than as a final, fully reconciled toll. No victims have been named in the reports published so far.",
+      },
+      {
+        type: "h2",
+        text: "Rescue, response and condolences after the Jhunjhunu accident",
+      },
+      {
+        type: "p",
+        text: "Local residents reacted first. Reports say the accident triggered panic in the village, and locals immediately began rescue efforts and helped transport the injured to hospital. District Collector Arun Garg said officials received information about the accident over the telephone and were heading to the site, adding that the initial information indicated the road was being constructed by local residents and that the machinery in use had come into contact with the overhead power line. Local MLA Bhagwanaram Saini expressed grief over the deaths and said he was also on his way to the accident site. Rajasthan Energy Minister Heeralal Nagar also expressed condolences and described the incident as tragic.",
+      },
+      {
+        type: "h2",
+        text: "Why a road machine near a power line is so dangerous",
+      },
+      {
+        type: "p",
+        text: "The Jhunjhunu accident underlines a risk that safety experts warn about again and again: tall or metal construction machinery working directly beneath overhead power lines. A gravel-mixing machine, like cranes, concrete mixers and other site equipment, can conduct electricity through its metal body the moment it touches or comes very close to a live high-voltage conductor. Workers standing on the ground and touching the machine, or working around it, can then be electrocuted in seconds, with no time to react. That is why construction guidelines require checking the height and position of overhead lines before work begins, keeping machinery at a safe distance, and stopping work or seeking a temporary shutdown where a line passes too close to the site. Whether any of those precautions were in place at Chhapoli, and who was responsible for checking them, is part of what the authorities are now assessing.",
+      },
+      {
+        type: "h2",
+        text: "What happens next in the Jhunjhunu electrocution investigation",
+      },
+      {
+        type: "p",
+        text: "Police have said the exact circumstances leading to the accident are yet to be established, so the next steps will be to record statements from survivors and witnesses, examine the machine and the power line, and determine how the work was organised. The key questions are straightforward: how close was the overhead line to the work area, who knew about the risk, and whether any safety clearance or supervision was in place for a community-led project using heavy machinery. The condition of the three critically injured workers will also be watched closely, since any change there would change the final toll. For now, the confirmed facts are the eight deaths, the village and the machine involved, and the police account that current passed through the equipment after it touched the high-tension line.",
+      },
+      {
+        type: "h2",
+        text: "Jhunjhunu electrocution FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "How many workers died in the Jhunjhunu electrocution?", a: "At least eight workers were killed, according to police. ETV Bharat additionally reports three other workers critically injured and under treatment in hospital." },
+          { q: "Where did the Jhunjhunu accident happen?", a: "In Chhapoli village, near Kadam Kund, under the Udaipurwati police station area of Jhunjhunu district in Rajasthan, at a road construction site." },
+          { q: "What caused the Jhunjhunu electrocution?", a: "Police say a gravel-mixing machine came into contact with an overhead high-tension power line, sending current through the equipment. ETV Bharat reports the line carried 11,000 volts. The exact circumstances are still being established." },
+          { q: "Was the road work a government project?", a: "Reports describe it as a community-led road construction project, with local residents building the road. Authorities are assessing the safety arrangements at the site." },
+          { q: "Who has responded to the Jhunjhunu deaths?", a: "District Collector Arun Garg said officials were heading to the site, local MLA Bhagwanaram Saini expressed grief, and Energy Minister Heeralal Nagar described the incident as tragic." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "rohtang-pass-maggi-seller-15000-daily-off-season-viral-november-2-2026",
     image: "https://www.plattershare.com/storage/2025/05/Street-Style-Tadka-Maggi.webp",
     imageAlt: "A bowl of street-style Maggi noodles, like the plates sold at the viral Rohtang Pass stall",
