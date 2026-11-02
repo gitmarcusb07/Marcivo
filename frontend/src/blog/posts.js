@@ -33,6 +33,197 @@
 
 export const posts = [
   {
+    slug: "punjab-police-asi-suspended-planting-heroin-khanna-viral-video-november-2-2026",
+    image: "https://www.thestatesman.com/wp-content/uploads/2022/05/Pic-2-1-768x512.jpg",
+    imageAlt: "Punjab Police officers at a press conference (file photo)",
+    title: "Punjab Police ASI Suspended After Viral Video Allegedly Shows Him Planting Heroin in Khanna",
+    description:
+      "Punjab Police ASI suspended after a viral Khanna video allegedly shows him planting heroin under a mattress before a raid on Mahant Kashmir Giri.",
+    excerpt:
+      "A viral hidden-camera video allegedly showing a Punjab Police ASI placing a packet under a mattress has led to his suspension and an SIT probe in Khanna.",
+    date: "2026-11-02",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "Punjab Police planting heroin allegations exploded on social media on November 2, 2026, after a viral video purportedly showed a police officer placing a packet under a mattress at a home in Khanna, Punjab, shortly before a police search allegedly recovered heroin from the same spot. Khanna Senior Superintendent of Police Dr Darpan Ahluwalia has suspended Assistant Sub-Inspector Sukhdev Singh, who was posted with the CIA staff, and ordered a Special Investigation Team probe into the incident.",
+      },
+      {
+        type: "p",
+        text: "The suspension and the release of the arrested man, Shiv Sena leader Mahant Kashmir Giri, turned a local raid into a statewide political controversy within hours, with the BJP and Shiromani Akali Dal chief Sukhbir Singh Badal attacking the Bhagwant Mann-led AAP government on November 2. Precision matters here: the video allegedly shows planting, and its authenticity is part of what the SIT must investigate. This post does not treat planting as a proven fact.",
+      },
+      {
+        type: "h2",
+        text: "Punjab Police planting heroin video: what allegedly happened in Khanna",
+      },
+      {
+        type: "p",
+        text: "According to reports in The Indian Express, NDTV, The Statesman, Outlook and Oneindia, the sequence began with the arrest of Giri's driver, Gurjant Singh alias Janta, who was allegedly caught with 7.5 grams of heroin. An FIR was registered at Khanna Sadar Police Station, and police said the driver's interrogation led them to Giri's residence in Khanna town in Ludhiana district.",
+      },
+      {
+        type: "p",
+        text: "A police team then searched Giri's house and claimed to have recovered around 30 grams of heroin from beneath a bed mattress, after which Giri was arrested in a drug trafficking case. That recovery is now under a cloud because of footage from a hidden camera installed at the house by the family. The viral clip purportedly shows ASI Sukhdev Singh, dressed in plain clothes, entering a room before the formal police party arrived and placing a packet beneath the mattress.",
+      },
+      {
+        type: "p",
+        text: "Moments later, according to NDTV's account, police entered the room with Giri, searched it, and claimed to discover heroin from the same spot where the ASI had allegedly been seen placing the packet.",
+      },
+      {
+        type: "h2",
+        text: "Punjab Police planting heroin case: suspension and SIT probe",
+      },
+      {
+        type: "p",
+        text: "After senior officers reviewed the recording, Khanna SSP Dr Darpan Ahluwalia suspended ASI Sukhdev Singh, removed him from the case and discharged Giri, who had been arrested after the claimed recovery. The SSP has also constituted a Special Investigation Team headed by an SP-rank officer to probe the footage's authenticity, the ASI's alleged role, the recovery's circumstances and other officers' possible involvement. A departmental inquiry has also begun, according to Oneindia.",
+      },
+      {
+        type: "h2",
+        text: "Punjab Police planting heroin row: political reaction on November 2",
+      },
+      {
+        type: "p",
+        text: "The political reaction was swift. The BJP's official X account posted on November 2 that footage showed ASI Sukhdev Singh placing something under the bed at Giri's house, and that police then 'recovered' 30 grams of heroin from the exact same spot. Shiromani Akali Dal president Sukhbir Singh Badal posted that the ASI was 'caught live on CCTV secretly hiding a packet of drugs under a mattress', accusing the AAP government of a breakdown of law and order and of framing citizens. Those are political allegations, not SIT findings.",
+      },
+      {
+        type: "h2",
+        text: "Punjab Police planting heroin case: who is Mahant Kashmir Giri",
+      },
+      {
+        type: "p",
+        text: "Mahant Kashmir Giri is a Shiv Sena leader and Hindu religious leader based in Khanna. The Indian Express described him as a former rashtriya pracharak of the Shiv Sena's Punjab unit, and reported that he has faced several criminal cases over the years, including allegations of attempted murder, weapons offences, cheating, impersonation and drug trafficking.",
+      },
+      {
+        type: "p",
+        text: "The same report listed earlier cases and allegations against him, including an alleged drug-supply racket case last year and older cheating, impersonation and weapons allegations. These are earlier allegations as reported, not verdicts, and they do not by themselves settle what happened in the Khanna search.",
+      },
+      {
+        type: "h2",
+        text: "Punjab Police planting heroin case: what happens next",
+      },
+      {
+        type: "list",
+        items: [
+          "SIT findings: whether the inquiry confirms the footage is authentic, and what it says about the ASI's role and any other officers involved.",
+          "Departmental action: whether the suspension leads to further disciplinary proceedings against Sukhdev Singh or others.",
+          "The driver's case: what happens to the case against Gurjant Singh alias Janta, whose arrest led police to Giri's house in the first place.",
+          "Court scrutiny: whether the claimed 30-gram recovery is tested in court, and how the video affects any prosecution.",
+          "Political fallout: whether the row stays a Khanna story or becomes a larger Punjab debate about drug-case investigations."
+        ],
+      },
+      {
+        type: "p",
+        text: "For now, the verified picture is this: a viral video allegedly shows a Punjab Police ASI placing a packet under a mattress in Khanna before a search that claimed to find heroin there; the ASI has been suspended, the arrested Shiv Sena leader has been discharged from the case, and an SP-rank SIT is investigating. The key question, whether the footage proves a planted recovery, is still under investigation, and this post will not call it proved until an inquiry or court says so.",
+      },
+      {
+        type: "h2",
+        text: "Punjab Police planting heroin FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "Which Punjab Police officer was suspended in the Khanna case?", a: "ASI Sukhdev Singh, who was posted with the CIA staff in Khanna, was suspended by Khanna SSP Dr Darpan Ahluwalia." },
+          { q: "What does the viral Khanna video allegedly show?", a: "It purportedly shows ASI Sukhdev Singh, in plain clothes, placing a packet under a mattress at Mahant Kashmir Giri's house before a police search claimed to recover heroin from the same spot." },
+          { q: "How much heroin did police claim to recover in Khanna?", a: "Police claimed to have recovered around 30 grams of heroin from beneath the mattress; the driver's earlier arrest involved an alleged 7.5 grams." },
+          { q: "What happened to Mahant Kashmir Giri after the video surfaced?", a: "He was discharged from the case and released after senior officers reviewed the hidden-camera footage." },
+          { q: "Who is investigating the Khanna planting allegation?", a: "A Special Investigation Team headed by an SP-rank officer, constituted by Khanna SSP Dr Darpan Ahluwalia, is probing the footage and the search." }
+        ],
+      },
+    ],
+  },
+  {
+    slug: "spicejet-sg553-mumbai-gorakhpur-cancelled-viral-video-passengers-november-2-2026",
+    image: "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2021/01/31117439718_9fb77e019e_o-1-scaled.jpg",
+    imageAlt: "A SpiceJet aircraft on a runway (file photo)",
+    title: "SpiceJet SG553 Mumbai-Gorakhpur Cancellation Sparks Viral Video Chaos: What Passengers Say",
+    description:
+      "SpiceJet SG553 Mumbai-Gorakhpur cancelled viral video: passengers say they were boarded, briefed and seated for nearly an hour before cancellation.",
+    excerpt:
+      "A viral video shows panic among SpiceJet SG553 passengers after the Mumbai-Gorakhpur flight was cancelled at the last minute on November 1.",
+    date: "2026-11-02",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "SpiceJet SG553 Mumbai-Gorakhpur cancelled viral video chaos broke out online on November 2, 2026, as footage of panicking passengers spread across social media a day after the flight was called off at the last minute. SpiceJet flight SG553, scheduled to operate from Mumbai to Gorakhpur, was cancelled on Sunday, November 1, and the airline has said the reason was watch-hour restrictions at Gorakhpur airport.",
+      },
+      {
+        type: "p",
+        text: "The video, filmed by passenger Vijay Lakshmi Mallya and reported by Times Now on November 2, shows crying toddlers, screaming adults, chaotic queues and confused passengers after the cancellation was announced just before take-off. Passengers in the clip say the crew and pilot left after making the announcement, leaving a full aircraft to deboard in confusion. That account of the crew leaving is the passengers' allegation as reported; the airline's statement quoted in the same coverage does not directly address it.",
+      },
+      {
+        type: "h2",
+        text: "SpiceJet SG553 cancelled viral video: what passengers say happened",
+      },
+      {
+        type: "p",
+        text: "According to Times Now, passengers had already boarded, completed the safety briefing and remained seated for almost an hour before the announcement. The filming passenger can be heard saying: 'All the crew members and the pilot left after announcing. The passengers are getting panicked, this is the condition. This is insane and something against which a case should be filed.'",
+      },
+      {
+        type: "p",
+        text: "The passenger's written post, quoted by Times Now, was even angrier. It said the flight's timing had been changed multiple times, passengers were made to board, the safety briefing was completed, they were kept seated for almost an hour, and only then was the flight cancelled because of an alleged 8 pm landing restriction. The post asked why passengers were allowed to board at all if the airline already knew about the operational restriction, and demanded answers and accountability from the airline and aviation authorities.",
+      },
+      {
+        type: "p",
+        text: "The clip then shows passengers panicking as they began to deboard from the aircraft. Online reaction, as reported, split between criticism of the airline staff for poor handling of the situation and questions about compensation for affected passengers. Some viewers sympathised with families travelling with small children, while others asked what rebooking or refund help was actually offered on the spot.",
+      },
+      {
+        type: "h2",
+        text: "SpiceJet SG553 cancelled: what the airline said",
+      },
+      {
+        type: "p",
+        text: "SpiceJet issued a statement after the video gained traction, clarifying that the cancellation was due to watch-hour restrictions at Gorakhpur. The airline said: 'On November 01, 2026, SpiceJet flight SG553 scheduled to operate from Mumbai to Gorakhpur was cancelled due to watch hour restrictions at Gorakhpur. As Gorakhpur is a defence airport, the watch hour extension was not possible beyond 9:00 pm. An additional commercial flight is scheduled today for the stranded passengers. Inconvenience caused to the passengers is deeply regretted.'",
+      },
+      {
+        type: "p",
+        text: "That explanation answers the narrow question of why the flight could not operate, but it leaves the passengers' main complaint unanswered in the coverage so far: the timing. If a 9 pm watch-hour limit at a defence airport was already known, passengers want to know why boarding, a safety briefing and nearly an hour seated on the aircraft happened first. The airline's statement does not explain the boarding decision, and no separate response to that specific point was quoted in the Times Now report.",
+      },
+      {
+        type: "h2",
+        text: "SpiceJet SG553 cancelled viral video: why it struck a nerve",
+      },
+      {
+        type: "p",
+        text: "The video struck a nerve because it combined three frustrations frequent flyers recognise at once: a last-minute change, a long wait with no clear information, and a sense of being left to sort things out alone. The presence of crying children in the footage made the clip especially shareable, and the passenger's direct-to-camera anger gave it a clear villain in the eyes of many viewers: an airline that, in their view, wasted their time and then apologised.",
+      },
+      {
+        type: "p",
+        text: "It also arrived during a busy travel period, when rebooking is harder and replacement fares are higher. Commenters raised the practical questions that follow any last-minute cancellation: who pays for a missed connection or a new ticket, and what rebooking or refund help is offered on the spot? Affected SG553 passengers should check the airline's own options for this flight rather than relying on social media claims.",
+      },
+      {
+        type: "h2",
+        text: "SpiceJet SG553 cancelled: what stranded passengers should check",
+      },
+      {
+        type: "list",
+        items: [
+          "The additional flight: SpiceJet said an additional commercial flight was scheduled on November 2 for stranded passengers, so check the airline's app, website or airport counter for that option first.",
+          "Rebooking or refund: ask the airline directly for the SG553 option, and keep the booking reference and boarding pass.",
+          "Receipts and records: keep receipts for any extra spending caused by the cancellation, and note the times of announcements, which matter if a complaint is later filed.",
+          "Official channels: raise a complaint through the airline's customer care and, if unresolved, the regulator's grievance channels, rather than only on social media."
+        ],
+      },
+      {
+        type: "p",
+        text: "For now, the verified picture is this: SG553 was cancelled on November 1 over Gorakhpur watch-hour restrictions, where an extension beyond 9 pm was not possible; a viral passenger video shows panic among passengers who say they were boarded, briefed and seated for nearly an hour first; and SpiceJet says an additional flight was scheduled on November 2. Whether boarding was avoidable remains the unanswered question.",
+      },
+      {
+        type: "h2",
+        text: "SpiceJet SG553 cancelled FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "Which SpiceJet flight was cancelled in the viral video?", a: "SpiceJet flight SG553, scheduled from Mumbai to Gorakhpur on November 1, 2026." },
+          { q: "Why was SpiceJet SG553 cancelled?", a: "SpiceJet said it was cancelled due to watch-hour restrictions at Gorakhpur, a defence airport where an extension beyond 9:00 pm was not possible." },
+          { q: "What does the viral SG553 video show?", a: "Passengers panicking and deboarding after a last-minute cancellation announcement; the filming passenger said the crew and pilot left after announcing it." },
+          { q: "What did SpiceJet offer stranded SG553 passengers?", a: "The airline said an additional commercial flight was scheduled on November 2 for stranded passengers, and expressed regret for the inconvenience." },
+          { q: "Was the SG553 cancellation announced before boarding?", a: "No, according to the passengers in the video: they say they had boarded, completed the safety briefing and sat inside for almost an hour before the cancellation was announced." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "punjab-aap-mlas-join-bjp-2027-polls-november-2-2026",
     image: "https://cdn.indiavoice.com/wp-content/uploads/2022/03/PB-VIDHAN.jpg",
     imageAlt: "Punjab Legislative Assembly (file photo)",
