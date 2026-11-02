@@ -33,6 +33,102 @@
 
 export const posts = [
   {
+    slug: "rishabh-pant-fails-fitness-test-new-zealand-tour-second-test-november-2-2026",
+    image: "https://media.crictracker.com/media/attachments/1750506721747_Rishabh-Pant.jpeg",
+    imageAlt: "Rishabh Pant in India colours (file photo)",
+    title: "Rishabh Pant Fails Fitness Test Ahead of New Zealand Tour: Second Chance to Prove Readiness",
+    description:
+      "Rishabh Pant fitness test: India keeper reportedly failed his first BCCI assessment in Bengaluru and must clear a second test to tour New Zealand.",
+    excerpt:
+      "Rishabh Pant has reportedly failed his first fitness test at the BCCI Centre of Excellence in Bengaluru, leaving his New Zealand tour place to a second assessment within two days.",
+    date: "2026-11-02",
+    category: "Sports",
+    sections: [
+      {
+        type: "p",
+        text: "Rishabh Pant fitness test news broke on November 2, 2026, with reports saying India's star wicketkeeper-batter failed his first fitness assessment at the BCCI Centre of Excellence in Bengaluru on Sunday, November 1. According to ESPNcricinfo, whose report was carried by News18, ABP Live, CricTracker, the Free Press Journal and others through the afternoon, Pant has been given another chance to prove his fitness before he can board the flight to New Zealand for the two-Test series. His place on that tour now depends on a second assessment, expected within the next two days.",
+      },
+      {
+        type: "p",
+        text: "This is important precision: the reports describe a failed first test and a second chance, not a final ruling-out. No BCCI statement confirming the result was quoted in the November 2 coverage, and head coach Gautam Gambhir said on Sunday that he had no information about Pant's availability. The BCCI medical team's second test will settle whether he joins the squad in New Zealand.",
+      },
+      {
+        type: "h2",
+        text: "Rishabh Pant fitness test: how the injury happened",
+      },
+      {
+        type: "p",
+        text: "Pant's fitness battle traces back to a side strain he suffered during the Irani Cup in early October, while leading Rest of India against Jammu and Kashmir in Srinagar. He has been out of competitive action since then. On October 23 he reported to the BCCI Centre of Excellence in Bengaluru, where he has been working through a structured rehabilitation programme that, according to the reports, has included both batting drills and wicketkeeping sessions.",
+      },
+      {
+        type: "p",
+        text: "The selectors had already flagged the uncertainty when they picked the squads: Pant was named in India's Test squad for New Zealand and in the India A squad, but with an asterisk against his name marking his selection as subject to fitness. He was also ruled out of the first two four-day tour fixtures between India A and New Zealand A, with uncapped Kumar Kushagra brought in as cover. The first fitness test at the Centre of Excellence was therefore always going to be a decisive checkpoint, and the reported failure means the asterisk stays in place for now.",
+      },
+      {
+        type: "h2",
+        text: "Rishabh Pant fitness test: what the second test decides",
+      },
+      {
+        type: "p",
+        text: "If Pant clears the second assessment, the reported plan is for him to join the India A squad for the third four-day match against New Zealand A in Lincoln, which starts on November 7 and runs to November 10. That match would serve as his preparation and match practice ahead of the Test series itself. If he does not clear it, his trip to New Zealand, and his availability for the Tests, would be in serious doubt, and the team management would have to lean on its backup options behind the stumps.",
+      },
+      {
+        type: "list",
+        items: [
+          "First fitness test: reportedly failed on Sunday, November 1, at the BCCI Centre of Excellence in Bengaluru.",
+          "Second fitness test: expected within the next two days, to decide whether Pant can travel to New Zealand.",
+          "India A third four-day match: New Zealand A vs India A in Lincoln, November 7 to 10, if Pant is cleared.",
+          "First Test: India vs New Zealand at the Basin Reserve, Wellington, starting November 19.",
+          "Second Test: India vs New Zealand in Christchurch, starting November 27."
+        ],
+      },
+      {
+        type: "h2",
+        text: "Rishabh Pant fitness test: who keeps wicket if he misses out",
+      },
+      {
+        type: "p",
+        text: "Dhruv Jurel is the designated backup wicketkeeper in India's main Test squad for New Zealand, and he has already stepped in behind the stumps in the India A fixtures that Pant missed. Jurel's presence means India are not left without a specialist keeper, but Pant's absence would still be a major blow: he is the first-choice keeper-batter, a match-winner in Test cricket, and a senior voice in the dressing room. That is why the second test matters so much, and why the reports on November 2 spread so quickly among Indian cricket fans.",
+      },
+      {
+        type: "p",
+        text: "Fast bowler Jasprit Bumrah, by contrast, departed for New Zealand on Sunday and is pencilled in for the same third four-day match in Lincoln, according to CricTracker. Pant's reported setback shows how finely balanced India's preparations remain less than three weeks before the Wellington Test.",
+      },
+      {
+        type: "h2",
+        text: "Rishabh Pant fitness test: what happens next",
+      },
+      {
+        type: "list",
+        items: [
+          "Second assessment: the BCCI medical team is expected to test Pant again within two days of the reported first-test failure.",
+          "Travel decision: clearance from that test determines whether Pant boards the flight to New Zealand.",
+          "Lincoln match: if cleared, Pant is expected to play the third India A four-day match against New Zealand A from November 7.",
+          "Wellington Test: the first Test begins on November 19, and Pant's participation depends on fitness clearance and match readiness.",
+          "Official word: fans should watch for a BCCI or team-management update, since the November 2 reports are based on the ESPNcricinfo report rather than a formal board announcement."
+        ],
+      },
+      {
+        type: "p",
+        text: "For now, the verified picture is this: Rishabh Pant reportedly failed his first fitness test at the BCCI Centre of Excellence in Bengaluru on November 1 while recovering from a side strain, and he will get a second test within two days that decides his New Zealand tour. Nothing is final yet, and that second assessment is the moment that will settle whether one of India's most important Test players makes the trip.",
+      },
+      {
+        type: "h2",
+        text: "Rishabh Pant fitness test FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "Did Rishabh Pant fail his fitness test for the New Zealand tour?", a: "According to ESPNcricinfo, as reported on November 2, Pant failed his first fitness test at the BCCI Centre of Excellence in Bengaluru on November 1. He has not been ruled out yet." },
+          { q: "Will Rishabh Pant get another fitness test?", a: "Yes. Reports say the BCCI medical team will arrange a second fitness test within the next two days to decide whether he can travel to New Zealand." },
+          { q: "What injury has kept Rishabh Pant out?", a: "A side strain suffered during the Irani Cup in early October, while leading Rest of India against Jammu and Kashmir in Srinagar." },
+          { q: "If cleared, when will Rishabh Pant play next?", a: "He is expected to join India A for the third four-day match against New Zealand A in Lincoln, starting November 7, as preparation for the Tests." },
+          { q: "When does the India vs New Zealand Test series start?", a: "The first Test begins in Wellington on November 19, followed by the second Test in Christchurch on November 27." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "supreme-court-green-crackers-delhi-ncr-diwali-2026-timings-rules-november-2-2026",
     image: "https://cf-images.assettype.com/thequint%2F2026-11-02%2Fj0112yvx%2FDSC_8113__1_.jpg",
     imageAlt: "Fireworks bursting over rooftops during Diwali celebrations at night (file photo)",
