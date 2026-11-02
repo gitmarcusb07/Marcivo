@@ -33,6 +33,114 @@
 
 export const posts = [
   {
+    slug: "supreme-court-green-crackers-delhi-ncr-diwali-2026-timings-rules-november-2-2026",
+    image: "https://cf-images.assettype.com/thequint%2F2026-11-02%2Fj0112yvx%2FDSC_8113__1_.jpg",
+    imageAlt: "Fireworks bursting over rooftops during Diwali celebrations at night (file photo)",
+    title: "Supreme Court Green Crackers Delhi-NCR: Diwali 2026 Timings, Rules and Ban Dates Explained",
+    description:
+      "Supreme Court green crackers Delhi-NCR: certified green crackers are allowed only on November 7-8, 2026, in fixed hours, with a full ban back from November 9.",
+    excerpt:
+      "The Supreme Court's detailed order published on November 2, 2026, allows only certified green firecrackers in Delhi-NCR on Diwali, November 7 and 8, in two fixed time windows each day.",
+    date: "2026-11-02",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "Supreme Court green crackers Delhi-NCR news broke in detail on November 2, 2026, when the court's 23-page order was published, setting out exactly how Delhi and the National Capital Region may celebrate Diwali this year. A Bench of Justices M. M. Sundresh and Prasanna B. Varale has allowed only certified green firecrackers in Delhi-NCR, and only on November 7 and 8, 2026, in two fixed time windows each day. Outside those windows, and from November 9 onwards, the complete ban returns. It is a limited, temporary relaxation, not a general lifting of the ban.",
+      },
+      {
+        type: "p",
+        text: "This matters because Diwali falls on November 7 and 8, and Delhi-NCR slipped into the 'very poor' air-quality category on November 2 itself. Anyone in Delhi, Gurugram, Noida, Ghaziabad or Faridabad needs to know the permitted hours, certified products and no-cracker zones: an ordinary cracker, or a green cracker burst at the wrong hour, is not covered.",
+      },
+      {
+        type: "h2",
+        text: "Supreme Court green crackers Delhi-NCR: what is allowed and when",
+      },
+      {
+        type: "p",
+        text: "The court has permitted bursting of certified green firecrackers only between 6 am and 7 am and between 8 pm and 10 pm on November 7 and 8, 2026. No bursting is permitted at any other time on those days, and no firecracker of any kind may be burst from November 9, when the complete ban is restored.",
+      },
+      {
+        type: "list",
+        items: [
+          "Bursting: 6 am to 7 am and 8 pm to 10 pm, on November 7 and 8, 2026 only.",
+          "Manufacture: only CSIR-NEERI-certified, PESO-licensed makers, from November 2 to 6, 2026.",
+          "Trader licences: cancelled licences restored temporarily from November 4 to 6, 2026.",
+          "Ban resumes: from November 9, 2026, all firecrackers are banned again in Delhi-NCR.",
+          "Next dates: compliance reports due December 14, 2026; matter listed December 16, 2026."
+        ],
+      },
+      {
+        type: "h2",
+        text: "Supreme Court green crackers Delhi-NCR: the strict conditions on every box",
+      },
+      {
+        type: "p",
+        text: "Only crackers approved by CSIR-NEERI (the Council of Scientific and Industrial Research - National Environmental Engineering Research Institute) and made by PESO-licensed manufacturers are permitted. Conventional crackers, barium crackers and unapproved crackers remain banned, as do 'ladis' and garland-style crackers.",
+      },
+      {
+        type: "p",
+        text: "Every approved box must be sealed and not mixed with unauthorised crackers. Each box must carry a product-specific QR code giving the manufacturer, NEERI registration, licence, formulation and test certificate, so buyers and officers can verify it. Coverage also reports that online sales are prohibited and sales must take place only at designated locations. Makers and traders must furnish a monetary security, a 'handsome amount' fixed by the authorities, forfeitable for violations, along with licence cancellation.",
+      },
+      {
+        type: "h2",
+        text: "Supreme Court green crackers Delhi-NCR: the 300-metre no-cracker zones",
+      },
+      {
+        type: "p",
+        text: "No firework may be burst within a 300-metre radius of hospitals, nursing homes, primary and district health centres, old-age homes, educational institutions and notified silence zones. These areas must be declared no-cracker zones, marked on the ground and published. Police and district authorities must inspect designated sale locations, verify QR codes, check vehicles entering the region for illegal firecrackers, and enforce the no-cracker zones.",
+      },
+      {
+        type: "p",
+        text: "The court warned of contempt action against officials who fail to implement its directions. Buyers should check the published no-cracker zone list for their neighbourhood before Diwali night.",
+      },
+      {
+        type: "h2",
+        text: "Why the court allowed a limited window instead of a full ban or a free Diwali",
+      },
+      {
+        type: "p",
+        text: "The Bench called bursting firecrackers during Deepavali a religious practice, but a qualified right, not an absolute one. Article 25(1) is subject to public order, morality and health, the court said, and Article 21 includes a healthy, safe and pollution-free environment. Unregulated bursting causes severe air and noise pollution, harming children, disabled people and the elderly most.",
+      },
+      {
+        type: "p",
+        text: "At the same time, the court was sharply critical of how the ban had worked. It said the State had 'utterly failed' in complying with its orders since 2015, and the situation had not improved even after the resumption of a complete ban, with a significant air-quality spike evident on Dasara and the day after. The complete ban, it said, had facilitated illegal sales while preventing people from buying legitimate green crackers. The limited window is therefore a regulated middle path: only certified, lower-pollution products, for two days, in fixed hours, under verifiable safeguards.",
+      },
+      {
+        type: "h2",
+        text: "What Delhi-NCR residents should check before buying green crackers",
+      },
+      {
+        type: "list",
+        items: [
+          "Certification: buy only CSIR-NEERI-approved crackers from a licensed trader; check the QR code on the sealed box.",
+          "Timing: burst only 6 am to 7 am or 8 pm to 10 pm on November 7 and 8, 2026.",
+          "Place: do not burst within 300 metres of a hospital, health centre, old-age home, school or silence zone.",
+          "Product type: avoid barium, conventional, 'ladis' and garland crackers; all remain banned.",
+          "Air quality: the pollution board must publish daily reports from November 2 to 30, 2026."
+        ],
+      },
+      {
+        type: "p",
+        text: "For now, the verified picture is this: the order published on November 2 gives Delhi-NCR a narrow, tightly policed Diwali window for certified green crackers only, on November 7 and 8, in the morning and evening hours fixed by the court, with a full ban returning on November 9. For buyers, the details that matter most are the QR code, the sealed box, the two time windows, and the 300-metre no-cracker zones.",
+      },
+      {
+        type: "h2",
+        text: "Supreme Court green crackers Delhi-NCR FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "Are green crackers allowed in Delhi-NCR for Diwali 2026?", a: "Yes, only certified green crackers, only on November 7 and 8, 2026. A complete ban returns from November 9." },
+          { q: "What are the permitted bursting hours in Delhi-NCR?", a: "6 am to 7 am and 8 pm to 10 pm on November 7 and 8, 2026. No bursting is allowed outside those hours." },
+          { q: "How can I tell if a cracker is a genuine green cracker?", a: "It must be CSIR-NEERI-approved, PESO-licensed, sold in a sealed box, and carry a product-specific QR code." },
+          { q: "Where are crackers banned even on November 7 and 8?", a: "Within 300 metres of hospitals, health centres, old-age homes, schools and notified silence zones." },
+          { q: "When does the full ban return in Delhi-NCR?", a: "From November 9, 2026. Compliance reports are due December 14, and the matter returns on December 16." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "delhi-aqi-today-very-poor-first-time-season-grap-stage-2-november-2-2026",
     image: "https://i.natgeofe.com/n/a295913d-5a4c-4e2f-93f0-731a95d8d8e3/1-delhi-smog.jpg?w=1280&",
     imageAlt: "Delhi skyline shrouded in thick smog (file photo)",
