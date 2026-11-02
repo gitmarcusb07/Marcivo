@@ -33,6 +33,105 @@
 
 export const posts = [
   {
+    slug: "king-tu-mil-jaaye-song-out-shah-rukh-khan-deepika-padukone-november-2-2026",
+    image: "https://i.ytimg.com/vi/BPZkZpGMpXA/maxresdefault.jpg",
+    imageAlt: "Shah Rukh Khan and Deepika Padukone in the official video of Tu Mil Jaaye from King",
+    title: "Tu Mil Jaaye King Song Out: Shah Rukh Khan and Deepika Padukone's First Song From King Drops on SRK's 61st Birthday",
+    description:
+      "Tu Mil Jaaye King song is out: Shah Rukh Khan and Deepika Padukone's first song from King, sung by Arijit Singh, Ed Sheeran and Madhubanti.",
+    excerpt:
+      "Tu Mil Jaaye, the first song from Shah Rukh Khan's King, is out on his 61st birthday, pairing him with Deepika Padukone in a romantic action number.",
+    date: "2026-11-02",
+    category: "Cinema",
+    sections: [
+      {
+        type: "p",
+        text: "The Tu Mil Jaaye King song is out. Shah Rukh Khan's first song from King dropped at midnight on November 2, 2026, coinciding with the superstar's 61st birthday, and it immediately became the most talked-about Bollywood release of the morning. The full song video, titled KING: Tu Mil Jaaye, stars Shah Rukh Khan alongside Deepika Padukone, and it is the first full musical asset from Siddharth Anand's action film, which arrives in cinemas on December 24, 2026.",
+      },
+      {
+        type: "h2",
+        text: "Tu Mil Jaaye King song: singers, composer and credits",
+      },
+      {
+        type: "p",
+        text: "The credits on the official release confirm the collaboration fans had been waiting for. Tu Mil Jaaye is composed by Sachin-Jigar, with lyrics by Kumaar, and the vocals are by Arijit Singh and Madhubanti Bagchi, featuring Ed Sheeran. The film is presented by Red Chillies Entertainment in association with Marflix Pictures, and the song's official description lists Ed Sheeran courtesy of Interscope Records and Gingerbread Man Records.",
+      },
+      {
+        type: "list",
+        items: [
+          "Song: Tu Mil Jaaye, the first song from King",
+          "Starring in the video: Shah Rukh Khan and Deepika Padukone",
+          "Vocals: Arijit Singh and Madhubanti Bagchi, featuring Ed Sheeran",
+          "Composed by: Sachin-Jigar; lyrics: Kumaar",
+          "Film: King, directed by Siddharth Anand, in cinemas December 24, 2026",
+          "Released: at midnight on November 2, 2026, Shah Rukh Khan's 61st birthday"
+        ],
+      },
+      {
+        type: "p",
+        text: "That combination is what makes the track such a talking point. Arijit Singh brings the familiar Hindi romantic voice that fans associate with Shah Rukh Khan's biggest love songs, while Ed Sheeran's presence gives King its first genuinely global musical hook. It is the kind of pairing that was reported ahead of the release, and the official video now confirms it in full.",
+      },
+      {
+        type: "h2",
+        text: "What happens in the Tu Mil Jaaye video",
+      },
+      {
+        type: "p",
+        text: "The video opens on a much harsher note than a conventional love song. Shah Rukh Khan appears in dark glasses, surrounded by guns, cargo and coastal hideouts, placing the romance inside a tense action world from the very first frames. That edge is deliberate: Tu Mil Jaaye frames love as something pursued inside danger, not away from it.",
+      },
+      {
+        type: "p",
+        text: "As the song unfolds, the mood loosens into breezy seaside romance. Shah Rukh Khan and Deepika Padukone share drinks at an outdoor setting, pose with roses by crashing waves, share street food by the harbour at night and slow-dance beneath fireworks. The recurring lyric, about finding peace if the loved one is found, becomes the emotional spine of the song, carrying the quiet ache of wanting calm in a chaotic world.",
+      },
+      {
+        type: "p",
+        text: "That tenderness never stays untouched for long. The video cuts back into gunfights, flames, rooftop action, car chases and close combat, giving King a muscular identity even inside a romantic track. A later lyrical turn, about a fire lit in the heart that will not stop until the world burns, pushes the song from longing into a more dangerous, obsessive register. The result is a number designed for replay value as much as for visual recall, balancing softness with scale.",
+      },
+      {
+        type: "h2",
+        text: "Why some reports called it Tu Mil Jaaye Toh",
+      },
+      {
+        type: "p",
+        text: "Fans searching for the song may notice two very similar titles. Reports ahead of the release referred to the track as Tu Mil Jaaye Toh, and that name was widely shared through November 1. The official release, however, titles the song Tu Mil Jaaye, and that is the name on the official video and audio pages. The song itself is the same birthday release; only the final official title is the shorter form.",
+      },
+      {
+        type: "h2",
+        text: "What Tu Mil Jaaye tells us about King",
+      },
+      {
+        type: "p",
+        text: "King is directed by Siddharth Anand, who previously directed Shah Rukh Khan and Deepika Padukone in Pathaan, and Tu Mil Jaaye deliberately leans on that reunion. The film is shaping up as a romance-driven action spectacle, and its first song makes that promise clear: the romance is front and centre, but the action world around it never disappears. Alongside Shah Rukh Khan and Deepika Padukone, the film features Suhana Khan, Abhishek Bachchan, Rani Mukerji, Anil Kapoor and others, and it is one of the most closely watched releases of the year-end season.",
+      },
+      {
+        type: "p",
+        text: "The timing of the release is part of the strategy. King arrives in cinemas on December 24, 2026, and the birthday song drop gives the campaign its first full musical asset weeks ahead of the trailer, which is expected to follow at a later stage. For a film carrying this level of expectation, a song that works both as a romantic number and as an action showcase is a careful first step.",
+      },
+      {
+        type: "h2",
+        text: "The birthday build-up: Mannat lights up for King",
+      },
+      {
+        type: "p",
+        text: "The release did not arrive out of nowhere. Ahead of Shah Rukh Khan's birthday, his Mumbai bungalow Mannat lit up with King posters and dialogues, and the Bandra-Worli Sea Link lit up with the King poster as well. Director Siddharth Anand had teased a midnight drop over the preceding days, and reports through November 1 consistently pointed to a full song, not a teaser or a short glimpse, arriving on the birthday. The midnight release delivered exactly that: the complete song, unveiled in full.",
+      },
+      {
+        type: "h2",
+        text: "Tu Mil Jaaye King song FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "Is Tu Mil Jaaye from King out?", a: "Yes. Tu Mil Jaaye, the first song from King, was released at midnight on November 2, 2026, on Shah Rukh Khan's 61st birthday." },
+          { q: "Who sings Tu Mil Jaaye from King?", a: "Tu Mil Jaaye is sung by Arijit Singh and Madhubanti Bagchi, featuring Ed Sheeran. It is composed by Sachin-Jigar with lyrics by Kumaar." },
+          { q: "Who stars in the Tu Mil Jaaye video?", a: "The video stars Shah Rukh Khan and Deepika Padukone, reuniting the Pathaan pair in a romantic action number." },
+          { q: "When does King release in cinemas?", a: "King, directed by Siddharth Anand, is scheduled to release in cinemas on December 24, 2026." },
+          { q: "Is the song called Tu Mil Jaaye or Tu Mil Jaaye Toh?", a: "Reports before the release called it Tu Mil Jaaye Toh, but the official release titles the song Tu Mil Jaaye." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "mahadev-betting-app-sourabh-chandrakar-extradited-oman-cbi-raipur-november-1-2026",
     image: "https://img.republicworld.com/all_images/2026/11/cbi-extradites-mahadev-app-kingpin-sourabh-chandrakar-from-oman-1793541224570-1280x720.webp?w=1280&h=720&q=75&format=webp",
     imageAlt: "Sourabh Chandrakar flanked by CBI officials after being extradited to India from Oman",
