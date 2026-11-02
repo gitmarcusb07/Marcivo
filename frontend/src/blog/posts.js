@@ -33,6 +33,104 @@
 
 export const posts = [
   {
+    slug: "kimi-antonelli-youngest-f1-world-champion-mexico-grand-prix-november-2-2026",
+    image: "https://autoracer.it/wp-content/uploads/2026/04/kimi2-scaled-e1777573628302.jpg",
+    imageAlt: "Kimi Antonelli celebrating with the Italian flag as his Mercedes team sprays champagne",
+    title: "Kimi Antonelli Youngest F1 World Champion: How the 20-Year-Old Sealed the Title in Mexico",
+    description:
+      "Kimi Antonelli youngest F1 world champion at 20 years and 68 days after finishing third at the Mexico City Grand Prix behind Max Verstappen and Lewis Hamilton.",
+    excerpt:
+      "Kimi Antonelli became Formula 1's youngest-ever world champion at 20 years and 68 days by finishing third at the Mexico City Grand Prix, a race won by Max Verstappen ahead of Lewis Hamilton.",
+    date: "2026-11-02",
+    category: "Sports",
+    sections: [
+      {
+        type: "p",
+        text: "Kimi Antonelli youngest F1 world champion is now official: the 20-year-old Mercedes driver clinched his first Formula 1 title at the Mexico City Grand Prix, finishing third in a dramatic, red-flagged race won by Max Verstappen ahead of Lewis Hamilton. At 20 years and 68 days, Antonelli is the youngest champion in the sport's history, breaking Sebastian Vettel's record from 2010, and the first Italian champion since Alberto Ascari in 1953.",
+      },
+      {
+        type: "p",
+        text: "The podium told the story of three eras of Formula 1: Hamilton, a seven-time champion, in second; Verstappen, winner of four straight titles from 2021 to 2024, on the top step; and between them the new champion, in only his second Formula 1 season, mobbed by his Mercedes crew with an Italian flag around his shoulders. His radio message said it all: We did it. Thank you so much.",
+      },
+      {
+        type: "h2",
+        text: "Kimi Antonelli youngest F1 world champion: how the title was sealed in Mexico",
+      },
+      {
+        type: "p",
+        text: "Antonelli arrived in Mexico City leading by 123 points, with only his team-mate George Russell and Hamilton still able to catch him. The maths was simple: finish ninth or better, and the title was his no matter what anyone else did. He started fourth, after qualifying fifth and moving up on a penalty for Verstappen, and drove a controlled race to third, passing Charles Leclerc for the final podium place around lap 48.",
+      },
+      {
+        type: "p",
+        text: "In the end, neither Russell nor Hamilton won the race, so the arithmetic was settled regardless. But Antonelli did not cruise home for safe points; he raced for the podium and got it, about four seconds behind Verstappen. With four races left, his lead is unassailable: 380 points to Verstappen's 261 and Hamilton's 259.",
+      },
+      {
+        type: "list",
+        items: [
+          "Winner: Max Verstappen (Red Bull) in 2:20:28.772, his 74th career win and sixth in Mexico.",
+          "Second: Lewis Hamilton (Ferrari), 0.799 seconds behind, from his first Ferrari pole at a full Grand Prix.",
+          "Third: Kimi Antonelli (Mercedes), the result that sealed the drivers' championship with four races left.",
+          "Fourth: Charles Leclerc (Ferrari), ahead of fifth-placed Lando Norris (McLaren) and sixth-placed George Russell (Mercedes).",
+          "Standings: Antonelli 380 points, Verstappen 261, Hamilton 259, Russell fourth, 130 points behind Antonelli."
+        ],
+      },
+      {
+        type: "h2",
+        text: "Why Antonelli's record is so remarkable",
+      },
+      {
+        type: "p",
+        text: "The previous youngest champion, Sebastian Vettel, was 23 years and 134 days old when he won his first title with Red Bull in 2010. Antonelli has beaten that mark by more than three years. He has also joined a short list of drivers to win the title in their second season, after Jacques Villeneuve and Lewis Hamilton, and is only the third Italian champion ever, after Giuseppe Farina in 1950 and Ascari, who won in 1952 and 1953.",
+      },
+      {
+        type: "p",
+        text: "The season behind the title has been remarkably consistent, with nine wins and 16 podiums, including victory in the United States Grand Prix just before Mexico. He had even missed the Mexico weekend's media day through illness, excused by the FIA as a precaution, and still delivered, admitting he had felt more tense than usual.",
+      },
+      {
+        type: "h2",
+        text: "A chaotic Mexico City Grand Prix: pole, crashes, a red flag and a 33-minute halt",
+      },
+      {
+        type: "p",
+        text: "The race was anything but a procession. Hamilton started from pole, the 105th of his career but his first for Ferrari at a full Grand Prix, with Leclerc alongside him. The Ferraris battled into the first corners, Leclerc cut across the grass at turn four, and Verstappen swept past Hamilton into second. Hamilton's radio complaint, Pushed out by my own team-mate, said it all, and Leclerc later took a five-second penalty.",
+      },
+      {
+        type: "p",
+        text: "The race was then halted on lap 46 of 71, when Valtteri Bottas suffered a front-left suspension failure and his Cadillac hit the barriers at turn one. Bottas walked to an ambulance giving a thumbs-up and was later released from the medical centre. The stoppage lasted about 33 minutes with 25 laps remaining; after the restart, Verstappen held off Hamilton while Antonelli passed Leclerc for third.",
+      },
+      {
+        type: "p",
+        text: "One more twist followed: after a second safety car, caused by a collision between Arvid Lindblad and Oscar Piastri, Hamilton chased Verstappen for the final nine laps but could not pass. Verstappen won by 0.799 seconds. Russell, who had started on the front row and needed to win to stay in contention, dropped back, collided with Isack Hadjar and took a 10-second penalty on his way to sixth.",
+      },
+      {
+        type: "h2",
+        text: "What happens next: Brazil, the constructors' title and four races to enjoy",
+      },
+      {
+        type: "p",
+        text: "With the drivers' title decided, attention turns to the constructors' championship and the final four races, starting in Brazil next weekend. Mercedes lead Ferrari 630 points to 504 and could clinch the team title in Brazil, while Verstappen and Hamilton will now fight over second place in the drivers' standings.",
+      },
+      {
+        type: "p",
+        text: "For Antonelli, the pressure is off, and he intends to enjoy it. I am speechless, he told the Mexico City crowd. It has been an incredible season, and to share this podium with Max and Lewis is truly incredible. On the last lap, he admitted, he had to back off because he could barely see the track through the emotion.",
+      },
+      {
+        type: "h2",
+        text: "Kimi Antonelli youngest F1 world champion FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "How old is Kimi Antonelli, the youngest F1 world champion?", a: "20 years and 68 days, beating Sebastian Vettel's 23 years and 134 days from 2010 by more than three years." },
+          { q: "Where did Antonelli win the 2026 F1 world championship?", a: "At the Mexico City Grand Prix, by finishing third behind race winner Max Verstappen and second-placed Lewis Hamilton." },
+          { q: "What did Antonelli need to do in Mexico to seal the title?", a: "Finish ninth or better, which would have made him champion regardless of any other result. He finished third." },
+          { q: "Who was the last Italian F1 world champion before Antonelli?", a: "Alberto Ascari in 1953, 73 years earlier. Antonelli is only the third Italian champion, after Giuseppe Farina (1950) and Ascari." },
+          { q: "How many races remain in the 2026 F1 season?", a: "Four races, starting in Brazil, where Mercedes (630 points) can clinch the constructors' title ahead of Ferrari (504)." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "rishabh-pant-fails-fitness-test-new-zealand-tour-second-test-november-2-2026",
     image: "https://media.crictracker.com/media/attachments/1750506721747_Rishabh-Pant.jpeg",
     imageAlt: "Rishabh Pant in India colours (file photo)",
