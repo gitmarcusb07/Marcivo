@@ -33,6 +33,128 @@
 
 export const posts = [
   {
+    slug: "delhi-guwahati-bullet-train-corridor-approved-route-travel-time",
+    image: "https://www.punenow.com/wp-content/uploads/2026/02/Mumbai-Pune-Bullet-Train.jpg",
+    imageAlt: "A modern high-speed bullet train at a station platform (representational image)",
+    title: "Delhi-Guwahati Bullet Train Corridor Approved: Route, Stations and Travel Time Explained",
+    description:
+      "Delhi-Guwahati bullet train corridor approved: route via Agra, Lucknow, Varanasi and Patna, with Delhi to Guwahati in under 8 hours.",
+    excerpt:
+      "The Delhi-Guwahati bullet train corridor has been approved, linking Delhi with Guwahati via Agra, Kanpur, Lucknow, Varanasi, Patna and Siliguri in under eight hours.",
+    date: "2026-11-02",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "The Delhi-Guwahati bullet train corridor has been approved. Railway Minister Ashwini Vaishnaw announced on October 31, 2026, that Prime Minister Narendra Modi has approved the North Bullet Train Corridor, which will connect Delhi with Guwahati in Assam. The proposed route runs through Agra, Kanpur, Lucknow, Ayodhya, Varanasi, Prayagraj, Patna and Siliguri before reaching Guwahati, and Assam Chief Minister Himanta Biswa Sarma said the journey between Guwahati and Delhi could take less than eight hours. That would turn a trip that takes well over a day today into a single-day journey, and bring the Northeast onto India's high-speed rail network.",
+      },
+      {
+        type: "h2",
+        text: "Delhi-Guwahati bullet train route: cities list",
+      },
+      {
+        type: "p",
+        text: "The route covers ten major cities across Delhi, Uttar Pradesh, Bihar, West Bengal and Assam. It is built on two sections already in the national plan, Delhi to Varanasi and Varanasi to Siliguri through Patna. The minister named six main stations, and the full route also passes through Ayodhya and Prayagraj.",
+      },
+      {
+        type: "list",
+        items: [
+          "Delhi",
+          "Agra",
+          "Kanpur",
+          "Lucknow",
+          "Ayodhya",
+          "Varanasi",
+          "Prayagraj",
+          "Patna",
+          "Siliguri",
+          "Guwahati"
+        ],
+      },
+      {
+        type: "h2",
+        text: "Delhi-Guwahati bullet train travel time: what the minister announced",
+      },
+      {
+        type: "p",
+        text: "The travel times shared by the Railway Minister are indicative figures for the proposed corridor, not a published timetable. The headline figure is Guwahati to Delhi in under eight hours, stated by Chief Minister Sarma. On the western section, Delhi to Agra would take under an hour and Delhi to Varanasi about three and a half hours.",
+      },
+      {
+        type: "list",
+        items: [
+          "Delhi to Agra: 59 minutes.",
+          "Delhi to Kanpur: 1 hour and 45 minutes.",
+          "Delhi to Lucknow: 2 hours and 12 minutes.",
+          "Varanasi to Lucknow: 1 hour and 21 minutes.",
+          "Varanasi to Prayagraj: 33 minutes.",
+          "Varanasi to Patna: around 1 hour.",
+          "Varanasi to Delhi: about 3 hours and 33 minutes.",
+          "Delhi to Siliguri: around 6 hours, as stated by the minister in June 2026.",
+          "Guwahati to Delhi: under 8 hours, according to Assam Chief Minister Himanta Biswa Sarma."
+        ],
+      },
+      {
+        type: "h2",
+        text: "Why the Guwahati extension matters for the Northeast",
+      },
+      {
+        type: "p",
+        text: "The Guwahati extension is the newest and most significant part of this announcement. The Northern bullet train corridor was originally planned to end at Siliguri, which would have left Assam and the rest of the Northeast off the high-speed map. Chief Minister Sarma said he wrote to the Railway Minister and met him in July 2026 to ask for the corridor to be extended into the Northeast, and that the minister saw merit in the proposal and approved the extension. In a post on November 1, Sarma thanked the Prime Minister and the Railway Minister and called the extension a pivotal moment for East India.",
+      },
+      {
+        type: "p",
+        text: "Sarma linked the faster link to Assam's economic plans, saying fast and affordable connectivity to Delhi would open up opportunities for businesses and livelihoods as Assam prepares to attract high-tech industries. A bullet train to Assam once seemed so far-fetched that it never even became a public demand, he said, but the proposed corridor is bringing that idea closer to reality.",
+      },
+      {
+        type: "h2",
+        text: "What the Delhi-Guwahati bullet train approval means, and what it does not",
+      },
+      {
+        type: "p",
+        text: "It is important to be clear about what has actually been announced. The approval was announced by the Railway Minister on October 31, while he was launching India's second Vande Bharat Sleeper train on the Varanasi-New Delhi route. The reports checked do not publish a construction cost, a start date, or an opening date, and no ticket prices have been fixed. Treat the journey times above as indicative figures for a proposed corridor, not a timetable, and do not expect booking to open any time soon.",
+      },
+      {
+        type: "p",
+        text: "What the minister did promise is affordability. Vaishnaw said bullet trains would not be limited to the rich, but would also be affordable for poor and middle-class families, with fares below airfares. He said work on the high-speed network is progressing rapidly under the Make in India spirit, and called the project a major gift for future generations.",
+      },
+      {
+        type: "h2",
+        text: "How the Delhi-Guwahati corridor fits India's bullet train plans",
+      },
+      {
+        type: "p",
+        text: "The Delhi-Guwahati corridor is the northern arm of a much larger high-speed rail programme. India's first bullet train corridor, the 508-km Mumbai-Ahmedabad line, is already under construction, and the government has targeted operationalising its priority section by August 2027. The Union Budget 2026-27 announced seven new bullet train corridors: Mumbai-Pune, Pune-Hyderabad, Hyderabad-Bengaluru, Hyderabad-Chennai, Chennai-Bengaluru, Delhi-Varanasi and Varanasi-Siliguri. The Delhi-Varanasi and Varanasi-Siliguri sections are exactly the backbone of the new Northern corridor, which now extends that backbone all the way to Guwahati.",
+      },
+      {
+        type: "h2",
+        text: "How to follow the Delhi-Guwahati bullet train project",
+      },
+      {
+        type: "steps",
+        items: [
+          "Watch for official Railway Ministry and National High-Speed Rail Corporation announcements confirming the detailed project report and funding.",
+          "Look out for station and alignment news for your city, since the main stations and the Ayodhya and Prayagraj stops will shape local options.",
+          "Treat any unofficial booking link or ticket price with caution: no tickets are on sale, and no opening date has been announced.",
+          "Compare future updates against the indicative times here, Delhi to Agra in 59 minutes and Guwahati to Delhi in under eight hours."
+        ],
+      },
+      {
+        type: "h2",
+        text: "Delhi-Guwahati bullet train FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "Which cities are on the Delhi-Guwahati bullet train route?", a: "Delhi, Agra, Kanpur, Lucknow, Ayodhya, Varanasi, Prayagraj, Patna, Siliguri and Guwahati, per Railway Minister Ashwini Vaishnaw." },
+          { q: "How long will the Delhi to Guwahati bullet train take?", a: "Chief Minister Himanta Biswa Sarma has said Guwahati to Delhi could take less than eight hours. Delhi to Agra is put at 59 minutes, Delhi to Varanasi at about three and a half hours." },
+          { q: "When will the Delhi-Guwahati bullet train open?", a: "No opening date has been announced. The corridor has been approved, but no construction start date or commissioning date has been published in the reports checked." },
+          { q: "How much will Delhi-Guwahati bullet train tickets cost?", a: "No fares have been fixed. The Railway Minister has said fares would stay below airfares and that bullet trains would be affordable for poor and middle-class families." },
+          { q: "Was Guwahati always part of the bullet train plan?", a: "No. It was originally planned to end at Siliguri, and was extended to Guwahati after Chief Minister Himanta Biswa Sarma requested it in July 2026." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "jhunjhunu-electrocution-8-workers-killed-rajasthan-november-2-2026",
     image: "https://imgs.etvbharat.com/etvbharat/prod-images/02-11-2026/1200-675-28016904-thumbnail-16x9-ht-current-aspera.jpg",
     imageAlt: "High-tension power lines, like the overhead line a road-construction machine touched in Jhunjhunu, Rajasthan",
