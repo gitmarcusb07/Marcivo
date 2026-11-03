@@ -33,6 +33,99 @@
 
 export const posts = [
   {
+    slug: "cyclone-murasu-landfall-completed-weakening-november-3-2026",
+    image: "https://static.thesouthfirst.com/wp-content/uploads/2026/11/Heavy-rains-1.jpg",
+    imageAlt: "Heavy rain lashing a coastal area of Andhra Pradesh as Cyclone Murasu moves inland after landfall",
+    title: "Cyclone Murasu Landfall Completed: Storm Crosses Andhra Coast, Weakening Into Deep Depression by Tonight",
+    description:
+      "Cyclone Murasu landfall completed between 3:30 and 5:30 am on November 3, 2026, near Ongole, IMD said, with the storm weakening through the day.",
+    excerpt:
+      "Cyclone Murasu completed its landfall on the south Andhra Pradesh coast between 3:30 and 5:30 am on Tuesday, November 3, 2026, the India Meteorological Department said, after crossing near Ongole with winds of 100-110 kmph gusting to 120 kmph.",
+    date: "2026-11-03",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "Cyclone Murasu landfall completed in the early hours of Tuesday, November 3, 2026, closing the most dangerous phase of the storm for the Andhra Pradesh coast. According to the India Meteorological Department (IMD), the severe cyclonic storm crossed the south Andhra Pradesh coast between Nellore and Narsapur, close to Ongole, between 3:30 and 5:30 am, with winds of 100-110 kmph and gusts reaching 120 kmph. By 5:30 am the system lay centred over south coastal Andhra Pradesh, close to Ongole, and was moving north-northwestwards.",
+      },
+      {
+        type: "p",
+        text: "This is the confirmed end of a landfall process that began at 1 am on Tuesday, when the storm's northern inner spiral band entered the south coastal region. The completion matters because it marks the point at which the storm's core is fully ashore: the threat now shifts from the landfall winds at the coast to heavy rain, strong winds and waterlogging as the weakening system moves inland through Tuesday.",
+      },
+      {
+        type: "h2",
+        text: "Cyclone Murasu landfall completed: the IMD timeline",
+      },
+      {
+        type: "list",
+        items: [
+          "1:00 am, November 3: the landfall process commenced near Ongole, with the storm's northern inner spiral band entering south coastal Andhra Pradesh.",
+          "3:30 to 5:30 am, November 3: the severe cyclonic storm crossed the coast between Nellore and Narsapur, close to Ongole, at latitude 15.53 degrees north and longitude 80.22 degrees east.",
+          "Landfall winds: 100-110 kmph sustained, with gusts up to 120 kmph at the landfall point, as reported by the IMD.",
+          "5:30 am, November 3: the system lay centred over south coastal Andhra Pradesh near Ongole, about 40 km southwest of Bapatla, 80 km north-northeast of Kavali and 120 km west-southwest of Machilipatnam.",
+          "Movement: north-northwestwards at about 8 kmph during the six hours before the 5:30 am bulletin, under continuous watch from Doppler weather radars at Machilipatnam and Visakhapatnam."
+        ],
+      },
+      {
+        type: "h2",
+        text: "Damage so far: trees uprooted, areas inundated, no casualties reported",
+      },
+      {
+        type: "p",
+        text: "The storm battered the coastal districts through the night. Hundreds of trees were uprooted in Nellore, Prakasam and Bapatla districts, several low-lying areas were inundated, and strong winds scattered pushcarts and signboards along Kothapatnam Beach Road near Ongole. In Ongole itself, a statue of Andhra Kesari Tanguturi Prakasam Pantulu at the Prakasam Bhavan in the district Collectorate premises collapsed after a tree fell on it.",
+      },
+      {
+        type: "p",
+        text: "No casualties had been reported in Tuesday morning's updates, and the electricity department reported no disruption to power supply anywhere in the affected zones, with no power poles reported fallen. But officials stressed the danger is not over: Chief Minister N. Chandrababu Naidu, who reviewed the situation with district collectors at 3:30 am, directed that people in cyclone-affected areas should not venture onto the roads until obstructions are cleared.",
+      },
+      {
+        type: "h2",
+        text: "What happens next: weakening into a cyclonic storm, then a deep depression",
+      },
+      {
+        type: "p",
+        text: "The IMD expects Murasu to weaken steadily as it moves inland. It is likely to become a cyclonic storm with winds of 80-90 kmph, gusting to 100 kmph, by noon on Tuesday, and then a deep depression with winds of 55-65 kmph, gusting to 75 kmph, by midnight on Tuesday. Heavy to very heavy rain, with extremely heavy falls in isolated places, is still expected across Krishna, Guntur, Bapatla, Prakasam, Markapuram and Nellore districts, with very heavy rain also forecast for parts of Eluru, East Godavari, West Godavari, NTR, Palnadu, Tirupati and Chittoor districts. Heavy rain was also reported in Puducherry and north Tamil Nadu because of the cyclone's impact.",
+      },
+      {
+        type: "p",
+        text: "Six National Disaster Response Force teams and seven State Disaster Response Force teams were kept on standby. Officials also warned that rainfall in the catchment areas of the Nagarjuna Sagar and Pulichintala projects could trigger flood inflows of around 13 to 15 TMC, and thousands of people from low-lying and flood-prone areas had been evacuated before landfall.",
+      },
+      {
+        type: "h2",
+        text: "Fishermen warning and helplines: what residents should do now",
+      },
+      {
+        type: "p",
+        text: "Fishermen have been strictly advised not to venture into the sea. Under the IMD's 6 am fishermen warning on November 3, the do-not-venture advisories run until the morning of November 4 for the southwest Bay of Bengal and the north Tamil Nadu-Puducherry coasts, and until the afternoon of November 4 for the west-central Bay of Bengal and the south Odisha coast. The sea remains very high to very rough in the affected areas.",
+      },
+      {
+        type: "list",
+        items: [
+          "Stay indoors and off the roads in affected districts until local officials say obstructions, including fallen trees and wires, have been cleared.",
+          "Report cyclone-related problems such as power outages, fallen trees, collapsed walls or waterlogging through the Mana Mitra WhatsApp service on 9552300009: send 'Hi', select 'Murasu Cyclone Issues', then 'Report Issue', confirm and register with your name, district, mandal and details of the problem.",
+          "For emergencies, call the toll-free numbers 112, 1070 or 18004250101.",
+          "Fishermen should not venture into the sea until the advisories are lifted on November 4.",
+          "Do not touch fallen electric wires or poles, and keep children away from waterlogged areas and debris."
+        ],
+      },
+      {
+        type: "h2",
+        text: "Cyclone Murasu landfall completed FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "When was Cyclone Murasu landfall completed?", a: "Between 3:30 and 5:30 am on Tuesday, November 3, 2026, when the severe cyclonic storm crossed the south Andhra Pradesh coast between Nellore and Narsapur, close to Ongole, according to the IMD." },
+          { q: "How strong were the winds at landfall?", a: "The IMD reported sustained winds of 100-110 kmph with gusts up to 120 kmph at the landfall point." },
+          { q: "Has anyone died in Cyclone Murasu?", a: "No casualties had been reported in Tuesday morning's updates, though officials warned the situation was still being assessed as the storm moved inland." },
+          { q: "How will Murasu weaken?", a: "The IMD expects it to weaken into a cyclonic storm by noon on November 3 and into a deep depression by midnight, while still bringing heavy rain to Andhra Pradesh and neighbouring areas." },
+          { q: "Where can affected residents report problems?", a: "Through the Mana Mitra WhatsApp service on 9552300009, or the emergency numbers 112, 1070 and 18004250101." },
+          { q: "When can fishermen go back to sea?", a: "Not until the IMD advisories are lifted: until the morning of November 4 for most affected waters, and until the afternoon of November 4 for the west-central Bay of Bengal and south Odisha coast." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "gst-collections-october-2026-rs-231-lakh-crore-229-percent-growth",
     image: "https://media.assettype.com/thequint%2F2017-03%2Fe1943e86-1064-4dfb-b8ff-e8cb98343bc7%2Fa7b7c620-96a2-4171-b9db-b95b32ba7096.jpg?rect=0%2C0%2C1024%2C576",
     imageAlt: "Goods and Services Tax in India, illustrated with tax and finance imagery",
