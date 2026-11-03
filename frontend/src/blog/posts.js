@@ -33,6 +33,181 @@
 
 export const posts = [
   {
+    slug: "jesus-de-miguel-tenerife-dies-on-pitch-collision-november-3-2026",
+    image: "https://deporpress.com/wp-content/uploads/2026/04/Jesus-de-Miguel-tras-marcar-@CDTenerife-scaled-e1757321274718-1-1024x1015.jpg",
+    imageAlt: "Jesus de Miguel celebrating a goal for CD Tenerife in the club's white and blue kit",
+    title: "Jesus de Miguel Death: Tenerife Striker Dies Aged 30 After On-Pitch Collision",
+    description:
+      "Jesus de Miguel death: CD Tenerife striker Jesus de Miguel, 30, has died after a collision with Andorra goalkeeper Jesus Owono in a LaLiga 2 match.",
+    excerpt:
+      "Jesus de Miguel has died aged 30, CD Tenerife confirmed on Tuesday, November 3, 2026, a day after the striker suffered a cardiac arrest following a collision with Andorra goalkeeper Jesus Owono during their LaLiga 2 match.",
+    date: "2026-11-03",
+    category: "Sports",
+    sections: [
+      {
+        type: "p",
+        text: "Jesus de Miguel death is the tragic football news of Tuesday, November 3, 2026: CD Tenerife striker Jesus de Miguel Alameda has died aged 30, a day after suffering a cardiac arrest following an on-pitch collision during his club's Spanish second-division match against FC Andorra. Tenerife confirmed his death on Tuesday morning, and the news has since been reported across the football world by Sky Sports, Al Jazeera, The Times, the Indian Express and other outlets, with tributes pouring in from LaLiga, the Spanish football federation and clubs including Barcelona and Real Madrid.",
+      },
+      {
+        type: "p",
+        text: "The club's statement, posted on Tuesday morning, read: \"Heartbroken, with a lump in our throats and unable to believe this is true, CD Tenerife announces the tragic passing of Jesus de Miguel Alameda, which occurred this Tuesday, November 3, 2026, at 8am.\" In Indian time that is 12:30pm IST. The club added that there were \"no words of comfort\" for such a loss, and that the player's family had thanked supporters for their messages while asking for the utmost respect for their privacy in these terrible moments.",
+      },
+      {
+        type: "h2",
+        text: "Jesus de Miguel death: what happened in the Tenerife vs Andorra match",
+      },
+      {
+        type: "p",
+        text: "The incident happened on Monday, November 2, 2026, at Tenerife's Estadio Heliodoro Rodriguez Lopez, in a LaLiga 2 match against FC Andorra. De Miguel had come on as a substitute in the 59th minute, with Tenerife leading 2-0 at that stage. By the closing stages Andorra had fought back to 2-2, and in stoppage time a long ball was played towards midfield. De Miguel chased it and collided with Andorra goalkeeper Jesus Owono, who had rushed out of his area to clear the danger.",
+      },
+      {
+        type: "p",
+        text: "Medical staff treated De Miguel on the pitch for more than five minutes before he was taken to hospital by ambulance. Sky Sports reported that Owono was sent off immediately after the challenge, and the match was abandoned with players in tears. Spanish media reported that De Miguel suffered a cardiac arrest in the ambulance on the way to the Hospital Universitario de Nuestra Senora de Candelaria in Santa Cruz, where he was admitted to intensive care. That cardiac arrest detail comes from Spanish media reports, not from the club's death announcement itself, which did not give a medical cause.",
+      },
+      {
+        type: "h2",
+        text: "From stable in hospital to Tuesday morning's announcement",
+      },
+      {
+        type: "p",
+        text: "Late on Monday night, Tenerife issued a statement saying De Miguel had been admitted to hospital and was initially described as stable despite the severity of his condition. That gave supporters a brief hope that he might pull through. But in the early hours of Tuesday morning the club updated supporters again, saying his neurological condition had worsened. Shortly afterwards came the confirmation of his death at 8am local time on Tuesday.",
+      },
+      {
+        type: "p",
+        text: "By Tuesday afternoon in India, the Indian Express had published its own report at 4:01pm IST, and the story was being carried by major sports and news outlets in several countries.",
+      },
+      {
+        type: "h2",
+        text: "Who was Jesus de Miguel?",
+      },
+      {
+        type: "p",
+        text: "Jesus de Miguel Alameda was a Madrid native who made his professional debut in 2015 with Leganes B. He then played for a number of lower-division clubs in Spain before joining Tenerife last year, where he became part of the second-division side's attack. The photograph used with this post shows him celebrating a goal in Tenerife's white and blue kit, the image credited to CD Tenerife.",
+      },
+      {
+        type: "h2",
+        text: "Tributes from across Spanish football",
+      },
+      {
+        type: "list",
+        items: [
+          "LaLiga president Javier Tebas said: \"Today, we all share the terrible pain of an irreparable loss,\" offering condolences to De Miguel's family, loved ones, team-mates and the whole club.",
+          "FC Andorra said it was broken-hearted and devastated, offering its sincerest condolences to the family, team-mates and friends, and to CD Tenerife.",
+          "Former Barcelona defender Gerard Pique, who co-owns Andorra, wrote: \"I am sorry with all my soul. Rest in peace, Jesus.\"",
+          "Barcelona said its thoughts and support were with his family, friends and loved ones, and Real Madrid expressed its condolences and affection to his family, team-mates, club and loved ones.",
+          "The Spanish football federation also joined the tributes, alongside other clubs across Spain."
+        ],
+      },
+      {
+        type: "p",
+        text: "Tenerife's own words remain the most fitting summary of the day: the club stands with De Miguel's devastated family, his loved ones, and the entire Tenerife community, which today mourns what it called a cruel outcome. No further detail about funeral arrangements or any club commemoration has been announced yet, and the family has asked for privacy.",
+      },
+      {
+        type: "h2",
+        text: "Jesus de Miguel death FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "Who was Jesus de Miguel?", a: "Jesus de Miguel Alameda was a 30-year-old striker for Spanish second-division club CD Tenerife, a Madrid native who made his professional debut in 2015 with Leganes B and joined Tenerife last year." },
+          { q: "How did Jesus de Miguel die?", a: "He died on Tuesday, November 3, 2026, a day after colliding with Andorra goalkeeper Jesus Owono during a LaLiga 2 match. Spanish media reported he suffered a cardiac arrest in the ambulance to hospital; the club's announcement did not state a medical cause." },
+          { q: "When did Jesus de Miguel die?", a: "CD Tenerife said he died at 8am local time on Tuesday, November 3, 2026, which is 12:30pm IST. His condition had worsened neurologically earlier on Tuesday morning after he was initially described as stable on Monday night." },
+          { q: "What happened to the Tenerife vs Andorra match?", a: "The match, tied 2-2, was abandoned after the stoppage-time collision. Andorra goalkeeper Jesus Owono was sent off, and De Miguel was treated on the pitch for more than five minutes before being taken to hospital." },
+          { q: "What tributes have been paid to Jesus de Miguel?", a: "LaLiga president Javier Tebas, FC Andorra, the Spanish football federation, Barcelona and Real Madrid have all paid tribute, and Gerard Pique, who co-owns Andorra, wrote: 'I am sorry with all my soul. Rest in peace, Jesus.'" }
+        ],
+      },
+    ],
+  },
+  {
+    slug: "mahesh-babu-invests-shortgun-games-project-takedown-november-3-2026",
+    image: "https://nettv4u.com/imagine/12-07-2026/mahesh-babu-latest-hd-photos-10.jpg",
+    imageAlt: "Telugu superstar Mahesh Babu in a portrait photograph",
+    title: "Mahesh Babu Shortgun Games Deal: Superstar Invests in Project Takedown Studio",
+    description:
+      "Mahesh Babu Shortgun Games: the Telugu superstar has joined Mumbai studio Shortgun Games as a strategic investor, backing Project Takedown.",
+    excerpt:
+      "Mahesh Babu Shortgun Games is the second big Indian celebrity gaming deal of November 3, 2026: the Telugu superstar has joined Mumbai-based Shortgun Games as a strategic investor, backing its flagship PC and console title Project Takedown.",
+    date: "2026-11-03",
+    category: "Gaming",
+    sections: [
+      {
+        type: "p",
+        text: "Mahesh Babu Shortgun Games is the gaming announcement turning heads on Tuesday, November 3, 2026: Telugu cinema superstar Mahesh Babu has officially joined Mumbai-based interactive entertainment studio Shortgun Games as a strategic investor. The collaboration was announced on November 3 and covered the same day by Business Today, Business Scanner and other outlets, with Business Today's report published at 3:24pm IST. It is the second major Indian celebrity move into gaming on the same day, after Sachin Tendulkar's investment in the Hitwicket studio, and it points at a very different corner of the industry: premium PC and console games, not mobile.",
+      },
+      {
+        type: "p",
+        text: "The financial terms have not been disclosed. Neither the studio's announcement nor the November 3 reports give an investment amount or a valuation, so this post does not invent one. What is confirmed is the role: Mahesh Babu joins as a strategic investor, working with Shortgun Games co-founders Jeet Chandan and Vidhit Mehta to build original, franchise-grade game properties for global audiences.",
+      },
+      {
+        type: "h2",
+        text: "Mahesh Babu Shortgun Games: what Project Takedown is",
+      },
+      {
+        type: "p",
+        text: "At the centre of the partnership is Project Takedown, Shortgun Games' flagship title. It is described as a high-budget, narrative-driven action-adventure game, built to compete directly with leading international releases across North America, Europe, the United Kingdom and other global markets. The studio is building it exclusively for PC and modern consoles, including PlayStation 5 and Xbox Series X and S, rather than for mobile phones.",
+      },
+      {
+        type: "p",
+        text: "That platform choice is deliberate, and it is the heart of the studio's pitch. Digital entertainment in India has historically focused on mobile games, but Chandan and Mehta have made an early strategic pivot to PC and console, arguing that an Indian studio can build high-fidelity worlds, deep gameplay systems and cinematic experiences that meet the expectations of core gamers worldwide. Mahesh Babu's involvement is presented as a vote of confidence in exactly that ambition.",
+      },
+      {
+        type: "h2",
+        text: "Why Mahesh Babu says he backed Shortgun Games",
+      },
+      {
+        type: "p",
+        text: "In the announcement, Mahesh Babu said: \"Interactive entertainment is the ultimate frontier where narrative depth, cutting-edge technology, and global culture intersect. India has extraordinary creative potential, and the time is right to build original characters and cinematic worlds from here that resonate across the globe.\" He added that what drew him to the company was the clarity of Chandan and Mehta's ambition and their drive to create high-end PC and console experiences that stand shoulder-to-shoulder with international studio benchmarks.",
+      },
+      {
+        type: "p",
+        text: "Business Today reported the same reasoning in its November 3 coverage: Mahesh Babu highlighted India's creative potential and said the time was right to develop original characters and cinematic worlds that could connect with audiences worldwide. For a film star whose own work is built on large-scale storytelling, the move into games is framed as a natural extension, not a side investment.",
+      },
+      {
+        type: "h2",
+        text: "The team behind Project Takedown",
+      },
+      {
+        type: "list",
+        items: [
+          "Jeet Chandan, co-founder and director: said the partnership would help the company scale its technical capabilities, expand its creative talent and build durable, cross-media franchises that transcend regional boundaries.",
+          "Vidhit Mehta, co-founder and director: called Mahesh Babu's involvement an extraordinary milestone, saying his understanding of large-scale storytelling, emotional connection and mass resonance elevates the studio's vision.",
+          "Vicky Arora, action director: the Indian action director, whose film credits include Uri: The Surgical Strike, RRR and Tanaav, is leading Project Takedown's action design.",
+          "Arora's team: overseeing motion-capture choreography, combat pre-visualisation and physical stunt mechanics, integrating live-action stunt techniques directly into the game's digital character pipeline."
+        ],
+      },
+      {
+        type: "p",
+        text: "That last point is what Shortgun Games believes will set Project Takedown apart. By bringing a film action director's stunt craft into game development, the studio aims for combat that feels physical and fluid in the way modern high-performance action titles demand, rather than the stiff, weightless fighting that smaller productions are often criticised for.",
+      },
+      {
+        type: "h2",
+        text: "A big day for Indian games: Tendulkar and Mahesh Babu on the same day",
+      },
+      {
+        type: "p",
+        text: "The Mahesh Babu announcement landed on the same day as Sachin Tendulkar's investment in Metasports Interactive, the maker of the cricket strategy game Hitwicket, where Tendulkar also became brand ambassador and a playable character. Together, the two deals make November 3, 2026 a notable day for Indian games: a cricket icon backing a mobile strategy title, and a film superstar backing a PC and console studio, both betting that Indian-made games can travel globally.",
+      },
+      {
+        type: "p",
+        text: "The difference in strategy is worth noting. Hitwicket already has more than 20 million players and a target of 100 million downloads, while Project Takedown is a flagship title still being built, with no release date announced. Mahesh Babu's deal is therefore a longer bet: on a studio, a team and a roadmap, rather than on an existing hit. No release window, price or platform-exclusive detail for Project Takedown has been announced yet, and this post does not guess at any of them.",
+      },
+      {
+        type: "h2",
+        text: "Mahesh Babu Shortgun Games FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "Has Mahesh Babu invested in Shortgun Games?", a: "Yes. On November 3, 2026, Mahesh Babu officially joined Mumbai-based Shortgun Games as a strategic investor, in a collaboration announced by the studio and reported by Business Today and others the same day." },
+          { q: "What is Project Takedown?", a: "Project Takedown is Shortgun Games' flagship title: a high-budget, narrative-driven action-adventure game being built for PC and modern consoles, including PlayStation 5 and Xbox Series X and S, for global audiences." },
+          { q: "How much did Mahesh Babu invest in Shortgun Games?", a: "The investment amount and valuation have not been disclosed in the studio's announcement or the November 3 reports." },
+          { q: "Who founded Shortgun Games?", a: "Shortgun Games was founded by Jeet Chandan and Vidhit Mehta, who serve as the studio's co-founders and directors and are building original PC and console game properties." },
+          { q: "When does Project Takedown release?", a: "No release date or window has been announced yet. The November 3 announcement covers the partnership and the game's direction, not a launch date." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "ramayana-part-3-ranbir-kapoor-namit-malhotra-hint-november-3-2026",
     image: "https://images.filmibeat.com/ph-big/2026/10/ramayana-the-introduction-movie-20261793360080_7.jpg",
     imageAlt: "Ranbir Kapoor as Lord Ram in the official Ramayana: Part 1 poster, ahead of the film's November 5, 2026 release",
