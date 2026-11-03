@@ -33,6 +33,103 @@
 
 export const posts = [
   {
+    slug: "europe-bomb-threats-four-flights-poland-spain-bulgaria-november-3-2026",
+    image: "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2021/01/31117439718_9fb77e019e_o-1-scaled.jpg",
+    imageAlt: "A passenger aircraft on a runway (file photo, not one of the flights involved in the November 3, 2026 bomb-threat alerts)",
+    title: "Europe Bomb Threats: Four Flights Hit by Alerts in Poland, Spain and Bulgaria in One Day",
+    description:
+      "Europe bomb threats: four flights faced suspected bomb threats on November 3, 2026, in Poland, Spain and Bulgaria. All landed safely.",
+    excerpt:
+      "At least four passenger flights across Europe were targeted by suspected bomb threats on Tuesday, November 3, 2026, triggering diversions, emergency security checks and a temporary airport closure in Poland, Spain and Bulgaria — and all four aircraft landed safely.",
+    date: "2026-11-03",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "Europe bomb threats dominated aviation news on Tuesday, November 3, 2026, as at least four passenger aircraft in three countries faced reported bomb threats in a single day. The flights involved LOT Polish Airlines, Scandinavian Airlines (SAS), Ryanair and an El Al service from Israel, operating across Poland, Spain and Bulgaria. Every aircraft landed safely and passengers disembarked — but by the evening, authorities had not publicly established whether the threats were connected, who sent them, or whether any explosive device was found on any aircraft. These are reported threats under investigation, not confirmed attacks.",
+      },
+      {
+        type: "p",
+        text: "The pattern is what made the day stand out: the alerts were reported within hours of each other on Tuesday morning, two of the flights had departed from the United Kingdom, and two were bound for Warsaw. The incidents also followed a separate bomb threat the previous day, on November 2, involving a Wizz Air flight from London Luton to Sofia that was diverted to Budapest.",
+      },
+      {
+        type: "h2",
+        text: "Europe bomb threats: the LOT flight diverted to Warsaw-Modlin",
+      },
+      {
+        type: "p",
+        text: "The most dramatic incident involved a LOT Polish Airlines Boeing 737 MAX flying from London Heathrow to Warsaw Chopin Airport, the Polish capital's main airport. According to Warsaw-Modlin Airport, quoted by Reuters and The Times of India, a bomb threat alert was reported on board at 9:54 am local time (8:54 am GMT). The aircraft — flight LO286, according to flight-tracking reporting — was diverted to Warsaw-Modlin Airport, about 36 kilometres away, and landed there at 10:01 am, just seven minutes later, carrying 181 people.",
+      },
+      {
+        type: "p",
+        text: "Passengers and crew were evacuated and the aircraft was moved to an isolated area for inspection. Warsaw-Modlin Airport closed temporarily while bomb disposal experts checked the plane, then resumed operations, although the aircraft remained under inspection and passengers waited in the arrival halls, according to The Statesman. The Times of India reported that a group of Jewish students aged 16 and 17 from London was among the passengers.",
+      },
+      {
+        type: "h2",
+        text: "Europe bomb threats: the SAS flight checked at Warsaw Chopin",
+      },
+      {
+        type: "p",
+        text: "A second Warsaw-bound flight faced a threat the same morning. Scandinavian Airlines flight SK751, from Copenhagen to Warsaw, landed normally at Warsaw Chopin Airport, where passengers disembarked and security personnel inspected the plane. SAS confirmed the threat and said it was following established procedures with Warsaw police. Polish authorities said the threat had not been confirmed, and Chopin Airport stayed open.",
+      },
+      {
+        type: "h2",
+        text: "Europe bomb threats: Ryanair in Spain and El Al in Bulgaria",
+      },
+      {
+        type: "p",
+        text: "The third incident took place in Spain. Ryanair flight FR4116, from Manchester to Murcia in southeastern Spain, landed safely at Murcia Airport, where police and emergency services were waiting. All 114 passengers and seven crew members disembarked safely as security personnel began inspecting the aircraft, Times Now reported. The incident was confirmed by Francisco Lucas, the Spanish Government's delegate in the Murcia region. Unlike the LOT flight, the Ryanair aircraft completed its journey to Murcia before the inspection began.",
+      },
+      {
+        type: "p",
+        text: "The fourth incident involved an aircraft arriving from Israel at Sofia Airport in Bulgaria, after a bomb threat reportedly received by email prompted counter-terrorism units to inspect it. Bulgarian agency BTA cited Interior Ministry Secretary General Lyubomir Nikolov. The Times of India reported that an El Al service from Tel Aviv was the only Israel arrival that morning, and broadcaster BNT said the alert was part of wider warnings to various institutions. No report established whether a device was found or who sent the threat.",
+      },
+      {
+        type: "h2",
+        text: "Europe bomb threats: what is confirmed, and what is not",
+      },
+      {
+        type: "list",
+        items: [
+          "Confirmed: four flights in Poland, Spain and Bulgaria faced reported bomb threats on November 3, 2026, and all four landed safely.",
+          "Confirmed: the LOT flight was diverted to Warsaw-Modlin after a 9:54 am alert, landed at 10:01 am with 181 people on board, and Modlin closed temporarily before reopening.",
+          "Not established: whether the four threats are connected, who sent them, how credible each was, or whether any device was present. No group has claimed responsibility in the reporting so far.",
+          "Not a confirmed attack: every report describes suspected threats and precautionary inspections. Social media posts presenting the alerts as confirmed bombs or a coordinated attack go beyond what officials have said."
+        ],
+      },
+      {
+        type: "h2",
+        text: "Europe bomb threats: the Wizz Air diversion the day before",
+      },
+      {
+        type: "p",
+        text: "On Monday, November 2, a separate bomb threat forced a Wizz Air flight from London Luton to Sofia to divert to Budapest, escorted by a Hungarian Gripen fighter jet. It was inspected, resumed operations, and no device was reported. The Times of India also noted October precedent — an Austrian Airlines Tel Aviv-Vienna flight diverted to Sofia on October 18 and warnings on two Delta flights, with no explosives found, according to Ynet. That history alone does not prove the November 3 threats share a source.",
+      },
+      {
+        type: "h2",
+        text: "Europe bomb threats: what happens next",
+      },
+      {
+        type: "p",
+        text: "Investigations in Poland, Spain and Bulgaria are now the next step: the origin of each threat, whether evidence links any of them, and the formal all-clear for each aircraft. Until police issue those findings, the honest summary is four serious alerts, four safe landings, and no established link. Travellers should check with their airline rather than social media claims.",
+      },
+      {
+        type: "h2",
+        text: "Europe bomb threats FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "How many flights faced bomb threats in Europe on November 3, 2026?", a: "At least four: LOT London-Warsaw, SAS Copenhagen-Warsaw, Ryanair Manchester-Murcia, and an El Al service from Tel Aviv to Sofia." },
+          { q: "Did any plane crash or was anyone hurt?", a: "No. All four aircraft landed safely, passengers and crew disembarked, and no injuries were reported." },
+          { q: "Was a bomb found on any flight?", a: "No report had confirmed an explosive device on any aircraft by Tuesday evening; inspections were under way." },
+          { q: "Are the four Europe bomb threats connected?", a: "Authorities have not established any connection, despite all four threats falling on the same day." },
+          { q: "Which airport closed during the Europe bomb threats?", a: "Warsaw-Modlin closed temporarily after the diverted LOT flight landed, then reopened while the aircraft stayed under inspection. Warsaw Chopin stayed open." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "sbi-q2-fy27-results-net-profit-rs-23038-crore-november-3-2026",
     image: "https://upload.wikimedia.org/wikipedia/commons/b/b8/SBImumbai.jpg",
     imageAlt: "The State Bank of India main branch building in Mumbai with the blue SBI logo on its facade",
