@@ -33,6 +33,91 @@
 
 export const posts = [
   {
+    slug: "aga-ruhullah-resigns-national-conference-lok-sabha-november-3-2026",
+    image: "https://im.rediff.com/news/2026/nov/03nc-mp-quits.jpg",
+    imageAlt: "Aga Syed Ruhullah Mehdi speaking at a podium during the Budgam gathering where he announced his resignation",
+    title: "Aga Ruhullah Resigns: Srinagar MP Quits National Conference and Lok Sabha in Budgam Break",
+    description:
+      "Aga Ruhullah resigns: Srinagar MP Aga Syed Ruhullah Mehdi quit the National Conference and his Lok Sabha seat on November 3, 2026.",
+    excerpt:
+      "Aga Syed Ruhullah Mehdi, the Srinagar MP, announced on Tuesday, November 3, 2026, that he was quitting the National Conference and resigning from the Lok Sabha, accusing the party leadership of betraying the mandate voters gave it in the 2024 Jammu and Kashmir Assembly elections.",
+    date: "2026-11-03",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "Aga Ruhullah resigns is the political story shaking Jammu and Kashmir on Tuesday, November 3, 2026: Srinagar MP Aga Syed Ruhullah Mehdi announced at a gathering in Budgam that he was quitting the ruling National Conference (NC) and resigning his Lok Sabha seat, ending a nearly 24-year association with the party. At Behishti Zehra Park, the 48-year-old said that from 2:40 pm on Tuesday he was no longer part of the party, according to the Daily Pioneer. News18 first reported the resignation at 3:41 pm IST, and PTI, The New Indian Express, India TV and Outlook carried it through the afternoon.",
+      },
+      {
+        type: "p",
+        text: "Ruhullah signed his resignation letter at the gathering. The letter to Lok Sabha Speaker Om Birla, quoted by News18, invokes Article 101(3)(b) of the Constitution and Rule 240 of the Lok Sabha's rules, saying he resigned his Srinagar seat with immediate effect, voluntarily and of his own free will, and asking that it be accepted. PTI reported that he sent it to the Speaker soon afterwards. A seat formally falls vacant only when the Speaker accepts the resignation, so the vacancy follows that acceptance, not the announcement alone.",
+      },
+      {
+        type: "h2",
+        text: "Aga Ruhullah resigns: why he says he quit the National Conference",
+      },
+      {
+        type: "p",
+        text: "Ruhullah's central charge is betrayal of the 2024 mandate. He accused Chief Minister Omar Abdullah and the NC leadership of abandoning the party's election promises soon after returning to power, and of reducing its agenda to retaining power and ministerial positions. The New Indian Express reported his list: restoration of Article 370, restoration of statehood, one lakh jobs, a balanced reservation policy, 200 units of free electricity a year and 12 free LPG cylinders a year, plus the release of prisoners.",
+      },
+      {
+        type: "p",
+        text: "His language at Budgam was unsparing. He described Omar Abdullah as incompetent, with no connection to ground realities, and said, according to PTI: \"All the posturing during elections about restoring Article 370, releasing prisoners and providing free electricity were just lies. And I cannot continue to be a part of these lies anymore.\" He called his resignation a decree of freedom, told the crowd that \"people who lose chairs get unhappy, but here we are throwing away a chair, and we are happy.\"",
+      },
+      {
+        type: "h2",
+        text: "The symbolic handover, and the father whose anniversary it was",
+      },
+      {
+        type: "p",
+        text: "Ruhullah did not send his party resignation to NC president Farooq Abdullah directly. He handed it to Mohammad Ashraf Mattoo and asked him to forward it to Farooq Abdullah with his own hands. Mattoo's 17-year-old son, Tufail Ahmad Mattoo, was killed in a tear-gas shelling incident in 2010, when Omar Abdullah was chief minister. Ruhullah told the gathering: \"This is a charter of freedom. I will not send this to Farooq Abdullah. They do not have the standing or worth for me to send it to them.\"",
+      },
+      {
+        type: "p",
+        text: "The day was symbolic: the gathering marked the 26th death anniversary of Ruhullah's father, Aga Syed Mehdi Mustafa, assassinated in a blast on November 3, 2000, in Budgam. On the eve, Ruhullah had posted on X: \"876 days we kept our heads down serving Jammu and Kashmir. Tomorrow, November 3, a new journey starts.\"",
+      },
+      {
+        type: "h2",
+        text: "Who is Aga Ruhullah, and how did the rift build?",
+      },
+      {
+        type: "p",
+        text: "Ruhullah, a prominent Shia cleric from Budgam, first joined the Omar Abdullah cabinet in 2009 and later became a three-time MLA from Budgam. He rose as an ideological voice inside the NC after the Centre revoked Jammu and Kashmir's special status in August 2019. In 2024 he won Srinagar by 1,88,416 votes, defeating PDP candidate Waheed-ur-Rehman Para. The rift then widened: he declined to campaign in the 2025 Budgam by-election, protested outside the chief minister's office over what he called a skewed reservation policy, and held parallel protests over the abrogation of Article 370. He insists his disagreement is ideological, not about a ministerial post, and he has opposed destabilising the elected government, saying it should complete its five-year term.",
+      },
+      {
+        type: "h2",
+        text: "What happens next for Ruhullah and the Srinagar seat",
+      },
+      {
+        type: "list",
+        items: [
+          "A new outfit or movement, not another party yet: Ruhullah hinted during an 80-minute speech at forming a new outfit, but said he was more interested in launching a movement for dignity and respect, bringing honest young people together. Leaving the NC did not mean joining another party, he clarified.",
+          "The Srinagar vacancy: the seat becomes vacant only on the Speaker's acceptance. If accepted, a by-election would follow; none has been announced.",
+          "Pressure on the NC government: the resignation lands as the NC already faces dissent from about 20 MLAs over its recent cabinet reshuffle.",
+          "Mixed reactions: NC minister Altaf Kaloo called Ruhullah a good friend and said there was still time; minister Javed Rana said if he resigned it was in God's hands; independent MLA Shabir Ahmad Kullay called it a major loss, but said he should not have resigned as MP."
+        ],
+      },
+      {
+        type: "p",
+        text: "For now, Ruhullah's own summary stands: \"I set myself free from the NC.\" Whether that freedom becomes a new party or a movement is what his next announcement must answer.",
+      },
+      {
+        type: "h2",
+        text: "Aga Ruhullah resigns FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "Has Aga Ruhullah resigned from the National Conference?", a: "Yes. On November 3, 2026, Srinagar MP Aga Syed Ruhullah Mehdi announced at Budgam that he was quitting the National Conference, ending a nearly 24-year association." },
+          { q: "Has Aga Ruhullah resigned as Srinagar MP?", a: "He announced his Lok Sabha resignation and sent a letter to Speaker Om Birla. The seat falls vacant only when the Speaker accepts it." },
+          { q: "Why did Aga Ruhullah resign?", a: "He accused Omar Abdullah and the NC leadership of betraying the 2024 mandate and abandoning promises on Article 370, statehood, jobs, reservation policy, free electricity and LPG cylinders." },
+          { q: "Who is Aga Syed Ruhullah Mehdi?", a: "A 48-year-old Shia cleric and politician from Budgam, a three-time MLA and former minister who won Srinagar in 2024 by 1,88,416 votes." },
+          { q: "Will Aga Ruhullah form a new party?", a: "He hinted at a new political outfit, but also said he was more interested in launching a movement and bringing honest young people together; he said leaving the NC did not mean joining another party." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "jesus-de-miguel-tenerife-dies-on-pitch-collision-november-3-2026",
     image: "https://deporpress.com/wp-content/uploads/2026/04/Jesus-de-Miguel-tras-marcar-@CDTenerife-scaled-e1757321274718-1-1024x1015.jpg",
     imageAlt: "Jesus de Miguel celebrating a goal for CD Tenerife in the club's white and blue kit",
