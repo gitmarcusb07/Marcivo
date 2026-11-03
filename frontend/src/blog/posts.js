@@ -33,6 +33,117 @@
 
 export const posts = [
   {
+    slug: "sbi-q2-fy27-results-net-profit-rs-23038-crore-november-3-2026",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/b8/SBImumbai.jpg",
+    imageAlt: "The State Bank of India main branch building in Mumbai with the blue SBI logo on its facade",
+    title: "SBI Q2 FY27 Results: Net Profit Jumps 14% to Rs 23,038 Crore as Bad Loans Fall",
+    description:
+      "SBI Q2 FY27 results: net profit rose 14.3% to Rs 23,038 crore on strong NII growth, with bad loans at their lowest in over two decades.",
+    excerpt:
+      "State Bank of India reported a standalone net profit of Rs 23,038 crore for the July-September 2026 quarter, up 14.3% from a year earlier, as strong lending income and a large one-time gain offset a sharp fall in other income.",
+    date: "2026-11-03",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "SBI Q2 FY27 results are out, and India's largest bank has beaten market expectations. State Bank of India (SBI) reported a standalone net profit of Rs 23,038 crore for the July-September 2026 quarter, up 14.3% from Rs 20,160 crore a year earlier. Growth came from strong lending income, with net interest income up 14.7% to Rs 49,143 crore, plus a large one-time gain. Bad loans fell to their lowest in over two decades.",
+      },
+      {
+        type: "p",
+        text: "The result, announced on Tuesday, November 3, 2026, beat analyst estimates of around Rs 22,619 crore. SBI shares traded mildly higher afterwards, at Rs 988.45 on the BSE. But the headline only tells part of the story: strip out the one-time gain, and operating profit actually slipped 1.4%.",
+      },
+      {
+        type: "h2",
+        text: "SBI Q2 results: the headline numbers",
+      },
+      {
+        type: "list",
+        items: [
+          "Net profit: Rs 23,038 crore, up 14.3% from Rs 20,160 crore in Q2 FY26.",
+          "Net interest income (NII): Rs 49,143 crore, up 14.7% from Rs 42,847 crore.",
+          "Interest earned: Rs 1.32 lakh crore, up 10.46% from Rs 1.19 lakh crore.",
+          "Total income: Rs 1.43 lakh crore, up 6.53% from Rs 1.34 lakh crore.",
+          "Other income: Rs 11,777 crore, down 23.8% from Rs 15,463 crore.",
+          "Exceptional gain: Rs 7,288 crore, against Rs 4,593 crore a year ago.",
+          "Operating profit: Rs 26,937 crore, down 1.4% from Rs 27,311 crore.",
+          "Gross NPAs: Rs 72,529 crore, down 5% from Rs 76,243 crore.",
+          "Gross NPA ratio: 1.39%, down from 1.73% a year ago and 1.47% in June 2026.",
+          "Net NPA ratio: 0.36%, down from 0.42% a year ago.",
+          "Gross advances: about Rs 52 lakh crore, up around 18%.",
+          "Gross deposits: about Rs 63 lakh crore, up 12.27%.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "The Rs 7,288 crore one-time gain behind the profit jump",
+      },
+      {
+        type: "p",
+        text: "The biggest booster to SBI's Q2 profit was an exceptional gain of Rs 7,288 crore, up from Rs 4,593 crore a year earlier, earned from selling shares in SBI Mutual Fund, the National Stock Exchange (NSE) and ARCIL, the asset reconstruction company. One-time gains are real money, but they do not repeat, so they can flatter one quarter's profit. That is why operating profit matters: it reflects the regular business before provisions and one-time items, and it slipped 1.4% to Rs 26,937 crore as other income fell 23.8%.",
+      },
+      {
+        type: "h2",
+        text: "Why core lending income still did the heavy lifting",
+      },
+      {
+        type: "p",
+        text: "Net interest income, the difference between what a bank earns on loans and pays on deposits, is its most important recurring income line. SBI's NII grew 14.7% to Rs 49,143 crore, with interest earned up 10.46% to Rs 1.32 lakh crore. Total income grew more slowly, at 6.53%, because falling other income dragged it down, while lower provisions also helped.",
+      },
+      {
+        type: "h2",
+        text: "Asset quality: bad loans at their lowest in over two decades",
+      },
+      {
+        type: "p",
+        text: "The cleanest part of SBI's Q2 report is asset quality. Gross NPAs fell 5% to Rs 72,529 crore, and the gross NPA ratio dropped to 1.39% from 1.73% a year earlier and 1.47% at the end of June 2026. The net NPA ratio slipped to 0.36% from 0.42%, and the bank said these are its lowest NPA ratios in over two decades. For a bank with a loan book of about Rs 52 lakh crore, that leaves more room to lend without worrying about defaults.",
+      },
+      {
+        type: "h2",
+        text: "Loans, deposits and digital growth",
+      },
+      {
+        type: "p",
+        text: "SBI's balance sheet kept expanding at a healthy pace. Gross advances rose around 18% to about Rs 52 lakh crore, while gross deposits climbed 12.27% to about Rs 63 lakh crore. Digital use kept rising too: YONO users grew to 11.1 crore from 9.3 crore a year earlier. Strong deposit growth matters because deposits fund new loans.",
+      },
+      {
+        type: "h2",
+        text: "How to read SBI's Q2 results in 5 steps",
+      },
+      {
+        type: "steps",
+        items: [
+          "Compare profit with expectations: Rs 23,038 crore beat the estimate of around Rs 22,619 crore.",
+          "Strip out the one-time gain: without the Rs 7,288 crore exceptional gain, the trend is softer, with operating profit down 1.4%.",
+          "Check net interest income: NII growth of 14.7% to Rs 49,143 crore shows the core lending business is healthy.",
+          "Check asset quality: a gross NPA ratio of 1.39% and net NPA ratio of 0.36% are the lowest in over two decades.",
+          "Check growth and funding: advances up around 18% and deposits up 12.27% show the loan book growing on a strong funding base. This is information only, not investment advice.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "What SBI's Q2 results mean for customers and investors",
+      },
+      {
+        type: "p",
+        text: "For customers, the results signal a bank in solid health. For investors, they are a reminder to look beyond the headline: the 14.3% profit jump is real, but much of it came from stake sales that will not repeat. The durable story is 14.7% NII growth, falling bad loans and steady deposit growth.",
+      },
+      {
+        type: "h2",
+        text: "SBI Q2 FY27 results FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "What was SBI's net profit in Q2 FY27?", a: "Rs 23,038 crore, up 14.3% from Rs 20,160 crore in the same quarter last year." },
+          { q: "What is SBI's net interest income in Q2 FY27?", a: "Rs 49,143 crore, up 14.7% from Rs 42,847 crore in Q2 FY26." },
+          { q: "Why did SBI's profit rise 14% in Q2 FY27?", a: "Strong net interest income growth, lower provisions and a Rs 7,288 crore exceptional gain from stake sales in SBI Mutual Fund, NSE and ARCIL." },
+          { q: "What are SBI's bad loan ratios after Q2 FY27?", a: "Gross NPA ratio 1.39% (from 1.73% a year ago) and net NPA ratio 0.36% (from 0.42%), the lowest in over two decades." },
+          { q: "When were SBI's Q2 FY27 results announced?", a: "On Tuesday, November 3, 2026, for the quarter ended September 30, 2026." },
+        ],
+      },
+    ],
+  },
+  {
     slug: "aga-ruhullah-resigns-national-conference-lok-sabha-november-3-2026",
     image: "https://im.rediff.com/news/2026/nov/03nc-mp-quits.jpg",
     imageAlt: "Aga Syed Ruhullah Mehdi speaking at a podium during the Budgam gathering where he announced his resignation",
