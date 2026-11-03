@@ -33,6 +33,152 @@
 
 export const posts = [
   {
+    slug: "gst-collections-october-2026-rs-231-lakh-crore-229-percent-growth",
+    image: "https://media.assettype.com/thequint%2F2017-03%2Fe1943e86-1064-4dfb-b8ff-e8cb98343bc7%2Fa7b7c620-96a2-4171-b9db-b95b32ba7096.jpg?rect=0%2C0%2C1024%2C576",
+    imageAlt: "Goods and Services Tax in India, illustrated with tax and finance imagery",
+    title: "GST Collections October 2026: Rs 2.31 Lakh Crore, Up 22.9% - Second-Highest Month Ever",
+    description:
+      "GST collections October 2026 rose 22.9% to Rs 2.31 lakh crore, the second-highest month ever, with import revenue up 42.2% and domestic collections up 15.8%.",
+    excerpt:
+      "India's gross GST collections rose 22.9% year-on-year to Rs 2.31 lakh crore in October 2026, the second-highest monthly collection on record, according to provisional Finance Ministry data released on November 1, 2026.",
+    date: "2026-11-03",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "GST collections October 2026 have delivered one of the strongest monthly tax results India has ever recorded. Per provisional data released by the Finance Ministry on November 1, 2026, gross Goods and Services Tax (GST) collections rose 22.9% year-on-year to Rs 2,31,290 crore in October 2026, up from Rs 1,88,125 crore in October 2025. That makes October 2026 the second-highest GST collection month on record, behind only April 2026, at Rs 2.42 lakh crore. It is also the fourth month in a row that gross collections have crossed Rs 2 lakh crore.",
+      },
+      {
+        type: "h2",
+        text: "GST Collections October 2026: The Headline Numbers",
+      },
+      {
+        type: "p",
+        text: "The headline figure is the gross collection, the total GST collected before refunds are paid back. Once refunds are deducted, the picture stays just as strong:",
+      },
+      {
+        type: "list",
+        items: [
+          "Gross GST: Rs 2,31,290 crore, up 22.9% from Rs 1,88,125 crore in October 2025.",
+          "Net GST revenue: Rs 2,03,356 crore after refunds, up 25.6% from Rs 1,61,900 crore.",
+          "Total refunds: Rs 27,934 crore, up 6.5% from Rs 26,225 crore.",
+          "Domestic revenue: Rs 1,59,044 crore, up 15.8% from Rs 1,37,328 crore.",
+          "Import revenue: Rs 72,246 crore, up 42.2% from Rs 50,796 crore.",
+          "April to October 2026-27: gross Rs 14,77,569 crore, up 13.2%; net Rs 12,69,486 crore, up 12.6%.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Net revenue grew faster than gross revenue because refunds rose only 6.5%, much slower than collections. Domestic refunds rose 9.8% to Rs 14,007 crore; refunds on imports rose 3.4% to Rs 13,927 crore.",
+      },
+      {
+        type: "h2",
+        text: "Where the Money Came From: Domestic Sales and Imports",
+      },
+      {
+        type: "p",
+        text: "GST collections October 2026 grew from both parts of the economy, but imports grew far faster than domestic sales. Domestic collections, from goods and services sold inside India, rose 15.8% to Rs 1,59,044 crore. Import-linked revenue, the GST charged on goods brought into India, jumped 42.2% to Rs 72,246 crore. Imports did most of the heavy lifting, though domestic sales still supplied the larger share.",
+      },
+      {
+        type: "h2",
+        text: "CGST, SGST and IGST: The October 2026 Breakdown",
+      },
+      {
+        type: "p",
+        text: "GST is split into three parts depending on where a sale happens. Central GST (CGST) goes to the Centre, State GST (SGST) goes to the state of sale, and Integrated GST (IGST) applies to inter-state sales and imports, shared later between Centre and states. The October 2026 breakdown was:",
+      },
+      {
+        type: "list",
+        items: [
+          "CGST: Rs 42,935 crore, up from Rs 36,547 crore.",
+          "SGST: Rs 51,340 crore, up from Rs 45,134 crore.",
+          "IGST: Rs 1,37,015 crore, up from Rs 1,06,443 crore, made up of Rs 64,769 crore from domestic transactions and Rs 72,246 crore from imports.",
+          "After settlement, post-settlement SGST revenue for states and Union Territories rose 13% to Rs 1,03,341 crore.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Why Did GST Collections Jump in October 2026?",
+      },
+      {
+        type: "p",
+        text: "Reports point to two main drivers: strong festive-season demand and a sharp rise in import-linked tax revenue. October is a festival-heavy month, when spending typically rises, and that shows up in domestic collections growing 15.8%. Experts also noted October 2025 was the first full month in which GST 2.0 rate rationalisation was fully reflected, making the year-on-year comparison a cleaner read on demand.",
+      },
+      {
+        type: "p",
+        text: "Experts also struck a cautious note. One Deloitte India partner said sustained revenue buoyancy, despite bold rate cuts last year, gives the GST Council confidence and headroom to continue reforms. A Grant Thornton Bharat expert said the more important test will be whether momentum continues after the festive season ends.",
+      },
+      {
+        type: "h2",
+        text: "Which States Collected the Most GST in October 2026?",
+      },
+      {
+        type: "list",
+        items: [
+          "Maharashtra: Rs 35,150 crore, up 13%, and Rs 19,101 crore after settlement, the highest post-settlement figure.",
+          "Karnataka: Rs 15,922 crore, up 18%. Gujarat: Rs 13,516 crore, up 16%. Haryana: Rs 11,529 crore, up 17%. Uttar Pradesh: Rs 10,235 crore, up 24%.",
+          "Assam: Rs 1,934 crore, up 47%. Jharkhand: Rs 2,821 crore, up 31%.",
+          "Declines: Sikkim fell 28% to Rs 221 crore, Himachal Pradesh declined 2% to Rs 704 crore, Puducherry dropped 7% to Rs 179 crore.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "What Do Higher GST Collections Mean for Ordinary People?",
+      },
+      {
+        type: "p",
+        text: "A rise in GST collections does not mean tax rates have gone up for shoppers. GST is charged on what people and businesses buy, so rising collections usually mean people are spending more, more businesses are complying, or imports are higher, or a mix of all three. For households the effect is indirect: stronger revenue gives the government more room to spend on public services and infrastructure without raising rates.",
+      },
+      {
+        type: "h2",
+        text: "How to Read a Monthly GST Collection Report in 5 Steps",
+      },
+      {
+        type: "steps",
+        items: [
+          "Start with gross collections: the total GST collected before refunds, the headline number.",
+          "Then look at net collections: gross collections minus refunds, or what the government actually kept.",
+          "Split domestic and import revenue: domestic growth shows spending inside India; import growth shows tax on goods entering the country.",
+          "Check the CGST, SGST and IGST split: how the money is divided between the Centre and the states.",
+          "Finally, look at the cumulative figure for the financial year so far, and remember the numbers are provisional.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "GST Collections October 2026: Frequently Asked Questions",
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "What were India's GST collections in October 2026?",
+            a: "Gross GST collections were Rs 2,31,290 crore, up 22.9% from Rs 1,88,125 crore in October 2025, per provisional Finance Ministry data.",
+          },
+          {
+            q: "Is October 2026 the highest GST collection month ever?",
+            a: "No. It was the second-highest month on record. The highest so far is April 2026, at Rs 2.42 lakh crore.",
+          },
+          {
+            q: "What is the difference between gross and net GST collections?",
+            a: "Gross collections are the total collected before refunds. Net collections are what remains after refunds. In October 2026, gross was Rs 2,31,290 crore and net was Rs 2,03,356 crore, after Rs 27,934 crore in refunds.",
+          },
+          {
+            q: "Why did GST collections rise so much in October 2026?",
+            a: "Reports point to strong festive-season demand, which lifted domestic collections by 15.8%, and a 42.2% surge in import-linked revenue to Rs 72,246 crore.",
+          },
+          {
+            q: "Are the October 2026 GST figures final?",
+            a: "No. They are provisional and may change slightly when finalised.",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: "The next test comes with the November figures. If collections stay above Rs 2 lakh crore after the festive season, October will look less like a festival spike and more like a durable step up.",
+      },
+    ],
+  },
+  {
     slug: "russia-strikes-komyshuvakha-aid-centre-26-killed-november-3-2026",
     image: "https://newsimg.koreatimes.co.kr/2026/11/03/f180e7bc-a9ef-4372-8309-51a3867da962.jpg",
     imageAlt: "Ukrainian rescuers working at the site of the Russian strike on an educational facility in Komyshuvakha, Zaporizhzhia region, on November 2, 2026",
