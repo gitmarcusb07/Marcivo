@@ -33,6 +33,102 @@
 
 export const posts = [
   {
+    slug: "cyclone-murasu-landfall-ongole-november-3-2026",
+    image: "https://imagesvs.oneindia.com/img/2026/11/cyclone2-81171793529629.jpg",
+    imageAlt: "Cyclone Murasu over the Bay of Bengal and flooding on a road, as pictured in news coverage",
+    title: "Cyclone Murasu Landfall: Storm Crosses Andhra Coast Near Ongole With 110-120 Kmph Winds",
+    description:
+      "Cyclone Murasu landfall began at 1 am on November 3, 2026 near Ongole, Andhra Pradesh, with 110-120 kmph winds, heavy rain and early damage reports.",
+    excerpt:
+      "Severe Cyclonic Storm Murasu began making landfall near Ongole in Andhra Pradesh at 1 am on Tuesday, November 3, 2026, with observed sustained winds of 110 to 120 kmph at the landfall point, and the crossing was expected to be completed by around 7:30 am.",
+    date: "2026-11-03",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "Cyclone Murasu landfall is under way on Tuesday, November 3, 2026. The landfall process of Severe Cyclonic Storm Murasu commenced at 1 am near Ongole, in Prakasam district of Andhra Pradesh, with the observed maximum sustained wind speed of 110 kmph to 120 kmph at the landfall point, according to the India Meteorological Department (IMD). This is the actual crossing that the last two days of forecasts on this blog warned about: the storm was forecast to cross the south Andhra coast close to Ongole, between Nellore and Narsapur, between 11:30 pm on November 2 and 4 am on November 3, and it has now done so, on schedule and at the forecast strength.",
+      },
+      {
+        type: "p",
+        text: "As of the 5:30 am update, the landfall process was expected to be completed in another two hours, putting completion at around 7:30 am on Tuesday. The cyclone had been moving at 9 kmph over the previous six hours, much slower than its earlier pace, which stretched the crossing across the early morning. The IMD said a major part of the wall cloud had entered land and the eye was entering the coast, with gale winds of 100 to 110 kmph, gusting to 120 kmph, until the morning. A storm surge of 1.0 to 1.5 metres is likely to inundate low-lying south coastal areas until Tuesday morning, peaking over Bapatla, Krishna and Prakasam.",
+      },
+      {
+        type: "h2",
+        text: "Cyclone Murasu landfall: timeline on November 3",
+      },
+      {
+        type: "list",
+        items: [
+          "1 am: landfall commences near Ongole, with observed sustained winds of 110 to 120 kmph at the landfall point.",
+          "1:30 am: the cyclone is centred about 40 km southeast of Ongole, 60 km northeast of Kavali and 70 km south of Bapatla.",
+          "3:30 am: Chief Minister N. Chandrababu Naidu holds a review by teleconference with district Collectors and officials.",
+          "5:30 am: the IMD says landfall should be completed in another two hours, with the system then 20 km from Ongole and winds of 100 to 120 kmph."
+        ],
+      },
+      {
+        type: "h2",
+        text: "Cyclone Murasu landfall damage reported so far in Ongole",
+      },
+      {
+        type: "p",
+        text: "The first damage reports are coming from Ongole itself. Several thatched houses collapsed and residents were stranded at Samatha Nagar in Ongole, Prakasam district, after heavy rain and strong winds, and the district administration has started rescue operations to evacuate those stranded. Several houses were also inundated in Beeramgunta village of Kothapatnam mandal. Along Kothapatnam Beach Road in Ongole, pushcarts and shop signboards lay scattered after being blown away by wind and rain since Monday night.",
+      },
+      {
+        type: "p",
+        text: "The statue of Andhra Kesari Tanguturi Prakasam Panthulu in the Prakasam district Collectorate premises in Ongole collapsed early on Tuesday after a large tree fell on it in heavy rain and strong winds. Reports also describe trees uprooted in Nellore, Prakasam and Bapatla, and several low-lying areas inundated. These are early reports, not a final damage assessment, and officials have not yet released consolidated totals.",
+      },
+      {
+        type: "h2",
+        text: "Cyclone Murasu landfall: Chief Minister Naidu's 3:30 am review and power supply",
+      },
+      {
+        type: "p",
+        text: "After Cyclone Murasu made landfall past midnight, Chief Minister N. Chandrababu Naidu held a review with district Collectors and officials at 3:30 am. He directed officials to ensure that people in cyclone-affected areas did not venture onto roads, and to take all necessary precautions to prevent loss of life and minimise property damage. He stressed that people should not come out onto the roads until all obstructions are cleared, drawing on the experience of Cyclone Arnab days earlier, when fallen live wires proved deadly.",
+      },
+      {
+        type: "p",
+        text: "On power supply, the news from the review was reassuring. Energy department officials informed the Chief Minister that no electricity poles had fallen and there were no disruptions to power supply anywhere in the affected zones.",
+      },
+      {
+        type: "h2",
+        text: "Cyclone Murasu landfall: rainfall today and what happens next",
+      },
+      {
+        type: "p",
+        text: "Landfall is not the end of the danger, because the heaviest rain follows the crossing. Several districts are forecast to receive heavy rainfall on Tuesday, including West Godavari, Eluru, Krishna, NTR, Guntur, Bapatla, Palnadu, Markapuram, Prakasam and Nellore. After landfall, the IMD expects the system to weaken into a depression and move northwest towards Telangana, but that does not remove the rainfall and surge risk for coastal Andhra Pradesh today.",
+      },
+      {
+        type: "h2",
+        text: "Cyclone Murasu safety steps and Mana Mitra helpline",
+      },
+      {
+        type: "steps",
+        items: [
+          "Stay indoors and do not venture onto roads in cyclone-affected areas until the storm has crossed and obstructions are cleared.",
+          "Do not touch fallen wires, poles or damaged electrical equipment, and keep away from flooded stretches and coastal roads.",
+          "To report a cyclone-related issue, send Hi on WhatsApp to 9552300009, the Mana Mitra helpline run by the Real Time Governance Society.",
+          "Select Services from the menu, choose Murasu Cyclone Issues, click Report Issue and confirm, giving the location and nature of the problem.",
+          "Check your district Collector's announcements for school closures and relief centres, rather than relying on forwarded messages."
+        ],
+      },
+      {
+        type: "h2",
+        text: "Cyclone Murasu landfall FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "When did Cyclone Murasu make landfall?", a: "At 1 am on Tuesday, November 3, 2026, near Ongole in Andhra Pradesh. The 5:30 am IMD update expected the process to be completed by around 7:30 am." },
+          { q: "How strong was Cyclone Murasu at landfall?", a: "The IMD reported observed sustained winds of 110 to 120 kmph at the landfall point, with gale winds of 100 to 110 kmph, gusting to 120 kmph, along and off the coast." },
+          { q: "Where exactly did Cyclone Murasu cross the coast?", a: "Close to Ongole, between Nellore and Narsapur on the south Andhra Pradesh coast, about 40 km southeast of Ongole at 1:30 am." },
+          { q: "What damage has Cyclone Murasu caused so far?", a: "Early Ongole reports include collapsed thatched houses at Samatha Nagar, inundated houses at Beeramgunta village, scattered pushcarts on Kothapatnam Beach Road, uprooted trees in three districts, and a statue that collapsed at the Prakasam Collectorate after a tree fell on it. A full assessment has not yet been released." },
+          { q: "Which districts face heavy rain on November 3?", a: "West Godavari, Eluru, Krishna, NTR, Guntur, Bapatla, Palnadu, Markapuram, Prakasam and Nellore, with heavy spells along south coastal Andhra Pradesh over the next 12 hours." }
+        ],
+      },
+    ],
+  },
+
+  {
     slug: "hpcl-vizag-refinery-fire-visakhapatnam-november-3-2026",
     image: "https://img.republicworld.com/all_images/2026/11/massive-fire-erupts-at-hpcl-refinery-in-visakhapatnam-after-explosion-thick-smoke-covers-city-1793642312212-1280x720.webp?w=1280&h=720&q=75&format=webp",
     imageAlt: "Flames and thick black smoke rising from the HPCL refinery in Visakhapatnam after the pitch tank fire",
