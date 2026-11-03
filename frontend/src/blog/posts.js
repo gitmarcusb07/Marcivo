@@ -33,6 +33,107 @@
 
 export const posts = [
   {
+    slug: "supreme-court-delhi-firecrackers-illegal-sale-november-3-2026",
+    image: "https://images.news18.com/ibnlive/uploads/2025/10/night-of-Diwali-1-2025-10-d795e20cc439b85b43d2ad858e2fc7fd.jpg",
+    imageAlt: "Fireworks lighting up the night sky during Diwali celebrations (News18 file photo)",
+    title: "Supreme Court Delhi Firecrackers: SC Flags Illegal Sale in Delhi Markets Despite Green-Cracker-Only Order",
+    description:
+      "Supreme Court Delhi firecrackers: the court flagged open sale of banned crackers in Delhi markets on November 3 and asked authorities to act before Diwali.",
+    excerpt:
+      "The Supreme Court on Tuesday, November 3, 2026, flagged reports that conventional and unauthorised firecrackers were being sold openly in Delhi markets despite its green-cracker-only order, and asked the Centre, the Delhi government and police to take all necessary measures to stop the violations.",
+    date: "2026-11-03",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "The Supreme Court Delhi firecrackers row took a fresh turn on Tuesday, November 3, 2026, a day after the court allowed certified green crackers in Delhi-NCR for Diwali. A bench of Justices M. M. Sundresh and Prasanna B. Varale flagged a November 3 newspaper report documenting conventional and unauthorised firecrackers being sold openly in Delhi markets, and asked the Centre, the Delhi government and police to take all necessary measures to stop the violations. This is a new development, not a repeat of the November 2 permission: it is the court's response to alleged violations of that permission.",
+      },
+      {
+        type: "p",
+        text: "The bench was referring to a Hindustan Times report published on Tuesday, which found firecrackers on display across several markets, with conventional crackers available on request and products with questionable QR codes passed off as green crackers. It drew the attention of Additional Solicitor General Aishwarya Bhati, appearing for the Centre, the Delhi government and the Commission for Air Quality Management, to the report and asked her to look into it and ensure compliance.",
+      },
+      {
+        type: "h2",
+        text: "Supreme Court Delhi firecrackers: what the bench said on November 3",
+      },
+      {
+        type: "p",
+        text: "Justice Sundresh pointed to a photograph in Tuesday's report and told the law officer: \"In today's report on Hindustan Times there is a photograph. They say that notwithstanding yesterday's order, now everything is available in the (firecracker) shops. Please look into it.\" The bench added: \"They say that in the market every other cracker, licensed, unlicensed, QR code, or no QR code, everything is available. Please take a note of it.\"",
+      },
+      {
+        type: "p",
+        text: "The court did not pass a fresh substantive order in the reported proceedings; it asked the authorities to examine the allegations and act. Reports say it directed police and district teams to inspect markets, confiscate illegal crackers and prosecute violators, warning that licences could be cancelled. Those are steps the court asked for, not action already completed on the ground.",
+      },
+      {
+        type: "h2",
+        text: "Which Delhi markets were named in the November 3 report",
+      },
+      {
+        type: "p",
+        text: "The report cited by the bench documented sales in Chandni Chowk, Sadar Bazaar, Shastri Nagar, Sarojini Nagar and New Friends Colony, with Jama Masjid also named. Its findings were based on market visits on October 22 and November 2. Shopkeepers displayed packs marked \"green crackers\", \"pollution-free\" and \"zero pollution\", while conventional crackers were allegedly available to customers who asked for them.",
+      },
+      {
+        type: "p",
+        text: "QR codes often failed: many boxes lacked the mandated code, while others linked to online catalogues instead of confirming certification. That matters because every box must carry a product-specific QR code showing the manufacturer, NEERI registration, PESO or District Magistrate licence, formulation and test certificate. A code that does not show those details does not prove a cracker is green.",
+      },
+      {
+        type: "h2",
+        text: "What the court's November 2 green-cracker order actually allows",
+      },
+      {
+        type: "p",
+        text: "Tuesday's flagging follows the court's October 29 order, made public on November 2, which permitted certified green crackers for a limited Diwali window under strict conditions. Manufacturers certified by the Council of Scientific and Industrial Research-National Environmental Engineering Research Institute (CSIR-NEERI) and the Petroleum and Explosives Safety Organisation (PESO) may manufacture approved green crackers between November 2 and 6, with sale only through designated locations between November 4 and 6.",
+      },
+      {
+        type: "p",
+        text: "Bursting is permitted only on November 7 and 8, between 6 am and 7 am and between 8 pm and 10 pm, and the full ban returns across Delhi-NCR on November 9. Crackers containing barium, those not approved by CSIR-NEERI, series firecrackers and garlands are prohibited, as are online sales. Bursting is also banned within 300 metres of hospitals, schools, old-age homes and silence zones. Tuesday's hearing does not change those dates; it is about enforcement.",
+      },
+      {
+        type: "h2",
+        text: "Why the timing matters before Diwali",
+      },
+      {
+        type: "p",
+        text: "Diwali falls on November 8, so the November 4 to 6 sale window and November 7 and 8 bursting window are imminent. Delhi's air is already severe: News18 reported an overall Air Quality Index of 451 at 8 am on November 3, after the Commission for Air Quality Management invoked Stage-II of the Graded Response Action Plan on November 2. That backdrop explains the narrow relaxation and the court's quick reaction to open violations.",
+      },
+      {
+        type: "h2",
+        text: "What Delhi-NCR residents should check",
+      },
+      {
+        type: "list",
+        items: [
+          "Buy only certified green crackers, only from designated locations, between November 4 and 6.",
+          "Check the QR code: it must show the manufacturer, NEERI registration, licence, formulation and test certificate, not just a catalogue.",
+          "Do not buy barium crackers, series crackers or garlands, and do not buy online: all are prohibited.",
+          "Burst only on November 7 and 8, 6-7 am and 8-10 pm, away from hospitals, schools, old-age homes and silence zones.",
+          "From November 9, the full ban on firecrackers returns across Delhi-NCR."
+        ],
+      },
+      {
+        type: "h2",
+        text: "What happens next in the Supreme Court Delhi firecrackers case",
+      },
+      {
+        type: "p",
+        text: "The next test is enforcement during the November 4 to 6 sale window. The coming days will show whether inspections, confiscations and licence action follow in the markets named on Tuesday. If further violations surface, the court could return to the matter before Diwali.",
+      },
+      {
+        type: "h2",
+        text: "Supreme Court Delhi firecrackers FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "What did the Supreme Court say about Delhi firecrackers on November 3, 2026?", a: "The bench flagged a November 3 report showing conventional and unauthorised crackers on sale despite its green-cracker-only order, and asked the Centre, Delhi government and police to act." },
+          { q: "When can green crackers be sold and burst in Delhi-NCR?", a: "Certified green crackers may be sold only through designated locations between November 4 and 6, and burst only on November 7 and 8 between 6 am and 7 am and between 8 pm and 10 pm. The full ban returns on November 9." },
+          { q: "What makes a firecracker a certified green cracker?", a: "It must be CSIR-NEERI and PESO approved, carry a QR code showing the manufacturer, registration, licence, formulation and certificate, and must not contain barium." },
+          { q: "Did the Supreme Court change its Diwali firecracker order on November 3?", a: "No. November 3 flagged violations and pressed for enforcement; the November 2 timings and conditions were unchanged." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "msv-al-jusufi-oman-attack-indian-sailor-killed-november-3-2026",
     image: "https://img.mathrubhumi.com/view/acePublic/alias/contentid/1uv924vrdwvrwgncax5/0/msv-al-jusufi-png.webp?f=3%3A2&q=0.75&w=1200",
     imageAlt: "The vessel MSV Al Jusufi (MarineTraffic photo via Mathrubhumi)",

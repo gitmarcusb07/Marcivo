@@ -65,6 +65,7 @@ async function generateSitemapXml(): Promise<string> {
       `${SEO_SITE_URL}/blog/supreme-court-california-ballots-trump-bid-rejected-november-3-2026`,
       `${SEO_SITE_URL}/blog/lebron-james-wine-sip-76ers-fan-troy-clemons-november-3-2026`,
       `${SEO_SITE_URL}/blog/msv-al-jusufi-oman-attack-indian-sailor-killed-november-3-2026`,
+      `${SEO_SITE_URL}/blog/supreme-court-delhi-firecrackers-illegal-sale-november-3-2026`,
       `${SEO_SITE_URL}/blog/cyclone-murasu-landfall-ongole-november-3-2026`,
       `${SEO_SITE_URL}/blog/russia-strikes-komyshuvakha-aid-centre-26-killed-november-3-2026`,
       `${SEO_SITE_URL}/blog/hpcl-vizag-refinery-fire-visakhapatnam-november-3-2026`,
