@@ -33,6 +33,99 @@
 
 export const posts = [
   {
+    slug: "europe-supermarket-fridge-cyberattack-november-2-2026",
+    image: "https://www.thedailymeal.com/img/gallery/9-mistakes-to-avoid-in-the-freezer-aisle/l-intro-1711382788.jpg",
+    imageAlt: "A supermarket freezer aisle with glass-fronted frozen food cabinets (stock photo, not an affected store)",
+    title: "Europe Supermarket Fridge Cyberattack: How Hackers Hit Stores Across 8 Countries",
+    description:
+      "Europe supermarket fridge cyberattack hit stores in at least eight countries on November 2, 2026, pushing freezer temperatures to 50°C and forcing disposal.",
+    excerpt:
+      "A suspected cyberattack on supermarket refrigeration systems hit stores in at least eight European countries on November 2, 2026, pushing some freezer temperatures to 50°C and forcing retailers to throw away spoiled food.",
+    date: "2026-11-03",
+    category: "Tech",
+    sections: [
+      {
+        type: "p",
+        text: "The Europe supermarket fridge cyberattack spread across the continent on Monday, November 2, 2026, hitting grocery stores from Sweden to Portugal. Retailers in at least eight countries reported fridges and freezers warming up overnight, and several chains threw away food that had spoiled or was at risk of spoiling. The European Union denounced the incidents as a deliberate attempt to disrupt its food chain, three weeks after a similar attack in French supermarkets.",
+      },
+      {
+        type: "p",
+        text: "What makes this incident unusual is how it happened. The attackers did not target checkout systems or customer data. Instead, they appear to have gone after the refrigeration systems themselves, remotely raising temperatures in some units to 50 degrees Celsius. Once cold-chain food warms up, it cannot simply be re-chilled and sold, so the immediate result was discarded food.",
+      },
+      {
+        type: "h2",
+        text: "Europe supermarket fridge cyberattack: which countries and stores were hit",
+      },
+      {
+        type: "p",
+        text: "Reports from AFP, Reuters and Deutsche Welle on November 2 put the affected countries at Belgium, Estonia, Finland, Ireland, Luxembourg, the Netherlands, Portugal and Sweden, with France hit by a separate but similar attack on October 12. Not every retailer used the same words, so the list below separates what chains confirmed as a cyberattack from what they described only as a technical or IT incident.",
+      },
+      {
+        type: "list",
+        items: [
+          "Belgium: Carrefour reported disruption in about 15 of its 700 stores; its spokesman said, \"It's a cyberattack, there is no other reason.\" Around 40 Delhaize stores, plus Colruyt, Intermarche, Spar and an Ikea store in Mons, also reported fridge problems.",
+          "Sweden: Coop confirmed six of its around 800 stores were hit by a cyber incident, now resolved. Ica reported problems in a limited number of stores, without confirming a cyberattack.",
+          "Ireland: Musgrave, which owns SuperValu, said 13 of its stores were affected by a cyber-incident.",
+          "Luxembourg: Four Delhaize stores reported problems, and Ahold Delhaize reported an overnight IT incident affecting freezers in Belgium and Luxembourg.",
+          "Portugal: Mosqueteiros confirmed incidents at seven Intermarche stores linked to a cyberattack, apparently targeting an external refrigeration service provider.",
+          "Estonia: Broadcaster ERR reported at least one supermarket attacked, with refrigeration temperatures raised to 50 degrees Celsius.",
+          "Finland: Irregular temperatures were found in a few smaller Kesko stores; network interference had not been ruled out.",
+          "Netherlands: A small number of corner shops suffered disruptions, according to AFP."
+        ],
+      },
+      {
+        type: "h2",
+        text: "How the supermarket fridge cyberattack worked: remote refrigeration controls",
+      },
+      {
+        type: "p",
+        text: "The common thread is remote control. Modern supermarket refrigeration is monitored and managed through external systems, sometimes over mobile networks, so a chain can watch hundreds of stores from one place. That convenience is also the vulnerability. Coop said its affected stores had been connected to a 4G network rather than the updated 5G system, making them more exposed. Ica said its affected stores were all connected to an external refrigeration control system from Danish manufacturer Danfoss, the same supplier named in connection with the October 12 attack in France.",
+      },
+      {
+        type: "p",
+        text: "Belgian refrigeration group Sabcobel told AFP it had begun securing its installations after the French attack, but around 10 per cent were still not fixed, and some of those were in shops affected on Monday. In Estonia, a refrigeration executive told ERR the affected units were older Danfoss models similar to those targeted in France. Danfoss had yet to respond to AFP's request for comment, and no official link between the French and Monday attacks has been established.",
+      },
+      {
+        type: "h2",
+        text: "What the EU and investigators have said so far",
+      },
+      {
+        type: "p",
+        text: "EU food and agriculture commissioner Christophe Hansen said the bloc was taking the incidents very seriously, calling them a deliberate attempt to disrupt the food supply chain and undermine consumers' confidence in it. A Commission spokesperson added that food security is not currently at risk, but that the food waste and impact on businesses are real.",
+      },
+      {
+        type: "p",
+        text: "In Belgium, federal prosecutors opened an investigation, but without qualifying the incident as a cyberattack at that stage. That caution matters: while several chains were unequivocal, others, including Ica and Kesko, stopped short of confirming a cyberattack. Sweden's National Cyber Security Centre said it was investigating exposed operational technology devices, from refrigerators to security cameras, that need updating or patching.",
+      },
+      {
+        type: "h2",
+        text: "Why a fridge attack is a food security story, not just a tech story",
+      },
+      {
+        type: "p",
+        text: "A supermarket fridge is critical infrastructure in a way that is easy to miss until it fails. If temperatures rise for hours, chilled and frozen food must be discarded, even if it looks fine, because bacteria multiply quickly once food leaves safe cold storage. That is why the immediate visible effect was staff throwing away bags of spoiled food outside stores, as photographed outside an ICA supermarket in Stockholm on November 2.",
+      },
+      {
+        type: "p",
+        text: "The wider worry is the pattern. The October 12 attack in France affected hundreds of supermarkets. Monday's incidents, three weeks later, spread the same kind of disruption across at least eight countries in a single night. Specialists quoted in the reports said the spread beyond France had been expected, and that vulnerabilities in connected industrial systems are being exploited ever more actively. No individual or group had claimed responsibility for either attack at the time of reporting.",
+      },
+      {
+        type: "h2",
+        text: "Europe supermarket fridge cyberattack FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "Which countries were hit?", a: "Belgium, Estonia, Finland, Ireland, Luxembourg, the Netherlands, Portugal and Sweden, per the AFP report on November 2, 2026, after a similar attack in France on October 12." },
+          { q: "How hot did the freezers get?", a: "Retailers and broadcasters reported temperatures reaching 50 degrees Celsius in some units in Sweden and Estonia." },
+          { q: "Was every store confirmed as a cyberattack?", a: "No. Carrefour, Coop, Musgrave and Mosqueteiros described cyber incidents, but Ica, Kesko and Belgian prosecutors stopped short of that confirmation." },
+          { q: "Who is behind the attacks?", a: "No one had claimed responsibility for the November 2 incidents or the October 12 French attack, and no official link between the two has been established." },
+          { q: "Is European food supply at risk?", a: "The European Commission said food security is not currently at risk, but that food waste and the impact on businesses are real." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "kimi-antonelli-youngest-f1-world-champion-mexico-grand-prix-november-2-2026",
     image: "https://autoracer.it/wp-content/uploads/2026/04/kimi2-scaled-e1777573628302.jpg",
     imageAlt: "Kimi Antonelli celebrating with the Italian flag as his Mercedes team sprays champagne",
