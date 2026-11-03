@@ -33,6 +33,188 @@
 
 export const posts = [
   {
+    slug: "ramayana-part-3-ranbir-kapoor-namit-malhotra-hint-november-3-2026",
+    image: "https://images.filmibeat.com/ph-big/2026/10/ramayana-the-introduction-movie-20261793360080_7.jpg",
+    imageAlt: "Ranbir Kapoor as Lord Ram in the official Ramayana: Part 1 poster, ahead of the film's November 5, 2026 release",
+    title: "Ramayana Part 3: Ranbir Kapoor and Namit Malhotra Hint at a Third Film — But Nothing Is Confirmed Yet",
+    description:
+      "Ramayana Part 3: Ranbir Kapoor and producer Namit Malhotra have hinted a third film is possible, but the makers stress no third part is confirmed yet.",
+    excerpt:
+      "Talk of a Ramayana Part 3 exploded on November 3, 2026, after Ranbir Kapoor mentioned a possible third film in an interview and producer Namit Malhotra said the epic was originally planned as three parts — but both remarks stop well short of confirming a third film.",
+    date: "2026-11-03",
+    category: "Cinema",
+    sections: [
+      {
+        type: "p",
+        text: "Ramayana Part 3 is the phrase lighting up film social media on November 3, 2026, two days before Ramayana: Part 1 reaches cinemas. The buzz comes from two remarks, reported the same day by Bollywood Hungama, Free Press Journal, Asianet News, India TV and other outlets: Ranbir Kapoor, who plays Lord Ram, mentioned a possible third part in an interview, and producer Namit Malhotra said the project was originally conceived as three films. Read carefully, though, because neither remark confirms a third film, and this post does not present one as confirmed.",
+      },
+      {
+        type: "p",
+        text: "The distinction is the whole story. Ramayana is currently a two-part epic: Part 1, subtitled Rise of a Legend, releases worldwide on November 5, 2026, in standard and IMAX formats, with the second part planned for a later Diwali release. Anything beyond that is a possibility to revisit, not a greenlit film.",
+      },
+      {
+        type: "h2",
+        text: "Ramayana Part 3: what Ranbir Kapoor actually said",
+      },
+      {
+        type: "p",
+        text: "In a conversation with Review Nation, reported on November 3, Ranbir Kapoor said he had already finished about 50 percent of Part 2 and that shooting was under way. The line that set social media off was his aside about the future: \"I have finished 50 percent of part two already. We are in the process of already shooting it. Even when we finished part two or part three, if there is one. I don't think this will ever leave us. This is an opportunity of a lifetime, irrespective of what the result is. It is not career-defining but life-defining.\"",
+      },
+      {
+        type: "p",
+        text: "Note the conditional: \"if there is one.\" Some social media posts have presented the remark as a confirmation or a spoiler, with fans jokingly calling him \"Spoiler Kapoor,\" but the quote itself does not announce a third film. Asianet News and Free Press Journal both stressed the same point on November 3.",
+      },
+      {
+        type: "h2",
+        text: "What producer Namit Malhotra said about the original plan",
+      },
+      {
+        type: "p",
+        text: "Producer Namit Malhotra gave the fuller version of the backstory in comments to international media at the film's recent Los Angeles premiere, reported by Bollywood Hungama on November 3. He said the team started out planning three parts, then decided to tell the story across two. He then left the door open, saying: \"So we started out the film, we were going to make it in three (parts), then we decided to make it in two. We're still in the middle of filming, so I am not going to give any spoilers for anything — but you know, who knows the way, once we get all the response and all the feedback, we may sit back on the table and the drawing board and see if there is anything else that we want to add or subtract, depending on how the world has received it.\"",
+      },
+      {
+        type: "p",
+        text: "That is a conditional revisit after audience response, not a production announcement. Malhotra added that the makers have two versions of Part 1, each with a different runtime, and are assessing whether one version can work worldwide or an extended cut could be considered, drawing a comparison with The Lord of the Rings extended editions. That is about versions of Part 1, not a confirmed Part 3.",
+      },
+      {
+        type: "h2",
+        text: "Why fans are running with the Ramayana Part 3 idea anyway",
+      },
+      {
+        type: "p",
+        text: "The timing explains the excitement. Part 1 arrives on November 5, 2026, and the franchise is already one of the most talked-about Indian films of the year, with advance booking coverage earlier in November putting its worldwide advance past 63 crore rupees. With Part 2 already half shot, according to Ranbir, fans are doing the obvious maths: if the epic's later chapters, including Lord Ram's return to Ayodhya, need room, a third film would give the story space that two films might not.",
+      },
+      {
+        type: "p",
+        text: "Fan theories split the story that way — Part 1 ending with the Jataayu fight, Part 2 covering the war against Lanka, a hypothetical Part 3 covering Ram's rule in Ayodhya — but those are fan theories, not the makers' plan, and no such story split has been announced.",
+      },
+      {
+        type: "h2",
+        text: "The film at the centre of the buzz",
+      },
+      {
+        type: "p",
+        text: "Directed by Nitesh Tiwari, Ramayana: Part 1 stars Ranbir Kapoor as Lord Rama, Sai Pallavi as Sita, Yash as Ravana, Sunny Deol as Hanuman and Ravie Dubey as Lakshman. It is produced by Namit Malhotra's Prime Focus Studios in collaboration with DNEG and Monster Mind Creations, and features an original score by Hans Zimmer and A. R. Rahman. That scale is why a hint about a third part travels so fast.",
+      },
+      {
+        type: "p",
+        text: "What to watch for next is simple: a genuine Ramayana Part 3 announcement would come from Prime Focus Studios, the director or the lead cast in a formal statement. Until then, the buzz is best read as exactly what the quotes say — the makers once planned three parts, settled on two, and will decide after seeing audience response. Louder is not the same as confirmed.",
+      },
+      {
+        type: "h2",
+        text: "Ramayana Part 3 FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "Is Ramayana Part 3 confirmed?", a: "No. Ranbir Kapoor and Namit Malhotra have only hinted a third part is possible; Bollywood Hungama, Asianet News and Free Press Journal all stress no third film is officially confirmed." },
+          { q: "What did Ranbir Kapoor say about Ramayana Part 3?", a: "In a Review Nation interview he said he had finished 50 percent of Part 2, adding 'even when we finished part two or part three, if there is one' — a conditional remark, not an announcement." },
+          { q: "What did Namit Malhotra say about three parts?", a: "He said the film started as a three-part plan, was restructured into two, and the makers may revisit the format after seeing audience response and feedback." },
+          { q: "When does Ramayana: Part 1 release?", a: "November 5, 2026, worldwide in standard and IMAX formats, directed by Nitesh Tiwari and starring Ranbir Kapoor, Sai Pallavi and Yash." },
+          { q: "Was Ramayana originally planned as a trilogy?", a: "Yes, according to Malhotra: it was initially envisioned across three parts before the creative approach changed to two instalments." }
+        ],
+      },
+    ],
+  },
+  {
+    slug: "sachin-tendulkar-invests-hitwicket-metasports-november-3-2026",
+    image: "https://www.talkesport.com/wp-content/uploads/sachin_tendulkar_hitwicket-1024x576.webp",
+    imageAlt: "Sachin Tendulkar pictured with the Hitwicket cricket strategy game branding (TalkEsport)",
+    title: "Sachin Tendulkar Hitwicket Deal: Cricket Legend Invests in Metasports Gaming Startup",
+    description:
+      "Sachin Tendulkar Hitwicket: the cricket legend has invested in Metasports Interactive, joining as brand ambassador as Hitwicket targets 100 million downloads.",
+    excerpt:
+      "Sachin Tendulkar has taken a strategic stake in Metasports Interactive, the Hyderabad-based maker of the cricket strategy game Hitwicket, and will serve as its brand ambassador and appear in the game, as the company targets 100 million downloads within three years.",
+    date: "2026-11-03",
+    category: "Gaming",
+    sections: [
+      {
+        type: "p",
+        text: "Sachin Tendulkar Hitwicket is the gaming announcement of the day: the cricket legend has invested in Metasports Interactive, the company behind the mobile cricket strategy game Hitwicket. The deal was announced on Tuesday, November 3, 2026, and was reported the same day by The Economic Times, Moneycontrol, The Week, NDTV Profit and TalkEsport. Tendulkar will also serve as the game's brand ambassador, and his likeness will be incorporated into Hitwicket as a playable character, according to The Economic Times.",
+      },
+      {
+        type: "p",
+        text: "The financial details have not been disclosed. The Economic Times reported the amount and valuation were withheld under confidentiality agreements, and sources described the cash component as nominal relative to Tendulkar's endorsement fees, with cash and equity combined.",
+      },
+      {
+        type: "h2",
+        text: "Sachin Tendulkar Hitwicket: why the cricket legend chose this game",
+      },
+      {
+        type: "p",
+        text: "Tendulkar's own explanation centres on strategy, not reflexes. In the statement carried across the November 3 coverage, he said: \"Hitwicket stood out to me for how it brings the strategic thinking behind cricket into the game. Cricket has always involved reading the bowler, assessing the field and deciding the right approach for every ball. Hitwicket captures that decision-making, going beyond reflexes to recreate how a cricketer thinks in the middle.\" He added that he had enjoyed playing the game and believed in what the team was building, which made the association feel natural.",
+      },
+      {
+        type: "p",
+        text: "That fits how Hitwicket is designed. Players manage a virtual cricket team as owner, coach and captain, making tactical calls such as planning a chase, deciding when to attack or defend, and choosing which bowlers to target, rather than winning through shot timing alone. The Economic Times also reported that Tendulkar's cricketing insights will be used to explain strategies to players inside the game, and will help shape gameplay.",
+      },
+      {
+        type: "h2",
+        text: "What Hitwicket is, and how big it already is",
+      },
+      {
+        type: "p",
+        text: "Hitwicket is a mobile-first, multiplayer cricket strategy game from Hyderabad-based Metasports Interactive, founded by Kashyap Reddy and Keerti Singh. It launched in 2020, with The Week noting an initial beta in 2020 and a full release by 2021. The company says the game now has more than 20 million players across 120 countries, a figure repeated across the November 3 reports.",
+      },
+      {
+        type: "p",
+        text: "The engagement numbers are the core of the pitch. Metasports says players spend an average of 51 minutes a day in the game, a figure The Week compared with about 15 minutes more than Candy Crush, and that revenue has doubled over the past six months. More than 97 percent of revenue comes from in-app purchases, according to the company, and more than half of revenue now comes from outside India, with markets including the United Kingdom, Australia, the United States and Canada named by The Economic Times.",
+      },
+      {
+        type: "h2",
+        text: "The 100 million download target and the funding behind it",
+      },
+      {
+        type: "p",
+        text: "Metasports has set a clear public target: take Hitwicket from more than 20 million players today to 100 million downloads within the next three years, a goal stated in the November 3 announcements and in TalkEsport's report, which puts the horizon at 2029. The company is not starting from scratch on funding. In April 2026 it raised 20 million dollars in user-acquisition funding from London-based Metica, a non-dilutive model in which the company keeps its equity and repays based on performance measures such as user growth and revenue efficiency.",
+      },
+      {
+        type: "p",
+        text: "Tendulkar is not the game's only famous backer. Commentator Harsha Bhogle is an investor and lends his voice to Hitwicket's AI-backed live commentary, which generates lines on the fly. The Economic Times also named Prime Venture Partners, Horizon Ventures and The Chennai Angels among the backers.",
+      },
+      {
+        type: "h2",
+        text: "What Tendulkar's role will actually involve",
+      },
+      {
+        type: "list",
+        items: [
+          "Strategic investor: Tendulkar has taken a significant minority stake in Metasports Interactive, with the amount and valuation undisclosed.",
+          "Brand ambassador: he will front Hitwicket's brand campaigns, content and in-game experiences, according to the November 3 announcements.",
+          "Playable character: his likeness will be incorporated into Hitwicket as a playable character, The Economic Times reported.",
+          "Gameplay input: his insights into how elite cricketers think on the field will feed into strategy explanations and more realistic gameplay, according to Moneycontrol and the company's chief executive.",
+          "Growth bet: the partnership is aimed at carrying Hitwicket from 20 million players to 100 million downloads in three years."
+        ],
+      },
+      {
+        type: "h2",
+        text: "A big day for Indian celebrity gaming investments",
+      },
+      {
+        type: "p",
+        text: "The Tendulkar announcement landed on the same day as another major Indian celebrity move into gaming. TalkEsport noted that actor Mahesh Babu invested in Mumbai studio Shortgun Games on November 3, backing its PC and console title Project Takedown. Together, the two deals make November 3 a notable day for Indian games: a cricket icon backing a mobile strategy title, and a film superstar backing a PC and console studio, both betting that Indian-made games can travel globally.",
+      },
+      {
+        type: "p",
+        text: "For Hitwicket, the test now is conversion, not announcement buzz: whether Tendulkar's presence as a playable character and strategy guide keeps new players past their first week. The deal itself is confirmed by multiple reputable outlets on November 3; only its price is private.",
+      },
+      {
+        type: "h2",
+        text: "Sachin Tendulkar Hitwicket FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "Has Sachin Tendulkar invested in Hitwicket?", a: "Yes. On November 3, 2026, Tendulkar took a strategic, significant minority stake in Metasports Interactive, the maker of Hitwicket, and became its brand ambassador." },
+          { q: "How much did Sachin Tendulkar invest in Hitwicket?", a: "The amount and valuation have not been disclosed. The Economic Times reported the cash component was nominal relative to his endorsement fees, with cash and equity combined." },
+          { q: "What is Hitwicket?", a: "A mobile multiplayer cricket strategy game launched in 2020, in which players manage a team as owner, coach and captain and win through tactical decisions rather than reflexes." },
+          { q: "How many people play Hitwicket?", a: "More than 20 million players across 120 countries, according to Metasports, with a target of 100 million downloads within three years." },
+          { q: "Will Sachin Tendulkar be in the Hitwicket game?", a: "Yes, according to The Economic Times: his likeness will be incorporated as a playable character, and he will appear across in-game experiences, content and brand campaigns." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "us-midterm-elections-2026-voting-today-house-senate-what-is-at-stake",
     image: "https://www.ey.com/adobe/dynamicmedia/deliver/dm-aid--e2c25154-8287-4f71-a42c-1a55a682440c/ey-united-states-capitol-building.jpg?preferwebp=true&quality=85&width=900",
     imageAlt: "The United States Capitol building in Washington DC, home of the US Congress",
