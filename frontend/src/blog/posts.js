@@ -33,6 +33,112 @@
 
 export const posts = [
   {
+    slug: "acp-manasvi-vashishtha-suspended-delhi-police-protest-november-3-2026",
+    image: "https://media.assettype.com/deccanherald/2026-11-03/humsoq71/file88aqepvi0gw1gzix51ysz.jpg?w=1200",
+    imageAlt: "Security personnel stand guard outside Delhi Police Headquarters as protesting officers from Shahdara district assemble on November 2, 2026 (PTI photo via Deccan Herald)",
+    title: "ACP Manasvi Vashishtha Suspended: Delhi Police ACP Suspended Day After Headquarters Protest",
+    description:
+      "ACP Manasvi Vashishtha suspended: the MHA order, the violation-of-discipline reason reported, and the Delhi High Court's Tuesday refusal explained.",
+    excerpt:
+      "Assistant Commissioner of Police Manasvi Vashishtha has been suspended a day after leading a protest by Delhi Police personnel outside police headquarters, with the Home Ministry order citing contemplated departmental proceedings but no specified grounds, and the Delhi High Court on Tuesday declining to take suo motu cognisance of alleged remarks made during the protest.",
+    date: "2026-11-03",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "ACP Manasvi Vashishtha suspended is the latest Delhi Police protest-row development: a day after police personnel demonstrated outside their own headquarters, the ACP who led that demonstration has been suspended. The order, issued by the Ministry of Home Affairs (MHA) late on Monday evening, took immediate effect and said departmental proceedings are contemplated. This post covers Tuesday's suspension, not Monday's protest.",
+      },
+      {
+        type: "p",
+        text: "Two framings of the reason have been reported. The Indian Express, reporting the MHA order on Tuesday afternoon, said the order did not specify the grounds for the proposed proceedings. The Hindu, citing Delhi Police sources on Tuesday morning, reported that the suspension was for \"violation of discipline\" after leading the protest. Both can be true at once: the reason given to the press need not match the order's wording.",
+      },
+      {
+        type: "h2",
+        text: "ACP Manasvi Vashishtha suspended: what the MHA order says",
+      },
+      {
+        type: "p",
+        text: "According to The Indian Express, the order, marked \"Most Immediate\" and issued late on Monday evening, said the competent authority, acting under Rule 10 of the Central Civil Services (Classification, Control and Appeal) Rules, 1965, had placed Vashishtha, an entry-grade officer, under suspension. Vashishtha is a 2019-batch DANIPS officer who was serving as ACP for the Gandhi Nagar subdivision.",
+      },
+      {
+        type: "p",
+        text: "Headquarters during suspension is Delhi, and leaving requires prior permission. The officer gets a subsistence allowance on half pay, plus dearness allowance if admissible, subject to a certificate of no other paid employment. No hearing date or finding has been reported.",
+      },
+      {
+        type: "h2",
+        text: "Why the suspension followed Monday's protest at police headquarters",
+      },
+      {
+        type: "p",
+        text: "On Monday, November 2, police personnel gathered outside Gate No. 1 of Delhi Police Headquarters on Jai Singh Road, demanding reinstatement of Vashishtha and Shahdara SHO Inspector Arun Kumar. Estimates vary from around 100 in the morning to around 150, with The Indian Express reporting around 500 at a later meeting with Police Commissioner Anurag Kumar. Personnel held placards and raised slogans including \"vardi ka apmaan nahi sahenge\", meaning the insult to the uniform will not be tolerated.",
+      },
+      {
+        type: "p",
+        text: "Vashishtha joined the demonstration, called for a meeting with the Police Commissioner and a formal process for such disputes, and described the protest to reporters as an \"organic call\" by personnel, saying: \"We have taken a stand because it is necessary to raise our voice against the hooliganism that the police are facing and the security problems arising inside police stations.\" A seven-person delegation later met Commissioner Anurag Kumar and submitted five demands.",
+      },
+      {
+        type: "h2",
+        text: "The five demands submitted to the Police Commissioner",
+      },
+      {
+        type: "p",
+        text: "The delegation's demands, as reported by Outlook and The Hindu, were: reinstatement of both officers; action against lawyers accused in the Shahdara confrontation; a standard operating procedure for lawyer confrontations; a cap, reported as five, on lawyers entering a police station at a time; FIRs against lawyers accused of misconduct towards personnel; a dedicated headquarters cell for complaints against lawyers; and police deployment in courts to deal with violence.",
+      },
+      {
+        type: "p",
+        text: "Delhi Police later said the Commissioner heard concerns about the dignity of the force, respect for the uniform and a structured system for service matters, and assured personnel that genuine concerns would be addressed in time. Discussions with Bar Associations and the Bar Council of Delhi had led to a Joint Coordination Committee at district and headquarters levels. Lawyers' bodies had sought Vashishtha's immediate suspension over alleged remarks, according to Outlook.",
+      },
+      {
+        type: "h2",
+        text: "The Shahdara row behind the transfers",
+      },
+      {
+        type: "p",
+        text: "The transfers followed an October 23 scuffle at Shahdara police station, in which advocate Lalit Bansal allegedly sustained a serious head injury. Lawyers launched an indefinite strike, alleging Vashishtha and Arun Kumar had threatened advocates who visited the station over the assault case. On October 28, Vashishtha was moved from Gandhi Nagar to the Special Police Unit for Women and Children, and Arun Kumar from Shahdara to the Security Branch. Lawyers ended the strike after the transfers, but police discontent led to Monday's demonstration.",
+      },
+      {
+        type: "h2",
+        text: "Delhi High Court declines suo motu action over alleged protest remarks",
+      },
+      {
+        type: "p",
+        text: "On Tuesday, the Delhi High Court also heard the matter. A lawyer urged a bench of Acting Chief Justice Nitin Sambre and Justice Sanjay Sharma to take suo motu cognisance of what the lawyer described as an unlawful assembly outside headquarters on Monday and alleged derogatory language against lawyers during the protest. The lawyer cited social media remarks, including phrases reported as \"kaale coat wale gunde\" and \"kaale coat ka behrupiya\", and an alleged remark about an AK-47. These are court allegations, not findings, and this post does not present them as established facts.",
+      },
+      {
+        type: "p",
+        text: "The court refused suo motu cognisance and asked the lawyer to file a formal petition, saying it would consider the matter. Acting Chief Justice Sambre added: \"I assure you, we will look into it.\" No petition outcome has been reported yet.",
+      },
+      {
+        type: "h2",
+        text: "What happens next after the suspension",
+      },
+      {
+        type: "list",
+        items: [
+          "Departmental proceedings are contemplated, but no grounds, charges or hearing date have been publicly specified.",
+          "Suspension terms keep headquarters in Delhi, bar leaving without prior permission, and provide half-pay subsistence allowance.",
+          "Any High Court petition must first be formally filed, following Tuesday's direction.",
+          "No suspension of SHO Inspector Arun Kumar has been reported in the coverage reviewed.",
+          "The Joint Coordination Committee is the reported channel for the wider police-lawyer grievances."
+        ],
+      },
+      {
+        type: "h2",
+        text: "ACP Manasvi Vashishtha suspended FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "Why was ACP Manasvi Vashishtha suspended?", a: "Sources told The Hindu it was for violation of discipline after leading Monday's protest, while The Indian Express reported the MHA order cited contemplated proceedings without grounds." },
+          { q: "When was the suspension ordered?", a: "Late on Monday evening, November 2, 2026, with immediate effect; it was reported publicly on Tuesday, November 3." },
+          { q: "What was Monday's Delhi Police protest about?", a: "Personnel demanded reinstatement of ACP Vashishtha and SHO Arun Kumar, transferred October 28 after the October 23 Shahdara scuffle." },
+          { q: "What did the Delhi High Court decide on Tuesday?", a: "It refused suo motu cognisance of alleged protest remarks and asked the lawyer raising the issue to file a formal petition." },
+          { q: "Is ACP Vashishtha dismissed from service?", a: "No. Suspension pending contemplated proceedings is not a dismissal, and no final outcome has been reported." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "supreme-court-delhi-firecrackers-illegal-sale-november-3-2026",
     image: "https://images.news18.com/ibnlive/uploads/2025/10/night-of-Diwali-1-2025-10-d795e20cc439b85b43d2ad858e2fc7fd.jpg",
     imageAlt: "Fireworks lighting up the night sky during Diwali celebrations (News18 file photo)",
