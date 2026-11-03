@@ -33,6 +33,95 @@
 
 export const posts = [
   {
+    slug: "msv-al-jusufi-oman-attack-indian-sailor-killed-november-3-2026",
+    image: "https://img.mathrubhumi.com/view/acePublic/alias/contentid/1uv924vrdwvrwgncax5/0/msv-al-jusufi-png.webp?f=3%3A2&q=0.75&w=1200",
+    imageAlt: "The vessel MSV Al Jusufi (MarineTraffic photo via Mathrubhumi)",
+    title: "MSV Al Jusufi Oman Attack: Indian Sailor Killed, 13 Rescued After Vessel Struck Off Oman Coast",
+    description:
+      "MSV Al Jusufi Oman attack: one Indian seafarer killed and 13 rescued after the Indian-flagged vessel was struck off Oman on November 2, officials confirmed.",
+    excerpt:
+      "One Indian seafarer was killed and 13 others were rescued after the Indian-flagged cargo vessel MSV Al Jusufi was struck by an unidentified aerial object off the Oman coast on November 2, 2026, with the government confirming the death on Tuesday.",
+    date: "2026-11-03",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "The MSV Al Jusufi Oman attack has claimed the life of an Indian seafarer. On Monday, November 2, 2026, the Indian-flagged cargo vessel MSV Al Jusufi, carrying 14 Indian crew members, was struck by an unidentified aerial object near the coast of Oman. One crew member, Gandhar Nahim Ajij from Gujarat, died, while the other 13 evacuated and were rescued by the Omani Coast Guard. The government confirmed the death on Tuesday, November 3, and the story surged across Indian news outlets through the morning.",
+      },
+      {
+        type: "p",
+        text: "Union Minister for Ports, Shipping and Waterways Sarbananda Sonowal announced the death in a statement on X on Tuesday. All 14 people aboard were Indian nationals, and the 13 survivors were picked up by the Omani Coast Guard after evacuating. The External Affairs Ministry also condemned the attack near Limah, Oman, and said India's embassy in Oman is coordinating repatriation of the rescued crew and the deceased seafarer's mortal remains.",
+      },
+      {
+        type: "h2",
+        text: "MSV Al Jusufi Oman attack: what the government confirmed",
+      },
+      {
+        type: "p",
+        text: "Sonowal's statement gave the fullest official account so far. In his words: \"On Nov 2, the Indian MSV AL JUSUFI, carrying 14 Indian seafarers, was struck by an unidentified aerial object while navigating near the coast of Oman. While 13 crew members safely evacuated and were rescued by the Omani Coast Guard, I am deeply saddened to report that one of our seafarers, Gandhar Nahim Ajij from Gujarat, tragically succumbed to his injuries.\"",
+      },
+      {
+        type: "p",
+        text: "The External Affairs Ministry's statement, shared by spokesperson Randhir Jaiswal, said the attack took place on Monday evening near Limah, Oman, and that 13 of the 14 Indian nationals aboard were rescued while one tragically lost his life. The ministry added: \"The continuing incidents of attacks on commercial shipping in the region are deeply concerning. We reiterate our call for immediate de-escalation of tensions, and the conclusion of ongoing negotiations for a diplomatic solution so that peace and stability can return to the region.\"",
+      },
+      {
+        type: "h2",
+        text: "What is not yet known about the Oman vessel strike",
+      },
+      {
+        type: "p",
+        text: "Officials have not said who attacked the vessel or what weapon was used, and readers should be careful with headlines that go further than the official record. Some headlines describe the incident as a drone attack, but the shipping ministry and External Affairs Ministry statements describe only an \"unidentified aerial object\", and say it is not immediately clear who was responsible. Until an official inquiry says more, the cause remains unconfirmed, and this report does not attribute it to any country or group.",
+      },
+      {
+        type: "p",
+        text: "What is confirmed is the human toll and the rescue: the Omani Coast Guard recovered all 13 survivors, and Indian authorities are working on bringing them home along with Ajij's remains. No official statement so far has given further details, and the story is described as developing.",
+      },
+      {
+        type: "h2",
+        text: "Why the MSV Al Jusufi Oman attack fits a wider pattern in Gulf shipping",
+      },
+      {
+        type: "p",
+        text: "The strike is the latest in a series of attacks on merchant shipping in Gulf waters that have escalated since hostilities involving the United States, Israel and Iran erupted in February 2026. Indian seafarers, one of the largest workforces in world merchant shipping, have repeatedly been caught in these incidents. The External Affairs Ministry said on October 28, as cited in Indian press coverage, that at least 22 Indian nationals have been killed in the ongoing conflict, including 14 seafarers.",
+      },
+      {
+        type: "p",
+        text: "Only days earlier, on October 30, a Marshall Islands-flagged LNG carrier, M/T Al Mayeda, carrying six Indian seafarers, was hit by a projectile in the Persian Gulf. Sonowal confirmed on Saturday that all six Indian nationals, along with the vessel's entire 25-member crew, were unhurt. The contrast between the two incidents underlines why Indian officials have been raising the alarm about crew safety with growing urgency.",
+      },
+      {
+        type: "p",
+        text: "External Affairs Minister S. Jaishankar raised the issue at the G20 Foreign Ministers' Meeting, stressing the need to safeguard freedom of navigation. He noted that developing nations across the Global South were disproportionately suffering, writing: \"The Global South is disproportionately bearing the consequences of attacks on civilian shipping and seafarers, jeopardising the availability and cost of fuel, food and fertilisers.\"",
+      },
+      {
+        type: "h2",
+        text: "What happens next for the Al Jusufi survivors",
+      },
+      {
+        type: "p",
+        text: "The immediate priority is repatriation. The Indian embassy in Oman is coordinating the early return of the 13 survivors and Ajij's mortal remains; no timeline has been announced.",
+      },
+      {
+        type: "p",
+        text: "Beyond the rescue, the incident adds fresh pressure on diplomatic efforts to protect commercial shipping. New Delhi's statement tied the attack to its wider call for de-escalation and a negotiated solution, and for an end to the targeting of commercial shipping and civilian infrastructure. Whether it leads to new protective measures for Indian-flagged vessels will depend on what investigators establish about how the vessel was hit, which has not yet been released.",
+      },
+      {
+        type: "h2",
+        text: "MSV Al Jusufi Oman attack FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "What happened in the MSV Al Jusufi Oman attack?", a: "On November 2, 2026, the Indian-flagged MSV Al Jusufi was struck by an unidentified aerial object near Oman. One Indian seafarer died and 13 were rescued by the Omani Coast Guard." },
+          { q: "Who was the Indian sailor killed in the Oman vessel attack?", a: "Union Shipping Minister Sarbananda Sonowal identified him as Gandhar Nahim Ajij of Gujarat, who succumbed to his injuries." },
+          { q: "How many crew members were on MSV Al Jusufi, and how many survived?", a: "All 14 aboard were Indian nationals. Thirteen evacuated and were rescued by the Omani Coast Guard; one died." },
+          { q: "Was the vessel hit by a drone?", a: "Not confirmed. Official statements describe only an 'unidentified aerial object'; who attacked the ship is not yet clear, despite some headlines calling it a drone attack." },
+          { q: "What has the Indian government said about the attack?", a: "The shipping ministry confirmed the death and rescue; the External Affairs Ministry condemned the attack and urged de-escalation and a diplomatic solution." },
+          { q: "Is this part of a wider pattern of attacks on ships?", a: "Yes. Gulf merchant vessels have faced repeated attacks since US-Israel-Iran hostilities escalated in February 2026; Indian officials say at least 22 Indian nationals, including 14 seafarers, have been killed." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "lebron-james-wine-sip-76ers-fan-troy-clemons-november-3-2026",
     image: "https://media-cldnry.s-nbcnews.com/image/upload/t_focal-1000x563,f_auto,q_auto:best/mpx/2704722219/2026_07/1784910303823_now_daily_a_brk_lebron_76ers_260724_S3_1920x1080-uizv82.jpg",
     imageAlt: "LeBron James in a Philadelphia 76ers uniform during a game",
