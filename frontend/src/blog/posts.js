@@ -33,6 +33,107 @@
 
 export const posts = [
   {
+    slug: "russia-strikes-komyshuvakha-aid-centre-26-killed-november-3-2026",
+    image: "https://newsimg.koreatimes.co.kr/2026/11/03/f180e7bc-a9ef-4372-8309-51a3867da962.jpg",
+    imageAlt: "Ukrainian rescuers working at the site of the Russian strike on an educational facility in Komyshuvakha, Zaporizhzhia region, on November 2, 2026",
+    title: "Komyshuvakha Aid Centre Strike: 26 Killed as Russian Bombs Hit Ukraine Aid Hub",
+    description:
+      "Komyshuvakha aid centre strike killed 26 on November 2, 2026, when Russian bombs hit a school aid hub and shelter in Zaporizhzhia, Ukraine says.",
+    excerpt:
+      "At least 26 people were killed on Monday, November 2, 2026, when Russian aerial bombs struck a school used as a humanitarian aid distribution centre and a nearby shelter in Komyshuvakha, in Ukraine's Zaporizhzhia region, Ukrainian officials said, with 27 people initially reported missing.",
+    date: "2026-11-03",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "The Komyshuvakha aid centre strike is dominating Tuesday morning's international news. Ukrainian officials said at least 26 people were killed on Monday, November 2, 2026, when Russian aerial bombs struck a school in the village of Komyshuvakha, in the Zaporizhzhia region, that was being used to distribute humanitarian aid, and then struck the shelter where people had taken cover. Five people were injured, including two rescue workers, and 27 people were initially reported missing.",
+      },
+      {
+        type: "p",
+        text: "The story is surging again on Tuesday morning because the confirmed death toll rose through the night. Ukraine's State Emergency Service first confirmed 24 deaths, and President Volodymyr Zelenskyy then put the toll at 26 in his nightly address late on Monday, after the figure had earlier stood at 18. The Zaporizhzhia region has declared Tuesday, November 3, a day of mourning for the victims.",
+      },
+      {
+        type: "h2",
+        text: "Komyshuvakha aid centre strike: what happened on Monday",
+      },
+      {
+        type: "p",
+        text: "Komyshuvakha sits very close to the front line in southern Ukraine, and the school there had long stopped holding classes, according to President Zelenskyy. Instead, the building and its shelter were used every Monday to hand out humanitarian aid packages, including bread and food parcels, to residents who had remained in the village and nearby settlements. Monday, November 2, was one of those distribution days.",
+      },
+      {
+        type: "p",
+        text: "According to Zelenskyy and Ukrainian officials, the attack came in two waves. The first bombs struck the school building just as people were arriving for aid. Then, in what officials described as a double-tap strike, more bombs hit the shelter where people had taken cover. Acting regional governor Mykhailo Semikin said at least nine 3,000-kilogram aerial bombs hit the village, reported as FAB-3000 guided bombs. Photos and video from Ukraine's emergency services showed the building reduced to smouldering rubble.",
+      },
+      {
+        type: "list",
+        items: [
+          "When: Monday morning, November 2, 2026, reported between about 10 am and 11 am local time.",
+          "Where: Komyshuvakha, in Ukraine's southern Zaporizhzhia region, close to the front line.",
+          "What was hit: a school used as a weekly aid distribution point, and the shelter where people took cover.",
+          "Weapons reported: at least nine aerial bombs, described as 3,000-kilogram FAB-3000 guided bombs.",
+          "Killed: at least 26, up from an earlier confirmed figure of 24.",
+          "Injured: five people, including two rescue workers.",
+          "Missing: 27 people were initially reported missing."
+        ],
+      },
+      {
+        type: "h2",
+        text: "Rescuers and police officers among the dead",
+      },
+      {
+        type: "p",
+        text: "The death toll includes people who had come to help as well as people who had come for aid. Ukraine's State Emergency Service said two of its rescuers and four police officers were among the dead. The rescuers were named as Denys Konovalenko and Oleksii Sushchevskyi, both aged 44. Two more rescue workers were among the injured.",
+      },
+      {
+        type: "p",
+        text: "Rescue work itself became dangerous. Officials said emergency teams had to stop their search several times because of Russian drone attacks in the area, and that drones, shelling and thick smoke slowed the effort. As night fell on Monday, responders were still using torches to search the rubble. That continuing search is why officials have warned the death toll could rise further.",
+      },
+      {
+        type: "h2",
+        text: "Why the Komyshuvakha aid centre strike matters for peace talks",
+      },
+      {
+        type: "p",
+        text: "The strike landed just as a rare pause in the fighting had ended. A six-day local ceasefire in the neighbouring Kherson region, centred on the Russian-occupied city of Oleshky, ended on Sunday, November 1. The pause, brokered with the help of US First Lady Melania Trump, had allowed a humanitarian mission and civilian evacuations from Oleshky, and was described as the longest truce of the war, with neither side reporting breaches.",
+      },
+      {
+        type: "p",
+        text: "In his nightly address, Zelenskyy said the attack sent the opposite signal. He called the strike utterly horrific and a vile terrorist strike, and said Russian forces could not have been unaware that residents gathered at the site every week for aid. His words, as reported by multiple outlets, were: \"With these killings, Russia is sending an entirely opposite signal: Russia is counting on more killings. There must be a response to this.\"",
+      },
+      {
+        type: "p",
+        text: "The Russian military has not publicly commented on the Komyshuvakha strikes, according to reports on Tuesday morning. Separately, Kremlin spokesman Dmitry Peskov said it was completely normal practice for forces to fortify positions during a pause. Ukraine's military, in turn, alleged Moscow used the Oleshky pause to bolster drone defences and replenish ammunition, and a senior Ukrainian figure told AFP that Russia had refused a Ukrainian offer to extend the truce.",
+      },
+      {
+        type: "h2",
+        text: "What happens next: mourning, rescue and Abu Dhabi talks",
+      },
+      {
+        type: "p",
+        text: "Tuesday, November 3, is a day of mourning across the Zaporizhzhia region for the victims, as declared by acting regional governor Mykhailo Semikin. Rescue and search operations were continuing, with families of the missing still waiting for news.",
+      },
+      {
+        type: "p",
+        text: "Diplomatically, the next fixed date is November 10 to 11, when US special envoy Steve Witkoff said delegations from Ukraine and Russia are due to meet in Abu Dhabi for US-mediated talks on post-war security, de-escalation and humanitarian measures. Those would be the first such three-way talks since February, according to reports.",
+      },
+      {
+        type: "h2",
+        text: "Komyshuvakha aid centre strike FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "How many people were killed in the Komyshuvakha aid centre strike?", a: "At least 26, according to President Zelenskyy and Ukraine's State Emergency Service. The toll rose from 18 to 24 and then to 26 on Monday evening." },
+          { q: "What was hit in Komyshuvakha?", a: "A school used every Monday to distribute humanitarian aid, and the shelter where people took cover after the first bombs fell." },
+          { q: "Who was among the dead?", a: "Two rescuers, Denys Konovalenko and Oleksii Sushchevskyi, both 44, and four police officers, plus civilians who had come for aid." },
+          { q: "How many people are missing?", a: "27 people were initially reported missing, and officials warned the death toll could rise as rescue work continues." },
+          { q: "Has Russia commented on the strike?", a: "The Russian military had not publicly commented on the strikes in reports on Tuesday morning." },
+          { q: "Why is November 3 a day of mourning?", a: "Acting regional governor Mykhailo Semikin declared November 3 a day of mourning across the Zaporizhzhia region for the victims." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "cyclone-murasu-landfall-ongole-november-3-2026",
     image: "https://imagesvs.oneindia.com/img/2026/11/cyclone2-81171793529629.jpg",
     imageAlt: "Cyclone Murasu over the Bay of Bengal and flooding on a road, as pictured in news coverage",
