@@ -33,6 +33,123 @@
 
 export const posts = [
   {
+    slug: "us-midterm-elections-2026-voting-today-house-senate-what-is-at-stake",
+    image: "https://www.ey.com/adobe/dynamicmedia/deliver/dm-aid--e2c25154-8287-4f71-a42c-1a55a682440c/ey-united-states-capitol-building.jpg?preferwebp=true&quality=85&width=900",
+    imageAlt: "The United States Capitol building in Washington DC, home of the US Congress",
+    title: "US Midterm Elections 2026: Voting Today for House, Senate and 36 Governors - What Is at Stake",
+    description:
+      "US midterm elections 2026: Americans vote on November 3 for all 435 House seats, 35 Senate seats and 36 governors. Key races, India timings and what changes.",
+    excerpt:
+      "Americans vote on Tuesday, November 3, 2026, in the US midterm elections 2026, deciding control of the House of Representatives and the Senate for the final two years of Donald Trump's presidency.",
+    date: "2026-11-03",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "US midterm elections 2026 are under way on Tuesday, November 3, 2026, in the first nationwide vote since the 2024 presidential race. About 210 million Americans are registered to vote, and they will decide how much power Donald Trump has for the rest of his presidency. Trump himself is not on the ballot, but control of Congress is, making this a report card on his second term.",
+      },
+      {
+        type: "h2",
+        text: "US Midterm Elections 2026: What Is Being Decided",
+      },
+      {
+        type: "p",
+        text: "Midterm elections are held halfway through a president's four-year term. Voters elect Congress, which writes federal law, controls federal spending, confirms judges and senior officials, and investigates the executive branch. This year every one of the 435 House seats is up for election, along with 35 of the 100 Senate seats and 36 governorships, plus state posts and ballot measures on abortion, taxes and voting rules.",
+      },
+      {
+        type: "h2",
+        text: "The House: Democrats Need a Net Gain of Four Seats",
+      },
+      {
+        type: "p",
+        text: "All 435 House seats are contested because House members serve two-year terms. Republicans currently hold 218 seats, Democrats hold 214, one seat is held by an independent and two are vacant. Control takes 218 seats, so Democrats need a net gain of four seats to take the House. Forecasters favour the Democrats here: Decision Desk HQ's forecast, updated on November 2, gave them an 84 percent chance of winning control, projecting 241 seats. Those are probabilities, not results, and only 40 to 50 seats are considered truly competitive.",
+      },
+      {
+        type: "h2",
+        text: "The Senate: A Steeper Climb for Democrats",
+      },
+      {
+        type: "p",
+        text: "Senators serve six-year terms, so only about a third of the Senate is contested at a time. This year 35 seats are up: 33 in regular elections and two special elections, in Florida and Ohio, to fill seats vacated by Secretary of State Marco Rubio and Vice President JD Vance. Republicans defend 22 of the 35 seats, Democrats 13. Republicans currently hold 53 Senate seats; Democrats hold 45, plus two independents who caucus with them, giving the Democratic bloc 47 seats. Democrats need a net gain of four seats to reach 51. At 50-50, Vice President Vance breaks tied votes for the Republicans, so a tie still leaves the Senate in Republican hands.",
+      },
+      {
+        type: "p",
+        text: "Decision Desk HQ gave Democrats a 64 percent chance of Senate control, projecting 52 seats, but the Senate is much closer than the House. The three toss-ups in Kansas, Iowa and Ohio, all held by Republicans, plus contests in Texas, Maine, Alaska, North Carolina, Georgia, Michigan and New Hampshire, are most likely to decide it. In Georgia a runoff will be held on December 1 if no candidate wins a majority.",
+      },
+      {
+        type: "h2",
+        text: "36 Governors and the Issues Driving Voters",
+      },
+      {
+        type: "p",
+        text: "Voters in 36 states will also elect governors, with competitive races in Georgia, Michigan, Ohio and Wisconsin among those to watch. The cost of living tops voters' concerns, with rising fuel, grocery, housing and healthcare costs squeezing household budgets. Reproductive rights, immigration, US democracy, the US-Israel war on Iran and AI data centres are also shaping the vote. Advertising is on track to hit a record 11.6 billion dollars, and a Pew survey found 44 percent of registered voters backing the Democratic candidate in their district, against 36 percent for the Republican.",
+      },
+      {
+        type: "h2",
+        text: "US Midterm Elections 2026: When Results Come, in India Time",
+      },
+      {
+        type: "p",
+        text: "More than 53 million ballots had been cast before Election Day, about 29 million in person and 23 million by mail, already more than the 46 million early votes in the whole of the 2022 midterms. In India, the first polls close at 5:30 am IST on Wednesday, November 4, with the last in Alaska around 10:30 am IST. Do not expect a final answer on Tuesday night: in 2022, House control was not called until November 16, eight days after the vote.",
+      },
+      {
+        type: "h2",
+        text: "How to Follow the US Midterm Results From India in 5 Steps",
+      },
+      {
+        type: "steps",
+        items: [
+          "First polls close at 5:30 am IST on Wednesday, November 4, in Georgia, Virginia, South Carolina and Vermont.",
+          "Watch Florida and Virginia: Republican-held House seats there can show the size of any Democratic gains.",
+          "Then follow the Senate maths: Democrats must flip seats in states Trump won by double digits, such as Ohio, Iowa, Alaska and Texas.",
+          "Expect a wait: close races can take days to call, and Georgia may go to a December 1 runoff.",
+          "Remember what is fixed: the new Congress is sworn in on January 3, 2027, whatever the outcome on the night.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "What Changes if Democrats Win, and What Does Not",
+      },
+      {
+        type: "p",
+        text: "If Democrats win the House, they gain its committees and the ability to investigate the administration, and the House alone can begin impeachment proceedings, though removal needs a two-thirds Senate majority. If Democrats win the Senate, they control judicial confirmations and cabinet nominations. Either way, Trump remains president until January 2029, keeps his veto, and most Senate bills still need 60 votes to pass. For India, the result matters because Congress shapes US tariffs, sanctions, defence budgets and aid.",
+      },
+      {
+        type: "h2",
+        text: "US Midterm Elections 2026: Frequently Asked Questions",
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "When are the US midterm elections 2026?",
+            a: "They are held on Tuesday, November 3, 2026, and Congress will be sworn in on January 3, 2027.",
+          },
+          {
+            q: "What is at stake in the US midterm elections 2026?",
+            a: "Control of Congress: all 435 House seats, 35 Senate seats and 36 governorships. Democrats need a net gain of four in each chamber.",
+          },
+          {
+            q: "Is Donald Trump on the ballot in 2026?",
+            a: "No. Trump stays president whatever the result; the vote decides whether he keeps a friendly Congress or faces one that can block his agenda.",
+          },
+          {
+            q: "When will US midterm results be known in India?",
+            a: "The first polls close at 5:30 am IST on Wednesday, November 4, but close races can take days to call. In 2022, House control was called eight days after the vote.",
+          },
+          {
+            q: "Why do US midterm elections matter for India?",
+            a: "Congress shapes US tariffs, sanctions, defence budgets and aid, which affect Indian exporters, students and professionals.",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: "By Wednesday morning in India, the first picture will be clear, though the closest races may take days longer.",
+      },
+    ],
+  },
+  {
     slug: "acp-manasvi-vashishtha-suspended-delhi-police-protest-november-3-2026",
     image: "https://media.assettype.com/deccanherald/2026-11-03/humsoq71/file88aqepvi0gw1gzix51ysz.jpg?w=1200",
     imageAlt: "Security personnel stand guard outside Delhi Police Headquarters as protesting officers from Shahdara district assemble on November 2, 2026 (PTI photo via Deccan Herald)",
