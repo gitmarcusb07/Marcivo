@@ -63,6 +63,7 @@ async function generateSitemapXml(): Promise<string> {
       `${SEO_SITE_URL}/blog/gst-collections-october-2026-rs-231-lakh-crore-229-percent-growth`,
       `${SEO_SITE_URL}/blog/cyclone-murasu-landfall-completed-weakening-november-3-2026`,
       `${SEO_SITE_URL}/blog/supreme-court-california-ballots-trump-bid-rejected-november-3-2026`,
+      `${SEO_SITE_URL}/blog/lebron-james-wine-sip-76ers-fan-troy-clemons-november-3-2026`,
       `${SEO_SITE_URL}/blog/cyclone-murasu-landfall-ongole-november-3-2026`,
       `${SEO_SITE_URL}/blog/russia-strikes-komyshuvakha-aid-centre-26-killed-november-3-2026`,
       `${SEO_SITE_URL}/blog/hpcl-vizag-refinery-fire-visakhapatnam-november-3-2026`,

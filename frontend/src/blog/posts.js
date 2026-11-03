@@ -33,6 +33,91 @@
 
 export const posts = [
   {
+    slug: "lebron-james-wine-sip-76ers-fan-troy-clemons-november-3-2026",
+    image: "https://media-cldnry.s-nbcnews.com/image/upload/t_focal-1000x563,f_auto,q_auto:best/mpx/2704722219/2026_07/1784910303823_now_daily_a_brk_lebron_76ers_260724_S3_1920x1080-uizv82.jpg",
+    imageAlt: "LeBron James in a Philadelphia 76ers uniform during a game",
+    title: "LeBron James Wine Sip Goes Viral: 76ers Star Sips Fan's Wine Mid-Game vs Bulls",
+    description:
+      "LeBron James wine sip: the 76ers star sipped a fan's wine mid-game vs the Bulls, and fan Troy Clemons has now shared his side of the viral moment.",
+    excerpt:
+      "LeBron James's mid-game sip from a Philadelphia 76ers fan's cup of wine during the 126-107 win over the Chicago Bulls on November 2, 2026, has gone viral, with the fan, Troy Clemons, now telling his side of the story.",
+    date: "2026-11-03",
+    category: "Sports",
+    sections: [
+      {
+        type: "p",
+        text: "The LeBron James wine sip is the viral sports moment of Tuesday morning. During the Philadelphia 76ers' 126-107 home win over the Chicago Bulls on Monday, November 2, 2026, James chased a loose ball into the stands, crashed into a fan holding a cup of wine, and appeared to take a sip from it before running back onto the court. Several camera angles spread across social media overnight, and by Tuesday morning the fan at the centre of it, Troy Clemons, had told his side to ESPN's Kris Rhim.",
+      },
+      {
+        type: "p",
+        text: "The sequence happened in the third quarter at the Xfinity Mobile Arena in Philadelphia. A hit-ahead pass from Tyrese Maxey sailed out of James's reach and out of bounds, and the 41-year-old stumbled into the baseline seats while chasing it down. He bumped into Clemons, who was walking to his seat with a drink, and wine spilled everywhere. James then took the cup from Clemons, raised it to his lips, handed it back, and jogged back onto the court as the section erupted.",
+      },
+      {
+        type: "h2",
+        text: "LeBron James wine sip: what LeBron said after the game",
+      },
+      {
+        type: "p",
+        text: "James addressed the moment after the win, part apology, part joke. He said he had spilled some of Clemons's wine when he crashed into him, and wanted to check whether it was any good. In his words, reported by ESPN's Kris Rhim: \"I spilled some of his wine. I crashed into him, spilled some of his wine. So I wanted to see if it was worth it on my arm and how good it was. It was all right.\"",
+      },
+      {
+        type: "p",
+        text: "James later added that a season is a long marathon, and players must find ways to have fun throughout, even while working. On the court, the wine sip was a footnote to another strong night: James finished with 15 points, seven rebounds and nine assists on 6-for-13 shooting, and the win moved his new-look 76ers to 7-1. It was only his sixth game for Philadelphia.",
+      },
+      {
+        type: "h2",
+        text: "76ers fan Troy Clemons tells his side of the viral moment",
+      },
+      {
+        type: "p",
+        text: "The new twist on Tuesday came from Clemons himself. Speaking to Rhim after the game, he walked through the collision: \"LeBron crashed into me, he grabbed me, he said, 'My bad.' My drink spilled everywhere, he took my drink from me, and he basically just took a sip of it, gave it back, and ran back on the court.\" Clemons confirmed the drink was wine, adding: \"I'm just glad for him to be here. I'm not worried about the wine getting on me.\"",
+      },
+      {
+        type: "p",
+        text: "Online, fans immediately told Clemons he should never wash the cup and keep it as a souvenir. Clemons was having none of it. \"At the end of the day, he's another man like me,\" he told Rhim. \"He's LeBron, but at the end of the day, I threw that cup in the trash. And it's nothing up with him; I just got a fresh drink.\"",
+      },
+      {
+        type: "h2",
+        text: "Why the LeBron James wine sip video went viral",
+      },
+      {
+        type: "p",
+        text: "Part of the clip's power is how unexpected it is. Players grab water or a sports drink during breaks all the time, but a mid-game sip from a fan's cup of wine is something nobody expects on a broadcast, let alone from a four-time MVP in his 24th NBA season. The moment was captured from several angles, including a bird's-eye view posted by Rhim, and reposted by accounts including NBA on Prime.",
+      },
+      {
+        type: "p",
+        text: "The other part is LeBron's well-documented love of wine, long part of his off-court routine. Seeing that habit collide, literally, with a live game made the clip instantly shareable, and Clemons's deadpan reaction, throwing away the cup instead of treasuring it, gave the story a second act on Tuesday morning.",
+      },
+      {
+        type: "h2",
+        text: "What the viral moment does not change",
+      },
+      {
+        type: "p",
+        text: "For all the attention, the wine sip changed nothing about the game itself. Philadelphia won comfortably, 126-107, and James's line of 15 points, nine assists and seven rebounds was in keeping with his start as a 76er. The coverage reviewed reports no statement from the NBA about the incident, and the story's appeal rests on humour rather than controversy: a star apologised to a fan, tasted his wine, gave the cup back, and both men went home happy after a win.",
+      },
+      {
+        type: "p",
+        text: "That is also why the moment is likely to live on as a meme rather than a talking point about discipline. Clemons did not ask for anything, did not keep the cup, and did not complain. James did not hide from it, joking about it in the post-game press conference within minutes.",
+      },
+      {
+        type: "h2",
+        text: "LeBron James wine sip FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "What happened in the LeBron James wine sip moment?", a: "During the 76ers' 126-107 win over the Bulls on November 2, 2026, James chased a loose ball into the stands, crashed into fan Troy Clemons, spilling his wine, and appeared to take a sip from the cup before returning to the court." },
+          { q: "Who is Troy Clemons?", a: "Troy Clemons is the 76ers fan whose cup of wine James sipped from. He told ESPN's Kris Rhim that James apologised, took a sip, handed the cup back, and ran back onto the court." },
+          { q: "What did LeBron James say about the wine sip?", a: "James said: 'I spilled some of his wine. I crashed into him, spilled some of his wine. So I wanted to see if it was worth it on my arm and how good it was. It was all right.'" },
+          { q: "Did the fan keep the cup as a souvenir?", a: "No. Despite fans urging him to keep it, Clemons said he threw the cup in the trash and got a fresh drink." },
+          { q: "What were LeBron James's stats in the 76ers vs Bulls game?", a: "James finished with 15 points, seven rebounds and nine assists on 6-for-13 shooting as Philadelphia beat Chicago 126-107 to improve to 7-1." },
+          { q: "Why did the LeBron James wine sip go viral?", a: "Multiple camera angles spread on social media overnight, helped by LeBron's well-known love of wine, his joking explanation, and the fan's deadpan decision to throw the cup away." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "supreme-court-california-ballots-trump-bid-rejected-november-3-2026",
     image: "https://cdnx.premiumread.com/?url=https://www.malaymail.com/malaymail/uploads/images/2026/11/03/372021.jpg&w=1600&q=100&f=jpg&t=7",
     imageAlt: "Voters casting ballots at a polling station in Los Angeles, California, on November 2, 2026, ahead of the US midterm elections",
