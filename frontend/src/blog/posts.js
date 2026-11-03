@@ -33,6 +33,94 @@
 
 export const posts = [
   {
+    slug: "hpcl-vizag-refinery-fire-visakhapatnam-november-3-2026",
+    image: "https://img.republicworld.com/all_images/2026/11/massive-fire-erupts-at-hpcl-refinery-in-visakhapatnam-after-explosion-thick-smoke-covers-city-1793642312212-1280x720.webp?w=1280&h=720&q=75&format=webp",
+    imageAlt: "Flames and thick black smoke rising from the HPCL refinery in Visakhapatnam after the pitch tank fire",
+    title: "HPCL Vizag Refinery Fire: Blast at Pitch Tank Contained, No Casualties Reported",
+    description:
+      "HPCL Vizag refinery fire broke out at a pitch tank on November 2, 2026 night; HPCL says the blaze was contained quickly with no casualties.",
+    excerpt:
+      "A fire broke out at HPCL's Visakhapatnam refinery late on November 2, 2026, after explosion sounds at a pitch storage tank. HPCL says the blaze was localised, brought under control quickly, and caused no casualties.",
+    date: "2026-11-03",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "The HPCL Vizag refinery fire broke out late on Monday night, November 2, 2026, at the Hindustan Petroleum Corporation Limited (HPCL) refinery in Visakhapatnam, Andhra Pradesh. According to HPCL, the fire was reported at a pitch intermediate storage tank at around 10 pm, after a blast, and thick flames and black smoke rising over the port city quickly set off panic in nearby neighbourhoods. Videos and photos of the towering blaze spread widely on social media overnight, pushing the incident into the top trending news stories of Tuesday morning.",
+      },
+      {
+        type: "p",
+        text: "The reassuring part of the story came quickly. HPCL said its in-house Fire and Safety Team activated emergency protocols immediately, the fire remained localised to the pitch tank area, and it was brought under control within a short time. The company confirmed there were no casualties, and said all units at the Visakhapatnam refinery were operating safely. Revenue Divisional Officer Dileep Chakravarthy, who inspected the site, later confirmed the blaze had been completely put out and that there was no longer any danger to the public.",
+      },
+      {
+        type: "h2",
+        text: "HPCL Vizag refinery fire: what happened at the Visakhapatnam plant",
+      },
+      {
+        type: "p",
+        text: "The refinery is one of the country's major refining complexes, located in the Gajuwaka industrial area of Visakhapatnam. Reports citing police and HPCL employees said explosion-like sounds were heard from inside the facility on Monday night, followed by flames that spread rapidly and sent thick clouds of black smoke into the sky over the surrounding locality. Residents rushed out of their homes in fear as the glow and smoke became visible across the area.",
+      },
+      {
+        type: "p",
+        text: "As a precaution, refinery officials suspended power supply to the affected area and moved personnel to safer locations while firefighters worked on the tank. HPCL said its own firefighting systems were pressed into service and supplemented by units of the Andhra Pradesh Fire Department. Visakhapatnam Police Commissioner Shankhabrata Bagchi confirmed the incident and said the fire was confined to the tank and posed no threat to other sections of the refinery.",
+      },
+      {
+        type: "list",
+        items: [
+          "When: late on Monday night, November 2, 2026, at around 10 pm, per HPCL's statement.",
+          "Where: HPCL's Visakhapatnam (Vizag) refinery, in the Gajuwaka industrial area.",
+          "What caught fire: a pitch intermediate storage tank, described in news reports as a sulphur pitch tank.",
+          "What triggered it: a blast or explosion sounds were reported before the fire; the exact cause has not yet been confirmed by HPCL.",
+          "Casualties: none reported, confirmed by HPCL, the police commissioner and the Revenue Divisional Officer.",
+          "Status now: fire fully extinguished, all refinery units operating safely, and a formal safety enquiry to follow."
+        ],
+      },
+      {
+        type: "h2",
+        text: "Why the HPCL Vizag refinery fire went viral overnight",
+      },
+      {
+        type: "p",
+        text: "The visuals did much of the work. Clips shared on X through the night showed a tall column of fire and dense black smoke above the refinery, and the sheer scale of the flames, combined with early reports of explosions, made the incident look far worse than the official outcome turned out to be. That gap between the dramatic footage and the confirmed facts is exactly why the story kept trending into Tuesday morning, as people searched for whether anyone had been hurt and whether nearby areas were at risk.",
+      },
+      {
+        type: "p",
+        text: "The timing added to the attention. The fire broke out on a night when Andhra Pradesh was already on high alert, with Severe Cyclonic Storm Murasu making its landfall along the state's south coast in the early hours of Tuesday. The two events are separate, and no official has linked them, but the coincidence meant a state already watching one emergency woke up to news of another.",
+      },
+      {
+        type: "h2",
+        text: "What officials have confirmed, and what is still under investigation",
+      },
+      {
+        type: "p",
+        text: "Three points are confirmed by multiple official sources: the fire was confined to the pitch tank area, it was brought under control and extinguished, and nobody was killed or injured. HPCL's own statement is the clearest on this: \"The fire was localised to the pitch tank area and was brought under control within a short time. There have been no casualties, and all units of the refinery are working safely.\"",
+      },
+      {
+        type: "p",
+        text: "What is not confirmed is the cause. The police commissioner said the exact cause was yet to be confirmed by the company, and early suggestions circulating in some reports have not been confirmed by HPCL or the police. Revenue Divisional Officer Dileep Chakravarthy described a minor explosion preceding the fire and said a formal enquiry into industrial safety compliance at the facility would be initiated as per prescribed norms. He also appealed to the public not to panic or spread rumours, saying, \"There is no cause for worry, and no injuries or casualties have been reported.\"",
+      },
+      {
+        type: "p",
+        text: "HPCL reiterated its commitment to safety and emergency preparedness. Further details are awaited.",
+      },
+      {
+        type: "h2",
+        text: "HPCL Vizag refinery fire FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "When did the HPCL Vizag refinery fire happen?", a: "Late on Monday night, November 2, 2026, at around 10 pm, at HPCL's Visakhapatnam refinery, according to the company's statement." },
+          { q: "What caught fire at the HPCL Vizag refinery?", a: "A pitch intermediate storage tank, described in news reports as a sulphur pitch tank. HPCL says the fire stayed localised to that tank area." },
+          { q: "Was anyone hurt in the HPCL Vizag refinery fire?", a: "No. HPCL, Visakhapatnam Police Commissioner Shankhabrata Bagchi and Revenue Divisional Officer Dileep Chakravarthy all confirmed there were no casualties or injuries." },
+          { q: "Is the refinery still operating after the fire?", a: "Yes. HPCL said all units at the Visakhapatnam refinery were operating safely after the blaze was brought under control and extinguished." },
+          { q: "What caused the HPCL Vizag refinery fire?", a: "The exact cause has not been confirmed yet. A minor explosion was reported before the fire, and a formal enquiry into industrial safety compliance is to follow." },
+          { q: "Is there any danger to nearby residents now?", a: "No. Officials confirmed the blaze was fully extinguished and said there is no longer any danger to the public, while asking people not to panic over rumours." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "europe-supermarket-fridge-cyberattack-november-2-2026",
     image: "https://www.thedailymeal.com/img/gallery/9-mistakes-to-avoid-in-the-freezer-aisle/l-intro-1711382788.jpg",
     imageAlt: "A supermarket freezer aisle with glass-fronted frozen food cabinets (stock photo, not an affected store)",
