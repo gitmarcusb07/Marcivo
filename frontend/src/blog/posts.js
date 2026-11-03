@@ -32,6 +32,104 @@
  */
 
 export const posts = [
+{
+    slug: "gta-6-preload-november-10-212gb-file-size-rockstar-november-3-2026",
+    image: "https://www.gamespot.com/wp-content/uploads/2026/07/Screenshot-2026-07-10-at-11.40.32-AM.png?w=1024",
+    imageAlt: "A scene from Grand Theft Auto VI in Leonida (GameSpot screenshot of Rockstar Games footage)",
+    title: "GTA 6 Preload Starts November 10: Rockstar Confirms 212GB Download Ahead of November 19 Launch",
+    description:
+      "GTA 6 preload: Rockstar confirms digital preloading from November 10, a 212GB download, and code-in-box copies from November 12 before launch on November 19.",
+    excerpt:
+      "Rockstar Games has confirmed the GTA 6 preload plan on November 3, 2026: digital pre-orders can start downloading from November 10, two days earlier than previously planned, with a file of up to 212GB, ahead of the game's November 19 launch on PlayStation 5 and Xbox Series X|S.",
+    date: "2026-11-03",
+    category: "Gaming",
+    sections: [
+      {
+        type: "p",
+        text: "GTA 6 preload is now officially dated: Rockstar Games confirmed on Tuesday, November 3, 2026, that players who pre-ordered a digital copy of Grand Theft Auto VI can begin downloading the game on Tuesday, November 10, two days earlier than the November 12 date previously planned. The announcement, reported the same day by Polygon, Video Games Chronicle, GameSpot, Notebookcheck and GamingBible, also confirmed the number every player needs to plan around — the pre-load file will require up to 212GB of storage, depending on the device. The game itself still does not unlock until its launch day, November 19, 2026, on PlayStation 5 and Xbox Series X|S.",
+      },
+      {
+        type: "p",
+        text: "The change matters because of the download's size. At up to 212GB, GTA 6 is one of the largest console downloads ever, roughly a quarter of the usable storage on a 1TB PlayStation 5 Slim, as FullCleared noted. Two extra days give players more than a week to finish the download before launch. Rockstar's stated reason is simple: to ensure players can play at launch.",
+      },
+      {
+        type: "h2",
+        text: "GTA 6 preload: PS5 and Xbox start times",
+      },
+      {
+        type: "p",
+        text: "The GTA 6 preload start time depends on the platform. On PlayStation 5, pre-loading begins Tuesday, November 10 at midnight local time in each player's time zone, so New Zealand starts first, followed by each region as midnight arrives. In India, PS5 players start at 12:00 am IST on November 10. On Xbox Series X|S, pre-loading begins globally at 12:00 am GMT on November 10 — 5:30 am IST in India, and 4:00 pm Pacific / 7:00 pm Eastern on November 9 in the US.",
+      },
+      {
+        type: "p",
+        text: "Note the difference: the Xbox pre-load is a single global moment, while the PlayStation pre-load rolls around the world at local midnight. Either way, pre-loading only installs the game — as GamingBible and GameSpot stress, it does not let anyone play early. GTA 6 remains locked until November 19.",
+      },
+      {
+        type: "h2",
+        text: "GTA 6 preload: what happens with physical and code-in-box copies",
+      },
+      {
+        type: "p",
+        text: "Players who prefer a box are on a different timetable. Rockstar says code-in-box versions for both consoles should be available from retailers starting Thursday, November 12. Those copies contain a download code, not a disc, as FullCleared and GameSpot note — so buying on November 12 still means downloading the same up-to-212GB file, two days later than digital pre-orders. The physical edition is sold from November 12 specifically to support preloading, GameSpot reports.",
+      },
+      {
+        type: "p",
+        text: "Pre-orders remain open, with GameSpot listing the Standard Edition at $80 and FullCleared reporting an Ultimate Edition at $99.99. Rockstar has not announced a PC version for launch, and has not shared a launch time beyond midnight local time on November 19, as GameSpot notes.",
+      },
+      {
+        type: "h2",
+        text: "GTA 6 preload: the 212GB file size, and why the old leak was so close",
+      },
+      {
+        type: "p",
+        text: "Rockstar confirmed the GTA 6 file size as up to 212GB depending on the device, since sizes can differ slightly between PlayStation and Xbox. The figure lands almost exactly on an earlier leak: Notebookcheck notes PlayStation Game Size reported on October 27 that the PS5 version would need 210GB, just 2GB below the confirmed upper limit. The official number settles the speculation — keep at least 212GB free, especially on the 512GB Xbox Series S, where it is a very large share of the drive.",
+      },
+      {
+        type: "p",
+        text: "The size reflects the game's scale. Grand Theft Auto VI is set in Leonida, based on Florida, with the Miami-inspired Vice City at its centre, and follows Jason Duval and Lucia Caminos. It is the eighth main entry, following 2013's Grand Theft Auto V, and arrives after two delays — first from autumn 2025 to May 26, 2026, then to November 19, as FullCleared recaps.",
+      },
+      {
+        type: "h2",
+        text: "GTA 6 preload: free poster and Leonida map on launch day",
+      },
+      {
+        type: "p",
+        text: "Rockstar also confirmed a launch-day bonus: from November 19, the official GTA VI website will offer a printable cover art poster and a map of Leonida as free downloads, Polygon and VGC report. A double-sided physical poster will also be sold at the Rockstar Store for $0.99, or given free with any Rockstar Store purchase.",
+      },
+      {
+        type: "h2",
+        text: "GTA 6 preload: what to do before November 10",
+      },
+      {
+        type: "list",
+        items: [
+          "Free up at least 212GB: check your console storage now, not on November 10, and delete or move games you are not playing.",
+          "PS5 players: be ready at midnight local time on November 10 (12:00 am IST in India) if you pre-ordered digitally.",
+          "Xbox Series X|S players: the global pre-load opens at 12:00 am GMT on November 10, which is 5:30 am IST on November 10 in India.",
+          "Code-in-box buyers: your copy should reach retailers from November 12, and you will still download the full file — it is a code, not a disc.",
+          "Do not expect early access: the pre-load installs the game, but GTA 6 unlocks on November 19, at midnight local time."
+        ],
+      },
+      {
+        type: "p",
+        text: "The bottom line: digital pre-orders download from November 10, the file is up to 212GB, boxed code copies follow on November 12, and everyone plays on November 19. Clear the space this week, and the biggest launch of the year will be ready the moment it unlocks.",
+      },
+      {
+        type: "h2",
+        text: "GTA 6 preload FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "When does GTA 6 preload start?", a: "Digital pre-orders can preload from November 10, 2026: midnight local time on PS5, and 12:00 am GMT globally on Xbox Series X|S (5:30 am IST on November 10 in India)." },
+          { q: "How big is the GTA 6 download?", a: "Up to 212GB, depending on the device, according to Rockstar Games. Free up at least 212GB before November 10." },
+          { q: "Can I play GTA 6 early if I preload it?", a: "No. Preloading only installs the game ahead of launch; GTA 6 unlocks on November 19, 2026, at midnight local time." },
+          { q: "When do physical GTA 6 copies go on sale?", a: "Code-in-box versions should be available from retailers from November 12, 2026. They contain a download code, not a disc." },
+          { q: "What platforms is GTA 6 launching on?", a: "PlayStation 5 and Xbox Series X|S on November 19, 2026. No PC launch version has been announced." }
+        ],
+      },
+    ],
+  },
   {
     slug: "europe-bomb-threats-four-flights-poland-spain-bulgaria-november-3-2026",
     image: "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2021/01/31117439718_9fb77e019e_o-1-scaled.jpg",
