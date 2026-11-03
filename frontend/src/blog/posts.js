@@ -33,6 +33,92 @@
 
 export const posts = [
   {
+    slug: "supreme-court-california-ballots-trump-bid-rejected-november-3-2026",
+    image: "https://cdnx.premiumread.com/?url=https://www.malaymail.com/malaymail/uploads/images/2026/11/03/372021.jpg&w=1600&q=100&f=jpg&t=7",
+    imageAlt: "Voters casting ballots at a polling station in Los Angeles, California, on November 2, 2026, ahead of the US midterm elections",
+    title: "Supreme Court California Ballots: Court Rejects Trump Bid to Set Aside 20,000 Mail-In Ballots on Eve of Midterms",
+    description:
+      "Supreme Court California ballots ruling: the court rejected Trump's bid to set aside 20,000 mail-in ballots on the eve of the US midterms.",
+    excerpt:
+      "The US Supreme Court on Monday, November 2, 2026, rejected the Trump administration's emergency bid to force California to set aside the mail-in ballots of more than 20,000 registered voters, acting on the eve of the November 3 midterm elections.",
+    date: "2026-11-03",
+    category: "News",
+    sections: [
+      {
+        type: "p",
+        text: "The Supreme Court California ballots ruling came on Monday, November 2, 2026, in a fast, unsigned, one-sentence order that gave no reasoning, as is common for emergency decisions. The justices rejected the Trump administration's emergency request to force California to segregate the mail-in ballots of more than 20,000 registered voters whom federal officials allege are likely not United States citizens, and to hold those ballots aside until the voters' citizenship could be verified. No justice publicly dissented, and the court did not ask California for a response before ruling, a step that usually signals serious consideration of an emergency case.",
+      },
+      {
+        type: "p",
+        text: "The timing is what makes the decision so consequential. It arrived hours after the Justice Department filed the emergency request, and a day before the November 3 midterm elections, which decide control of Congress for the final two years of President Donald Trump's second term. All 435 House seats and 35 Senate seats are at stake, and tens of millions of Americans had already cast early ballots.",
+      },
+      {
+        type: "h2",
+        text: "Supreme Court California ballots: what the administration asked for",
+      },
+      {
+        type: "p",
+        text: "The administration asked the Supreme Court to intervene in a case it had already lost in the lower courts. The Justice Department sued California in October, arguing that the state was preventing enforcement of the federal law that makes it a crime for noncitizens to vote in federal elections. It asked the courts to order California to separate any ballots cast by people on its list of allegedly questionable voters, and not to count them until those voters were determined to be US citizens.",
+      },
+      {
+        type: "p",
+        text: "Solicitor General D. John Sauer, arguing for the administration, told the court that once California mixes the challenged ballots with lawful ones, there is no way to get the challenged ballots back. The administration had originally accused California of having 190,000 illegal voters on its rolls, according to AFP reporting, but it later revised that figure to about 20,000. California replied that its list appeared to be filled with errors, that it already has safeguards to protect election integrity, and that the process used to create the list was, in its words, highly suspect.",
+      },
+      {
+        type: "h2",
+        text: "How the lower courts ruled before the Supreme Court stepped in",
+      },
+      {
+        type: "list",
+        items: [
+          "October 28, 2026: US District Judge David Carter refused the request, writing that never before had the federal government, on the eve of an election, sought to coerce a state to abandon its own constitutional election procedures, and that the administration had not shown a credible process for creating its list.",
+          "Friday, October 30, 2026: the 9th US Circuit Court of Appeals refused the request in a 2-1 decision, saying there was no feasible way to segregate specific ballots without potentially catastrophic effects on the system, and that using the list could bar valid votes.",
+          "Appeals dissent: Circuit Judge Patrick Bumatay called the request reasonable, saying it would not cancel any vote but would allow time to verify eligibility.",
+          "Monday, November 2, 2026: Chief Judge James Boasberg ruled separately against the administration, finding it had likely violated the Constitution's Elections Clause and describing the alleged-noncitizen lists as flawed."
+        ],
+      },
+      {
+        type: "h2",
+        text: "Why the ruling matters for the midterm elections",
+      },
+      {
+        type: "p",
+        text: "California is the most populous US state and a Democratic stronghold, and the case was the latest in a flurry of election-related litigation before the midterms. California Attorney General Rob Bonta said the appeal reeks of desperation and was another attempt to undermine elections. The administration has argued its request was modest and would eventually allow legal votes to be counted.",
+      },
+      {
+        type: "p",
+        text: "The rapid rejection also follows an earlier defeat at the same court. In September 2026, the justices rejected the president's plan to change how mail ballots are sent nationwide, a proposal election officials warned could have had catastrophic consequences for this year's midterms. Reports also note that studies repeatedly show voter fraud cases are extremely rare and do not influence election results.",
+      },
+      {
+        type: "h2",
+        text: "What happens next for California voters",
+      },
+      {
+        type: "p",
+        text: "With the order in place, California will count ballots in the normal way, without segregating the challenged group. Voting takes place on Tuesday, November 3, with polling hours varying by state. First election-night results are expected from Tuesday evening, but some close races may take days or weeks, particularly where mail-in ballots are still being counted.",
+      },
+      {
+        type: "p",
+        text: "The ruling does not end the underlying lawsuit over the voter list, but it removes the immediate threat that thousands of ballots would be set aside on election eve. Ballots already cast, and ballots cast on election day, will be processed under California's existing procedures.",
+      },
+      {
+        type: "h2",
+        text: "Supreme Court California ballots FAQs",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "What did the Supreme Court decide on California ballots?", a: "On November 2, 2026, the court rejected the Trump administration's emergency bid to force California to set aside the mail-in ballots of more than 20,000 registered voters whom federal officials allege are likely noncitizens." },
+          { q: "Did any justice dissent from the Supreme Court California ballots ruling?", a: "No justice publicly dissented. The order was unsigned and one sentence long, with no reasoning given, as is common for emergency decisions." },
+          { q: "Why did the administration want the ballots set aside?", a: "The Justice Department argued the voters may not be US citizens and asked that their ballots be segregated and not counted until citizenship was verified, saying that once the ballots are mixed with lawful ones they cannot be retrieved." },
+          { q: "What did the lower courts say before the Supreme Court ruling?", a: "District Judge David Carter refused the request on October 28, and the 9th Circuit refused it on October 30 in a 2-1 decision, saying segregation was not feasible without potentially catastrophic effects on the system and could bar valid votes." },
+          { q: "Does the ruling mean the ballots are now counted normally?", a: "Yes, for this election. California will count ballots under its existing procedures, without segregating the challenged group, while the underlying lawsuit over the voter list continues." },
+          { q: "When are the US midterm elections?", a: "Election day is Tuesday, November 3, 2026. Results begin arriving on Tuesday evening, but some close races may take days or weeks to call." }
+        ],
+      },
+    ],
+  },
+  {
     slug: "cyclone-murasu-landfall-completed-weakening-november-3-2026",
     image: "https://static.thesouthfirst.com/wp-content/uploads/2026/11/Heavy-rains-1.jpg",
     imageAlt: "Heavy rain lashing a coastal area of Andhra Pradesh as Cyclone Murasu moves inland after landfall",
