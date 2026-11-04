@@ -33,6 +33,57 @@
 
 export const posts = [
 {
+    slug: "salman-khan-teri-sexy-beauty-song-maatrubhumi-november-4-2026",
+    image: "https://i.ytimg.com/vi/kE7jAjtw3zU/maxresdefault.jpg",
+    imageAlt: "Salman Khan and Chitrangda Singh in the official Teri Sexy Beauty song video from Maatrubhumi",
+    title: "Teri Sexy Beauty: Salman Khan Drops Viral New Song From Maatrubhumi at 5:12 AM",
+    description:
+      "Teri Sexy Beauty is Salman Khan's new Maatrubhumi song, sung by Salman and Muskaan and shared at 5:12 am on November 4, 2026.",
+    excerpt:
+      "Salman Khan released Teri Sexy Beauty, a new romantic song from Maatrubhumi, early on November 4, 2026, singing it himself alongside Muskaan.",
+    date: "2026-11-04",
+    category: "Entertainment",
+    sections: [
+      { type: "p", text: "Teri Sexy Beauty is out, and it arrived the way only a Salman Khan song drop can: in the early hours of the morning, straight from the star himself. Salman Khan shared the new song from his upcoming film Maatrubhumi early on Wednesday, November 4, 2026, with a playful 5:12 am post that quickly caught fire online. The track, sung by Salman himself alongside Muskaan, is a fun, romantic number that shows a different side of a film best known so far for its war-drama story." },
+      { type: "p", text: "Salman's caption set the tone for the whole release. He wrote: “Departure time 5:12 am…. Flight on time, 2 pegs down taking off with my sexy beauty… pata nahi kahaan mai land karoon #TeriSexyBeauty Out Now.” The post, which tagged director Apoorva Lakhia, Chitrangda Singh, Sajid Khan, Himesh Reshammiya and singer Muskaan, was picked up within hours by entertainment outlets across India, with NDTV Profit headlining it as a post that had gone viral." },
+      { type: "h2", text: "Teri Sexy Beauty: What the New Salman Khan Song Is About" },
+      { type: "p", text: "Teri Sexy Beauty is a light, romantic track built around being smitten. Its lyrics describe falling for someone's beauty and feeling like an airplane taking off after two pegs, a playful image that matches Salman's tongue-in-cheek caption. The song's official YouTube description sums it up as love, masti and a little madness, promising a refreshing dose of romance, playful chemistry and carefree moments that celebrate the lighter side of love." },
+      { type: "p", text: "On screen, the song features Salman Khan and Chitrangda Singh, the film's lead pair. After the patriotic, serious tone of the film's earlier songs and teaser material, Teri Sexy Beauty gives audiences their first look at the romance at the heart of Maatrubhumi. It is the kind of song designed to travel on social media, with a catchy hook, a dance-friendly beat and a star singing his own track." },
+      { type: "h2", text: "Teri Sexy Beauty Song Credits: Who Sang and Made the Track" },
+      { type: "p", text: "The credits explain why the song sounds the way it does. It is presented as a Himesh Reshammiya musical, with Salman Khan and Muskaan on vocals and additional vocals by Sajid Khan. Sajid Khan has composed the music and written the lyrics, while Caesar Gonsalves has choreographed the song. The wider team includes music programming by Sajid Masood, Viplove Rajdeo and Rhythm Ratta at Taaleem Studio, with Rhythm Ratta also recording the vocals." },
+      { type: "list", items: [
+        "Singers: Salman Khan and Muskaan, with additional vocals by Sajid Khan.",
+        "Music and lyrics: Sajid Khan, presented as a Himesh Reshammiya musical.",
+        "Choreography: Caesar Gonsalves.",
+        "On screen: Salman Khan and Chitrangda Singh.",
+        "Film: Maatrubhumi: May War Rest in Peace, presented by Salman Khan Films.",
+        "Director: Apoorva Lakhia. Producer: Salma Khan."
+      ] },
+      { type: "p", text: "Salman singing his own song is part of the appeal. He has lent his voice to tracks before, but a new Salman Khan vocal always draws extra attention from his fans, and the early-morning drop gave the song a full day of social media conversation ahead of it." },
+      { type: "h2", text: "Maatrubhumi: What We Know About Salman Khan's Film" },
+      { type: "p", text: "Maatrubhumi: May War Rest in Peace is presented by Salman Khan Films, directed by Apoorva Lakhia and produced by Salma Khan. It stars Salman Khan and Chitrangda Singh. The film was earlier titled Battle of Galwan and is reportedly based on the 2020 clash between Indian and Chinese troops in the Galwan Valley. Salman plays an Army officer, while Chitrangda portrays his wife, and the story is expected to focus on the soldiers involved and the challenges they face in their personal lives." },
+      { type: "p", text: "That serious backdrop is why Teri Sexy Beauty stands out. The film's earlier music leaned patriotic: Salman released a song called Jai Hind from the film on October 20, coinciding with Dussehra. Reports have also said the film underwent changes and reshoots, and that its CBFC certification is still pending; those details remain reported, not confirmed by the makers in the song announcement." },
+      { type: "h2", text: "Maatrubhumi Release Date: Is November 13 Confirmed?" },
+      { type: "p", text: "November 13 has been mentioned as a possible release date in reports around the song, but the makers have not officially confirmed the film's release date yet. That distinction matters: until Salman Khan Films announces a date, November 13 should be treated as a reported possibility, not a confirmed opening day. The poster for Teri Sexy Beauty carries the film's title, Maatrubhumi, along with the tagline May war rest in peace." },
+      { type: "h2", text: "Why Teri Sexy Beauty Went Viral on November 4" },
+      { type: "p", text: "Three things pushed Teri Sexy Beauty into the morning's viral conversation. First, the star himself announced it, at an unusual hour, with a caption fans immediately started quoting. Second, Salman singing the track himself gave fans something new to react to, beyond just another film song. And third, the song arrived as a surprise: no long build-up, just a 5:12 am post saying the song was out now, which is exactly the kind of drop that spreads fast on social media." },
+      { type: "h2", text: "How to Watch Teri Sexy Beauty" },
+      { type: "steps", items: [
+        "Search for Teri Sexy Beauty Maatrubhumi on YouTube, where the official video is out now.",
+        "Look for Salman Khan's 5:12 am post from November 4, 2026 for the original announcement.",
+        "Watch for an official Maatrubhumi release date from Salman Khan Films, since November 13 is reported but not yet confirmed."
+      ] },
+      { type: "h2", text: "Teri Sexy Beauty: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "What is Teri Sexy Beauty?", a: "A new romantic song from Salman Khan's upcoming film Maatrubhumi: May War Rest in Peace, released early on November 4, 2026." },
+        { q: "Who sings Teri Sexy Beauty?", a: "Salman Khan and Muskaan, with additional vocals by Sajid Khan, who also composed the music and wrote the lyrics." },
+        { q: "Who stars in the Teri Sexy Beauty video?", a: "Salman Khan and Chitrangda Singh, the lead pair of Maatrubhumi." },
+        { q: "What is Maatrubhumi about?", a: "Maatrubhumi, earlier titled Battle of Galwan, is reportedly based on the 2020 Galwan Valley clash. Salman plays an Army officer and Chitrangda plays his wife." },
+        { q: "Is Maatrubhumi releasing on November 13?", a: "November 13 has been mentioned as a possible date, but the makers have not officially confirmed the film's release date yet." }
+      ] }
+    ],
+  }
+{
     slug: "glenn-maxwell-retirement-international-cricket-australia-november-3-2026",
     image: "https://img1.hscicdn.com/image/upload/f_auto/lsci/db/PICTURES/CMS/375800/375831.6.jpg",
     imageAlt: "Glenn Maxwell batting for Australia in the green and gold kit",
