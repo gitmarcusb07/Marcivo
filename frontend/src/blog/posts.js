@@ -33,6 +33,54 @@
 
 export const posts = [
 {
+    slug: "munna-bhai-3-farhad-samji-script-rajkumar-hirani-2027-shoot",
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Sanjay_Dutt_at_the_Lavasa_Women%27s_Drive.jpg",
+    imageAlt: "Sanjay Dutt, who plays Munna Bhai, at a public event",
+    title: "Munna Bhai 3: Farhad Samji Writing Rajkumar Hirani's Sequel, Shooting Planned for 2027",
+    description:
+      "Munna Bhai 3 update: Farhad Samji is writing Rajkumar Hirani's sequel, with Sanjay Dutt and Arshad Warsi expected back and shooting planned for 2027.",
+    excerpt:
+      "Munna Bhai 3 is moving forward, with Farhad Samji writing Rajkumar Hirani's sequel and filming reportedly planned for 2027.",
+    date: "2026-11-04",
+    category: "Cinema",
+    sections: [
+      { type: "p", text: "Munna Bhai 3 is finally moving again. According to a report by Variety India published on November 4, 2026, writer-director Farhad Samji is currently writing the screenplay for Rajkumar Hirani's long-awaited third Munna Bhai film, and the makers are reportedly planning to begin shooting in 2027." },
+      { type: "h2", text: "Munna Bhai 3: What Is New on November 4, 2026" },
+      { type: "p", text: "The new development is about the writing, not a trailer or a poster. Variety India has learnt that Farhad Samji is writing Munna Bhai 3 for director Rajkumar Hirani, and that Samji is expected to finish the screenplay shortly. Reports on November 4, including Moneycontrol, Times Now and ABP Live, all trace the update back to that Variety India report, and they agree on the same broad timeline: the film is expected to go on floors in 2027." },
+      { type: "p", text: "Why does a writing update matter so much for this franchise? Because, by Hirani's own account, the script has always been the obstacle. In an interview with Variety India in February 2026, Hirani confirmed that he was developing a new Munna Bhai film, but he was clear that he would not make a sequel simply to continue the franchise. He has said repeatedly that he will only move ahead when he is completely satisfied with the script." },
+      { type: "h2", text: "Munna Bhai 3: Why Farhad Samji's Return Matters" },
+      { type: "p", text: "Farhad Samji's connection to Munna Bhai goes back to the very first film, and it is a story fans love to retell. He wrote the opening mukhda, or opening verse, of the hit song M Bole Toh for Munna Bhai M.B.B.S., which released in 2003. The work began, by Samji's own recollection, with a late-night call from composer Anu Malik, who asked him to draft the mukhda for a music session with Hirani and producer Vidhu Vinod Chopra the next day." },
+      { type: "p", text: "That history makes Samji's return after 23 years more than a routine hiring. Hirani has said he brought Samji on board because the franchise needed a fresh voice, and Samji has spoken about looking up to Hirani as an idol and about the encouragement he received from the filmmaker in his early days." },
+      { type: "h2", text: "Munna Bhai 3: Cast, Story and Release Date — What Is Known and What Is Not" },
+      { type: "list", items: [
+        "Director: Rajkumar Hirani, who directed both earlier films, is developing the third instalment.",
+        "Writer: Farhad Samji is reportedly writing the screenplay, and is expected to finish it shortly.",
+        "Expected stars: Reports describe the film as starring Sanjay Dutt as Munna and Arshad Warsi as Circuit, but no official cast announcement has been made yet.",
+        "Shooting plan: Reports say the film is slated to go on floors in 2027. This is a reported plan, not an officially announced date.",
+        "Story: No official storyline, plot detail or title beyond Munna Bhai 3 has been announced.",
+        "Release date: There is no official release date, teaser or poster for Munna Bhai 3 yet. Any date or poster circulating online without an official source should be treated as unverified."
+      ] },
+      { type: "h2", text: "Munna Bhai 3: A Quick Recap of the Franchise" },
+      { type: "p", text: "Munna Bhai M.B.B.S. released in December 2003 as Rajkumar Hirani's directorial debut, produced by Vidhu Vinod Chopra. Sanjay Dutt played Murli Prasad Sharma, known as Munna Bhai, a Mumbai don who pretends to be a doctor to please his father, and Arshad Warsi played his loyal sidekick Circuit. When a doctor exposes Munna's lies, Munna enrols in a medical college, and the film turns into a comedy with a genuine emotional core." },
+      { type: "p", text: "The sequel, Lage Raho Munna Bhai, followed in 2006 and placed Munna and Circuit in a story built around Gandhian principles, giving rise to the popular term Gandhigiri." },
+      { type: "h2", text: "Munna Bhai 3: How to Follow the Sequel Without Falling for Rumours" },
+      { type: "steps", items: [
+        "Wait for an official announcement from Rajkumar Hirani or Vidhu Vinod Chopra Films before treating any cast or date as final. Trade reports are useful, but they are not announcements.",
+        "Treat 2027 as a reported shooting plan, not a locked schedule. Hirani has said the film moves ahead only when he is satisfied with the script.",
+        "Ignore fan-made posters, fake trailers and claimed release dates on social media. Munna Bhai 3 has no official poster or teaser yet.",
+      ] },
+      { type: "h2", text: "Munna Bhai 3: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "Is Munna Bhai 3 confirmed?", a: "The film is in development and pre-production, with Farhad Samji writing the script for Rajkumar Hirani, according to Variety India. It has not yet been officially announced with a locked cast and shooting date." },
+        { q: "Who is writing Munna Bhai 3?", a: "Farhad Samji, who wrote the opening mukhda of M Bole Toh for the first film in 2003, is reportedly writing the screenplay for the third instalment." },
+        { q: "When will Munna Bhai 3 start shooting?", a: "Reports say the film is expected to go on floors in 2027, once the screenplay is finished and approved. No official shooting date has been announced." },
+        { q: "Will Sanjay Dutt and Arshad Warsi return in Munna Bhai 3?", a: "Reports describe the film as starring Sanjay Dutt as Munna and Arshad Warsi as Circuit, but their return has not yet been officially confirmed by the makers." },
+        { q: "What is the Munna Bhai 3 release date?", a: "There is no official release date yet. A 2027 shooting plan, if it holds, would still leave the release date to be announced later." },
+        { q: "Is there a Munna Bhai 3 trailer or poster?", a: "No. There is no official teaser, trailer or poster for Munna Bhai 3 yet, so posters and trailers online are fan-made unless they come from an official source." }
+      ] }
+    ]
+  },
+{
     slug: "rahul-gandhi-bhagwant-mann-alcohol-remark-insaaf-rally-sangrur-november-2026",
     image: "https://images.tv9punjabi.com/wp-content/uploads/2026/06/punjab-congress-rahul-gandhi.jpg?w=1280",
     imageAlt: "Rahul Gandhi at a Congress event in Punjab",
