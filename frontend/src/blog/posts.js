@@ -33,6 +33,45 @@
 
 export const posts = [
 {
+    slug: "rahul-gandhi-bhagwant-mann-alcohol-remark-insaaf-rally-sangrur-november-2026",
+    image: "https://images.tv9punjabi.com/wp-content/uploads/2026/06/punjab-congress-rahul-gandhi.jpg?w=1280",
+    imageAlt: "Rahul Gandhi at a Congress event in Punjab",
+    title: "Rahul Gandhi Targets Bhagwant Mann at Sangrur Insaaf Rally With 'Smell of Alcohol' Remark",
+    description:
+      "Rahul Gandhi Bhagwant Mann remark: his Sangrur Insaaf Rally charge over Punjab drugs, what he said, and what is unverified.",
+    excerpt:
+      "Rahul Gandhi used the Congress Insaaf Rally in Sangrur to launch the party's 2027 Punjab campaign, accusing the AAP government of failing on drugs and making a personal allegation against Chief Minister Bhagwant Mann.",
+    date: "2026-11-04",
+    category: "News",
+    sections: [
+      { type: "p", text: "Rahul Gandhi Bhagwant Mann remark: Congress leader Rahul Gandhi launched a sharp attack on Punjab Chief Minister Bhagwant Mann at the party's Insaaf Rally in Sangrur on Wednesday, November 4, 2026, accusing the Aam Aadmi Party (AAP) government of failing to deliver on its promise to eradicate drug abuse from Punjab. The most talked-about moment was a personal allegation about Mann's conduct during their time together in Parliament. Gandhi alleged that Mann would sit with MPs in the Lok Sabha in the morning and crack jokes, but that by 11 am his breath would smell of alcohol. This is Gandhi's allegation, reported by The Times of India, Times Now and The Statesman, and it has not been independently verified. The Statesman reported that responses to the specific remarks were not immediately available." },
+      { type: "h2", text: "Rahul Gandhi Bhagwant Mann Remark: What Gandhi Said in Sangrur" },
+      { type: "p", text: "Addressing the rally in Sangrur, Mann's home district, Gandhi questioned the AAP government's record on drugs, reminding the crowd that eradicating drug abuse was among its key promises before it came to power. 'The Aam Aadmi Party came to power, and you placed your trust in them, in Bhagwant Mann and the Aam Aadmi Party. They promised that they would eradicate drug abuse. I ask you: where have they eliminated it? From which corner of Punjab have they managed to remove drugs?' he said, according to The Times of India." },
+      { type: "p", text: "Gandhi then made the personal allegation: 'I was in the Lok Sabha with him. He used to sit with us and tell jokes, right there, sitting among us. By 11:00 am, you could smell alcohol on his breath.' He immediately qualified it, saying he was not commenting on Mann's personal choices. 'Now, I am not saying that Bhagwant Mann should not drink; that is his personal affair. But if you truly want to fight the menace of substance abuse, your Chief Minister cannot be under the influence every single evening,' he said. That link, between a personal allegation and fitness to lead an anti-drugs campaign, is why the remark has become so controversial." },
+      { type: "h2", text: "Rahul Gandhi Bhagwant Mann Remark: Why the Insaaf Rally Matters" },
+      { type: "p", text: "The rally was not a routine stop. It launched the Congress campaign for the 2027 Punjab Assembly elections, with Congress president Mallikarjun Kharge also in attendance, and leaders described it as sounding the bugle for change in Punjab. The Congress named it an Insaaf Rally, framing it around justice on drugs, law and order and unemployment, including the case of Gulzar Singh, who died by suicide in Dirba in Sangrur district. Holding it in Mann's own district was deliberate." },
+      { type: "p", text: "The AAP and the Congress are both constituents of the Opposition INDIA bloc nationally, yet they are direct rivals in Punjab, where the Congress is the main opposition. Gandhi presented the Congress as the party that would run Punjab from Punjab itself, rather than from Delhi." },
+      { type: "h2", text: "Rahul Gandhi Bhagwant Mann Remark: Delhi Control, Shah Timeline and Debate Challenge" },
+      { type: "p", text: "Gandhi also alleged that Punjab was being governed from Delhi. 'Right now, the reins are held half by Amit Shah and half by Kejriwal, while Bhagwant Mann just sits there. Punjab is being governed from Delhi,' he said, referring to Union Home Minister Amit Shah and AAP national convenor Arvind Kejriwal. He questioned Shah's claim that the drug menace would be eradicated within three years, a timeline running to December 31, 2029. 'In three years, Amit Shah will not even be the Home Minister anymore. My assessment is that this government will not even last a year,' he said. That is his political assessment, not a fact." },
+      { type: "p", text: "Gandhi also challenged Prime Minister Narendra Modi to a face-to-face debate, saying he had issued the challenge a day earlier, and argued Punjab's drug problem was rooted in a lack of opportunity. 'If there is no industry, no factories, no farming, no agriculture, then there will be drugs, there will be gangsterism, bullets will be fired on the streets,' he said. He also recalled slain singer Sidhu Moosewala, saying the mindset behind the killing still roamed every corner of Punjab. Moosewala was shot dead in Jawaharke, Mansa, on May 29, 2022, and Lawrence Bishnoi is an accused in the case." },
+      { type: "h2", text: "What Is Verified, What Is Alleged, and What Happens Next" },
+      { type: "steps", items: [
+        "Verified: Gandhi addressed the Sangrur rally on November 4, 2026, with Kharge, launching the Congress 2027 Punjab campaign and attacking the AAP government over drugs and Delhi control.",
+        "Alleged, not verified: the 11 am alcohol claim. No independent verification has been reported, and no Mann or AAP response to this remark was immediately available.",
+        "Watch for a response: any AAP or Mann denial or rebuttal would be a genuine new development.",
+        "Watch the campaign trail: further rallies and counter-charges are likely, with drugs the central battleground."
+      ] },
+      { type: "h2", text: "Rahul Gandhi Bhagwant Mann Remark: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "What did Rahul Gandhi say about Bhagwant Mann at the Sangrur rally?", a: "He alleged that in Parliament, Mann would crack jokes in the morning but by 11 am his breath would smell of alcohol, adding that a chief minister fighting drug abuse could not be under the influence every evening." },
+        { q: "Is the alcohol allegation against Bhagwant Mann verified?", a: "No. It is Gandhi's allegation, reported by The Times of India, Times Now and The Statesman. The Statesman reported it could not be independently verified." },
+        { q: "What was the Insaaf Rally in Sangrur?", a: "A Congress rally on November 4, 2026, in Mann's home district, launching the party's 2027 Punjab campaign, with Gandhi and president Mallikarjun Kharge attending." },
+        { q: "What else did Gandhi say at the rally?", a: "He accused the AAP government of failing on drugs, alleged Punjab was run from Delhi by Shah and Kejriwal, questioned Shah's three-year timeline, recalled Moosewala, and challenged Modi to a debate." },
+        { q: "Has Bhagwant Mann or the AAP responded to the remark?", a: "No response to this allegation was immediately available in reports published on November 4, 2026." }
+      ] }
+    ],
+  },
+{
     slug: "india-vs-new-zealand-1st-odi-result-kohli-74-auckland-november-2026",
     image: "https://resize.indiatv.in/resize/1200_-/2025/10/virat-kohli-17-1761449184.jpg",
     imageAlt: "Virat Kohli batting for India in an ODI match",
