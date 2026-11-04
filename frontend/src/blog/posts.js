@@ -33,6 +33,64 @@
 
 export const posts = [
 {
+    slug: "mukesh-ambani-asias-richest-person-reliance-rally-november-2026",
+    image: "https://www.ril.com/ar2025-26/assets/img/mukesh.png",
+    imageAlt: "Mukesh Ambani, chairman and managing director of Reliance Industries, in a suit",
+    title: "Mukesh Ambani Asia's Richest Person Again After Reliance Shares Surge Nearly 12%",
+    description:
+      "Mukesh Ambani is Asia's richest person again after Reliance shares surged nearly 12%, lifting his Forbes net worth to $88.8 billion past Zhang Yiming.",
+    excerpt:
+      "Mukesh Ambani has reclaimed the title of Asia's richest person on Forbes' Real-Time Billionaires list after a near-12% rally in Reliance Industries shares.",
+    date: "2026-11-04",
+    category: "Business",
+    sections: [
+      { type: "p", text: "Mukesh Ambani Asia's richest person again: that is the headline from Forbes' Real-Time Billionaires list after a rally in Reliance Industries shares on Monday, November 2, 2026. The Reliance chairman added about $8.5 billion to his estimated fortune in one session, taking his net worth to $88.8 billion and moving him past ByteDance co-founder Zhang Yiming. One good day on the market redrew the top of Asia's rich list, on the Forbes tracker at least." },
+      { type: "h2", text: "Mukesh Ambani Asia's Richest Person: The Numbers Behind the Comeback" },
+      { type: "p", text: "Reliance shares jumped 11.64% on the BSE to close at Rs 1,299, their strongest single-day gain in more than six years, according to The Economic Times. Most reports round that to nearly 12%, the stock's biggest one-day jump since April 2020. The rally added more than $19 billion to Reliance's market value, taking it beyond Rs 17.54 lakh crore." },
+      { type: "list", items: [
+        "Mukesh Ambani's net worth: $88.8 billion, up about $8.5 billion (around 10.5%) in one day, per Forbes' Real-Time Billionaires list.",
+        "Zhang Yiming's net worth: $84 billion, putting the ByteDance co-founder second in Asia on the same list.",
+        "Global ranks: Ambani 23rd, Zhang 25th, and Adani Group chairman Gautam Adani 26th with $80.1 billion.",
+        "Reliance share move: up 11.64% to Rs 1,299 on the BSE on November 2, 2026, its best session in over six years.",
+        "Market value added: more than $19 billion in one day, taking Reliance beyond Rs 17.54 lakh crore."
+      ] },
+      { type: "p", text: "Remember what these numbers are, and what they are not. Forbes calculates real-time wealth from the market value of listed holdings, plus estimates of other assets. So $88.8 billion is an estimate, not cash in a bank account, and it moves with every trading session. A fall in the share price can flip the ranking back just as quickly." },
+      { type: "h2", text: "Why Reliance Shares Jumped Nearly 12% in a Day" },
+      { type: "p", text: "The rally followed Reliance's strong July-September results, which beat expectations. The Economic Times reported a 40.6% rise in profit attributable to shareholders to Rs 25,548 crore, helped by stronger refining margins. Oil-to-chemicals was the standout, while Jio Platforms reported nearly 14% quarterly profit growth." },
+      { type: "p", text: "A second tailwind came from Jio Platforms' debut. The telecom arm listed on October 28, 2026, with shares surging 27% on day one. Its $3.2 billion offering was India's largest ever, valuing the business at roughly $106 billion, with Reliance holding around 66%. Jio is India's largest carrier, with over 533 million subscribers as of June." },
+      { type: "p", text: "Brokerages turned more positive too. Avendus Spark upgraded Reliance from 'Reduce' to 'Add', leaving it with no 'Hold' or 'Sell' analyst recommendations for the first time since 2017, per Bloomberg. Goldman Sachs and Nomura kept buy ratings. Even after the rally, the stock was nearly 19% below its 52-week high of Rs 1,611.20." },
+      { type: "h2", text: "Forbes vs Bloomberg: Why Asia's Richest Title Depends on the List" },
+      { type: "p", text: "Other lists may show different names at the top, and that is not a mistake. Trackers use different methods, dates and estimates for private firms such as ByteDance, whose value must be estimated, not read off a stock price. Forbes put Ambani on top after Monday's rally, but Bloomberg had Gautam Adani leading Asia as of October 29, 2026, at about $110 billion, with Ambani third at $77.3 billion. Read the headline precisely: on Forbes' list, Mukesh Ambani is Asia's richest person." },
+      { type: "h2", text: "Who Are Asia's Richest People Now?" },
+      { type: "list", items: [
+        "Mukesh Ambani (Reliance Industries, India): about $88.8 billion, ranked 23rd in the world.",
+        "Zhang Yiming (ByteDance, China): about $84 billion, ranked 25th in the world. He co-founded ByteDance, the parent company of TikTok.",
+        "Gautam Adani (Adani Group, India): about $80.1 billion, ranked 26th in the world."
+      ] },
+      { type: "p", text: "The gap between first and second, about $4.8 billion, is narrow in billionaire-ranking terms. One weak Reliance session, or a higher ByteDance valuation, could close it." },
+      { type: "h2", text: "How to Check the Forbes Real-Time Billionaires List Yourself" },
+      { type: "p", text: "The Forbes list updates through the trading day, so you can check the latest figure yourself:" },
+      { type: "steps", items: [
+        "Open the Forbes Real-Time Billionaires list on the Forbes website.",
+        "Find Mukesh Ambani's entry and note the net worth figure and when it was last updated.",
+        "Compare it with Zhang Yiming's and Gautam Adani's entries on the same page, so all three are from the same moment.",
+        "Check whether the ranking changed after the latest market close, since prices move the estimate every session.",
+        "Remember the figure is an estimate from share prices and asset valuations, not a bank balance."
+      ] },
+      { type: "p", text: "This article is not investment advice. A one-day rally does not by itself make a stock a good or bad investment, and these figures will already have moved by the time you read this." },
+      { type: "h2", text: "What to Watch Next for Mukesh Ambani and Reliance" },
+      { type: "p", text: "Three things will decide whether Ambani holds the top spot: whether Reliance shares hold Monday's gains, whether retail profitability improves, and whether investors get more clarity on new energy returns. For now, the story is simple: a strong quarter, a blockbuster Jio listing and a historic rally put Mukesh Ambani back on top." },
+      { type: "h2", text: "Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "Who is Asia's richest person now?", a: "On Forbes' Real-Time Billionaires list, Mukesh Ambani is Asia's richest person, with a net worth of $88.8 billion after Reliance shares surged on November 2, 2026." },
+        { q: "What is Mukesh Ambani's net worth in 2026?", a: "Forbes' list put it at $88.8 billion, up about $8.5 billion in a day, after Reliance shares jumped nearly 12%." },
+        { q: "Who did Mukesh Ambani overtake to become Asia's richest person?", a: "He overtook ByteDance co-founder Zhang Yiming, whose fortune is $84 billion on the same list, placing Zhang second in Asia and 25th in the world." },
+        { q: "Why did Reliance shares rise nearly 12%?", a: "Strong July-September results, including a 40.6% rise in profit attributable to shareholders to Rs 25,548 crore, plus momentum from Jio Platforms' debut on October 28, 2026." },
+        { q: "Do Forbes and Bloomberg agree on Asia's richest person?", a: "Not always. Forbes put Ambani on top after the November 2 rally, while Bloomberg had Gautam Adani leading Asia as of October 29, 2026." }
+      ] }
+    ]
+},
+{
     slug: "democrats-win-us-senate-2026-midterms-senate-control-flips",
     image: "https://www.ey.com/adobe/dynamicmedia/deliver/dm-aid--e2c25154-8287-4f71-a42c-1a55a682440c/ey-united-states-capitol-building.jpg?preferwebp=true&quality=85&width=900",
     imageAlt: "The United States Capitol building in Washington DC, home of the US Congress",
