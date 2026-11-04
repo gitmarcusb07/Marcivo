@@ -33,6 +33,55 @@
 
 export const posts = [
 {
+    slug: "sharad-pawar-hospitalised-again-breach-candy-hospital-november-4-2026",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/e4/The_Union_Minister_of_Consumer_Affairs%2C_Food_and_Public_Distribution_and_Agriculture%2C_Shri_Sharad_Pawar_presenting_Efficiency_Award_to_the_Nira_Bhima_Sahakari_Sakhar_Karkhana_Ltd._Shahajinagar%2C_Pune%2C_Maharashtra.jpg",
+    imageAlt: "Sharad Pawar at a public event (file photo)",
+    title: "Sharad Pawar Hospitalised Again Hours After Discharge, Admitted to Mumbai's Breach Candy Hospital",
+    description:
+      "Sharad Pawar hospitalised again: the NCP (SP) chief was admitted to Mumbai's Breach Candy Hospital on November 4, hours after his Pune discharge.",
+    excerpt:
+      "Sharad Pawar was admitted to Mumbai's Breach Candy Hospital on November 4, 2026, hours after being discharged from Pune's Ruby Hall Clinic, for further tests.",
+    date: "2026-11-04",
+    category: "Politics",
+    sections: [
+      { type: "p", text: "Sharad Pawar hospitalised again: Nationalist Congress Party (Sharadchandra Pawar) chief Sharad Pawar was admitted to Mumbai's Breach Candy Hospital on the evening of November 4, 2026, just hours after he was discharged from Pune's Ruby Hall Clinic earlier the same day. His daughter and Baramati MP Supriya Sule shared the update on X, writing, \"We are admitting Baba to Breach Candy Hospital for further tests. Thank you all for your concern and good wishes.\"" },
+      { type: "h2", text: "Sharad Pawar Hospitalised: What Happened on November 4, 2026" },
+      { type: "p", text: "The 85-year-old veteran leader had been admitted to Ruby Hall Clinic in Pune on November 2, 2026, after complaining of a cough and pleuritic pain, a type of chest pain that typically worsens while breathing, coughing or sneezing. He had recently toured drought-hit parts of Maharashtra shortly before he was hospitalised. Doctors at Ruby Hall said his condition was stable, the pain had subsided, and he was doing well, with a discharge tentatively planned for Wednesday." },
+      { type: "p", text: "Pawar was discharged from the Pune hospital on the morning of November 4. According to UNI, his medical team had advised a series of follow-up examinations after his discharge, and within hours he was admitted to Breach Candy Hospital in Mumbai for those further tests. Reports on the evening of November 4 stressed that the admission was for further evaluation, and Sule had earlier said that all of her father's health parameters were stable." },
+      { type: "h2", text: "Sharad Pawar Health Update: What Doctors Have Said" },
+      { type: "p", text: "Dr Purvez K Grant, chief cardiologist and chairman and managing trustee of Ruby Hall Clinic, had said Pawar was admitted for a general check-up and medical observation following complaints of pleuritic pain. In an official statement on November 3, Dr Grant said the team of doctors attending to Pawar had reviewed his health condition, that his condition was stable and the pain had subsided, and that he was doing well." },
+      { type: "p", text: "That stable assessment is an important part of the story. Nothing in the reports published on the evening of November 4 describes a medical emergency or a deterioration. The stated reason for the Breach Candy admission is further tests and follow-up examinations after the Pune discharge, not a new emergency. Readers should be cautious about social media posts that go beyond what Sule, the doctors and the news agencies have actually said." },
+      { type: "h2", text: "Sharad Pawar Hospitalised: PM Modi's Phone Call Earlier in the Day" },
+      { type: "p", text: "Earlier on November 4, Prime Minister Narendra Modi telephoned Pawar to enquire about his health following his discharge from Ruby Hall Clinic, according to Pawar's close aide Vitthal Maniyar. Maniyar told reporters that the Prime Minister spoke with great affection and respect, advised the veteran leader to take complete rest, and told him that Supriya Sule was now ready and that she and others would take care of the country while Pawar rested." },
+      { type: "p", text: "According to the same account, Pawar told the Prime Minister that he was taking rest and had no worry about the country, as all of them were there to take care of things, and thanked Modi for his concern. It is worth noting that neither Pawar nor the Prime Minister has personally confirmed the details of the conversation, which were shared publicly by the aide." },
+      { type: "h2", text: "Sharad Pawar: A Brief Look at the Veteran Leader" },
+      { type: "p", text: "Sharad Pawar, born on December 12, 1940, in Baramati in Pune district, is one of Maharashtra's most experienced political figures, with a public career spanning more than five decades. He has served as Maharashtra's chief minister and as a Union minister, including as agriculture minister, and he founded the Nationalist Congress Party in 1999 after separating from the Indian National Congress. He currently leads the NCP (SP) faction and is a Rajya Sabha member." },
+      { type: "p", text: "Pawar's health has drawn public attention before, and his party and family have typically shared updates through official statements and family posts. In this episode, the family has kept the updates short and factual: an admission in Pune for cough and chest pain, a stable condition, a discharge, and now a fresh admission in Mumbai for further tests." },
+      { type: "h2", text: "Sharad Pawar Hospitalised: What to Watch Next" },
+      { type: "list", items: [
+        "The next official update from Supriya Sule or the Pawar family on the Breach Candy tests and how long the stay will last.",
+        "Any statement from Breach Candy Hospital on the veteran leader's condition and the planned course of tests.",
+        "Whether Pawar's scheduled public programmes remain on hold while he rests, as his aide indicated he needs rest after treatment.",
+        "Reactions from Maharashtra and national leaders, several of whom have already wished him well publicly."
+      ] },
+      { type: "h2", text: "Sharad Pawar Hospitalised: How to Avoid Health Rumours" },
+      { type: "steps", items: [
+        "Rely on updates from Supriya Sule, the treating hospitals, or established news agencies rather than forwarded messages and viral clips.",
+        "Treat any claim about a diagnosis, procedure or discharge date as unverified unless it comes from the family or the hospital.",
+        "Remember that a re-admission for further tests is not, by itself, evidence of a worsening condition; the family has said his parameters are stable."
+      ] },
+      { type: "h2", text: "Sharad Pawar Hospitalised: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "Why was Sharad Pawar hospitalised again on November 4, 2026?", a: "He was admitted to Mumbai's Breach Candy Hospital for further tests, hours after being discharged from Pune's Ruby Hall Clinic on the same day, according to his daughter Supriya Sule." },
+        { q: "Why was Sharad Pawar admitted to Ruby Hall Clinic in Pune?", a: "He was admitted on November 2, 2026, after a bout of cough and pleuritic chest pain, and was kept under general observation and medical tests." },
+        { q: "Is Sharad Pawar's condition stable?", a: "His daughter said earlier that all his health parameters were stable, and his Pune doctors said his condition was stable and the pain had subsided before discharge. No report on November 4 evening described an emergency." },
+        { q: "What did PM Modi say to Sharad Pawar?", a: "According to Pawar's aide Vitthal Maniyar, PM Modi called on November 4 morning to enquire about his health, urged him to take complete rest, and said Supriya Sule and others would take care of the country. Neither leader has personally confirmed the details." },
+        { q: "Where is Sharad Pawar being treated now?", a: "At Breach Candy Hospital in Mumbai, where he was admitted on the evening of November 4, 2026, for further tests after his discharge from Ruby Hall Clinic, Pune." },
+        { q: "How old is Sharad Pawar?", a: "Sharad Pawar is 85 years old. He was born on December 12, 1940, in Baramati, Pune district, Maharashtra." }
+      ] }
+    ]
+  },
+{
     slug: "munna-bhai-3-farhad-samji-script-rajkumar-hirani-2027-shoot",
     image: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Sanjay_Dutt_at_the_Lavasa_Women%27s_Drive.jpg",
     imageAlt: "Sanjay Dutt, who plays Munna Bhai, at a public event",
