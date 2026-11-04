@@ -33,6 +33,91 @@
 
 export const posts = [
 {
+    slug: "democrats-win-us-senate-2026-midterms-senate-control-flips",
+    image: "https://www.ey.com/adobe/dynamicmedia/deliver/dm-aid--e2c25154-8287-4f71-a42c-1a55a682440c/ey-united-states-capitol-building.jpg?preferwebp=true&quality=85&width=900",
+    imageAlt: "The United States Capitol building in Washington DC, home of the US Congress",
+    title: "Democrats Win US Senate 2026: Senate Control Flips in Midterm Blue Wave",
+    description:
+      "Democrats win US Senate 2026: six Republican seats flip, including Texas, Ohio, Kansas and Iowa, giving Democrats control of Congress alongside the House.",
+    excerpt:
+      "Democrats are projected to win control of the US Senate in the 2026 midterms, flipping six Republican seats and completing a sweep of Congress.",
+    date: "2026-11-04",
+    category: "News",
+    sections: [
+      { type: "p", text: "Democrats win US Senate 2026, according to projections reported on Wednesday, November 4, 2026, completing a sweep of Congress after Democrats had already been projected to win the House. The Senate result is a major new development from the morning's earlier midterm update, which had left Senate control undecided: by mid-morning in India, results showed Democrats flipping Republican-held seats in North Carolina, South Carolina, Texas, Ohio, Kansas and Iowa. That is six net gains, more than the four Democrats needed to overturn the Republicans' 53-47 Senate majority. The result is a projection based on counted votes and media calls, not a final certified count, and individual races remain subject to official canvassing and certification." },
+      { type: "h2", text: "Democrats Win US Senate 2026: The Six Flips That Changed Control" },
+      { type: "p", text: "The path to a Democratic Senate majority ran through some of the most Republican-leaning states in the country, which is why the result is being described as a blue wave. Each flip below was reported by major outlets or live results coverage on November 4, and together they add up to the majority." },
+      { type: "list", items: [
+        "North Carolina: Democrat Roy Cooper defeated Republican Michael Whatley, flipping a Republican-held seat and giving Democrats their first gain of the night.",
+        "South Carolina: Democrat Annie Andrews defeated Republican Darline Graham, the party's first Senate win in South Carolina since 1998.",
+        "Texas: Democrat James Talarico defeated Republican Attorney General Ken Paxton, becoming the first Democrat to win a statewide election in Texas since 1988.",
+        "Ohio: Democrat Sherrod Brown defeated Republican Senator Jon Husted, returning a former senator to the chamber.",
+        "Kansas: Democrat Adam Hamilton defeated Republican Senator Roger Marshall, a seat that had not been expected to change hands.",
+        "Iowa: Democrat Josh Turek defeated Republican Ashley Hinson, flipping the open seat left by retiring Republican Senator Joni Ernst and, according to live results coverage, becoming the Democrats' sixth Senate flip."
+      ] },
+      { type: "p", text: "In Iowa, the Associated Press called the race for Turek, a two-time Paralympic gold medallist and Iowa state legislator, who led Hinson by about 4.5 percentage points in the AP count. Democrats had not won a Senate seat in Iowa since 2008, and President Donald Trump had carried the state in three straight presidential elections, which underlines how far the night moved against Republicans." },
+      { type: "h2", text: "Democrats Win US Senate 2026: What Senate Control Actually Means" },
+      { type: "p", text: "Winning the Senate matters differently from winning the House. The House passes spending bills and can investigate the administration, but the Senate alone confirms federal judges and senior executive officials, and it sets the terms for what legislation can even reach a vote. With both chambers, Democrats can block new Republican legislation outright, shape the confirmation process for judges and officials, and launch coordinated oversight of the Trump administration in the final two years of his presidency. Without the White House, however, Democrats still cannot pass their own laws over a presidential veto, so the likeliest outcome is gridlock rather than a new legislative programme." },
+      { type: "h2", text: "Democrats Win US Senate 2026: Trump Responds, and Accepts the Result" },
+      { type: "p", text: "President Donald Trump responded to the Democratic rout on his Truth Social platform, writing: 'I wasn't on the Ballot and if I was, we would have won IN A LANDSLIDE!' He had campaigned hard for many of the losing Republican candidates, urging voters at rallies to treat the midterms as a referendum on his presidency, and he had endorsed losing candidates including Paxton in Texas and Graham in South Carolina. In a separate interview with The New York Times, Trump said he was willing to accept the midterm results and prepared to work with Democrats, saying: 'We'll work with the Democrats, and we'll, you know, look forward to working with them. We'll probably work something out.'" },
+      { type: "p", text: "The governor races told the same story of a Democratic wave. Democrat Gina Hinojosa defeated Texas Governor Greg Abbott, becoming the state's first Democratic governor since 1992, Democrat Rob Sand won the Iowa governor's race, Democrat Amy Acton defeated Vivek Ramaswamy in Ohio, and Democrat Keisha Lance Bottoms won in Georgia, becoming the first Black woman ever elected governor in the United States. Those results are projections, like the Senate calls, and they reinforce that the night was a broad rejection of the Republican Party rather than a single-state upset." },
+      { type: "h2", text: "What Happens Next After Democrats Win US Senate 2026" },
+      { type: "steps", items: [
+        "Certification: state canvasses will certify each Senate result, and close races could still face recounts before the winners are formally seated.",
+        "New Congress: the new Senate will convene in January 2027, when the Democratic majority will organise committees and set the chamber's agenda.",
+        "Confirmations: expect confirmation fights over judges and senior officials to become the Senate's most consequential work, since Democrats can now block or slow nominees.",
+        "Final seat counts: the size of the Democratic majority in both chambers will only be clear once every House and Senate race is called."
+      ] },
+      { type: "h2", text: "Democrats Win US Senate 2026: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "Did Democrats win the US Senate in 2026?", a: "Democrats are projected to win control of the Senate, flipping six Republican seats including Texas, Ohio, Kansas and Iowa. The result is a projection, not a final certified count." },
+        { q: "Which Senate seats did Democrats flip?", a: "North Carolina, South Carolina, Texas, Ohio, Kansas and Iowa, won by Roy Cooper, Annie Andrews, James Talarico, Sherrod Brown, Adam Hamilton and Josh Turek respectively." },
+        { q: "How many seats did Democrats need to win the Senate?", a: "Democrats needed a net gain of four seats to overturn the Republicans' 53-47 majority, and projections show them gaining six." },
+        { q: "Did Democrats also win the House?", a: "Yes, Democrats were projected earlier to win control of the House of Representatives, so the party is projected to control both chambers of Congress." },
+        { q: "What did Trump say about the midterm results?", a: "Trump wrote on Truth Social that Republicans would have won in a landslide had he been on the ballot, and told The New York Times he was willing to accept the results and work with Democrats." }
+      ] }
+    ],
+  },
+{
+    slug: "prashant-bhushan-fir-doctored-lavrov-video-delhi-police",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/c0/Delhi_police_headquarters.JPG",
+    imageAlt: "Delhi Police headquarters building",
+    title: "Prashant Bhushan FIR: Delhi Police Book Lawyer Over Doctored Lavrov Video",
+    description:
+      "Prashant Bhushan FIR: Delhi Police register a case over an allegedly doctored video of Russian minister Sergey Lavrov, after the MEA fact-checked it as fake.",
+    excerpt:
+      "Delhi Police have registered an FIR against advocate Prashant Bhushan over an allegedly doctored video of Russian Foreign Minister Sergey Lavrov.",
+    date: "2026-11-04",
+    category: "News",
+    sections: [
+      { type: "p", text: "Prashant Bhushan FIR is the top breaking story in India on Wednesday, November 4, 2026: Delhi Police have registered a case against senior Supreme Court advocate Prashant Bhushan for allegedly sharing a digitally manipulated video of Russian Foreign Minister Sergey Lavrov. The case was registered by the Special Cell of Delhi Police after cyber patrolling on November 3 flagged a post claiming that a doctored video of Lavrov had been shared from Bhushan's social media handle. Police say the video falsely showed Lavrov making remarks critical of India over its internal affairs and its purchases of Russian oil, and the Ministry of External Affairs has already fact-checked the clip as fake. An FIR is an allegation under investigation, not a court finding, and Bhushan has not been convicted of any offence in this case." },
+      { type: "h2", text: "Prashant Bhushan FIR: What Delhi Police Have Registered" },
+      { type: "p", text: "According to Delhi Police, FIR No. 263/26 has been registered at the Special Cell police station under Sections 336(4) for forgery, 353(1)(c) for public mischief, 356 for defamation and 340(2) of the Bharatiya Nyaya Sanhita, along with Section 66C of the Information Technology Act, which deals with identity theft. Police say the matter came to light during cyber patrolling on November 3, when officers came across a social media post by the handle @thequotesnews claiming that a purported doctored video of the Russian foreign minister, hostile to India, had been shared from Bhushan's handle @pbhushan1." },
+      { type: "p", text: "The police statement, quoted by multiple news outlets, says the video shared from Bhushan's account was misleading and inflammatory, and could spread false rumours, defame individuals and disturb public order. Bhushan had reportedly shared the clip with a caption describing it as a 'tight slap' against the Indian government, according to Mathrubhumi's report. The FIR does not by itself prove that Bhushan created the video; the allegation as reported is that he shared or circulated a manipulated clip, and the investigation will now have to establish the video's origin, how it was altered, and who posted it first." },
+      { type: "h2", text: "Prashant Bhushan FIR: Why the MEA and Russia Called the Video Fake" },
+      { type: "p", text: "The case follows a swift official rebuttal. The Ministry of External Affairs' fact-check unit posted on X: 'Fake Alert!!! The video of the Russian Foreign Minister being used in this post is fake!' The Russian Embassy in New Delhi also rejected the remarks attributed to Lavrov, confirming that both the audio track and the sub-captions in the clip were completely fabricated. The fabricated clip purportedly showed Lavrov criticising India's domestic affairs and its oil purchases, two subjects that are politically sensitive in India-Russia relations." },
+      { type: "p", text: "The timing adds to the sensitivity. External Affairs Minister S. Jaishankar met Lavrov on the sidelines of the G20 Foreign Ministers' Meeting in Atlanta in the United States on October 31, just days before the doctored clip circulated. India is one of the largest buyers of Russian oil, and Western pressure over those purchases has been a recurring diplomatic issue, which is exactly why a fake clip of the Russian foreign minister criticising India over oil could spread so quickly and cause real diplomatic confusion if left uncorrected." },
+      { type: "h2", text: "Prashant Bhushan FIR: The Deepfake Problem Behind the Case" },
+      { type: "p", text: "This case is about more than one post. Doctored videos of public figures, often made with artificial intelligence tools that can clone voices and faces, are becoming harder for ordinary viewers to spot, and they spread fastest when they confirm what viewers already believe about a political opponent or a foreign government. Fact-checking can debunk a clip, but reposts may already have travelled far beyond the original post." },
+      { type: "p", text: "The legal questions here are also important and unsettled. Sharing a manipulated video is not the same as creating one, and Indian law is still developing clear rules for when resharing misinformation becomes a criminal offence rather than a matter for platform moderation or civil defamation. Bhushan is a prominent public-interest lawyer, so the case is being watched as a test of how the new criminal codes are applied to online speech by critics of the government. None of that changes the basic fact at the centre of the case: the MEA and the Russian Embassy agree the Lavrov clip itself was fabricated." },
+      { type: "h2", text: "What Happens Next in the Prashant Bhushan FIR Case" },
+      { type: "steps", items: [
+        "Investigation: Delhi Police Special Cell will investigate the video's origin, its manipulation, and the chain of accounts that shared it.",
+        "Bhushan's response: the advocate will have the opportunity to respond to the allegations, and any statement he makes will be a key part of the story as it develops.",
+        "Court process: if police file a chargesheet, a court will decide whether the charges stand; an FIR alone is not a conviction.",
+        "Platform action: social media platforms may be asked to take down the doctored clip and limit its further circulation."
+      ] },
+      { type: "h2", text: "Prashant Bhushan FIR: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "Why has an FIR been filed against Prashant Bhushan?", a: "Delhi Police say Bhushan allegedly shared a doctored video of Russian Foreign Minister Sergey Lavrov that falsely showed him criticising India. The FIR is under investigation and is not a court conviction." },
+        { q: "What are the charges in the Prashant Bhushan FIR?", a: "FIR No. 263/26 cites Sections 336(4), 353(1)(c), 356 and 340(2) of the Bharatiya Nyaya Sanhita, along with Section 66C of the Information Technology Act." },
+        { q: "Was the Lavrov video real?", a: "No. The Ministry of External Affairs fact-check unit declared the video fake, and the Russian Embassy confirmed the audio and sub-captions were fabricated." },
+        { q: "What did the doctored video claim?", a: "It purportedly showed Lavrov making remarks critical of India's internal affairs and its purchases of Russian oil, which neither he nor the Russian government actually said." },
+        { q: "Does an FIR mean Prashant Bhushan is guilty?", a: "No. An FIR only records an allegation and starts an investigation. Guilt is decided by a court after charges are framed and evidence is heard." }
+      ] }
+    ],
+  },
+{
     slug: "us-midterm-elections-2026-results-democrats-win-house-senate-undecided",
     image: "https://www.ey.com/adobe/dynamicmedia/deliver/dm-aid--e2c25154-8287-4f71-a42c-1a55a682440c/ey-united-states-capitol-building.jpg?preferwebp=true&quality=85&width=900",
     imageAlt: "The United States Capitol building in Washington DC, home of the US Congress",
@@ -81,7 +166,7 @@ export const posts = [
         { q: "When will the final midterm results be known?", a: "The House winner is projected, but final seat counts and some close Senate and governor races may take days or weeks to confirm." }
       ] }
     ],
-  }
+  },
 {
     slug: "ramayana-part-2-postponed-2028-namit-malhotra-confirms-november-4-2026",
     image: "https://images.filmibeat.com/ph-big/2026/10/ramayana-the-introduction-movie-20261793360080_7.jpg",
@@ -123,7 +208,7 @@ export const posts = [
         { q: "Is Ramayana Part 3 confirmed?", a: "No. A third film has only been discussed as a possibility by Ranbir Kapoor and Namit Malhotra. No third part has been confirmed." }
       ] }
     ],
-  }
+  },
 {
     slug: "salman-khan-teri-sexy-beauty-song-maatrubhumi-november-4-2026",
     image: "https://i.ytimg.com/vi/kE7jAjtw3zU/maxresdefault.jpg",
@@ -174,7 +259,7 @@ export const posts = [
         { q: "Is Maatrubhumi releasing on November 13?", a: "November 13 has been mentioned as a possible date, but the makers have not officially confirmed the film's release date yet." }
       ] }
     ],
-  }
+  },
 {
     slug: "glenn-maxwell-retirement-international-cricket-australia-november-3-2026",
     image: "https://img1.hscicdn.com/image/upload/f_auto/lsci/db/PICTURES/CMS/375800/375831.6.jpg",
