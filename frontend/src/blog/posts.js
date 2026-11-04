@@ -33,6 +33,57 @@
 
 export const posts = [
 {
+    slug: "glenn-maxwell-retirement-international-cricket-australia-november-3-2026",
+    image: "https://img1.hscicdn.com/image/upload/f_auto/lsci/db/PICTURES/CMS/375800/375831.6.jpg",
+    imageAlt: "Glenn Maxwell batting for Australia in the green and gold kit",
+    title: "Glenn Maxwell Retirement: Australia's 'Big Show' Ends 14-Year International Career",
+    description:
+      "Glenn Maxwell retirement: Australia's Big Show ended his 14-year international career on November 3, 2026, after 286 matches and three World Cup titles.",
+    excerpt:
+      "Glenn Maxwell announced his retirement from international cricket on November 3, 2026, closing a 14-year Australia career that brought 286 matches, 7,226 runs, 136 wickets and three World Cup titles.",
+    date: "2026-11-04",
+    category: "Sports",
+    sections: [
+      { type: "p", text: "Glenn Maxwell retirement is now official. Australia's explosive all-rounder, known as the Big Show, announced on Tuesday, November 3, 2026 that he is retiring from international cricket, ending a 14-year career. Maxwell made the announcement on The Final Word podcast, saying it was a little bit sad and a little bit inevitable too." },
+      { type: "p", text: "Here is the simple answer for fans: Glenn Maxwell will no longer play for Australia in Tests, one-day internationals or Twenty20 internationals. He has also retired from first-class and 50-over domestic cricket for Victoria. He has not retired from cricket altogether, and he is expected to keep playing franchise Twenty20 cricket, including in the Big Bash League." },
+      { type: "h2", text: "Why Glenn Maxwell Retired Now" },
+      { type: "p", text: "The timing is easy to understand. Maxwell had not been picked for Australia since the T20 World Cup in Sri Lanka in February 2026, when his final international appearance came against Oman. Selectors bypassed him for a series against Bangladesh in June, and on Monday, November 2, 2026, he was again left out of the squad named to play England in November." },
+      { type: "p", text: "Maxwell admitted he had held a small hope of a farewell game at his home ground, the Melbourne Cricket Ground, in that England series. Once the squad was announced without him, that hope was gone. He stressed there was no falling-out with team management, saying there had been numerous open-ended discussions before and after the T20 World Cup, and no pressure from Australia's management." },
+      { type: "p", text: "That future focus runs through his explanation. He pointed to the next 12 to 24 months, and to the Olympic Games coming up in 2028, saying selectors needed to expose young players to international pressure. At 38, with Australia rebuilding around youth, Maxwell chose to decide himself rather than wait for another omission." },
+      { type: "h2", text: "Glenn Maxwell Career Stats: The Numbers Behind the Big Show" },
+      { type: "p", text: "Glenn Maxwell's career stats show a player whose value was never captured by averages alone. He played 286 international matches for Australia, scoring 7,226 runs and taking 136 wickets across all three formats. His strike rates explain why captains kept picking him: he scored at a pace that could change a match in a handful of overs." },
+      { type: "list", items: [
+        "Tests: 7 matches, 339 runs, with his last Test coming back in 2017.",
+        "ODIs: 149 matches, 3,990 runs at a strike rate of 126.7, with four centuries and 23 fifties.",
+        "T20Is: 130 matches, 2,897 runs at a strike rate of 154.42, Australia's third-highest T20I total behind David Warner and Aaron Finch.",
+        "T20I centuries: five, a record he shares with former India captain Rohit Sharma.",
+        "Wickets: 136 across all formats, including 128 in the two shorter formats.",
+        "Highest scores: an unbeaten 201 in ODI cricket and an unbeaten 145 in T20I cricket."
+      ] },
+      { type: "h2", text: "Three World Cups and the Moments That Defined Him" },
+      { type: "p", text: "Maxwell leaves as a three-time World Cup winner, the simplest measure of his place in Australian cricket history. He was part of the side that won the ODI World Cup at home in 2015, the side that lifted the T20 World Cup in 2021, and the side that won the ODI World Cup again in 2023. He earned his place in all three with more than batting: stunning catches, run-outs and key spells of off-spin." },
+      { type: "p", text: "His batting is what fans will remember first. Maxwell could hit behind the wicket on both sides, switch-hit against spin, and clear the boundary straight down the ground. His fifth T20I century, off just 55 balls against the West Indies at Adelaide Oval in February 2024, took him to the joint world record of five T20I hundreds." },
+      { type: "h2", text: "What Glenn Maxwell Retirement Means for Australia" },
+      { type: "p", text: "In the short term, Australia loses a proven match-winner and a uniquely flexible cricketer. Maxwell could bat anywhere from opener to finisher, bowl useful off-spin in the middle overs, and field at an elite standard anywhere on the ground. Replacing all three roles will take more than one youngster. For supporters, the side will look noticeably different from the 2023 World Cup winners, and the England series in November will be the first test of the new-look team without him." },
+      { type: "h2", text: "What Happens Next for Glenn Maxwell" },
+      { type: "p", text: "Maxwell will continue to play franchise Twenty20 cricket, including in the Big Bash League, where his power-hitting and fielding remain box-office attractions. Fans will still get to watch him, just in a different shirt rather than in Australian colours. He said he was grateful for the time he was able to play for his country." },
+      { type: "h2", text: "How to Keep Following Maxwell and Australia's New-Look Side" },
+      { type: "steps", items: [
+        "Watch Australia's T20 series against England in November 2026 to see the younger players get their chance.",
+        "Follow the Big Bash League season for Maxwell's franchise Twenty20 appearances after his international retirement.",
+        "Watch Australia's white-ball squad announcements ahead of the 2028 Olympic cycle for the next generation."
+      ] },
+      { type: "h2", text: "Glenn Maxwell Retirement: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "Why did Glenn Maxwell retire from international cricket?", a: "He announced it on November 3, 2026, after being left out of Australia's T20 squad to play England. He had not played since the T20 World Cup in February 2026, and called the decision a little bit sad and a little bit inevitable." },
+        { q: "Has Glenn Maxwell retired from all cricket?", a: "No. He has retired from international cricket and from first-class and 50-over domestic cricket for Victoria, but he will continue in franchise Twenty20 cricket, including the Big Bash League." },
+        { q: "What are Glenn Maxwell's career stats?", a: "He played 286 internationals: 7 Tests, 149 ODIs and 130 T20Is, scoring 7,226 runs and taking 136 wickets, with 10 centuries, including five T20I centuries, a joint world record shared with Rohit Sharma." },
+        { q: "How many World Cups did Glenn Maxwell win?", a: "Three: the ODI World Cup with Australia in 2015 and 2023, and the T20 World Cup in 2021." },
+        { q: "When was Glenn Maxwell's last match for Australia?", a: "His final international appearance came against Oman at the T20 World Cup in Sri Lanka in February 2026. He had already retired from ODI cricket in June 2025, so the Oman game was his last T20I." }
+      ] }
+    ],
+  },
+{
     slug: "gta-6-preload-november-10-212gb-file-size-rockstar-november-3-2026",
     image: "https://www.gamespot.com/wp-content/uploads/2026/07/Screenshot-2026-07-10-at-11.40.32-AM.png?w=1024",
     imageAlt: "A scene from Grand Theft Auto VI in Leonida (GameSpot screenshot of Rockstar Games footage)",
