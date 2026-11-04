@@ -33,6 +33,85 @@
 
 export const posts = [
 {
+    slug: "india-vs-new-zealand-1st-odi-result-kohli-74-auckland-november-2026",
+    image: "https://resize.indiatv.in/resize/1200_-/2025/10/virat-kohli-17-1761449184.jpg",
+    imageAlt: "Virat Kohli batting for India in an ODI match",
+    title: "India vs New Zealand 1st ODI Result: Kohli's 74 Powers India to Five-Wicket Win at Eden Park",
+    description:
+      "India vs New Zealand 1st ODI result: Virat Kohli's 74 off 51 balls and a four-wicket haul from Arshdeep Singh give India a five-wicket DLS win at Eden Park.",
+    excerpt:
+      "India beat New Zealand by five wickets under the DLS method in the first ODI at Eden Park, Auckland, to take a 1-0 lead in the five-match series.",
+    date: "2026-11-04",
+    category: "Sports",
+    sections: [
+      { type: "p", text: "India vs New Zealand 1st ODI result: India have beaten New Zealand by five wickets under the Duckworth-Lewis-Stern (DLS) method in the first ODI of the five-match series at Eden Park, Auckland, on Wednesday, November 4, 2026. Chasing a rain-revised target of 143 in 32 overs, India reached 143 for 5 in just 22.4 overs, with 56 balls to spare, to take a 1-0 series lead. Virat Kohli was the star of the chase with 74 off 51 balls, while Arshdeep Singh led the bowling with four wickets as New Zealand were bowled out for 185 in 40.2 overs. The result continues India's winning run on this tour, after the visitors had already won the T20I series 3-2." },
+      { type: "h2", text: "India vs New Zealand 1st ODI Result: How India Won at Eden Park" },
+      { type: "p", text: "India captain Shubman Gill won the toss and chose to field first, and his bowlers justified the call on a pitch offering bounce and seam movement. New Zealand never got going against a second-string Indian pace attack: Arshdeep Singh took 4 for 70 from his 10 overs, Gurnoor Brar claimed 3 for 44, and Anshul Kamboj was outstandingly economical with 2 for 22 from 10 overs. Only four New Zealand batters reached double figures, and the hosts were in deep trouble before a late cameo dragged them to a total that still looked well below par." },
+      { type: "p", text: "Tim Seifert top-scored for New Zealand with 38, while Daryl Mitchell made 28 and Glenn Phillips 30. The innings was rescued from total embarrassment by last man Blair Tickner, who smashed 34 off just 23 balls, including four sixes, in a 39-run final-wicket stand with Jacob Duffy. Even so, 185 all out in 40.2 overs left New Zealand well short, and rain then changed the shape of the match completely." },
+      { type: "h2", text: "India vs New Zealand 1st ODI Result: Rain, DLS and the Revised Target" },
+      { type: "p", text: "Rain had already delayed the start of play by 20 minutes, and it returned during India's chase, forcing a long interruption. When play resumed, the match had been reduced to 32 overs a side, and India were set a revised DLS target of 143. That left India needing 143 at a manageable rate. India reached the target with more than nine overs of their revised innings unused." },
+      { type: "h2", text: "India vs New Zealand 1st ODI Result: Kohli's 74 and the 113-Run Stand" },
+      { type: "p", text: "India lost Rohit Sharma early, in the first over of the chase, but that only brought Kohli to the crease sooner. A day short of his 38th birthday, Kohli played one of his most fluent ODI innings in recent times, reaching his fifty off 35 balls and finishing with 74 off 51 balls, including 13 fours and a six. It was his 80th half-century in ODI cricket,. Captain Shubman Gill played the supporting role perfectly, scoring a circumspect 37 off 56 balls, and the pair added 113 runs together to take the game away from New Zealand." },
+      { type: "p", text: "New Zealand did fight back late through Jacob Duffy, who took 3 for 49, including the wicket of Kohli, caught by Seifert after mistiming a pull shot. India lost a cluster of wickets for very few runs near the finish, which briefly gave the hosts hope, but the target was small enough that India still crossed the line in the 23rd over. The late wobble will be a footnote for Gill's team, but it is also a reminder that the middle order still has work to do when the senior batters fall in quick succession." },
+      { type: "h2", text: "India vs New Zealand 1st ODI Result: Kohli's Viral Slip Catch" },
+      { type: "p", text: "Kohli had already lit up the match before he batted, with a catch that went viral on social media during New Zealand's innings. Fielding at second slip, he dived low to his side and held a stunning one-handed catch to dismiss Nathan Smith for just 1, leaving New Zealand reeling further at a stage when their innings was already falling apart. Combined with the 74 that followed, it made Kohli the central figure of the series opener." },
+      { type: "h2", text: "What Happens Next in the India vs New Zealand ODI Series" },
+      { type: "steps", items: [
+        "Second ODI in Wellington: both teams now head to Wellington for the second match of the five-match series, played on Saturday, where New Zealand will look to level the series.",
+        "New Zealand's missing stars: the hosts were without Rachin Ravindra, Devon Conway and Mark Chapman at Eden Park, and their return, if fit, would strengthen a batting line-up that folded for 185.",
+        "India's bowling depth: with Arshdeep, Brar and Kamboj all impressing, India have shown they can win away from home even without their first-choice attack.",
+        "Kohli's form: a fluent 74, a day before his 38th birthday, is another reminder that Kohli remains India's most reliable chaser in white-ball cricket."
+      ] },
+      { type: "h2", text: "India vs New Zealand 1st ODI Result: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "What was the India vs New Zealand 1st ODI result?", a: "India won by five wickets under the DLS method at Eden Park, Auckland, on November 4, 2026, chasing a revised target of 143 in 32 overs and finishing on 143 for 5 in 22.4 overs." },
+        { q: "How many runs did Virat Kohli score in the 1st ODI?", a: "Virat Kohli scored 74 off 51 balls, including 13 fours and a six, reaching his fifty off 35 balls in what was his 80th ODI half-century." },
+        { q: "What did New Zealand score in the 1st ODI?", a: "New Zealand were bowled out for 185 in 40.2 overs. Tim Seifert top-scored with 38, while Blair Tickner smashed 34 off 23 balls at the end of the innings." },
+        { q: "Who took the most wickets for India?", a: "Arshdeep Singh took 4 for 70, while Gurnoor Brar claimed 3 for 44 and Anshul Kamboj took 2 for 22 from 10 overs." },
+        { q: "Why was India's target only 143?", a: "Rain interrupted India's chase, so the match was reduced to 32 overs a side and India's target was revised to 143 under the DLS method." }
+      ] }
+    ],
+  },
+{
+    slug: "agniveer-two-year-extension-second-tour-duty-cabinet-november-2026",
+    image: "https://www.ssbcrack.com/wp-content/uploads/2025/06/Agniveers-1536x1024.jpeg",
+    imageAlt: "Agniveers of the Indian Armed Forces during training",
+    title: "Agniveer Two-Year Extension: Cabinet Approves Second Tour of Duty for 75% of Agniveers",
+    description:
+      "Agniveer two-year extension: the Union Cabinet approves a Second Tour of Duty for the 75% of Agniveers due to exit after four years.",
+    excerpt:
+      "The Union Cabinet has approved a two-year Second Tour of Duty for Agniveers, creating a pathway for the 75% due to leave after four years to join the regular forces.",
+    date: "2026-11-04",
+    category: "News",
+    sections: [
+      { type: "p", text: "Agniveer two-year extension: the Union Cabinet on Wednesday, November 4, 2026, approved a major overhaul of the Agnipath scheme, offering a two-year Second Tour of Duty to the 75% of Agniveers who were due to leave the armed forces after completing their four-year tenure. The decision was announced by Chief of Defence Staff General N.S. Raja Subramani, who said the Cabinet had created a pathway for all Agniveers to be absorbed into the Indian Armed Forces. The move comes just as the first batch of Agniveers, recruited in 2022, is nearing the end of its four-year service, with around 18,000 personnel reported to be due to exit." },
+      { type: "h2", text: "Agniveer Two-Year Extension: What the Cabinet Has Approved" },
+      { type: "p", text: "Under the original Agnipath scheme, introduced by the Union Cabinet on June 14, 2022, Agniveers served for four years, after which only 25% were enrolled into the regular forces based on merit, while the remaining 75% returned to civilian life as disciplined and motivated youth. That structure has now changed in a significant way. The 25% merit-based enrolment continues as before, but the remaining 75% will now be offered an additional engagement period of two years, taking their total service from four years to six years." },
+      { type: "p", text: "After completing that two-year extension, Agniveers who are willing to continue will be offered the opportunity to enrol into the regular armed forces, subject to objective selection criteria. Announcing the decision, General Raja Subramani said: 'The Cabinet has created a pathway for all Agniveers to be absorbed into the Indian Armed Forces.' He added that performance evaluations over the four years had produced very positive feedback on the Agniveers, and that the scheme had always been intended to be reviewed periodically." },
+      { type: "h2", text: "Agniveer Two-Year Extension: What It Does Not Guarantee" },
+      { type: "p", text: "It is important to be clear about what this decision is and is not. The two-year extension is not an automatic permanent job for every Agniveer, and enrolment into the regular forces after the extension is not guaranteed. Final enrolment will depend on each Agniveer's willingness to continue and on meeting prescribed eligibility and objective selection criteria, which the government is yet to publish in full detail. Reports note that the detailed implementation rules, including service-wise arrangements and the exact selection process, will determine how the revised pathway applies to the first batch and to later cohorts." },
+      { type: "p", text: "That distinction matters because headlines describing the decision as full absorption can be misleading. What the Cabinet has approved is a pathway: two more years in uniform, followed by a genuine opportunity to apply for regular enrolment, rather than an exit after four years with no further route back in. For the thousands of Agniveers facing the end of their tenure in the coming weeks, that pathway is still a major change from the position they were in yesterday." },
+      { type: "h2", text: "Agniveer Two-Year Extension: Why the Decision Comes Now" },
+      { type: "p", text: "The timing is driven by the calendar. The first batch of approximately 24,400 Agniveers was inducted in 2022, and their four-year engagements are now approaching completion. The shorter engagement period had drawn criticism from the start, and several states, including Uttar Pradesh, Haryana and Maharashtra, had already announced reservations for Agniveers in police and other services to support those leaving after four years. The Cabinet decision, taken at a meeting chaired by Prime Minister Narendra Modi, is the Centre's own answer to that criticism: keep trained personnel in uniform longer, and give them a structured route into the regular forces." },
+      { type: "p", text: "The scheme was introduced to keep the armed forces' profile youthful and dynamic while giving young people an opportunity to serve the country and contribute to nation-building. The revised version keeps that aim, but it softens the sharpest edge of the original design, the four-year exit for three out of every four recruits. Whether the new pathway works in practice will depend on how many Agniveers choose the extension, how the selection criteria are set, and how the three services implement the Second Tour of Duty on the ground." },
+      { type: "h2", text: "What Happens Next for Agniveers" },
+      { type: "steps", items: [
+        "Second Tour of Duty offer: the 75% of Agniveers not selected for regular enrolment on merit will be offered an additional two-year engagement period.",
+        "Detailed rules: the government will need to publish the eligibility requirements, selection process and service-wise arrangements for the extended engagement.",
+        "Regular enrolment window: after the two years, willing Agniveers who meet the objective criteria will be enrolled into the regular armed forces.",
+        "Later batches: the revised pathway will also shape expectations for subsequent Agniveer cohorts, who will now join knowing a longer route exists."
+      ] },
+      { type: "h2", text: "Agniveer Two-Year Extension: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "What is the Agniveer two-year extension?", a: "The Union Cabinet has approved a two-year Second Tour of Duty for the 75% of Agniveers who were due to leave after four years, extending their service from four years to six years." },
+        { q: "Does the extension mean all Agniveers become permanent soldiers?", a: "No. After the two-year extension, willing Agniveers will be enrolled into the regular forces only if they meet objective selection criteria. Enrolment is not automatic." },
+        { q: "What happens to the 25% of Agniveers selected on merit?", a: "The existing provision continues: 25% of each batch are enrolled into the regular forces based on merit after their initial four-year tenure." },
+        { q: "When was the Agnipath scheme introduced?", a: "The Agnipath scheme was introduced by the Union Cabinet on June 14, 2022, recruiting Agniveers into the armed forces for a four-year period." },
+        { q: "Why has the scheme changed now?", a: "The first batch recruited in 2022 is nearing the end of its four-year tenure, with around 18,000 personnel reported due to exit, and the shorter tenure had faced sustained criticism." }
+      ] }
+    ],
+  },
+{
     slug: "mukesh-ambani-asias-richest-person-reliance-rally-november-2026",
     image: "https://www.ril.com/ar2025-26/assets/img/mukesh.png",
     imageAlt: "Mukesh Ambani, chairman and managing director of Reliance Industries, in a suit",
