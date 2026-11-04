@@ -33,6 +33,98 @@
 
 export const posts = [
 {
+    slug: "us-midterm-elections-2026-results-democrats-win-house-senate-undecided",
+    image: "https://www.ey.com/adobe/dynamicmedia/deliver/dm-aid--e2c25154-8287-4f71-a42c-1a55a682440c/ey-united-states-capitol-building.jpg?preferwebp=true&quality=85&width=900",
+    imageAlt: "The United States Capitol building in Washington DC, home of the US Congress",
+    title: "US Midterm Election Results 2026: Democrats Win the House, Senate Control Still Undecided",
+    description:
+      "US midterm election results 2026: Democrats are projected to win the House, flipping seats in North and South Carolina, while Senate control stays undecided.",
+    excerpt:
+      "Democrats are projected to win control of the US House of Representatives in the 2026 midterms, with Senate control still undecided after two Republican seats flipped.",
+    date: "2026-11-04",
+    category: "News",
+    sections: [
+      { type: "p", text: "US midterm election results 2026 delivered the night's biggest headline in the early hours of Wednesday, November 4, 2026: Democrats are projected to win control of the US House of Representatives, ending Republican control of the chamber and reshaping the final two years of Donald Trump's presidency. Multiple US networks, including CNN and CNBC, projected a Democratic House majority as results came in overnight, with NBC News also calling the House for the Democrats. The result is a projection based on counted votes and voting trends, not a final certified count, and several races were still uncalled when the House projection landed." },
+      { type: "h2", text: "US Midterm Election Results 2026: How Democrats Won the House" },
+      { type: "p", text: "Democrats went into election night needing only a small net gain. Before the vote, Republicans held 218 House seats, Democrats held 214, one seat was held by an independent and two were vacant, with 218 needed for a majority. The gains spread well beyond safe territory: in Indiana, Democrat J.D. Ford ousted Republican Victoria Spartz in a district Trump had won by 17 points in 2024, and in New Jersey, Democrat Rebecca Bennett, a former Navy helicopter pilot, defeated Republican Tom Kean Jr., ending his two-term tenure." },
+      { type: "p", text: "Winning the House gives Democrats real power even without the Senate or the White House. The House passes legislation, controls federal spending bills, and can launch investigations into the administration, so Trump's agenda for his final two years will now need Democratic support in at least one chamber." },
+      { type: "h2", text: "US Midterm Election Results 2026: Senate Control Still Undecided" },
+      { type: "p", text: "The Senate picture was far less settled in the early results. Republicans entered election night with a 53-47 Senate majority, so Democrats needed four net gains to take control of the chamber. By the morning in India, Democrats had flipped two Republican seats, leaving the battle for the Senate unresolved and dependent on the remaining uncalled races." },
+      { type: "list", items: [
+        "North Carolina: Democrat Roy Cooper defeated Republican Michael Whatley, flipping a Republican-held seat.",
+        "South Carolina: Democrat Annie Andrews narrowly defeated Republican Darline Graham, the party's first Senate win there since 1998.",
+        "Georgia: Democrat Jon Ossoff won re-election, beating Trump-backed Republican Mike Collins.",
+        "New Hampshire: Democrat Chris Pappas held the open seat, beating Republican John Sununu.",
+        "Florida: Republican Ashley Moody won re-election, a hold for the party.",
+        "Democrats also held seats in Rhode Island, Delaware and New Jersey."
+      ] },
+      { type: "p", text: "Even a narrow Senate majority matters most for confirming judges and senior officials and for setting the chamber's agenda. Until the remaining races are called, no one can say which party will control the Senate in January, and some close races could take days to settle." },
+      { type: "h2", text: "US Midterm Election Results 2026: The Night's Biggest Individual Wins" },
+      { type: "p", text: "Beyond control of Congress, the night produced several historic firsts. In Georgia, Democrat Keisha Lance Bottoms, the former Atlanta mayor, won the governor's race, becoming the first Black woman ever elected governor in the United States and ending 24 years of Republican control there. In Ohio, Democrat Amy Acton was elected the state's first female governor, defeating Vivek Ramaswamy, a close Trump ally. In New Hampshire, Chris Pappas became the first openly gay man elected to the US Senate. Democrats also held governorships in Pennsylvania, Colorado, Massachusetts, Rhode Island and Illinois." },
+      { type: "h2", text: "What a Democratic House Means for Donald Trump" },
+      { type: "p", text: "For Trump, losing the House is the classic midterm penalty: the president's party almost always loses ground halfway through a term. Practically, it blocks new Republican legislation that cannot pass a Democratic House, and it hands Democrats the power to investigate the administration. Trump still controls the executive branch and, unless the Senate also flips, keeps a strong hand over judicial and executive appointments. The result also sets up the 2028 race, giving Democrats a national platform and a record to run on." },
+      { type: "h2", text: "US Midterm Election Results 2026: Indian-American Winners" },
+      { type: "p", text: "Indian-American candidates had a strong night. Pia Dandiya won Florida's 22nd congressional district with 51.9 percent of the vote, becoming the newest Indian-American member of the US House. In Virginia, Suhas Subramanyam, a former adviser to Barack Obama, won re-election in the 10th district with more than 61.5 percent, against 36.4 percent for Republican Dave Beckwith. Indian-American Democrat Aruna Miller also secured re-election." },
+      { type: "h2", text: "What to Watch Next in the US Midterm Election Results 2026" },
+      { type: "steps", items: [
+        "Senate control: watch the remaining uncalled Senate races, since Democrats need two more net gains beyond North Carolina and South Carolina to reach a majority.",
+        "Final House margin: the projection confirms Democratic control, but the size of the majority will only be clear once every House race is called.",
+        "Close races and recounts: tight contests in several states could take days or weeks to confirm, and some may go to recounts.",
+        "Governor races still uncalled: a handful of governor contests were still open in the early results and could still change the night's tally."
+      ] },
+      { type: "h2", text: "US Midterm Election Results 2026: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "Who won the US House in the 2026 midterms?", a: "Democrats are projected to win control of the House of Representatives, according to projections by CNN, CNBC and NBC News. The result is a projection, not a final certified count." },
+        { q: "Who controls the Senate after the 2026 midterms?", a: "Senate control was still undecided in the early results. Democrats flipped seats in North Carolina and South Carolina but needed two more net gains to take the chamber from its 53-47 Republican majority." },
+        { q: "Which Senate seats did Democrats flip?", a: "Democrat Roy Cooper flipped North Carolina by beating Michael Whatley, and Democrat Annie Andrews flipped South Carolina by beating Darline Graham." },
+        { q: "Which Indian-Americans won in the 2026 midterms?", a: "Pia Dandiya won a House seat in Florida, Suhas Subramanyam was re-elected in Virginia, and Aruna Miller secured re-election." },
+        { q: "When will the final midterm results be known?", a: "The House winner is projected, but final seat counts and some close Senate and governor races may take days or weeks to confirm." }
+      ] }
+    ],
+  }
+{
+    slug: "ramayana-part-2-postponed-2028-namit-malhotra-confirms-november-4-2026",
+    image: "https://images.filmibeat.com/ph-big/2026/10/ramayana-the-introduction-movie-20261793360080_7.jpg",
+    imageAlt: "Ranbir Kapoor as Lord Ram in the official Ramayana: Part 1 poster, ahead of the film's November 5, 2026 release",
+    title: "Ramayana Part 2 Postponed to 2028: Namit Malhotra Confirms the Delay a Day Before Part 1 Releases",
+    description:
+      "Ramayana Part 2 postponed to 2028: producer Namit Malhotra confirmed the sequel moves from Diwali 2027, giving the finale an extra year.",
+    excerpt:
+      "Ramayana Part 2 will now release in 2028, not Diwali 2027, producer Namit Malhotra confirmed on November 4, 2026, a day before Part 1 hits cinemas.",
+    date: "2026-11-04",
+    category: "Cinema",
+    sections: [
+      { type: "p", text: "Ramayana Part 2 postponed to 2028 is now official. Producer Namit Malhotra confirmed on November 4, 2026 that the second instalment of Nitesh Tiwari's epic will not arrive on Diwali 2027 as originally planned, but will instead release in 2028. The confirmation came in an interview with E! News, reported on Tuesday morning in India, just one day before Ramayana: Part 1, subtitled Rise of a Legend, reaches cinemas worldwide on November 5, 2026. For fans who have been tracking the two-part epic for years, the wait for the conclusion just got a full year longer." },
+      { type: "h2", text: "Ramayana Part 2 Postponed: What Namit Malhotra Actually Said" },
+      { type: "p", text: "Malhotra framed the delay as a creative decision, not a production crisis. He said that when the first part was announced, the team thought of it primarily as an Indian film going to the world, but through the evolution of the film they arrived at two master versions, one in Hindi and one in English. Creating the English version involved a separate edit and a rewrite of the original Hindi script so that it could be presented in its own original form, rather than as a straight dub. That work, he said, is part of why the sequel needs more time." },
+      { type: "p", text: "On the extra year itself, Malhotra was direct: the makers want a little more time to make sure that when they present the grand finale, it lands at the scale the story demands. He said the additional year is what he genuinely believes the team needs to do justice to a film of this size, especially since Part 2 will be a whole other story from Part 1. The sequel will follow Ram's journey to find Sita after she is abducted by Ravana, which means the film's biggest war sequences and emotional climax all sit in the second instalment." },
+      { type: "h2", text: "Ramayana Part 2 Postponed: From Rumour to Confirmation" },
+      { type: "p", text: "The 2028 date is not entirely new to trade watchers. Reports in late October 2026 had already suggested Malhotra was considering pushing the sequel from Diwali 2027 to Diwali 2028 for more filming and production time, particularly the major war sequences. At that stage, though, the makers had not confirmed any change, and Diwali 2027 remained the reported plan. What changed on November 4 is the status of that report: the producer himself has now confirmed it." },
+      { type: "p", text: "That distinction matters. Until November 4, the 2028 date was reported as under consideration. Now it is the producer's own word to E! News, reported the same day by Indian outlets. No exact 2028 date has been confirmed in these reports, so Part 2 is slated for 2028, with the precise day still to be announced." },
+      { type: "h2", text: "Ramayana Part 1 Releases Tomorrow: Premiere, First Review and Advance Buzz" },
+      { type: "p", text: "The postponement news landed in a huge week for Part 1. The film held a star-studded Mumbai premiere attended by Ranbir Kapoor, Alia Bhatt, Sunny Deol and Neetu Kapoor, and early reactions from its Mumbai screening have been overwhelmingly positive. Content creator Ashish Chanchlani, who attended the screening, praised its breathtaking visuals, spectacular action and strong lead performances, calling it a potential historic blockbuster. That is one viewer's first reaction, not a critics' consensus, but it has added to the excitement a day before release." },
+      { type: "list", items: [
+        "Director: Nitesh Tiwari. Producer: Namit Malhotra's Prime Focus Studios, with Yash's Monster Mind Creations and effects by DNEG.",
+        "Cast: Ranbir Kapoor as Ram, Sai Pallavi as Sita, Yash as Ravana, Sunny Deol as Hanuman, Ravi Dubey as Lakshman and Kunal Kapoor as Indra.",
+        "Release: Part 1, Rise of a Legend, releases worldwide on November 5, 2026, in Hindi and English, including IMAX.",
+        "Runtime and certification: 195 minutes, U certificate in India without cuts, PG-13 in the United States, according to reports.",
+        "Budget and advance sales: reports put the budget near Rs 4,000 crore, with trackers estimating around Rs 100 crore for the opening weekend. Both are reported estimates, not official studio numbers."
+      ] },
+      { type: "h2", text: "What Ramayana Part 2 Will Cover" },
+      { type: "p", text: "Part 1 covers the beginning of Lord Rama's journey, while Part 2 carries the story to its conclusion: Sita's abduction by Ravana, Ram's search for her, and the great war that follows. The second film is not a smaller follow-up; it holds the epic's largest battles and its emotional payoff, and Malhotra has said the team wants to present that finale with the grandeur it deserves rather than rushing it to Diwali 2027." },
+      { type: "h2", text: "Ramayana Part 3: Still Only a Possibility, Not a Confirmation" },
+      { type: "p", text: "The same interview also touched on the possibility of a third film, which has been a talking point since November 3, when Ranbir Kapoor mentioned a possible third part and Malhotra said the epic was originally conceived as three films. That talk remains exactly that: a possibility the makers have discussed, not a confirmed third film. Fans should keep the two stories separate. Part 2 moving to 2028 is confirmed by the producer. A Part 3 is, for now, only something the team has said could happen." },
+      { type: "h2", text: "Ramayana Part 2 Postponed: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "When will Ramayana Part 2 release?", a: "Ramayana Part 2 is now slated for release in 2028, producer Namit Malhotra confirmed on November 4, 2026. An exact date in 2028 has not been confirmed in these reports." },
+        { q: "Why was Ramayana Part 2 postponed from 2027?", a: "Malhotra said the makers need an extra year to do justice to the finale, including two master versions, Hindi and English, with a separate edit and rewritten script for English." },
+        { q: "When does Ramayana Part 1 release?", a: "Ramayana: Part 1, Rise of a Legend, releases worldwide on November 5, 2026, in Hindi and English, including IMAX." },
+        { q: "Who stars in Ramayana?", a: "Ranbir Kapoor plays Lord Ram, Sai Pallavi plays Sita, Yash plays Ravana, Sunny Deol plays Hanuman and Ravi Dubey plays Lakshman, directed by Nitesh Tiwari." },
+        { q: "Is Ramayana Part 3 confirmed?", a: "No. A third film has only been discussed as a possibility by Ranbir Kapoor and Namit Malhotra. No third part has been confirmed." }
+      ] }
+    ],
+  }
+{
     slug: "salman-khan-teri-sexy-beauty-song-maatrubhumi-november-4-2026",
     image: "https://i.ytimg.com/vi/kE7jAjtw3zU/maxresdefault.jpg",
     imageAlt: "Salman Khan and Chitrangda Singh in the official Teri Sexy Beauty song video from Maatrubhumi",
