@@ -33,6 +33,88 @@
 
 export const posts = [
 {
+    slug: "delhi-chawri-bazar-building-collapse-november-2026",
+    image: "https://delhinewz.com/wp-content/uploads/2026/06/Chawri-Bazar-Chandni-Chowk.jpg",
+    imageAlt: "Chawri Bazar market street in Old Delhi (file photo; the collapsed building stood in Gali Sitara, near Chawri Bazaar Metro station)",
+    title: "Chawri Bazar Building Collapse: 2 Dead, Several Feared Trapped as 3-Storey Building Falls in Old Delhi",
+    description:
+      "Chawri Bazar building collapse: two killed and several feared trapped after a three-storey under-construction building fell in Old Delhi on November 5, 2026.",
+    excerpt:
+      "A three-storey under-construction building collapsed in Old Delhi's Chawri Bazar on Thursday morning, November 5, 2026, killing two people and leaving several feared trapped under the debris as NDRF and fire teams race to reach them.",
+    date: "2026-11-05",
+    category: "News",
+    sections: [
+      { type: "p", text: "Chawri Bazar building collapse: two people were killed and several are feared trapped after a three-storey under-construction building collapsed in Old Delhi's Chawri Bazar on Thursday morning, November 5, 2026. Reported at around 9.50 am from Gali Sitara, near Chawri Bazaar Metro station, it has brought NDRF and Delhi Fire Service teams to the site, still searching the debris for survivors." },
+      { type: "p", text: "Delhi Police told news agency ANI that two people had died and one person was injured. Four people were rescued from the rubble, according to News18, while a Delhi Fire Service official told India TV that at least 15 people were feared trapped. Other outlets reported several people feared trapped, and the exact number inside the building has not been officially confirmed." },
+      { type: "h2", text: "Chawri Bazar Building Collapse: What Happened in Gali Sitara" },
+      { type: "p", text: "The building had been under construction for the last three to four months, an eyewitness told India TV. Mohd Nayeem, who lives nearby, said he was asleep when he heard a crashing sound at around 9.00 or 9.30 am. He said three or four lintels had already been cast and they all collapsed at once, and that labourers were working in the building when it came down. The fire department said it received the call at 9.50 am, and at least six fire units, including water tenders and rescue vehicles, were rushed to the spot." },
+      { type: "list", items: [
+        "Around 9.00-9.30 am: residents hear a crashing sound as the under-construction building in Gali Sitara comes down, according to eyewitness Mohd Nayeem.",
+        "9.50 am: the fire department receives the call, and six fire units, including water tenders and rescue vehicles, are rushed to the spot.",
+        "Morning: NDRF teams begin search and rescue at the site, with Delhi Police, the fire service, the Municipal Corporation of Delhi (MCD) and the New Delhi Municipal Council (NDMC) involved.",
+        "Late morning: Delhi Police confirm two deaths and one injury, four people have been rescued, and a fire service official says at least 15 people are feared trapped."
+      ] },
+      { type: "p", text: "Senior officers are supervising the operation, which is complicated by the location itself. Gali Sitara sits in one of Old Delhi's most crowded wholesale markets, where narrow lanes and heavy pedestrian movement make it hard to move heavy equipment in. The collapse also came during the Diwali shopping rush, when Chandni Chowk and Chawri Bazar draw even larger crowds than usual." },
+      { type: "h2", text: "Why the Rescue Numbers Keep Changing" },
+      { type: "p", text: "The numbers have seemed to move through the morning because the rescue was still under way while the reports were being written. Early reports said several people were feared trapped; a fire service official later told India TV that at least 15 were feared trapped, while News18 reported four rescued and two feared trapped. Until the debris is fully cleared, no count of the trapped can be treated as final." },
+      { type: "h2", text: "Political Row Over Building Safety in Delhi" },
+      { type: "p", text: "The collapse quickly turned political. AAP leader Saurabh Bharadwaj criticised Delhi Chief Minister Rekha Gupta and the Municipal Corporation of Delhi, saying the government and the MCD had conducted multiple safety audits of buildings in Delhi, yet buildings keep collapsing. He alleged that safety audits were ordered repeatedly without real action. The cause of the Chawri Bazar collapse itself is not yet known, and officials said further details were awaited." },
+      { type: "h2", text: "A Pattern of Building Collapses in the Capital" },
+      { type: "p", text: "The Chawri Bazar collapse is the latest in a series of building failures in Delhi in recent months. Days earlier, two men were killed when two slabs gave way in the Milan Garden area of northeast Delhi. On October 7, a four-storey building collapsed in Seemapuri, killing three people, including a child. On September 6, a five-storey paying guest accommodation collapsed in Satya Niketan, killing seven people." },
+      { type: "p", text: "Days earlier, a portion of the over 160-year-old MCD Town Hall in Chandni Chowk collapsed on October 31, after two days of heavy rain. The heritage structure, built in 1863 and the centre of municipal administration for nearly 145 years, had already been declared unsafe and cordoned off. The collapse brought down the roof and two massive beams of its entrance porch and damaged the facade and first floor. No casualties were reported, but it underlined how fragile many of Old Delhi's ageing structures have become." },
+      { type: "h2", text: "Chawri Bazar Building Collapse: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "How many people died in the Chawri Bazar building collapse?", a: "Two people were killed, Delhi Police confirmed on Thursday morning, November 5, 2026. One more person was injured and four were rescued. The number still feared trapped was not officially confirmed while the rescue was under way." },
+        { q: "Where exactly did the building collapse?", a: "In Gali Sitara, near Chawri Bazaar Metro station in Old Delhi. The three-storey building was under construction when it collapsed at around 9.50 am on Thursday, November 5, 2026." },
+        { q: "How many people are feared trapped?", a: "A Delhi Fire Service official told India TV that at least 15 people were feared trapped, while other outlets reported several. The figure was not officially confirmed, because the rescue was still in progress and the total inside was not known." },
+        { q: "Who is carrying out the rescue operation?", a: "Teams from the National Disaster Response Force, the Delhi Fire Service, Delhi Police, the Municipal Corporation of Delhi and the New Delhi Municipal Council are involved, with at least six fire units at the site and senior officers supervising." },
+        { q: "What caused the building to collapse?", a: "The cause is not yet known. The building had been under construction for three to four months, and an eyewitness said three or four newly cast lintels collapsed at once." }
+      ] },
+      { type: "p", text: "The rescue at Gali Sitara is still under way, and the confirmed toll may change as teams clear the debris. What is already clear is that Delhi has seen too many of these collapses in too short a time, and the questions about construction oversight and safety audits are being asked again, in the middle of the Diwali rush, in one of the city's busiest markets." }
+    ],
+  },
+{
+    slug: "zelda-ocarina-of-time-remake-switch-2-release-november-2026",
+    image: "https://static0.srcdn.com/wordpress/wp-content/uploads/2026/06/zelda-ocarina-of-time-remake-tapestry-link.jpeg?&fit=crop&w=1600&h=900",
+    imageAlt: "Official tapestry artwork from The Legend of Zelda: Ocarina of Time remake for Nintendo Switch 2 (image: Nintendo)",
+    title: "Zelda Ocarina of Time Remake Out Now on Switch 2: 96 on Metacritic, the Highest-Rated Game of 2026",
+    description:
+      "Zelda Ocarina of Time remake launches November 5, 2026 on Nintendo Switch 2 with a 96 Metacritic score — the highest-rated game of 2026 so far.",
+    excerpt:
+      "The Legend of Zelda: Ocarina of Time remake is out today, November 5, 2026, exclusively on Nintendo Switch 2, with a 96 on Metacritic that makes it the highest-rated game of 2026 so far.",
+    date: "2026-11-05",
+    category: "Gaming",
+    sections: [
+      { type: "p", text: "Zelda Ocarina of Time remake: Nintendo's Switch 2 remake of the classic 1998 adventure is out today, November 5, 2026, and it arrives with a 96 on Metacritic, making it the highest-rated game of 2026 so far. The remake is exclusive to Nintendo Switch 2, and the reviews, which landed on November 4, are almost uniformly glowing, with critics calling it a remake for the ages and a reminder of why the original is so often called the greatest game of all time." },
+      { type: "p", text: "The numbers are striking. Metacritic lists the remake at 96 from more than 80 critic reviews, every one of them positive, and OpenCritic has it at 95, with 100 percent of critics recommending it. The Guardian gave it five stars, Eurogamer gave it five stars, and Japan's Famitsu scored it 37 out of 40. That puts the remake three points behind the Nintendo 64 original's record-setting 99 on Metacritic, but two points ahead of Ocarina of Time 3D, the 2011 re-release, which scored 94." },
+      { type: "h2", text: "Zelda Ocarina of Time Remake: Review Scores at a Glance" },
+      { type: "list", items: [
+        "Metacritic: 96, from 80-plus critic reviews, all positive, the highest-rated game of 2026 so far.",
+        "OpenCritic: 95, with 100 percent of critics recommending the game.",
+        "The Guardian: five stars, calling it a remake that turns one of the best games of the 1990s into one of the best games of the 2020s.",
+        "Eurogamer: five stars, praising gameplay tweaks it calls quietly transformative.",
+        "Famitsu: 37 out of 40, from four reviewers scoring 9, 9, 9 and 10.",
+        "IGN: 90, in a roundup of scores that also includes 100s from Daily Star, CGMagazine, Saudi Gamer and ElDesmarque."
+      ] },
+      { type: "p", text: "What exactly has Nintendo changed? The remake rebuilds the 1998 game with a new visual style that reviewers describe as hyperreal rather than realistic, alongside new cutscenes that bring out the epic drama of a story that was previously told sparsely. The Guardian's Keza MacDonald wrote that the new cutscenes brought out the latent epic drama in a previously sparse tale, and that despite all the new sheen, the game retains its understated melancholy." },
+      { type: "p", text: "The gameplay has been reworked too. Eurogamer's Christian Donlan found that quietly transformative tweaks mean the game now races along at an astonishing clip, with dungeons that feel complex and playful at once. Digital Foundry judged the remake to be of incredible quality, and the technical leap is dramatic: while the Nintendo 64 original ran at 20 frames per second, the Switch 2 remake targets and holds a fluid 60 frames per second in both docked and handheld modes, with frame delivery that stays exceptionally consistent." },
+      { type: "h2", text: "How the Remake Compares With the 1998 Original" },
+      { type: "p", text: "The original Ocarina of Time still holds a Metacritic score of 99, the highest of any game on the site, from just 22 reviews. The remake's 96 comes from a much larger pool of more than 80 critics, and outlets have noted that the remake is now ranked among the best-reviewed games of all time. Some reviewers had quibbles, noting inconsistencies in the art style or updates they liked less, and Eurogamer's Donlan admitted the game can occasionally look like any other modern third-person adventure. But the consensus is that the remake makes the ageing masterpiece much easier to enjoy while keeping its themes of change and the passage of time intact." },
+      { type: "p", text: "That theme lands differently now. The game is itself about a boy hero whose childhood is stolen, and about time passing, and several critics noted that playing a remake of a game about the passage of time, nearly three decades after the original, only increased its power. Polygon's Giovanni Colantonio wrote that not a moment of the game feels wasted, with every side-quest, minigame and hidden grotto feeling bespoke, in sharp contrast to modern adventure games that fill their worlds with copied content." },
+      { type: "h2", text: "Price, Editions and Where to Play" },
+      { type: "p", text: "The Legend of Zelda: Ocarina of Time remake is available exclusively on Nintendo Switch 2, and it does not run on the original Switch. In the United States it is priced at $59.99 digitally and $69.99 for the physical edition. The game is part of the 40th anniversary celebrations for the Zelda series, and it launches just two weeks before Grand Theft Auto 6 arrives on November 19, which makes this a remarkable fortnight for players." },
+      { type: "h2", text: "Zelda Ocarina of Time Remake: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "When does the Zelda Ocarina of Time remake release?", a: "November 5, 2026, exclusively on Nintendo Switch 2. The review embargo lifted on November 4, a day before launch, and the game holds a 96 on Metacritic." },
+        { q: "What is the Zelda Ocarina of Time remake's Metacritic score?", a: "96, from more than 80 critic reviews, all of them positive. It is the highest-rated game of 2026 so far, ahead of the twin-stick shooter Sektori at 93, and it also holds a 95 on OpenCritic." },
+        { q: "Can I play the Ocarina of Time remake on the original Nintendo Switch?", a: "No. The remake is exclusive to Nintendo Switch 2 and does not run on the original Switch. It targets 60 frames per second in both docked and handheld modes." },
+        { q: "How much does the Ocarina of Time remake cost?", a: "In the United States, the digital edition costs $59.99 and the physical edition costs $69.99." },
+        { q: "How does the remake compare with the 1998 original?", a: "The 1998 Nintendo 64 original holds a 99 on Metacritic, the highest score of any game on the site, while the remake holds 96. The remake adds a visual overhaul, new cutscenes, gameplay tweaks and 60fps performance, while keeping the original's dungeons, story and structure intact." }
+      ] },
+      { type: "p", text: "For a game first released in 1998, Ocarina of Time has now topped the review charts in three different decades: as the original, as the 3DS remake, and now as the Switch 2 remake. Whether it stays the highest-rated game of 2026 when Grand Theft Auto 6 arrives in two weeks is another question, but for today, Link's return is the biggest story in gaming." }
+    ],
+  },
+{
     slug: "bethupalli-all-11-rescued-november-2026",
     image: "https://madhyamamonline.com/h-upload/2026/11/05/2942936-202611054003174-866890db-44ea-4f8e-a198-6bd07d6bf4c1.jpg",
     imageAlt: "SDRF personnel in orange life jackets with a rescue boat during the overnight Bethupalli rescue operation (photo: Madhyamam)",
