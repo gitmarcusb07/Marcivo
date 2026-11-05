@@ -33,6 +33,55 @@
 
 export const posts = [
 {
+    slug: "ntt-docomo-no-cyberattack-5g-sa-outage-update-november-5-2026",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/NTT_Docomo_Tamatsu_store.JPG/1280px-NTT_Docomo_Tamatsu_store.JPG",
+    imageAlt: "An NTT Docomo shop in Japan (file photo)",
+    title: "NTT Docomo Outage Update: No Sign of Cyberattack as 5G SA Fault Disrupts Japan — Switch to 4G to Restore Service",
+    description:
+      "NTT Docomo outage update: Docomo finds no sign of a cyberattack behind the 5G SA disruption, and switching to 4G can restore service. Latest details.",
+    excerpt:
+      "NTT Docomo says it has found no sign that a cyberattack caused Thursday's nationwide mobile disruption, which is limited to its standalone 5G service — and customers can restore service by switching to 4G.",
+    date: "2026-11-05",
+    category: "Tech",
+    sections: [
+      { type: "p", text: "NTT Docomo outage update: Japan's largest mobile carrier says it has found no signs that a cyberattack caused Thursday's nationwide mobile disruption, on November 5, 2026. The company says the fault is limited to its standalone 5G service, known as 5G SA, and customers stuck on it can get service back by switching to 4G." },
+      { type: "p", text: "The update, reported by Kyodo News on Thursday evening Japan time, changes the picture from earlier in the day, when Docomo first confirmed the nationwide outage and said it was investigating the cause. The disruption began at around 11:18 a.m. Japan time (around 7:48 a.m. IST). No time for a full fix has been announced." },
+      { type: "h2", text: "NTT Docomo Outage Update: No Sign of a Cyberattack" },
+      { type: "p", text: "Docomo told Kyodo News that its customers were experiencing mobile service disruptions across Japan, but that it had found no signs that the problems were caused by a cyberattack. It is the company's clearest statement yet on the cause, and it matters because the outage arrived the same day Docomo suspended its online shop and customer portal over suspected unauthorized access to its servers." },
+      { type: "p", text: "The company is still investigating the cause, so the finding is not a final answer — it is what Docomo has ruled out so far. For now, the outage should be treated as a network fault in one part of its mobile service, not a confirmed attack." },
+      { type: "h2", text: "Which NTT Docomo Services Are Affected?" },
+      { type: "p", text: "The disruption is limited to Docomo's standalone 5G service, or 5G SA, where voice calls, data and texting have been unstable since late morning. Docomo's latest update says its other 5G and 4G services are unaffected, and so are the mobile networks other businesses offer over its infrastructure. Emergency calls are also unaffected." },
+      { type: "p", text: "That narrower scope is good news for most customers: anyone on 4G, or on Docomo's other 5G service, should be working normally. The problem is concentrated on customers connected to the standalone 5G network, which runs entirely on 5G infrastructure rather than sharing older 4G equipment." },
+      { type: "h2", text: "How to Restore Your Docomo Service: Switch to 4G" },
+      { type: "p", text: "Docomo has given affected customers a workaround while it works on the fault: if your phone is on standalone 5G and your calls, data or texts are unstable, switching to 4G should bring service back." },
+      { type: "steps", items: [
+        "Open your phone's network settings and find the mobile network or preferred network type option.",
+        "Change the setting from 5G to 4G or LTE, so the phone stops using standalone 5G.",
+        "Restart your phone, or toggle airplane mode on and off, to reconnect.",
+        "If service is still unstable after switching to 4G, wait and try again, and check Docomo's official status page for updates."
+      ] },
+      { type: "h2", text: "The Suspected Unauthorized Access Is a Separate Problem" },
+      { type: "p", text: "Separately from the network outage, Docomo suspended its online shop and the My docomo customer portal early on Thursday, at around 1:05 a.m. Japan time, after concluding that an outside party had likely gained unauthorized access to its servers. Customers cannot use them to sign up for plans, check bills or make contract changes, and Docomo is investigating whether any customer data was leaked." },
+      { type: "p", text: "Docomo has not said the two events are connected, and its latest update keeps them apart for now. The server incident remains a separate investigation, including whether data was taken and when the online services will return." },
+      { type: "list", items: [
+        "Around 1:05 a.m. JST, November 5: Docomo suspends its online shop and My docomo portal after concluding an outside party likely gained unauthorized access to its servers.",
+        "Around 11:18 a.m. JST (7:48 a.m. IST), November 5: voice calls, mobile data and texting become unstable across Japan on Docomo's standalone 5G service.",
+        "Thursday afternoon JST: Docomo confirms a nationwide disruption and says it is investigating the cause; no restoration time announced.",
+        "Thursday evening JST: Docomo says it has found no signs the problems were caused by a cyberattack, and the fault is limited to 5G SA — other 5G and 4G services, and emergency calls, are unaffected."
+      ] },
+      { type: "h2", text: "What to Watch Next in the NTT Docomo Outage" },
+      { type: "p", text: "Three things will settle this story: a restoration time for the standalone 5G service, which Docomo has not given yet; the confirmed cause of the fault, still under investigation; and the outcome of the separate server investigation — whether any customer data was leaked, and when the online shop and My docomo portal will return." },
+      { type: "p", text: "Until then, the practical advice for anyone in Japan on Docomo is simple: if your service is unstable, switch to 4G and restart your phone, and do not rely on the online shop or My docomo portal for urgent plan or billing changes while they are suspended. Check Docomo's official status channels for the latest update rather than social media reports." },
+      { type: "faq", items: [
+        { q: "Is the NTT Docomo outage caused by a cyberattack?", a: "Docomo says it has found no signs that the problems were caused by a cyberattack. The company is still investigating the cause, so that finding may be updated." },
+        { q: "Which Docomo services are affected by the outage?", a: "The disruption is limited to Docomo's standalone 5G service, or 5G SA, where voice calls, data and texting have been unstable since around 11:18 a.m. Japan time on November 5. Other 5G and 4G services are unaffected, and so are emergency calls." },
+        { q: "How can I restore my Docomo service during the outage?", a: "Switch your phone to 4G in your network settings, then restart the phone or toggle airplane mode on and off. Docomo says affected customers may be able to restore service this way." },
+        { q: "What happened to Docomo's online shop and My docomo?", a: "Docomo suspended its online shop and My docomo customer portal at around 1:05 a.m. Japan time on November 5 after concluding an outside party had likely gained unauthorized access to its servers. It is investigating whether any data was leaked, and has not linked this to the network outage." },
+        { q: "When will the Docomo outage be fixed?", a: "No restoration time has been announced, and the cause is still under investigation. Check Docomo's official status page for updates." }
+      ] }
+    ],
+  },
+{
     slug: "jio-rs-15-unlimited-5g-data-pack-24-hour-validity-november-2026",
     image: "https://www.mymobileindia.com/wp-content/uploads/2026/11/jio-1.webp",
     imageAlt: "Jio promotional graphic for the Rs 15 unlimited 5G data add-on: unlimited 5G for one day, 1 day validity",
