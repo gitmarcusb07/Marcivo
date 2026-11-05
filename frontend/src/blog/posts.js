@@ -33,6 +33,57 @@
 
 export const posts = [
 {
+    slug: "jio-rs-15-unlimited-5g-data-pack-24-hour-validity-november-2026",
+    image: "https://www.mymobileindia.com/wp-content/uploads/2026/11/jio-1.webp",
+    imageAlt: "Jio promotional graphic for the Rs 15 unlimited 5G data add-on: unlimited 5G for one day, 1 day validity",
+    title: "Jio Rs 15 5G Pack: Truly Unlimited 5G Data for 24 Hours — Price, Benefits and How to Recharge",
+    description:
+      "Jio Rs 15 5G pack gives truly unlimited 5G data for 24 hours across India. Check price, benefits, eligibility and how to recharge it on the MyJio app.",
+    excerpt:
+      "Reliance Jio has launched a Rs 15 data pack that offers truly unlimited 5G data for 24 hours, for users who need heavy data for a day without buying a bigger plan.",
+    date: "2026-11-05",
+    category: "Tech",
+    sections: [
+      { type: "p", text: "The Jio Rs 15 5G pack is real: Reliance Jio has launched a data add-on priced at Rs 15 that gives you truly unlimited 5G data for 24 hours. Announced on November 4, 2026, and available across India from November 5, it is aimed at anyone who needs a full day of heavy data — 4K streaming, online gaming, big downloads or remote work — without paying for a longer plan." },
+      { type: "p", text: "Here is the short version: for Rs 15 you get one day of unlimited high-speed data on Jio's True 5G network, with no fixed data cap for those 24 hours. Recharge it through the MyJio app, Jio.com or retail and third-party channels, anywhere in India with True 5G coverage. You need a 5G phone and True 5G coverage, and reports say an active base plan too." },
+      { type: "h2", text: "Jio Rs 15 5G Pack: Price, Validity and Benefits" },
+      { type: "list", items: [
+        "Price: Rs 15.",
+        "Validity: 24 hours (one day) from activation.",
+        "Data: truly unlimited 5G data — Jio says there is no fixed daily data cap for the pack.",
+        "Network: Jio True 5G, the operator's standalone 5G network.",
+        "Availability: pan-India, across all telecom circles.",
+        "Recharge channels: MyJio app, Jio.com, Reliance Retail, recharge outlets and third-party platforms.",
+        "Extra benefit: some reports also mention 200 MB of 4G data bundled with the pack."
+      ] },
+      { type: "p", text: "The word “truly” matters here. Most data add-ons give you a fixed amount — 1GB, 2GB or 6GB — and then stop or slow down. Jio describes this pack as truly unlimited 5G, with no set allowance to burn through in 24 hours. One honest gap: the announcement mentions no fair-usage policy or speed-reduction threshold, so it is not clear what happens after very heavy use in one day. Treat “unlimited” as Jio's description of the pack, not a guarantee of full speed with no ceiling at all." },
+      { type: "h2", text: "Who Can Use the Jio Rs 15 5G Pack?" },
+      { type: "p", text: "The pack is a data add-on for Jio prepaid users, and three things decide whether it works for you. First, you need a 5G-enabled smartphone. Second, you must be inside Jio True 5G coverage — the unlimited data only applies on the 5G network, not on 4G. Third, reports say you need an active base plan, because the pack sits on top of your existing plan rather than replacing it. Jio's own announcement does not spell out the base-plan point, so if your number already has an active plan you are covered either way." },
+      { type: "h2", text: "How to Recharge the Jio Rs 15 5G Pack" },
+      { type: "steps", items: [
+        "Open the MyJio app, or go to Jio.com, and log in with your Jio number.",
+        "Go to Recharge or Data Packs and find the Rs 15 Unlimited 5G Data Pack.",
+        "Select it and confirm the Rs 15 price and 24-hour validity on screen.",
+        "Pay by UPI, net banking or card, and wait for the activation message.",
+        "Switch your phone to 5G and check you are on Jio True 5G before streaming or downloading."
+      ] },
+      { type: "p", text: "You can also buy the same pack at Reliance Retail stores, recharge outlets and third-party apps. The 24-hour clock starts when the pack is activated, so recharge it when you actually need the data, not hours in advance." },
+      { type: "h2", text: "What Can You Do With 24 Hours of Unlimited 5G?" },
+      { type: "p", text: "A full day of unlimited 5G is most useful for things that eat data fast. Stream a cricket match or a film in 4K without watching your daily limit, play online games on low-latency 5G, download a large game or a software update, back up photos and videos to the cloud, or turn your phone into a hotspot for a laptop while you work remotely. It also fits travel days and work-from-home days when the Wi-Fi is unreliable. One practical tip: if the big download is a video someone shared as a TeraBox link, open it in your browser on teraplayer.in without the TeraBox app." },
+      { type: "h2", text: "Is the Jio Rs 15 5G Pack Worth It?" },
+      { type: "p", text: "At Rs 15, it is hard to argue with the price if you actually need a heavy-data day. One day of unlimited 5G costs less than most daily data add-ons, and it removes the worry about finishing a download or a stream before your quota runs out. It is best for occasional heavy use — a match day, a big download, a day of remote work — rather than a daily habit, because Rs 15 a day adds up to about Rs 450 a month, more than most monthly plans with unlimited 5G. If your plan already has unlimited 5G, you do not need this pack at all." },
+      { type: "h2", text: "Jio Rs 15 5G Pack: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "What is the Jio Rs 15 5G pack?", a: "It is a data add-on from Reliance Jio that costs Rs 15 and gives truly unlimited 5G data for 24 hours on the True 5G network, announced on November 4, 2026." },
+        { q: "How long is the Jio Rs 15 5G pack valid?", a: "The pack is valid for 24 hours, or one day, from activation." },
+        { q: "Do I need a 5G phone to use the Jio Rs 15 pack?", a: "Yes. You need a 5G-enabled smartphone and you must be inside Jio True 5G coverage, since the unlimited data applies only on the 5G network." },
+        { q: "Do I need an active base plan for the Jio Rs 15 5G pack?", a: "Reports say you need an active base plan on your Jio prepaid number, since the pack is a data add-on. Jio's announcement does not spell this out." },
+        { q: "How do I recharge the Jio Rs 15 5G pack?", a: "Open the MyJio app or go to Jio.com, find the Rs 15 Unlimited 5G Data Pack under recharge or data packs, and pay by UPI, net banking or card. It is also available at Reliance Retail stores and third-party recharge platforms." }
+      ] },
+      { type: "p", text: "The Jio Rs 15 5G pack is a small, simple idea: one day of unlimited 5G for the price of a cup of tea. If you have a 5G phone, True 5G coverage and a heavy-data day ahead, recharge it then." }
+    ],
+  },
+{
     slug: "ntt-docomo-outage-japan-unauthorized-access-november-5-2026",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Shinjuku_Gyoen_National_Garden_and_NTT_DoCoMo_Yoyogi_Building,_Tokyo,_Japan.jpg/1280px-Shinjuku_Gyoen_National_Garden_and_NTT_DoCoMo_Yoyogi_Building,_Tokyo,_Japan.jpg",
     imageAlt: "NTT Docomo's Yoyogi Building in Tokyo (file photo; the tower houses Docomo network equipment)",
