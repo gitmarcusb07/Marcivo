@@ -33,6 +33,45 @@
 
 export const posts = [
 {
+    slug: "strait-of-hormuz-tankers-tugboat-fire-mine-strike-november-5-2026",
+    image: "https://images.investinglive.com/cms/media/migrated/images/Strait%20of%20Hormuz_id_6881abc9-fc01-4219-b86c-567046ca794c_size975.jpg",
+    imageAlt: "Oil tankers transiting a narrow strait (file photo; not the vessels involved in the November 5, 2026 fires)",
+    title: "Strait of Hormuz Tankers Fire: Two Oil Tankers and Tugboat Ablaze After Mine Strike as IRGC Claims US Drones Seized",
+    description:
+      "Strait of Hormuz tankers fire: two oil tankers and a tugboat caught fire overnight after a mine strike, the IRGC said, as Brent crude held near $94.",
+    excerpt:
+      "Two oil tankers and a tugboat caught fire overnight in the Strait of Hormuz, Iran's Revolutionary Guard said on Thursday, November 5, 2026, in the latest strike on shipping through the world's most important oil chokepoint — and the Guard claims it also seized two American drones.",
+    date: "2026-11-05",
+    category: "News",
+    sections: [
+      { type: "p", text: "Strait of Hormuz tankers fire: two oil tankers and a tugboat caught fire overnight in the Strait of Hormuz, Iran's Islamic Revolutionary Guard Corps (IRGC) said on Thursday, November 5, 2026. One tanker struck a mine while crossing a passage south of the strait, the IRGC said, while a supertanker caught fire leaving the eastern part of the waterway — and a tugboat that moved in to help also caught fire." },
+      { type: "p", text: "The account comes from the IRGC itself, reported through Iranian state-linked media and carried by Reuters, AFP and other wire agencies. It has not been independently confirmed, and the IRGC gave no details of casualties or damage. The tankers have not been named, and no independent footage has been verified. That caution matters: the IRGC has made similar claims in recent days — including four tankers destroyed on Wednesday — which outside monitors have also been unable to verify." },
+      { type: "h2", text: "Strait of Hormuz Tankers Fire: What the IRGC Says Happened Overnight" },
+      { type: "p", text: "According to the IRGC statement carried by the Fars news agency, the first incident happened overnight, when a large oil tanker attempting to cross an unauthorised passage south of the Strait of Hormuz struck a mine, caught fire and was brought to a halt. In the second incident, a supertanker leaving the eastern part of the strait was halted by a large fire, and a tugboat that approached it to help extinguish the blaze also caught fire." },
+      { type: "p", text: "In the same statement, the IRGC said its electronic warfare units had taken control of two American LUCAS drones — Low-cost Uncrewed Combat Attack Systems — guided them to land safely and seized them as spoils. That claim, too, has not been independently confirmed, and no statement from the United States military about the drones had been reported by Thursday morning." },
+      { type: "list", items: [
+        "February 28, 2026: the Iran war begins, and Tehran starts severely restricting traffic through the Strait of Hormuz, which normally carries about a fifth of the world's oil.",
+        "November 2, 2026: an oil tanker catches fire and explodes after striking a naval mine in the southern strait, the IRGC says — the incident covered in our earlier report.",
+        "November 3, 2026: three more tankers explode after hitting sea mines, Iranian reports say. A British maritime agency separately reports a tanker hit by two unidentified projectiles off Oman, its engine room damaged but no casualties.",
+        "November 4, 2026: the IRGC claims four tankers were destroyed by mines on a prohibited route south of the strait and two other vessels were seized.",
+        "Overnight November 4-5, 2026: two more tankers and a tugboat catch fire, the IRGC says, and it claims two US LUCAS drones were captured."
+      ] },
+      { type: "h2", text: "Why the Strait of Hormuz Matters for Oil Prices" },
+      { type: "p", text: "The strait is the narrow waterway between Iran and Oman that connects the Persian Gulf with the Gulf of Oman, and about a fifth of global oil consumption normally passes through it. Since the war began in late February, shipping there has slowed to a near-standstill: tracking data showed only five commodity vessels passing through on Saturday and none on Sunday, against more than 130 transits a day before the war. The United States has responded by blockading Iranian ports and helping tankers travel the strait." },
+      { type: "p", text: "Despite the new fires, oil prices did not jump on Thursday. Brent crude fell 8.7 percent on Wednesday to settle at $94.62 a barrel, its worst single-day fall since May, according to Bloomberg, after Democrats swept the US midterm elections and traders bet on a deal to end the war. By Thursday morning Brent was near $94.12. A senior Iranian official said Tehran could reopen the strait within two days if the US lifts oil sanctions and releases frozen assets — but there is no signed agreement, and President Donald Trump has warned that a heavy hit on Iran remains possible." },
+      { type: "h2", text: "What Is Confirmed — and What Is Still Only a Claim" },
+      { type: "p", text: "What is confirmed is that the IRGC made the statement, that the strait remains heavily restricted, and that shipping through it is a fraction of normal levels. What is not confirmed is the IRGC's account itself: no independent source has verified the mine strike, the vessels, or the drone seizures, and no casualty figures have been released. Until confirmation arrives, the incident should be read as an IRGC claim — serious, widely reported, but unproven." },
+      { type: "p", text: "The next signals to watch are confirmation from maritime agencies such as the UK Maritime Trade Operations centre, any US military statement about the drone claim, and Brent crude's next move. With the strait still largely closed and talks unresolved, this narrow stretch of water remains the most watched shipping lane in the world." },
+      { type: "faq", items: [
+        { q: "What happened in the Strait of Hormuz on November 5, 2026?", a: "The IRGC said two oil tankers and a tugboat caught fire overnight. One tanker struck a mine south of the strait, a supertanker caught fire leaving the eastern part, and a tugboat that went to help also caught fire. The account is unconfirmed." },
+        { q: "Did anyone die in the tanker fires?", a: "The IRGC has not released any casualty figures, and no independent source has confirmed deaths or injuries from the overnight incidents." },
+        { q: "Did Iran really capture two US drones?", a: "The IRGC claims its navy took control of two American LUCAS drones and guided them to land. The claim is unconfirmed, and no US military statement had been reported by Thursday morning." },
+        { q: "How much oil passes through the Strait of Hormuz?", a: "About a fifth of global oil consumption normally travels through the strait. Since the war began, transits have collapsed — five vessels on one recent Saturday, none the next day, against more than 130 a day before the war." },
+        { q: "Why did oil prices fall if tankers are on fire?", a: "Brent fell 8.7 percent on Wednesday to $94.62 after the US midterm results, as traders bet on a diplomatic deal with Iran. By Thursday morning Brent was near $94.12, with the market pricing in deal hopes rather than the latest fires." }
+      ] }
+    ],
+  },
+{
     slug: "delhi-chawri-bazar-building-collapse-november-2026",
     image: "https://delhinewz.com/wp-content/uploads/2026/06/Chawri-Bazar-Chandni-Chowk.jpg",
     imageAlt: "Chawri Bazar market street in Old Delhi (file photo; the collapsed building stood in Gali Sitara, near Chawri Bazaar Metro station)",
