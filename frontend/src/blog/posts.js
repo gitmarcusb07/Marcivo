@@ -33,6 +33,52 @@
 
 export const posts = [
 {
+    slug: "india-beat-japan-4-1-asian-champions-trophy-final-november-2026",
+    image: "https://static.toiimg.com/thumb/msid-135579044,width-1600,height-900,resizemode-6/photo.jpg",
+    imageAlt: "Indian hockey players celebrate after India beat Japan 4-1 in the Asian Champions Trophy 2026 final in Mohali (Photo: Hockey India)",
+    title: "India Beat Japan 4-1 to Win Asian Champions Trophy 2026: Record Sixth Title After Stunning Comeback in Mohali",
+    description:
+      "India beat Japan 4-1 in the Asian Champions Trophy 2026 final, coming from 1-0 down to seal a record-extending sixth title and a third straight crown.",
+    excerpt:
+      "India came from 1-0 down at half-time to beat Japan 4-1 in the Asian Champions Trophy 2026 final in Mohali on November 5, winning a record-extending sixth title — their third in a row — with three goals in a stunning final quarter.",
+    date: "2026-11-05",
+    category: "Sports",
+    sections: [
+      { type: "p", text: "India beat Japan 4-1 in the Asian Champions Trophy 2026 final on Thursday, November 5, to win a record-extending sixth title. The defending champions came from 1-0 down at half-time in Mohali, scoring three times in a stunning final quarter to complete a hat-trick of consecutive titles." },
+      { type: "p", text: "It was far from comfortable. Japan led at the break, and India needed 42 minutes to break through a disciplined Japanese defence. Once Shilanand Lakra scored, the floodgates opened — Dilpreet Singh, Jugraj Singh and Vivek Sagar Prasad all scored within 12 minutes to turn a scare into a celebration." },
+      { type: "h2", text: "India vs Japan Asian Champions Trophy Final: How the 4-1 Win Unfolded" },
+      { type: "p", text: "Japan struck first in the third minute. Kazumasa Matsumoto collected the ball on the left, worked his way into the circle and unleashed a powerful reverse hit that beat Indian goalkeeper Suraj Karkera. The early goal silenced the Mohali crowd and set the tone for a frustrating first half for the hosts." },
+      { type: "p", text: "India enjoyed spells of possession but could not find a way through. Japan's defensive structure held firm, Abhishek and Hardik Singh saw efforts kept out, and the hosts even lost an early review after an appeal for a push inside the circle was turned down. Japan earned penalty corners of their own in the second quarter, and Amit Rohidas had to produce a crucial block to deny Fujishima. India went into half-time trailing 0-1 and still searching for their first penalty corner of the match." },
+      { type: "h2", text: "Shilanand Lakra Sparks India's Comeback in the 42nd Minute" },
+      { type: "p", text: "India returned after the break with greater intent. Captain Harmanpreet Singh, one of the tournament's leading scorers, came close from a penalty corner, but Japanese goalkeeper Kisho Kuroda stood firm. Sukhjeet Singh saw an attempt saved and Harmanpreet's reverse flick from the rebound hit the post. The breakthrough came in the 42nd minute: after Harmanpreet's attempts were kept out by Kuroda, Aditya produced a superb reverse-flick pass that Shilanand Lakra converted from close range to make it 1-1." },
+      { type: "p", text: "Japan challenged the goal, claiming Aditya's pass was dangerous, but the TV umpire let it stand. The crowd found its voice, and India had the momentum for the final quarter." },
+      { type: "h2", text: "Three Goals in 12 Minutes: Dilpreet, Jugraj and Vivek Seal the Title" },
+      { type: "p", text: "India raised their intensity in the final quarter and took control. Hardik Singh played a key role in the second goal in the 48th minute, recovering possession after his initial pass was blocked and setting up Dilpreet Singh, who took a touch before producing a brilliant finish with his back to the goalkeeper to put India ahead for the first time." },
+      { type: "p", text: "Five minutes later, Vivek Sagar Prasad intercepted a pass in midfield before the ball reached Sukhjeet, whose effort earned India a penalty corner. Jugraj Singh stepped up and unleashed a thunderous drag-flick to make it 3-1 in the 53rd minute. A minute later, Nilakanta Sharma won a loose ball and started the move; Shilanand's initial effort was saved, and the rebound fell to Vivek Sagar Prasad, who smashed it past the keeper with a superb half-volley to make it 4-1." },
+      { type: "p", text: "Japan earned one final penalty corner with 10 seconds left, but India's defence blocked the drag-flick to end the contest and start the celebrations." },
+      { type: "list", items: [
+        "Full-time: India 4-1 Japan — Asian Champions Trophy 2026 final, Mohali, November 5, 2026.",
+        "Goals: Kazumasa Matsumoto 3' (Japan); Shilanand Lakra 42', Dilpreet Singh 48', Jugraj Singh 53', Vivek Sagar Prasad 54' (India).",
+        "India's sixth Asian Champions Trophy title — a record — and their third in a row after 2023 and 2024.",
+        "Previous India titles: 2011, 2016, 2018 (shared), 2023 and 2024. Pakistan are next with three titles.",
+        "Japan are still waiting for a maiden title after losing their third final, following 2013 and 2021."
+      ] },
+      { type: "h2", text: "India's Unbeaten Run to the Asian Champions Trophy Title" },
+      { type: "p", text: "The final win completed an unbeaten campaign for India. The hosts had already beaten Japan 4-1 in the league stage on October 30 in Jalandhar, and they thrashed South Korea 8-1 in the semi-final to reach the summit clash. Japan, meanwhile, had advanced to the final by beating Malaysia 5-3 in a shootout after a goalless draw in the other semi-final." },
+      { type: "p", text: "Hardik Singh, Harmanpreet Singh, Shilanand Lakra and Amit Rohidas all played key roles in the final, while Kuroda's goalkeeping kept Japan in the contest far longer than the scoreline suggests." },
+      { type: "h2", text: "What India's Sixth Asian Champions Trophy Title Means" },
+      { type: "p", text: "India are now the most successful team in Asian Champions Trophy history by a distance, with six titles — three more than Pakistan, the next-most successful side. The hat-trick of consecutive titles in 2023, 2024 and 2026 underlines a period of dominance in Asian hockey, and doing it at home in Mohali made the comeback all the sweeter." },
+      { type: "p", text: "For Japan, the wait goes on. They pushed the champions for three quarters and led at half-time, but they could not hold off India's final-quarter surge. It was their third defeat in an Asian Champions Trophy final, and the search for a first title continues." },
+      { type: "faq", items: [
+        { q: "What was the score in the India vs Japan Asian Champions Trophy 2026 final?", a: "India beat Japan 4-1 in the final on November 5, 2026, at the Olympian Balbir Singh Senior International Hockey Stadium in Mohali." },
+        { q: "Who scored for India in the final against Japan?", a: "Shilanand Lakra (42'), Dilpreet Singh (48'), Jugraj Singh (53') and Vivek Sagar Prasad (54') scored for India. Kazumasa Matsumoto (3') scored Japan's only goal." },
+        { q: "How many Asian Champions Trophy titles has India won?", a: "Six — a record. India won in 2011, 2016, 2018 (shared), 2023, 2024 and 2026. The 2026 win completed a hat-trick of consecutive titles." },
+        { q: "Where was the Asian Champions Trophy 2026 final played?", a: "At the Olympian Balbir Singh Senior International Hockey Stadium in Mohali, Punjab, on Thursday, November 5, 2026." },
+        { q: "Has Japan ever won the Asian Champions Trophy?", a: "No. Japan lost their third final in 2026, after defeats in the 2013 final to Pakistan and the 2021 final to South Korea." }
+      ] }
+    ],
+  },
+{
     slug: "motorola-signature-27-launched-price-specs-november-5-2026",
     image: "https://fdn.gsmarena.com/imgroot/news/26/11/motorola-signature-27-official/gsmarena_010.jpg",
     imageAlt: "Motorola Signature 27 in Pantone Coal Smoke, showing its triple rear camera system",
