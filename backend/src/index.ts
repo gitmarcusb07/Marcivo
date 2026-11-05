@@ -61,6 +61,7 @@ async function generateSitemapXml(): Promise<string> {
       `${SEO_SITE_URL}/category/bollywood`,
       `${SEO_SITE_URL}/blog`,
       `${SEO_SITE_URL}/blog/jailer-2-ott-release-date-november-12-prime-video-november-2026`,
+      `${SEO_SITE_URL}/blog/eloelo-story-tv-80-million-funding-nbcuniversal-microdrama-november-2026`,
       `${SEO_SITE_URL}/blog/chatgpt-images-2-6-gif-creation-faster-november-5-2026`,
       `${SEO_SITE_URL}/blog/ramayana-part-1-release-day-box-office-reviews-november-5-2026`,
       `${SEO_SITE_URL}/blog/ntt-docomo-no-cyberattack-5g-sa-outage-update-november-5-2026`,

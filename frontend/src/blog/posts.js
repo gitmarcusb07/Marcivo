@@ -33,6 +33,55 @@
 
 export const posts = [
 {
+    slug: "eloelo-story-tv-80-million-funding-nbcuniversal-microdrama-november-2026",
+    image: "https://images.pexels.com/photos/5077421/pexels-photo-5077421.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    imageAlt: "A woman wearing headphones watching a video on her smartphone, like viewers watching Story TV microdramas",
+    title: "EloElo Raises $80 Million for Story TV: NBCUniversal-Backed Microdrama Funding Explained",
+    description:
+      "EloElo has raised $80 million for Story TV, its microdrama platform, in a Series C led by NBCUniversal and Hornbill Capital at a reported $500M valuation.",
+    excerpt:
+      "EloElo Group has raised $80 million in a Series C round led by Hornbill Capital and NBCUniversal for Story TV, its microdrama platform with over 5,000 titles in six languages — at a reported $500 million valuation.",
+    date: "2026-11-05",
+    category: "Tech",
+    sections: [
+      { type: "p", text: "EloElo has raised $80 million for Story TV, its microdrama platform, in a Series C funding round led by Hornbill Capital and NBCUniversal. The Bengaluru-based company announced the round on November 4, 2026, and Reuters reported that the funding values EloElo at around $500 million. The raise takes the company's total funding to $130 million." },
+      { type: "p", text: "Microdramas are short-form series made for the phone screen: episodes that run for a couple of minutes each, released in daily drops and built to be watched in short bursts. Story TV has built a library of more than 5,000 microdramas across six Indian languages, launches a new drama every three hours, and says its users spend 95 minutes a day on the platform. Sensor Tower data cited by TechCrunch puts Story TV at more than 33 million active users." },
+      { type: "h2", text: "EloElo $80 Million Funding: Who Invested and Why" },
+      { type: "p", text: "The $80 million Series C was co-led by Hornbill Capital and NBCUniversal, with MIT Investment Co. joining alongside existing investors Play Ventures, Kalaari Capital, Waterbridge Ventures and Griffin Gaming Partners. Avendus Capital acted as the exclusive financial advisor. The round is about six times the size of EloElo's $13.5 million Series B from April 2025, and reports put the new valuation at nearly five times the previous round's level." },
+      { type: "p", text: "Founder and CEO Saurabh Pandey, a former Flipkart executive who started EloElo in 2020, told Fortune India the money will go to three things: premium microdrama originals across Indian languages, taking Story TV international, and doubling down on AI, particularly Dolphin AI, the company's agentic AI creative suite. The US is the most exciting international market on the company's list, though Pandey said it is too early to pick launch markets." },
+      { type: "list", items: [
+        "Company: EloElo Group, Bengaluru; founded in 2020 by former Flipkart executive Saurabh Pandey.",
+        "Round: $80 million Series C, led by Hornbill Capital and NBCUniversal.",
+        "Other investors: MIT Investment Co., Play Ventures, Kalaari Capital, Waterbridge Ventures and Griffin Gaming Partners.",
+        "Valuation: reported at around $500 million by Reuters; not confirmed by the company.",
+        "Total raised: $130 million, including a $13.5 million Series B in April 2025.",
+        "Platform: Story TV — over 5,000 microdramas in six languages, a new drama every three hours, 95 minutes of daily time spent per user."
+      ] },
+      { type: "h2", text: "Why NBCUniversal Is Betting on Indian Microdramas" },
+      { type: "p", text: "The bet is on a format that is growing fast. Research group Omdia expects the global microdrama industry to generate $14 billion in revenue by the end of 2026. In India, Redseer estimates monthly microdrama revenue jumped from Rs 35 crore in April 2025 to Rs 383 crore in June 2026, with Indians watching around 800 million episodes a day. Pandey's pitch is simple: a billion people reach for the phone before any other screen, and the entertainment built for them will be video-first, in their own language, in episodes that fit their day." },
+      { type: "p", text: "The other part of the pitch is AI. Around 75 to 80 percent of the workflows behind EloElo's microdramas are already powered by AI, and Pandey says production costs have fallen even as output has nearly doubled in recent months. The company is pushing hybrid production, where AI replaces expensive visual effects and location shoots. EloElo also has a partnership with Balaji Telefilms, announced in June, to produce original mobile-first dramas." },
+      { type: "h2", text: "The Catch: Most Microdrama Viewers Do Not Pay Yet" },
+      { type: "p", text: "The funding news comes with a real question mark over the business model. A Meta-Ormax survey found that only 28 percent of Indian microdrama viewers have ever paid for the format, and just 17 percent hold an active subscription. EloElo's own filed figures show the gap: in FY25 the company reported operating revenue of Rs 69.5 crore, all from in-app purchases, against total expenses of about Rs 174 crore. Its FY26 accounts have not been filed yet." },
+      { type: "p", text: "EloElo is not the only company finding the format expensive. Peak XV-backed Dashverse has reportedly been shutting its microdrama app to focus on AI video software, and Pocket FM closed its Pocket TV attempt before trying again with Pocket Saga. Pandey says EloElo's focus is on growth with profitability, and the company plans to expand into more Indian languages, especially in southern markets. Whether the $80 million turns Story TV into the Netflix of microdramas — Pandey's own words are that there is no Netflix of microdramas yet and EloElo has a shot at the title — will depend on converting free viewers into paying ones." },
+      { type: "h2", text: "How to Watch Story TV Microdramas" },
+      { type: "steps", items: [
+        "Get the Story TV app from your phone's app store.",
+        "Pick a language — the platform offers microdramas in six Indian languages.",
+        "Choose a drama from the library of more than 5,000 titles and start watching — episodes run for a couple of minutes each.",
+        "Check back often: a new drama launches on Story TV every three hours.",
+        "Story TV runs on a freemium model, so some episodes and features are paid through in-app purchases."
+      ] },
+      { type: "faq", items: [
+        { q: "What is Story TV?", a: "Story TV is EloElo Group's microdrama platform: short, vertical video dramas made for phones, with over 5,000 titles across six Indian languages and a new drama launched every three hours." },
+        { q: "How much did EloElo raise?", a: "EloElo raised $80 million in a Series C round announced on November 4, 2026, taking its total funding to $130 million." },
+        { q: "Who led the EloElo funding round?", a: "Hornbill Capital and NBCUniversal co-led the round, with MIT Investment Co. and existing investors also participating." },
+        { q: "What is EloElo's valuation?", a: "Reuters reported a valuation of around $500 million, citing a person with direct knowledge. The company has not confirmed the figure." },
+        { q: "Is Story TV free to watch?", a: "Story TV runs on a freemium model: you can watch for free, with some episodes and features paid through in-app purchases." },
+        { q: "What is Dolphin AI?", a: "Dolphin AI is EloElo's in-house agentic AI creative suite, used to speed up microdrama production. The company plans to invest part of the new $80 million in it." }
+      ] }
+    ]
+  },
+{
     slug: "jailer-2-ott-release-date-november-12-prime-video-november-2026",
     image: "https://image.tmdb.org/t/p/original/upwdEyhhYZ7pT2hD535fr2MGfpx.jpg",
     imageAlt: "Official theatrical poster of Jailer 2 featuring Rajinikanth as Tiger Muthuvel Pandian",
