@@ -33,6 +33,138 @@
 
 export const posts = [
 {
+    slug: "nasa-swift-telescope-falls-earth-indonesia-november-2026",
+    image: "https://psu-gatsby-files-prod.s3.amazonaws.com/s3fs-public/styles/16_9_1000w/public/2024/10/swift_telescope.jpg?h=e03c662a&itok=uI0ahQzD",
+    imageAlt: "NASA's Neil Gehrels Swift Observatory telescope in space",
+    title: "NASA Swift Telescope Falls to Earth Over Indonesia After 22 Years in Space",
+    description:
+      "NASA Swift telescope falls to Earth over Indonesia after 22 years: the Neil Gehrels Swift Observatory burned up on re-entry after a failed rescue mission.",
+    excerpt:
+      "NASA's 22-year-old Neil Gehrels Swift Observatory burned up over Indonesia on re-entry, ending a mission that was planned to last just two years.",
+    date: "2026-11-05",
+    category: "Tech",
+    sections: [
+      { type: "p", text: "NASA Swift telescope falls to Earth is the story space fans woke up to on November 5, 2026: NASA's 22-year-old Neil Gehrels Swift Observatory plunged back into the atmosphere over Indonesia, burning up and ending one of the most productive missions in modern astronomy. The US Space Force confirmed that the 1,452-kilogram spacecraft re-entered the atmosphere at 7:39 am EST (12:39 GMT) over North Sumatra province, travelling at around 22 times the speed of sound." },
+      { type: "p", text: "No damage or injuries were reported on the ground, and NASA had expected most of the spacecraft to disintegrate in re-entry heat, although some denser fragments may have survived. The agency had assessed the risk of harm to anyone on Earth at about one in 2,100." },
+      { type: "h2", text: "NASA Swift Telescope Falls to Earth: What Happened on Re-Entry" },
+      { type: "p", text: "Swift's return was not a surprise to the people tracking it. Its orbit had been sinking for months because of increased drag from the upper atmosphere, made worse by intense solar activity over the past couple of years as the Sun reached the peak of its 11-year cycle in 2024. As the atmosphere expanded, drag on Swift grew, its orbit dropped to just 275 kilometres above Earth, and the observatory could no longer compensate. It officially stopped gathering scientific data, and a team at Penn State, NASA's partner on the project, sent the final kill-switch command on October 20, 2026." },
+      { type: "p", text: "From there, gravity did the rest. Swift streaked into the upper atmosphere over Indonesia, near 3.4 degrees north and 98.6 degrees east, according to NASA's update. Those coordinates mark where it entered the atmosphere, not a confirmed debris impact point, and NASA did not report debris found in North Sumatra. It was not immediately clear how close the point was to Medan, home to about 2.5 million people, but no damage or injuries were reported." },
+      { type: "h2", text: "The Failed Rescue Mission That Sealed Swift's Fate" },
+      { type: "p", text: "Swift's end came less than three months after a long-shot rescue mission failed. In July 2026, NASA hired Arizona-based start-up Katalyst Space to try to save the telescope. Its LINK spacecraft, a three-armed robotic craft, was designed to attach itself to Swift and push it into a higher orbit, extending its life. Instead, LINK began spinning uncontrollably after reaching space, and mission managers had to abandon the attempt. Reports say the rescue craft itself came crashing down in September 2026." },
+      { type: "p", text: "That failure mattered because Swift had no easy replacement waiting. NASA's reporting notes it does not have an established observational replacement waiting in the wings, and the rescue was a first-of-its-kind attempt to catch a satellite never built to be serviced." },
+      { type: "h2", text: "What Swift Discovered in 22 Years" },
+      { type: "list", items: [
+        "Launched on November 20, 2004, from Cape Canaveral on a Delta II rocket, on what was expected to be a two-year study of gamma-ray bursts and exploding stars.",
+        "Gamma-ray bursts: Swift studied the most powerful explosions known in the universe, rapidly pinpointing bursts so other telescopes could follow up.",
+        "Supernovae, black holes, X-ray flares, asteroids and comets: the mission widened far beyond its original brief, contributing to around 7,000 scientific research papers.",
+        "A 22-year working life: Swift operated for more than ten times its planned two-year mission, far beyond what its designers expected.",
+        "A multi-wavelength eye: Swift combined gamma-ray, X-ray and ultraviolet and optical observations, letting astronomers catch cosmic explosions in several kinds of light at once."
+      ] },
+      { type: "p", text: "That record is why astronomers are mourning Swift even though its fall was expected: a telescope built for two years gave science more than two decades of data, right up until its orbit could no longer be held." },
+      { type: "h2", text: "Is Falling Space Debris Dangerous?" },
+      { type: "p", text: "Should people worry about satellites falling on them? The short answer is that the risk is very low. An engineer quoted by Reuters noted that satellites of this size re-enter regularly, and in nearly 70 years of spaceflight no one has ever been killed by falling debris. Most of a spacecraft burns up high in the atmosphere." },
+      { type: "p", text: "NASA's one-in-2,100 estimate was its pre-re-entry assessment of harm to anyone on Earth, and the outcome so far matches it, with no damage or injuries reported. Re-entries are not risk-free, and agencies track large objects closely, but Swift's finale is the normal end for a low-orbit satellite that can no longer stay up." },
+      { type: "h2", text: "NASA Swift Telescope Falls to Earth: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "When did the NASA Swift telescope fall to Earth?", a: "The Neil Gehrels Swift Observatory re-entered Earth's atmosphere at 7:39 am EST (12:39 GMT) over North Sumatra, Indonesia, as confirmed by the US Space Force and reported by NASA." },
+        { q: "Why did Swift fall from orbit?", a: "Increased solar activity expanded the upper atmosphere, raising drag on Swift until its orbit sank to about 275 kilometres and it could no longer compensate. A July 2026 rescue mission by Katalyst Space failed, leaving no way to boost it higher." },
+        { q: "Was anyone hurt by Swift debris?", a: "No damage or injuries were reported on the ground. NASA expected most of the 1,452-kilogram spacecraft to burn up, with only some denser fragments possibly surviving, and had assessed the risk of harm at about one in 2,100." },
+        { q: "What did Swift study?", a: "Swift launched in 2004 to study gamma-ray bursts, the universe's most powerful explosions, and went on to observe supernovae, black holes, X-ray flares, asteroids and comets, contributing to around 7,000 research papers." },
+        { q: "Is there a replacement for Swift?", a: "NASA has noted that Swift does not have an established observational replacement waiting in the wings, which is part of why the failed rescue mission mattered so much." }
+      ] },
+      { type: "p", text: "NASA Swift telescope falls to Earth marks the end of a mission that outlived its plan by twenty years and changed how astronomers chase cosmic explosions. Swift is gone, burned up over Indonesia after a failed rescue and a slow orbital decline, but its two decades of observations will keep feeding research for years to come." }
+    ],
+  },
+{
+    slug: "telangana-bethupalli-boats-capsize-sdrf-missing-november-2026",
+    image: "https://www.thestatesman.com/wp-content/uploads/2023/07/20210723238L-1.jpg",
+    imageAlt: "Floodwaters in Telangana during heavy rain (file image)",
+    title: "Telangana Bethupalli Boats Capsize: SDRF Personnel Feared Missing in Khammam Flood Rescue",
+    description:
+      "Bethupalli boats capsize: SDRF and Fire Services personnel are feared missing after two rescue boats capsized in a swollen Khammam lake during a flood rescue.",
+    excerpt:
+      "Two rescue boats capsized in the swollen Bethupalli lake in Telangana's Khammam district on Wednesday evening, leaving SDRF and Fire Services personnel feared missing as a search continues.",
+    date: "2026-11-05",
+    category: "News",
+    sections: [
+      { type: "p", text: "Bethupalli boats capsize is the developing story from Telangana on November 5, 2026: about 10 State Disaster Response Force (SDRF) and Fire Services personnel are feared missing after two rescue boats capsized during an operation to save fishermen stranded in a swollen lake in Khammam district. The incident happened on Wednesday evening at Bethupalli lake in Sathupalli mandal, where heavy rain linked to Cyclone Murasu had pushed water levels sharply higher." },
+      { type: "p", text: "A caution runs through every report: the exact missing number differs between sources, some saying 10 and others 11 including local guides, with a Thursday morning local update narrowing the still-untraced group to six SDRF personnel and a guide, with four Fire Services personnel found safe. This post reports those differences honestly, because the search was still ongoing and officials had not issued a single final count." },
+      { type: "h2", text: "Bethupalli Boats Capsize: How the Rescue Went Wrong" },
+      { type: "p", text: "The rescue began when fishermen entered Bethupalli lake to set up fishing nets, and the water level suddenly rose, leaving them stranded. Reports say the lake was overflowing, with water flowing around three feet above its spillway, after continuous rain under the impact of Cyclone Murasu in Khammam district, which borders Andhra Pradesh." },
+      { type: "p", text: "An initial Fire Services team went out to the fishermen, and according to several reports its boat suffered engine failure. A larger Kothagudem team then launched two boats, rescued the first crew, and was heading for the remaining fishermen when both boats capsized in strong currents, sweeping the personnel into the reservoir, and in one account into the Thammileru stream." },
+      { type: "p", text: "The fishermen are reported safe: several reports say all five, and one local update all eight, were rescued. That is the one clear positive: the people the rescue set out to save got out, while the rescuers themselves became the missing." },
+      { type: "h2", text: "Search Operation: NDRF, SDRF and Drones at Bethupalli Lake" },
+      { type: "list", items: [
+        "Khammam District Collector Divakara T S and other senior officials rushed to the spot and are supervising the operation on site.",
+        "National Disaster Response Force (NDRF) teams were deployed, with units from Bhadrachalam and Kothagudem joining SDRF and Fire Services in the search.",
+        "Drones were reported to be dropping life jackets to people in the water as part of the search effort.",
+        "Telangana Revenue Minister Ponguleti Srinivasa Reddy said rescue teams had identified the possible location of the missing personnel and that they would be rescued safely.",
+        "Chief Minister A Revanth Reddy enquired about the incident, asked the District Collector to make all efforts to rescue the personnel, and directed Chief Secretary Sanjay Jaju to monitor the situation.",
+        "Union Minister of State for Home Bandi Sanjay Kumar confirmed that NDRF personnel had been deployed and were carrying out rescue operations on a war footing."
+      ] },
+      { type: "p", text: "Sathupalli MLA Matta Ragamayi also joined the efforts at the site. The collector, ministers and central deployment together show this is a full mobilisation, not a routine operation." },
+      { type: "h2", text: "Why the Numbers Differ, and What Is Not Yet Confirmed" },
+      { type: "p", text: "Different figures in different reports are normal in the first hours of a flood rescue. The Press Trust of India report said about 10 SDRF personnel were feared missing, citing official sources. Others put the total at 11, counting local guides. A Thursday morning local update, citing the Sathupalli MLA, said six SDRF personnel and a guide remained untraced, with four Fire Services personnel found safe nearby." },
+      { type: "p", text: "No death toll has been confirmed. The missing are described as feared missing, not confirmed dead. The honest summary is: around 10 to 11 rescue personnel were on the two boats, several were found safe, a group remains untraced, and the search continues." },
+      { type: "h2", text: "Cyclone Murasu and the Flood Risk Behind the Incident" },
+      { type: "p", text: "Bethupalli lake did not overflow in isolation. Khammam has had heavy rain under Cyclone Murasu, which weakened into a depression over east Telangana and adjoining coastal Andhra Pradesh, with heavy to extremely heavy rainfall in parts of Telangana, including Bhadradri Kothagudem. Swollen lakes and strong undercurrents turn a fishing trip into a rescue, and a rescue into a tragedy." },
+      { type: "p", text: "For people in the region today: floodwaters rise fast, currents in an overflowing tank are far stronger than they look, and rescue boats are at risk when a spillway runs three feet over. Stay away from swollen lakes and streams, do not attempt a private rescue in floodwater, and call disaster response teams instead." },
+      { type: "h2", text: "Bethupalli Boats Capsize: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "What happened at Bethupalli lake in Telangana?", a: "Two rescue boats capsized on Wednesday evening, November 4, 2026, during an operation to rescue fishermen stranded in the swollen Bethupalli lake in Sathupalli mandal, Khammam district, leaving SDRF and Fire Services personnel feared missing." },
+        { q: "How many personnel are missing?", a: "Reports differ: PTI-based reports say about 10, others say 11 including local guides, and a Thursday morning local update says six SDRF personnel and a guide remain untraced with four Fire Services personnel found safe. No single final official count had been confirmed when this post was written." },
+        { q: "Are the fishermen safe?", a: "Yes, according to the reports checked: the fishermen at the centre of the rescue were brought out safely, with later NDRF teams rescuing the remaining fishermen." },
+        { q: "Who is leading the search?", a: "Khammam District Collector Divakara T S is supervising on site, with NDRF teams from Bhadrachalam and Kothagudem, SDRF and Fire Services searching, and the Chief Minister and Chief Secretary monitoring the operation." },
+        { q: "What caused the lake to overflow?", a: "Heavy rainfall linked to Cyclone Murasu pushed Bethupalli lake over its spillway, with water reported flowing around three feet above it, creating the strong currents that capsized the boats." }
+      ] },
+      { type: "p", text: "Bethupalli boats capsize is still a live rescue, not a closed story. The fishermen are safe, the search continues, and the next official update, not speculation, will settle how many remain untraced." }
+    ],
+  },
+{
+    slug: "us-sanctions-india-couple-iran-shadow-fleet-november-2026",
+    image: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202508/scott-bessent-191622437-16x9_1.jpg?VersionId=7U_EiMJONlVNtUJO6BD33YJchMd9lDgw&size=690:388",
+    imageAlt: "US Treasury Secretary Scott Bessent, who announced the sanctions",
+    title: "US Sanctions India Couple Over Alleged Iran Shadow Fleet Maritime Fraud Network",
+    description:
+      "US sanctions India couple: Suniel Kumar Sharma and Jaspreet Preeti Shahid are sanctioned over an alleged network aiding Iran's shadow fleet with false flags.",
+    excerpt:
+      "The US Treasury has sanctioned Chandigarh-based Suniel Kumar Sharma and his wife Jaspreet Preeti Shahid, alleging they ran a maritime fraud network helping Iran's shadow fleet evade sanctions.",
+    date: "2026-11-05",
+    category: "News",
+    sections: [
+      { type: "p", text: "US sanctions India couple is the breaking international story on November 5, 2026: the United States has imposed sanctions on Chandigarh-based Suniel Kumar Sharma and his wife Jaspreet Preeti Shahid, alleging that they operated a vast criminal network that helped Iran's shadow fleet of oil tankers evade international restrictions through fraudulent maritime registrations and certifications. The action was announced by the US Treasury on Wednesday, November 4, US time, and reported across Indian outlets on Thursday morning." },
+      { type: "p", text: "Be precise: these are Treasury sanctions based on Treasury allegations, not criminal convictions. The Treasury says the couple provided false flags and fake certifications to vessels transporting Iranian petroleum, including for Iran's military and proxies. No public response from Sharma and Shahid was shown in the reports checked, and this post does not present the allegations as proven facts." },
+      { type: "h2", text: "US Sanctions India Couple: Who Was Designated and Why" },
+      { type: "p", text: "The Treasury said the network was run by Sharma and Shahid, based in Chandigarh, with activities dating back to at least 2014, when they allegedly attempted to impersonate Dominica's maritime flagging authority. From there, it alleges, the couple fraudulently claimed to represent countries including Guyana, Eswatini and Laos, issuing flags and certifications that let sanctioned vessels keep operating." },
+      { type: "p", text: "The couple also managed India-based entities used to establish fraudulent flagging registries, also designated. Named firms include Oceaniek Technologies India, whose managing director is Sharma, Aryavart Ship Management, and Singapore-based Eswatini Maritime Affairs and International Ship Registry. Ashwani Kumar Dhiman and Ishwinder Singh were identified as directors of associated businesses, with nine India-linked entities designated in total." },
+      { type: "h2", text: "How the Alleged False Flag Scheme Worked" },
+      { type: "list", items: [
+        "False flags: vessels allegedly sailed under flags of countries they had no genuine link to, hiding their true ownership and activity.",
+        "Fake certifications: the network allegedly issued fraudulent maritime certifications, vessel classification and seafarer training documents.",
+        "Fake registries: Sharma's network allegedly bought web domains and created websites claiming to offer flagging and certification services on behalf of the countries concerned, without authorisation from those governments.",
+        "Sanctions evasion: false flags and certifications allegedly allowed vessels carrying Iranian petroleum, including for Iran's military and proxies, to evade international restrictions and keep operating.",
+        "A seized ship: on April 22, 2026, the US Department of War seized the MAJESTIC X, a ship with a false Guyana flag that was carrying Iranian oil, according to Treasury-linked reporting."
+      ] },
+      { type: "p", text: "The Treasury argues the harm goes beyond evasion: false flags and fake certifications let vessels dodge safety and environmental rules, sailing with no indemnity insurance, so a spill could cause billions in damage to coastal economies. The department also issued an industry alert on the risk of dealing with potentially false-flagged vessels." },
+      { type: "h2", text: "Operation Economic Outcast and the Wider Crackdown" },
+      { type: "p", text: "The sanctions were imposed under Executive Order 13902, which targets key sectors of the Iranian economy, including petroleum, petrochemicals and aviation, and they form part of the Trump administration's Operation Economic Outcast, a campaign announced by Treasury Secretary Scott Bessent on August 24, 2026, to disrupt Iran's economic lifelines, cut off its oil revenues and restrict its ability to finance its activities." },
+      { type: "p", text: "In a separate action on the same day, Washington also sanctioned Turkiye-based Fugo Ground Services Inc, accusing it of providing ground-handling and other support to six US-sanctioned Iranian airlines, including Iran Air Tour, Saha Airlines, Sepehran Airlines, Varesh Airlines, Taban Airlines and Ata Airlines. Bessent warned that the US would continue to go after anyone supporting Tehran, saying: 'We know where you are, and we will sanction those who continue supporting the Iranian regime, whether by land, sea, or air.'" },
+      { type: "p", text: "The timing is political too: the sanctions came a day after Democrats made huge midterm gains, winning both houses of Congress, with voters angry about the Iran war and US inflation. The Treasury said last week its actions were decimating Iran's economy, driving the rial to new lows and inflation to around 90 percent, Treasury claims not independently verified here." },
+      { type: "h2", text: "What Sanctions Mean in Practice" },
+      { type: "p", text: "A designation does not put anyone in prison, but it has practical effects: assets under US jurisdiction are typically blocked, US persons are generally barred from dealing with designated names, and banks, shippers and insurers worldwide often avoid them. For a maritime network, that can mean lost insurance, port access and banking." },
+      { type: "p", text: "What remains unclear is the Indian side: whether Indian authorities will act in parallel, or whether the couple or companies will challenge the designations. None of that was confirmed on Thursday morning. The confirmed facts are the Treasury action, the names designated, and the allegations as stated." },
+      { type: "h2", text: "US Sanctions India Couple: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "Who did the US sanction over Iran's shadow fleet?", a: "Chandigarh-based Suniel Kumar Sharma and his wife Jaspreet Preeti Shahid, plus two other Indian nationals, Ashwani Kumar Dhiman and Ishwinder Singh, nine India-linked entities, and Turkiye-based Fugo Ground Services Inc." },
+        { q: "What are Sharma and Shahid accused of?", a: "The US Treasury alleges they ran a network providing false ship flags and fraudulent maritime certifications to vessels transporting Iranian petroleum, including for Iran's military and proxies, dating back to at least 2014. These are allegations, not court convictions." },
+        { q: "Under what authority were the sanctions imposed?", a: "Executive Order 13902, targeting Iran's petroleum, petrochemical and aviation sectors, as part of the Trump administration's Operation Economic Outcast campaign announced on August 24, 2026." },
+        { q: "What is Iran's shadow fleet?", a: "A term for tankers that use deceptive practices, such as false flags and ship-to-ship transfers, to move Iranian oil while evading international sanctions and detection." },
+        { q: "Does this mean the couple have been convicted?", a: "No. A Treasury designation is a sanctions action based on the department's findings, not a criminal conviction, and the reports checked did not show a public response from the couple." }
+      ] },
+      { type: "p", text: "US sanctions India couple is a major Treasury action with a long alleged history, from a 2014 Dominica claim to a 2026 ship seizure, putting a Chandigarh network at the centre of Washington's campaign against Iranian oil revenues. The allegations are serious, the designations are real, and India's follow-up is the story to watch." }
+    ],
+  },
+{
     slug: "bgmi-air-india-launch-date-december-10-2026-closed-beta",
     image: "https://static.digit.in/WhatsApp-Image-2026-11-04-at-4.33.01-PM-872x1024.jpeg",
     imageAlt: "BGMI Air key art showing the game's helmeted character and BGMI Air branding",
