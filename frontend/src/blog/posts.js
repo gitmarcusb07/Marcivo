@@ -33,6 +33,54 @@
 
 export const posts = [
 {
+    slug: "jailer-2-ott-release-date-november-12-prime-video-november-2026",
+    image: "https://image.tmdb.org/t/p/original/upwdEyhhYZ7pT2hD535fr2MGfpx.jpg",
+    imageAlt: "Official theatrical poster of Jailer 2 featuring Rajinikanth as Tiger Muthuvel Pandian",
+    title: "Jailer 2 OTT Release Date: Rajinikanth's Rs 821 Crore Blockbuster Streams on Prime Video From November 12",
+    description:
+      "Jailer 2 OTT release date is November 12: Rajinikanth's record-breaking Tamil blockbuster streams on Prime Video in five languages. Dates, cast and box office.",
+    excerpt:
+      "Prime Video has confirmed Jailer 2 will stream from November 12, 2026 — just 28 days after its October 15 theatrical release — after the Rajinikanth film crossed Rs 821 crore worldwide to become the highest-grossing Tamil film of all time.",
+    date: "2026-11-05",
+    category: "Cinema",
+    sections: [
+      { type: "p", text: "Jailer 2 OTT release date is November 12, 2026. Prime Video confirmed on Thursday, November 5, that Rajinikanth's blockbuster will begin streaming exactly four weeks after its October 15 theatrical release — while the film is still running in cinemas. The announcement came with a short post: “TIGER MUTHUVEL PANDIAN is back. RELOADED. #Jailer2OnPrime, Nov 12.”" },
+      { type: "p", text: "The timing makes Jailer 2 one of the most talked-about OTT debuts of the year. The Nelson Dilipkumar film has crossed Rs 821 crore worldwide, per trade tracker Sacnilk, making it the highest-grossing Tamil film of all time — and it is heading to streaming just as Diwali releases take over its screens." },
+      { type: "h2", text: "Jailer 2 OTT Release Date: November 12 on Prime Video" },
+      { type: "p", text: "Jailer 2 will stream exclusively on Prime Video from November 12, 2026, in India and more than 240 countries and territories. Viewers can watch it in five languages: Tamil, Telugu, Hindi, Malayalam and Kannada. The original Jailer (2023) is already on Prime Video, so both chapters will be available on the same platform from November 12." },
+      { type: "p", text: "The November 12 date was not decided after Jailer 2 became a hit. It was fixed before the film released, as part of a four-week theatrical-to-OTT window agreed in the pre-release deal between Sun Pictures and Prime Video. That detail is at the heart of the debate around this release — and the reason exhibitors who hoped for a longer run are disappointed." },
+      { type: "h2", text: "Jailer 2 Box Office: Rs 821 Crore Worldwide and Counting" },
+      { type: "p", text: "Jailer 2's box office run is historic. Sacnilk puts the worldwide total at Rs 821 crore, with Rs 466.05 crore net and Rs 545.10 crore gross in India and around Rs 276 crore overseas. The film has passed 2.0's Rs 691 crore record to become the highest-grossing Tamil film ever, and it is the second-highest-grossing Indian film of 2026, behind only Dhurandhar: The Revenge." },
+      { type: "p", text: "The week-wise India numbers show how front-loaded the run was. Week 1 collected Rs 334.35 crore net in India and week 2 added Rs 95.55 crore, before daily collections settled into single digits. Day 22, the day Ramayana opened, brought just Rs 27 lakh net so far from 765 shows, and the show count collapsed from 8,004 to 1,241 in a single day. All figures are trade estimates from Sacnilk, not final studio collections." },
+      { type: "list", items: [
+        "Worldwide gross: Rs 821 crore (Sacnilk) — highest-grossing Tamil film of all time.",
+        "India net: Rs 466.05 crore; India gross: Rs 545.10 crore; overseas: around Rs 276 crore.",
+        "Week 1 India net: Rs 334.35 crore; week 2: Rs 95.55 crore.",
+        "Theatrical release: October 15, 2026; OTT premiere: November 12, 2026 — exactly 28 days later."
+      ] },
+      { type: "h2", text: "Why Jailer 2 Is Streaming So Soon: The Four-Week Window Row" },
+      { type: "p", text: "The short window has frustrated exhibitors. National multiplex chains PVR INOX and Cinepolis declined to screen Jailer 2 because its four-week digital window did not meet their eight-week requirement, so the Hindi version was largely restricted to independent cinemas. Veteran distributor Tiruppur Subramaniam asked Sun Pictures to postpone the OTT release, and the production house reportedly agreed to consider it. The announcement has now ended those hopes." },
+      { type: "p", text: "The debate is bigger than one film: Tamil exhibitors have repeatedly demanded longer theatrical windows, arguing that early digital premieres weaken the incentive to watch films on the big screen, while producers favour shorter windows for the financial security streaming deals provide. The Diwali competition makes the point moot anyway — Ramayana opened on November 5, and Scene and Mookuthi Amman 2 release on Friday, November 6." },
+      { type: "h2", text: "Jailer 2 OTT: Cast, Story and What to Expect on Prime Video" },
+      { type: "p", text: "Jailer 2 is written and directed by Nelson Dilipkumar and produced by Kalanithi Maran under the Sun Pictures banner, with music by Anirudh Ravichander. Rajinikanth returns as Tiger Muthuvel Pandian, the retired jailer who only wants a peaceful life — until an international idol-smuggling network gets in the way. To protect his family, he goes undercover as a driver and works his way into the gang." },
+      { type: "p", text: "The ensemble is one of the biggest ever assembled for a Tamil film. Mohanlal, Hrithik Roshan and Vijay Sethupathi appear in special roles, alongside SJ Suryah, Shivarajkumar, Suraj Venjaramoodu, Mithun Chakraborty, Vidya Balan and Ramya Krishnan. One detail to treat as unconfirmed: reports suggest the OTT version could run around 30 minutes longer, but neither the makers nor Prime Video has confirmed an extended cut." },
+      { type: "steps", items: [
+        "Open Prime Video and sign in to your Amazon account.",
+        "Search for “Jailer 2” from November 12, 2026 — the film premieres that day.",
+        "Pick your language: Tamil, Telugu, Hindi, Malayalam or Kannada."
+      ] },
+      { type: "h2", text: "Should You Watch Jailer 2 on OTT?" },
+      { type: "p", text: "If you skipped it in theatres — especially in Hindi, where multiplexes barely screened it — November 12 is your first proper chance to see the biggest Tamil film ever made. Watch it for Rajinikanth's return as Tiger Muthuvel Pandian and for an ensemble that puts Mohanlal, Hrithik Roshan and Vijay Sethupathi in the same film." },
+      { type: "faq", items: [
+        { q: "When is the Jailer 2 OTT release date?", a: "Jailer 2 streams on Amazon Prime Video from November 12, 2026, 28 days after its October 15, 2026 theatrical release." },
+        { q: "Where can I watch Jailer 2 online?", a: "Exclusively on Amazon Prime Video, in India and over 240 countries and territories, in Tamil, Telugu, Hindi, Malayalam and Kannada. A subscription is required." },
+        { q: "How much has Jailer 2 earned at the box office?", a: "Jailer 2 has crossed Rs 821 crore worldwide, per Sacnilk, with Rs 466.05 crore net in India. It is the highest-grossing Tamil film ever. These are trade estimates." },
+        { q: "Why is Jailer 2 coming to OTT so soon?", a: "The November 12 date was fixed before release under a four-week window agreed between Sun Pictures and Prime Video. PVR INOX and Cinepolis declined to screen the film over the short window, but the date was not changed." },
+        { q: "Is there an extended version of Jailer 2 on OTT?", a: "Reports suggest the OTT version could be around 30 minutes longer, but neither the makers nor Prime Video has confirmed this." }
+      ] }
+    ],
+  },
+{
     slug: "chatgpt-images-2-6-gif-creation-faster-november-5-2026",
     image: "https://images.fonearena.com/blog/wp-content/uploads/2026/11/OpenAI-Images-2.6-1024x576.jpg",
     imageAlt: "OpenAI Images 2.6 branding and illustration",
