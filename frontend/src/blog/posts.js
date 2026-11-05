@@ -33,6 +33,46 @@
 
 export const posts = [
 {
+    slug: "ntt-docomo-outage-japan-unauthorized-access-november-5-2026",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Shinjuku_Gyoen_National_Garden_and_NTT_DoCoMo_Yoyogi_Building,_Tokyo,_Japan.jpg/1280px-Shinjuku_Gyoen_National_Garden_and_NTT_DoCoMo_Yoyogi_Building,_Tokyo,_Japan.jpg",
+    imageAlt: "NTT Docomo's Yoyogi Building in Tokyo (file photo; the tower houses Docomo network equipment)",
+    title: "NTT Docomo Outage: Japan's Largest Carrier Hit by Nationwide Disruption After Suspected Unauthorized Access",
+    description:
+      "NTT Docomo outage: Japan's largest carrier reports nationwide disruption to calls, data and texts after suspending services over suspected unauthorized access.",
+    excerpt:
+      "NTT Docomo, Japan's largest mobile carrier, is experiencing a nationwide service disruption on Thursday, November 5, 2026, with calls, mobile data and text messages unstable across the country — hours after the company suspended its online shop and customer portal over suspected unauthorized access to its servers.",
+    date: "2026-11-05",
+    category: "Tech",
+    sections: [
+      { type: "p", text: "NTT Docomo outage: Japan's largest mobile carrier is experiencing a nationwide service disruption on Thursday, November 5, 2026, with voice calls, mobile data and text messages unstable across the country since late morning. The disruption comes hours after Docomo suspended its online shop and customer portal, saying an outside party had likely gained unauthorized access to its servers." },
+      { type: "p", text: "Docomo said the mobile service problems began at around 11:18 a.m. Japan time (around 7:48 a.m. IST), according to Kyodo News, and that it is investigating the cause. The company has not given a time for restoration, and it said it was unclear whether the suspected unauthorized access was linked to the mobile network disruption. Services offered by smaller providers that run on Docomo's network are also affected." },
+      { type: "h2", text: "NTT Docomo Outage: What Is Happening Right Now" },
+      { type: "p", text: "The carrier said voice calls, mobile data communications and texting have been unstable nationwide since late morning on Thursday. The problems are not limited to Docomo's own customers: mobile virtual network operators — smaller brands that sell service over Docomo's network — are affected too. Docomo said it was also checking whether emergency calls to 110 and 119, Japan's police and fire numbers, were affected." },
+      { type: "p", text: "Earlier in the day, before the network problems began, Docomo suspended its online shop and the My docomo customer portal. The suspension began at around 1:05 a.m. Japan time, leaving customers unable to sign up for plans, check bills or make contract changes. The company said it had concluded that an outside party had likely gained unauthorized access to its servers, and suspended the services to investigate. No estimate has been given for when they will return." },
+      { type: "list", items: [
+        "Around 1:05 a.m. JST, November 5: Docomo suspends its online shop and My docomo portal after concluding an outside party likely gained unauthorized access to its servers.",
+        "Around 11:18 a.m. JST (7:48 a.m. IST), November 5: voice calls, mobile data and texting become unstable across Japan, and Docomo says it is investigating.",
+        "Around noon JST, November 5: Docomo confirms a nationwide outage affecting calls, data and SMS, with smaller providers on its network also hit.",
+        "Afternoon JST, November 5: no restoration time announced; the cause is still under investigation, and the link to the suspected unauthorized access is unconfirmed."
+      ] },
+      { type: "h2", text: "Is the NTT Docomo Outage Linked to a Cyberattack?" },
+      { type: "p", text: "That is the question Docomo itself has not answered yet. What the company has confirmed is two separate facts: its servers were likely accessed by an outside party, and its mobile network later became unstable across the country. Docomo has said it is unclear whether the two are connected, and it has not described the server incident as a confirmed cyberattack or named any attacker. Until the company or investigators say more, the link between the two events should be treated as unproven, not as fact." },
+      { type: "p", text: "The distinction matters because a network outage and a server intrusion are different problems with different fixes. A network disruption can come from a configuration fault, equipment failure or congestion, while unauthorized server access points to a security incident in the company's online systems. Docomo is investigating both, and the priority for customers is the same either way: calls, data and texts that are hard to use, and online account services that are switched off." },
+      { type: "h2", text: "What NTT Docomo Customers Should Do During the Outage" },
+      { type: "p", text: "If you are in Japan and your Docomo service is unstable, the practical steps are simple. First, do not assume a single failed call means your phone is broken — the problem is network-wide, so retrying, toggling airplane mode or restarting the handset are the only immediate options. Second, avoid relying on Docomo's online shop or My docomo portal for urgent plan or billing changes, because those services are suspended while the company investigates the suspected unauthorized access." },
+      { type: "h2", text: "Why the NTT Docomo Outage Matters Beyond Japan" },
+      { type: "p", text: "Docomo is Japan's largest mobile carrier and a subsidiary of NTT, one of the world's biggest telecom groups, so a nationwide outage there is a major telecom event even for readers outside Japan. It also lands in a year of heavy pressure on telecom security: carriers hold the keys to their customers' calls, messages and mobile payments, which makes any suspected unauthorized access a serious matter even before it affects the network itself." },
+      { type: "p", text: "For the wider industry, the incident is a reminder that a carrier's websites and its radio network are separate systems that can fail on the same day for different reasons. The next updates to watch are Docomo's confirmation of the cause, a restoration time, and any statement on whether customer data was affected by the suspected unauthorized access." },
+      { type: "faq", items: [
+        { q: "When did the NTT Docomo outage start?", a: "Docomo said voice calls, mobile data and texting became unstable from around 11:18 a.m. Japan time on Thursday, November 5, 2026 — about 7:48 a.m. IST. The outage is nationwide." },
+        { q: "What services are affected by the NTT Docomo outage?", a: "Voice calls, mobile data and SMS texting are unstable across Japan. Smaller providers that use Docomo's network are also affected. Separately, Docomo's online shop and My docomo portal are suspended." },
+        { q: "Was the Docomo outage caused by a cyberattack?", a: "That is not confirmed. Docomo said an outside party likely gained unauthorized access to its servers and suspended its online services, but the company said it was unclear whether that was linked to the network outage. No attacker has been named." },
+        { q: "Is the NTT Docomo outage fixed yet?", a: "As of the latest reports on Thursday afternoon Japan time, no restoration time had been announced and the cause was still under investigation. Check Docomo's official status page for the latest update." },
+        { q: "Are emergency calls affected by the Docomo outage?", a: "Docomo said it was checking whether emergency calls to 110 and 119 were affected and would provide information as soon as it had it. If you need urgent help, try a landline or another network." }
+      ] }
+    ],
+  },
+{
     slug: "strait-of-hormuz-tankers-tugboat-fire-mine-strike-november-5-2026",
     image: "https://images.investinglive.com/cms/media/migrated/images/Strait%20of%20Hormuz_id_6881abc9-fc01-4219-b86c-567046ca794c_size975.jpg",
     imageAlt: "Oil tankers transiting a narrow strait (file photo; not the vessels involved in the November 5, 2026 fires)",
