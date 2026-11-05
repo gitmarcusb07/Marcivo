@@ -33,6 +33,48 @@
 
 export const posts = [
 {
+    slug: "bethupalli-all-11-rescued-november-2026",
+    image: "https://madhyamamonline.com/h-upload/2026/11/05/2942936-202611054003174-866890db-44ea-4f8e-a198-6bd07d6bf4c1.jpg",
+    imageAlt: "SDRF personnel in orange life jackets with a rescue boat during the overnight Bethupalli rescue operation (photo: Madhyamam)",
+    title: "Bethupalli Rescue: All 11 SDRF Personnel Rescued After Boats Capsize in Telangana Floods",
+    description:
+      "Bethupalli all 11 rescued: officials confirm every SDRF and Fire Services member is safe after boats capsized in Khammam's flooded lake.",
+    excerpt:
+      "Officials confirmed on Thursday morning, November 5, 2026, that all 11 people who went missing after two rescue boats capsized in Telangana's Bethupalli lake have been rescued safely, ending an overnight search in Khammam district.",
+    date: "2026-11-05",
+    category: "News",
+    sections: [
+      { type: "p", text: "Bethupalli all 11 rescued: officials confirmed on Thursday morning, November 5, 2026, that all 11 people who went missing after two rescue boats capsized in the flooded Bethupalli lake in Telangana's Khammam district have been rescued safely. The confirmation ends a night-long search that began on Wednesday evening, when the boats overturned while the team was trying to reach five fishermen stranded in the overflowing lake." },
+      { type: "p", text: "The short version is good news all round: the 11 rescue personnel are safe, and the five fishermen they had set out to save were also brought to safety on Wednesday night. Khammam District Collector Divakara T S told news agency PTI that all have been rescued, and news agency IANS reported the same confirmation from officials on Thursday morning." },
+      { type: "h2", text: "Bethupalli All 11 Rescued: How the Night-Long Operation Unfolded" },
+      { type: "p", text: "The rescue began as a rescue inside a rescue. Five fishermen had gone into Bethupalli lake, also called Bethupalli Peddacheruvu, in Sattupalli mandal to set fishing nets when heavy rain, linked to Cyclone Murasu, suddenly raised the water level and left them stranded in the middle of the overflowing tank." },
+      { type: "list", items: [
+        "Wednesday evening, about 7.30 pm: a team of 10 personnel and a local resident set out in two boats to reach the stranded fishermen, according to IANS. The team included six police personnel of the Kothagudem battalion and four members of the Fire Services Department.",
+        "Wednesday evening: both boats capsized in the strong current of the overflowing lake, sweeping all 11 occupants into the floodwaters. Siasat reported that the personnel managed to cling to trees near the shore before help reached them.",
+        "Wednesday, about 11.20 pm: an NDRF team dispatched from Vijayawada reached the five stranded fishermen and brought them to safety, IANS reported.",
+        "Thursday, 3 am: five of the missing personnel had been brought to safety, Khammam Collector Divakara T S told The Hindu.",
+        "Thursday morning: the remaining personnel were rescued, and by late morning officials confirmed that all 11 were safe, IANS and PTI reported."
+      ] },
+      { type: "p", text: "The operation was jointly conducted by teams of the National Disaster Response Force and the Fire Services Department, with the State Disaster Response Force, police and local officials involved through the night. Union Minister of State for Home Bandi Sanjay Kumar said on Wednesday that NDRF personnel had been deployed and were carrying out rescue operations on a war footing, and that he had spoken to the district collector to speed up the deployment." },
+      { type: "h2", text: "Why the Rescue Count Kept Changing Through the Morning" },
+      { type: "p", text: "If you followed the news on Thursday morning, the numbers seemed to move, and there is a simple reason: the rescue was still happening while the reports were being written. The Hindu, publishing at 8.43 am, reported that eight of the 11 had been rescued by Thursday morning and that the search was continuing for the remaining three. Other outlets updated through the morning as the last personnel were brought out, and by late morning the picture was settled." },
+      { type: "p", text: "That is why this post waited for the settled count. IANS reported at 9.02 am that all 11 people had been rescued by Thursday morning, Siasat updated its report at 10.46 am with the Collector's confirmation, and Madhyamam reported at 11.25 am that all 11 missing SDRF personnel had been rescued, with five brought to safety on Wednesday night and the remaining six early on Thursday morning." },
+      { type: "h2", text: "What Officials Said After the Bethupalli Rescue" },
+      { type: "p", text: "Telangana Revenue Minister Ponguleti Srinivas Reddy confirmed the rescue and praised the teams, officials and local representatives for coordinating the round-the-clock operation. The Collector, who supervised the late-night operation at the lake, told PTI: all have been rescued. The minister had said on Wednesday night that rescue teams had identified the possible location of the missing personnel and that they would be rescued safely." },
+      { type: "h2", text: "Cyclone Murasu and the Floods Behind the Accident" },
+      { type: "p", text: "The accident happened in the middle of the disruption caused by Cyclone Murasu, which has brought heavy rainfall to Khammam district and neighbouring areas. The Bethupalli tank was overflowing when the fishermen went in, and the strong current that capsized the two boats was the same floodwater that had stranded the fishermen in the first place. It is a reminder of how quickly flood rescue can turn into a second emergency: the first team went in to save five people and ended up needing rescue itself, and it took a second wave of teams, working through the night, to bring everyone out." },
+      { type: "h2", text: "Bethupalli Rescue: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "Were all 11 people rescued at Bethupalli lake?", a: "Yes. Officials confirmed on Thursday morning, November 5, 2026, that all 11 people who went missing after two rescue boats capsized in Bethupalli lake, Khammam district, were rescued safely. Khammam Collector Divakara T S told PTI that all have been rescued." },
+        { q: "Who were the 11 people who went missing?", a: "Ten rescue personnel and a local resident. According to IANS, the team included six police personnel of the Kothagudem battalion and four Fire Services staff, who had set out with a local resident to rescue five stranded fishermen." },
+        { q: "What happened to the five fishermen?", a: "The five fishermen were rescued on Wednesday night itself. An NDRF team from Vijayawada reached them at about 11.20 pm and brought them to safety." },
+        { q: "When did the Bethupalli boats capsize?", a: "On Wednesday evening, November 4, 2026, at about 7.30 pm, when the team set out in two boats across the overflowing Bethupalli lake in Sattupalli mandal, Khammam district. Both boats capsized in the strong current." },
+        { q: "Why did early reports give different numbers?", a: "The rescue was still under way when the first reports were published. The Hindu reported at 8.43 am on Thursday that eight had been rescued and three were still being searched for; later reports confirmed all 11 safe once the operation finished." }
+      ] },
+      { type: "p", text: "The Bethupalli rescue ends as a rare piece of good news from a flood: eleven rescuers went into dangerous water to save five fishermen, the boats overturned, and by Thursday morning every one of them was safe." }
+    ],
+  },
+{
     slug: "india-social-media-safe-harbour-section-79-proposal-november-2026",
     image: "https://www.cidrap.umn.edu/sites/default/files/styles/article_detail/public/article/Social%20media%20icons%20on%20phone_0_0.jpg?itok=qWxRe771",
     imageAlt: "Social media app icons on a smartphone screen (file image)",
