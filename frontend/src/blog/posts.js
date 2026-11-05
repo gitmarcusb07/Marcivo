@@ -33,6 +33,92 @@
 
 export const posts = [
 {
+    slug: "chatgpt-images-2-6-gif-creation-faster-november-5-2026",
+    image: "https://images.fonearena.com/blog/wp-content/uploads/2026/11/OpenAI-Images-2.6-1024x576.jpg",
+    imageAlt: "OpenAI Images 2.6 branding and illustration",
+    title: "ChatGPT Images 2.6 Is Here: Turn Photos Into GIFs With 50% Faster Image Generation — Features, Price and How to Use It",
+    description:
+      "ChatGPT Images 2.6 is live: turn photos and prompts into animated GIFs, with 50% faster image generation in ChatGPT, Codex and the API. Full details.",
+    excerpt:
+      "OpenAI has launched ChatGPT Images 2.6, its new image generation model, with animated GIF creation, 50% faster generation and two new API models — live now in ChatGPT, Codex and the API.",
+    date: "2026-11-05",
+    category: "Tech",
+    sections: [
+      { type: "p", text: "ChatGPT Images 2.6 is here, and it can turn your photos into animated GIFs. OpenAI launched Images 2.6 on Wednesday, November 5, 2026, in ChatGPT, Codex and its developer API, with image generation up to 50% faster and a headline feature: turning a text prompt, a photo or even a rough sketch into a short looping GIF." },
+      { type: "p", text: "The launch comes just two months after Images 2.5, and it arrives as image generation becomes one of ChatGPT's biggest features. OpenAI says people are now generating more than 4 billion images every week across ChatGPT, Codex and the API, up from 3 billion a week in September." },
+      { type: "h2", text: "ChatGPT Images 2.6: Turn Photos and Prompts Into GIFs" },
+      { type: "p", text: "The biggest addition in ChatGPT Images 2.6 is native GIF creation. Users can describe the motion they want in plain language, upload an existing image, or start from a simple sketch, and the model returns a short animated GIF. You can adjust the animation speed and view or edit individual frames after the GIF is generated." },
+      { type: "p", text: "OpenAI highlights uses such as animating brand mascots and product shots, creating social media reaction GIFs and memes, and building animated storyboards before producing a video. A simple sketch can become an animated character that can be used in videos or games. It is not a full video generation tool — Images 2.6 focuses on short loops rather than longer clips." },
+      { type: "p", text: "GIF creation is rolling out gradually, so some accounts may not see it immediately. OpenAI has added safeguards to detect sexualised motion and harmful meanings that may only emerge across animation frames; in its own evaluation the moderation system achieved 77.7% recall, and OpenAI notes the safeguards may not catch every violation." },
+      { type: "h2", text: "ChatGPT Images 2.6 Is 50% Faster — and Two New API Models" },
+      { type: "p", text: "Images 2.6 generates images up to 50% faster than the previous generation. For developers, the API offers two new models: GPT-Image-2.6 Flare and GPT-Image-2.6 Sunburst. Flare focuses on improving layout quality for posters, product imagery and professional visuals, and at low quality it can generate an image in as little as six seconds. Sunburst targets higher-quality generation, with more detail and greater consistency across edits at medium and high quality." },
+      { type: "p", text: "The update also improves editing. Images 2.6 keeps characters and products more consistent across editing rounds, and it can finely edit targeted areas while preserving their unique characteristics. A useful everyday change is reference image retention: you can keep reference images of yourself, your pets and your characters ready to reuse, without uploading them again every time." },
+      { type: "h2", text: "ChatGPT Images 2.6: SVG Export, Image Markup and New Controls" },
+      { type: "p", text: "Beyond GIFs and speed, Images 2.6 adds several features for creators and developers. Images can now be exported as SVG files, which is useful for scalable graphics on websites, apps and print. The image markup feature from ChatGPT is now available through the API, letting developers identify precise areas of an image for changes." },
+      { type: "p", text: "Two new settings give more control over generation. A complexity control adjusts how much planning the model applies to an image — OpenAI recommends low complexity for most edits and medium or high for images with multiple elements or constraints. A separate quality control adjusts visual detail and fidelity independently." },
+      { type: "h2", text: "ChatGPT Images 2.6 Availability, Safety and Pricing" },
+      { type: "p", text: "Images 2.6 is available in ChatGPT and Codex across all subscription tiers on the web, desktop and mobile apps, and developers can access both GPT-Image-2.6 Flare and Sunburst through the API." },
+      { type: "p", text: "On safety, Sunburst uses multiple checks across prompts, input images and generated outputs, and ChatGPT image generation adds synchronous CSAM classification alongside its existing moderation systems. Images generated through ChatGPT, Codex and the API include provenance measures such as C2PA metadata and SynthID invisible watermarking from Google DeepMind, to help identify AI-generated content." },
+      { type: "steps", items: [
+        "Open ChatGPT on the web, desktop or mobile app and start a new chat.",
+        "Describe the image you want, or upload a photo or sketch to animate.",
+        "Ask ChatGPT to turn it into a GIF, describing the motion you want.",
+        "Adjust the animation speed and edit individual frames, then share the GIF.",
+        "For a still image, use the same prompt flow — Images 2.6 generates it up to 50% faster."
+      ] },
+      { type: "h2", text: "Should You Try ChatGPT Images 2.6?" },
+      { type: "p", text: "If you make memes, social media content, product visuals or storyboards, Images 2.6 is worth trying today — the GIF feature is the most visible change, and the speed improvement makes everyday image generation noticeably quicker. The reference image feature is the quiet upgrade that matters most for repeat use: your character or product stays ready to reuse instead of needing a fresh upload every time. As with any AI image tool, check the output before publishing — especially for GIFs, where OpenAI itself says its motion safeguards may not catch every violation." },
+      { type: "faq", items: [
+        { q: "What is ChatGPT Images 2.6?", a: "Images 2.6 is OpenAI's latest image generation model, launched November 5, 2026, adding GIF creation and 50% faster generation in ChatGPT, Codex and the API." },
+        { q: "Can ChatGPT Images 2.6 turn photos into GIFs?", a: "Yes. You can turn a text prompt, an uploaded photo or a rough sketch into a short looping GIF, adjust the animation speed, and edit individual frames. GIF creation is rolling out gradually, so some accounts may not see it yet." },
+        { q: "Is ChatGPT Images 2.6 free?", a: "Images 2.6 is available globally across all ChatGPT and Codex tiers, including the free plan, on web, desktop and mobile. Developers can access Flare and Sunburst through the API, where usage is billed per token." },
+        { q: "What are GPT-Image-2.6 Flare and Sunburst?", a: "The two new API image models in Images 2.6. Flare focuses on layout quality for posters and product imagery, generating an image in as little as six seconds at low quality. Sunburst targets higher quality, with more detail and consistency across edits." },
+        { q: "How fast is Images 2.6 compared to Images 2.5?", a: "OpenAI says Images 2.6 is up to 50% faster than the previous generation. Images 2.5, launched in September 2026, had itself claimed a 50% improvement over Images 2.0." }
+      ] }
+    ],
+  },
+{
+    slug: "ramayana-part-1-release-day-box-office-reviews-november-5-2026",
+    image: "https://media.assettype.com/gulfnews%2F2026-11-05%2Fdystzdhv%2FEpic-Ramayana?w=1200&auto=format%2Ccompress&fit=max",
+    imageAlt: "Ranbir Kapoor as Rama with Sai Pallavi as Sita and Ravi Dubey as Lakshman in a still from Ramayana: Part 1",
+    title: "Ramayana Part 1 Released Today: Rs 130 Crore Advance Bookings, First Reviews In — Day 1 Box Office Live",
+    description:
+      "Ramayana Part 1 box office: Ranbir Kapoor's epic opened today with Rs 130 crore in advance bookings and warm first reviews. Day 1 collections live.",
+    excerpt:
+      "Ramayana: Part 1 opened in cinemas on November 5, 2026, after a record Rs 130.12 crore in advance bookings, with early reviews praising its scale, visuals and performances.",
+    date: "2026-11-05",
+    category: "Cinema",
+    sections: [
+      { type: "p", text: "Ramayana Part 1 box office: Nitesh Tiwari's epic opened in cinemas across India and the world on Thursday, November 5, 2026, and the first hours felt more like a festival than a film release. Fans turned theatres into temples, praying before life-size cutouts of Ranbir Kapoor as Lord Ram." },
+      { type: "p", text: "Released internationally as Ramayana: Rise of a Legend, the film stars Ranbir Kapoor as Lord Ram, Sai Pallavi as Sita and Yash as Ravana, with Sunny Deol as Hanuman and Ravi Dubey as Lakshman. Music is by A. R. Rahman and Hans Zimmer, and the visual effects come from DNEG, the Oscar-winning company behind Dune and Interstellar. It is the most expensive film project India has ever attempted, with a reported combined budget of around Rs 4,000 crore for both parts." },
+      { type: "h2", text: "Ramayana Part 1 Box Office: Rs 130 Crore Advance Bookings" },
+      { type: "p", text: "Sacnilk's final advance-booking report puts the film at Rs 130.12 crore gross in India, with 36.37 lakh tickets sold across 26,615 shows. For Thursday alone, advance bookings were worth Rs 50.08 crore including blocked seats — Rs 42.96 crore without them — from 12.14 lakh tickets. Overseas, opening-weekend advance sales are approaching $3 million, with North America contributing $2.15 million." },
+      { type: "p", text: "Early live tracking put the film at Rs 3.66 crore net in India (Rs 4.32 crore gross) within the first hour, rising to Rs 5.44 crore net by 8 am. Trade estimates vary: analysts project first-day net collections in India of Rs 90–100 crore, with worldwide opening-day estimates of Rs 100–150 crore to Rs 180–200 crore. All are trade estimates, not confirmed collections." },
+      { type: "p", text: "For all the scale, the film is not rewriting the advance-booking record books: at the national multiplex chains it sold about 3.25 lakh tickets ahead of release, 12th on the all-time list, while Dhurandhar 2 tops it with 8.75 lakh. Trade analyst Sumit Kadel expects the Hindi version to open at Rs 55–60 crore net and called the pre-sales underwhelming for a film of this size, though steep ticket prices could push Day 1 past Rs 60 crore." },
+      { type: "h2", text: "Ramayana Part 1 Reviews: What Critics and Audiences Are Saying" },
+      { type: "p", text: "The first reviews are mixed to positive, with critics commending the film's technical craft — especially the visual effects — and the performances of its leads. The Guardian awarded the film four stars out of five, with critic Peter Bradshaw calling it rousing and hugely enjoyable and likening its sweeping imagery to The Lord of the Rings and The Lion King. Not every note has been positive: several reviewers have flagged weaknesses in the English-dubbed version." },
+      { type: "p", text: "On IMDb the film is rated 7.2 out of 10 in early voting, while the Rotten Tomatoes Tomatometer stands at 45 per cent with reviews still coming in. Celebrity reactions have been effusive: Karan Johar praised Ranbir Kapoor as Lord Rama and Yash as Ravana, Vijay Deverakonda called it another giant leap for Indian cinema, and rapper Badshah said every frame is breathtaking and Jatayu steals the show." },
+      { type: "p", text: "On social media, Sai Pallavi has emerged as an early favourite — viewers say she seemed born to play Sita. At three hours and 15 minutes the film is long, but its U certificate from the CBFC opens it to family audiences over the Diwali weekend." },
+      { type: "h2", text: "Ramayana Part 1: Cast, Story and Where It Is Showing" },
+      { type: "p", text: "Ramayana: Part 1 is the first of a planned two-part adaptation of Valmiki's epic, directed by Nitesh Tiwari and produced by Namit Malhotra and Yash. It follows Prince Rama of Ayodhya through his marriage to Sita and the exile that sets up the conflict with Ravana, the demon king of Lanka. The second instalment, first planned for Diwali 2027, is now confirmed for Diwali 2028." },
+      { type: "list", items: [
+        "Ranbir Kapoor as Lord Ram, Sai Pallavi as Sita and Yash as Ravana, in his Hindi film debut.",
+        "Sunny Deol as Hanuman, Ravi Dubey as Lakshman, with Arun Govil and Lara Dutta in key roles.",
+        "Released in six languages, in IMAX 3D and other premium large formats, on around 59,000 screens worldwide."
+      ] },
+      { type: "h2", text: "Ramayana Part 1: What to Watch Next" },
+      { type: "p", text: "Three things will decide how big this opening is. First, the final Day 1 number, once evening and night shows are counted — the Hindi opening will be judged against the Rs 100 crore mark. Second, word of mouth over the Diwali weekend. Third, the overseas run, where the Middle East has not yet opened bookings and Ramayana has a clear run with Dhurandhar banned in the region." },
+      { type: "p", text: "The stakes are enormous: with a combined budget of around Rs 4,000 crore, Ramayana needs to become one of the biggest Indian films ever. The opening day will tell us whether it is on that path." },
+      { type: "faq", items: [
+        { q: "When did Ramayana Part 1 release?", a: "Ramayana: Part 1 released in cinemas worldwide on Thursday, November 5, 2026, ahead of Diwali, after paid previews the night before. Overseas it is titled Ramayana: Rise of a Legend." },
+        { q: "How much did Ramayana Part 1 earn in advance bookings?", a: "Sacnilk reports Rs 130.12 crore gross in India, with 36.37 lakh tickets sold. For Day 1 alone, advance bookings were worth Rs 50.08 crore including blocked seats. These are trade figures, not final collections." },
+        { q: "What is the Ramayana Part 1 Day 1 box office prediction?", a: "Analysts project first-day net collections in India of Rs 90–100 crore, with worldwide opening-day estimates of Rs 100–150 crore to Rs 180–200 crore. These are estimates; the confirmed figure comes after all shows are counted." },
+        { q: "What are critics saying about Ramayana Part 1?", a: "Early reviews are mixed to positive. The Guardian gave it four stars, praising its scale, visuals and score. On IMDb it is rated 7.2 out of 10 in early voting, and the Rotten Tomatoes Tomatometer stands at 45 per cent with reviews still coming in." },
+        { q: "Who stars in Ramayana Part 1?", a: "Ranbir Kapoor plays Lord Ram, Sai Pallavi plays Sita and Yash plays Ravana. Sunny Deol is Hanuman and Ravi Dubey is Lakshman, with music by A. R. Rahman and Hans Zimmer and direction by Nitesh Tiwari." }
+      ] }
+    ],
+  },
+{
     slug: "ntt-docomo-no-cyberattack-5g-sa-outage-update-november-5-2026",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/NTT_Docomo_Tamatsu_store.JPG/1280px-NTT_Docomo_Tamatsu_store.JPG",
     imageAlt: "An NTT Docomo shop in Japan (file photo)",
