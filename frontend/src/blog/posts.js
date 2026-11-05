@@ -33,6 +33,57 @@
 
 export const posts = [
 {
+    slug: "bgmi-air-india-launch-date-december-10-2026-closed-beta",
+    image: "https://static.digit.in/WhatsApp-Image-2026-11-04-at-4.33.01-PM-872x1024.jpeg",
+    imageAlt: "BGMI Air key art showing the game's helmeted character and BGMI Air branding",
+    title: "BGMI Air Launch Date: KRAFTON Confirms December 10, 2026 India Release After 14 Million Pre-Registrations",
+    description:
+      "BGMI Air launch date is December 10, 2026: KRAFTON India's lighter BGMI arrives after 14 million pre-registrations, with a closed beta from November 20 to 24.",
+    excerpt:
+      "KRAFTON India announced on November 4, 2026 that BGMI Air will launch in India on December 10, 2026, after crossing 14 million pre-registrations on Google Play.",
+    date: "2026-11-05",
+    category: "Gaming",
+    sections: [
+      { type: "p", text: "BGMI Air launch date is confirmed: KRAFTON India announced on November 4, 2026 that BGMI Air will launch in India on December 10, 2026. The lighter version of Battlegrounds Mobile India (BGMI) has already crossed 14 million pre-registrations on Google Play, showing strong demand for a BGMI that runs on phones with less storage and weaker hardware." },
+      { type: "p", text: "Here is the simple answer: BGMI Air arrives on December 10, 2026, as a separate app on Android, and you can pre-register now on Google Play. Existing BGMI players do not need to migrate anything, because BGMI Air works with your current account. Before launch, a closed beta runs from November 20 to November 24 in Mumbai, Delhi and Kolkata." },
+      { type: "h2", text: "What Is BGMI Air?" },
+      { type: "p", text: "BGMI Air is the lighter edition of BGMI, KRAFTON India's hugely popular battle royale game for India. It was first announced in August 2026 under the name BGMI Lite, and on October 15, 2026, KRAFTON renamed it BGMI Air, with the tagline that it is a lighter name with the same heavy action. The idea is simple: bring the core BGMI experience to players whose phones or storage kept the full game out of reach." },
+      { type: "p", text: "That lighter approach starts with the download. KRAFTON has confirmed an initial download size of around 1GB, far smaller than the full BGMI install, and no forced packages before your first match. The game targets entry-level smartphones and players with limited storage, while keeping the core battle royale gameplay the same." },
+      { type: "p", text: "BGMI Air is not a replacement for BGMI. It launches as a separate app, existing players keep their game and account without migration, and cross-play with BGMI is supported, so players on either version can play together." },
+      { type: "h2", text: "BGMI Air Launch Date and Pre-Registrations" },
+      { type: "list", items: [
+        "Launch date: December 10, 2026, in India, announced by KRAFTON India on November 4, 2026.",
+        "Pre-registrations: more than 14 million on Google Play, crossed before the launch date was announced.",
+        "Platform: Android, pre-registration open on Google Play.",
+        "Previous milestone: 10 million pre-registrations soon after the October 15 rename, then about 4 million more.",
+        "Download size: around 1GB for the initial download, with no forced packages before the first match."
+      ] },
+      { type: "p", text: "That growth is part of the story. BGMI already has more than 10 crore downloads in India, so a lighter version was always likely to find an audience, and crossing 14 million pre-registrations before a date was set shows many players were waiting for a version they could run comfortably." },
+      { type: "h2", text: "BGMI Air Closed Beta: Dates, Cities and How to Apply" },
+      { type: "p", text: "Before December 10, KRAFTON will run a closed beta from November 20 to November 24, 2026, in Mumbai, Delhi and Kolkata. Player feedback during the test will be used to improve the game before launch." },
+      { type: "steps", items: [
+        "Post a 15 to 60 second audition video explaining why you should be picked first, and tag the official handle.",
+        "Submit the form linked in the bio of BGMI Air's and BGMI's official Instagram account, @battlegroundsmobilein_official.",
+        "Check you meet the requirements: at least 18, a resident of India, with a valid government photo ID and an active BGMI account.",
+        "Watch BGMI Air's official channels for pre-launch details and rewards."
+      ] },
+      { type: "p", text: "One timing detail: Digit reports that beta applications close on November 9, so eligible players should not wait until the test starts. If you miss the beta, you can still pre-register on Google Play for December 10." },
+      { type: "h2", text: "BGMI Air vs BGMI: What Stays the Same and What Changes" },
+      { type: "p", text: "The biggest change is size and accessibility: a roughly 1GB initial download built for phones with less storage and more modest hardware. What stays the same is the core BGMI experience, including the same season, RP and event cycle. One honest gap remains: while promotional material has previously listed 1.5GB of RAM and an Adreno 306 GPU or higher, Gadgets 360 reported on November 4 that KRAFTON had not yet revealed the final minimum requirements, so treat those figures as a guide only." },
+      { type: "h2", text: "Should You Pre-Register for BGMI Air?" },
+      { type: "p", text: "If your phone struggles with the full BGMI download, or you regularly run out of storage, BGMI Air is clearly made for you, and pre-registering on Google Play is the simplest way to be notified at launch. If you already play BGMI comfortably, there is less reason to switch, but cross-play means you can still squad up with friends on the lighter version. Either way, pre-register, apply for the beta before November 9 if eligible, and watch KRAFTON's official channels for final requirements and launch rewards." },
+      { type: "h2", text: "BGMI Air Launch Date: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "When is the BGMI Air launch date in India?", a: "BGMI Air will launch in India on December 10, 2026, as announced by KRAFTON India on November 4, 2026." },
+        { q: "What is BGMI Air?", a: "BGMI Air is a lighter version of Battlegrounds Mobile India, formerly called BGMI Lite, designed for phones with limited storage and entry-level hardware, with an initial download of around 1GB." },
+        { q: "When is the BGMI Air closed beta?", a: "The closed beta runs from November 20 to November 24, 2026, in Mumbai, Delhi and Kolkata, for selected players who apply through the audition process." },
+        { q: "How do I apply for the BGMI Air closed beta?", a: "Post a 15 to 60 second audition video explaining why you should be picked, tag the official handle, and submit the form linked in the bio of BGMI Air's and BGMI's official Instagram account. Applicants must be at least 18, residents of India, with a valid government photo ID and an active BGMI account." },
+        { q: "Do I need a new account for BGMI Air?", a: "No. BGMI Air launches as a separate app, but existing BGMI players can play it with their current account, without migration, and cross-play with BGMI is supported." }
+      ] },
+      { type: "p", text: "BGMI Air's December 10, 2026 launch date ends months of waiting for a lighter BGMI, and its 14 million pre-registrations show the demand was already there. Apply for the beta before November 9 if eligible, pre-register on Google Play, and get ready for a BGMI that fits phones the full game left behind." }
+    ],
+  },
+{
     slug: "sharad-pawar-hospitalised-again-breach-candy-hospital-november-4-2026",
     image: "https://upload.wikimedia.org/wikipedia/commons/e/e4/The_Union_Minister_of_Consumer_Affairs%2C_Food_and_Public_Distribution_and_Agriculture%2C_Shri_Sharad_Pawar_presenting_Efficiency_Award_to_the_Nira_Bhima_Sahakari_Sakhar_Karkhana_Ltd._Shahajinagar%2C_Pune%2C_Maharashtra.jpg",
     imageAlt: "Sharad Pawar at a public event (file photo)",
