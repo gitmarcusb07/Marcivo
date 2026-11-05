@@ -33,6 +33,49 @@
 
 export const posts = [
 {
+    slug: "india-social-media-safe-harbour-section-79-proposal-november-2026",
+    image: "https://www.cidrap.umn.edu/sites/default/files/styles/article_detail/public/article/Social%20media%20icons%20on%20phone_0_0.jpg?itok=qWxRe771",
+    imageAlt: "Social media app icons on a smartphone screen (file image)",
+    title: "India Social Media Safe Harbour: Government Weighs Scrapping Legal Immunity for Facebook, Instagram, YouTube and X",
+    description:
+      "India social media safe harbour may end: the IT Ministry is weighing withdrawing Section 79 protection for Facebook, Instagram, YouTube and X.",
+    excerpt:
+      "The Union IT Ministry has begun discussions on withdrawing the blanket safe harbour protection that shields social media platforms from liability for user posts, a move that could reshape how Facebook, Instagram, YouTube and X operate in India.",
+    date: "2026-11-05",
+    category: "Tech",
+    sections: [
+      { type: "p", text: "India social media safe harbour is the tech-policy story of November 5, 2026: the Union IT Ministry has begun discussions on overhauling India's social media rules, including a proposal to withdraw the legal immunity protecting platforms such as Facebook, Instagram, YouTube and X from liability for user posts. Business Standard reported it late on November 4, citing officials, and The Indian Express flagged it in its November 5 blog." },
+      { type: "p", text: "Be clear about the status first: nothing has been decided and no law introduced, so the existing protection remains in place. The discussions are described as preliminary, stakeholder consultations would be needed, and any withdrawal would require an amendment to the Information Technology (IT) Act, 2000, passed by Parliament. The Ministry of Electronics and Information Technology did not respond to Business Standard's email seeking comment before publication." },
+      { type: "h2", text: "India Social Media Safe Harbour: What Section 79 Currently Protects" },
+      { type: "p", text: "Section 79 of the IT Act, 2000 gives online intermediaries conditional protection, often called safe harbour, against liability for third-party content they host or transmit. It has let social media companies host huge volumes of user posts without automatically assuming responsibility for each item, provided they do not initiate transmission, select the recipient or modify the information, and follow due-diligence rules." },
+      { type: "p", text: "The protection is not absolute even today. It does not apply if an intermediary abets an unlawful act, and it is withdrawn for specific content if the platform, after a government notice or court order, fails to remove it. What the government now weighs is different: withdrawing blanket protection for social media platforms as a class, rather than case by case." },
+      { type: "h2", text: "Why the Government Says Algorithms Change the Argument" },
+      { type: "p", text: "The core of the government's case, as reported, is that today's platforms are not passive pipelines. A senior official told Business Standard that any intermediary using algorithms to decide the ranking, placement, promotion or suppression of user content is no longer just a pipeline to ferry such content but has an active role in deciding its fate, so blanket safe harbour needs a relook." },
+      { type: "p", text: "Another official raised the child-safety angle: if an algorithm decides what a user should be shown, who is responsible if explicit content is inadvertently shown to a user below 18? Officials also pointed to a video uploaded by Prime Minister Narendra Modi temporarily withheld on Facebook during student protests, and questions about how recommendation systems amplify political content." },
+      { type: "h2", text: "What Would Change, and What Would Stay Exempt" },
+      { type: "list", items: [
+        "Social media platforms could lose blanket protection: Facebook, Instagram, YouTube and X are the platforms named in the reporting, and they could face greater legal liability over user-generated content, including algorithm-driven ranking.",
+        "Pure carriers would stay protected: only platforms enabling peer-to-peer messaging without interfering with content delivered from one user to another would be exempt, according to the official quoted by Business Standard.",
+        "A direct takedown route for deepfakes: the government is also likely to propose letting users approach intermediaries directly to request removal of a deepfake or non-consensual image or video affecting them, instead of first filing a police complaint or getting a court order.",
+        "Advance notice of risky features: a separate proposal would require social media and messaging companies to inform authorities before introducing major features that could affect user safety, following concerns over a planned WhatsApp username feature and its possible use for impersonation or fraud.",
+        "No immediate legal effect: because withdrawal needs an IT Act amendment and consultations, officials themselves say the process is likely to take some time."
+      ] },
+      { type: "p", text: "The context matters. X challenged the government's Sahyog portal, used to transmit content-removal notices; the Karnataka High Court dismissed that challenge in September 2025, after which the company appealed. The Supreme Court has also warned that removing safe harbour for routine violations could be excessive, suggesting proportionate penalties instead." },
+      { type: "h2", text: "What It Could Mean for Users and Creators" },
+      { type: "p", text: "If safe harbour is narrowed, platforms would have a stronger incentive to police what their algorithms surface, which supporters argue is the point: companies profiting from amplification should answer for decisions increasing the reach of harmful material. For users hit by deepfakes or non-consensual images, a direct takedown route could mean faster removal." },
+      { type: "p", text: "The counter-argument is over-removal. Critics worry that greater legal exposure could push platforms to take down lawful posts pre-emptively, chilling legitimate speech. Technology companies are also expected to oppose a change striking at the business model built on hosting user content at scale. How the government balances those risks will decide whether this becomes a surgical change aimed at algorithmic amplification or a broader shift in internet governance." },
+      { type: "h2", text: "India Social Media Safe Harbour: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "Has India removed safe harbour protection for social media platforms?", a: "No. The IT Ministry has only begun preliminary discussions, according to Business Standard and The Indian Express. No decision has been announced and no law introduced, so Section 79 protection remains in place." },
+        { q: "What is Section 79 safe harbour?", a: "Section 79 of the IT Act, 2000 protects online intermediaries from liability for third-party content they host, provided they do not initiate or modify it and follow due-diligence rules. It does not protect a platform that abets an unlawful act or ignores a removal notice." },
+        { q: "Which platforms would be affected?", a: "The reporting names Facebook, Instagram, YouTube and X. Platforms only enabling peer-to-peer messaging without interfering with content would be exempt." },
+        { q: "Why does the government want to change it?", a: "Officials argue that platforms using algorithms to rank, promote or suppress content are no longer passive pipelines, so blanket protection needs a relook, including where algorithms surface explicit content to users below 18." },
+        { q: "What happens next?", a: "Officials say stakeholder consultations are needed, and withdrawing protection would require amending the IT Act, 2000, with Parliament's approval, so the process is likely to take some time." }
+      ] },
+      { type: "p", text: "India social media safe harbour is now a live policy fight, not settled law. The government has opened the question, the platforms will push back, and consultations will decide whether India keeps, narrows or ends the protection shaping its social internet for two decades." }
+    ],
+  },
+{
     slug: "nasa-swift-telescope-falls-earth-indonesia-november-2026",
     image: "https://psu-gatsby-files-prod.s3.amazonaws.com/s3fs-public/styles/16_9_1000w/public/2024/10/swift_telescope.jpg?h=e03c662a&itok=uI0ahQzD",
     imageAlt: "NASA's Neil Gehrels Swift Observatory telescope in space",
