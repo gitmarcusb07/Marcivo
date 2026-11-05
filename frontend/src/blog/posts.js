@@ -33,6 +33,150 @@
 
 export const posts = [
 {
+    slug: "motorola-signature-27-launched-price-specs-november-5-2026",
+    image: "https://fdn.gsmarena.com/imgroot/news/26/11/motorola-signature-27-official/gsmarena_010.jpg",
+    imageAlt: "Motorola Signature 27 in Pantone Coal Smoke, showing its triple rear camera system",
+    title: "Motorola Signature 27 Launched: $1,599 Flagship With 12,000-Nit Display, 7,000mAh Battery and 200MP Camera",
+    description:
+      "Motorola Signature 27 launched November 5, 2026: Snapdragon 8 Elite Extreme Gen 6, 12,000-nit display, 7,000mAh battery, 200MP camera, price and India launch.",
+    excerpt:
+      "Motorola unveiled the Signature 27 on November 5, 2026, a $1,599 flagship with a 12,000-nit display, 7,000mAh battery, 200MP periscope camera and seven years of updates.",
+    date: "2026-11-05",
+    category: "Tech",
+    sections: [
+      { type: "p", text: "Motorola Signature 27 has officially launched, and Motorola is not holding back. Unveiled on November 5, 2026, the new flagship pairs Qualcomm's Snapdragon 8 Elite Extreme Gen 6 chip with a 6.78-inch display that Motorola claims can hit 12,000 nits of peak brightness, a 7,000mAh battery, and a 200MP periscope camera. At $1,599 in the US, it is Motorola's most expensive phone ever." },
+      { type: "p", text: "Here is the short version: the Motorola Signature 27 is a full flagship built around the newest Snapdragon silicon, a tandem OLED screen, a triple camera system headlined by a 200MP telephoto lens, and seven years of software support. Pre-orders opened on November 5 in the US, the phone reaches Europe, the Middle East and Africa on November 16, and Motorola has confirmed an India launch later this month, though Indian pricing is not yet announced." },
+      { type: "h2", text: "Motorola Signature 27 Price and Availability" },
+      { type: "p", text: "The Motorola Signature 27 price starts at $1,599 in the US for the single configuration with 12GB of RAM and 512GB of storage. In Europe the recommended retail price is 1,899 euros, though Motorola says some countries will get it for 1,399 euros, and in the UK it starts at 1,299 pounds." },
+      { type: "list", items: [
+        "US price: $1,599 for 12GB RAM and 512GB storage; pre-orders opened November 5, 2026.",
+        "Europe price: 1,899 euros recommended retail, with 1,399 euros in some countries; available November 16.",
+        "UK price: 1,299 pounds, with pre-orders from November 16.",
+        "India: Motorola has confirmed the phone will launch in India later this month; no Indian price yet.",
+        "Colours: Pantone Coal Smoke with a tactical weave finish, and Pantone Capulet Olive with a textile-inspired finish."
+      ] },
+      { type: "h2", text: "Motorola Signature 27 Display: 12,000 Nits Peak Brightness" },
+      { type: "p", text: "The headline figure is the screen. The Motorola Signature 27 uses a 6.78-inch 1.5K Extreme AMOLED Duo panel, a tandem OLED design with two emissive layers, a 120Hz refresh rate, and a claimed peak brightness of 12,000 nits at 1 percent average pixel level. Motorola says the panel is up to 34 percent more energy efficient than the regular AMOLED on the original Signature." },
+      { type: "h2", text: "Motorola Signature 27 Cameras: 200MP Periscope and a First-of-Its-Kind Sensor" },
+      { type: "p", text: "The camera system is the other big story. The Motorola Signature 27 carries a 50MP Sony Lytia 910 main sensor with LOFIC technology, an f/1.6 aperture and optical image stabilisation, a 200MP periscope telephoto with 3x optical zoom and up to 100x Super Zoom Pro, and a 50MP ultrawide with autofocus and a 122-degree field of view. Video reaches 8K at 30fps and 4K at up to 120fps, and the 50MP selfie camera has autofocus and 4K recording." },
+      { type: "p", text: "Motorola also claims a first: a dedicated EVS, or Event Vision Sensor, action sensor on a smartphone. It detects pixel-level changes in light intensity separately from the other cameras, and works with an Action Shot feature to freeze fast-moving subjects." },
+      { type: "h2", text: "Motorola Signature 27 Battery, Charging and Performance" },
+      { type: "p", text: "The 7,000mAh silicon-carbon battery is 35 percent larger than the 5,200mAh cell in the original Signature, and it supports 90W wired charging, 50W wireless charging, 5W reverse wireless and 4.5W reverse wired charging." },
+      { type: "p", text: "Under the hood is the Snapdragon 8 Elite Extreme Gen 6, Qualcomm's flagship chip built on a 2nm process. It is paired with 12GB or 16GB of RAM and 256GB or 512GB of storage, and cooled by what Motorola calls ArcticMesh, a thermal gel infused with micro-diamonds plus an 8,384 square millimetre vapour chamber." },
+      { type: "h2", text: "Motorola Signature 27 Software, Build and Durability" },
+      { type: "p", text: "The phone runs Android 17 with a promise of seven major OS upgrades and seven years of security updates, matching the longest support in the industry. It also supports GrapheneOS, the privacy-focused Android variant, which is a rare option on a mainstream flagship. The build is an aluminium frame with a ceramic and glass body, Gorilla Glass Ceramic 3, IP68 and IP69 ratings, and MIL-STD-810H compliance, plus Dolby Atmos stereo speakers tuned with Bang & Olufsen, Wi-Fi 8, and Motorola's Qira assistant alongside Google Gemini features." },
+      { type: "h2", text: "Should You Wait for the Motorola Signature 27 India Launch?" },
+      { type: "p", text: "If you are in India, the honest answer is to wait for Motorola's local announcement later this month, because the Indian price and sale date are not confirmed yet. The European price converts to roughly Rs 1,95,000, but Indian pricing rarely tracks Europe directly. What is clear is that this is a genuine ultra-premium flagship with a best-in-class display, a huge battery and a serious camera system." },
+      { type: "h2", text: "Motorola Signature 27: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "When was the Motorola Signature 27 launched?", a: "Motorola fully unveiled the Signature 27 on November 5, 2026, after teasing it since the Snapdragon Summit in September." },
+        { q: "What is the Motorola Signature 27 price?", a: "It costs $1,599 in the US, 1,899 euros in Europe, and 1,299 pounds in the UK. Indian pricing has not been announced yet." },
+        { q: "What are the Motorola Signature 27 specifications?", a: "Snapdragon 8 Elite Extreme Gen 6, 6.78-inch 1.5K tandem OLED with 12,000 nits peak brightness, 7,000mAh battery, 50MP main plus 200MP periscope and 50MP ultrawide cameras, Android 17, and seven years of updates." },
+        { q: "When will the Motorola Signature 27 launch in India?", a: "Motorola has confirmed an India launch later in November 2026, but the exact date and Indian price are yet to be announced." },
+        { q: "Does the Motorola Signature 27 support GrapheneOS?", a: "Yes, Motorola says the Signature 27 supports GrapheneOS, the privacy-focused version of Android, alongside its stock Android 17 software." }
+      ] },
+      { type: "p", text: "The Motorola Signature 27 is the most ambitious phone Motorola has ever made, and its launch on November 5, 2026 sets up a genuine fight at the top of the premium market. Watch for the India price later this month." }
+    ],
+  },
+{
+    slug: "sunny-deol-hanuman-teaser-ramayana-hanuman-chalisa-video-november-5-2026",
+    image: "https://i.ytimg.com/vi/96S27C0p66w/maxresdefault.jpg",
+    imageAlt: "Lord Hanuman silhouette taking a giant leap in the official Shree Hanuman Chalisa video from Ramayana",
+    title: "Sunny Deol Hanuman Teaser Out: Ramayana Makers Release Shree Hanuman Chalisa Video After Post-Credit Leak",
+    description:
+      "Sunny Deol Hanuman teaser is out: Ramayana makers released the Shree Hanuman Chalisa video on November 5, 2026, after the post-credit scene leaked.",
+    excerpt:
+      "Hours after Ramayana opened on November 5, 2026, the makers officially released the Shree Hanuman Chalisa video, unveiling Sunny Deol as Lord Hanuman after the post-credit scene circulated online.",
+    date: "2026-11-05",
+    category: "Cinema",
+    sections: [
+      { type: "p", text: "Sunny Deol Hanuman teaser is officially out. Hours after Nitesh Tiwari's Ramayana: Rise of a Legend opened in theatres on November 5, 2026, the makers released the Shree Hanuman Chalisa video, giving audiences their first official glimpse of Sunny Deol as Lord Hanuman. The reveal follows a post-credit sequence from the film circulating online, and it has quickly become the most talked-about moment of release day." },
+      { type: "p", text: "Here is what happened: the film's end-credit sequence, which introduces Hanuman, began doing the rounds on social media soon after the first shows. Rather than letting a shaky leak define the reveal, the makers put out the official version the same day, as the Shree Hanuman Chalisa music video on the World of Ramayana and T-Series YouTube channels. The clip keeps Sunny Deol's face hidden, but it confirms his casting with a title card and a giant leap that ends with the chant Jai Shri Ram." },
+      { type: "h2", text: "Sunny Deol Hanuman Teaser: What the Video Shows" },
+      { type: "p", text: "The Shree Hanuman Chalisa video runs for one minute and 48 seconds. It shows a towering silhouette of Lord Hanuman from behind, running through a forest and then taking a gigantic leap into the sky while chanting Jai Shri Ram. Sunny Deol's face stays hidden in shadow throughout, and the video also includes animated storyboard images from the film. It is a teaser rather than a full reveal, and a deliberate one: the makers are saving the complete look for the sequel." },
+      { type: "list", items: [
+        "First official glimpse: Sunny Deol as Lord Hanuman, shown as a giant silhouette from behind, face hidden.",
+        "The moment: Hanuman takes a giant leap into the sky and chants Jai Shri Ram.",
+        "The music: Shree Hanuman Chalisa, composed, produced and arranged by A.R. Rahman, with lyrics by Kumar Vishwas.",
+        "The singers: Sukhwinder Singh, Diljit Dosanjh, Mohit Chauhan, Shankar Mahadevan and Kailash Kher.",
+        "The confirmation: the video ends with a title card reading Sunny Deol as Lord Hanuman."
+      ] },
+      { type: "p", text: "The five-singer line-up is part of the event. Bringing Diljit Dosanjh, Sukhwinder Singh, Mohit Chauhan, Shankar Mahadevan and Kailash Kher together on one devotional track turns the reveal into a musical moment as well as a cinematic one, and it fits the film's pitch as a grand, family-friendly retelling of the epic." },
+      { type: "h2", text: "Why the Hanuman Teaser Leaked Before the Official Release" },
+      { type: "p", text: "The leak was almost inevitable. Ramayana had its Los Angeles premiere on October 28, and social media posts after that screening already hinted at a post-credit tease of Lord Hanuman played by Sunny Deol. Once the film opened in India on November 5, footage from the end-credit sequence began circulating online within hours. The makers moved fast, releasing the official Shree Hanuman Chalisa video the same day, on November 5, so fans could see the moment properly instead of through a recording." },
+      { type: "p", text: "It was reported back in September that Sunny Deol would appear only at the very end of Part 1, and that is exactly how it played out. His entry lands in the end-credit sequence, setting up a much larger role in Part 2, which is slated for Diwali 2028. The official video now gives that ending a proper home online, and it is already being shared widely by fans." },
+      { type: "h2", text: "Ramayana Part 1: Cast, Runtime and Release Details" },
+      { type: "p", text: "Ramayana: Rise of a Legend, directed by Nitesh Tiwari, stars Ranbir Kapoor as Lord Rama, Sai Pallavi as Goddess Sita, Yash as Ravana, Ravie Dubey as Lakshman and Sunny Deol as Lord Hanuman. The film released worldwide on November 5, 2026, in Hindi, Tamil, Telugu, Kannada and Malayalam, with IMAX among its premium formats. It has a U certificate from the CBFC and a runtime of 195 minutes, or three hours and 15 minutes." },
+      { type: "list", items: [
+        "Director: Nitesh Tiwari; producers Namit Malhotra of Prime Focus Studios and Yash of Monster Mind Creations.",
+        "Cast: Ranbir Kapoor as Rama, Sai Pallavi as Sita, Yash as Ravana, Ravie Dubey as Lakshman, Sunny Deol as Hanuman.",
+        "Release: November 5, 2026, in five languages, including IMAX shows.",
+        "Runtime: 3 hours 15 minutes, U certificate.",
+        "Part 2: slated for Diwali 2028, with Hanuman in a much bigger role."
+      ] },
+      { type: "h2", text: "What the Hanuman Reveal Means for Ramayana Part 2" },
+      { type: "p", text: "The reveal is doing two jobs at once. For Part 1, it gives opening-day audiences a surprise ending worth staying for, and a reason to talk about the film after leaving the theatre. For the franchise, it plants the flag for Part 2, where Hanuman's role grows considerably. Keeping Sunny Deol's face hidden also keeps the conversation going: fans now have a glimpse, a chant and a title card, but the full look is still to come, and that is exactly the kind of unfinished business that keeps a film in the news after release day." },
+      { type: "h2", text: "Sunny Deol Hanuman Teaser: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "Where can I watch the Sunny Deol Hanuman teaser?", a: "The official Shree Hanuman Chalisa video is streaming on the World of Ramayana and T-Series YouTube channels, and across music platforms under the T-Series label." },
+        { q: "Is Sunny Deol's face visible as Hanuman in the teaser?", a: "No. The video shows Hanuman as a giant silhouette from behind, with Sunny Deol's face kept hidden in shadow, though the title card confirms his casting." },
+        { q: "Who sings the Shree Hanuman Chalisa in Ramayana?", a: "The track is composed by A.R. Rahman with lyrics by Kumar Vishwas, and sung by Sukhwinder Singh, Diljit Dosanjh, Mohit Chauhan, Shankar Mahadevan and Kailash Kher." },
+        { q: "When does Sunny Deol appear in Ramayana Part 1?", a: "Sunny Deol as Lord Hanuman appears at the very end of Part 1, in the end-credit sequence, setting up a larger role in Part 2." },
+        { q: "When is Ramayana Part 2 releasing?", a: "Ramayana Part 2 is slated for Diwali 2028, with Hanuman expected to play a much bigger role." }
+      ] },
+      { type: "p", text: "The Sunny Deol Hanuman teaser is the release-day moment Ramayana needed, turning a leaked post-credit scene into an official event within hours. Watch the Shree Hanuman Chalisa video on T-Series, and stay till the very end of Part 1 in theatres, because that is where Hanuman arrives." }
+    ],
+  },
+{
+    slug: "maatrubhumi-trailer-release-date-november-6-cbfc-cleared-november-2026",
+    image: "https://i.ytimg.com/vi/WWthtnGbxUM/maxresdefault.jpg",
+    imageAlt: "Salman Khan as Colonel Santosh Babu in the official Maatrubhumi teaser",
+    title: "Maatrubhumi Trailer Release Date: Salman Khan's 4-Minute-43-Second Trailer Drops November 6 After CBFC Clearance",
+    description:
+      "Maatrubhumi trailer release date is November 6, 2026: Salman Khan's 4-minute-43-second trailer cleared CBFC with U/A 16+. Launch, cast and film release date.",
+    excerpt:
+      "Salman Khan's Maatrubhumi trailer, cleared by the CBFC at 4 minutes 43 seconds, is reportedly set to drop on November 6, 2026, with the film eyeing November 20 or December 11.",
+    date: "2026-11-05",
+    category: "Cinema",
+    sections: [
+      { type: "p", text: "Maatrubhumi trailer release date is now set, reportedly. Salman Khan's war drama Maatrubhumi: May War Rest In Peace will unveil its trailer on Friday, November 6, 2026, after the Central Board of Film Certification cleared the 4-minute-43-second trailer. At nearly five minutes long, it is set to be one of the longest trailers in Indian cinema, and it will give audiences their first extended look at the film's retelling of the 2020 Galwan Valley clash." },
+      { type: "p", text: "The news broke on November 5, 2026, when Bollywood Hungama reported that the trailer had been passed by the CBFC on Wednesday, November 4, with a U/A 16+ certificate. Variety India then reported that the makers are planning a grand trailer launch event in Mumbai on Friday. The production house has not officially confirmed the event yet, so November 6 is reported, not announced." },
+      { type: "h2", text: "Maatrubhumi Trailer: CBFC Clearance and Runtime" },
+      { type: "p", text: "The CBFC clearance is the key development. According to the censor board's website, the Maatrubhumi trailer was passed on November 4, 2026, with a U/A 16+ certificate and a runtime of 4 minutes and 43 seconds. That length puts it among the longest Hindi film trailers ever, alongside Singham Again at 4 minutes 58 seconds and Ramayana: Part 1 at 4 minutes 15 seconds." },
+      { type: "list", items: [
+        "Trailer runtime: 4 minutes 43 seconds, passed by the CBFC on November 4, 2026.",
+        "Certificate: U/A 16+, so viewers under 16 need parental guidance.",
+        "Trailer release: reportedly Friday, November 6, 2026, with a grand launch event in Mumbai.",
+        "Official confirmation: the production house has not yet confirmed the event schedule.",
+        "Film release: not yet fixed; makers are eyeing November 20 or December 11, 2026."
+      ] },
+      { type: "p", text: "The film itself has not yet received its final censor certificate, which is why the theatrical date is still open. The trailer clearance is a separate step, and it does not by itself confirm the film is ready for release." },
+      { type: "h2", text: "Maatrubhumi: What the Film Is About" },
+      { type: "p", text: "Maatrubhumi: May War Rest In Peace is inspired by the real-life confrontation in the Galwan Valley on June 15, 2020, when Indian and Chinese troops clashed along the Line of Actual Control. Salman Khan plays Colonel Bikkumalla Santosh Babu, the commanding officer of the 16 Bihar Regiment who led Indian troops during the confrontation. The film is directed by Apoorva Lakhia and produced by Salman Khan Films, with Chitrangda Singh in a pivotal role and Prashant Tamang also in the cast." },
+      { type: "p", text: "The film was originally titled Battle of Galwan, and was renamed Maatrubhumi earlier this year. First announced in July 2025 and initially set for April 2026, the film slipped amid scrutiny over its sensitive subject and references to China. The trailer launch is therefore the first major promotional push after months of waiting." },
+      { type: "h2", text: "Maatrubhumi Release Date: November 20 or December 11?" },
+      { type: "p", text: "The film was earlier expected to release on November 13, 2026, but that date is now unlikely. According to Bollywood Hungama, the delay in receiving the censor certificate means the film cannot arrive next week, and the makers are now planning for November 20, with December 11 as the other date under consideration. Jio Studios will handle all-India distribution. Until the film itself is certified, both dates should be treated as the makers' current plan, not a confirmed announcement. A November 20 release would keep the film close to Diwali, while December 11 would give it a clearer run." },
+      { type: "h2", text: "Maatrubhumi Trailer: What to Expect on November 6" },
+      { type: "p", text: "Expect scale. The teaser released on Salman Khan's 60th birthday in December 2025 described a battle fought 15,000 feet above sea level, and the trailer is expected to show the film's treatment of the Galwan confrontation in detail for the first time." },
+      { type: "list", items: [
+        "First extended look: the trailer should reveal the film's scale, battle sequences and tone.",
+        "Salman Khan as Colonel Santosh Babu: the trailer will show his take on the real officer who led the 16 Bihar Regiment.",
+        "The Galwan story: a retelling of the June 15, 2020 clash, 15,000 feet above sea level.",
+        "Music: the film's songs include the title track Maatrubhumi, Teri Sexy Beauty and Jai Hind.",
+        "Where to watch: the trailer is expected at the Mumbai launch event and online on November 6."
+      ] },
+      { type: "h2", text: "Maatrubhumi Trailer: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "When is the Maatrubhumi trailer releasing?", a: "The trailer is reportedly releasing on Friday, November 6, 2026, with a grand launch event in Mumbai, though the production house has not officially confirmed the schedule yet." },
+        { q: "How long is the Maatrubhumi trailer?", a: "The trailer runs 4 minutes and 43 seconds, making it one of the longest trailers in Indian cinema, and it has been cleared by the CBFC with a U/A 16+ certificate." },
+        { q: "When is the Maatrubhumi release date?", a: "No date is confirmed yet. The makers are reportedly eyeing November 20 or December 11, 2026, after the earlier November 13 plan slipped." },
+        { q: "Who stars in Maatrubhumi?", a: "Salman Khan plays Colonel Bikkumalla Santosh Babu, with Chitrangda Singh in a pivotal role and Prashant Tamang also in the cast. Apoorva Lakhia directs, and Salman Khan Films produces." },
+        { q: "What is Maatrubhumi based on?", a: "The film is inspired by the real Galwan Valley clash of June 15, 2020, between Indian and Chinese troops along the Line of Actual Control." }
+      ] },
+      { type: "p", text: "The Maatrubhumi trailer drops on November 6, 2026, reportedly, and it will be the first real test of Salman Khan's most sensitive film in years. A nearly five-minute trailer, a grand Mumbai launch, and a story drawn from a real 2020 clash add up to one of the biggest Bollywood moments of the month, so watch for the official confirmation and the trailer itself on Friday." }
+    ],
+  },
+{
     slug: "eloelo-story-tv-80-million-funding-nbcuniversal-microdrama-november-2026",
     image: "https://images.pexels.com/photos/5077421/pexels-photo-5077421.jpeg?auto=compress&cs=tinysrgb&w=1600",
     imageAlt: "A woman wearing headphones watching a video on her smartphone, like viewers watching Story TV microdramas",
