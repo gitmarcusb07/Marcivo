@@ -33,6 +33,49 @@
 
 export const posts = [
 {
+    slug: "bengaluru-family-massacre-cab-driver-7-murders-november-2026",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Vegetation%20on%20Nandi%20Hills.jpg?width=1200",
+    imageAlt: "Vegetation in the misty foothills of Nandi Hills in Chikkaballapur district, where Bengaluru police say the bodies were dumped. File photo via Wikimedia Commons.",
+    title: "Bengaluru Family Massacre: Cab Driver Arrested for Allegedly Killing 7 of Wife's Family, Dumping Bodies Near Nandi Hills",
+    description:
+      "Bengaluru family massacre: a cab driver was arrested for allegedly killing seven of his wife's family and dumping their bodies near Nandi Hills.",
+    excerpt:
+      "Bengaluru police arrested a 52-year-old cab driver accused of killing seven members of his wife's family and dumping their bodies near Nandi Hills; only seven-year-old Puneeth's body has been found so far.",
+    date: "2026-11-06",
+    category: "News",
+    sections: [
+      { type: "p", text: "The Bengaluru family massacre came to light on Friday, November 6, 2026, when Bengaluru police arrested a 52-year-old cab driver accused of killing seven members of his wife's family and dumping their bodies around the Nandi Hills foothills in Chikkaballapur district, Karnataka. The accused, Indushekar alias Shekhar, a cab driver from Rajajinagar, was taken into custody after a missing-person complaint led police to question him. So far police have recovered only one body, seven-year-old Puneeth's, and the search continues for the other six." },
+      { type: "h2", text: "Who Are the Victims of the Bengaluru Family Massacre?" },
+      { type: "p", text: "Police have identified the seven victims as Shekhar's wife Sunitha; her mother Roopavati; her brothers Shivakumar and Shankar; their wives Divya and Nalini; and Shivakumar's seven-year-old son Puneeth. Some news reports spell the names slightly differently — Sunita, Roopavathi and Indu Shekhar — but the identities match across outlets. The couple had been married for about 20 years and lived in a small one-room-kitchen house near Bhashyam Circle in Rajajinagar, according to the Indian Express." },
+      { type: "h2", text: "What Police Say Happened in Rajajinagar" },
+      { type: "p", text: "According to preliminary police findings reported by the Indian Express and News18, Shekhar allegedly called each family member to his house on different pretexts and attacked them with a grinding stone. He first killed his wife, police say, striking her on the head with a grinder before carrying her body in his car and dumping it at the foot of Nandi Hills. He then invited her brothers Shivakumar and Shankar and their families over — Shivakumar, reports say, on the pretext of drinks together — and killed them too. Police say he cleaned the blood stains and used chemicals to try to cover up the killings, and that the car used to move the bodies has been seized." },
+      { type: "p", text: "The exact sequence is still being established, and reports differ on the span of the killings. News18 reports that investigators suspect the murders began on October 17, while The Week reports the crimes were carried out over 10 to 20 days. The Indian Express, meanwhile, reports that Shekhar allegedly called Sunitha's family members to his house individually over two days. Police say the sequence is being verified against forensic evidence." },
+      { type: "h2", text: "How the Bengaluru Family Massacre Came to Light" },
+      { type: "p", text: "The case surfaced after the mothers of two of the victims, Divya and Nalini, filed a missing-person complaint at the Srirampura police station on November 3, saying their daughters were untraceable. Police grew suspicious of Shekhar, questioned him, and he then confessed, according to the reports. The case was transferred to Rajajinagar police, in whose jurisdiction the alleged killings took place. The Indian Express reports a special team of three assistant commissioners has been formed to investigate and recover the bodies, while News18 reports three teams have been formed. Deputy Commissioner of Police (North) Babasab Nemagoud confirmed the incident, saying a murder FIR has been registered and the investigation is under way." },
+      { type: "p", text: "Police say Shekhar tried to hide the crime: after allegedly killing his wife, he told neighbours she had gone on a trip with a friend and switched off her phone to make the story credible, according to News18 and The Week." },
+      { type: "h2", text: "Search for the Bodies Near Nandi Hills" },
+      { type: "p", text: "After questioning him, police took Shekhar to the Nandi Hills foothills and searched for hours. Only one body has been found: seven-year-old Puneeth's, recovered on Thursday, November 5. Police say he allegedly dumped the bodies at several spots around the foothills, including near Chamrajpet Hills, where steep slopes drop into dense forest that is hard to reach. The search for the other six bodies continues, with forest staff assisting police." },
+      { type: "h2", text: "What Police Say About the Motive" },
+      { type: "p", text: "Police say frequent arguments over Sunitha's continued closeness to her parental family may have led to the murders, and relatives had reportedly tried several times to settle the differences. The accused told police he acted after nearly 20 years of alleged harassment by his wife and family, according to Telangana Today — his claim, not an established fact, which police are still verifying. Karnataka Home Minister Priyank Kharge has said the killings were premeditated, not spontaneous. The victims' relatives have also alleged Shekhar was involved in chain-snatching and robbery cases in the past and want those claims investigated; police have not confirmed any prior record." },
+      { type: "h2", text: "What Is Still Unclear in the Bengaluru Massacre Case" },
+      { type: "list", items: [
+        "The exact dates and sequence of the killings — reports differ, and police are still verifying the timeline.",
+        "Where the remaining six bodies are — searches continue around the Nandi Hills foothills.",
+        "Whether anyone else was involved — police have confirmed no accomplice, and some circulating claims remain unverified.",
+        "Forensic confirmation of each victim's cause of death, which depends on recovering the bodies and post-mortem findings.",
+        "The accused's past record — relatives allege earlier chain-snatching and robbery cases, but police have not confirmed them."
+      ] },
+      { type: "h2", text: "Bengaluru Family Massacre: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "Who was arrested in the Bengaluru family massacre case?", a: "Bengaluru police arrested Indushekar alias Shekhar, a 52-year-old cab driver from Rajajinagar, on November 6, 2026. He is accused of killing seven members of his wife's family; the case is under investigation and the allegations have not yet been tested in court." },
+        { q: "Who are the seven victims?", a: "Police identified the victims as Shekhar's wife Sunitha, her mother Roopavati, her brothers-in-law Shivakumar and Shankar, their wives Divya and Nalini, and Shivakumar's seven-year-old son Puneeth." },
+        { q: "Where were the bodies dumped?", a: "Police say he dumped the bodies at several spots around the Nandi Hills foothills in Chikkaballapur district, including near Chamrajpet Hills. Only Puneeth's body had been found as of November 6; the search for the other six continues." },
+        { q: "How did police find out about the murders?", a: "The mothers of Divya and Nalini filed a missing-person complaint at Srirampura police station on November 3, 2026. Police questioned Shekhar, who allegedly confessed." }
+      ] },
+      { type: "p", text: "The investigation continues, with the search for the remaining six bodies under way and the sequence still being established. The accused is in custody, and the allegations against him will be tested in court." }
+    ],
+  },
+{
     slug: "ai-stock-sell-off-nikkei-kospi-crash-november-6-2026",
     image: "https://media.assettype.com/gulfnews%2F2026-11-06%2F4hbuqori%2Fpreview.jpg?w=1200&auto=format%2Ccompress&fit=max",
     imageAlt: "A pedestrian walks past an electronic stock board showing Japan's Nikkei 225 index at a Tokyo securities firm. AP file photo from November 2, 2026.",
