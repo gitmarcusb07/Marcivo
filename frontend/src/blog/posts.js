@@ -33,6 +33,48 @@
 
 export const posts = [
 {
+    slug: "apple-first-touchscreen-macbook-pro-launch-november-6-2026",
+    image: "https://www.cultofmac.com/wp-content/uploads/2026/11/MacBook-Pro-OLED-review_01-1020x574.jpg.webp",
+    imageAlt: "Apple's new MacBook Pro with PROLED XDR Display showing a vivid green butterfly photo on its tandem OLED touchscreen",
+    title: "Apple's First Touchscreen MacBook Pro Goes on Sale Today: PROLED OLED Display, Prices and India Launch Date",
+    description:
+      "Apple's first touchscreen MacBook Pro goes on sale November 6, 2026, with a PROLED OLED display and M5 Pro/Max chips, from $2,899. India price inside.",
+    excerpt:
+      "Apple's first-ever touchscreen MacBook Pro goes on sale today, November 6, 2026, with a PROLED OLED display, M5 Pro and M5 Max chips, a Dynamic Island and a thinner, lighter design, starting at $2,899 in the US and Rs 3,49,900 in India.",
+    date: "2026-11-06",
+    category: "Tech",
+    sections: [
+      { type: "p", text: "The touchscreen MacBook Pro goes on sale today: Apple is putting its first-ever touchscreen Mac on sale on Friday, November 6, 2026. The new MacBook Pro with PROLED XDR Display starts arriving to customers today, with the first deliveries already landing in Australia and New Zealand. It is the biggest change to the MacBook Pro in years: a tandem OLED display, a Dynamic Island instead of the notch, a thinner and lighter body, and the return of the glowing Apple logo." },
+      { type: "p", text: "Here is the short version: the touchscreen MacBook Pro comes in 14-inch and 16-inch sizes with M5 Pro or M5 Max chips, starting at $2,899 and $3,399 in the US. In India, the OLED iPad mini, M6 MacBook Pro and M6 iMac go on sale today; the touchscreen MacBook Pro arrives November 9, from Rs 3,49,900." },
+      { type: "h2", text: "Touchscreen MacBook Pro Price: What the $2,899 Buys You" },
+      { type: "p", text: "The 14-inch touchscreen MacBook Pro with M5 Pro starts at $2,899 in the US, and the 16-inch model starts at $3,399. The M5 Max versions start at $4,499 and $4,799. That is $400 more than a matching MacBook Pro with the standard mini-LED display, so the premium buys the screen and the design, not more speed — the chips are the same as the March 2026 models. Both sizes offer up to 128GB of unified memory and up to 16TB of storage." },
+      { type: "h2", text: "PROLED XDR Display: Tandem OLED, 2000 Nits and Touch" },
+      { type: "p", text: "The display is the whole story. PROLED XDR uses tandem OLED technology — two self-illuminating pixel layers stacked together — so every pixel produces its own light, giving deep blacks with no blooming and an industry-leading 10,000,000:1 contrast ratio. Apple rates the panel at up to 2000 nits of peak brightness for both HDR and everyday SDR content, with ProMotion refresh rates from 10Hz to 120Hz and P3 and Adobe RGB colour." },
+      { type: "p", text: "Touch is built directly into the display panel, which Apple says keeps latency low. A tap works like a click, and the usual gestures work too: swipe to scroll, pinch to zoom, drag and drop, and double-tap to fill the screen. Apple redesigned the hinge for extra stability while tapping, and Touch can be switched off in Accessibility settings. The notch is gone too: the Dynamic Island comes to the Mac for the first time, as the home for Spotlight, Live Activities and Siri AI." },
+      { type: "h2", text: "Thinner, Lighter and Up to 24 Hours of Battery" },
+      { type: "p", text: "The new MacBook Pro is thinner and noticeably lighter. The 14-inch model now weighs 3 pounds, half a pound less than before, and the 16-inch weighs 4 pounds, down from 4.7 pounds. Apple claims up to 24 hours of video streaming on the 16-inch M5 Pro model and up to 22 hours on the 14-inch, with fast charging reaching 50 percent in 30 minutes. The laptop keeps three Thunderbolt 5 ports, HDMI, an SDXC card slot, MagSafe and a headphone jack." },
+      { type: "h2", text: "The Other Apple Products Launching on November 6" },
+      { type: "p", text: "Four more Apple products go on sale today. The OLED iPad mini gets an 8.5-inch OLED display and the A20 Pro chip, starting at $699. It is Apple's first smaller iPad with OLED, and its sealed Acoustic Display design makes it the first iPad with an IP67 water and dust resistance rating. The 14-inch MacBook Pro with the M6 chip starts at $1,999 and the 24-inch iMac with M6 starts at $1,499. In India, the OLED iPad mini starts at Rs 82,900, the M6 iMac at Rs 1,74,900 and the M6 MacBook Pro at Rs 2,39,900." },
+      { type: "list", items: [
+        "Touchscreen MacBook Pro on sale today, November 6, 2026: first Mac with a touchscreen, from $2,899.",
+        "PROLED XDR display: tandem OLED, up to 2000 nits, 10,000,000:1 contrast, 120Hz ProMotion.",
+        "M5 Pro and M5 Max chips; 14-inch weighs 3 pounds, 16-inch 4 pounds; up to 24 hours of battery.",
+        "India: touchscreen MacBook Pro from Rs 3,49,900, November 9."
+      ] },
+      { type: "h2", text: "Touchscreen MacBook Pro Reviews: The OLED Wins, Touch Is a Bonus" },
+      { type: "p", text: "The first reviews landed on November 5, and they agree on one thing: the screen is the star and the touchscreen is a nice extra. The Verge gave the laptop 9 out of 10 and called it a winner, with David Pierce writing that touch has not meaningfully changed the laptop experience. There is no onscreen keyboard and the Apple Pencil does not work on the display. Engadget gave it 8.8 out of 10, with Devindra Hardawar writing that the least interesting thing about the new touchscreen MacBook Pro is the touchscreen. Notebookcheck measured 2,084 nits on HDR content." },
+      { type: "p", text: "Battery results are strong too. Tom's Guide recorded 21 hours and 24 minutes of web browsing on the 16-inch model. TechRadar gave it 4.5 out of 5 after its 16-inch model lasted 24 hours and 21 minutes looping video. The consensus: buy this MacBook Pro for the OLED display and the lighter body, not for touch alone — and the 16-inch is the better value." },
+      { type: "h2", text: "Touchscreen MacBook Pro: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "When does the touchscreen MacBook Pro go on sale?", a: "Apple's first touchscreen MacBook Pro goes on sale Friday, November 6, 2026 — November 9 in India." },
+        { q: "How much does the touchscreen MacBook Pro cost?", a: "In the US, the 14-inch model with M5 Pro starts at $2,899 and the 16-inch at $3,399; in India it starts at Rs 3,49,900." },
+        { q: "Does the touchscreen MacBook Pro support Apple Pencil?", a: "No. Reviewers confirm the Apple Pencil does not work on this display, and there is no onscreen keyboard when you tap a text box." },
+        { q: "Is the touchscreen MacBook Pro worth it over the standard MacBook Pro?", a: "Reviewers say yes if you want the best laptop display and a lighter machine — the chips are the same as the standard models." }
+      ] },
+      { type: "p", text: "The touchscreen MacBook Pro is Apple's first touchscreen Mac, on sale today: a PROLED OLED display with 2000 nits, the Dynamic Island, a 3-pound 14-inch body and up to 24 hours of battery, from $2,899 in the US and Rs 3,49,900 in India from November 9." }
+    ],
+  },
+{
     slug: "gta-6-new-screenshots-39-rockstar-launch-gallery-november-2026",
     image: "https://www.rockstargames.com/VI/_next/static/media/Vice_City_13.0iq8ff474tsdx.jpg",
     imageAlt: "Official GTA 6 screenshot of a crowded Vice City nightclub lit in green and blue neon",
