@@ -33,6 +33,40 @@
 
 export const posts = [
 {
+    slug: "ramayana-box-office-day-1-final-64-85-crore-november-6-2026",
+    image: "https://feeds.abplive.com/onecms/images/uploaded-images/2025/07/03/194d805eaa4752ff490e819c75c7fe8d1751525833243587_original.jpeg",
+    imageAlt: "Official Ramayana ensemble poster: Ranbir Kapoor as Lord Rama facing Yash as Ravana against a cosmic backdrop, with the tagline Our Truth. Our History.",
+    title: "Ramayana Box Office Collection Day 1: Ranbir Kapoor's Epic Opens at Rs 64.85 Crore, Misses Rs 100 Crore Mark",
+    description:
+      "Ramayana box office collection Day 1: Ranbir Kapoor's epic earned Rs 64.85 crore net in India, missing the Rs 100 crore opening trade expected. Full breakdown.",
+    excerpt:
+      "Ramayana: Part 1 collected Rs 64.85 crore net in India on Day 1, below the Rs 100 crore opening trade expected, with a worldwide gross of Rs 127.50 crore. Full language-wise breakdown and what the Diwali weekend must deliver.",
+    date: "2026-11-06",
+    category: "Cinema",
+    sections: [
+      { type: "p", text: "Ramayana box office collection Day 1 is finally in, and the verdict is a big opening that still fell short of the century everyone expected. Nitesh Tiwari's Ramayana: Part 1, starring Ranbir Kapoor as Lord Ram, Sai Pallavi as Sita and Yash as Ravana, collected Rs 64.85 crore net in India on Thursday, November 5, 2026, with a gross of Rs 77.50 crore across 25,200 shows, according to box-office tracker Sacnilk. It is a huge number by any normal measure — and well below the Rs 100 crore opening trade observers had projected after record advance bookings." },
+      { type: "h2", text: "Ramayana Box Office Day 1: Rs 64.85 Crore Net, Rs 77.50 Crore Gross" },
+      { type: "p", text: "The final Day 1 figures, reported by Sacnilk and carried by NDTV Profit, News18 and The Times of India on the morning of November 6, settle a day of wild speculation. Early live tracking had the film at just Rs 3.66 crore net within the first hour, and trade estimates before release had put the opening between Rs 90 crore and Rs 100 crore net in India. The confirmed Rs 64.85 crore net sits below even the bottom of the Rs 75-100 crore range some trade watchers had quoted, and the Hindi version's Rs 47.50 crore is below the Rs 55-60 crore Hindi opening trade analyst Sumit Kadel had expected." },
+      { type: "p", text: "The context matters. Advance bookings had been enormous: Sacnilk's final advance report put the film at Rs 130.12 crore gross in India, with 36.37 lakh tickets sold, and Rs 50.08 crore of that was for Thursday alone, including blocked seats. With that head start, many in the trade believed a Rs 100 crore-plus opening day was almost certain. Instead, walk-in collections on the day itself did not match the pre-sales." },
+      { type: "h2", text: "Ramayana Day 1 vs Pathaan, Animal, Adipurush and Dhurandhar 2" },
+      { type: "p", text: "On an India net basis, Ramayana's opening still beats two of the biggest recent openers. It opened ahead of Pathaan, which earned Rs 57 crore, and Animal, Ranbir Kapoor's last release, which minted Rs 63.80 crore on its opening day, according to Sacnilk figures quoted by NDTV Profit. But it fell behind the two films at the very top of the chart: Prabhas's Adipurush, which earned Rs 86.75 crore across languages on its opening day in 2023, and Dhurandhar 2, which registered approximately Rs 102.55 crore in India. The film sold an estimated 25.26 lakh tickets on Day 1, and its worldwide opening-day gross stands at Rs 127.50 crore, including Rs 50 crore from overseas, as reported by NDTV. First reviews praised its scale and visuals while debating its storytelling." },
+      { type: "p", text: "The overseas picture is similar. In North America, the film had collected USD 940,000 from 1,009 locations by noon Pacific time, trending towards a USD 1.5 million day — below initial opening-day expectations of USD 4 million including premieres, according to The Times of India." },
+      { type: "h2", text: "What Could Have Held Ramayana Back on Day 1?" },
+      { type: "p", text: "Trade watchers and viewers have offered several explanations, and none of them is settled. Some point to the Thursday release: with Diwali travel ahead, many families may have delayed their cinema visit to the weekend. Others cite high ticket prices for a film released in premium formats including IMAX. A third view, raised by viewers online, is that disappointment with Adipurush made audiences cautious about another big-screen adaptation of the epic. The impact of each of these factors remains unclear, and the film's makers have not commented on the opening-day figures." },
+      { type: "p", text: "What is not in doubt is the scale of the film itself. Directed by Nitesh Tiwari and produced by Namit Malhotra's Prime Focus Studios with DNEG and Yash's Monster Mind Creations, Ramayana: Part 1 stars Ranbir Kapoor, Sai Pallavi, Yash as Ravana, Sunny Deol as Hanuman and Ravie Dubey as Lakshman, with music by A. R. Rahman and Hans Zimmer. It released in Hindi, Tamil, Telugu, Kannada and Malayalam, and internationally as Ramayana: Rise of a Legend. Part 2, originally planned for Diwali 2027, has been postponed to Diwali 2028. For a film reported to cost around Rs 4,000 crore across its two parts, the gap between expectation and result is the story of Day 1." },
+      { type: "h2", text: "Ramayana Day 2 and the Diwali Weekend: What to Watch" },
+      { type: "p", text: "The real test starts now. The film has registered Rs 29.46 crore gross in advance bookings for Friday, November 6, according to The Times of India, and the extended Diwali weekend will decide whether the opening-day shortfall was a slow start or a sign of limited legs. Trade estimates quoted before release had projected a Rs 375 crore net first weekend and approximately Rs 900 crore in India gross, with worldwide lifetime projections of Rs 1,600-1,800 crore. Those remain early estimates, and they will depend on word of mouth, weekend growth and the overseas performance." },
+      { type: "h2", text: "Ramayana Box Office Collection Day 1: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "How much did Ramayana earn on Day 1?", a: "Ramayana: Part 1 collected Rs 64.85 crore net and Rs 77.50 crore gross in India on November 5, 2026, according to Sacnilk. Its worldwide opening-day gross was Rs 127.50 crore." },
+        { q: "Did Ramayana cross Rs 100 crore on Day 1?", a: "No. Despite Rs 130.12 crore in advance bookings, the film missed the Rs 100 crore opening-day mark trade observers had projected, finishing at Rs 64.85 crore net." },
+        { q: "Which language version of Ramayana earned the most on Day 1?", a: "The Hindi version led with Rs 47.50 crore, followed by Kannada at Rs 7.25 crore, Telugu at Rs 6 crore, Tamil at Rs 2.60 crore and Malayalam at Rs 1.50 crore." },
+        { q: "How does Ramayana's opening compare to other big openers?", a: "It opened ahead of Pathaan (Rs 57 crore) and Animal (Rs 63.80 crore) on India net, but behind Adipurush (Rs 86.75 crore) and Dhurandhar 2 (about Rs 102.55 crore)." }
+      ] },
+      { type: "p", text: "Ramayana box office collection Day 1: Rs 64.85 crore net in India, Rs 77.50 crore gross, Rs 127.50 crore worldwide — a massive opening that missed the Rs 100 crore mark. The Diwali weekend will decide if it recovers." }
+    ],
+  },
+{
     slug: "apple-first-touchscreen-macbook-pro-launch-november-6-2026",
     image: "https://www.cultofmac.com/wp-content/uploads/2026/11/MacBook-Pro-OLED-review_01-1020x574.jpg.webp",
     imageAlt: "Apple's new MacBook Pro with PROLED XDR Display showing a vivid green butterfly photo on its tandem OLED touchscreen",
