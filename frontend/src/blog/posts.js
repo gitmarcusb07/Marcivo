@@ -33,6 +33,44 @@
 
 export const posts = [
 {
+    slug: "call-of-duty-modern-warfare-4-season-1-live-november-6-2026",
+    image: "https://blog.playstation.com/tachyon/2026/10/169b5c8818f420cf4111ba12383e01b106c80725.png",
+    imageAlt: "Official Call of Duty: Modern Warfare 4 Season 1 key art: a hooded operator holding a rifle in the rocky Canyon map.",
+    title: "Call of Duty Modern Warfare 4 Season 1 Live Now: Warzone Maps Hajin and Zodiac, New Weapons and End of PS4 Support",
+    description:
+      "Call of Duty Modern Warfare 4 Season 1 is live now with Warzone maps Hajin and Zodiac, new multiplayer maps, weapons and the end of PS4 support. Full details.",
+    excerpt:
+      "Call of Duty: Modern Warfare 4 Season 1 went live at 10:30 AM IST on November 6, 2026, bringing Warzone maps Hajin and Zodiac, three new multiplayer maps, two new weapons and the end of PS4 and Xbox One support.",
+    date: "2026-11-06",
+    category: "Gaming",
+    sections: [
+      { type: "p", text: "Call of Duty Modern Warfare 4 Season 1 is live now, and it is the biggest shake-up the franchise has had all year. The free update rolled out at midnight Eastern on Friday, November 6, 2026 — 10:30 AM IST — with a new season of content for Modern Warfare 4 and a full Warzone integration. The headline changes are two new Warzone maps, Hajin and Zodiac, three new multiplayer maps, two new weapons, a 100-tier Battle Pass and the end of support for PlayStation 4 and Xbox One in Warzone." },
+      { type: "h2", text: "Call of Duty Modern Warfare 4 Season 1 Release Time and Update 1.111" },
+      { type: "p", text: "Activision confirmed the launch time in its Season 1 overview on the PlayStation Blog: Season 1 goes live on November 6 at 12:00 AM ET, which is 10:30 AM IST. The update, version 1.111, is available now on PlayStation 5, Xbox Series X/S and PC. Expect a large download first: preload reports put the PC package at around 63GB on Battle.net, although that is a reported estimate rather than an official size for every platform." },
+      { type: "h2", text: "Warzone Season 1: New Maps Hajin and Zodiac, Verdansk and Rebirth Parked" },
+      { type: "p", text: "The defining change of Season 1 is what happens to Warzone. The battle royale moves to Hajin, a large new map set in South Korea and linked to the Modern Warfare 4 campaign, with 13 major points of interest and changing weather including fog, wind, rain and storms. A second new map, Zodiac, joins the rotation, along with extra modes and Tactical Sprint available without needing a Perk." },
+      { type: "p", text: "Two familiar names are missing on day one. According to reports from Windows Central, Destructoid and Dexerto, Verdansk and Rebirth Island are not in Warzone at Season 1 launch and will return later in the season, with no exact date announced. A full Season 1 roadmap for Warzone is still to come." },
+      { type: "h2", text: "New Multiplayer Maps: Backstab, Canyon and a Reimagined Shoot House" },
+      { type: "p", text: "Multiplayer gets three new maps at launch. Backstab is all-new, a stormy, war-torn location where abandoned tanks litter the landscape. Canyon is also all-new, a rocky map where players fight along the River near the Convoy Ambush or take the winding Cliff Path. The third is a reimagined Shoot House, set in the rugged terrain of North Korea during a snowfall." },
+      { type: "p", text: "Two modes arrive with the season as well. Grind has players eliminate opponents, recover their dog tags and take them to the Bank to score. Drop Zone returns, with teams fighting to hold a single rotating objective while Killstreak packages periodically airdrop over the zone. More is planned for mid-season: the maps Ministry, set around a damaged embassy, and Overflow, centred on a factory and farmland, plus a new Counter Attack mode. Wager Match and Gauntlet 1v1 are listed as Coming Soon in the November 5 patch notes." },
+      { type: "h2", text: "DMZ X01 Black Site: New Weapons Facility, Orders and Boss Threats" },
+      { type: "p", text: "DMZ players get a new location to fight over. X01 is a formerly undiscovered weapons facility, recently seized by enemy forces, built as a maze of tunnels with shifting hazards that gradually close off extraction points. Inside X01, expect multiple pages of new DMZ Orders, Threat Briefing missions to take down DMZ's biggest boss threats, and Resupply Runs." },
+      { type: "h2", text: "Season 1 Weapons and Battle Pass: Cronen Osprey, CSG-35 and 100 Tiers" },
+      { type: "p", text: "Two new base weapons arrive with the Season 1 Battle Pass, and both are free on the Battle Pass track. The Cronen Osprey assault rifle combines speed with moderate power. The CSG-35 submachine gun is built for close quarters, with the highest fire rate in its class. Both work across Multiplayer, DMZ and Warzone." },
+      { type: "p", text: "The Battle Pass itself is a 100-tier track with more than 100 pieces of unlockable content, including Operator Skins, Weapon Blueprints, Finishing Moves, Calling Cards and Weapon Charms. It costs 1,100 COD Points, and this season adds a catch-up system: players who buy the premium pass and fall behind are automatically caught up to the reward matching the current day of the season, up to day 50. BlackCell is also live, adding the new XERO operator and skin." },
+      { type: "h2", text: "Warzone Ends Support for PS4 and Xbox One" },
+      { type: "p", text: "Season 1 also marks a hard hardware cutoff. With update 1.111, Warzone ends support for PlayStation 4 and Xbox One, so players on last-generation consoles will no longer have access to Warzone. The game is now current-generation only on console — PlayStation 5 and Xbox Series X/S — alongside PC." },
+      { type: "h2", text: "Call of Duty Modern Warfare 4 Season 1: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "When did Call of Duty Modern Warfare 4 Season 1 go live?", a: "Season 1 went live on November 6, 2026, at 12:00 AM ET, which is 10:30 AM IST. Update 1.111 is available on PlayStation 5, Xbox Series X/S and PC." },
+        { q: "What are the new Warzone maps in Season 1?", a: "Warzone gets two new maps: Hajin, a large battle royale map set in South Korea with 13 major points of interest, and Zodiac. Verdansk and Rebirth Island are not available on day one and are reported to return later in Season 1." },
+        { q: "What new weapons are in Modern Warfare 4 Season 1?", a: "Two new base weapons arrive free on the Season 1 Battle Pass: the Cronen Osprey assault rifle and the CSG-35 submachine gun, which has the highest fire rate in its class. All 33 Modern Warfare 4 launch weapons are now in Warzone." },
+        { q: "Can I still play Warzone on PS4 or Xbox One?", a: "No. With the Season 1 update, Warzone ends support for PlayStation 4 and Xbox One. Warzone is now available only on PlayStation 5, Xbox Series X/S and PC." }
+      ] },
+      { type: "p", text: "Call of Duty Modern Warfare 4 Season 1 is live now with Warzone maps Hajin and Zodiac, new multiplayer maps Backstab, Canyon and Shoot House, the DMZ X01 facility, new weapons and a 100-tier Battle Pass — and the end of Warzone on PS4 and Xbox One. Download update 1.111 and drop in." }
+    ],
+  },
+{
     slug: "ramayana-box-office-day-1-final-64-85-crore-november-6-2026",
     image: "https://feeds.abplive.com/onecms/images/uploaded-images/2025/07/03/194d805eaa4752ff490e819c75c7fe8d1751525833243587_original.jpeg",
     imageAlt: "Official Ramayana ensemble poster: Ranbir Kapoor as Lord Rama facing Yash as Ravana against a cosmic backdrop, with the tagline Our Truth. Our History.",
