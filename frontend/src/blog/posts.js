@@ -33,6 +33,50 @@
 
 export const posts = [
 {
+    slug: "cristiano-ronaldo-retirement-portugal-november-2026",
+    image: "https://statico.sportskeeda.com/editor/2022/01/79c17-16434484736595-1920.jpg",
+    imageAlt: "Cristiano Ronaldo celebrating a goal for Portugal in the red national team shirt",
+    title: "Cristiano Ronaldo Retires From Portugal: End of a 23-Year Era With 234 Caps and 146 Goals",
+    description:
+      "Cristiano Ronaldo retired from Portugal on November 5, 2026: 234 caps, 146 goals, Euro 2016 and two Nations League titles. Records and what happens next.",
+    excerpt:
+      "Cristiano Ronaldo announced his retirement from international football on November 5, 2026, ending a 23-year Portugal career with a world-record 234 caps and 146 goals.",
+    date: "2026-11-06",
+    category: "Sports",
+    sections: [
+      { type: "p", text: "Cristiano Ronaldo retirement is official. The 41-year-old announced on Thursday, November 5, 2026, that he is retiring from international football, ending a 23-year career with Portugal that made him the most-capped men's international and the highest scorer in men's international football history. In a five-minute video on his social media accounts, Ronaldo said the time had come to hand back Portugal's number 7 shirt, and made clear he is not retiring from football altogether: he will continue at Al-Nassr in Saudi Arabia." },
+      { type: "p", text: "Here is what happened: Ronaldo released the farewell video on Thursday morning, a day before Portugal coach Jorge Jesus was due to name his squad for the November Nations League fixtures. He said he would hand back the number 7 shirt after the November international break, closing a journey that began with his debut in August 2003. His last match in a Portugal shirt was already behind him: a 1-0 Nations League win over Wales on September 24, 2026. The federation thanked its eternal captain within hours and said it would organise a fitting tribute, with no details announced." },
+      { type: "h2", text: "What Cristiano Ronaldo Said in His Farewell Message" },
+      { type: "p", text: "Ronaldo read out a prepared speech over a video of his career highlights. To the Portuguese people, the day has come for me to hand back the number seven shirt of our national team, he said. Today the time has come to pass it on to the future. A journey that began in August 2003 and changed my life forever has come to an end. He added: Today I finish my walk on the pitch with the national team. I leave with my head held high, with pride in the path I took. He thanked his teammates, coaches, family and supporters, and closed: Portugal will always be in me. Forever." },
+      { type: "h2", text: "Cristiano Ronaldo Retirement: His Portugal Career in Numbers" },
+      { type: "list", items: [
+        "234 appearances for Portugal, a men's international record.",
+        "146 goals for Portugal, a men's international record.",
+        "Debut in August 2003 against Kazakhstan, aged just 18.",
+        "Trophies: Euro 2016, Portugal's first major title, and the Nations League in 2019 and 2025.",
+        "Five-time Ballon d'Or winner, in 2008, 2013, 2014, 2016 and 2017.",
+        "Final match: September 24, 2026, a 1-0 Nations League win over Wales, in which he played 67 minutes.",
+        "2026 World Cup: Portugal lost to Spain in the round of 16, so the World Cup remained the one major trophy that eluded him."
+      ] },
+      { type: "h2", text: "Why Did Ronaldo Retire Now? The Jorge Jesus Rift" },
+      { type: "p", text: "The decision did not come out of nowhere. Ronaldo had been in a public dispute with Portugal coach Jorge Jesus, who previously managed him at Al-Nassr. Jesus did not use him against Norway, and Ronaldo walked out of the Portugal camp on September 30, a day before the Nations League match in Denmark. The federation fined him 255 euros and handed him a 30-day suspension, which expired on October 30. He apologised afterwards and said he remained available for selection. Ronaldo had previously said he was considering retiring after the 2026 World Cup; reports say Jesus and federation president Pedro Proenca convinced him to continue. Ronaldo did not mention the rift in his announcement." },
+      { type: "h2", text: "What Happens Next: Portugal Squad Today and the Farewell Question" },
+      { type: "p", text: "The timing matters. Jorge Jesus is expected to announce Portugal's squad on Friday, November 6, for the Nations League games against Denmark on November 14 in Braga and Wales on November 17 in Cardiff. Ronaldo's announcement means he will not be in it. The Portuguese Football Federation said it refuses to let this farewell take place without due tribute. But no date, venue, opponent or format has been announced, so the tribute is a plan, not a confirmed event." },
+      { type: "p", text: "One question is reported but not confirmed: Observador says Ronaldo does not want to play a farewell match at all. That has not been confirmed by Ronaldo or the federation, so the question stays open, unlike Lionel Messi, who played a farewell match for Argentina last month." },
+      { type: "h2", text: "Ronaldo at Al-Nassr: Club Career Goes On" },
+      { type: "p", text: "Retirement from Portugal does not mean retirement from football. Ronaldo continues with Al-Nassr in Saudi Arabia, where he has played since 2023, under a contract that runs to June 2027. In an interview published in August, he told Vogue: This is probably my last year of football, and I want to leave a spectacular legacy. That suggests his full retirement could come at the end of this season. He has not announced a date for it." },
+      { type: "h2", text: "Cristiano Ronaldo Retirement: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "When did Cristiano Ronaldo retire from Portugal?", a: "Ronaldo announced his retirement from international football on November 5, 2026, in a five-minute video on social media, saying he would hand back Portugal's number 7 shirt after the November international break." },
+        { q: "How many goals and caps did Ronaldo finish with for Portugal?", a: "He finished with 234 appearances and 146 goals for Portugal, both men's international records. His career also brought Euro 2016 and Nations League titles in 2019 and 2025." },
+        { q: "Why did Cristiano Ronaldo retire from international football?", a: "It followed a public dispute with coach Jorge Jesus, including Ronaldo walking out of camp on September 30 and a 30-day suspension. He did not mention the rift in his message." },
+        { q: "Will Cristiano Ronaldo play a farewell match for Portugal?", a: "The federation says it plans a fitting tribute, but no date, venue or format has been announced. A report that Ronaldo does not want a farewell game is unconfirmed." },
+        { q: "Is Cristiano Ronaldo retiring from football completely?", a: "No. He continues playing for Al-Nassr in Saudi Arabia, under contract until June 2027. He told Vogue in August that this is probably his last year of football, but he has not announced a full retirement date." }
+      ] },
+      { type: "p", text: "Cristiano Ronaldo's retirement from Portugal closes a 23-year chapter that turned a small football nation into European champions and made its number 7 the most famous shirt in the international game. Watch for the Portugal squad announcement today and any confirmed tribute plans." }
+    ],
+  },
+{
     slug: "gavin-newsom-commutes-548-california-death-sentences-november-2026",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/San_Quentin_State_Prison.jpg/1920px-San_Quentin_State_Prison.jpg",
     imageAlt: "San Quentin State Prison in California, where the state's death row is housed (Photo: Wikimedia Commons)",
