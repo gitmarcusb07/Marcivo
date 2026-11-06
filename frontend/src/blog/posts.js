@@ -33,6 +33,38 @@
 
 export const posts = [
 {
+    slug: "ramayana-box-office-day-2-100-crore-india-200-crore-worldwide-november-2026",
+    image: "https://feeds.abplive.com/onecms/images/uploaded-images/2025/07/03/194d805eaa4752ff490e819c75c7fe8d1751525833243587_original.jpeg",
+    imageAlt: "Official Ramayana ensemble poster: Ranbir Kapoor as Lord Rama facing Yash as Ravana against a cosmic backdrop, with the tagline Our Truth. Our History.",
+    title: "Ramayana Box Office Collection Day 2: Ranbir Kapoor's Epic Crosses Rs 100 Crore in India, Rs 200 Crore Worldwide",
+    description:
+      "Ramayana box office collection Day 2: Ranbir Kapoor's epic crosses Rs 100 crore in India and Rs 200 crore worldwide in two days. Full figures here.",
+    excerpt:
+      "Ramayana: Part 1 crossed Rs 100 crore gross in India and Rs 200 crore worldwide on Day 2, adding Rs 34.06 crore net on Friday as trade trackers await the final figures.",
+    date: "2026-11-06",
+    category: "Cinema",
+    sections: [
+      { type: "p", text: "Ramayana: Part 1 has crossed Rs 100 crore gross in India and Rs 200 crore worldwide in just two days. The Nitesh Tiwari epic, starring Ranbir Kapoor as Ram and Yash as Ravana, added Rs 34.06 crore net on its second day, Friday, November 6, 2026, according to live tracking by Sacnilk reported by The Week, taking its domestic gross to Rs 117.69 crore by 8 pm. The worldwide figure, based on early estimates, puts the film past Rs 200 crore globally before its first weekend has begun." },
+      { type: "h2", text: "Ramayana Day 2 Box Office Collection: The Rs 100 Crore Milestone" },
+      { type: "p", text: "The headline number from Day 2 is the domestic gross. Ramayana entered the Rs 100 crore club in gross domestic box office collection on its second day, The Week reported on Friday evening, with the total reaching Rs 117.69 crore by 8 pm. In net terms, the film earned Rs 98.91 crore in India across two days, with Day 2 contributing Rs 34.06 crore net from 20,263 shows, as per Sacnilk. That is a drop from the Rs 64.85 crore net of opening day, Thursday, November 5, which was expected after the opening-day rush. The night shows were still to report when the 8 pm figures came in." },
+      { type: "h2", text: "Ramayana Box Office Day 2: Language-Wise Breakdown" },
+      { type: "p", text: "Hindi remains the engine of the film's collection, as it was on Day 1. The Day 2 split across its five versions, as reported by Sacnilk via The Week:" },
+      { type: "list", items: ["Hindi: Rs 22.18 crore net on Day 2, the largest share by far.", "Kannada: Rs 3.23 crore net, the strongest of the South Indian versions.", "Telugu: Rs 2.82 crore net on Day 2.", "Tamil: Rs 1.07 crore net on Day 2.", "Malayalam: Rs 80 lakh net on Day 2."] },
+      { type: "p", text: "The Hindi version alone has now earned more than Rs 85 crore net in two days. Occupancy on Day 2 ran at around 22 to 25 percent, with the evening and night shows pulling the strongest crowds." },
+      { type: "h2", text: "Ramayana Worldwide Collection Crosses Rs 200 Crore" },
+      { type: "p", text: "Worldwide, Ramayana has crossed Rs 200 crore in its first two days, according to early estimates reported by The Week. The overseas contribution is still being counted. On Day 1, the makers said the film grossed Rs 155 crore worldwide, while Sacnilk estimated the opening-day worldwide figure at Rs 127.5 crore. The Day 2 worldwide total will firm up once the overseas numbers are reported. What is not in doubt is the pace: very few Indian films have reached Rs 200 crore worldwide within two days of release." },
+      { type: "h2", text: "Why the Trackers Disagree on Ramayana Day 2" },
+      { type: "p", text: "Readers will notice different Day 2 numbers depending on which tracker they check, and that is worth explaining plainly. Sacnilk's live figure at 8 pm put Day 2 at Rs 34.06 crore net, while Box Office India 24's live estimate at 7:41 pm put Day 2 at Rs 42.09 crore net, with a cumulative net of Rs 106.10 crore. These are live estimates built from reported shows, and they move as more shows report. The final Day 2 figures are expected by Saturday evening. Until then, treat any single Day 2 number as an estimate, and the Rs 100 crore domestic gross and Rs 200 crore worldwide milestones as the settled story." },
+      { type: "h2", text: "Day 2 Drop, Weekend Jump: What Comes Next" },
+      { type: "p", text: "A Day 2 drop after a huge opening is normal, and the real test for Ramayana is the weekend. The early signs are strong: advance bookings for Saturday, November 7, stood at Rs 39.71 crore gross, with more than 10 lakh tickets booked across 24,496 shows, according to Track Tollywood. That is a big advance for a Saturday, and it suggests the film could post its biggest single day yet over the weekend. Ramayana released just ahead of Diwali, and the festival period gives it room to grow. Part 2 of the epic is currently slated for Diwali 2028." },
+      { type: "h2", text: "Ramayana Day 2 vs Day 1: The Numbers Side by Side" },
+      { type: "list", items: ["Day 1 (Thu, Nov 5): Rs 64.85 crore net, 25,200 shows, about 25.26 lakh tickets.", "Day 2 (Fri, Nov 6, till 8 pm): Rs 34.06 crore net, 20,263 shows, as per Sacnilk.", "Two-day domestic gross: Rs 117.69 crore.", "Two-day domestic net: Rs 98.91 crore.", "Two-day worldwide gross: past Rs 200 crore (early estimates).", "Saturday advance booking: Rs 39.71 crore gross, over 10 lakh tickets."] },
+      { type: "h2", text: "Ramayana Box Office Collection Day 2: Frequently Asked Questions" },
+      { type: "faq", items: [{ q: "How much did Ramayana earn on Day 2?", a: "Rs 34.06 crore net in India on Friday, November 6, 2026, as per Sacnilk's live tracking at 8 pm. The final figure is still awaited; other trackers estimate around Rs 42 crore net." }, { q: "Has Ramayana crossed Rs 100 crore in India?", a: "Yes, in gross terms. It crossed Rs 100 crore gross at the domestic box office on Day 2, reaching Rs 117.69 crore gross by 8 pm. In net terms, its two-day total stood at Rs 98.91 crore." }, { q: "Has Ramayana crossed Rs 200 crore worldwide?", a: "Yes, according to early estimates reported by The Week. The film crossed Rs 200 crore worldwide within two days, though final overseas figures are still awaited." }, { q: "When will the final Ramayana Day 2 figures be out?", a: "By Saturday evening, November 7, once all shows have reported." }] },
+      { type: "p", text: "Ramayana: Part 1 opened with Rs 64.85 crore net on Day 1 and has now crossed Rs 100 crore gross in India and Rs 200 crore worldwide in two days. The Day 2 dip was expected after the opening-day rush, and the strong Saturday advance booking points to a big weekend. Directed by Nitesh Tiwari and starring Ranbir Kapoor, Sai Pallavi, Yash, Ravie Dubey and Sunny Deol, the film is among the fastest Indian releases to the Rs 200 crore worldwide mark." },
+    ],
+  },
+{
     slug: "upsc-mains-result-2026-declared-2526-qualified-personality-test",
     image: "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=1200&q=80&auto=format&fit=crop",
     imageAlt: "A candidate writing notes in a notebook while preparing for an exam. Photo via Unsplash.",
@@ -60,7 +92,7 @@ export const posts = [
       { type: "faq", items: [{ q: "How many candidates qualified in the UPSC Mains Result 2026?", a: "A total of 2,526 candidates qualified for the Personality Test. They were shortlisted from the 13,343 candidates who appeared for the Civil Services (Main) Examination 2026, held from August 21 to August 30, 2026." }, { q: "Where can I download the UPSC Mains Result 2026 PDF?", a: "On the official UPSC website, upsc.gov.in. Open the What's New or Written Results section, click the Civil Services (Main) Examination, 2026 link, and download the roll-number-wise and name-wise PDF. No login is needed to open it." }, { q: "What is the last date to fill DAF-II for UPSC 2026?", a: "November 25, 2026, at 6:00 PM. The DAF-II window opens on November 11, 2026, on the UPSC online portal, upsconline.nic.in. Candidates who miss it will not get an e-Summon Letter for the Personality Test." }, { q: "When will the UPSC Personality Test 2026 be held?", a: "UPSC has not announced the interview schedule yet. The Personality Tests will be held at Dholpur House, Shahjahan Road, New Delhi, and the dates and e-Summon Letters will be published on upsc.gov.in in due course." }, { q: "What is the total marks for UPSC CSE 2026?", a: "The final merit is based on 2,025 marks: 1,750 marks for the written examination and 275 marks for the Personality Test. Individual marks and cut-offs will be released only after the final result." }] },
       { type: "p", text: "The UPSC Mains Result 2026 is out, and 2,526 candidates are one step away from the country's top civil services. If your roll number is on the list, fill DAF-II between November 11 and 25 and start preparing for the Personality Test. If it is not, remember that the result lists only roll numbers, so double-check both the roll-number-wise and name-wise PDFs before concluding anything, and plan your next attempt with the written exam's 1,750 marks in mind." },
     ],
-  },,
+  },
 {
     slug: "maatrubhumi-trailer-december-4-release-salman-khan-confirms-november-2026",
     image: "https://i.ytimg.com/vi/_oA7gYabWng/maxresdefault.jpg",
@@ -89,7 +121,7 @@ export const posts = [
       { type: "p", text: "Khan also announced a special initiative at the trailer launch: people above the age of 75 will be able to watch Maatrubhumi in theatres for just Rs 11. The gesture, announced on stage in Mumbai, is aimed at elderly moviegoers, and it adds a feel-good note to a launch that was otherwise about settling the film's long-delayed release. With the trailer out, the date locked and the cast confirmed, Maatrubhumi finally moves from years of delays into its release campaign, with four weeks to go until December 4." },
       { type: "faq", items: [{ q: "When does Maatrubhumi release?", a: "Maatrubhumi: May War Rest in Peace releases in cinemas on December 4, 2026, as announced by Salman Khan at the trailer launch on November 6, 2026." }, { q: "What is Maatrubhumi about?", a: "It is a war drama inspired by the June 2020 Galwan Valley clash, following Colonel Santosh Babu and Indian soldiers, directed by Apoorva Lakhia and starring Salman Khan." }, { q: "How long is the Maatrubhumi trailer?", a: "The trailer runs 4 minutes and 43 seconds, cleared by the CBFC with a U/A 16+ certificate on November 4, 2026." }, { q: "Does Maatrubhumi clash with any other film?", a: "Yes, Maatrubhumi releases on December 4, 2026, the same day as Shraddha Kapoor's Eetha." }] },
     ],
-  },,
+  },
 {
     slug: "john-wick-animated-prequel-keanu-reeves-impossible-task-november-2026",
     image: "https://image.tmdb.org/t/p/w1280/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg",
@@ -118,7 +150,7 @@ export const posts = [
       { type: "p", text: "For fans, the Impossible Task has always been the great unseen chapter of John Wick. Every film in the series refers back to it, and every fan has imagined what that one night looked like. Animation is the right tool for it: Tindle's background in stylised action means the film can show Wick taking on an entire underworld in a single night without the limits of live-action choreography. With Reeves voicing the character and Stahelski producing, the prequel keeps the franchise's creative core intact while opening a new direction. It also keeps John Wick on screen while Chapter 5 is still in development, giving audiences a new Wick story without waiting for the next live-action sequel." },
       { type: "faq", items: [{ q: "Is Keanu Reeves returning for the John Wick animated prequel?", a: "Yes. Keanu Reeves has closed a deal to voice John Wick in Lionsgate's animated prequel film, and he is also producing it." }, { q: "What is the John Wick animated prequel about?", a: "It tells the story of the Impossible Task, the single night in which Wick eliminated all of his rivals to free himself from the High Table and earn a life with Helen." }, { q: "Who is directing the John Wick animated prequel?", a: "Shannon Tindle, known for Ultraman: Rising and Kubo and the Two Strings, directs from a screenplay by Ryan and Kaz Firpo." }, { q: "When does the John Wick animated prequel release?", a: "No release date has been announced yet. Lionsgate has confirmed the project and Reeves' return, with further details to follow." }] },
     ],
-  },,
+  },
 {
     slug: "ca-foundation-result-september-2026-declared-pass-percentage-toppers",
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&q=80&auto=format&fit=crop",
@@ -7070,19 +7102,19 @@ export const posts = [
           {
             q: "Is the Spider-Man Brand New Day rerelease confirmed?",
             a: "Not by Sony. It is reported by Deadline and covered by Polygon on October 30, 2026, but Sony has not confirmed it or announced a date.",
-          },,
+          },
           {
             q: "What new footage will the rerelease include?",
             a: "According to the report, a cut cameo from Rosario Dawson as Claire Temple, also known as Night Nurse, plus more surprises that have not been named.",
-          },,
+          },
           {
             q: "Who is Claire Temple?",
             a: "Claire Temple, played by Rosario Dawson, was the medical contact for Marvel's Netflix heroes in Daredevil, Jessica Jones, Luke Cage, Iron Fist and The Defenders.",
-          },,
+          },
           {
             q: "How much has Brand New Day earned?",
             a: "About 2.5 billion dollars worldwide, including 958 million dollars in North America, the highest domestic total to date and third-highest worldwide.",
-          },,
+          },
           {
             q: "When is the rerelease date?",
             a: "No rerelease date has been announced. The film released in theatres on July 31, 2026, arrived on digital on October 6, 2026, and is due on 4K, Blu-ray and DVD on December 15, 2026.",
@@ -8229,9 +8261,9 @@ export const posts = [
 
 /** Newest first. The list page renders in this order; the daily job prepends. */
 export function getAllPosts() {
-  return [...posts].sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+  return [...posts].filter(Boolean).sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
 }
 
 export function getPostBySlug(slug) {
-  return posts.find((post) => post.slug === slug);
+  return posts.find((post) => post && post.slug === slug);
 }
