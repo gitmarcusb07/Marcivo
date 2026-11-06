@@ -33,6 +33,48 @@
 
 export const posts = [
 {
+    slug: "gavin-newsom-commutes-548-california-death-sentences-november-2026",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/San_Quentin_State_Prison.jpg/1920px-San_Quentin_State_Prison.jpg",
+    imageAlt: "San Quentin State Prison in California, where the state's death row is housed (Photo: Wikimedia Commons)",
+    title: "Gavin Newsom Commutes All 548 California Death Sentences in Largest Mass Clemency in US History",
+    description:
+      "Gavin Newsom commuted all 548 California death sentences to life without parole in the largest mass clemency in US history.",
+    excerpt:
+      "California Governor Gavin Newsom has commuted the death sentences of all 548 people on the state's death row to life in prison without parole — the largest mass clemency in American history, announced on November 5, 2026, in the final weeks of his governorship.",
+    date: "2026-11-06",
+    category: "News",
+    sections: [
+      { type: "p", text: "Gavin Newsom commutes 548 death sentences: California's governor has commuted the death sentences of all 548 people on the state's death row to life in prison without parole, in the largest mass clemency in American history. Newsom announced the decision on Thursday, November 5, 2026, in an open letter to Californians, in the final weeks of his governorship." },
+      { type: "p", text: "In the letter, Newsom wrote that he was taking the action because he firmly believes \"state-sanctioned killing is incompatible with California's values, undermines the foundations of our legal system, and diminishes all of us.\" The commutations do not abolish the death penalty — that can only be done by voters — but they mean no one currently on California's death row will be executed." },
+      { type: "h2", text: "Newsom Commutes 548 Death Sentences: What the Decision Does" },
+      { type: "p", text: "The order converts every California death sentence into life in prison without the possibility of parole. Under California law, the state Supreme Court must review clemency for anyone with multiple felony convictions, so the commutations apply immediately to about one-third of the people on death row, while the remaining two-thirds will be reviewed by the court before their commutations become final." },
+      { type: "p", text: "The scale is without precedent. No governor has ever commuted so many death sentences at once. The Death Penalty Information Center called it the largest mass clemency in American history — and noted that Newsom's action has more than doubled the total number of clemencies granted in capital cases in the last 50 years. It is the eighth universal clemency by a governor in the modern era, but none of the previous seven was at this scale." },
+      { type: "p", text: "The decision also reshapes the national picture. California held the largest death row in the United States, and this single action cuts the national death row population by nearly 30%, leaving about 1,388 people under sentence of death across the country — the lowest number since 1984." },
+      { type: "h2", text: "Why Newsom Says He Acted Now" },
+      { type: "p", text: "Newsom has opposed the death penalty throughout his governorship. Just two months into his first term, in March 2019, he imposed a moratorium on executions, calling the death penalty a \"failure\" and citing persistent racial discrimination, high costs and the risk of human error. California has not carried out an execution in more than 20 years — the last was in January 2006 — yet the state kept sentencing people to death." },
+      { type: "p", text: "The numbers behind that record are stark. California has spent an estimated $6 billion on the death penalty since it was reinstated in 1978, and carried out just 13 executions in that time. About a third are Black, a third white and about 29% are Latino, while eight people — all men of color — have been exonerated from California's death row. Two-thirds were sentenced more than 20 years ago, and 70% were still waiting for a lawyer to be appointed to appeal their sentence." },
+      { type: "h2", text: "Support From Victims' Families — and Pushback From Prosecutors" },
+      { type: "p", text: "The decision was welcomed by a coalition of victims' families, prosecutors, former corrections officials, faith leaders and civil rights advocates. Days before the announcement, 50 murder victims' family members signed a letter asking him to grant universal clemency. Among them was Jess Nichol, the sister of Polly Klaas, who was murdered by one of the people granted clemency. Nichol said she once believed her sister's killer deserved execution, but came to believe whether he is executed has nothing to do with her recovery or with real public safety." },
+      { type: "p", text: "Not everyone welcomed it. Riverside County District Attorney Mike Hestrin denounced the move, saying Newsom acted without notifying the district attorneys who had prosecuted the cases, and victims' advocates said they would challenge it in court. Critics also seized on the timing — two days after the US midterm elections — and Newsom, widely expected to seek the Democratic presidential nomination in 2028, is in the final weeks of his governorship before handing over to Governor-elect Xavier Becerra." },
+      { type: "h2", text: "What Happens Next for California's Death Row" },
+      { type: "p", text: "The next step is the California Supreme Court. For the roughly two-thirds of death row prisoners with multiple felony convictions, the court must review each commutation before it becomes final. The other third have their sentences commuted immediately." },
+      { type: "p", text: "The death penalty itself remains on the books in California. Because it was established by a voter referendum, only another referendum can repeal it — and voters narrowly rejected abolition in 2012 and 2016. What has changed is the fate of the 548 people who were waiting to be executed: they will now die in prison, but not by the state's hand." },
+      { type: "list", items: [
+        "Announced Thursday, November 5, 2026: Governor Gavin Newsom commutes all 548 death sentences on California's death row.",
+        "New sentence: life in prison without the possibility of parole for all 548 people.",
+        "Scale: the largest mass clemency in American history; it cuts the US death row population by nearly 30%.",
+        "Court review: applies immediately to about one-third; the California Supreme Court must review the rest.",
+        "Cost: California spent an estimated $6 billion on the death penalty since 1978, with 13 executions."
+      ] },
+      { type: "faq", items: [
+        { q: "How many death sentences did Gavin Newsom commute?", a: "All 548 people on California's death row. Their sentences were commuted to life in prison without the possibility of parole, in the largest mass clemency in American history." },
+        { q: "Does the decision abolish the death penalty in California?", a: "No. The death penalty remains on the books — only another voter referendum can repeal it. The order applies only to the 548 people currently under sentence of death." },
+        { q: "When do the commutations take effect?", a: "Immediately for about one-third of the people on death row. For the remaining two-thirds, who have multiple felony convictions, the California Supreme Court must review the clemency before it becomes final." },
+        { q: "Why did Newsom commute the death sentences?", a: "Newsom said state-sanctioned killing is incompatible with California's values, and pointed to racial discrimination, high costs and the risk of error. He imposed a moratorium on executions in 2019, and California had not executed anyone in more than 20 years." }
+      ] }
+    ],
+  },
+{
     slug: "india-beat-japan-4-1-asian-champions-trophy-final-november-2026",
     image: "https://static.toiimg.com/thumb/msid-135579044,width-1600,height-900,resizemode-6/photo.jpg",
     imageAlt: "Indian hockey players celebrate after India beat Japan 4-1 in the Asian Champions Trophy 2026 final in Mohali (Photo: Hockey India)",
