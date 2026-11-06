@@ -33,6 +33,36 @@
 
 export const posts = [
 {
+    slug: "ca-foundation-result-september-2026-declared-pass-percentage-toppers",
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&q=80&auto=format&fit=crop",
+    imageAlt: "A student writing notes at a desk with a notebook and a cup of coffee, preparing for an exam. Photo via Unsplash.",
+    title: "CA Foundation Result September 2026 Declared: 18.93% Pass, Direct Link, Toppers and How to Check Your Scorecard",
+    description:
+      "CA Foundation result September 2026 declared: 18.93% passed. Check your scorecard at caresults.icai.org, see toppers, pass percentage and next steps.",
+    excerpt:
+      "ICAI has declared the CA Foundation result September 2026: 19,736 of 1,04,240 candidates passed, a pass percentage of 18.93%, and Kansika from Hisar topped with 361 marks.",
+    date: "2026-11-06",
+    category: "Education",
+    sections: [
+      { type: "p", text: "The CA Foundation result September 2026 has been declared. The Institute of Chartered Accountants of India (ICAI) released the result on Friday, November 6, 2026, and candidates can now check their scorecard on the official result website, caresults.icai.org, using their registration number and roll number. Of the 1,04,240 candidates who appeared for the exam, 19,736 have passed, giving an overall pass percentage of 18.93%." },
+      { type: "h2", text: "CA Foundation Result September 2026: Key Highlights" },
+      { type: "list", items: ["Result declared on November 6, 2026, by ICAI.", "Official website to check the result: caresults.icai.org.", "1,04,240 candidates appeared for the exam; 19,736 passed.", "Overall pass percentage: 18.93%.", "All India Rank 1: Kansika from Hisar, with 361 marks (90.25%).", "Merit list released along with the result."] },
+      { type: "h2", text: "CA Foundation September 2026 Pass Percentage" },
+      { type: "p", text: "The overall pass percentage for the CA Foundation September 2026 exam is 18.93%. ICAI published gender-wise figures along with the result. Male candidates recorded a pass percentage of 20.47%, with 10,931 of 53,398 candidates passing. Female candidates recorded a pass percentage of 17.32%, with 8,805 of 50,842 candidates passing. The figures show how competitive the Foundation stage remains: fewer than one in five candidates cleared it in this session." },
+      { type: "h2", text: "CA Foundation September 2026 Toppers" },
+      { type: "p", text: "Kansika from Hisar has secured All India Rank 1 in the CA Foundation September 2026 exam with 361 marks out of 400, or 90.25%, according to Times Now and Shiksha. Careers360 also reports Mahek Gupta at All India Rank 1 with the same score of 90.25%. ICAI has released the full merit list on the result portal, and candidates can check the top ranks through the same login used to download the scorecard." },
+      { type: "h2", text: "How to Check CA Foundation Result September 2026" },
+      { type: "steps", items: ["Go to the official ICAI result website, caresults.icai.org.", "Click on the link for CA Foundation Result September 2026.", "Enter your registration number and roll number.", "Enter the captcha code shown on the screen and submit.", "Your scorecard will appear on the screen. Download it and save a copy for future reference."] },
+      { type: "h2", text: "What Your CA Foundation Scorecard Shows" },
+      { type: "p", text: "The scorecard shows your name, roll number, registration number, paper-wise marks, total marks and your pass or fail status. To pass the CA Foundation exam, a candidate must score at least 40% in each paper and 50% in aggregate across all four papers. Check every detail on the scorecard carefully, including your name and marks, and keep a saved copy, because ICAI does not send a physical scorecard by post." },
+      { type: "h2", text: "What to Do After Checking Your CA Foundation Result" },
+      { type: "p", text: "If you have passed, you can register for the CA Intermediate course, the next stage of the chartered accountancy course. Keep your scorecard safe, as you will need it during registration and for future reference. If you did not pass this time, you can apply for verification of your answer sheets when ICAI opens the verification window, which Careers360 reports is expected to open tentatively on November 7, 2026. You can also prepare for the next Foundation attempt. Many candidates clear the exam in a later attempt, so use the scorecard to see which papers need more work." },
+      { type: "h2", text: "CA Foundation Result September 2026: Frequently Asked Questions" },
+      { type: "faq", items: [{ q: "Where can I check the CA Foundation result September 2026?", a: "On the official ICAI result website, caresults.icai.org. Click the CA Foundation September 2026 result link and log in with your registration number and roll number." }, { q: "What is the pass percentage for CA Foundation September 2026?", a: "The overall pass percentage is 18.93%. A total of 19,736 of the 1,04,240 candidates who appeared passed the exam. Male candidates passed at 20.47% and female candidates at 17.32%." }, { q: "Who topped the CA Foundation September 2026 exam?", a: "Kansika from Hisar secured All India Rank 1 with 361 marks (90.25%). Careers360 also reports Mahek Gupta at All India Rank 1 with the same score." }, { q: "What are the passing marks for CA Foundation?", a: "A candidate must score at least 40% in each paper and 50% in aggregate across all four papers to pass the CA Foundation exam." }, { q: "Will ICAI send the scorecard by post?", a: "No. ICAI does not send physical scorecards by post. Candidates must download the scorecard from caresults.icai.org and save a copy." }] },
+      { type: "p", text: "The CA Foundation result September 2026 is live now, and the 18.93% pass rate shows the exam remains a tough first step towards becoming a chartered accountant. Check your scorecard on caresults.icai.org, save a copy, and plan your next step, whether that is Intermediate registration or another attempt." },
+    ],
+  },
+{
     slug: "bengaluru-family-massacre-cab-driver-7-murders-november-2026",
     image: "https://commons.wikimedia.org/wiki/Special:FilePath/Vegetation%20on%20Nandi%20Hills.jpg?width=1200",
     imageAlt: "Vegetation in the misty foothills of Nandi Hills in Chikkaballapur district, where Bengaluru police say the bodies were dumped. File photo via Wikimedia Commons.",
