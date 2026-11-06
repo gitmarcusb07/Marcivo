@@ -33,6 +33,41 @@
 
 export const posts = [
 {
+    slug: "ai-stock-sell-off-nikkei-kospi-crash-november-6-2026",
+    image: "https://media.assettype.com/gulfnews%2F2026-11-06%2F4hbuqori%2Fpreview.jpg?w=1200&auto=format%2Ccompress&fit=max",
+    imageAlt: "A pedestrian walks past an electronic stock board showing Japan's Nikkei 225 index at a Tokyo securities firm. AP file photo from November 2, 2026.",
+    title: "AI Stock Sell-Off: Nikkei Crashes 6%, Kospi Triggers Circuit Breaker as $1 Trillion Vanishes in Asia",
+    description:
+      "AI stock sell-off: Nikkei crashes 6%, Kospi halts trading and $1 trillion vanishes in Asia after the Nasdaq's worst day since April 2025. What triggered it.",
+    excerpt:
+      "Asian markets plunged on Friday, November 6, 2026, as an AI stock sell-off that began on Wall Street spread across the region: the Nikkei crashed more than 6%, South Korea's Kospi triggered a circuit breaker, and more than $1 trillion in value vanished in a single session.",
+    date: "2026-11-06",
+    category: "Tech",
+    sections: [
+      { type: "p", text: "The AI stock sell-off that started on Wall Street has turned into a global rout. Asian markets plunged on Friday, November 6, 2026, as investors dumped the chip and technology stocks that powered the artificial intelligence boom: Japan's Nikkei 225 crashed more than 6%, South Korea's Kospi dived so fast that the exchange had to halt trading, and more than $1 trillion in value was wiped out across Asia in a single session. It follows the worst day for US stocks since the tariff meltdown of April 2025." },
+      { type: "h2", text: "What Triggered the AI Stock Sell-Off" },
+      { type: "p", text: "The immediate trigger was political. Democrats swept both chambers of Congress in Tuesday's US midterm elections, and investors are now pricing in tighter regulation of the artificial intelligence industry and possible pauses in the construction of new data centres. Voters across party lines have said they are wary of AI and unhappy about the increases to power bills caused by data centres, and the election result has made the market ask whether the data-centre building boom could slow down." },
+      { type: "p", text: "That political fear landed on a trade that was already shaky. Critics have argued for months that AI stock prices had shot too high and that the returns on the enormous sums being poured into AI infrastructure are unclear. When the selling started in New York on Thursday, it hit the biggest and most influential names first, and the fear spread to every market that holds them." },
+      { type: "h2", text: "Wall Street: S&P 500 Has Its Worst Day Since April 2025" },
+      { type: "p", text: "On Thursday, the S&P 500 fell 4.4%, or 334.89 points, to close at 7,353.73 — its worst day since US President Donald Trump's tariff announcement shook markets in April 2025. The Dow Jones Industrial Average sank 1,833 points, or 3.4%, to 51,523.06, while the Nasdaq composite tumbled 5.5%, or 1,421.52 points, to 24,315.00." },
+      { type: "p", text: "The Nasdaq 100, which is packed with the biggest technology stocks, fell 6.4% for its worst session since March 2020, wiping out about $2.3 trillion in value, according to Bloomberg. The Nasdaq composite is now 11.9% below the all-time high it set last month — a drop of more than 10% that market watchers call a correction. Nvidia, the chip company that became the face of the AI boom, fell 9.3% and was by far the heaviest weight on the S&P 500. Advanced Micro Devices tumbled 17.3%, CoreWeave fell 9.8% and GE Vernova sank 7.5%. Investors also moved into safer assets: the yield on the 10-year Treasury fell to 4.84% from 4.90%." },
+      { type: "h2", text: "Nikkei Crashes and Kospi Triggers a Circuit Breaker in Asia" },
+      { type: "p", text: "Asia opened on Friday straight into the sell-off. Japan's Nikkei 225 fell more than 6% in morning trading and was down as much as 7.1% during the session, dropping below the 60,000 mark for the first time since mid-May. By midday it was trading 5.7% lower at 57,576.63, heading for its worst day in eight months and an 8.6% fall for the week — its steepest weekly drop since March 2025. Market trackers also put the Nikkei roughly 20% below its June peak, which is bear-market territory." },
+      { type: "p", text: "South Korea was hit even harder. The Kospi dived 8.5% to 8.8% in early trading, triggering a circuit breaker that suspended trading for about 20 minutes to cool the selling. Chipmakers bore the brunt: Samsung Electronics plunged nearly 10% and SK Hynix fell more than 11%. By midday the Kospi was still down 7.4% at 4,985.99. Taiwan's Taiex dropped 8% to 9%, with chip giant TSMC hitting its daily limit down, while Hong Kong's Hang Seng fell 0.7%, the Shanghai Composite dipped 1.3% and Australia's S&P/ASX 200 lost 1.0%. The MSCI Asia Pacific Index declined 2.3%." },
+      { type: "p", text: "Market estimates put the value erased across Korea, Japan and China at more than $1 trillion in a single session. Bitcoin also fell about 6% to near $75,000 as the risk sell-off spread beyond stocks." },
+      { type: "h2", text: "What the AI Sell-Off Means for Indian Investors" },
+      { type: "p", text: "Indian markets have so far escaped the worst of it, but the global rout is weighing on sentiment. The Sensex traded flat and the Nifty saw only a marginal dip in early trade on Friday, after Thursday's rally had lifted the Sensex 2.60% to 79,310.01. Even so, Indian shares are set to snap a six-session winning run as the global sell-off hits risk appetite. For Indian investors, the key question is whether the AI spending boom keeps going, or whether regulation and rising costs slow the data-centre build-out that has powered chip stocks for three years." },
+      { type: "h2", text: "AI Stock Sell-Off: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "Why are AI stocks crashing today?", a: "Investors fear the data-centre building boom could slow after Democrats swept the US midterm elections, raising the prospect of tighter AI regulation and pauses in construction. Worries about high AI valuations and the return on huge AI spending added to the selling." },
+        { q: "How much did the Nikkei fall on November 6, 2026?", a: "Japan's Nikkei 225 fell more than 6% in morning trading on November 6, 2026, dropping as much as 7.1% during the session and falling below 60,000 for the first time since mid-May." },
+        { q: "Why did South Korea halt trading?", a: "South Korea's Kospi dived 8.5% to 8.8% in early trading on November 6, 2026, triggering a circuit breaker that suspended trading for about 20 minutes. Samsung fell nearly 10% and SK Hynix more than 11% as chip stocks led the sell-off." },
+        { q: "How much value was wiped out in the AI sell-off?", a: "The Nasdaq 100 alone lost about $2.3 trillion in value on Thursday, November 5, 2026, and market estimates put the value erased across Korea, Japan and China at more than $1 trillion in Friday's Asian session." }
+      ] },
+      { type: "p", text: "The AI stock sell-off has spread from Wall Street to Asia, with the Nikkei crashing more than 6%, the Kospi halting trading and over $1 trillion wiped out in a day. Whether markets stabilise depends on what happens next in Washington — and on whether the AI spending boom keeps its momentum." }
+    ],
+  },
+{
     slug: "call-of-duty-modern-warfare-4-season-1-live-november-6-2026",
     image: "https://blog.playstation.com/tachyon/2026/10/169b5c8818f420cf4111ba12383e01b106c80725.png",
     imageAlt: "Official Call of Duty: Modern Warfare 4 Season 1 key art: a hooded operator holding a rifle in the rocky Canyon map.",
