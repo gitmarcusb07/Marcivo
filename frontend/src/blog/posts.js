@@ -33,6 +33,37 @@
 
 export const posts = [
 {
+    slug: "cbse-date-sheet-2027-class-10-12-board-exams-february-16",
+    image: "https://images.indianexpress.com/2026/10/CBSE-Class-10-12-Board-Exams-Date-Sheet-20-27.jpg",
+    imageAlt: "Students appearing for the CBSE Class 10 and 12 board examinations. Photo: The Indian Express.",
+    title: "CBSE Date Sheet 2027 Out: Class 10 and 12 Board Exams Begin February 16, Full Schedule and How to Download",
+    description:
+      "CBSE date sheet 2027 is out: Class 10 and 12 board exams start February 16, 2027. Check the full subject-wise schedule, timings and how to download the PDF.",
+    excerpt:
+      "CBSE has released the Class 10 and 12 board exam date sheets for 2027, with both exams starting on February 16, 2027 and every paper beginning at 10:30 am.",
+    date: "2026-11-07",
+    category: "Education",
+    sections: [
+      { type: "p", text: "The CBSE date sheet 2027 is out. The Central Board of Secondary Education (CBSE) has released the official date sheets for the Class 10 and Class 12 board examinations, and both sets of exams will begin on Tuesday, February 16, 2027. Class 10 exams will run from February 16 to March 9, 2027, while Class 12 exams will run from February 16 to April 9, 2027, with every paper starting at 10:30 am. The board released the timetables 101 days before the exams begin, giving students, schools and parents plenty of time to plan. Students can download the complete subject-wise schedule from the board's official website, cbse.gov.in." },
+      { type: "h2", text: "CBSE Date Sheet 2027: Key Dates at a Glance" },
+      { type: "p", text: "CBSE released the Class 10 and Class 12 date sheets on November 6, 2026. According to the board, the date sheets were prepared from the data schools submitted in the List of Candidates, which records the subject combinations each student has chosen. With that process complete, the board finalised both timetables. Examination Controller Sanyam Bhardwaj said the schedules were released 101 days in advance so that students, schools and parents get enough time to plan their preparation and other arrangements." },
+      { type: "list", items: ["Class 10 board exams 2027: February 16 to March 9, 2027, covering 83 subjects.", "Class 12 board exams 2027: February 16 to April 9, 2027, covering 121 subjects.", "All exams start at 10:30 am.", "Over 26 lakh students have registered for the Class 10 exams and more than 19.8 lakh for the Class 12 exams.", "The date sheets were released 101 days before the exams begin.", "Download the official PDF from cbse.gov.in."] },
+      { type: "h2", text: "CBSE Class 10 Date Sheet 2027: Major Paper Dates" },
+      { type: "p", text: "The Class 10 board exams open with Painting on February 16, 2027, and the big papers follow almost immediately. Mathematics (Standard and Basic) is scheduled for February 17, Science for February 22, English for February 26, Hindi for March 3 and Social Science for March 8, with the exams concluding on March 9. The Class 10 exams will be conducted under CBSE's recently introduced two-board system. Since the timetable covers 83 subjects, students should check the official PDF for their own subject combinations rather than relying on the major-paper dates alone." },
+      { type: "list", items: ["February 16, 2027: Painting.", "February 17, 2027: Mathematics Standard and Mathematics Basic.", "February 22, 2027: Science.", "February 26, 2027: English.", "March 3, 2027: Hindi.", "March 8, 2027: Social Science.", "March 9, 2027: Class 10 exams conclude."] },
+      { type: "h2", text: "CBSE Class 12 Date Sheet 2027: Major Paper Dates" },
+      { type: "p", text: "Class 12 students start with Physics on February 16, 2027. Accountancy follows on February 23, Chemistry on February 27, English Core and Elective on March 5, Mathematics and Applied Mathematics on March 9, Economics on March 16, Biology on March 25 and History on March 27, with the last papers on April 9. The Class 12 timetable covers 121 subjects, so students should check the official PDF for their exact subject combinations and codes rather than relying on the major-paper dates alone." },
+      { type: "list", items: ["February 16, 2027: Physics.", "February 23, 2027: Accountancy.", "February 27, 2027: Chemistry.", "March 5, 2027: English Core and English Elective.", "March 9, 2027: Mathematics and Applied Mathematics.", "March 16, 2027: Economics.", "March 25, 2027: Biology.", "March 27, 2027: History.", "April 9, 2027: Class 12 exams conclude."] },
+      { type: "h2", text: "How to Download the CBSE Date Sheet 2027 PDF" },
+      { type: "steps", items: ["Go to the official CBSE website at cbse.gov.in.", "Look for the link to the Class 10 or Class 12 board exam date sheet 2027 on the homepage.", "Open the PDF for your class to see the full subject-wise timetable.", "Check your subject codes, exam dates and paper timings carefully.", "Save the PDF on your phone or computer and take a printout for your study desk."] },
+      { type: "h3", text: "What to check on your date sheet" },
+      { type: "p", text: "Most papers run from 10:30 am to 1:30 pm, while some shorter papers, such as Painting, run from 10:30 am to 12:30 pm, so check the timing printed against each subject. Also confirm the subject code next to each paper, because some subjects have similar names, and note the gaps between your papers so you can plan revision around them." },
+      { type: "h2", text: "CBSE Board Exams 2027: How to Use the Extra Preparation Time" },
+      { type: "p", text: "With the date sheet out 101 days early, students have a full revision window before February 16. CBSE has also released sample papers for the 2027 exams on cbseacademic.nic.in, which students can use to practise the paper pattern and timing. The sensible plan is to work backwards from your first paper, give the heavy subjects such as Mathematics, Science and Physics longer revision blocks, and keep the last week for mock papers and revision of notes rather than new topics." },
+      { type: "faq", items: [{ q: "When do the CBSE board exams 2027 start?", a: "Both the Class 10 and Class 12 board exams 2027 begin on February 16, 2027, and every paper starts at 10:30 am." }, { q: "When do the CBSE Class 10 exams 2027 end?", a: "The Class 10 board exams 2027 end on March 9, 2027. The exams cover 83 subjects." }, { q: "When do the CBSE Class 12 exams 2027 end?", a: "The Class 12 board exams 2027 end on April 9, 2027. The timetable covers 121 subjects." }, { q: "Where can I download the CBSE date sheet 2027 PDF?", a: "You can download the official Class 10 and Class 12 date sheets from the CBSE website at cbse.gov.in. Sample papers are available on cbseacademic.nic.in." }, { q: "What time do CBSE board exams start?", a: "All CBSE board exam papers start at 10:30 am. Most papers run till 1:30 pm, while some shorter papers end at 12:30 pm, so check the timing printed against your subject." }] }
+    ]
+  },
+{
     slug: "harry-boxer-detained-us-lawrence-bishnoi-gang-november-2026",
     image: "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2026/11/harry-boxer-1794029121.jpg",
     imageAlt: "Harry Boxer, also known as Harichand Jat, a key operative of the Lawrence Bishnoi gang who was detained in the United States. Photo: India TV.",
