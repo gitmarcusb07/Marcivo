@@ -33,6 +33,57 @@
 
 export const posts = [
 {
+    slug: "godzilla-minus-zero-box-office-release-november-2026",
+    image: "https://godzilla.com/cdn/shop/files/GMZ_KV2_Web_2025x3000_GKIDS-wIMAX_1.jpg?v=1788560923",
+    imageAlt: "Official Godzilla Minus Zero theatrical poster: Godzilla roaring amid blue energy and lightning, labelled Filmed for IMAX",
+    title: "Godzilla Minus Zero Box Office: Record Japan Opening, $6 Million US Previews and 91% Rotten Tomatoes Score",
+    description:
+      "Godzilla Minus Zero is out now: a record Japan opening, about $6M in US previews and 91% on Rotten Tomatoes. Release dates, cast, India date and box office.",
+    excerpt:
+      "Godzilla Minus Zero opened in Japan with the biggest live-action opening day ever and took about $6 million in US previews, as Takashi Yamazaki's R-rated sequel storms into theatres.",
+    date: "2026-11-07",
+    category: "Cinema",
+    sections: [
+      { type: "p", text: "Godzilla Minus Zero is out now in theatres, and the King of the Monsters is already breaking records. The sequel to the Oscar-winning Godzilla Minus One opened in Japan on November 3, 2026, with the biggest opening day ever for a live-action film there, then arrived in North American theatres on November 6 with about $6 million in Thursday previews. Critics have given it 91% on Rotten Tomatoes, and audiences rate it even higher at 96%." },
+      { type: "p", text: "Here is the simple answer: Godzilla Minus Zero is playing in theatres now, it runs 2 hours 15 minutes, it is rated R, and it is the first Japanese production ever filmed for IMAX. The film brings back director Takashi Yamazaki and the stars of Minus One, and this time Godzilla faces King Ghidorah. In India, it is reported to arrive on November 20, 2026, through PVR INOX Pictures." },
+      { type: "h2", text: "Godzilla Minus Zero Box Office: Japan Record and US Previews" },
+      { type: "p", text: "In Japan, Godzilla Minus Zero opened on November 3, Godzilla Day, selling about 590,000 tickets on its first day for 910 million yen, roughly $5.7 million. Toho confirmed that as the biggest opening day ever for any live-action film in Japan, passing the record held by Harry Potter and the Chamber of Secrets. The three-day total reached about 1.38 billion yen, roughly $8.7 million." },
+      { type: "p", text: "In North America, the film opened on Friday, November 6, in 3,254 theatres through GKIDS, after early IMAX screenings on November 3. It took about $6 million in Thursday previews, a record for GKIDS and nearly three times the $2.1 million that Minus One managed, though some trackers put the figure slightly higher at $6.7 million. Tracking points to a $25 million to $35 million opening weekend in North America, with a global opening of around $60 million." },
+      { type: "h2", text: "Godzilla Minus Zero Reviews: 91% on Rotten Tomatoes" },
+      { type: "p", text: "Godzilla Minus Zero holds 91% on Rotten Tomatoes from more than 120 critics, against 99% for Minus One, and a 96% audience score from over 500 verified ratings. On Metacritic it sits at 74, down from 81 for the first film. The praise centres on the amplified action, the grand scale and the kaiju spectacle, especially in IMAX, while the criticism focuses on the human story and the pacing. It premiered at the New York Film Festival on September 26, 2026, where early reactions were largely glowing." },
+      { type: "h2", text: "What Is Godzilla Minus Zero About?" },
+      { type: "p", text: "Godzilla Minus Zero picks up in 1949, two years after the events of Godzilla Minus One, and continues the story of the Shikishima family as they face an all-new calamity. The official synopsis puts it simply: war reduced Japan to zero, and Godzilla plunged it into minus, and just as humanity managed to cling to a hard-won peace, a new threat strikes. That threat is King Ghidorah, who first appeared in 1964, the year Yamazaki was born." },
+      { type: "h2", text: "Godzilla Minus Zero Cast: Who Returns and Who Is New" },
+      { type: "list", items: [
+        "Ryunosuke Kamiki returns as Koichi Shikishima, the former kamikaze pilot at the centre of the first film.",
+        "Minami Hamabe returns as Noriko Oishi, with Hidetaka Yoshioka, Yuki Yamada, Kuranosuke Sasaki, Munetaka Aoki and Sae Nagatani also back.",
+        "Min Tanaka joins as Kanji Murakami, a biologist carrying deep psychological scars from the war.",
+        "Masami Nagasawa joins as Makoto Aoyama, a genius weather forecaster assigned to the Disaster Response Bureau."
+      ] },
+      { type: "h2", text: "Why Godzilla Minus Zero Is a First for the Franchise" },
+      { type: "p", text: "Godzilla Minus Zero carries two franchise firsts. It is the first Godzilla film in the series' 72-year history to receive an R rating, for bloody images and some violent content, and it is the first Japanese production ever filmed for IMAX, with selected sequences in the full 1.43:1 IMAX aspect ratio. At 135 minutes it runs 10 minutes longer than Minus One. It was reportedly made for just over $15 million, with Yamazaki again writing, directing and supervising the effects himself." },
+      { type: "h2", text: "Godzilla Minus Zero India Release Date" },
+      { type: "p", text: "In India, Godzilla Minus Zero is reported to arrive on November 20, 2026, through PVR INOX Pictures, two weeks after its North American opening. The delay is because Ramayana, which released on November 5, holds a two-week IMAX exclusivity window in India. Indian fans will have to wait a little longer for it." },
+      { type: "h2", text: "How to Watch Godzilla Minus Zero" },
+      { type: "steps", items: [
+        "Check showtimes at your nearest cinema, and pick an IMAX screen if one is available, since the film was shot for IMAX.",
+        "Book tickets in advance for the opening weekend, because the strong previews point to busy shows.",
+        "Watch Godzilla Minus One first if you have not seen it, since Minus Zero continues the story two years later.",
+        "In India, look for shows from November 20, 2026, when the film is reported to release through PVR INOX Pictures."
+      ] },
+      { type: "h2", text: "Will There Be a Third Godzilla Minus Film?" },
+      { type: "p", text: "Yamazaki has not decided whether to make a third film, and has described himself as fifty-fifty on the idea, saying the box office will make the decision for him. With a record opening in Japan and a projected $60 million global opening, the numbers point the right way. No streaming date has been announced yet." },
+      { type: "h2", text: "Godzilla Minus Zero: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "When did Godzilla Minus Zero release?", a: "Godzilla Minus Zero released in Japan on November 3, 2026, and in North American theatres on November 6, 2026." },
+        { q: "What is the Godzilla Minus Zero Rotten Tomatoes score?", a: "It holds 91% from critics and a 96% audience score from over 500 verified ratings. The original scored 99% and 98%." },
+        { q: "How much did Godzilla Minus Zero earn in Japan on its opening day?", a: "It earned 910 million yen, about $5.7 million, the biggest opening day ever for a live-action film in Japan, according to Toho." },
+        { q: "When will Godzilla Minus Zero release in India?", a: "It is reported to release in India on November 20, 2026, through PVR INOX Pictures, after Ramayana's two-week IMAX exclusivity window." }
+      ] },
+      { type: "p", text: "Godzilla Minus Zero opened bigger than the film it follows, in Japan and in US previews, while keeping critics and audiences on its side." }
+    ],
+  },
+{
     slug: "openai-11-billion-funding-1-25-trillion-valuation-november-2026",
     image: "https://cdn.mos.cms.futurecdn.net/v2/t:0,l:0,cw:0,ch:0,q:75,w:1200/PFdKhLCACXvonFoUCgSLib.jpg",
     imageAlt: "A 3D render of the letters AI on a computer chip, illustrating the artificial intelligence industry behind OpenAI's record funding round.",
