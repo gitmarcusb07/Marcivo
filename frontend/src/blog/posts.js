@@ -33,6 +33,46 @@
 
 export const posts = [
 {
+    slug: "abhishek-banerjee-alleges-2-am-attack-kolkata-residence-november-2026",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Abhishek_Banerjee_Photo.jpg/1920px-Abhishek_Banerjee_Photo.jpg",
+    imageAlt: "Abhishek Banerjee, Trinamool Congress national general secretary and Diamond Harbour MP",
+    title: "Abhishek Banerjee Alleges 2 AM Attack on Kolkata Residence: Stone-Pelting and Firing Claims",
+    description:
+      "Abhishek Banerjee alleges his Kolkata home was attacked at 2 AM by 'BJP goons' after two days of surveillance. Police have not confirmed the claims.",
+    excerpt:
+      "Abhishek Banerjee alleges his Kolkata residence was attacked at 2 AM on November 7, claiming stone-pelting and firing outside his home, while police have not confirmed the claims.",
+    date: "2026-11-07",
+    category: "News",
+    sections: [
+      { type: "p", text: "The alleged Abhishek Banerjee attack broke in the early hours of Saturday, November 7, 2026, when the Trinamool Congress national general secretary and Diamond Harbour MP posted on X that his Kolkata residence had been attacked at around 2 AM. Banerjee alleged that 'BJP goons' pelted stones and fired shots outside his home, in full view of the Kolkata Police, and promised videos shortly. Posted on the night of Dhanteras, the claim immediately set off a political confrontation in West Bengal. Crucially, police have not independently confirmed the stone-pelting and firing claims, and no BJP response to this specific allegation had been reported at the time of writing." },
+      { type: "h2", text: "What the Abhishek Banerjee Attack Allegation Says" },
+      { type: "p", text: "Banerjee's post was direct. 'After I released the recce video this morning, my house was attacked just now, at 2 AM by BJP goons, right under the watch of the Kolkata police,' he wrote, adding: 'Thank you, Calcutta High Court and the Supreme Court of India for remaining mute spectators while all this unfolds. I will upload the videos shortly.' The Economic Times reported the post also targeted opposition workers, the Kolkata Police and higher judicial institutions." },
+      { type: "p", text: "According to Oneindia, police reached the spot, a heated exchange took place between Banerjee and the police, and the MP later sat outside his residence in protest for some time. The report also states plainly that the allegations of stone-pelting and firing have not been independently confirmed by the police. What is established so far is that Banerjee made the allegation and police attended the scene, not that the attack happened as described." },
+      { type: "h2", text: "Two Days of Alleged Surveillance Before the Attack" },
+      { type: "p", text: "A day earlier, on Friday, November 6, Banerjee had posted that unidentified individuals had been watching his residence and office for the past two days. He said they travelled on a motorcycle, claimed to be police when confronted, and shared the bike's registration number. He asked who authorised the surveillance, demanded an inquiry, and tagged Lok Sabha Speaker Om Birla, Kolkata Police, the Union Home Ministry and West Bengal Police, calling it a 'suspected conspiracy'. His 2 AM post said the attack came after he released the recce video that morning." },
+      { type: "h2", text: "What Is Confirmed and What Is Not in the Abhishek Banerjee Attack Claims" },
+      { type: "p", text: "Banerjee's X posts exist and are timestamped, his November 6 surveillance allegation is on record, and police reached his residence after the reported incident. What remains unverified is the core of the allegation: that stones were pelted and shots fired, who was involved, and whether anyone had any link to the BJP. No BJP response to this specific incident had been reported when this article was written, and the promised videos had not yet been uploaded." },
+      { type: "list", items: [
+        "Confirmed: Banerjee's X posts alleging the 2 AM attack, his November 6 surveillance allegation and the bike's registration number, and police reaching the spot.",
+        "Unconfirmed: the stone-pelting and firing, the identity of any attackers, and any link to the BJP.",
+        "Awaited: the videos Banerjee said he would upload, a police statement on what happened, and a response from the BJP."
+      ] },
+      { type: "h2", text: "A Seventh Attempt Claim and a Pattern of Confrontation" },
+      { type: "p", text: "Banerjee further claimed this was the seventh attempt on his life in six months, with no police action or judicial intervention, according to The Indian Express. That is his own assertion, not independently verified. It lands against a backdrop of repeated TMC-BJP confrontations in West Bengal this year; two earlier incidents are worth noting as separate events, not as evidence about what happened at 2 AM today." },
+      { type: "p", text: "On September 3, 2026, Banerjee alleged armed men vandalised his party's Camac Street office in Kolkata overnight. Police arrested six men from neighbouring Howrah and said they had found no political affiliation among them; the BJP denied involvement and called it staged. On June 30, a man allegedly hurled a large stone at Banerjee's residence, shattering first-floor windows, an incident Banerjee also blamed on BJP-backed elements. These earlier episodes explain the fast escalation, but they do not confirm the new claim." },
+      { type: "h2", text: "What Happens Next After the Abhishek Banerjee Attack Allegation" },
+      { type: "p", text: "Next to watch: the videos Banerjee promised, the first possible visual evidence; a formal Kolkata Police statement on whether any attack took place and whether a case was registered; and a BJP response, after the party denied involvement in his earlier allegations. Banerjee has previously taken such matters to court, and his post put both courts on notice, so a legal step is possible. Until the videos or a police account appear, the story remains what it is for now: a serious allegation by a senior opposition MP, reported widely, but not yet confirmed." },
+      { type: "h2", text: "Abhishek Banerjee Attack Allegation: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "What did Abhishek Banerjee allege?", a: "He alleged on X that his Kolkata residence was attacked at around 2 AM on November 7, 2026, by 'BJP goons' who pelted stones and fired shots in front of the Kolkata Police, after two days of surveillance." },
+        { q: "Has the attack been confirmed?", a: "No. Police have not independently confirmed the stone-pelting and firing claims. What is confirmed is that Banerjee made the allegation and that police reached the spot afterwards." },
+        { q: "What was the surveillance allegation?", a: "On November 6, Banerjee said unidentified people had watched his residence and office for two days, travelling on a motorcycle and claiming to be police when confronted. He shared the bike's registration number and demanded an inquiry." },
+        { q: "Has the BJP responded to the allegation?", a: "No response from the BJP to this specific allegation had been reported at the time of writing. In the September 3 office vandalism incident, the BJP denied involvement and called the episode staged." }
+      ] },
+      { type: "p", text: "For now the alleged Abhishek Banerjee attack is a flashpoint in West Bengal's bitter political confrontation — an allegation, not an established fact. The videos Banerjee promised, and the police account that follows, will decide what this incident actually was." }
+    ],
+  },
+{
     slug: "n7-day-2026-mass-effect-fans-ea-merch-backlash-bioware-shutdown",
     image: "https://cdn.akamai.steamstatic.com/steam/apps/1328670/library_hero.jpg",
     imageAlt: "Official Mass Effect Legendary Edition key art: Commander Shepard and the Normandy crew against a galactic backdrop",
