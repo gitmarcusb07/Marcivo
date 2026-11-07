@@ -33,6 +33,52 @@
 
 export const posts = [
 {
+    slug: "n7-day-2026-mass-effect-fans-ea-merch-backlash-bioware-shutdown",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/1328670/library_hero.jpg",
+    imageAlt: "Official Mass Effect Legendary Edition key art: Commander Shepard and the Normandy crew against a galactic backdrop",
+    title: "N7 Day 2026: Mass Effect Fans Take Over as EA's Merch Push Sparks Backlash After BioWare Shutdown",
+    description:
+      "N7 Day 2026 is here without BioWare: EA cancelled Mass Effect and shut the studio, then pushed merch. Fans answered with a 300,000-signature petition.",
+    excerpt:
+      "N7 Day 2026 arrives with BioWare gone and the next Mass Effect cancelled, as EA's 'Celebrate the Legacy' merch push draws fan fury and a 300,000-signature petition.",
+    date: "2026-11-07",
+    category: "Gaming",
+    sections: [
+      { type: "p", text: "N7 Day 2026 has arrived, and it is the strangest one in the fourteen-year history of the Mass Effect celebration. November 7 used to mean teasers and hope for the next chapter of Shepard's galaxy. This year there is no BioWare left to mark it: Electronic Arts shut the studio down in late October and cancelled the next Mass Effect game, known as Mass Effect: Universe. What fans got instead was a store link: after a month of silence, EA's BioWare Gear Store returned to sell Mass Effect merchandise under the slogan 'Celebrate the Legacy'." },
+      { type: "h2", text: "How BioWare's Closure Led to N7 Day 2026" },
+      { type: "p", text: "The closure ended the run of a studio founded in 1995. The original Mass Effect released in 2007, followed by Mass Effect 2 in 2010 and Mass Effect 3 in 2012, a trilogy in which players shaped Commander Shepard's story across all three games. BioWare declared November 7 a holiday in 2012, and N7 Day became the annual moment for Mass Effect news. Mass Effect Legendary Edition was announced on N7 Day in 2020, and on N7 Day 2025 producer Mike Gamble confirmed the next game was in development. A year later, the studio is gone and the game is cancelled." },
+      { type: "p", text: "It stung more because fans had seen what was lost: a leaked pre-production trailer for the cancelled game circulated after the closure, and former BioWare staff described the project as something special. Reports say EA chose to fund a new Star Wars Battlefront game instead, as part of a wider pullback that also included layoffs and other cancellations. EA has not announced any future Mass Effect game." },
+      { type: "h2", text: "The N7 Day 2026 Merch Push That Angered Fans" },
+      { type: "p", text: "The BioWare Gear Store's social media accounts came back to life after about a month of darkness to push Mass Effect merchandise. The opening post invited fans to 'Celebrate the Legacy' by buying from the store, and EA followed with eight more posts pointing shoppers to mugs, tote bags, clothing and shoes. Six new items went up for preorder: a wearable N7 Breather helmet with LED lights switching between Paragon blue and Renegade red, a Garrus T-shirt, an N7 beanie, Dark Horse figures, exclusive pins and a Mass Effect board game. Dark Horse also teased a new statuette for reveal on November 6, and Youtooz teased a new collection of collectables." },
+      { type: "p", text: "Fans did not take it as a tribute. Replies called the promotion tone-deaf, insensitive and exploitative; one fan wrote they could not even begin to describe the tone-deafness of it, and another said EA had cancelled the game but was still trying to sell the merch. Many said they would buy it if the franchise came back, but saw no reason to pay EA for a series it had just killed. The merch is still on sale." },
+      { type: "h2", text: "Save Mass Effect Passes 300,000 Signatures on N7 Day 2026" },
+      { type: "p", text: "The anger has turned into organisation. A Change.org petition asking EA to keep Mass Effect going, launched the day the cancellation was revealed, has passed 300,000 signatures. The fan group We Are Mass Effect has asked players to boot up a Mass Effect game at the same time today, from 2 pm to 5 pm ET, to show how many people still play the trilogy. Console and EA app players are sharing screenshots and clips with the hashtag. The aim is to make this the biggest N7 Day ever, with fans running the celebration the studio no longer can." },
+      { type: "list", items: [
+        "Signing the Save Mass Effect petition, which has passed 300,000 signatures.",
+        "Booting up any Mass Effect game between 2 pm and 5 pm ET for the coordinated play-in.",
+        "Sharing screenshots and clips with the Save Mass Effect hashtag during the play-in window.",
+        "Replaying Mass Effect Legendary Edition, the 2021 remastered trilogy."
+      ] },
+      { type: "h2", text: "What Happens to Mass Effect Now?" },
+      { type: "p", text: "Nothing is confirmed about the future of the series. The one project still reported to be alive is the live-action Mass Effect series for Amazon Prime Video, said to still be in development despite BioWare's closure. Mass Effect Legendary Edition, which bundles all three games with almost all their downloadable content, is the easiest way to play the trilogy now. The franchise turns 20 next year — a milestone fans hope will be marked with something more than a store link." },
+      { type: "h2", text: "How to Join the N7 Day 2026 Play-In" },
+      { type: "steps", items: [
+        "Pick any Mass Effect game — the original trilogy, Mass Effect: Andromeda or Mass Effect Legendary Edition.",
+        "Boot it up between 2 pm and 5 pm ET (7 pm to 10 pm GMT; 12:30 am to 3:30 am IST on November 8).",
+        "On Steam, your session counts toward the public player numbers; on console or the EA app, share a screenshot or clip instead.",
+        "Post it with the Save Mass Effect hashtag so the organisers can count players beyond Steam."
+      ] },
+      { type: "h2", text: "N7 Day 2026: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "What is N7 Day?", a: "N7 Day is November 7, the annual Mass Effect fan celebration named after Commander Shepard's N7 rank. BioWare declared it a holiday in 2012." },
+        { q: "Why are Mass Effect fans angry at EA on N7 Day 2026?", a: "EA shut down BioWare in late October 2026 and cancelled the next Mass Effect game, then used N7 Day to push merchandise. Fans called the merch push tone-deaf and exploitative." },
+        { q: "How many people have signed the Save Mass Effect petition?", a: "More than 300,000 people have signed the petition asking EA to keep the Mass Effect series going." },
+        { q: "Is the Mass Effect TV show still happening?", a: "The live-action Mass Effect series for Amazon Prime Video is reportedly still in development, despite BioWare's closure. EA has announced no new Mass Effect game." }
+      ] },
+      { type: "p", text: "N7 Day 2026 will be remembered as the year the fans took the day over. BioWare is gone and the next game is cancelled — but 300,000 signatures and a galaxy-wide play-in say the series is not finished." }
+    ],
+  },
+{
     slug: "godzilla-minus-zero-box-office-release-november-2026",
     image: "https://godzilla.com/cdn/shop/files/GMZ_KV2_Web_2025x3000_GKIDS-wIMAX_1.jpg?v=1788560923",
     imageAlt: "Official Godzilla Minus Zero theatrical poster: Godzilla roaring amid blue energy and lightning, labelled Filmed for IMAX",
