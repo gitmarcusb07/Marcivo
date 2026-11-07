@@ -60,6 +60,7 @@ async function generateSitemapXml(): Promise<string> {
       `${SEO_SITE_URL}/category/hollywood`,
       `${SEO_SITE_URL}/category/bollywood`,
       `${SEO_SITE_URL}/blog`,
+      `${SEO_SITE_URL}/blog/us-strikes-iran-qeshm-island-air-defence-november-2026`,
       `${SEO_SITE_URL}/blog/ghaziabad-police-outpost-blast-delivery-worker-injured-november-2026`,
       `${SEO_SITE_URL}/blog/abhishek-banerjee-alleges-2-am-attack-kolkata-residence-november-2026`,
       `${SEO_SITE_URL}/blog/n7-day-2026-mass-effect-fans-ea-merch-backlash-bioware-shutdown`,
