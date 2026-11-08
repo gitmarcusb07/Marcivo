@@ -33,6 +33,34 @@
 
 export const posts = [
 {
+    slug: "vicky-kaushal-katrina-kaif-son-vihaan-first-photo-diwali-2026",
+    image: "https://www.pinkvilla.com/images/2026-11/1169474965_katrina.webp",
+    imageAlt: "Vicky Kaushal and Katrina Kaif with their son Vihaan in traditional outfits in their Diwali 2026 family photo. Photo: Pinkvilla.",
+    title: "Vicky Kaushal and Katrina Kaif Share Son Vihaan's First Photo on Diwali 2026 — Internet Goes Into Meltdown",
+    description:
+      "Vicky Kaushal and Katrina Kaif shared son Vihaan's first photo on Diwali 2026. See the picture, the caption and Bollywood's reactions.",
+    excerpt:
+      "Vicky Kaushal and Katrina Kaif shared the first clear photo of their son Vihaan on Diwali 2026, and the picture of the one-year-old in a yellow jacket went viral within minutes.",
+    date: "2026-11-08",
+    category: "Cinema",
+    sections: [
+      { type: "p", text: "The Vihaan first photo has broken the internet on Diwali 2026. Vicky Kaushal and Katrina Kaif shared the first clear picture of their son, Vihaan Kaushal, on Instagram on November 8, 2026, while wishing fans a happy Diwali, and the photo went viral within minutes of being posted. The one-year-old, who turned one a day earlier on November 7, is seen standing between his parents in a traditional outfit, smiling and waving one hand in the air, and the comments section filled up almost immediately with messages from fans and Bollywood stars." },
+      { type: "h2", text: "Vihaan first photo: what the Diwali picture shows" },
+      { type: "p", text: "The photo is a warm family portrait taken at home. Katrina Kaif is dressed in a yellow embroidered traditional outfit and Vicky Kaushal in a cream embroidered kurta, and both are sitting on the floor looking at their son. Little Vihaan stands between them in an off-white kurta pyjama paired with a yellow jacket, smiling broadly and raising one hand in joy. The couple captioned the picture, \"Our brightest Diwali yet... Wishing everyone love, light, and happiness. - Vicky, Katrina & Vihaan.\" It is the first clear glimpse of Vihaan the couple has shared since his birth, which is why the post spread so fast: fans had waited a full year to see the little one." },
+      { type: "h2", text: "Bollywood reacts to Vihaan's first photo" },
+      { type: "p", text: "The reactions started pouring in within minutes of the post going live, and the comments section now reads like a roll call of Bollywood. Alia Bhatt, who is currently celebrating the success of Ramayana, commented \"Uffff...\" with several red hearts, while Kajol wrote \"Awwww...\" with emoticons and Patralekhaa called the little one \"Cutest.\" Other stars who reacted include Bhavana Panday, Gauhar Khan, Diana Penty, Dia Mirza and Tahira Kashyap." },
+      { type: "list", items: ["Ranveer Singh wrote, \"Oh my heart! God bless! Love and light.\"", "Kareena Kapoor Khan commented, \"Puddinggggg Baba. God bless.\"", "Arjun Kapoor called the little one \"Ladoo\".", "Mrunal Thakur wrote, \"Awwwww baby Vihaan soooo cute my heart is melting. Happy Diwali munchkin.\"", "Vicky Kaushal's father Sham Kaushal wrote, \"My Pota (grandson) is my jaan. May God's blessings be always with my Puttars. Vihaan has brought so much happiness in our lives. Rab da shukar te Rab di meher.\""] },
+      { type: "p", text: "Fans were just as quick to react. One fan wrote, \"Vihaan is looking just like Katrina ma'am,\" while another remarked, \"Just imagine a kid saying my mother is Katrina and my father is Vicky Kaushal.\" A third commented, \"All the cuties in one frame.\" The story has become one of the most-read entertainment pieces of the day, with the Pinkvilla report alone drawing more than two lakh views within hours." },
+      { type: "h2", text: "A year of waiting: Vihaan turned one on November 7" },
+      { type: "p", text: "The timing made the post even sweeter for fans. Vicky Kaushal and Katrina Kaif got married on December 9, 2021, at Six Senses Fort Barwara in Rajasthan, and they welcomed their son Vihaan on November 7, 2025. He turned one on November 7, 2026, so this Diwali was his first, and the photo doubled as a first-birthday reveal for a baby fans had only heard about until now. The couple had kept Vihaan away from the cameras through his first year, and the Diwali picture is the first time the public has seen his face clearly. That patience is a big part of why the reveal landed so strongly: a year of curiosity resolved in a single joyful photo." },
+      { type: "h2", text: "What is next for Vicky Kaushal and Katrina Kaif" },
+      { type: "p", text: "On the work front, Vicky Kaushal is currently making headlines for his upcoming film Love & War, directed by Sanjay Leela Bhansali and co-starring Ranbir Kapoor and Alia Bhatt. The film is slated to hit theatres on January 21 next year. For now, though, the couple's Diwali post has taken over the conversation, and the picture of little Vihaan in his yellow jacket is the image of the festival for Bollywood fans." },
+      { type: "h2", text: "Vihaan first photo: frequently asked questions" },
+      { type: "faq", items: [{ q: "Who shared Vihaan's first photo?", a: "Vicky Kaushal and Katrina Kaif shared the first clear photo of their son Vihaan on their Instagram handles on Diwali, November 8, 2026, with the caption, \"Our brightest Diwali yet... Wishing everyone love, light, and happiness.\"" }, { q: "When was Vihaan born?", a: "Vihaan Kaushal was born on November 7, 2025, and he turned one on November 7, 2026, a day before his first photo was shared." }, { q: "What is Vihaan wearing in the photo?", a: "Vihaan is wearing an off-white kurta pyjama paired with a yellow jacket, twinning with his parents, who are in a cream kurta and a yellow traditional outfit." }, { q: "How did Bollywood react to Vihaan's first photo?", a: "Alia Bhatt, Kajol, Ranveer Singh, Kareena Kapoor Khan, Arjun Kapoor, Mrunal Thakur and Patralekhaa were among the stars who commented, along with Vicky's father Sham Kaushal, who called Vihaan his \"jaan\"." }, { q: "When is Vicky Kaushal's next film releasing?", a: "Vicky Kaushal's next film is Sanjay Leela Bhansali's Love & War, co-starring Ranbir Kapoor and Alia Bhatt, which is slated to release on January 21, 2027." }] },
+      { type: "p", text: "One photo, one wave of the hand, and the internet had its Diwali moment. Vicky and Katrina kept their son out of the spotlight for a year, and when they finally shared him with the world, they did it the way the festival deserves: together, in traditional clothes, smiling at each other." },
+    ],
+  },
+{
     slug: "hrithik-roshan-lacma-art-film-gala-first-indian-actor-november-2026",
     image: "https://www.comingsoon.net/wp-content/uploads/sites/3/2024/01/Coming-Soon-Cover-Images-33.png?resize=1024,576",
     imageAlt: "Hrithik Roshan smiling in a black tuxedo with a bow tie at an event. Photo: ComingSoon.net.",
