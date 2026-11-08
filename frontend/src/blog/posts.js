@@ -33,6 +33,39 @@
 
 export const posts = [
 {
+    slug: "warzone-shuts-down-ps4-xbox-one-november-6-2026",
+    image: "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/body/mw4/s1-wz-announcement/MW4-SEASON-1-WARZONE-TOUT.jpg",
+    imageAlt: "Official Call of Duty: Warzone Season 1 key art for the Modern Warfare 4 integration. Image: Activision.",
+    title: "Warzone Shuts Down on PS4 and Xbox One: What Happened on November 6 and What Players Need to Do",
+    description:
+      "Warzone is no longer playable on PS4 and Xbox One after Modern Warfare 4 Season 1 launched on November 6. Here is what changed and how to keep your progress.",
+    excerpt:
+      "Call of Duty: Warzone stopped working on PlayStation 4 and Xbox One when Modern Warfare 4 Season 1 went live on November 6, 2026 — but the game itself is not shutting down.",
+    date: "2026-11-08",
+    category: "Gaming",
+    sections: [
+      { type: "p", text: "Warzone is no longer playable on PS4 and Xbox One. When Call of Duty: Modern Warfare 4 Season 1 went live at midnight Eastern Time on November 6, 2026, Activision ended Warzone support on the two last-generation consoles. The game itself is not shutting down: Warzone continues on PlayStation 5, Xbox Series X|S, Windows PC, and it has now launched on Nintendo Switch 2. But if you were still dropping in on a PS4 or Xbox One, that version of the game is over." },
+      { type: "h2", text: "Warzone PS4 and Xbox One shutdown: what happened on November 6" },
+      { type: "p", text: "Activision said it plainly in its official Season 1 announcement on November 2: starting with Season 1, Call of Duty: Warzone will no longer be playable on PlayStation 4 and Xbox One as the game — and Modern Warfare 4 — moves on from older generation hardware. Season 1 went live at midnight Eastern on November 6, 9 p.m. Pacific on November 5, and fully integrates Modern Warfare 4 into Warzone. Reports on November 6 confirmed the cutoff had taken effect." },
+      { type: "p", text: "That makes November 5 the last full day anyone could play Warzone on those consoles. The shutdown ends a run of more than six years: Warzone launched on PS4 and Xbox One in March 2020. The end was not a surprise — the wind-down had run for months — but for players who never upgraded, the Season 1 update was the moment the game stopped opening." },
+      { type: "h2", text: "Why Warzone is leaving PS4 and Xbox One" },
+      { type: "p", text: "The reason is Modern Warfare 4 itself. The new game launched on October 23, 2026 on PlayStation 5, Xbox Series X|S, PC and Nintendo Switch 2, with no PS4 or Xbox One version. Warzone now runs on Modern Warfare 4's foundations and shares its seasonal progression, so the older consoles were left behind." },
+      { type: "p", text: "This is a platform retirement, not a shutdown of Warzone. The battle royale keeps running on current hardware, and it even arrived on Nintendo Switch 2 for the first time. Every other Call of Duty game already released on PS4 and Xbox One stays playable; only Warzone is tied to the new seasonal system." },
+      { type: "h2", text: "The wind-down timeline: how the shutdown was staged" },
+      { type: "list", items: ["June 4, 2026: Warzone was removed from the PS4 and Xbox One digital storefronts, so no new downloads were possible.", "June 25, 2026: the in-game store was removed on PS4 and Xbox One, and COD Points could be redeemed only until that date.", "October 23, 2026: Modern Warfare 4 launched on PS5, Xbox Series X|S, PC and Nintendo Switch 2, with no last-generation version.", "November 6, 2026: Season 1 went live at midnight Eastern Time, and Warzone stopped being playable on PS4 and Xbox One."] },
+      { type: "h2", text: "What happens to your Warzone progress and COD Points" },
+      { type: "p", text: "Your progress is safe if your accounts are linked. Activision says progression carries over to a supported platform if you log in using the same linked Activision account, so your level, unlocks and stats move with you when you sign in on PS5, Xbox Series X|S, PC or Switch 2." },
+      { type: "p", text: "COD Points need more care. According to Activision's support page, unspent COD Points are tied to your platform account, not your Activision account. Points bought or earned on PlayStation stay on PlayStation, and points on Xbox stay on Xbox. If you bought points on PS4 or Xbox One, check the balance on that platform's store and spend them there if you can." },
+      { type: "h2", text: "Where you can still play Warzone" },
+      { type: "list", items: ["PlayStation 5 — the full Season 1 experience, with Modern Warfare 4 integration.", "Xbox Series X|S — unaffected by the shutdown, which hit Xbox One only.", "Windows PC — the game continues as before on PC.", "Nintendo Switch 2 — Warzone launched on a Nintendo console for the first time with Season 1."] },
+      { type: "h2", text: "How to move from PS4 or Xbox One to a supported platform" },
+      { type: "steps", items: ["Check that your Activision account is linked to your PlayStation Network or Xbox account, and that you know the login. Progression only carries over through that linked account.", "Pick a new platform — PS5, Xbox Series X|S, PC or Nintendo Switch 2 — and download Warzone free from its store.", "Sign in with the same linked Activision account and confirm your level, operators and unlocks have carried over.", "Check your COD Points balance on the old platform before you stop using it. Points are tied to the platform account, so spend any balance there if you still can.", "Remember November 5 was the last full day of play on PS4 and Xbox One. Anything you had not linked or spent by then needs sorting out on the new platform."] },
+      { type: "h2", text: "Warzone PS4 and Xbox One shutdown: frequently asked questions" },
+      { type: "faq", items: [{ q: "Is Warzone shutting down completely?", a: "No. Warzone only ended on PlayStation 4 and Xbox One. It continues on PlayStation 5, Xbox Series X|S, Windows PC and Nintendo Switch 2." }, { q: "Can I still play Warzone on PS4 after November 6?", a: "No. Starting with Modern Warfare 4 Season 1 on November 6, 2026, Warzone is no longer playable on PS4 or Xbox One." }, { q: "Will my Warzone progress transfer to PS5 or Xbox Series X|S?", a: "Yes, if you sign in with the same linked Activision account. Activision says progression carries over through the linked account." }, { q: "What happens to my COD Points on PS4 or Xbox One?", a: "Unspent COD Points are tied to your platform account, not your Activision account, so they stay on the platform where you bought or earned them." }, { q: "Why did Activision end Warzone on PS4 and Xbox One?", a: "Modern Warfare 4 is current-generation only, and Warzone now runs on its foundations with shared seasonal progression." }] },
+      { type: "p", text: "For players still on last-generation consoles, this is the end of an era — more than six years of free battle royale on hardware from 2013. The game itself is moving on, not closing: upgrade to a current platform, or leave it behind. Either way, link your Activision account first — that is what keeps your progress alive on the other side." },
+    ],
+  },
+{
     slug: "gta-6-physical-edition-leak-no-disc-download-code-november-2026",
     image: "https://telecomtalk.info/wp-content/uploads/2026/11/gta6-physicaledition-leaked-ahead-of-november19-launch.jpg",
     imageAlt: "Leaked photo of the GTA 6 physical PS5 box (German edition) beside the official cover art, with a notice that the box contains a download code and no disc. Image: TelecomTalk, from the leaked photos; unconfirmed by Rockstar Games.",
