@@ -33,6 +33,40 @@
 
 export const posts = [
 {
+    slug: "strait-of-hormuz-escalation-us-disables-mv-huda-tankers-hit-mines-november-2026",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/16/Strait_of_Hormuz_and_Musandam_Peninsula_%28MODIS_2018-12-10%29.jpg",
+    imageAlt: "NASA satellite view of the Strait of Hormuz and the Musandam Peninsula, the narrow waterway between Iran and Oman. Public domain image via Wikimedia Commons.",
+    title: "Strait of Hormuz Escalation: US Disables Ship, Two Tankers Hit Mines",
+    description:
+      "Strait of Hormuz escalation: the US disabled the M/V Huda in the Gulf of Oman and Iran said two tankers hit mines, as blasts were reported on Iran's coast.",
+    excerpt:
+      "The US disabled a cargo ship in the Gulf of Oman, Iran said two oil tankers struck mines in the Strait of Hormuz, and blasts were reported along Iran's coast in a sharp overnight escalation.",
+    date: "2026-11-08",
+    category: "News",
+    sections: [
+      { type: "p", text: "Strait of Hormuz tensions flared overnight as the United States disabled a cargo ship in the Gulf of Oman, Iran said two oil tankers had struck mines in the waterway, and explosions were reported along Iran's southern coast. The burst of incidents on Saturday night came as oil markets were pricing in an end to the eight-month US-Iran war." },
+      { type: "h2", text: "Strait of Hormuz: What Happened Overnight" },
+      { type: "p", text: "At about 20:35 GMT on Saturday, a US military aircraft fired precision munitions at the stern of the St Kitts-flagged vessel M/V Huda in the Gulf of Oman, disabling it. Twenty-one minutes later, Iran's Revolutionary Guard Navy said two oil tankers had struck mines in the Strait of Hormuz. At 21:32 GMT, UK Maritime Trade Operations also reported a bulk carrier incident east of the UAE port of Khor Fakkan." },
+      { type: "h2", text: "US Disables the M/V Huda" },
+      { type: "p", text: "US Central Command (CENTCOM) said the M/V Huda had ignored repeated warnings and tried repeatedly to breach Washington's blockade of Iran. The ship had called at an Iranian port and was trying to leave regional waters when US forces told the crew to abandon the targeted spaces, then fired precision munitions at the stern. The Huda is a 24,993-deadweight-tonne dry bulk carrier managed from Turkey. CENTCOM said 147 vessels have been redirected since the blockade restarted in mid-July, five of them disabled for refusing to comply." },
+      { type: "h2", text: "Two Tankers Hit Mines, Iran Says" },
+      { type: "p", text: "The IRGC Navy said the two tankers had switched off their tracking systems and were using what it called an unauthorised route when they hit sea mines. Iranian state television reported that both vessels caught fire, suffered severe damage and stopped moving. The IRGC did not name the ships or give casualty figures. There has been no independent confirmation of Iran's account, and Iran has made similar mine claims almost every day in recent weeks." },
+      { type: "h2", text: "Blasts on Iran's Coast" },
+      { type: "p", text: "Late on Saturday, Iranian state media reported explosion-like sounds on Qeshm Island, inside the Strait of Hormuz, along with Jask, Sirik and Bandar Abbas. The Tasnim news agency first reported that two missiles had hit Qeshm, then later carried a source who denied any missile strike. Iranian state television linked the sounds to military activity, and Al Jazeera's correspondent in Tehran reported they may have been Iranian tests or an exercise. No attack has been confirmed by either side." },
+      { type: "h2", text: "Houthis Claim Strikes on Riyadh and Aramco" },
+      { type: "p", text: "Yemen's Iran-aligned Houthis said they had launched six missile and drone attacks on Saturday. Their spokesman, Yahya Saree, named King Khalid International Airport and Aramco oil storage tanks and a distillation tower in Riyadh, plus an Aramco facility at Khurais and a pumping station at Dawadmi. Saudi Arabia did not confirm any damage, and the Saudi-led coalition said its air defences intercepted a Houthi cruise missile fired towards Riyadh. The Houthis called the attacks retaliation for Saudi air strikes, including strikes on homes east of Sanaa, where Houthi-run health officials put the death toll at 33." },
+      { type: "h2", text: "UAE Rescue and a Wider Blockade" },
+      { type: "p", text: "On Sunday morning the UAE's National Guard said it had rescued 22 people after a fire broke out on a cargo ship in the Gulf of Oman. Specialised teams rescued all 22 people of Arab nationality, who were given first aid and handed over to the relevant authorities, all in stable condition. The statement did not specify the cause of the fire, and no official statement has linked it to the tanker mine claims or the US action. Washington also announced a new CENTCOM task force, called Iron Gate, to block Iran's land-based supply routes and expand the naval blockade of Iranian ports." },
+      { type: "list", items: ["US aircraft disabled the St Kitts-flagged M/V Huda in the Gulf of Oman at about 20:35 GMT on Saturday", "Iran said two oil tankers struck mines in the Strait of Hormuz at about 20:56 GMT — unverified", "Explosion-like sounds were reported on Qeshm Island, Jask, Sirik and Bandar Abbas; no attack confirmed", "The Houthis claimed six missile and drone attacks on Saudi targets", "The UAE rescued 22 crew from a burning cargo ship in the Gulf of Oman", "CENTCOM announced the Iron Gate task force to block Iran's land supply routes"] },
+      { type: "h2", text: "What It Means for Oil Prices" },
+      { type: "p", text: "The escalation follows a week in which crude prices fell steeply. Brent settled at $98.32 a barrel on Friday but fell more than 16 per cent over the week, while WTI settled at $90.83. Traders had bet on a diplomatic breakthrough after the US midterms, but Rapidan Energy's Bob McNally told CNBC he sees an 80 per cent chance fighting resumes and both benchmarks could pass $100 a barrel. Markets reopen on Monday, and traders will watch whether the mine claims and Houthi strikes bring back some of the risk premium that left oil prices last week." },
+      { type: "h2", text: "What Happens Next" },
+      { type: "p", text: "The coming days will show whether Saturday night was a one-off burst or the start of a new round of fighting. Al Jazeera's correspondent in Tehran warned the back-and-forth attacks on shipping could ignite a new round of war, and Iran's naval commanders have vowed to raise the cost of any aggression. At the same time, the Qatar mediation track is still alive, and the exemptions Iran has granted to Indian, Chinese, Qatari and Iraqi shipping suggest Tehran is still calibrating its pressure. The key question is whether independent evidence confirms the tanker mine claims." },
+      { type: "h2", text: "Frequently Asked Questions" },
+      { type: "faq", items: [{ q: "What happened in the Strait of Hormuz on November 7?", a: "The US disabled the cargo ship M/V Huda, Iran said two oil tankers struck mines in the Strait of Hormuz, and explosion-like sounds were reported on Iran's coast, all within hours on Saturday night." }, { q: "Did two oil tankers hit mines in the Strait of Hormuz?", a: "Iran's IRGC Navy says they did, but the claims have not been independently verified. The IRGC did not name the vessels, and Iran has made similar mine claims almost every day in recent weeks." }] },
+    ]
+  } ,
+{
     slug: "ramayana-box-office-day-3-69-80-crore-saturday-375-crore-worldwide-november-2026",
     image: "https://feeds.abplive.com/onecms/images/uploaded-images/2025/07/03/194d805eaa4752ff490e819c75c7fe8d1751525833243587_original.jpeg",
     imageAlt: "Official Ramayana ensemble poster: Ranbir Kapoor as Lord Rama facing Yash as Ravana against a cosmic backdrop, with the tagline Our Truth. Our History.",
