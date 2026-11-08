@@ -34,8 +34,8 @@
 export const posts = [
 {
     slug: "hrithik-roshan-lacma-art-film-gala-first-indian-actor-november-2026",
-    image: "https://www.geo.tv/assets/uploads/updates/2026-11-08/690281_9905971_updates.jpg",
-    imageAlt: "Hrithik Roshan in a black tuxedo with a bow tie at the 2026 LACMA Art + Film Gala. Photo: Geo.tv.",
+    image: "https://www.comingsoon.net/wp-content/uploads/sites/3/2024/01/Coming-Soon-Cover-Images-33.png?resize=1024,576",
+    imageAlt: "Hrithik Roshan smiling in a black tuxedo with a bow tie at an event. Photo: ComingSoon.net.",
     title: "Hrithik Roshan Makes History at LACMA Art + Film Gala 2026: First Indian Actor and the Namaste Moment Going Viral",
     description:
       "Hrithik Roshan became the first Indian actor at the 2026 LACMA Art + Film Gala, greeting paparazzi with a namaste. Full story, star guests and the viral video.",
