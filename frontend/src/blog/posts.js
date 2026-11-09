@@ -33,6 +33,40 @@
 
 export const posts = [
 {
+    slug: "cop31-climate-summit-2026-antalya-dates-agenda-india",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Expo_2016_Antalya_-_West_View.jpg/1280px-Expo_2016_Antalya_-_West_View.jpg",
+    imageAlt: "The Antalya Expo site in Türkiye, venue of the COP31 climate summit. Photo: Hendric Stattmann, CC BY-SA 4.0, via Wikimedia Commons.",
+    title: "COP31 Climate Summit 2026 Opens in Antalya: Dates, Agenda, India's Role and What's at Stake",
+    description:
+      "COP31 climate summit 2026 opens in Antalya on November 9. Dates, agenda, India's role, climate finance talks and what's at stake at the UN summit.",
+    excerpt:
+      "The COP31 climate summit 2026 opens in Antalya, Türkiye, on November 9, bringing nearly 200 countries together for two weeks of talks on climate finance, clean energy and the future of the Paris Agreement.",
+    date: "2026-11-09",
+    category: "News",
+    sections: [
+      { type: "p", text: "The COP31 climate summit 2026 opens in Antalya, Türkiye, on Monday, November 9, 2026, bringing together nearly 200 countries for two weeks of talks on climate finance, clean energy and the future of the Paris Agreement. The 31st United Nations Climate Change Conference runs until November 20 at the Antalya Expo Center, with a World Leaders Summit scheduled for November 11 and 12. It is the first COP since the United States left the Paris Agreement, and the first to be run by two countries at once — Türkiye hosting and presiding, and Australia leading the formal negotiations." },
+      { type: "h2", text: "COP31 climate summit 2026: dates, venue and who is attending" },
+      { type: "p", text: "COP stands for Conference of the Parties, the countries that signed the 1992 United Nations Framework Convention on Climate Change (UNFCCC). Tens of thousands of people are expected over the two weeks, including government delegations, ministers, scientists, business leaders and civil society groups. The venue is split into two areas: the Blue Zone, where the official negotiations take place for registered participants, and the Green Zone, a public area managed by Türkiye that showcases climate solutions." },
+      { type: "list", items: ["COP31 dates: November 9 to November 20, 2026", "Venue: Antalya Expo Center, Antalya, Türkiye", "World Leaders Summit: November 11 and 12, 2026", "Who attends: delegations from nearly 200 countries, plus scientists, business and civil society"] },
+      { type: "h2", text: "Two countries in charge: Türkiye hosts, Australia negotiates" },
+      { type: "p", text: "COP31 has an unusual leadership arrangement. Türkiye bid to host with Antalya, while Australia bid with Adelaide. The compromise gives both a role: Türkiye is the formal COP31 president and host, responsible for the venue and the Action Agenda, while Australia has exclusive authority over the formal talks and the drafting of texts. Türkiye's environment minister Murat Kurum serves as COP31 president, and Australia's climate change and energy minister Chris Bowen leads the negotiations." },
+      { type: "h2", text: "What is on the COP31 agenda?" },
+      { type: "p", text: "COP31 is not expected to produce a landmark treaty text. The real fight in Antalya is over delivery: mobilising finance, measuring progress and accelerating the shift to clean energy. Türkiye's flagship push is to raise electricity's share of global final energy use from about 23 percent today to 35 percent by 2035. The other big questions are how much money flows to developing countries to cope with climate change and how fast the world moves away from fossil fuels. COP31 will also launch the second global stocktake, the Paris Agreement's formal process for assessing collective progress." },
+      { type: "list", items: ["Climate finance: turning funding promises for developing countries into real support", "Clean energy: raising electricity to 35 percent of global energy use by 2035", "Fossil fuels: how fast countries move away from coal, oil and gas", "Adaptation: help for countries already hit by floods, droughts and heatwaves"] },
+      { type: "h2", text: "India at COP31: new climate plan and a central role" },
+      { type: "p", text: "India goes to Antalya with a new climate plan and a central seat at the table, co-chairing the mitigation consultations at the heart of the negotiations. India is among the countries pushing hardest for climate finance from richer nations, arguing that developing countries need funding and technology to cut emissions while still growing." },
+      { type: "h2", text: "The first COP without the United States in the Paris Agreement" },
+      { type: "p", text: "COP31 is the first climate summit since the United States formally left the Paris Agreement, with the withdrawal taking effect on January 27, 2026. With the largest historical emitter out of the finance conversations, developing countries want Europe and other wealthy nations to fill the gap." },
+      { type: "h2", text: "Why COP31 matters now" },
+      { type: "p", text: "The summit opens against a harsh backdrop. Scientists have confirmed that the world is on track to exceed the Paris Agreement's 1.5°C warming threshold, and catastrophic floods, deadly heatwaves and prolonged droughts have been a hallmark of 2026. A powerful El Niño is also expected to intensify climate impacts further. That is why Antalya is being called an implementation COP: the test is not new pledges, but whether existing ones are kept." },
+      { type: "h2", text: "How to follow COP31" },
+      { type: "steps", items: ["Watch the opening on November 9, when the presidency sets out its plan for the two weeks", "Follow the World Leaders Summit on November 11 and 12 for the big political signals", "Track the finance and mitigation talks in the second week, when ministers broker the hard compromises", "Look for the final decisions and closing text around November 20, when the summit is scheduled to end"] },
+      { type: "h2", text: "COP31 climate summit 2026: frequently asked questions" },
+      { type: "faq", items: [{ q: "When does COP31 start and end?", a: "COP31 runs from Monday, November 9, to Friday, November 20, 2026, in Antalya, Türkiye. The World Leaders Summit takes place on November 11 and 12." }, { q: "Where is COP31 being held?", a: "At the Antalya Expo Center in Antalya, on Türkiye's Mediterranean coast. Official negotiations take place in the Blue Zone, while the public Green Zone showcases climate solutions." }, { q: "What is COP31?", a: "COP31 is the 31st Conference of the Parties to the United Nations Framework Convention on Climate Change (UNFCCC), the annual UN summit where nearly 200 countries negotiate action on climate change." }, { q: "Why are two countries running COP31?", a: "Türkiye won the bid to host in Antalya, while Australia bid with Adelaide. Under the compromise, Türkiye holds the presidency and hosts the summit, and Australia's Chris Bowen leads the formal negotiations." }, { q: "What is India doing at COP31?", a: "India arrives with a new climate plan and a central role, co-chairing the mitigation consultations, while pushing for climate finance for developing countries." }] },
+      { type: "p", text: "The COP31 climate summit 2026 will not solve the climate crisis in two weeks. But the signals that come out of the summit — on money for developing countries, on the shift to electricity, and on the next round of national climate plans — will shape what happens long after the delegates leave Türkiye." },
+    ],
+  },
+{
     slug: "nvidia-board-investigation-jensen-huang-chinese-spy-reports-november-2026",
     image: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Jensen_huang_stanford_2026-04-30_010.jpg",
     imageAlt: "Nvidia CEO Jensen Huang at Stanford University in April 2026. Photo: Anders Eidesvik, CC BY-SA 4.0, via Wikimedia Commons.",
