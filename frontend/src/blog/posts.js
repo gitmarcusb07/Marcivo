@@ -33,6 +33,41 @@
 
 export const posts = [
 {
+    slug: "james-gunn-peter-safran-leave-dc-studios-jeremy-latcham-november-2026",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Superman_Red_Carpet-9876.jpg",
+    imageAlt: "Peter Safran, James Gunn, Rachel Brosnahan and David Corenswet on stage at the Superman red carpet in Manila in June 2025 (photo: U.S. Embassy in the Philippines / Wikimedia Commons, public domain)",
+    title: "James Gunn Leaves DC Studios: Peter Safran Also Out as Marvel Veteran Jeremy Latcham Takes Over",
+    description:
+      "James Gunn leaves DC Studios with Peter Safran after four years. Marvel veteran Jeremy Latcham takes over on December 1 — what it means for the DCU.",
+    excerpt:
+      "James Gunn and Peter Safran are stepping down as the co-heads of DC Studios after four years, and former Marvel executive Jeremy Latcham will take over on December 1 — but Gunn is not leaving DC entirely.",
+    date: "2026-11-10",
+    category: "Cinema",
+    sections: [
+      { type: "p", text: "James Gunn leaves DC Studios after four years at the top, with co-chief Peter Safran stepping down alongside him. Parent company Skydance announced the shake-up on Monday, November 9, naming former Marvel executive Jeremy Latcham as the new president and chief creative officer from December 1. Gunn and Safran return to creative work full time — and Gunn is still writing and directing the Superman sequel Man of Tomorrow, due July 9, 2027." },
+      { type: "h2", text: "James Gunn Leaves DC Studios: What Skydance Announced" },
+      { type: "p", text: "Skydance, which completed its acquisition of Warner Bros. Discovery on October 6, 2026, said Gunn and Safran will \"ensure a smooth, collaborative transition.\" Latcham will lead DC's film, television and animation slate, reporting to Skydance Motion Picture Group co-chairs Dana Goldberg and Josh Greenstein. Gunn and Safran said: \"Four years ago, we set out to unite DC under one creative vision. In that time, we helped restore Superman to the heart of DC.\" Skydance chief executive David Ellison thanked the pair for launching \"a new era for DC Studios.\"" },
+      { type: "h2", text: "Who Is Jeremy Latcham, the New DC Studios Chief?" },
+      { type: "p", text: "Jeremy Latcham is a Marvel veteran who joined Marvel Studios in 2004 and rose to senior vice president of production and development, with producer credits including Iron Man, The Avengers, Guardians of the Galaxy and Spider-Man: Homecoming. He has worked with Gunn before — Latcham produced the first Guardians of the Galaxy, which Gunn wrote and directed. \"DC's pantheon of characters is among the most iconic in American popular culture,\" Latcham said." },
+      { type: "h2", text: "Why James Gunn Is Leaving the DC Studios Top Job" },
+      { type: "p", text: "Gunn explained the decision himself in a statement posted to Threads on November 9, calling the job a \"dream come true\" but also \"trying, to say the least.\" He wrote: \"I dislike the at-times corporate nature of the job,\" and said the work had consumed even the short breaks he used to take as a filmmaker. \"The thing my ADHD hyperfocus has had the most difficulty with has been dividing my time between projects I'm incredibly passionate about and the ones I'm not so much,\" he added. \"I'm also incredibly relieved and excited to get back to pure filmmaking.\" That return is already under way: Gunn has finished directing Man of Tomorrow, now in post-production, and said he is also writing another DC project." },
+      { type: "h2", text: "James Gunn's Four Years at DC Studios: Superman, Supergirl and Clayface" },
+      { type: "p", text: "Gunn and Safran were appointed co-chairmen and co-CEOs of DC Studios in late 2022, hired to rebuild the superhero brand after a run of box office failures, including 2017's Justice League. In January 2023 they unveiled their plan for a single shared world, the DC Universe, under the banner Chapter One: Gods and Monsters. It began with the animated series Creature Commandos, then came Gunn's Superman, released on July 11, 2025 and starring David Corenswet and Rachel Brosnahan. The reboot earned positive reviews and grossed $618.7 million worldwide against a reported $225 million budget." },
+      { type: "p", text: "The follow-up was a setback. Supergirl, released in June 2026 and starring Milly Alcock, flopped, earning only about $126.5 million worldwide against a reported $170 million budget. The third DCU feature fared better: Clayface, the R-rated body-horror film directed by James Watkins, opened on October 23, 2026 with a $43 million global opening weekend and has since passed $100 million worldwide on a reported $44 million budget. Together, the three DCU films under Gunn and Safran have grossed more than $854 million worldwide. On television, the studio's four HBO shows of the era — The Penguin, Creature Commandos, Lanterns and Peacemaker Season 2 — were all well received." },
+      { type: "h2", text: "What Happens to the DCU Now?" },
+      { type: "p", text: "The question now is what Latcham does with the slate Gunn and Safran built. Man of Tomorrow is safe: finished filming, in post-production, and dated for July 9, 2027, again starring Corenswet as Superman and Nicholas Hoult as Lex Luthor. The Batman: Part II is due in 2028, and the Jimmy Olsen-centred miniseries The People v. Gorilla Grodd, starring Skyler Gisondo, has already been filmed for 2027. Beyond that, much is uncertain: future projects Gunn had discussed, including The Brave and the Bold and a new Wonder Woman film, have no confirmed status, and no other DCU film is currently in production. Whether Latcham keeps Gunn's interconnected-universe plan intact or reboots DC on screen once again will define his tenure — and with Gunn still writing and directing inside the universe he built, this is a changing of the guard, not a clean break." },
+      { type: "h2", text: "James Gunn DC Studios Exit: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "Why is James Gunn leaving DC Studios?", a: "Gunn called the job \"trying, to say the least\" and disliked its corporate side. He and Peter Safran are stepping down to return to creative work." },
+        { q: "Who is replacing James Gunn at DC Studios?", a: "Jeremy Latcham, a former Marvel Studios executive who produced Iron Man, The Avengers, Guardians of the Galaxy and Spider-Man: Homecoming. He takes over on December 1, 2026." },
+        { q: "Is James Gunn still making Man of Tomorrow?", a: "Yes. Gunn wrote and directed Superman: Man of Tomorrow, in post-production for July 9, 2027, starring David Corenswet and Nicholas Hoult. He is also writing another DC project." },
+        { q: "When do James Gunn and Peter Safran leave DC Studios?", a: "Latcham takes over on December 1, 2026. Gunn and Safran will stay on to ensure a smooth transition and keep working on DC projects creatively." },
+        { q: "What did James Gunn achieve at DC Studios?", a: "Gunn and Safran relaunched DC as a shared universe, releasing Superman ($618.7 million worldwide), Supergirl and Clayface, plus the HBO series The Penguin, Creature Commandos, Lanterns and Peacemaker Season 2." }
+      ] },
+      { type: "p", text: "James Gunn leaves DC Studios as the man who rebuilt it — and, by his own account, as a filmmaker who missed making films. Now it is Jeremy Latcham's to steer, with Man of Tomorrow the first test of whether the DCU Gunn built can outlast him." }
+    ],
+  },
+{
     slug: "blade-runner-2099-final-trailer-prime-video-november-25-2026",
     image: "https://www.filmofilia.com/wp-content/uploads/2026/10/blade-runner-2099-key-art-20261026-2.jpg",
     imageAlt: "Official Blade Runner 2099 key art: Michelle Yeoh and Hunter Schafer above a rain-soaked, neon-lit Los Angeles (image: Prime Video)",
