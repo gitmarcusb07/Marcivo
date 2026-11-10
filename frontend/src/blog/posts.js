@@ -33,6 +33,41 @@
 
 export const posts = [
 {
+    slug: "skydance-games-layoffs-paramount-games-30-jobs-november-2026",
+    image: "https://static0.polygonimages.com/wordpress/wp-content/uploads/2026/06/tmnt-the-last-ronin.jpg?w=1600&h=900&fit=crop",
+    imageAlt: "Official key art for Teenage Mutant Ninja Turtles: The Last Ronin, the PlatinumGames title published by Paramount Games (image: Paramount Games / Polygon)",
+    title: "Skydance Games Layoffs: At Least 30 Jobs Cut at Paramount Games as Projects Scale Down",
+    description:
+      "Skydance Games layoffs hit Paramount Games — at least 30 jobs cut as Skydance scales down projects a month after the Warner Bros. merger. What we know.",
+    excerpt:
+      "Skydance has confirmed layoffs at Paramount Games, with at least 30 developers reported cut just a month after the Warner Bros. merger — and the fate of TMNT: The Last Ronin is now unclear.",
+    date: "2026-11-10",
+    category: "Gaming",
+    sections: [
+      { type: "p", text: "Skydance Games layoffs have hit Paramount Games, with at least 30 developers cut just a month after Paramount and Warner Bros. merged under David Ellison's Skydance. The company confirmed the cuts in a statement to Variety on Monday, November 9, saying it is scaling down some of its projects — but it has not confirmed how many people are affected, or which games are being cut back. The layoffs landed just five months after Paramount Games was unveiled as the company's big new push into triple-A gaming." },
+      { type: "h2", text: "Skydance Games Layoffs: What We Know So Far" },
+      { type: "p", text: "Reports of the cuts first surfaced over the weekend, when staff from the recently formed Paramount Games Studio began posting on LinkedIn that they had been let go. Kotaku reported the layoffs on Monday, November 9, and Insider Gaming reported that at least 30 people at Paramount Games were impacted, with the real figure believed to be higher. Lead engineer David Vera, who was not himself laid off, named more than 27 affected colleagues in a LinkedIn post, writing that the crew \"wasn't let go because of performance or problematic behaviors\" and calling them \"extremely worthy folks who were pushing themselves to the limit to try to make something they could all be proud of.\"" },
+      { type: "p", text: "Among those cut was associate design director David Ballard, who had been with Skydance for almost four and a half years and was working on the studio's unannounced \"dark academia\" role-playing game. \"My chapter with Skydance and Paramount came to an end today with a layoff,\" Ballard wrote over the weekend. \"It's a sad day for several of my coworkers who were also affected.\"" },
+      { type: "h2", text: "What Skydance Said About the Cuts" },
+      { type: "p", text: "In its statement to Variety, Skydance said: \"As part of our ongoing efforts to position Skydance Games for long-term growth and success, we are implementing reorganization and operational shifts across a few areas of our business.\" The company added: \"We have stepped back and taken some time to consider where we are investing our efforts and have made the difficult decision to scale down some of our projects. As a result, there are roles impacted.\" The statement gives no headcount, no list of affected projects and no timeline for further changes." },
+      { type: "h2", text: "Paramount Games: A Studio Launched Just Five Months Ago" },
+      { type: "p", text: "The timing is what makes the cuts sting. Paramount Games Studio was only announced on June 5, 2026, as a unified gaming division bringing together Skydance Interactive — formed in 2016 to make virtual reality games, including 2024's Behemoth — and Skydance New Media, alongside Paramount's games operations. Skydance executive Tony Driscoll was named president of the new studio, and in June he told Variety that games were \"no longer an extension of the business\" but \"a core driver of storytelling, community and growth across Paramount.\" Driscoll now also oversees Warner Bros. Games, after Skydance combined Paramount Games Studio with Warner Bros. Games' internal developers — including Hogwarts Legacy maker Avalanche Software, NetherRealm Studios, Rocksteady Studios and TT Games — when the Warner Bros. Discovery merger closed on October 6, 2026." },
+      { type: "p", text: "The cuts come barely a month after that merger closed — a fast reversal for a division presented in June as the centrepiece of Paramount's new games strategy, when the studio said it was ramping up internal resources and greenlighting games across Paramount's franchises." },
+      { type: "h2", text: "What Happens to TMNT: The Last Ronin and the Other Games?" },
+      { type: "p", text: "The biggest question now is what happens to the games Paramount Games was building. Its headline project is Teenage Mutant Ninja Turtles: The Last Ronin, a triple-A action-adventure game being developed by PlatinumGames and revealed during Summer Game Fest in June 2026, following the last surviving Turtle on a mission of vengeance. The game has no release date, and Skydance has not said whether it is among the projects being scaled down. The same goes for Avatar Legends: The Fighting Game, a 1v1 Avatar fighter, and the unannounced dark academia RPG Ballard was working on. The wider Paramount Games slate also includes Marvel 1943: Rise of Hydra and an untitled Star Wars game made with Lucasfilm, with no word yet on whether either is affected." },
+      { type: "p", text: "One small piece of reassurance: according to Insider Gaming, none of the affected staff so far appear to come from the former Warner Bros. Games studios. But with no confirmed headcount and no named projects, the scale of the restructuring — and what it means for the games on the slate — remains unclear." },
+      { type: "h2", text: "Skydance Games Layoffs: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "How many people were laid off at Skydance Games?", a: "Insider Gaming reports at least 30 people at Paramount Games were impacted, with the real figure believed to be higher. Skydance has not confirmed a headcount." },
+        { q: "Why is Skydance cutting jobs at Paramount Games?", a: "Skydance says it is reorganising the games division and scaling down some projects to position Skydance Games for long-term growth. It has not named the projects being scaled back." },
+        { q: "Is TMNT: The Last Ronin cancelled?", a: "No cancellation has been announced. The Last Ronin, in development at PlatinumGames, has no release date, and Skydance has not said whether it is affected by the cuts." },
+        { q: "Were Warner Bros. Games studios affected?", a: "According to Insider Gaming, none of the affected staff so far appear to come from the former Warner Bros. Games studios, including Avalanche, NetherRealm, Rocksteady and TT Games." },
+        { q: "When were the Skydance Games layoffs announced?", a: "Staff began posting about the cuts over the weekend of November 7-8. Kotaku reported the layoffs on November 9, and Skydance confirmed them to Variety the same day." }
+      ] },
+      { type: "p", text: "Skydance Games layoffs are the latest sign that the post-merger reshaping of Paramount is reaching its games division — and that the triple-A ambitions announced in June are already being reined in. Until Skydance names the projects it is scaling down, the fate of The Last Ronin and the rest of the slate stays an open question." }
+    ],
+  },
+{
     slug: "james-gunn-peter-safran-leave-dc-studios-jeremy-latcham-november-2026",
     image: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Superman_Red_Carpet-9876.jpg",
     imageAlt: "Peter Safran, James Gunn, Rachel Brosnahan and David Corenswet on stage at the Superman red carpet in Manila in June 2025 (photo: U.S. Embassy in the Philippines / Wikimedia Commons, public domain)",
