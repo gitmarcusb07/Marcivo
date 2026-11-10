@@ -33,6 +33,44 @@
 
 export const posts = [
 {
+    slug: "blade-runner-2099-final-trailer-prime-video-november-25-2026",
+    image: "https://www.filmofilia.com/wp-content/uploads/2026/10/blade-runner-2099-key-art-20261026-2.jpg",
+    imageAlt: "Official Blade Runner 2099 key art: Michelle Yeoh and Hunter Schafer above a rain-soaked, neon-lit Los Angeles (image: Prime Video)",
+    title: "Blade Runner 2099 Final Trailer: Michelle Yeoh and Hunter Schafer Face a Replicant-Ruled Los Angeles",
+    description:
+      "Prime Video's Blade Runner 2099 final trailer shows Michelle Yeoh and Hunter Schafer in a replicant-ruled Los Angeles. All 8 episodes arrive November 25, 2026.",
+    excerpt:
+      "Prime Video has released the Blade Runner 2099 final trailer, the last look at the eight-episode limited series before all episodes arrive on November 25, 2026.",
+    date: "2026-11-10",
+    category: "Cinema",
+    sections: [
+      { type: "p", text: "Prime Video has released the Blade Runner 2099 final trailer, the last look at its eight-episode limited series before all episodes arrive on November 25, 2026. The trailer puts Michelle Yeoh's dying Blade Runner Olwen and Hunter Schafer's fugitive Cora at the centre of a Los Angeles that replicants now control, fifty years after the events of Blade Runner 2049 — and it asks the question the whole series turns on: are you a good human, or a bad one?" },
+      { type: "h2", text: "Blade Runner 2099 Final Trailer: What the Last Look Reveals" },
+      { type: "p", text: "The final trailer, released by Prime Video on November 9, opens over an orange-hazed city of spinners and wreckage, with humans plotting to take their city back and Cora caught in the middle. Its tagline is blunt: whatever you can build, you can destroy. The footage leans hard into the franchise's signature look — rain, neon, smoke and a skyline split between cold blue and burning orange — while making clear this is not the Los Angeles of the earlier films. This time the replicants won, and humanity is the side fighting from the shadows." },
+      { type: "p", text: "The trailer is the third and final preview of the series, following a first teaser at San Diego Comic-Con in July and a longer trailer shown at New York Comic Con in October. Prime Video is billing this cut as the last look before launch, and with sixteen days to go, it is the clearest picture yet of the show's central partnership and the conspiracy the two leads are chasing." },
+      { type: "h2", text: "When Does Blade Runner 2099 Come Out? Release Date and Episodes" },
+      { type: "p", text: "All eight episodes of Blade Runner 2099 premiere on Wednesday, November 25, 2026, exclusively on Prime Video in more than 240 countries and territories. The whole season drops at once, so viewers can binge it rather than wait week to week. The date is the day before Thanksgiving in the United States, which makes it a ready-made holiday-weekend watch." },
+      { type: "p", text: "Blade Runner 2099 is a limited series, which means the eight episodes tell one complete story rather than setting up an open-ended run. Showrunner Silka Luisa has described the season as feeling closer to a film in structure than a traditional television season, which fits a franchise that has always lived on the big screen." },
+      { type: "h2", text: "Who Stars in Blade Runner 2099?" },
+      { type: "p", text: "Michelle Yeoh plays Olwen, a veteran Blade Runner who is days from dying, and Hunter Schafer plays Cora, a fugitive who becomes her unlikely partner. The two investigate a widening conspiracy that stretches back to the city's darkest original sins, with humanity on the ropes and replicants on the rise. Yeoh and Schafer are the only names above the title on the official poster, which echoes the famous 1982 poster of Harrison Ford's Rick Deckard raising his gun — only this time it is Yeoh's Olwen holding the blaster." },
+      { type: "p", text: "The supporting cast includes Dimitri Abold, Lewis Gribben, Katelyn Rose Downey, Daniel Rigby, Johnny Harris, Amy Lennox, Sheila Atim, Matthew Needham, Tom Burke and Maurizio Lombardi. The series was created by Silka Luisa, who also serves as showrunner, and comes from Amazon MGM Studios and the Alcon Television Group. Jonathan van Tulleken directs the first two episodes, and Ridley Scott, who directed the original 1982 film, is an executive producer." },
+      { type: "h2", text: "What Is Blade Runner 2099 About?" },
+      { type: "p", text: "Blade Runner 2099 is set in Los Angeles in 2099, fifty years after Blade Runner 2049. A war between replicants and humanity ended with the humans on the losing side, and the city has been reborn under replicant rule. Olwen, a replicant herself nearing the end of her life cycle, partners with Cora, a human passing herself off as a replicant, to investigate a conspiracy that reaches back into the city's past. The premise gives the two leads very different relationships to identity: one is living with the limits of being a replicant, and the other is pretending to be one." },
+      { type: "p", text: "The series is not a reboot. It continues the world of the two films, and it is the franchise's first live-action television series. Viewers who want to catch up can watch Blade Runner: The Final Cut and Blade Runner 2049, both of which are streaming on Prime Video alongside the new series." },
+      { type: "h2", text: "How to Watch Blade Runner 2099 on Prime Video" },
+      { type: "steps", items: ["Open Prime Video on your TV, phone, tablet or computer and sign in to your Amazon account.", "Search for Blade Runner 2099 from November 25, when all eight episodes go live.", "Start with episode one and binge the season, or watch one episode at a time — every episode is available from launch day.", "New to the franchise? Watch Blade Runner: The Final Cut and Blade Runner 2049 on Prime Video first for the full backstory."] },
+      { type: "p", text: "Because the full season arrives in one drop, the final trailer is the last preview anyone will get before the story itself does the talking. If the trailer is any guide, the show's biggest question is not whether humans can take Los Angeles back, but what the city becomes if they do." },
+      { type: "h2", text: "Blade Runner 2099 Final Trailer: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "When does Blade Runner 2099 come out?", a: "All eight episodes of Blade Runner 2099 premiere on Prime Video on Wednesday, November 25, 2026, in more than 240 countries and territories." },
+        { q: "How many episodes of Blade Runner 2099 are there?", a: "Eight. Blade Runner 2099 is a limited series, and all eight episodes arrive at once on November 25, 2026." },
+        { q: "Who stars in Blade Runner 2099?", a: "Michelle Yeoh plays Olwen, a veteran Blade Runner near the end of her life, and Hunter Schafer plays Cora, a fugitive who partners with her to investigate a conspiracy in a replicant-ruled Los Angeles." },
+        { q: "Is Blade Runner 2099 connected to Blade Runner 2049?", a: "Yes. It is set fifty years after the events of Blade Runner 2049 and continues the same world. It is not a reboot, and it is the franchise's first live-action TV series." },
+        { q: "Do I need to watch the Blade Runner films before Blade Runner 2099?", a: "It helps, but it is not required. Blade Runner: The Final Cut and Blade Runner 2049 are both streaming on Prime Video if you want the backstory before November 25." }
+      ] }
+    ]
+  },
+{
     slug: "openai-modretro-chromatic-codex-edition-200-dollars-november-2026",
     image: "https://cdn.mos.cms.futurecdn.net/afoXZTpfR6BZVrr7NeSHZd-1920-80.jpg",
     imageAlt: "The transparent ModRetro Chromatic handheld running The Legend of Zelda: Link's Awakening DX beside its retail box (image: TechRadar)",
