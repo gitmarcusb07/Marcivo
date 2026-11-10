@@ -33,6 +33,97 @@
 
 export const posts = [
 {
+    slug: "gta-6-30fps-confirmed-ps5-pro-no-performance-mode-november-2026",
+    image: "https://www.rockstargames.com/VI/_next/static/media/meta.0t8ty~nlmxq2s.jpg",
+    imageAlt: "Official GTA 6 key art showing Lucia and Jason in Vice City (image: Rockstar Games)",
+    title: "GTA 6 30FPS Confirmed: Rockstar Locks All Consoles to 30FPS, PS5 Pro Gets PSSR and Ray-Traced Shadows",
+    description:
+      "GTA 6 30fps confirmed: Rockstar targets 30fps on PS5, PS5 Pro and Xbox Series X|S, with PSSR and ray-traced shadows on Pro — and no 60fps mode.",
+    excerpt:
+      "Rockstar Games has confirmed GTA 6 targets 30fps on every console, including PS5 Pro — no 60fps mode — while Pro owners get PSSR upscaling and ray-traced shadows, and Xbox Cloud Gaming joins at launch.",
+    date: "2026-11-10",
+    category: "Gaming",
+    sections: [
+      { type: "p", text: "Rockstar Games has finally answered the question every GTA 6 player has been asking: GTA 6 targets 30fps on every console. The GTA 6 30fps target was confirmed on November 10, 2026, in a new Rockstar blog post published as preloading went live, ending months of speculation about whether the PlayStation 5 Pro would unlock a 60fps mode. It will not: every version — PS5, PS5 Pro, Xbox Series X and Xbox Series S — targets 30 frames per second, with the Pro's extra power spent on image quality instead of frame rate." },
+      { type: "h2", text: "GTA 6 30FPS: What Rockstar Actually Confirmed" },
+      { type: "p", text: "Rockstar's statement is unambiguous, and it comes with the studio's reasoning attached. 'Grand Theft Auto VI has been fully developed from the ground up to provide the best possible experience for the current generation of consoles, targeting 30 frames per second while pushing both platforms to their absolute limits to bring the vast and rich world of Leonida to life — while maintaining the density and visual fidelity of all its environments and inhabitants,' the studio wrote. In short, Leonida's density and detail come first, and the frame rate stays at 30 to protect them." },
+      { type: "p", text: "The confirmation also closes the door on the performance modes some datamines had hinted at. Rockstar made no mention of any 60fps or 40fps mode, and outlets reporting the announcement — including Digital Foundry, GameSpot and WCCFTech — note that no alternative frame-rate mode was offered. For now, the only way to play GTA 6 above 30fps will be the PC version, which Rockstar has still not announced or dated." },
+      { type: "h2", text: "PS5 Pro: PSSR and Ray-Traced Shadows, Same 30FPS" },
+      { type: "p", text: "PS5 Pro owners do get something for their extra hardware, just not extra frames. Rockstar confirmed the PlayStation 5 Pro version uses PlayStation Spectral Super Resolution (PSSR), Sony's AI upscaling, for improved clarity, and adds ray-traced shadows exclusive to the Pro. 'The PlayStation 5 Pro offers breathtaking visuals, with improved clarity through PlayStation Spectral Super Resolution (PSSR) and ray-traced shadows only available on PlayStation 5 Pro,' Rockstar wrote. The base PS5 gets neither feature, so the Pro's advantage is purely visual: a cleaner image and more realistic shadows, at the same 30fps." },
+      { type: "p", text: "That settles a debate that has run since the Pro launched: rumours had suggested it could hit 40 or even 60 frames per second in GTA 6, but Rockstar has now confirmed the frame rate is identical on both PlayStation consoles. The announcement did not specify resolution targets, so exactly how sharp the image will be on each machine is still unconfirmed." },
+      { type: "h2", text: "Xbox Cloud Gaming: GTA 6 Will Be Playable on Xbox One" },
+      { type: "p", text: "The same announcement carried a surprise for Xbox players: GTA 6 will be available through Xbox Cloud Gaming at launch, streamable on Xbox Series X and S and on the older Xbox One, using Series S graphics settings. For players who never upgraded, cloud streaming is the cheapest route into Leonida on November 19 — no new console required, just a Game Pass Ultimate subscription and a decent connection." },
+      { type: "h2", text: "GTA 6 Preload Is Live Now: 212GB Before November 19" },
+      { type: "p", text: "Preloading began on November 10, nine days before launch, and the download is as big as feared: up to 212GB of free space is needed. On PlayStation 5 it started at midnight local time; on Xbox Series X and S at midnight GMT, 5:30 AM IST in India. The game releases at midnight local time on November 19, 2026. In India, the Standard Edition costs Rs 5,999 and the Ultimate Edition Rs 7,499, and physical copies arrive from November 12 — though the box contains a download code rather than a disc." },
+      { type: "h2", text: "GTA 6 Is Now the Most Pre-Ordered Game Ever" },
+      { type: "p", text: "The demand is now measurable. According to Sensor Tower data reported by TheGamer, GTA 6 has been pre-ordered 9.69 million times across PS5 and Xbox Series X and S, making it the most pre-ordered game ever, passing Cyberpunk 2077's record. Nearly 1.98 million of those came in the last week alone. Take-Two Interactive said on November 9 that pre-orders are 'far in excess' of its expectations — a line that now has a number attached to it." },
+      { type: "list", items: [
+        "GTA 6 releases November 19, 2026, on PS5 and Xbox Series X and S.",
+        "GTA 6 targets 30fps on every console, including PS5 Pro — no 60fps or performance mode.",
+        "PS5 Pro adds PSSR upscaling for improved clarity and ray-traced shadows, exclusive to the Pro.",
+        "GTA 6 is playable via Xbox Cloud Gaming at launch, including on Xbox One.",
+        "Preload is live now and needs up to 212GB of free space.",
+        "9.69 million pre-orders make GTA 6 the most pre-ordered game ever, per Sensor Tower."
+      ] },
+      { type: "h2", text: "GTA 6 30FPS: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "Is GTA 6 30fps on PS5 Pro?", a: "Yes. Rockstar confirmed on November 10, 2026 that GTA 6 targets 30 frames per second on all consoles, including PS5 Pro. The Pro gets PSSR upscaling and ray-traced shadows instead of a higher frame rate." },
+        { q: "Does GTA 6 have a 60fps performance mode?", a: "No. Rockstar has not announced any performance mode, and the November 10 announcement makes no mention of one. The game targets 30fps on PS5, PS5 Pro, Xbox Series X and Xbox Series S." },
+        { q: "What is PSSR in GTA 6?", a: "PSSR is PlayStation Spectral Super Resolution, Sony's AI-powered upscaling. On PS5 Pro it delivers improved image clarity in GTA 6, alongside ray-traced shadows exclusive to the Pro version." },
+        { q: "When does GTA 6 release and when can I preload it?", a: "GTA 6 releases on November 19, 2026, for PS5 and Xbox Series X and S. Preloading began on November 10 — midnight local time on PS5 and midnight GMT on Xbox — and needs up to 212GB of free space." },
+        { q: "Can I play GTA 6 on Xbox One?", a: "Yes, via Xbox Cloud Gaming. Rockstar confirmed GTA 6 will be available on Xbox Cloud Gaming at launch, playable on Xbox Series X and S and on Xbox One with Series S graphics settings." }
+      ] },
+      { type: "p", text: "The 30fps confirmation will disappoint players who hoped the Pro would buy them smoother motion, but it also removes the last big unknown before launch. With preloading live, a record 9.69 million pre-orders behind it and nine days to go, the only thing left is the game itself — and on November 19, Leonida finally opens at 30 frames per second." }
+    ],
+  },
+{
+    slug: "binance-warns-iphone-ios-worse-query-flaw-crypto-wallet-keys-november-2026",
+    image: "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=1200&q=80&auto=format&fit=crop",
+    imageAlt: "An iPhone held in hand — Binance says the worse_query iOS flaw could expose crypto wallet keys stored on iPhones. Photo via Unsplash.",
+    title: "Binance Warns iPhone Users: Worse_Query iOS Flaw Could Expose Crypto Wallet Keys",
+    description:
+      "Binance warns iPhone users: the worse_query iOS flaw could let malicious apps read files from other apps, exposing crypto wallet keys. What to do now.",
+    excerpt:
+      "Binance has warned iPhone users about worse_query, an iOS sandbox flaw that could let a malicious app read files from other apps — including crypto wallet seed phrases and private keys. No thefts are confirmed, and Apple has not named a fix.",
+    date: "2026-11-10",
+    category: "Tech",
+    sections: [
+      { type: "p", text: "Binance has warned iPhone users about a serious iOS flaw that could expose crypto wallet keys. The worse_query iOS flaw, named in a Binance security warning posted on November 10, 2026, is a sandbox escape that could let a malicious app read files belonging to other apps on the same iPhone — including wallet seed phrases, private keys and login credentials stored locally. Binance stressed the problem sits in Apple's operating system, not in its own app, and it could affect any app that keeps sensitive information on the device." },
+      { type: "h2", text: "What Is the Worse_Query iOS Flaw?" },
+      { type: "p", text: "The flaw breaks the sandbox, the iOS security boundary that is supposed to stop one app from reaching another app's private files. According to the public proof of concept published on GitHub by a researcher who goes by forcequit, worse_query lets an app cross that boundary and read other apps' data containers — and on iOS 27, some system folders too. The researcher describes the code as a developer proof of concept, not a jailbreak, and a file-manager app called WQ Files has already been built on it to browse, export, edit and delete other apps' data without a jailbreak." },
+      { type: "p", text: "That matters because crypto wallets often store their most sensitive data on the phone itself. Binance said the flaw could expose recovery phrases, private keys and login credentials if apps store them in files a malicious app can reach. SlowMist security chief 23pds separately warned that untrusted IPA packages — apps installed from outside the App Store — could use the access to expose wallet recovery phrases, keystores or browser cache data stored without encryption. The flaw does not automatically drain a wallet: an attacker first has to get a malicious app onto the phone." },
+      { type: "list", items: [
+        "Binance warned iPhone users about worse_query on November 10, 2026.",
+        "Affected versions named by Binance: iOS 26.7.1, 27.0.1 and 27.2.",
+        "The public proof of concept covers iOS 26.0 through 26.7.2 and iOS 27 through 27.2.",
+        "A malicious app could read other apps' files, including wallet seed phrases and private keys.",
+        "No confirmed thefts have been attributed to worse_query, and no CVE number exists yet.",
+        "Apple has not confirmed worse_query by name, and its November 9 updates do not list a fix for it."
+      ] },
+      { type: "h2", text: "Which iPhones Are Affected by Worse_Query?" },
+      { type: "p", text: "Binance named three versions in its warning — iOS 26.7.1, 27.0.1 and 27.2 — the versions listed as tested in the WQ Files release notes. The research repository itself describes a wider range: iOS 26.0 through 26.7.2, and iOS 27 through 27.2. Apple released iOS 27.2.1 and iOS 26.7.3 on November 9, the day before Binance's warning, but the security notes for those releases do not mention worse_query or any sandbox issue, and neither Binance nor Apple has confirmed whether the newest updates close the flaw. Binance told crypto.news it has 'no verified information confirming a security patch or a CVE number for this specific vulnerability.'" },
+      { type: "h2", text: "Has Anyone Lost Crypto to Worse_Query?" },
+      { type: "p", text: "Not that anyone has confirmed. Binance told crypto.news it has 'not identified any confirmed cases in which attackers used worse_query to access cryptocurrency wallets or steal funds,' and neither the exchange nor the researcher reported any attacks or thefts. No wallet app has been named as exposed, and it is not yet known whether an app distributed through the App Store could use the technique at all — the realistic route in is a sideloaded or manually signed app from an untrusted source. The warning was amplified by Binance co-founder Yi He and by Ledger chief technology officer Charles Guillemet, which is why it spread so fast across crypto social media." },
+      { type: "h2", text: "What iPhone Users Should Do Now" },
+      { type: "steps", items: [
+        "Update your iPhone to the latest official iOS version, and update all your apps.",
+        "Delete any apps installed from untrusted sources, including sideloaded or manually signed apps you do not recognise.",
+        "Do not store seed phrases or private keys in plain files, notes or screenshots on your phone.",
+        "If you suspect a compromise, move your funds to a new wallet created on a clean device.",
+        "Reset all active login sessions for your exchange and wallet accounts."
+      ] },
+      { type: "h2", text: "Worse_Query iOS Flaw: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "What is the worse_query iOS flaw?", a: "Worse_query is a publicly disclosed iOS sandbox escape. It lets an app read files belonging to other apps on the same iPhone, which could expose crypto wallet seed phrases, private keys and login credentials stored locally." },
+        { q: "Which iOS versions are affected by worse_query?", a: "Binance named iOS 26.7.1, 27.0.1 and 27.2. The public proof of concept describes iOS 26.0 through 26.7.2 and iOS 27 through 27.2. Apple has not confirmed whether its November 9 updates, iOS 27.2.1 and 26.7.3, fix it." },
+        { q: "Has worse_query been used to steal crypto?", a: "No confirmed thefts have been attributed to worse_query. Binance said it has not identified any confirmed cases of attackers using it to access wallets or steal funds, and the researcher reported no attacks either." },
+        { q: "How do I protect my iPhone from worse_query?", a: "Update iOS and all your apps, delete apps from untrusted or sideloaded sources, and do not keep seed phrases or private keys in plain files or screenshots. If you suspect a compromise, move funds to a new wallet on a clean device and reset your login sessions." },
+        { q: "Is worse_query an Apple or Binance problem?", a: "It is an iOS-level problem, not a Binance-specific one. Binance stressed the flaw is in Apple's operating system and could affect any app that stores sensitive information locally on an iPhone." }
+      ] },
+      { type: "p", text: "Worse_query is a warning, not yet a confirmed attack — but it is a serious one, because it targets the exact data crypto owners can least afford to lose. Until Apple confirms a fix, the safest move for iPhone users is the simplest: update, delete anything untrusted, and keep seed phrases off the phone entirely." }
+    ],
+  },
+{
     slug: "bgmi-4-7-update-release-date-arctic-chronicles-november-18-2026",
     image: "https://images.fonearena.com/blog/wp-content/uploads/2026/11/BGMI-4.7-Arctic-Chronicles-update.jpg",
     imageAlt: "Official BGMI 4.7 key art: the giant serpent of Arctic Chronicles rises through icy fog above a frozen fortress, with the words 'The Beast is Awakening' (image: KRAFTON India)",
