@@ -33,6 +33,59 @@
 
 export const posts = [
 {
+    slug: "john-wick-game-everything-we-know-saber-interactive-keanu-reeves",
+    image: "https://image.tmdb.org/t/p/w1280/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg",
+    imageAlt: "Official poster for John Wick: Chapter 4 showing Keanu Reeves as John Wick (image: TMDB)",
+    title: "John Wick Game: Everything We Know About the Saber Interactive AAA Game Starring Keanu Reeves",
+    description:
+      "The John Wick game from Saber Interactive brings Keanu Reeves back as the Baba Yaga in an untitled AAA adventure. Here is everything confirmed so far.",
+    excerpt:
+      "Saber Interactive is making an untitled AAA John Wick game with Keanu Reeves returning as the Baba Yaga, and here is everything confirmed so far, from platforms to the release date question.",
+    date: "2026-11-10",
+    category: "Gaming",
+    sections: [
+      { type: "p", text: "The John Wick game is real, and it is coming from the studio behind one of the biggest action games of recent years. Saber Interactive, the team behind Warhammer 40,000: Space Marine 2, is developing an untitled AAA John Wick game in collaboration with Lionsgate and franchise director Chad Stahelski, with Keanu Reeves returning to lend his likeness and voice to the Baba Yaga. The game was revealed on February 12, 2026, during Sony's State of Play showcase, and it is already one of the most anticipated upcoming games, even though it still has no official title and no release date. Here is everything that has been confirmed so far." },
+      { type: "h2", text: "John Wick Game: What Has Been Confirmed So Far" },
+      { type: "p", text: "The official announcement left no doubt about the scale of the project. This is a full AAA game, not a small tie-in, and the people behind the films are directly involved. These are the facts Saber Interactive and Lionsgate have confirmed:" },
+      { type: "list", items: [
+        "Developer: Saber Interactive, in collaboration with Lionsgate and franchise director Chad Stahelski.",
+        "A single-player, third-person action game for mature audiences, built around the franchise's gun-fu combat.",
+        "Keanu Reeves returns as John Wick, lending his likeness and voice to the game.",
+        "Platforms: PlayStation 5, Xbox Series X and S, and PC.",
+        "An original story set years before the Impossible Task, the job that let Wick retire from the assassin's life.",
+        "The game is available to wishlist now on PlayStation 5, Xbox Series X and S, and PC, with no release date announced yet."
+      ] },
+      { type: "h2", text: "The Story: A Prequel Set Years Before the Impossible Task" },
+      { type: "p", text: "The John Wick game will not retell the movies. Saber has confirmed an original script set in the John Wick timeline, years before the Impossible Task, the legendary job that allowed Wick to leave the assassin's life behind and retire before the first film. That setting gives the game room to show a younger Wick at the height of his reputation, when the name Baba Yaga alone was enough to frighten the criminal underworld." },
+      { type: "p", text: "The story is being developed with Chad Stahelski, who directed all four mainline John Wick films, and it will expand the lore of the High Table with both familiar characters fans already know and completely new ones. The game's Steam page sums up the mood in just three words: Be Seeing You." },
+      { type: "h2", text: "Gun-Fu Combat: What the Gameplay Could Look Like" },
+      { type: "p", text: "Saber Interactive is a strong fit for this franchise. The studio earned its reputation with Warhammer 40,000: Space Marine 2, a third-person action game praised for its heavy, satisfying combat, and it also made the co-op shooter World War Z. The John Wick game is being built as a cinematic, single-player third-person action experience, which is exactly the format the franchise's gun-fu style needs: close-quarters gunplay mixed with hand-to-hand combat, takedowns, and the relentless pace of the films." },
+      { type: "p", text: "The reveal trailer gave only a short taste, including a brief sequence of in-engine footage showing brutal finishers, and no full gameplay demo has followed since. That is normal for a game this early in development, but it means the combat system itself is still mostly a mystery. What is clear is that Saber is aiming for the feel of the films rather than a loose adaptation with the John Wick name attached." },
+      { type: "h2", text: "John Wick Game Release Date: Is 2028 the Window?" },
+      { type: "p", text: "There is no official John Wick game release date yet, and no release window has been announced. The PlayStation store page still lists the date as to be determined, and as of early November 2026 there has been no new trailer, title, or confirmed date since the February reveal." },
+      { type: "p", text: "The year 2028 has been mentioned in reports, after Saber chief business officer Steve Allison told a fan he was helping prepare Saber's 2028 lineup. Saber later made clear those remarks were not an official release announcement, so 2028 should be treated as an unconfirmed rumour, not a promise. Until Saber or Lionsgate announces a window, any date you see online is speculation." },
+      { type: "h2", text: "How to Wishlist the John Wick Game" },
+      { type: "p", text: "You cannot play the John Wick game yet, but you can wishlist it now so you get notified the moment a release date or pre-order goes live. Here is how:" },
+      { type: "steps", items: [
+        "On PlayStation 5, open the PlayStation Store, search for the untitled John Wick game, and select Wishlist.",
+        "On Xbox Series X and S, search the Microsoft Store for the John Wick game and add it to your wishlist.",
+        "On PC, find the game on Steam and click Add to your wishlist.",
+        "Follow Saber Interactive and Lionsgate for the next trailer and release date news."
+      ] },
+      { type: "h2", text: "The John Wick Games That Came Before" },
+      { type: "p", text: "This is the first AAA John Wick game, but it is not the first time the assassin has appeared in a game. John Wick Hex, a tactical strategy game, launched in 2019, and the virtual reality game John Wick Chronicles arrived in 2017. Both were small projects compared with what Saber is building now: a full-scale, story-driven action game with the films' director involved." },
+      { type: "p", text: "The game arrives while the film franchise keeps growing. Four John Wick films have turned the series into a billion-dollar franchise, and the world has already expanded into the television series The Continental and the spinoff film Ballerina, with an animated prequel film about the Impossible Task also in the works. A proper AAA game has been the missing piece, and Saber Interactive is now building it." },
+      { type: "faq", items: [
+        { q: "When is the John Wick game release date?", a: "No release date has been announced. The game was revealed on February 12, 2026, and the PlayStation store page still lists the date as to be determined. Reports mentioning 2028 are unconfirmed." },
+        { q: "What platforms will the John Wick game be on?", a: "PlayStation 5, Xbox Series X and S, and PC. No other platforms, including Nintendo systems, have been announced." },
+        { q: "Is Keanu Reeves in the John Wick game?", a: "Yes. Keanu Reeves is lending his likeness and voice to the game, and franchise director Chad Stahelski is involved in the production." },
+        { q: "Is the John Wick game a prequel?", a: "Yes. The game tells an original story set years before the Impossible Task, the job that allowed John Wick to retire before the first film." },
+        { q: "Will the John Wick game have multiplayer?", a: "No multiplayer has been announced. The game has been described as a single-player, third-person action experience." }
+      ] },
+      { type: "p", text: "For now, the John Wick game remains one of the most exciting upcoming games with the least to show. The reveal trailer proved the project is real, Keanu Reeves is back, and Saber Interactive is building it with the people who made the films. Until Saber or Lionsgate share a title and a release date, the best move for fans is to wishlist the game and wait for the next trailer." }
+    ],
+  },
+{
     slug: "arshdeep-singh-mumbai-indians-hardik-pandya-punjab-kings-trade-father-confirms-november-2026",
     image: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Arshdeep_Singh_2022.jpg",
     imageAlt: "Arshdeep Singh in India's blue jersey during the 2022 T20 World Cup (photo: Wikimedia Commons)",
