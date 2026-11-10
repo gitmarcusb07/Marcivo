@@ -33,57 +33,6 @@
 
 export const posts = [
 {
-    slug: "bgmi-4-7-update-release-date-arctic-chronicles-november-18-2026",
-    image: "https://images.fonearena.com/blog/wp-content/uploads/2026/11/BGMI-4.7-Arctic-Chronicles-update.jpg",
-    imageAlt: "Official BGMI 4.7 key art: the giant serpent of Arctic Chronicles rises through icy fog above a frozen fortress, with the words 'The Beast is Awakening' (image: KRAFTON India)",
-    title: "BGMI 4.7 Update Release Date: Arctic Chronicles Brings a Giant Norse Serpent on November 18, 2026",
-    description:
-      "BGMI 4.7 update releases November 18, 2026, with Arctic Chronicles, a Norse winter mode built around the serpent Jormungandr. Dates, maps and events.",
-    excerpt:
-      "KRAFTON India has confirmed the BGMI 4.7 update release date as November 18, 2026, led by Arctic Chronicles, a Nordic winter theme mode built around the giant serpent Jormungandr.",
-    date: "2026-11-10",
-    category: "Gaming",
-    sections: [
-      { type: "p", text: "KRAFTON India has confirmed the BGMI 4.7 update release date: November 18, 2026. The winter update is led by Arctic Chronicles, a Nordic theme mode built around Jormungandr, the giant serpent of Norse legend, and it changes how Erangel, Livik and Vikendi play until January 18, 2027. Here is everything confirmed so far, from the Ancient Beast to the frozen Erangel arriving in December." },
-      { type: "h2", text: "BGMI 4.7 Update Release Date and Full Event Schedule" },
-      { type: "p", text: "The BGMI 4.7 update rolls out on November 18, 2026, for all players, and Arctic Chronicles runs with it from day one. KRAFTON India has confirmed the full winter schedule, with two more theme modes and a New Year countdown following in December." },
-      { type: "list", items: [
-        "BGMI 4.7 update: November 18, 2026, for all players.",
-        "Arctic Chronicles theme mode: November 18, 2026 to January 18, 2027, on Erangel, Livik and Vikendi.",
-        "Erangel Subzero: December 3, 2026, in Ranked matches on Erangel.",
-        "Snow Festival: December 17, 2026, in game.",
-        "New Year countdown: December 31, 2026, from 8 PM IST, with a fireworks show at midnight across most BGMI maps."
-      ] },
-      { type: "p", text: "KRAFTON India says more features from the 4.7 update will be revealed separately in the coming days, so this schedule is likely to grow before launch. Trailers, further reveals and complete details will be shared on BGMI's official YouTube and Instagram channels, and full patch notes usually follow on the official BGMI website." },
-      { type: "h2", text: "Arctic Chronicles: The Ancient Beast Changes the Map" },
-      { type: "p", text: "Arctic Chronicles centres on what KRAFTON India calls the Ancient Beast. The beast is inspired by Jormungandr, the world serpent of Norse legend, but unlike most theme-mode monsters it is not just scenery. Its body becomes part of the battleground, forming new pathways, hiding new areas and supplies, and opening up new ways to move around the map." },
-      { type: "p", text: "Players can interact with the beast directly. Sounding a horn stirs its tail, which raises a submerged tower out of the water. KRAFTON India has also confirmed that players will be able to take on the beast in a fight, and that those who do may find a match plays out very differently. What you get for fighting it has not been revealed yet, and that detail is clearly being saved for the trailer." },
-      { type: "h2", text: "Erangel Subzero Freezes Ranked Erangel From December 3" },
-      { type: "p", text: "The second theme mode arrives on December 3, 2026, and it changes Erangel itself, but only in Ranked matches. The story is that a secret experiment goes wrong, sending Tesonic satellites crashing into the island and releasing a cold gas that spreads across the map." },
-      { type: "p", text: "Three familiar locations change as a result. Stalber is frozen solid. Shelter becomes a crash site said to hold rare supplies. Part of the Sosnovka bridge has collapsed, which could change how teams rotate between the main island and the military base. New cold-weather gear and vehicles arrive with the mode, though KRAFTON India has not named them yet. For competitive players, that last detail matters most: any change to a Ranked version of Erangel affects the map the community plays every day, so the full patch notes will be worth reading closely." },
-      { type: "h2", text: "Snow Festival and a New Year Countdown in the Sky" },
-      { type: "p", text: "From December 17, 2026, the Snow Festival turns part of the game into a festive playground. Then, on December 31 at 8 PM IST, a giant New Year countdown will appear in the sky across most BGMI maps, ending in a fireworks show at midnight. It is a fitting touch for a player base that will be in matches when the year turns." },
-      { type: "h2", text: "How to Get the BGMI 4.7 Update on November 18" },
-      { type: "steps", items: [
-        "On November 18, open the Google Play Store on Android or the App Store on iOS and search for BGMI.",
-        "Tap Update and wait for the download to finish. Like every BGMI update, version 4.7 is free.",
-        "Open the game, let any additional in-game files download, and restart if the game asks you to.",
-        "Arctic Chronicles will be available in the mode selection on Erangel, Livik and Vikendi.",
-        "Keep an eye on BGMI's official YouTube and Instagram channels for the trailer and full patch notes before launch."
-      ] },
-      { type: "h2", text: "What KRAFTON Has Not Revealed Yet" },
-      { type: "p", text: "Several details are still to come. KRAFTON India has confirmed the November 18 date but not the exact rollout time on the day. The reward for fighting the Ancient Beast, the names of the new cold-weather gear and vehicles, and any other 4.7 features beyond the winter events are all still under wraps. It is a busy month for KRAFTON India: the lighter BGMI Air is also on the way, launching in India on December 10, 2026." },
-      { type: "faq", items: [
-        { q: "When is the BGMI 4.7 update release date?", a: "November 18, 2026. KRAFTON India confirmed the date on November 10, 2026. The exact rollout time on the day has not been announced yet." },
-        { q: "What is Arctic Chronicles in BGMI?", a: "Arctic Chronicles is the Nordic winter theme mode leading the BGMI 4.7 update. It is built around Jormungandr, the giant serpent of Norse legend, whose body becomes part of the map on Erangel, Livik and Vikendi. It runs from November 18, 2026 to January 18, 2027." },
-        { q: "Which maps have the Arctic Chronicles mode?", a: "Erangel, Livik and Vikendi. The mode runs on all three maps from November 18, 2026 to January 18, 2027." },
-        { q: "What is Erangel Subzero?", a: "Erangel Subzero is a second theme mode arriving on December 3, 2026, only in Ranked matches on Erangel. It freezes parts of the map after Tesonic satellites crash and release a cold gas: Stalber freezes solid, Shelter becomes a crash site, and part of the Sosnovka bridge collapses." },
-        { q: "Is the BGMI 4.7 update free?", a: "Yes. Like every BGMI update, version 4.7 is a free update for all players on Android and iOS." }
-      ] },
-      { type: "p", text: "Winter is BGMI's biggest season of the year, and the 4.7 update looks like the fullest one yet: a map-changing beast, a frozen Ranked Erangel, a festival and a New Year countdown in the sky. The update lands on November 18, and the trailer and patch notes should fill in the remaining blanks before then." }
-    ],
-  },
-{
     slug: "sonia-gandhi-memoir-belonging-breast-cancer-secret-surgeries-november-2026",
     image: "https://upload.wikimedia.org/wikipedia/commons/7/7c/Sonia_Gandhi_in_2013.jpg",
     imageAlt: "Sonia Gandhi in 2013 (image: Wikimedia Commons)",
