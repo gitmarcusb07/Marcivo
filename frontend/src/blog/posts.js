@@ -33,6 +33,91 @@
 
 export const posts = [
 {
+    slug: "dragon-quest-rpg-cursed-tree-chosen-isle-trailer-closed-beta-2027-november-2026",
+    image: "https://cache-www.dragonquest.jp/dqrpg/root/20261105/common/images/global/top/keyvisual.jpg",
+    imageAlt: "Official key art for Dragon Quest RPG The Cursed Tree and the Chosen Isle: the blue-cloaked hero and a slime look up at the cursed tree on its floating island (image: Square Enix)",
+    title: "Dragon Quest RPG The Cursed Tree and the Chosen Isle Trailer: Closed Beta, 2027 Release Window and Everything Shown",
+    description:
+      "Dragon Quest RPG The Cursed Tree and the Chosen Isle trailer reveals a closed beta, December testing and a 2027 launch on iOS and Android.",
+    excerpt:
+      "Square Enix has shown the first footage of Dragon Quest RPG The Cursed Tree and the Chosen Isle, and the trailer answers the big questions: a closed beta starts in December, and the game is coming in 2027.",
+    date: "2026-11-10",
+    category: "Gaming",
+    sections: [
+      { type: "p", text: "Square Enix has shown Dragon Quest RPG The Cursed Tree and the Chosen Isle in motion. The announcement trailer premiered on Tuesday, November 10, 2026, at 11:00 AM UTC, a day after the game was revealed for iOS and Android. The two-minute video shows turn-based battles, monster allies, base building and cooking, and it ends with the news players wanted most: a closed beta with sign-ups open now, and a launch window of 2027." },
+      { type: "h2", text: "Dragon Quest RPG The Cursed Tree and the Chosen Isle Trailer: What the First Footage Shows" },
+      { type: "p", text: "The trailer opens on a bright, colourful 3D world seen from above, and it keeps moving: a party walks through a desert toward a stepped-pyramid temple, crosses a wooden bridge in a mine, and rides a log raft down a castle moat. There is no voiceover, only orchestral music, so the images do the talking: green fields, blue skies, stone ruins, and a giant glowing tree over a festival town." },
+      { type: "p", text: "Battles are turn-based and shown from the side, with new systems on top. A turn-order bar runs across the screen, and the trailer names three mechanics: Fast Strike skills, Follow-Up Strike, and Pep Powers. Damage numbers pop up as attacks land, against robotic hunter mechs, hammer-wielding monsters, a green slime, and a winged snake. It is a traditional command-based battle system, with a few fresh tactical twists." },
+      { type: "h2", text: "The Story: Monbelusha, Zaahl and the Cursed Tree" },
+      { type: "p", text: "The story, as laid out on the official website, starts high above the world on the floating isle of Monbelusha, where the annual Ringing Feast is under way. As the people offer their prayers, disaster strikes: a fiend named Zaahl corrupts Yggdrasil into Grimvein, a cursed tree spreading despair across the land. Monbelusha begins to crumble, and a boy plummets toward the world below. The Goddess Belusha entrusts him with a single mysterious branch, and he must take up his calling as Warden of the World Tree and set out to save the world. The trailer sketches the same story in images: a cloaked boy above ruined steps, hands holding a glowing green sprout, and a hooded villain with a blue-orb staff in a lightning-lit cave." },
+      { type: "h2", text: "The Party: Heroes, Monster Allies and a Talking Suit of Armour" },
+      { type: "p", text: "The hero is a brown-haired boy in a blue cloak and tunic, carrying a sword and shield, and Square Enix has not yet given his name. He is joined by Etica, a blue-haired girl who fights with a staff, and Geowain, an armoured knight whose shield is emblazoned with a slime. The fourth party member is a monster ally, a winged snake called Kim Myra, and the party screen shows two more monster allies in reserve, a black shadow creature and a brown tree-stump monster, suggesting monster recruiting matters here. The screen also shows levels, hit points and magic points for each member, with options to manage equipment and switch the party around. A living suit of armour named Simão adds some humour." },
+      { type: "h2", text: "Home Base and Cooking: More Than Battles" },
+      { type: "p", text: "Fighting is only part of the game. The trailer shows the player building up a home base as the adventure unfolds, and cooking. At a place called Zeunie's Eatery, the player picks allies to dine with and cooks dishes such as Seared Steak, with a cooking time and a list of required materials." },
+      { type: "h2", text: "Dragon Quest RPG Closed Beta: Dates, Testers and How to Apply" },
+      { type: "p", text: "The biggest news in the trailer is the closed beta test. Applications opened on November 10, 2026, the day the trailer premiered, and close on Monday, November 23, 2026, at 2:59 PM UTC. Testing runs from Tuesday, December 8 to Tuesday, December 15, 2026, and Square Enix will take 25,000 testers, chosen by lottery if oversubscribed. Results will be notified on Friday, December 4, 2026. The beta is 18 and over, runs on iOS through TestFlight, and progress will not carry over to the full release." },
+      { type: "list", items: [
+        "Applications: November 10 to November 23, 2026, closing at 2:59 PM UTC.",
+        "Testing period: December 8 to December 15, 2026, with 25,000 places by lottery.",
+        "Results notified December 4, 2026; players must be 18 or over.",
+        "iOS through TestFlight, and Android; beta progress will not transfer.",
+        "Recommended devices: iPhone 14 or newer on iOS, or a Snapdragon 8 Gen 2 phone on Android."
+      ] },
+      { type: "h2", text: "Release Date, Price and Platforms" },
+      { type: "p", text: "There is still no exact release date. The official website says the game is coming in 2027, and the trailer itself shows no date at all. What is confirmed is the price: the game will be free to play, with in-app purchases available. It is coming to iOS and Android only, with no console or PC version announced, and it will support Japanese, English, Traditional Chinese and Korean. Armor Project and Bird Studio are credited alongside Square Enix. The Dragon Quest I and II HD-2D Remake is out now, and Dragon Quest VII Reimagined reaches consoles and PC on February 5, 2026." },
+      { type: "faq", items: [
+        { q: "When did the Dragon Quest RPG trailer premiere?", a: "It premiered on Tuesday, November 10, 2026, at 11:00 AM UTC (4:30 PM IST) on Square Enix's YouTube channel, a day after the game was announced for iOS and Android." },
+        { q: "When is the Dragon Quest RPG closed beta test?", a: "Applications run November 10 to November 23, 2026, closing at 2:59 PM UTC, and testing runs December 8 to December 15, 2026. There are 25,000 places by lottery, with results on December 4, 2026." },
+        { q: "When is Dragon Quest RPG The Cursed Tree and the Chosen Isle coming out?", a: "Square Enix says the game is coming in 2027. No exact release date has been announced yet, and the trailer itself shows no date." },
+        { q: "Is Dragon Quest RPG The Cursed Tree and the Chosen Isle free to play?", a: "Yes. The official website lists it as free to play, with in-app purchases available. It is coming to iOS and Android only, with no console or PC version announced." }
+      ] },
+      { type: "p", text: "The trailer is short, but it does its job: a Dragon Quest game that looks and plays like Dragon Quest, with new ideas of its own. The closed beta is the next milestone, and with 25,000 places up for grabs and applications closing on November 23, anyone who wants an early look should not wait to apply." }
+    ],
+  },
+{
+    slug: "aaryavir-sehwag-160-u19-asia-cup-uae-kohli-way-november-2026",
+    image: "https://images.indianexpress.com/2026/11/aaryavir-sehwag.jpg",
+    imageAlt: "Aaryavir Sehwag batting for India U19 against UAE in the U19 Asia Cup 2026 (photo: The Indian Express)",
+    title: "Aaryavir Sehwag 160 vs UAE: Maiden U19 Asia Cup Century as 'Kohli Way' Clip Goes Viral",
+    description:
+      "Aaryavir Sehwag smashed 160 off 168 balls for India U19 against UAE in the Asia Cup, and his viral 'Kohli way' interview clip is winning fans over.",
+    excerpt:
+      "Aaryavir Sehwag announced himself with a maiden Youth ODI century, smashing 160 off 168 balls against UAE in a must-win U19 Asia Cup clash as his viral 'Kohli way' interview won over fans.",
+    date: "2026-11-10",
+    category: "Sports",
+    sections: [
+      { type: "p", text: "Aaryavir Sehwag has announced himself on the big stage in the most Sehwag way possible, and then some. The India U19 opener smashed a maiden Youth ODI century, a blistering 160 off 168 balls against the United Arab Emirates in the U19 Asia Cup 2026 on Tuesday, November 10, 2026, and within hours his pre-tournament interview was going viral. In that clip, the son of Virender Sehwag says he does not want to play only the Sehwag way, he wants to play the Kohli way too, and his 160 at the Al Amerat Cricket Ground in Oman proved both instincts at once: fearless like his father, and built on patience and timing like his hero Virat Kohli." },
+      { type: "h2", text: "Aaryavir Sehwag 160: How the Innings Unfolded" },
+      { type: "p", text: "India were put in to bat after UAE won the toss, and Aaryavir began in a way nobody expected from a Sehwag. He took 14 deliveries to get off the mark, a cautious start that showed he was playing the situation rather than the surname. Once he was in, the tempo changed. He brought up his fifty off 69 balls with a six, the kind of milestone-clearing maximum his father made famous, and reached his maiden Youth ODI century off 131 balls with a single into the deep." },
+      { type: "p", text: "The second half of the innings was pure acceleration. Aaryavir hit left-arm wrist spinner Uddish Suri for two sixes and two fours in the 37th over, crossed 150 with a towering six over long-on off Noorullah Ayobi, and was dismissed in the 45th over, caught at mid-wicket off Naseem Khan with the total on 255, having struck 17 fours and seven sixes. India finished on 309 for seven, setting UAE 310 to win a match both teams needed." },
+      { type: "h2", text: "The 'Kohli Way' Video That Went Viral" },
+      { type: "p", text: "The knock landed even harder because of a clip recorded before the tournament. In a promotional video for the U19 Asia Cup, Aaryavir was asked about following in his father's footsteps, and his answer spread across social media within hours of the century. 'I don't want to only play the Sehwag way, I want to play the Kohli way,' he said, adding that he is a huge Virat Kohli fan who loves taking the attack. The line captures exactly what his 160 looked like: his father's aggression, shaped by Kohli's discipline." },
+      { type: "p", text: "Fans picked the clip up straight after the century, and it became the second storyline of the day. For a young batter in his first major tournament, it was a statement of intent as much as a batting performance: he is proud of the name on his back, but he wants to be judged on his own game." },
+      { type: "h2", text: "Aaryavir Sehwag Joins Shubman Gill in the Record Books" },
+      { type: "p", text: "The numbers behind the 160 are serious. It was the highest individual score of the U19 Asia Cup so far, and it put Aaryavir alongside India captain Shubman Gill and Mayank Agarwal, with all three having scored 160 at under-19 level. The record still belongs to Ambati Rayudu, who scored an unbeaten 177 against England U19 in Taunton in 2002, but Aaryavir is already in elite company." },
+      { type: "list", items: [
+        "160 runs off 168 balls, with 17 fours and seven sixes, against UAE at Al Amerat, Oman.",
+        "Maiden Youth ODI century, reached off 131 balls after a fifty off 69 balls.",
+        "193-run second-wicket partnership with VK Vineeth, who scored 66 off 67 balls.",
+        "Highest individual score of the U19 Asia Cup 2026 so far.",
+        "Joint fifth-highest individual score by an Indian in Youth ODIs, matching Shubman Gill and Mayank Agarwal.",
+        "252 runs at an average of 126.00 in three matches, after an unbeaten 70 against Nepal and 22 in his other outing."
+      ] },
+      { type: "h2", text: "Why This Was a Must-Win Game for India U19" },
+      { type: "p", text: "The context made the innings matter even more. India came into the UAE game needing a win after a three-wicket defeat to Pakistan, a game in which Arjun Rajput scored a century but India were bowled out for 208 and Pakistan chased the target down through Hamza Zahoor's match-winning hundred. With India and UAE both fighting for a qualification spot, the stakes were as high as they get in group-stage cricket, and Aaryavir's innings gave India the platform they needed after an early wicket." },
+      { type: "h2", text: "What Comes Next for Aaryavir Sehwag" },
+      { type: "p", text: "The century does not change that Aaryavir is still at the start of his career, but it changes how quickly people will watch him now. Two fifty-plus scores and a 160 in three tournament matches is the kind of start that gets a young batter noticed well beyond age-group cricket, and the way he built this innings, patient at the start and brutal at the end, suggests there is more to his game than the famous surname. If India go deep in this U19 Asia Cup, expect his name to be at the centre of it." },
+      { type: "faq", items: [
+        { q: "How many runs did Aaryavir Sehwag score against UAE?", a: "Aaryavir Sehwag scored 160 off 168 balls, with 17 fours and seven sixes, in India U19's Asia Cup 2026 group match against UAE on November 10, 2026." },
+        { q: "What did Aaryavir Sehwag say about Virat Kohli?", a: "In a pre-tournament promotional video, Aaryavir said he does not want to play only the Sehwag way and wants to play the Kohli way too, calling himself a huge Virat Kohli fan who loves taking the attack." },
+        { q: "Is 160 Aaryavir Sehwag's highest score in youth cricket?", a: "Yes, the 160 against UAE is his maiden Youth ODI century and the highest individual score of the U19 Asia Cup 2026 so far, matching the 160s of Shubman Gill and Mayank Agarwal at under-19 level." },
+        { q: "What was India's total against UAE?", a: "India U19 finished on 309 for seven in 50 overs, setting UAE a target of 310 to win. Aaryavir's 160 anchored the innings, with VK Vineeth scoring 66 in a 193-run second-wicket partnership." },
+        { q: "Who is Aaryavir Sehwag?", a: "Aaryavir Sehwag is the son of former India opener Virender Sehwag and an opening batter for India U19. He scored an unbeaten 70 against Nepal earlier in the U19 Asia Cup 2026 before his 160 against UAE." }
+      ] },
+      { type: "p", text: "One innings does not make a career, but 160 in a must-win game, built the Kohli way and finished the Sehwag way, is hard to forget. The century is the headline, and the viral clip is why everyone is talking about it. If Aaryavir keeps batting like this, the conversation will not be about whose son he is for much longer." }
+    ],
+  },
+{
     slug: "john-wick-game-everything-we-know-saber-interactive-keanu-reeves",
     image: "https://image.tmdb.org/t/p/w1280/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg",
     imageAlt: "Official poster for John Wick: Chapter 4 showing Keanu Reeves as John Wick (image: TMDB)",
