@@ -69,7 +69,7 @@ export const posts = [
   },
 {
     slug: "blade-runner-2099-final-trailer-prime-video-november-25-2026",
-    image: "https://www.filmofilia.com/wp-content/uploads/2026/10/blade-runner-2099-key-art-20261026-2.jpg",
+    image: "https://www.churchofnerds.com/cdn/shop/articles/blade-runner-2099-key-art-header.jpg?v=1793041385&width=1100",
     imageAlt: "Official Blade Runner 2099 key art: Michelle Yeoh and Hunter Schafer above a rain-soaked, neon-lit Los Angeles (image: Prime Video)",
     title: "Blade Runner 2099 Final Trailer: Michelle Yeoh and Hunter Schafer Face a Replicant-Ruled Los Angeles",
     description:
