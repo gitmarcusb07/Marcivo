@@ -33,6 +33,40 @@
 
 export const posts = [
 {
+    slug: "openai-modretro-chromatic-codex-edition-200-dollars-november-2026",
+    image: "https://cdn.mos.cms.futurecdn.net/afoXZTpfR6BZVrr7NeSHZd-1920-80.jpg",
+    imageAlt: "The transparent ModRetro Chromatic handheld running The Legend of Zelda: Link's Awakening DX beside its retail box (image: TechRadar)",
+    title: "ModRetro Chromatic Codex Edition: OpenAI's $200 Handheld Turns Prompts Into Game Boy Games",
+    description:
+      "OpenAI is selling the ModRetro Chromatic Codex Edition for $200 — a Game Boy-style handheld that turns text prompts into playable Game Boy Color games.",
+    excerpt:
+      "OpenAI has put the ModRetro Chromatic Codex Edition on sale for $200 through its Supply Co. store, giving developers a real handheld that plays the Game Boy Color games its Codex AI builds from plain text prompts.",
+    date: "2026-11-10",
+    category: "Gaming",
+    sections: [
+      { type: "p", text: "The ModRetro Chromatic Codex Edition is now on sale for $200, after OpenAI announced the public release in a thread on X on November 9. The device, sold through OpenAI's Supply Co. store, pairs Palmer Luckey's ModRetro Chromatic with a Codex plugin that builds playable Game Boy Color games from plain text prompts — and the listing includes one programmable game cartridge, with the handheld returning on November 19." },
+      { type: "h2", text: "ModRetro Chromatic Codex Edition Price, Cartridge and November 19 Return Date" },
+      { type: "p", text: "The ModRetro Chromatic: Codex Edition listing is priced at $200.00 and includes one programmable game cartridge. That is almost exactly the price of the standard magnesium Chromatic ($199.99), while the transparent models that went on sale on October 8 cost $149.99. OpenAI announced the availability in a thread on X on November 9, a day after its developer account teased the launch with a one-word post — \"Tomorrow.\" — and a video of an OpenAI-branded box. The listing shows the handheld returning on November 19 — check the Supply Co. page for current availability before ordering." },
+      { type: "h2", text: "How the OpenAI ModRetro Chromatic Turns Prompts Into Playable Games" },
+      { type: "p", text: "The idea is simple, even if the engineering is not. A developer describes a game in natural language — its levels, characters and rules — and Codex, OpenAI's coding agent, builds it as a Game Boy Color ROM using the ModRetro Chromatic plugin. The workflow lets developers design levels and animate sprites, test the game in a built-in emulator, then stream it to the real handheld and flash it onto the programmable cartridge in the box. In effect, the Chromatic becomes a physical endpoint for Codex: the AI writes the game, and the handheld is where you play it." },
+      { type: "p", text: "That loop is the hardware half of a pitch OpenAI first showed at its DevDay developer conference on September 29, 2026, when chief executive Sam Altman held up the handheld on stage and gave a limited-edition transparent Chromatic to attendees. The giveaway became a story of its own: one unit appeared on eBay at $4,000 within 90 minutes of the announcement. OpenAI also published 13 games built with Codex for the Chromatic — including FlapGPT and Codex Land — free to play in a browser or download as .gbc ROM files. They are demos of what the tool can do rather than finished games, and at least one download is labelled a three-level preview in its own filename." },
+      { type: "h2", text: "The Chromatic Itself: A Modern FPGA Game Boy" },
+      { type: "p", text: "Underneath the AI story, the Chromatic is a serious piece of retro hardware. Built by ModRetro, the company founded by Oculus creator Palmer Luckey, it is an FPGA handheld that plays original Game Boy and Game Boy Color cartridges instead of emulating them, with a sunlight-readable custom LCD and a magnesium body. The standard model costs $199.99 with a Gorilla Glass screen, or $299.99 with sapphire, while the clear plastic versions in smoke, green, purple and red arrived on October 8 at $149.99 with a Tetris cartridge. The Codex Edition is the transparent DevDay-style unit, now sold openly for the first time." },
+      { type: "h2", text: "Is the $200 ModRetro Chromatic Codex Edition Worth It?" },
+      { type: "p", text: "For developers, the value is the workflow rather than the hardware alone: a $200 Codex Edition costs about the same as the standard Chromatic, but adds the Codex plugin and a programmable cartridge for turning prompts into games you can hold. For everyone else, the honest answer is narrower: the 13 free Codex-built games are short demos, and building a good game still needs a clear idea and iteration, even when the code writes itself. What the public sale settles is the scarcity question — the transparent Chromatic is no longer a $4,000 eBay curiosity, but a $200 product anyone can order." },
+      { type: "p", text: "The launch also marks OpenAI's second step into branded hardware through Supply Co., after the $230 Codex Micro macropad it released with keyboard maker Work Louder on July 15, which sold out within hours. Neither is the screenless AI companion OpenAI is building with Jony Ive, which court filings say will not arrive before the end of February 2027. The Chromatic is something more immediate: a test of whether developers want an AI coding agent tied to a physical console, and whether a handheld that plays games written by prompts can find an audience beyond the DevDay crowd." },
+      { type: "h2", text: "ModRetro Chromatic Codex Edition: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "How much does the ModRetro Chromatic Codex Edition cost?", a: "$200. The Supply Co. listing is priced at $200.00 and includes one programmable game cartridge, with the handheld returning on November 19." },
+        { q: "Where can I buy the OpenAI Chromatic Codex Edition?", a: "Through OpenAI's Supply Co. store, at the ModRetro Chromatic: Codex Edition listing — announced in a thread on X on November 9, 2026." },
+        { q: "How does the Chromatic turn prompts into games?", a: "Developers describe a game in natural language and Codex builds it as a Game Boy Color ROM using the ModRetro Chromatic plugin, then test it in a built-in emulator, stream it to the handheld, and flash it onto the programmable cartridge." },
+        { q: "Does the Chromatic play original Game Boy games?", a: "Yes. The Chromatic is an FPGA handheld that plays original Game Boy and Game Boy Color cartridges, as well as new games on ModRetro's own cartridges." },
+        { q: "What is the difference between the Codex Edition and the standard Chromatic?", a: "The Codex Edition is the transparent DevDay-style unit with the Codex plugin workflow and a programmable cartridge, priced at $200. The standard magnesium Chromatic costs $199.99; the transparent models cost $149.99." }
+      ] },
+      { type: "p", text: "The ModRetro Chromatic Codex Edition takes one of the most talked-about moments of OpenAI's DevDay — a Game Boy-style handheld handed to developers — and turns it into a product anyone can buy. At $200, with a programmable cartridge in the box and a November 19 return date, it is OpenAI's clearest bet yet that its coding agent's future is not only on screen, but in your hands." }
+    ],
+  },
+{
     slug: "pawan-kalyan-anna-konidela-separation-after-13-years-marriage-november-2026",
     image: "https://upload.wikimedia.org/wikipedia/commons/6/63/The_noted_Telugu_film_actor_Shri_Pavan_Kalyan_addressing_at_the_closing_ceremony_and_award_function_of_the_18th_International_Children%E2%80%99s_Film_Festival_India%2C_in_Hyderabad_on_November_20%2C_2013_%28cropped%29.jpg",
     imageAlt: "Pawan Kalyan addressing an event in Hyderabad in 2013 (image: Wikimedia Commons / Government of India)",
