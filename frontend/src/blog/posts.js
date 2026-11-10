@@ -33,6 +33,85 @@
 
 export const posts = [
 {
+    slug: "pawan-kalyan-anna-konidela-separation-after-13-years-marriage-november-2026",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/63/The_noted_Telugu_film_actor_Shri_Pavan_Kalyan_addressing_at_the_closing_ceremony_and_award_function_of_the_18th_International_Children%E2%80%99s_Film_Festival_India%2C_in_Hyderabad_on_November_20%2C_2013_%28cropped%29.jpg",
+    imageAlt: "Pawan Kalyan addressing an event in Hyderabad in 2013 (image: Wikimedia Commons / Government of India)",
+    title: "Pawan Kalyan Anna Konidela Separation: Deputy CM and Actor End 13-Year Marriage",
+    description:
+      "Pawan Kalyan and Anna Konidela have announced their separation after 13 years of marriage, saying they remain good friends and devoted parents.",
+    excerpt:
+      "Actor and Andhra Pradesh Deputy Chief Minister Pawan Kalyan and his wife Anna Konidela have announced their separation after 13 years of marriage, confirming the decision in a joint statement released late on Monday night.",
+    date: "2026-11-10",
+    category: "Cinema",
+    sections: [
+      { type: "p", text: "The Pawan Kalyan Anna Konidela separation was announced late on Monday night, November 9, when the Telugu superstar and Andhra Pradesh Deputy Chief Minister and his wife issued a joint statement confirming they have decided to part ways after 13 years of marriage. The announcement, shared through the Jana Sena Party's official WhatsApp media group, has become the biggest story in Indian entertainment and politics overnight, with fans and the film industry reacting in shock to the end of one of Telugu cinema's most high-profile marriages." },
+      { type: "h2", text: "Pawan Kalyan Anna Konidela Separation: What the Joint Statement Said" },
+      { type: "p", text: "In their joint statement, Pawan Kalyan and Anna Konidela said the decision was reached with mutual understanding and respect. \"After sharing a significant part of our lives together, we have decided to part ways with mutual understanding and respect. Though our marriage has come to an end, we remain good friends and devoted parents to our wonderful children. Their happiness and well-being will always remain our shared priority,\" the statement read. The couple also asked for privacy during the personal transition and thanked everyone who had supported them through their journey." },
+      { type: "p", text: "Notably, the statement gave no reason for the separation, and it did not mention whether any legal divorce proceedings had been initiated or make any reference to arrangements for their children. Deccan Herald reported, citing Jana Sena sources, that the couple had been discussing the separation for the past few months and that both had filed a petition in the Family Court by mutual consent — but that claim comes from party sources, not from the couple's statement, and has not been confirmed by Pawan Kalyan or Anna Konidela themselves." },
+      { type: "h2", text: "A 13-Year Marriage: Pawan Kalyan and Anna Konidela's Story" },
+      { type: "p", text: "Pawan Kalyan married Anna Konidela, whose maiden name is Anna Lezhneva, in September 2013 under the Special Marriage Act in Hyderabad. Anna, a Russian national, and Pawan have a daughter and a son together. She appeared alongside Pawan in the 2011 film Teen Maar, and their relationship reportedly began after his marriage to actress Renu Desai had ended." },
+      { type: "p", text: "This was Pawan Kalyan's third marriage. He first married Nandini in September 1997; the two separated in 1999 and their divorce was finalised in 2008. He then married Renu Desai in 2009, with whom he has two children, a daughter and a son, before that marriage ended in divorce in 2012. His marriage to Anna, which began in 2013, lasted 13 years." },
+      { type: "p", text: "Rumours of a split between Pawan and Anna first surfaced in 2023, but they were publicly dispelled at the time when Anna joined him at family events and political milestones, including the traditional rituals that followed his election victories. That makes the timing of this announcement — a quiet joint note late on a Monday night, a day after Diwali — all the more surprising to fans who had seen the couple present a united front in public." },
+      { type: "h2", text: "Pawan Kalyan: The Actor and Deputy Chief Minister at the Centre of the Story" },
+      { type: "p", text: "Pawan Kalyan, 55, is one of the biggest stars in Telugu cinema and one of the highest-paid actors in Indian cinema, with a career running since his 1996 debut. Since June 2024 he has also served as the Deputy Chief Minister of Andhra Pradesh and leads the Jana Sena Party, which is a partner in the National Democratic Alliance. That dual identity — matinee idol and senior politician — is why the separation has dominated both film and political coverage overnight." },
+      { type: "p", text: "On the professional front, Pawan Kalyan was last seen in Ustaad Bhagat Singh, and his next much-anticipated project is OG 2. As the news spread through the night, a throwback photo of Pawan Kalyan and Anna resurfaced on social media and went viral within hours, a measure of how closely fans have followed the couple over more than a decade." },
+      { type: "h2", text: "What Happens Next After the Separation Announcement" },
+      { type: "p", text: "For now, the couple have asked for privacy, and neither has said anything beyond the joint statement. With no reason given and no legal detail confirmed by the couple themselves, speculation about why the marriage ended should be treated with caution — the only facts on record are the ones in their statement. What is clear is that both have committed to remaining devoted parents to their children, and that Pawan Kalyan's film and political work continues, with OG 2 the next project on his slate." },
+      { type: "h2", text: "Pawan Kalyan Anna Konidela Separation: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "Why did Pawan Kalyan and Anna Konidela separate?", a: "They have given no reason. Their joint statement says only that they decided to part ways with mutual understanding and respect. Any reported reason beyond that is speculation." },
+        { q: "Are Pawan Kalyan and Anna Konidela divorced?", a: "They have announced a separation. Their statement does not mention divorce proceedings. Deccan Herald reported, citing Jana Sena sources, that a mutual-consent petition has been filed in the Family Court, but the couple have not confirmed that." },
+        { q: "How long were Pawan Kalyan and Anna Konidela married?", a: "Thirteen years. They married in September 2013 under the Special Marriage Act in Hyderabad, and have a daughter and a son together." },
+        { q: "Who is Anna Konidela?", a: "Anna Konidela, born Anna Lezhneva, is a Russian national who married Pawan Kalyan in September 2013. She appeared alongside him in the 2011 film Teen Maar." },
+        { q: "What is Pawan Kalyan working on next?", a: "His next film is OG 2. He was last seen in Ustaad Bhagat Singh, and he continues as Andhra Pradesh Deputy Chief Minister and Jana Sena Party president." }
+      ] },
+      { type: "p", text: "The separation of Pawan Kalyan and Anna Konidela closes a 13-year chapter for one of Telugu cinema's most watched couples. The statement was brief, mutual and focused on their children — and until the couple say more, that is the whole of the story." }
+    ],
+  },
+{
+    slug: "gta-6-pre-orders-unprecedented-levels-take-two-q2-results-november-2026",
+    image: "https://www.rockstargames.com/VI/_next/static/media/meta.0t8ty~nlmxq2s.jpg",
+    imageAlt: "Official GTA 6 key art showing Lucia and Jason in Vice City (image: Rockstar Games)",
+    title: "GTA 6 Pre-Orders Reach 'Unprecedented Levels' as Take-Two Reports Q2 Results",
+    description:
+      "Take-Two says GTA 6 pre-orders have reached unprecedented levels ahead of the November 19 launch, as Q2 net bookings fell 18% to $1.60 billion.",
+    excerpt:
+      "Take-Two has reported its final results before GTA 6 launches, and the headline is the one fans wanted: pre-orders for Grand Theft Auto VI are, in CEO Strauss Zelnick's words, continuing to reach unprecedented levels.",
+    date: "2026-11-10",
+    category: "Gaming",
+    sections: [
+      { type: "p", text: "GTA 6 pre-orders have reached unprecedented levels, according to Take-Two Interactive, which reported its fiscal second-quarter 2027 results after the US market closed on Monday, November 9. With Grand Theft Auto VI launching on November 19 — ten days from the results — CEO Strauss Zelnick told investors the company expects to deliver a historic year, reiterating its full-year outlook for net bookings of $8 billion to $8.2 billion." },
+      { type: "h2", text: "GTA 6 Pre-Orders: What Take-Two Said About Launch Demand" },
+      { type: "p", text: "Zelnick's exact words were that the launch of Grand Theft Auto VI is ten days away and, with pre-orders continuing to reach unprecedented levels, we expect to deliver an historic year for our company. It is the strongest signal yet from Take-Two about launch demand, and it lands ten days before release. Preloading for GTA 6 opens today, November 10, so pre-orders will start converting into installed copies immediately." },
+      { type: "p", text: "Zelnick also confirmed on the earnings call that Rockstar has completed development of GTA VI, The Verge reported, and said pre-orders are tracking far in excess of the company's initial expectations. Take-Two reiterated its fiscal 2027 net bookings outlook of $8 billion to $8.2 billion, and lifted its full-year GAAP revenue outlook by $80 million to a range of $7.98 billion to $8.18 billion. For the current quarter — the one that includes the GTA 6 launch — the company guided to net bookings of $3.35 billion to $3.50 billion, GAAP revenue of $3.27 billion to $3.42 billion, and GAAP earnings of $1.30 to $1.44 a share." },
+      { type: "h2", text: "Take-Two Q2 FY2027 Results: The Numbers" },
+      { type: "list", items: [
+        "Net bookings of $1.60 billion, down 18% from $1.96 billion a year earlier, just below Take-Two's own forecast of $1.62 billion to $1.67 billion.",
+        "GAAP net revenue of $1.50 billion, down from $1.77 billion in the same quarter last year.",
+        "GAAP net loss of $54.0 million, or $0.29 per share, narrower than the $133.9 million loss a year ago.",
+        "Recurrent consumer spending fell 9% and accounted for 81% of total net bookings.",
+        "NBA 2K27 has sold more than 4 million units, though that was below Take-Two's forecast for the launch.",
+        "The Borderlands franchise has now passed 100 million units sold.",
+        "Take-Two shares rose about 5% in after-hours trading to $213.70 after the report."
+      ] },
+      { type: "p", text: "The miss on bookings is the part of the report investors will argue about, but the market reaction says the GTA 6 story matters more than the quarter. The quarter ended September 30, before pre-orders for the biggest launch in the company's history had fully built up, and the guidance for the launch quarter is where Take-Two is asking to be judged." },
+      { type: "h2", text: "GTA 5 Nears 235 Million Copies as the Franchise Nears 480 Million" },
+      { type: "p", text: "The results also brought the usual update on the sales totals that underpin the GTA business. Grand Theft Auto V has now sold almost 235 million units — up five million in the quarter — and the Grand Theft Auto franchise as a whole has shipped nearly 480 million units. Those numbers are the reason Take-Two can talk about a historic year with a straight face: GTA 5 alone has sold more copies than almost any game in history, and its successor arrives with a built-in audience of hundreds of millions." },
+      { type: "h2", text: "What Happens Next Before the November 19 Launch" },
+      { type: "p", text: "The countdown is now measured in days. GTA 6 releases on November 19, 2026, for PlayStation 5 and Xbox Series X|S, with preloading opening on November 10. Rockstar is also staging GTA 6: The Festival in Miami on November 21, two days after launch, with Travis Scott and Cardi B on the lineup. Between the pre-order numbers, the launch-weekend sales and the festival, the next fortnight will decide whether Take-Two's historic year claim holds up — and whether the reiterated $8 billion to $8.2 billion in net bookings is a floor or a ceiling." },
+      { type: "p", text: "For now, the message from the earnings call is simple: the quarter was soft, the guidance is unchanged, and the game everyone is actually waiting for is selling faster than anything Take-Two has seen before." },
+      { type: "h2", text: "GTA 6 Pre-Orders: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "When does GTA 6 release?", a: "Grand Theft Auto VI releases on November 19, 2026, for PlayStation 5 and Xbox Series X|S. Preloading opens on November 10, 2026." },
+        { q: "What did Take-Two say about GTA 6 pre-orders?", a: "CEO Strauss Zelnick said pre-orders are continuing to reach unprecedented levels, ten days before launch, and the company expects to deliver a historic year." },
+        { q: "What were Take-Two's Q2 FY2027 results?", a: "Net bookings of $1.60 billion, down 18% year on year, with a GAAP net loss of $54.0 million, or $0.29 per share." },
+        { q: "How many copies has GTA 5 sold?", a: "Almost 235 million units, up five million in the quarter. The Grand Theft Auto franchise has shipped nearly 480 million units." },
+        { q: "What is Take-Two's outlook for the year?", a: "The company reiterated fiscal 2027 net bookings guidance of $8 billion to $8.2 billion and lifted its full-year GAAP revenue outlook to $7.98 billion to $8.18 billion." }
+      ] },
+      { type: "p", text: "Take-Two's last results before GTA 6 arrives tell two stories at once: a soft quarter behind it, and a launch in front of it that is already breaking the company's own records for demand. The next numbers that matter come after November 19." }
+    ],
+  },
+{
     slug: "lando-norris-wins-sao-paulo-grand-prix-mercedes-constructors-title-2026",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/2026_Chinese_GP_-_McLaren_-_Lando_Norris_-_FP1.jpg/1280px-2026_Chinese_GP_-_McLaren_-_Lando_Norris_-_FP1.jpg",
     imageAlt: "Lando Norris driving his papaya-orange McLaren during the 2026 Formula 1 season. Photo: Liauzh, CC BY 4.0, via Wikimedia Commons.",
