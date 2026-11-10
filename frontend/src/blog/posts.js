@@ -33,6 +33,48 @@
 
 export const posts = [
 {
+    slug: "arshdeep-singh-mumbai-indians-hardik-pandya-punjab-kings-trade-father-confirms-november-2026",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Arshdeep_Singh_2022.jpg",
+    imageAlt: "Arshdeep Singh in India's blue jersey during the 2022 T20 World Cup (photo: Wikimedia Commons)",
+    title: "Arshdeep Singh Mumbai Indians Switch Confirmed by Father as Hardik Pandya Heads to Punjab Kings for IPL 2027",
+    description:
+      "Arshdeep Singh's father has confirmed the pacer's Mumbai Indians move in the Hardik Pandya swap ahead of IPL 2027, with BCCI approval still pending.",
+    excerpt:
+      "Arshdeep Singh's father Darshan Singh has confirmed the left-arm pacer's move to Mumbai Indians in the blockbuster Hardik Pandya swap, three days after reports said the IPL 2027 trade had been completed.",
+    date: "2026-11-10",
+    category: "Sports",
+    sections: [
+      { type: "p", text: "The Arshdeep Singh Mumbai Indians move is now as close to confirmed as it gets without an official announcement. Arshdeep's father, Darshan Singh, has publicly confirmed that the left-arm pacer is joining Mumbai Indians in a blockbuster swap that sends Hardik Pandya to Punjab Kings ahead of IPL 2027. Speaking to journalist Vimal Kumar on his YouTube channel from New Zealand, where Arshdeep is currently on tour with the Indian team, Darshan Singh said the family had been surprised by the proposal but was happy with the move. The confirmation comes three days after PTI reported on November 7 that the trade had been completed, and it is the strongest public signal yet that the swap is happening." },
+      { type: "h2", text: "Arshdeep Singh Mumbai Indians Move: What His Father Said" },
+      { type: "p", text: "Darshan Singh did not hide the family's surprise at the proposal, or their affection for the franchise his son is leaving. \"Discussion has happened. We also surprisingly found out that the trade has happened. Right now, perhaps the intimation has come that the trade has taken place,\" he said. He then explained why the move still felt right: \"Wherever a person, a human being is born, they always have a deep love for their native place. They never forget it throughout their life. So Kings XI (Punjab Kings) was like a native place; he had a very strong relation with it. So it does feel a little bit, but because every franchise wants to build its own team balance, they made the trade accordingly. So we are very happy with Mumbai Indians also.\" He added that the family had no prior discussion with the franchise before the proposal emerged." },
+      { type: "h2", text: "How the Hardik Pandya-Arshdeep Singh Trade Came Together" },
+      { type: "p", text: "The swap was first reported on November 7, when an IPL source told PTI: \"The trade has been completed. Hardik is going to Punjab Kings and Arshdeep is moving to Mumbai Indians. Hardik is happy to play under Shreyas Iyer.\" India TV reported that Mumbai Indians initiated the move after contacting multiple franchises about trading Hardik, who was himself looking for a way out. Hardik returned to Mumbai Indians from Gujarat Titans ahead of the 2024 season and replaced Rohit Sharma as captain, but his tenure as skipper proved difficult, with the five-time champions missing the playoffs twice in the three seasons since his appointment. At Punjab Kings, the decision was taken by captain Shreyas Iyer and coach Ricky Ponting, despite the franchise's long association with Arshdeep. Ponting was Hardik's first IPL coach at Mumbai Indians, and Hardik is understood to have preferred the Punjab move partly to reunite with him." },
+      { type: "h2", text: "What Arshdeep Singh Brings to Mumbai Indians" },
+      { type: "list", items: [
+        "111 wickets in 96 IPL matches, all of them for Punjab Kings since his debut in 2019.",
+        "The first bowler in Punjab Kings history to reach 100 IPL wickets, a milestone he passed in April 2026.",
+        "21 wickets in IPL 2025 and 19 in IPL 2024, his two most productive seasons.",
+        "A left-arm angle and a proven death-overs game built on yorkers.",
+        "India's leading T20I wicket-taker, and the first Indian to 100 T20I wickets, reached in September 2025 in 64 matches.",
+        "A T20 World Cup winner with India in 2024 and 2026, and the joint-highest wicket-taker of the 2024 tournament."
+      ] },
+      { type: "p", text: "For Mumbai Indians, Arshdeep solves a problem they have carried for years: a proven Indian left-arm quick who can bowl in the powerplay and at the death. For Arshdeep, the move ends a seven-season stay with a single franchise. Punjab Kings signed him for his base price of 20 lakh rupees at the 2019 auction, retained him for 18 crore rupees ahead of the 2026 season, and watched him grow from a raw youngster into the franchise's all-time leading wicket-taker." },
+      { type: "h2", text: "What Hardik Pandya Gives Punjab Kings" },
+      { type: "p", text: "Punjab Kings get a very different kind of player in return. Hardik brings explosive middle-order batting, seam bowling, and big-match experience, and he strengthens the balance of a side that reached the IPL 2025 final under Shreyas Iyer. The concern around Hardik is fitness: multiple injury setbacks have kept him away from competitive cricket since the previous IPL season, and Punjab will need him available to justify a trade of this size. But if he stays fit, a fresh start under Ponting, the coach who first shaped him at Mumbai Indians, is the reset his career needs after three difficult seasons as Mumbai's captain." },
+      { type: "h2", text: "Is the Trade Official Yet? What Happens Next" },
+      { type: "p", text: "Not quite yet. The paperwork for the swap has been completed and submitted to the BCCI for final approval, and the deal still needs ratification from the board before it becomes official. Business Standard reported on November 10 that the deal was still being formalised, so the father's confirmation, while powerful, is not the same as a franchise or BCCI announcement. The timing is tight: the BCCI has extended the player retention deadline to November 17, and the IPL mini-auction is scheduled for December 16 in Goa. Separate reports that Rohit Sharma could return as Mumbai captain are also unconfirmed. The official announcement is expected once the BCCI signs off, and until then the trade remains agreed but not yet ratified." },
+      { type: "p", text: "What is already clear is the scale of the swap: two of Indian cricket's biggest names are changing teams in a single deal, and the first meeting between the two franchises will be one of the most watched games of the season." },
+      { type: "h2", text: "Arshdeep Singh Mumbai Indians Trade: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "Is Arshdeep Singh joining Mumbai Indians?", a: "His father has confirmed it, and PTI reported on November 7 that the trade was completed. BCCI ratification is still pending before an official announcement." },
+        { q: "Who is Mumbai Indians trading for Arshdeep Singh?", a: "Hardik Pandya, who moves to Punjab Kings in the swap. Hardik returned to Mumbai Indians ahead of IPL 2024 and captained the side for three seasons." },
+        { q: "How many IPL wickets has Arshdeep Singh taken for Punjab Kings?", a: "111 wickets in 96 IPL matches, all for Punjab Kings. He became the first bowler in the franchise's history to reach 100 IPL wickets in April 2026." },
+        { q: "Why did Punjab Kings trade Arshdeep Singh?", a: "According to the IPL source who confirmed the deal, the decision was taken by Punjab captain Shreyas Iyer and coach Ricky Ponting to rebalance the squad, even though the franchise owners found the call difficult." },
+        { q: "When is the IPL 2027 mini-auction?", a: "The mini-auction is scheduled for December 16, 2026 in Goa, with the player retention deadline extended to November 17." }
+      ] }
+    ]
+  },
+{
     slug: "skydance-games-layoffs-paramount-games-30-jobs-november-2026",
     image: "https://static0.polygonimages.com/wordpress/wp-content/uploads/2026/06/tmnt-the-last-ronin.jpg?w=1600&h=900&fit=crop",
     imageAlt: "Official key art for Teenage Mutant Ninja Turtles: The Last Ronin, the PlatinumGames title published by Paramount Games (image: Paramount Games / Polygon)",
