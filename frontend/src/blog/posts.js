@@ -33,6 +33,138 @@
 
 export const posts = [
 {
+    slug: "bgmi-4-7-update-release-date-arctic-chronicles-november-18-2026",
+    image: "https://images.fonearena.com/blog/wp-content/uploads/2026/11/BGMI-4.7-Arctic-Chronicles-update.jpg",
+    imageAlt: "Official BGMI 4.7 key art: the giant serpent of Arctic Chronicles rises through icy fog above a frozen fortress, with the words 'The Beast is Awakening' (image: KRAFTON India)",
+    title: "BGMI 4.7 Update Release Date: Arctic Chronicles Brings a Giant Norse Serpent on November 18, 2026",
+    description:
+      "BGMI 4.7 update releases November 18, 2026, with Arctic Chronicles, a Norse winter mode built around the serpent Jormungandr. Dates, maps and events.",
+    excerpt:
+      "KRAFTON India has confirmed the BGMI 4.7 update release date as November 18, 2026, led by Arctic Chronicles, a Nordic winter theme mode built around the giant serpent Jormungandr.",
+    date: "2026-11-10",
+    category: "Gaming",
+    sections: [
+      { type: "p", text: "KRAFTON India has confirmed the BGMI 4.7 update release date: November 18, 2026. The winter update is led by Arctic Chronicles, a Nordic theme mode built around Jormungandr, the giant serpent of Norse legend, and it changes how Erangel, Livik and Vikendi play until January 18, 2027. Here is everything confirmed so far, from the Ancient Beast to the frozen Erangel arriving in December." },
+      { type: "h2", text: "BGMI 4.7 Update Release Date and Full Event Schedule" },
+      { type: "p", text: "The BGMI 4.7 update rolls out on November 18, 2026, for all players, and Arctic Chronicles runs with it from day one. KRAFTON India has confirmed the full winter schedule, with two more theme modes and a New Year countdown following in December." },
+      { type: "list", items: [
+        "BGMI 4.7 update: November 18, 2026, for all players.",
+        "Arctic Chronicles theme mode: November 18, 2026 to January 18, 2027, on Erangel, Livik and Vikendi.",
+        "Erangel Subzero: December 3, 2026, in Ranked matches on Erangel.",
+        "Snow Festival: December 17, 2026, in game.",
+        "New Year countdown: December 31, 2026, from 8 PM IST, with a fireworks show at midnight across most BGMI maps."
+      ] },
+      { type: "p", text: "KRAFTON India says more features from the 4.7 update will be revealed separately in the coming days, so this schedule is likely to grow before launch. Trailers, further reveals and complete details will be shared on BGMI's official YouTube and Instagram channels, and full patch notes usually follow on the official BGMI website." },
+      { type: "h2", text: "Arctic Chronicles: The Ancient Beast Changes the Map" },
+      { type: "p", text: "Arctic Chronicles centres on what KRAFTON India calls the Ancient Beast. The beast is inspired by Jormungandr, the world serpent of Norse legend, but unlike most theme-mode monsters it is not just scenery. Its body becomes part of the battleground, forming new pathways, hiding new areas and supplies, and opening up new ways to move around the map." },
+      { type: "p", text: "Players can interact with the beast directly. Sounding a horn stirs its tail, which raises a submerged tower out of the water. KRAFTON India has also confirmed that players will be able to take on the beast in a fight, and that those who do may find a match plays out very differently. What you get for fighting it has not been revealed yet, and that detail is clearly being saved for the trailer." },
+      { type: "h2", text: "Erangel Subzero Freezes Ranked Erangel From December 3" },
+      { type: "p", text: "The second theme mode arrives on December 3, 2026, and it changes Erangel itself, but only in Ranked matches. The story is that a secret experiment goes wrong, sending Tesonic satellites crashing into the island and releasing a cold gas that spreads across the map." },
+      { type: "p", text: "Three familiar locations change as a result. Stalber is frozen solid. Shelter becomes a crash site said to hold rare supplies. Part of the Sosnovka bridge has collapsed, which could change how teams rotate between the main island and the military base. New cold-weather gear and vehicles arrive with the mode, though KRAFTON India has not named them yet. For competitive players, that last detail matters most: any change to a Ranked version of Erangel affects the map the community plays every day, so the full patch notes will be worth reading closely." },
+      { type: "h2", text: "Snow Festival and a New Year Countdown in the Sky" },
+      { type: "p", text: "From December 17, 2026, the Snow Festival turns part of the game into a festive playground. Then, on December 31 at 8 PM IST, a giant New Year countdown will appear in the sky across most BGMI maps, ending in a fireworks show at midnight. It is a fitting touch for a player base that will be in matches when the year turns." },
+      { type: "h2", text: "How to Get the BGMI 4.7 Update on November 18" },
+      { type: "steps", items: [
+        "On November 18, open the Google Play Store on Android or the App Store on iOS and search for BGMI.",
+        "Tap Update and wait for the download to finish. Like every BGMI update, version 4.7 is free.",
+        "Open the game, let any additional in-game files download, and restart if the game asks you to.",
+        "Arctic Chronicles will be available in the mode selection on Erangel, Livik and Vikendi.",
+        "Keep an eye on BGMI's official YouTube and Instagram channels for the trailer and full patch notes before launch."
+      ] },
+      { type: "h2", text: "What KRAFTON Has Not Revealed Yet" },
+      { type: "p", text: "Several details are still to come. KRAFTON India has confirmed the November 18 date but not the exact rollout time on the day. The reward for fighting the Ancient Beast, the names of the new cold-weather gear and vehicles, and any other 4.7 features beyond the winter events are all still under wraps. It is a busy month for KRAFTON India: the lighter BGMI Air is also on the way, launching in India on December 10, 2026." },
+      { type: "faq", items: [
+        { q: "When is the BGMI 4.7 update release date?", a: "November 18, 2026. KRAFTON India confirmed the date on November 10, 2026. The exact rollout time on the day has not been announced yet." },
+        { q: "What is Arctic Chronicles in BGMI?", a: "Arctic Chronicles is the Nordic winter theme mode leading the BGMI 4.7 update. It is built around Jormungandr, the giant serpent of Norse legend, whose body becomes part of the map on Erangel, Livik and Vikendi. It runs from November 18, 2026 to January 18, 2027." },
+        { q: "Which maps have the Arctic Chronicles mode?", a: "Erangel, Livik and Vikendi. The mode runs on all three maps from November 18, 2026 to January 18, 2027." },
+        { q: "What is Erangel Subzero?", a: "Erangel Subzero is a second theme mode arriving on December 3, 2026, only in Ranked matches on Erangel. It freezes parts of the map after Tesonic satellites crash and release a cold gas: Stalber freezes solid, Shelter becomes a crash site, and part of the Sosnovka bridge collapses." },
+        { q: "Is the BGMI 4.7 update free?", a: "Yes. Like every BGMI update, version 4.7 is a free update for all players on Android and iOS." }
+      ] },
+      { type: "p", text: "Winter is BGMI's biggest season of the year, and the 4.7 update looks like the fullest one yet: a map-changing beast, a frozen Ranked Erangel, a festival and a New Year countdown in the sky. The update lands on November 18, and the trailer and patch notes should fill in the remaining blanks before then." }
+    ],
+  },
+{
+    slug: "sonia-gandhi-memoir-belonging-breast-cancer-secret-surgeries-november-2026",
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/7c/Sonia_Gandhi_in_2013.jpg",
+    imageAlt: "Sonia Gandhi in 2013 (image: Wikimedia Commons)",
+    title: "Sonia Gandhi Memoir Belonging: Breast Cancer Battle and Secret Surgeries in Milan and Rotterdam Revealed",
+    description:
+      "Sonia Gandhi's memoir Belonging: A Journey of Love reveals her secret breast cancer battle in 2010 and a second surgery in Rotterdam a year later.",
+    excerpt:
+      "Sonia Gandhi has revealed for the first time that she fought breast cancer in 2010 and underwent a second secret surgery a year later, in her memoir Belonging: A Journey of Love, released on November 10, 2026.",
+    date: "2026-11-10",
+    category: "News",
+    sections: [
+      { type: "p", text: "Sonia Gandhi has revealed for the first time that she was diagnosed with breast cancer in 2010 and underwent surgery abroad in secret, and that a second operation followed a year later after doctors found a growth in her pancreas. The disclosure comes in her memoir, Belonging: A Journey of Love, published by HarperCollins India and released in bookstores across India on Tuesday, November 10, 2026. The Congress Parliamentary Party chairperson, who turns 80 next month, had never spoken publicly about her medical conditions before the book." },
+      { type: "h2", text: "Sonia Gandhi Memoir: The Breast Cancer Diagnosis in 2010" },
+      { type: "p", text: "In the memoir, Gandhi writes that in 2010 she was advised to undergo an operation for suspected breast cancer. She says she had full confidence in the doctors at Delhi's Sir Ganga Ram Hospital, but decided to seek treatment abroad because of the media frenzy her illness would have created in India. She travelled to Milan, Italy, where the surgery was performed by renowned breast cancer specialist Dr Umberto Veronesi." },
+      { type: "p", text: "Describing the moment she arrived at the hospital with her daughter Priyanka Gandhi, she writes, \"I felt my spirits sink at first as I walked into the dark and gloomy hospital reception as did Priyanka.\" In another passage she writes, \"I felt shaken and worried, there was no time to lose, my children and I were told, and my mind began to race.\" According to reports on the memoir, the Milan surgery removed two tumours, including one that was not suspicious, and included intra-operative radiation to spare her five weeks of radiotherapy." },
+      { type: "h2", text: "A Second Cancer Scare: The Pancreatic Growth in 2011" },
+      { type: "p", text: "Just one year later, during routine follow-up tests in 2011, doctors detected a growth in her pancreas. Gandhi writes that she then underwent a second surgery, this time at the Erasmus University Medical Centre in Rotterdam, in the Netherlands, where pancreatic surgeon Dr Casper van Eijck treated her. A surgery in 2011 had been reported at the time, but the ailment behind it was never disclosed." },
+      { type: "p", text: "Before the diagnosis, Gandhi writes, her health troubles had been limited to occasional bouts of asthma, allergies and stomach problems, and she had no major health concerns. The two cancer diagnoses, and the surgeries that followed, were kept entirely private until the memoir." },
+      { type: "h2", text: "Belonging: A Journey of Love — What the Memoir Covers" },
+      { type: "p", text: "The memoir traces the arc of Gandhi's life, from her childhood in post-war Italy and her marriage into the Nehru-Gandhi family to the assassination of her husband Rajiv Gandhi and her own entry into politics. Gandhi has said the book is a personal account rather than a political one, describing it as her account of the place she came to call home." },
+      { type: "p", text: "Alongside the health revelations, the book covers family tragedies, political disagreements and personal struggles, as well as her observations of India's changing political landscape. The cancer chapters have drawn the most attention since the book reached stores, because they answer a question that had followed Gandhi for years: why she travelled abroad for treatment in 2010 and 2011, and what she had been treated for." },
+      { type: "list", items: [
+        "Memoir: Belonging: A Journey of Love, published by HarperCollins India, released November 10, 2026.",
+        "2010: diagnosed with breast cancer; surgery in Milan under Dr Umberto Veronesi.",
+        "2011: a growth detected in the pancreas during follow-up tests; second surgery in Rotterdam under Dr Casper van Eijck.",
+        "Gandhi had never spoken publicly about either diagnosis before the memoir.",
+        "The book traces her life from post-war Italy to the Nehru-Gandhi family and her entry into politics."
+      ] },
+      { type: "h2", text: "Why Sonia Gandhi's Cancer Revelation Matters" },
+      { type: "p", text: "Gandhi is one of India's most prominent political figures, a former Congress president and the chairperson of the Congress Parliamentary Party, and her health has been a subject of public speculation for more than a decade. By writing about the two diagnoses herself, she has put the full account on record for the first time, including the fear she felt at the time and the reasons she chose to keep the treatment private." },
+      { type: "p", text: "The revelation has also made the memoir the most talked-about book in India on its first day. Belonging: A Journey of Love went on sale on November 10, and the cancer disclosure, reported by The Indian Express, Deccan Herald, The Economic Times and other major outlets within hours of release, has become the defining story of the book's launch." },
+      { type: "faq", items: [
+        { q: "What did Sonia Gandhi reveal in her memoir?", a: "She revealed that she was diagnosed with breast cancer in 2010 and underwent surgery in Milan, and that a growth was found in her pancreas a year later, leading to a second surgery in Rotterdam. She had never spoken publicly about either diagnosis before." },
+        { q: "When was Sonia Gandhi's memoir Belonging released?", a: "Belonging: A Journey of Love, published by HarperCollins India, was released in bookstores across India on Tuesday, November 10, 2026." },
+        { q: "Where did Sonia Gandhi have her cancer surgeries?", a: "Her first surgery, for breast cancer, was in Milan, Italy, under Dr Umberto Veronesi. Her second surgery, for a pancreatic growth, was at the Erasmus University Medical Centre in Rotterdam, under Dr Casper van Eijck." },
+        { q: "Why did Sonia Gandhi keep her cancer treatment secret?", a: "She writes that she had full confidence in her doctors in Delhi but chose treatment abroad because of the media frenzy her illness would have created in India, and the 2011 surgery was reported at the time without disclosing the ailment." }
+      ] },
+      { type: "p", text: "Belonging: A Journey of Love is now on sale across India. With the memoir's biggest revelation now public, the book's first day has already made its mark: a deeply personal account of illness, fear and recovery from one of India's most private public figures." }
+    ],
+  },
+{
+    slug: "tiger-shroff-firing-case-mumbai-police-advisory-bollywood-stars-november-2026",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Tiger_Shroff_in_Bandra.jpg",
+    imageAlt: "Tiger Shroff in Bandra, Mumbai (image: Wikimedia Commons)",
+    title: "Tiger Shroff Firing Case: Mumbai Police Advisory Tells Bollywood Stars to Avoid Crowds After Bishnoi Gang Threats",
+    description:
+      "Mumbai Police issued a security advisory to Bollywood stars after the Tiger Shroff firing case, warning them to avoid crowds amid Bishnoi gang threats.",
+    excerpt:
+      "Mumbai Police has advised prominent Bollywood actors to avoid crowded places and large gatherings after the Tiger Shroff firing case and revelations that the accused surveyed celebrity homes.",
+    date: "2026-11-10",
+    category: "Cinema",
+    sections: [
+      { type: "p", text: "Mumbai Police has issued a security advisory to prominent Bollywood actors, asking them to avoid crowded public places, stay away from large gatherings and limit interactions with fans. The advisory, issued on Tuesday, November 10, 2026, follows the firing incident involving actor Tiger Shroff last month and revelations during the investigation that the accused had allegedly surveyed the homes of several other celebrities before the attack." },
+      { type: "h2", text: "Tiger Shroff Firing Case: What Happened on October 18" },
+      { type: "p", text: "The firing took place on the evening of October 18, 2026, in Mumbai's Juhu area, when three men on motorcycles allegedly opened fire at Tiger Shroff's car as he was leaving a football ground. The actor escaped largely unharmed, while his driver and a passerby sustained injuries. Police have arrested 13 people in connection with the case so far, including the three suspected shooters, who were arrested within days of the attack, and eight others allegedly linked to the conspiracy." },
+      { type: "p", text: "The case took a wider turn on October 21, when sources in the Mumbai Crime Branch said the accused had allegedly conducted reconnaissance of the residences of several Bollywood celebrities before the attack. Those reportedly surveyed included Amitabh Bachchan, Salman Khan, Aamir Khan and Akshay Kumar, a disclosure that turned a single attack into a wider security concern for the film industry." },
+      { type: "h2", text: "Mumbai Police Advisory: What Bollywood Stars Have Been Told" },
+      { type: "p", text: "A senior Mumbai Police official said actors have been advised to stay away from crowded venues, avoid interacting with fans in public spaces and refrain from attending large gatherings as a precautionary measure. The advisory was issued as a precautionary step amid renewed security concerns surrounding Bollywood stars in Mumbai, with police citing the investigation's findings about the reconnaissance of celebrity homes." },
+      { type: "p", text: "The warning is not limited to Shroff. It covers prominent film personalities across the industry, and it comes as several Bollywood actors have reportedly received threats allegedly linked to the Lawrence Bishnoi gang. Police have named Anil Pandit, described as an alleged associate of jailed gangster Lawrence Bishnoi, as a wanted accused in the firing case." },
+      { type: "h2", text: "Bishnoi Gang Threats and the Bollywood Security Scare" },
+      { type: "p", text: "Police are investigating whether the attack was connected to a criminal gang previously linked to assaults on Bollywood personalities. The Bishnoi gang has been associated with threats against film stars in the past, and the reported threats to several actors in recent weeks have added to the concern behind Tuesday's advisory." },
+      { type: "p", text: "The advisory also reflects how the case has grown since October 18. What began as a shooting aimed at one actor's car has become, through the arrests and the reconnaissance revelations, a case about the safety of the industry's biggest names, and the police response now treats it that way." },
+      { type: "list", items: [
+        "October 18, 2026: three men on motorcycles allegedly open fire at Tiger Shroff's car in Juhu, Mumbai; the actor escapes unharmed, his driver and a passerby are injured.",
+        "October 21: Crime Branch sources say the accused allegedly surveyed the homes of Amitabh Bachchan, Salman Khan, Aamir Khan and Akshay Kumar before the attack.",
+        "13 people arrested so far, including the three suspected shooters; Anil Pandit named as a wanted accused.",
+        "November 10, 2026: Mumbai Police issues a security advisory asking Bollywood stars to avoid crowded places and large gatherings.",
+        "Several Bollywood actors have reportedly received threats allegedly linked to the Lawrence Bishnoi gang."
+      ] },
+      { type: "h2", text: "What Happens Next in the Tiger Shroff Firing Case" },
+      { type: "p", text: "The investigation continues, with 13 people arrested and a wanted accused still to be traced. For Bollywood, the immediate effect of Tuesday's advisory is practical: fewer public appearances in crowded places, less mingling with fans at public events, and a more cautious approach to outings until police say the threat has eased. The advisory is precautionary, and police have not said how long it will remain in force." },
+      { type: "faq", items: [
+        { q: "What is the Mumbai Police advisory to Bollywood stars?", a: "Mumbai Police has advised prominent Bollywood actors to avoid crowded public places, stay away from large gatherings and limit interactions with fans in public spaces, as a precautionary measure after the Tiger Shroff firing case." },
+        { q: "When did the Tiger Shroff firing happen?", a: "The firing took place on the evening of October 18, 2026, in Mumbai's Juhu area, when three men on motorcycles allegedly opened fire at Tiger Shroff's car as he was leaving a football ground." },
+        { q: "How many people have been arrested in the Tiger Shroff firing case?", a: "Police have arrested 13 people in connection with the case so far, including the three suspected shooters, who were arrested within days of the attack." },
+        { q: "Which celebrities' homes were allegedly surveyed before the attack?", a: "According to Mumbai Crime Branch sources cited on October 21, the accused allegedly conducted reconnaissance of the residences of Amitabh Bachchan, Salman Khan, Aamir Khan and Akshay Kumar." }
+      ] },
+      { type: "p", text: "The Tiger Shroff firing case has moved from a single shooting in Juhu to a wider question about the safety of Bollywood's biggest stars. With the advisory now in place, the industry's public appearances are set to look very different until Mumbai Police says the threat has passed." }
+    ],
+  },
+{
     slug: "dragon-quest-rpg-cursed-tree-chosen-isle-trailer-closed-beta-2027-november-2026",
     image: "https://cache-www.dragonquest.jp/dqrpg/root/20261105/common/images/global/top/keyvisual.jpg",
     imageAlt: "Official key art for Dragon Quest RPG The Cursed Tree and the Chosen Isle: the blue-cloaked hero and a slime look up at the cursed tree on its floating island (image: Square Enix)",
