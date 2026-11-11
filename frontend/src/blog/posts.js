@@ -33,6 +33,41 @@
 
 export const posts = [
 {
+    slug: "ranveer-singh-deepika-padukone-first-diwali-daughter-devi-photos-november-2026",
+    image: "https://i.ytimg.com/vi/WoWA39wlXCw/maxresdefault.jpg",
+    imageAlt: "Ranveer Singh in a purple outfit and Deepika Padukone in yellow with family at their Diwali celebration in Bengaluru (image: Zoom TV via YouTube)",
+    title: "Ranveer Singh and Deepika Padukone Diwali Photos Go Viral: First Diwali With Daughter Devi in Bengaluru",
+    description:
+      "Ranveer Singh Deepika Padukone Diwali photos from Bengaluru went viral on November 11, marking baby Devi's first Diwali as a family of four.",
+    excerpt:
+      "Ranveer Singh and Deepika Padukone celebrated their first Diwali as a family of four in Bengaluru, and unseen photos from the intimate gathering went viral within hours.",
+    date: "2026-11-11",
+    category: "Cinema",
+    sections: [
+      { type: "p", text: "Ranveer Singh Deepika Padukone Diwali photos have taken over social media on November 11, 2026. Unseen pictures from the couple's intimate Diwali celebration at Deepika's family home in Bengaluru surfaced online and went viral within hours, with fans sharing them across X and Instagram. The photos mark a special milestone: it is the couple's first Diwali since welcoming their second daughter, Devi Padukone Singh, in September — their first festive season as a family of four." },
+      { type: "h2", text: "Ranveer Singh Deepika Padukone Diwali Photos: What the Viral Pictures Show" },
+      { type: "p", text: "The viral photos show Ranveer and Deepika posing with Deepika's parents, Prakash Padukone and Ujjala Padukone, her sister Anisha Padukone, and a few close friends at the family gathering in Bengaluru. Ranveer is seen in a purple kurta set with a waistcoat, while Deepika wears a bright yellow traditional suit with her hair tied in a neat bun — a colour pairing fans immediately picked up on and praised in the replies." },
+      { type: "p", text: "The pictures first surfaced after being shared by Adil Kalyanpur on Instagram Stories, and were then reposted by the fan account DeepVeer FC on X on November 11, from where they spread quickly. Within hours, the photos were covered by the Indian Express, NDTV, Times Now, ABP Live and Zoom TV, all describing them as viral. Other candid frames from the same celebration also circulated, including Deepika posing warmly with a member of the restaurant staff and Ranveer happily clicking a selfie with a fan. ABP Live reported that the family's festive meal took place at the Amiel Gourmet Restaurant in Bengaluru." },
+      { type: "p", text: "One thing the viral photos do not show is the couple's daughters. Neither baby Devi nor elder daughter Dua appears in the Diwali pictures that went viral — the frames are of the couple with Deepika's parents, her sister and friends. That has not dampened the excitement: for fans, the pictures are the first glimpse of the couple celebrating together since Devi's arrival." },
+      { type: "h2", text: "Devi's First Diwali: Why This One Meant So Much" },
+      { type: "p", text: "Devi Padukone Singh was born on September 19, 2026, and the couple revealed her name on the occasion of Dussehra, sharing their first family photograph since her birth. Deepika captioned that photo, \"Of Love & Abundance... Devi Padukone Singh.\" In it, the family wears matching golden traditional outfits, with Ranveer holding elder daughter Dua as she plants a kiss on her baby sister while Deepika cradles Devi. Dua Padukone Singh was born on September 8, 2024." },
+      { type: "p", text: "The couple had announced Deepika's second pregnancy on April 19, 2026, through a joint social media post featuring Dua holding a positive pregnancy test. Deepika continued shooting for her film Raaka during the pregnancy. This Diwali, then, was the family's first festival as four — which is why a simple set of family photos struck such a chord, even without the children in the frame." },
+      { type: "h2", text: "A Bittersweet Diwali for the Family" },
+      { type: "p", text: "The celebrations also carried a sombre note. Ranveer's maternal grandfather, Dr Ram Hingorani, died at the age of 96 on Diwali itself, during Lakshmi Puja. His cousin Saymya Hingorani shared pictures and videos of Dr Ram alongside an emotional note, writing that he was \"96 years young\" and that his was \"a glorious life to be celebrated, not mourned\", adding that he \"peacefully left us on Diwali to go home to my Dadi\" at \"the golden hour of the day, during Lakshmi Puja\". The family remembered his legacy while celebrating his life, and Ranveer is yet to react publicly." },
+      { type: "h2", text: "What Are Ranveer and Deepika Working On Next?" },
+      { type: "p", text: "On the work front, Ranveer was recently seen in Dhurandhar, and he is now working on Pralay, which will mark the directorial debut of Jai Mehta, the son of filmmaker Hansal Mehta. The film will also star Kalyani Priyadarshan in the lead role. Ranveer and Deepika, who married on November 14, 2018, in Lake Como, Italy, have long been one of Bollywood's most followed couples — and on the evidence of November 11, even a quiet family Diwali in Bengaluru is enough to send the internet into a spin." },
+      { type: "h2", text: "Ranveer Deepika Diwali Photos: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "Why are Ranveer Singh and Deepika Padukone's Diwali photos going viral?", a: "Unseen photos from the couple's Diwali celebration at Deepika's family home in Bengaluru surfaced on November 11, 2026, and spread quickly after being reposted by the fan account DeepVeer FC on X. It is their first Diwali since welcoming their second daughter, Devi." },
+        { q: "Where did Ranveer and Deepika celebrate Diwali 2026?", a: "They celebrated at Deepika's family home in Bengaluru with her parents Prakash and Ujjala Padukone, her sister Anisha Padukone and close friends. Their festive meal reportedly took place at the Amiel Gourmet Restaurant." },
+        { q: "Is baby Devi in the viral Diwali photos?", a: "No. Neither Devi nor elder daughter Dua appears in the viral Diwali pictures. Devi was born on September 19, 2026, and her first public photo came when the couple revealed her name on Dussehra." },
+        { q: "What were Ranveer and Deepika wearing for Diwali?", a: "Ranveer wore a purple kurta set with a waistcoat, and Deepika wore a bright yellow traditional suit with her hair in a neat bun." },
+        { q: "What happened in Ranveer's family on Diwali?", a: "His maternal grandfather, Dr Ram Hingorani, died at the age of 96 on Diwali during Lakshmi Puja. The family remembered his legacy while celebrating his life." }
+      ] },
+      { type: "p", text: "A quiet family Diwali, a handful of unseen photos, and a milestone first festival as a family of four — that is all it took for Ranveer and Deepika to own November 11. With Devi's first Diwali now in the books, fans will be watching for the next family photo, and this time, for a glimpse of the little one herself." }
+    ],
+  },
+{
     slug: "gta-6-menu-music-goes-viral-justice-score-preload-november-2026",
     image: "https://i.ytimg.com/vi/VQRLujxTm3c/maxresdefault.jpg",
     imageAlt: "Official GTA 6 key art showing Lucia and Jason in Vice City (image: Rockstar Games via YouTube)",
