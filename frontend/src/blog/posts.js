@@ -33,6 +33,88 @@
 
 export const posts = [
 {
+    slug: "ramayana-box-office-day-6-94-crore-tuesday-800-crore-worldwide-november-2026",
+    image: "https://feeds.abplive.com/onecms/images/uploaded-images/2026/11/09/a431af879fca2e4e1f629476b3824d5417942091276351090_original.png?impolicy=abp_cdn&imwidth=1200&height=675",
+    imageAlt: "Ramayana: Part 1 key art showing Ranbir Kapoor as Lord Rama with a bow, from the film's official artwork. Image: ABP Live / IMDb.",
+    title: "Ramayana Day 6 Box Office: ₹94.10 Crore Tuesday Takes Film Past ₹800 Crore Worldwide",
+    description:
+      "Ramayana Day 6 box office: ₹94.10 crore on Tuesday, ₹440.45 crore India net and ₹823.50 crore worldwide as the epic crosses ₹800 crore.",
+    excerpt:
+      "Ramayana added ₹94.10 crore net on its sixth day, taking its India net to ₹440.45 crore and its worldwide gross past ₹800 crore to ₹823.50 crore.",
+    date: "2026-11-11",
+    category: "Cinema",
+    sections: [
+      { type: "p", text: "The Ramayana Day 6 box office numbers are in, and Nitesh Tiwari's epic has crossed ₹800 crore worldwide in just six days. Ramayana: Part 1 added ₹94.10 crore net in India on Tuesday, November 10, 2026, according to trade tracker Sacnilk, taking its six-day India net to ₹440.45 crore. With an India gross of ₹526.50 crore and ₹297 crore from overseas, the worldwide gross now stands at ₹823.50 crore. The film also crossed ₹400 crore net in India and ₹500 crore gross in India on the same day, making Tuesday a triple-milestone day for the Ranbir Kapoor, Yash and Sai Pallavi starrer." },
+      { type: "h2", text: "Ramayana Day 6 Box Office: The Final Tuesday Numbers" },
+      { type: "p", text: "Tuesday's ₹94.10 crore came from 24,344 shows at 55.3% occupancy, a 12.5% drop from Monday's extraordinary ₹107.50 crore — the biggest single day of the run so far. The weekday hold is remarkable for a film in its first week: most big releases fall sharply after the opening weekend, but Ramayana's Tuesday is still higher than its opening day. The Times of India noted the Tuesday numbers were helped by discounted ticket rates on weekdays, a pattern that usually lifts first-week weekday collections. Hindi remained the biggest contributor with ₹76 crore on Day 6, followed by Kannada at ₹7.75 crore, Telugu at ₹4 crore, Tamil at ₹3.60 crore and Malayalam at ₹2.75 crore." },
+      { type: "list", items: [
+        "Day 6 (Tuesday, November 10): ₹94.10 crore net in India, down 12.5% from Day 5.",
+        "India net after 6 days: ₹440.45 crore; India gross: ₹526.50 crore.",
+        "Overseas gross after 6 days: ₹297 crore (36.1% of the worldwide total).",
+        "Worldwide gross after 6 days: ₹823.50 crore.",
+        "Total footfalls in India: 1,69,94,377 across 1,42,237 shows.",
+        "Trade estimates vary slightly: Box Office India 24 puts Day 6 at ₹94.50 crore and the India net at ₹435.50 crore."
+      ] },
+      { type: "h2", text: "Ramayana Day-Wise Box Office: All Six Days" },
+      { type: "p", text: "The day-wise run shows a film that opened big, dipped on its second day, and then surged on the strength of word of mouth. Ramayana opened on Thursday, November 5, with ₹64.85 crore net, then fell 25.9% to ₹48.05 crore on Friday. Saturday bounced back 45.3% to ₹69.80 crore, Sunday added ₹56.15 crore, and then Monday — the first weekday — delivered the run's biggest day at ₹107.50 crore, up 91.5% with 64.9% occupancy across 23,911 shows. Tuesday's ₹94.10 crore means the film has now had two consecutive weekdays above ₹90 crore, a rare feat for any Indian release." },
+      { type: "h2", text: "Ramayana Crosses ₹800 Crore Worldwide and ₹500 Crore India Gross" },
+      { type: "p", text: "The worldwide figure is the headline: ₹823.50 crore in six days makes Ramayana one of the fastest Indian films ever to the ₹800 crore mark. The overseas contribution of ₹297 crore is unusually large — more than a third of the total — and the film has already set records abroad. In North America, Ramayana recorded the highest first-Monday gross for an Indian film at $1.37 million, beating the previous benchmark set by Dhurandhar 2 by about 20.2%, according to trade reports cited by Sacnilk. In India, Hindi leads the language split with ₹336 crore net over six days, followed by Kannada at ₹41.20 crore, Telugu at ₹33 crore, Tamil at ₹17.35 crore and Malayalam at ₹12.90 crore." },
+      { type: "h2", text: "What Next for Ramayana at the Box Office" },
+      { type: "p", text: "The first week is not over yet: for a Thursday release, Week 1 runs through Days 1 to 8, so Wednesday and Thursday will complete the opening week before the second weekend begins. The film still has a long way to go against its reported budget of ₹1,300–1,500 crore, but at its current pace it is the biggest Indian release of 2026 by a wide margin. The second part of the two-part epic is already scheduled for Diwali 2028, and the first part's run will decide how big that sequel can open. For now, the Tuesday numbers confirm the film is not just an opening-weekend story: audiences are still turning up in huge numbers on weekdays, and the ₹800 crore milestone arrived six days in." },
+      { type: "h2", text: "Ramayana Day 6 Box Office: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "How much did Ramayana earn on Day 6?", a: "₹94.10 crore net in India on Tuesday, November 10, 2026, according to Sacnilk, a 12.5% drop from Day 5's ₹107.50 crore. Box Office India 24 reports a slightly higher ₹94.50 crore for the day." },
+        { q: "What is Ramayana's total box office collection after 6 days?", a: "₹440.45 crore net in India (₹526.50 crore gross), ₹297 crore overseas, and ₹823.50 crore worldwide gross, per Sacnilk." },
+        { q: "Has Ramayana crossed ₹800 crore worldwide?", a: "Yes. The film crossed ₹800 crore worldwide gross on Day 6, reaching ₹823.50 crore, and also crossed ₹500 crore India gross and ₹400 crore India net on the same day." },
+        { q: "Which language version of Ramayana is earning the most?", a: "Hindi leads with ₹336 crore net over six days, followed by Kannada (₹41.20 crore), Telugu (₹33 crore), Tamil (₹17.35 crore) and Malayalam (₹12.90 crore)." },
+        { q: "When does Ramayana Part 2 release?", a: "The second installment is scheduled for Diwali 2028, as confirmed by the makers." }
+      ] },
+      { type: "p", text: "Six days in, Ramayana has crossed ₹800 crore worldwide, ₹500 crore gross in India and ₹400 crore net at home — and Tuesday's ₹94.10 crore shows the weekday audience is still there. With two days left in its first week, the film's next milestones are already in sight." }
+    ],
+  },
+{
+    slug: "devolver-all-army-attack-first-aaa-game-auto-battler-2027-november-2026",
+    image: "https://i.ytimg.com/vi/fcuqdNUmZ3c/maxresdefault.jpg",
+    imageAlt: "All Army Attack key art from the official announcement trailer, showing the animal and plant armies of Devolver Digital's new auto-battler.",
+    title: "Devolver's First AAA Game Is All Army Attack: A Roguelike Auto-Battler Coming to Steam in 2027",
+    description:
+      "All Army Attack is Devolver Digital's first AAA game — a roguelike auto-battler from BlackLight Games launching on Steam in 2027, with a demo November 16–23.",
+    excerpt:
+      "Devolver Digital's first AAA game is All Army Attack, a chaotic roguelike auto-battler where animals and plants unite against a cosmic threat. It launches on Steam in 2027.",
+    date: "2026-11-11",
+    category: "Gaming",
+    sections: [
+      { type: "p", text: "All Army Attack is Devolver Digital's first AAA game — and the joke is the title itself. After teasing fans on November 9, 2026, with the promise of its first AAA title, the indie publisher revealed on November 10 that AAA stands for All Army Attack, a chaotic large-scale roguelike auto-battler from developer BlackLight Games. The game, which unites animals and plants against a formidable cosmic threat, launches on PC via Steam in 2027, and a playable demo arrives November 16 to 23 as part of Steam Auto-Battler Fest. The Steam page is already live." },
+      { type: "h2", text: "All Army Attack: The AAA Joke Devolver Could Not Resist" },
+      { type: "p", text: "Devolver Digital has built its whole brand on this kind of mischief. On November 9, the publisher posted on X that it would announce its first AAA game the next day, and the games press spent a day guessing what a big-budget Devolver title could possibly look like. The answer, delivered on November 10, was a game literally called All Army Attack — three words, all starting with A. It is the same instinct behind Devolver's long-running Grand Theft Auto VI dare: the publisher promised to release a game on the exact same day as GTA 6, and followed its launch to November 19, 2026, with Volvy's Adventure: Reslimed. Nobody who follows Devolver expected a straight announcement, and the reveal landed exactly as intended — as a punchline with a real game behind it." },
+      { type: "p", text: "The reveal trended across gaming social media within hours. That is no accident: Devolver timed the announcement for the week GTA 6 pre-loading began, when the whole industry is watching November 19. The publisher behind Cult of the Lamb, BALL x PIT and Inscryption knows how to ride a news cycle — and All Army Attack gives it a demo next week and a full release in 2027 to talk about." },
+      { type: "h2", text: "All Army Attack Gameplay: Cards, Mutations and Armies of Hundreds" },
+      { type: "p", text: "Under the joke, All Army Attack is a serious pitch for the auto-battler crowd. You play the Commander, recruiting unique troops and artillery from a vast pool of cards, defeating enemies, and spending the resources you earn to develop powerful new units and draft in massive reinforcements. The official overview promises armies that scale into the hundreds of units in a fast-paced loop, with awesome bosses waiting at the end of each run. Battles are automatic once your army is placed, so the strategy lives in the drafting: which cards to take, which troops to sacrifice, and when to gamble everything on one more fight." },
+      { type: "list", items: [
+        "Fight or Flight: sacrifice or preserve troops strategically to maximise income from every encounter.",
+        "Special Ops: different characters and maps each have their own unique card pools, so every run mixes and matches in new ways.",
+        "Home Base: spend earnings on meta-progression between runs — build up your town, strengthen bonuses and unlock new content.",
+        "Customisation: freely modify cards and units, or craft and mutate every individual soldier for wildly different builds.",
+        "Demo: playable November 16 to 23, 2026, during Steam Auto-Battler Fest."
+      ] },
+      { type: "p", text: "Customisation is where the game tries to stand out. You can modify cards and units, craft and mutate every individual soldier, and explore combinations between characters, factions, cards and battlefield setups to build devastating armies. Between battles, the Home Base lets you develop things at your own pace — build up your town, strengthen bonuses, unlock new content, or even put hats on your characters. It is the progression loop that keeps auto-battler players coming back for one more run." },
+      { type: "h2", text: "All Army Attack Release Date, Demo and Steam Details" },
+      { type: "p", text: "All Army Attack launches for PC via Steam in 2027, with no more specific date or price announced yet. The Steam listing is live now and shows support for 10 languages, including English, Japanese, Korean and both Simplified and Traditional Chinese. The first hands-on chance comes soon: an exclusive demo runs from November 16 to 23, 2026, as part of Steam Auto-Battler Fest. Neither Devolver nor BlackLight Games has said whether progress from the demo carries into the full game, so players trying it next week should treat it as a free preview rather than a head start." },
+      { type: "p", text: "No console versions have been announced, so for now this is a PC-only reveal. That fits Devolver's history — Steam is where the publisher generates the overwhelming majority of its revenue — and it also fits the timing, with the demo arriving in the same month as GTA 6's console-only launch. While Rockstar's game is not on PC at launch, Steam traffic around November 19 will be enormous, and Devolver's demo lands right in the middle of that attention." },
+      { type: "h2", text: "Why the All Army Attack Reveal Worked" },
+      { type: "p", text: "The reveal worked because the joke and the game reinforce each other. The AAA tease was funny enough to travel on its own, but it only matters if the game underneath is worth playing — and a large-scale roguelike auto-battler with card drafting, unit mutation and home-base progression is a genuine pitch to one of Steam's most active genres. If All Army Attack's demo lands well during Auto-Battler Fest, the punchline will be forgotten and the game judged on its own armies." },
+      { type: "h2", text: "All Army Attack: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "What is All Army Attack?", a: "All Army Attack is a chaotic large-scale roguelike auto-battler from BlackLight Games, published by Devolver Digital. You command armies of animals and plants against a cosmic threat." },
+        { q: "Why is it called Devolver's first AAA game?", a: "Because AAA is the game's initials: All Army Attack. Devolver teased a first AAA title on November 9, 2026, then revealed on November 10 that the title was the joke." },
+        { q: "When does All Army Attack release?", a: "It launches on PC via Steam in 2027. No exact date or price has been announced yet." },
+        { q: "When can I play the All Army Attack demo?", a: "The demo runs from November 16 to 23, 2026, as part of Steam Auto-Battler Fest." },
+        { q: "Is All Army Attack coming to consoles?", a: "No console versions have been announced. For now it is PC via Steam only." }
+      ] },
+      { type: "p", text: "Devolver's first AAA game turned out to be a three-word joke with a real auto-battler attached — and the demo on November 16 will show whether All Army Attack can outlive its own punchline." }
+    ],
+  },
+{
     slug: "gta-6-30fps-confirmed-ps5-pro-no-performance-mode-november-2026",
     image: "https://www.rockstargames.com/VI/_next/static/media/meta.0t8ty~nlmxq2s.jpg",
     imageAlt: "Official GTA 6 key art showing Lucia and Jason in Vice City (image: Rockstar Games)",
