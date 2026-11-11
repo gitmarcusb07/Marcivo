@@ -33,6 +33,50 @@
 
 export const posts = [
 {
+    slug: "sony-cancels-fairgames-haven-studios-live-service-shooter-november-2026",
+    image: "https://images.pushsquare.com/80db0b6e4e382/1280x720.jpg",
+    imageAlt: "Official Fairgames key art showing Haven Studios' masked heist crew mid-robbery (image: Haven Studios / Sony Interactive Entertainment).",
+    title: "Sony Cancels Fairgames: PlayStation Shuts Down Haven's Live-Service Heist Shooter",
+    description:
+      "Sony cancels Fairgames, Haven Studios' live-service heist shooter, after a playtest fell short — no layoffs, as Haven shifts to support work.",
+    excerpt:
+      "Sony has cancelled Fairgames, the live-service heist shooter from Haven Studios, after a recent playtest failed to meet its goals. Haven stays open with no layoffs, moving to support work for other PlayStation studios.",
+    date: "2026-11-11",
+    category: "Gaming",
+    sections: [
+      { type: "p", text: "Sony cancels Fairgames. PlayStation has pulled the plug on Haven Studios' live-service heist shooter, three and a half years after it was announced, Bloomberg reported on November 10, 2026, with a Sony spokesperson confirming the decision. The game will never release. Nobody at Haven Studios is losing their job, though — the Montreal team will stay open and shift to supporting other PlayStation Studios projects." },
+      { type: "h2", text: "Sony Cancels Fairgames After a Playtest That Fell Short" },
+      { type: "p", text: "The decision came down to a recent playtest. According to an internal email reviewed by Bloomberg, PlayStation executives Sean Decker and John Doyle told staff the test failed to hit Sony's targets. \"While the test demonstrated strong operational excellence, live ops readiness and community engagement, player feedback and retention results were mixed and fell short of the goals we had set,\" the email said. Combined with \"challenging market conditions in the PVP shooter genre,\" Sony decided to cease development entirely." },
+      { type: "p", text: "It was the first time most players had seen Fairgames in years. In September 2026, a trailer for a title called Project Espresso gave the public its first proper look at the game since its 2023 reveal, and that video promoted the playtest, which ran under NDA. Sony had reportedly reworked Fairgames multiple times, and the studio had even planned to re-reveal it under a new name — which will now never happen." },
+      { type: "h2", text: "What Playtesters Said About Fairgames" },
+      { type: "p", text: "With the NDA effectively dead, playtesters have started sharing their experiences online. On the ResetEra forum, user RedBullCola, who said they were in a late-stage testing group, wrote: \"It felt like a PowerPoint deck of executive ideas.\" On Reddit, user Darkdhalias, who said they took part in the playtest, was blunter: cancelling the game \"was 100% the right move\" and it was \"one of the most unpleasant alpha/beta experiences I've ever had.\"" },
+      { type: "p", text: "Not every tester was so damning. Another ResetEra user, srrai, said the game was fun but \"wasn't for mainstream people\" and doubted enough players would buy it to keep it going, adding: \"Would I have bought it? Maybe at $40.\" These are individual forum accounts, not an official verdict — but they line up with Sony's own email: mixed feedback and weak retention." },
+      { type: "h2", text: "No Layoffs: What Happens to Haven Studios Now" },
+      { type: "p", text: "The good news is for the people who made the game. A Sony spokesperson told Bloomberg that Haven Studios will remain open, that there will be no job cuts, and that the team will now work in a support capacity across PlayStation Studios — a notably different ending from most of Sony's recent live-service cancellations, which have usually come with studio closures. Haven was founded in 2021 by Jade Raymond, the former Assassin's Creed producer, and Sony acquired the studio in 2022, before it had shipped a game. Fairgames would have been Haven's debut title; instead, the studio's first chapter ends as a support team helping other PlayStation developers." },
+      { type: "h2", text: "Fairgames Is Sony's Latest Live-Service Misfire" },
+      { type: "p", text: "Fairgames is the latest casualty of Sony's big live-service bet. Back in 2022, the company announced a huge push into games-as-a-service, aiming to release at least 10 live-service titles by 2026. A few have worked — Helldivers 2 became a genuine hit and Gran Turismo 7 has held a steady audience — but the rest of the slate has largely collapsed. Concord is the most notorious example: it actually launched, then Sony pulled it from sale and shut it down weeks later. A live-service God of War game and a multiplayer The Last of Us game were cancelled before they reached players, and PlayStation studios working on live-service projects — London Studios, Firewalk Studios and Bluepoint Games — were all shut down." },
+      { type: "list", items: [
+        "Concord — launched in August 2024, shut down weeks later after disastrous sales.",
+        "The Last of Us multiplayer game — cancelled in 2023 before release.",
+        "Live-service God of War game — cancelled before release.",
+        "London Studios, Firewalk Studios and Bluepoint Games — all closed after live-service projects ended.",
+        "Destiny 2 — most of the Bungie team laid off in June 2026 after the game fell short of expectations."
+      ] },
+      { type: "p", text: "The pattern may not be finished either. Horizon Hunters Gathering, Guerrilla Games' multiplayer Horizon project, was reportedly delayed so it can be rebooted after negative player feedback — a situation uncomfortably similar to the one that just killed Fairgames. Reports say Guerrilla has until December 2026 to retool it, with word on its status expected soon." },
+      { type: "h2", text: "What Was Fairgames Supposed to Be?" },
+      { type: "p", text: "Fairgames — stylised as Fairgame$ — was announced in May 2023 as a competitive PvP heist shooter for PS5 and PC. The pitch was a modern Robin Hood fantasy: crews of thieves breaking into exotic, heavily guarded locations to steal from the ultra-rich, then fighting rival crews to escape with the loot. It was meant to be the flagship of Sony's live-service push from a brand-new studio. Three and a half years, several reworks and one failed playtest later, it joins the long list of PlayStation live-service games that never made it to launch." },
+      { type: "h2", text: "Sony Cancels Fairgames: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "Why did Sony cancel Fairgames?", a: "A recent playtest returned mixed feedback and weak retention that fell short of Sony's goals. Executives Sean Decker and John Doyle confirmed the call in an internal email." },
+        { q: "Will anyone at Haven Studios lose their job?", a: "No. Sony confirmed there will be no layoffs. Haven Studios stays open and will shift to supporting other PlayStation Studios projects." },
+        { q: "When was Fairgames announced?", a: "It was announced in May 2023 for PS5 and PC, reworked several times, and shown again in September 2026 as Project Espresso." },
+        { q: "What did playtesters say about Fairgames?", a: "Testers on ResetEra and Reddit described mixed to negative experiences — one called it a \"PowerPoint deck of executive ideas\"; another said cancelling it was \"100% the right move.\" A few called it fun but not mainstream enough." },
+        { q: "What other Sony live-service games have been cancelled?", a: "Concord shut down weeks after launch in 2024, a live-service God of War and a multiplayer Last of Us were cancelled before release, and London, Firewalk and Bluepoint studios were closed. Helldivers 2 and Gran Turismo 7 remain the successes." }
+      ] },
+      { type: "p", text: "Sony cancels Fairgames, and with it goes another pillar of the company's live-service gamble — but this time the studio survives. Haven's people keep their jobs, and PlayStation avoids another Concord-style launch disaster." }
+    ],
+  },
+{
     slug: "ramayana-box-office-day-6-94-crore-tuesday-800-crore-worldwide-november-2026",
     image: "https://feeds.abplive.com/onecms/images/uploaded-images/2026/11/09/a431af879fca2e4e1f629476b3824d5417942091276351090_original.png?impolicy=abp_cdn&imwidth=1200&height=675",
     imageAlt: "Ramayana: Part 1 key art showing Ranbir Kapoor as Lord Rama with a bow, from the film's official artwork. Image: ABP Live / IMDb.",
