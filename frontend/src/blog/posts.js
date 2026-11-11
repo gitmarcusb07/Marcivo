@@ -33,6 +33,40 @@
 
 export const posts = [
 {
+    slug: "gta-6-menu-music-goes-viral-justice-score-preload-november-2026",
+    image: "https://i.ytimg.com/vi/VQRLujxTm3c/maxresdefault.jpg",
+    imageAlt: "Official GTA 6 key art showing Lucia and Jason in Vice City (image: Rockstar Games via YouTube)",
+    title: "GTA 6 Menu Music Goes Viral: 5.8 Million Views for a 57-Second Pre-Load Clip",
+    description:
+      "GTA 6 menu music has gone viral: a 57-second pre-load clip passed 5.8M views on X. Here is what it sounds like and how Justice's score fits in.",
+    excerpt:
+      "The GTA 6 menu music has gone viral before the game is even playable, with a 57-second pre-load clip passing 5.8 million views on X in under a day.",
+    date: "2026-11-11",
+    category: "Gaming",
+    sections: [
+      { type: "p", text: "The GTA 6 menu music has gone viral before a single player has stepped into Leonida. Pre-loads for Grand Theft Auto VI began on November 10, 2026, and the game's main menu theme quickly leaked out of consoles and across social media. One 57-second snippet posted on X has been viewed more than 1.3 million times, a second clip has passed 5.8 million views, and an hour-long loop of the track has already racked up more than 50,000 views in less than 24 hours. For a piece of music most players will hear for a few seconds before pressing start, that is an extraordinary reaction — and it says everything about how hungry fans are for anything GTA 6 nine days before launch." },
+      { type: "h2", text: "GTA 6 Menu Music: How a 57-Second Clip Went Viral" },
+      { type: "p", text: "The chain reaction started with pre-loading itself. Rockstar Games opened GTA 6 pre-loads on November 10, nine days ahead of the November 19 launch, so players could download the up-to-212GB game in advance. Pre-loading does not let anyone play early, but it does expose the game's files — including its audio. The first listen to the main menu theme on PS5 was posted on X by the fan account GTA 6 Updates on November 9, 2026, and it spread from there." },
+      { type: "p", text: "NME reported on November 11 that one tweet carrying a 57-second snippet of the dreamy electro music had passed 1.3 million views on X, another clip had reached 5.8 million views, and an hour-long loop passed 50,000 views in under a day. That is not a marketing push — Rockstar has not officially released the menu theme — it is fans passing around a piece of audio they were never meant to hear this early, and millions of other fans stopping to listen." },
+      { type: "h2", text: "What Does the GTA 6 Menu Music Sound Like?" },
+      { type: "p", text: "The track is a dreamy, electro instrumental — slow, atmospheric and deliberately understated, built to sit behind a menu screen rather than blast out of a trailer. That restraint is part of why it works: GTA menus have always set the mood before the game begins, and this one leans into a hazy, late-night Vice City feeling rather than the bombast of the launch trailer. The hour-long loop versions already circulating suggest plenty of players plan to have it on in the background long before November 19. Whether the menu theme itself is a Justice composition has not been confirmed, but it sits comfortably alongside the French duo's work on the game." },
+      { type: "h2", text: "Justice, the GTA 6 Soundtrack and the 34-Track Album" },
+      { type: "p", text: "The menu music is only one piece of a much bigger GTA 6 music story. Rockstar has confirmed that dance titans Justice composed the game's original dynamic score — music that responds to what is happening on screen rather than looping one fixed track. Their original score album — 30 compositions running for more than three hours — arrives on streaming on December 11, 2026. Two tracks have been shared so far: 'Flower in a Hurricane', featuring Tame Impala, SZA and King Gizzard & The Lizard Wizard, and 'Pusher', featuring Gesaffelstein." },
+      { type: "p", text: "Alongside the score, Grand Theft Auto VI: The Album — a separate soundtrack made with Atlantic Records — features 34 brand-new tracks from some of the biggest artists in the world and drops on launch day, November 19. Ten tracks have been released so far, including Cardi B's 'Don't Chart', Travis Scott's 'RHYNO' and Tove Lo's 'Blood In Your Eyes'. The in-game radio stations, meanwhile, will be hosted by a range of artists including Lana Del Rey, Bad Bunny, Slayer's Kerry King and Tom Araya, and Robyn. Rockstar has promised the biggest and widest-ranging music selection in the series." },
+      { type: "h2", text: "GTA 6 Preload, Launch Date and the Miami Festival" },
+      { type: "p", text: "Grand Theft Auto VI launches on November 19, 2026, at midnight local time on PlayStation 5 and Xbox Series X and S, with pre-loads already live. Rockstar has confirmed the game targets 30 frames per second on every console, including PS5 Pro, and will be playable through Xbox Cloud Gaming from launch day, even on Xbox One. To celebrate, Rockstar is throwing a real-world GTA VI festival in Miami on November 21, with Justice, Cardi B, Travis Scott, Don Toliver, Metro Boomin, Kodak Black and SoFaygo performing live. The menu music going viral is the latest sign that, eight days out, GTA 6 is not just a game launch — it is the biggest entertainment event of the year, and even its loading screen is trending." },
+      { type: "h2", text: "GTA 6 Menu Music: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "Why has the GTA 6 menu music gone viral?", a: "Pre-loads for GTA 6 began on November 10, 2026, and players captured the main menu theme from the downloaded game. A 57-second clip passed 1.3 million views on X and another passed 5.8 million, with an hour-long loop passing 50,000 views in under a day." },
+        { q: "Who composed the GTA 6 menu music?", a: "Rockstar has not confirmed who composed the menu theme itself. Justice composed the game's original dynamic score, and their score album arrives on streaming on December 11, 2026." },
+        { q: "When does GTA 6 launch?", a: "It launches on November 19, 2026, at midnight local time on PlayStation 5 and Xbox Series X and S. Pre-loads are live now and need up to 212GB of free space." },
+        { q: "What is on the GTA 6 soundtrack album?", a: "Grand Theft Auto VI: The Album features 34 brand-new tracks and drops on November 19, 2026. Ten have been released so far, including Cardi B's 'Don't Chart', Travis Scott's 'RHYNO' and Tove Lo's 'Blood In Your Eyes'." },
+        { q: "Can I listen to the GTA 6 menu music now?", a: "Clips and hour-long loops are circulating on X and YouTube, posted by fans from the pre-load. Rockstar has not officially released the track." }
+      ] },
+      { type: "p", text: "A menu theme going viral before launch day is the most GTA 6 story imaginable — and with the soundtrack album landing on November 19, the music of Leonida is only going to get louder." }
+    ],
+  },
+{
     slug: "marvel-rivals-season-11-doomsday-nightcrawler-dracula-november-13-2026",
     image: "https://i.ytimg.com/vi/uqPt0kS4b54/maxresdefault.jpg",
     imageAlt: "Nightcrawler crouches in front of the Marvel Rivals logo in the official Season 11: Doomsday trailer key art. Image: NetEase Games / Marvel Rivals via YouTube.",
