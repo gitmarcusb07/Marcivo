@@ -63,8 +63,8 @@ export const posts = [
   },
 {
     slug: "sony-cancels-fairgames-haven-studios-live-service-shooter-november-2026",
-    image: "https://images.pushsquare.com/80db0b6e4e382/1280x720.jpg",
-    imageAlt: "Official Fairgames key art showing Haven Studios' masked heist crew mid-robbery (image: Haven Studios / Sony Interactive Entertainment).",
+    image: "https://i.ytimg.com/vi/l1Jp4K02L1I/maxresdefault.jpg",
+    imageAlt: "Fairgames CGI reveal trailer frame showing the heist crew with pink smoke (image: PlayStation / Haven Studios).",
     title: "Sony Cancels Fairgames: PlayStation Shuts Down Haven's Live-Service Heist Shooter",
     description:
       "Sony cancels Fairgames, Haven Studios' live-service heist shooter, after a playtest fell short — no layoffs, as Haven shifts to support work.",
