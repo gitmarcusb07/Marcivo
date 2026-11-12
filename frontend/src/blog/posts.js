@@ -33,6 +33,54 @@
 
 export const posts = [
 {
+    slug: "ps5-100-million-units-shipped-sony-milestone-gta-6-november-2026",
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/77/Black_and_white_Playstation_5_base_edition_with_controller.png",
+    imageAlt: "The PlayStation 5 console with a DualSense controller (photo: Wikimedia Commons)",
+    title: "PS5 100 Million Units Shipped: Sony Confirms the Milestone as the Console Turns Six, Days Before GTA 6",
+    description:
+      "PS5 100 million units shipped: Sony confirms the PlayStation 5 passed 100 million consoles shipped as of November 10, 2026, just before GTA 6 launches.",
+    excerpt:
+      "Sony has confirmed the PlayStation 5 has shipped more than 100 million units worldwide, reaching the milestone on the console's sixth anniversary and one week before GTA 6 launches.",
+    date: "2026-11-12",
+    category: "Gaming",
+    sections: [
+      { type: "p", text: "The PS5 100 million milestone is official. Sony has confirmed that the PlayStation 5 has shipped more than 100 million units worldwide as of November 10, 2026, quietly updating its Business Data and Sales page with the new figure. The console reaches the mark almost exactly six years after it launched on November 12, 2020, and just one week before Grand Theft Auto 6 arrives on November 19, a launch expected to push PlayStation 5 sales even higher." },
+      { type: "h2", text: "PS5 100 Million: What Sony Actually Confirmed" },
+      { type: "p", text: "The milestone arrived without a press release or an executive announcement. Sony simply revised the cumulative hardware line on its official Business Data and Sales page to read “more than 100 million” for the PS5, dated November 10, 2026. Polygon, TechSpot and Notebookcheck spotted the update on November 11." },
+      { type: "p", text: "One detail matters for how the number should be read. Sony counts “sell-in”, meaning consoles shipped to retailers and distributors, rather than consoles bought by players, and its own tables note the figures include returned and refurbished products. The milestone is still a real measure of demand: retailers do not keep ordering millions of consoles nobody is buying. But it is a shipment figure, not a count of PlayStation 5 consoles sitting in living rooms." },
+      { type: "p", text: "The pace of the final stretch is striking. Sony's last quarterly report put cumulative PS5 shipments at 97.9 million units as of September 30, 2026, which means at least 2.1 million more consoles shipped in the roughly six weeks since. Sony chief financial officer Lin Tao said on November 5 that unit sales are declining gradually, as expected at this stage of a console's life cycle. Even so, the final push to 100 million came months earlier than some predictions, which had the milestone becoming clear only with the next quarterly earnings in February 2027." },
+      { type: "h2", text: "The Fourth PlayStation to Pass 100 Million" },
+      { type: "p", text: "The PS5 is the fourth PlayStation console to pass 100 million units, after the original PlayStation, the PlayStation 2 and the PlayStation 4. It is also the eighth games console of any kind to reach the mark. The PlayStation 2 remains the best-selling console of all time at more than 160 million units, and the PS5 still has a long way to go to catch it, but it is now closing in on the consoles immediately ahead of it." },
+      { type: "list", items: [
+        "PlayStation 2 (2000): more than 160 million units",
+        "Nintendo Switch (2017): 157.2 million units",
+        "Nintendo DS (2004): 154.02 million units",
+        "Game Boy and Game Boy Color (1989/1998): 118.69 million units",
+        "PlayStation 4 (2013): 117.2 million units",
+        "PlayStation (1994): 102.49 million units",
+        "Wii (2006): 101.63 million units",
+        "PlayStation 5 (2020): more than 100 million units"
+      ] },
+      { type: "p", text: "The gap to the PS4 is now about 17 million units, and the original PlayStation sits just 2.49 million ahead at 102.49 million. The Wii, at 101.63 million, is closer still. Passing both would lift the PS5 to sixth on the all-time list." },
+      { type: "h2", text: "Six Years On: From Shortages to a GTA 6 Boost" },
+      { type: "p", text: "The milestone lands on the PlayStation 5's sixth anniversary. The console launched on November 12, 2020, in the middle of the Covid pandemic, when buying one at retail price was close to impossible and scalpers dominated the market. It took until January 2023, more than two years after launch, before Sony could say the shortages were effectively over." },
+      { type: "p", text: "The timing of the 100 million mark is no accident. Grand Theft Auto 6 launches on November 19, 2026, for PS5 and Xbox Series X|S, with no PC version at launch, and the game is already driving console sales: TechSpot reports many people are buying a PS5 for this one game alone. Digital pre-loading opened on November 10, the same day Sony's sales page crossed the milestone, and a new Midnight Black colour for the PS5 Digital Edition also arrives on November 19, the same day as GTA 6." },
+      { type: "h2", text: "The Price of the Milestone: A PS5 Costs More Than at Launch" },
+      { type: "p", text: "Reaching 100 million has come at a higher price than Sony originally charged. The console has had substantial price rises in 2026 as the memory crisis pushed up component costs, with the machine becoming between $100 and $150 more expensive and the PS5 Pro reaching $899, according to TechSpot. In the United States the disc-drive model now costs $649.99, about 30% above its $499.99 launch price, TechTimes reports." },
+      { type: "h2", text: "What Comes Next for PlayStation" },
+      { type: "p", text: "Sony has not said when the PlayStation 5's successor will arrive. A previous report said Sony itself has not decided when the PlayStation 6 will launch, and while some analysts predicted a 2027 release, the memory crisis could push it further back, TechSpot reports. For now, the PS5 still has room to grow: cumulative PS5 and PS4 software sales have passed 1.795 billion units, PlayStation has 127 million monthly active users, and Marvel's Wolverine has sold 2.4 million copies as of November 4." },
+      { type: "h2", text: "PS5 100 Million: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "How many PS5 consoles has Sony shipped?", a: "More than 100 million units as of November 10, 2026, according to Sony's official Business Data and Sales page." },
+        { q: "Is the 100 million figure consoles sold to players?", a: "No. Sony counts sell-in, meaning consoles shipped to retailers and distributors, including returned and refurbished units." },
+        { q: "Which PlayStation consoles have passed 100 million units?", a: "Four: the PlayStation 2 (more than 160 million), PlayStation 4 (117.2 million), the original PlayStation (102.49 million) and now the PlayStation 5." },
+        { q: "When did the PS5 launch?", a: "November 12, 2020, so the milestone arrived almost exactly six years after launch, on the console's sixth anniversary." },
+        { q: "Will GTA 6 push PS5 sales higher?", a: "Almost certainly. GTA 6 launches November 19, 2026, on PS5 and Xbox Series X|S with no PC version at launch, and it is already driving PS5 purchases." }
+      ] },
+      { type: "p", text: "Six years after a pandemic launch, the PlayStation 5 has joined the 100 million club. The next test is already dated: November 19, when GTA 6 lands and the race to catch the PS4 begins in earnest." }
+    ],
+  },
+{
     slug: "anirudh-ravichander-kavya-maran-wedding-greece-rajinikanth-dance-november-2026",
     image: "https://cf-images.assettype.com/outlookindia/2026-11-12/ffohef0m/anirudh-wedding.jpg?w=800&auto=format%2Ccompress&fit=max&format=webp&quality=75&dpr=1.0",
     imageAlt: "Anirudh Ravichander and Kavya Maran at their wedding in Greece, posing with family. Photo: Anirudh Ravichander via Instagram, via Outlook India.",
