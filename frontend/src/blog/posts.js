@@ -33,6 +33,49 @@
 
 export const posts = [
 {
+    slug: "visionquest-finale-scarlet-witch-returns-doctor-doom-avengers-doomsday-november-2026",
+    image: "https://image.tmdb.org/t/p/original/WGyAyBPncfuu8MZhLY9RtfZPM0.jpg",
+    imageAlt: "The official VisionQuest poster, with Vision reading a newspaper as Ultron looms behind him (key art: Marvel Studios / TMDB)",
+    title: "Scarlet Witch Returns: VisionQuest Finale Brings Wanda Back as Doctor Doom Claims Her Power for Avengers: Doomsday",
+    description:
+      "Scarlet Witch returns in the VisionQuest finale: Doctor Doom revives Wanda Maximoff and claims her power ahead of Avengers: Doomsday.",
+    excerpt:
+      "Elizabeth Olsen's Wanda Maximoff is alive. The VisionQuest finale's post-credits scene shows Doctor Doom lifting her from the rubble of Mount Wundagore, setting up her return in Avengers: Doomsday.",
+    date: "2026-11-12",
+    category: "Cinema",
+    sections: [
+      { type: "p", text: "The Scarlet Witch returns. In the final seconds of VisionQuest's season finale, \"Forever\", which streamed on Disney+ on Tuesday, November 10, Doctor Doom lifts the rubble of Mount Wundagore off Wanda Maximoff and speaks the line Marvel fans will be quoting for weeks: \"Scarlet Witch, awaken. Your power will be mine.\" Elizabeth Olsen's Wanda, missing and presumed dead since 2022's Doctor Strange in the Multiverse of Madness, opens her eyes with a gasp — and one of the Marvel Cinematic Universe's biggest unanswered questions is answered, five weeks before Avengers: Doomsday reaches cinemas." },
+      { type: "h2", text: "Scarlet Witch Returns: What Happens in the VisionQuest Post-Credits Scene" },
+      { type: "p", text: "The scene starts by replaying the climax of Doctor Strange in the Multiverse of Madness. In 2022, Wanda, corrupted by the Darkhold, brought the ancient site of Mount Wundagore crashing down on herself to destroy every copy of the cursed book across the multiverse. Whether she survived was never confirmed, and the film left her fate deliberately unclear." },
+      { type: "p", text: "VisionQuest answers it with new footage. Green energy — Doom's signature colour — telekinetically lifts the rubble away, and a shadowed, hooded figure steps into frame. It is Victor von Doom, played by Robert Downey Jr., in his first appearance on Disney+. He uncovers Wanda's body, eyes closed beneath the wreckage, and delivers the line: \"Scarlet Witch, awaken. Your power will be mine.\" Her eyes snap open, lit by Doom's green glow. Cut to black." },
+      { type: "p", text: "The reveal was signposted, if you knew where to look. In the episode itself, Tommy Shepherd asks Vision whether they will ever see their mother again, and Vision answers that they have said goodbye before, so perhaps they will say hello again. Marvel also posted a message on X written entirely in binary, which decoded to Wanda's farewell line to Billy and Tommy from the WandaVision finale. Showrunner Terry Matalas told The Hollywood Reporter he chose to reunite Vision with both of his sons but hold Wanda back — until the credits rolled." },
+      { type: "p", text: "For Olsen, the return ends years of questions. She was not included in Marvel's initial Avengers: Doomsday cast reveal in March 2025, and she had previously denied that she would appear in the WandaVision spin-off. Fans kept the theory alive anyway, especially after Marvel unveiled the Latverian witches — steel-masked, green-cloaked figures flanking Doom in official Doomsday promotion — and many guessed Wanda would be among them." },
+      { type: "h2", text: "Doctor Doom Is Collecting the MCU's Most Powerful Heroes" },
+      { type: "p", text: "Wanda is the second Avenger Doom has personally collected on screen. The first was the Hulk: in a post-credits scene added to the Avengers: Endgame Encore re-release on September 25, Doom tracks Bruce Banner down to a military bunker two miles underground and announces he has come to collect him. The Russo brothers have since said the Hulk is involved in Doom's story, and The Direct counts Wanda as the fifth member of the villain's growing team." },
+      { type: "p", text: "Read together, the two pick-ups reveal Doom's plan. The Hulk is the MCU's greatest physical power; Wanda is its greatest reality-bending power. And Doom's own words make clear what he wants: not an ally, but a weapon. \"Your power will be mine,\" he tells an unconscious Wanda — a claim, not an invitation." },
+      { type: "p", text: "That distinction matters, because the scene does not actually show Wanda joining Doom. It shows him reviving her. Whether she fights beside him, is aimed at the Avengers, or is simply drained of her power is still unknown — and that ambiguity is the point. The leading theory is that she becomes one of the Latverian witches, the masked figures seen in Doomsday promotion and displayed in costume at San Diego Comic-Con. The storyline also echoes the comic Avengers: The Children's Crusade, in which Tommy and Billy go searching for their missing mother — a story famous for bringing Wanda and Doom together." },
+      { type: "h2", text: "Avengers: Doomsday Is Five Weeks Away — and More Reveals Are Coming" },
+      { type: "p", text: "VisionQuest is the last Marvel Television project before Doomsday, and its finale now works as the bridge between the WandaVision trilogy and the Multiverse Saga's endgame. Avengers: Doomsday reaches UK cinemas on December 16, 2026, and US theatres on December 18, with a huge ensemble cast bringing together the Avengers, the X-Men, the Thunderbolts, the Fantastic Four and the Wakandans against Downey's Doom." },
+      { type: "p", text: "More Doomsday news is expected imminently. Empire magazine has teased a new look at the film for later today, with a graphic reading \"DOOM IS COMING...\" in glowing green type, and industry insiders have pointed to a new trailer arriving within the next week — though Marvel has not officially confirmed the trailer timing, so treat that part as a report rather than a fact." },
+      { type: "list", items: [
+        "VisionQuest episode 8, \"Forever\", streamed on Disney+ on Tuesday, November 10, 2026",
+        "The second post-credits scene shows Doctor Doom reviving Wanda Maximoff at Mount Wundagore",
+        "Doom's line: \"Scarlet Witch, awaken. Your power will be mine.\"",
+        "Elizabeth Olsen was not in Marvel's initial Avengers: Doomsday cast reveal in March 2025",
+        "Avengers: Doomsday opens in UK cinemas on December 16, 2026, and in the US on December 18, 2026"
+      ] },
+      { type: "h2", text: "Scarlet Witch Returns: Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "Is the Scarlet Witch back in the MCU?", a: "Yes. The VisionQuest finale's post-credits scene shows Doctor Doom reviving Wanda Maximoff, confirming Elizabeth Olsen returns in Avengers: Doomsday." },
+        { q: "What does Doctor Doom say to Wanda in VisionQuest?", a: "\"Scarlet Witch, awaken. Your power will be mine.\" Wanda's eyes open with a gasp as Doom's green magic lights her face." },
+        { q: "When did the VisionQuest finale come out?", a: "Episode 8, titled \"Forever\", streamed on Disney+ on Tuesday, November 10, 2026." },
+        { q: "When is Avengers: Doomsday released?", a: "December 16, 2026 in UK cinemas and December 18, 2026 in the United States." },
+        { q: "Is Wanda on Doctor Doom's side in Avengers: Doomsday?", a: "Not confirmed. The scene shows Doom reviving her and claiming her power; whether she fights for him, against him, or is used by him is still unknown." }
+      ] },
+      { type: "p", text: "Four years after Wanda Maximoff buried herself under a mountain, Marvel has dug her back up — and handed her to its biggest villain. Whatever Doctor Doom plans to do with the Scarlet Witch's power, the answer arrives in cinemas on December 18." }
+    ],
+  },
+{
     slug: "ps5-100-million-units-shipped-sony-milestone-gta-6-november-2026",
     image: "https://upload.wikimedia.org/wikipedia/commons/7/77/Black_and_white_Playstation_5_base_edition_with_controller.png",
     imageAlt: "The PlayStation 5 console with a DualSense controller (photo: Wikimedia Commons)",
