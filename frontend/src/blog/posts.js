@@ -33,6 +33,71 @@
 
 export const posts = [
 {
+    slug: "empire-avengers-doomsday-covers-four-collectible-covers-kevin-feige-russo-november-2026",
+    image: "https://image.tmdb.org/t/p/original/tTMmREfhVd51CCg7GN73wL8cIoT.jpg",
+    imageAlt: "Doctor Doom conjures green magic on the official Avengers: Doomsday poster (key art: Marvel Studios / TMDB)",
+    title: "Empire's Avengers: Doomsday Covers Revealed: Four Collectible Covers and a 22-Page Deep Dive With Kevin Feige, the Russos and Robert Downey Jr.",
+    description:
+      "Empire's Avengers: Doomsday covers are here: four collectible covers and a 22-page deep dive with Kevin Feige, the Russo brothers and Robert Downey Jr.",
+    excerpt:
+      "Empire magazine has revealed four collectible covers for its world-exclusive Avengers: Doomsday issue, with a 22-page deep dive featuring Kevin Feige, the Russo brothers and Robert Downey Jr.",
+    date: "2026-11-13",
+    category: "Cinema",
+    sections: [
+      { type: "p", text: "Avengers Doomsday Empire covers are here — and they are exactly the reveal Marvel fans were waiting for. Empire magazine has unveiled four collectible covers for its world-exclusive Avengers: Doomsday issue, ending a tease that began with a scuffed metal plate and the words 'DOOM IS COMING…' in glowing green type. The issue carries a 22-page deep dive into Marvel's biggest movie, with Marvel boss Kevin Feige, directors Joe and Anthony Russo, Robert Downey Jr. and many of the film's heroes." },
+      { type: "h2", text: "The Four Empire Avengers: Doomsday Covers" },
+      { type: "p", text: "Each cover brings together heroes from across the franchise — and each one tells its own story. The first is led by Cyclops, with Captain America, Magneto and Shuri as Black Panther alongside him. It is also the best look yet at James Marsden's comic-accurate Cyclops costume, a detail X-Men fans have been waiting to see properly since the character's return was announced." },
+      { type: "p", text: "The second cover puts Steve Rogers back in the fight, joined by Loki, Sue Storm, Gambit and Shang-Chi — a lineup that spans the original Avengers, the Fantastic Four and the X-Men in a single frame. The third centres Thor, hammer in hand and ready for battle, with Pedro Pascal's Reed Richards beside him, along with Florence Pugh's Yelena Belova and Sebastian Stan's Bucky Barnes. And the fourth cover belongs to the villain alone: Robert Downey Jr.'s Doctor Doom gets a cover all to himself." },
+      { type: "p", text: "Together, the covers make a statement about the film itself. Three of them form a triptych of returning heroes lined up against Doom — a visual summary of a movie that brings together characters who were once spread across different studios, with Fox-era X-Men stars like Patrick Stewart and Ian McKellen standing alongside the Avengers and the new Fantastic Four led by Pedro Pascal and Vanessa Kirby. The covers proclaim 'Marvel's biggest movie is here!' and tease: 'One villain. An army of heroes. Let's go…'" },
+      { type: "h2", text: "What the 22-Page Empire Feature Reveals" },
+      { type: "p", text: "The issue itself goes deep on the scale of the film. Feige and the Russos discuss the huge task of closing out the Multiverse Saga and going even bigger than Avengers: Endgame. One detail has already come out of the feature: in their interview with Empire, the Russos said Chris Evans' presence in Avengers: Doomsday will be a key pillar of the story, underlining how central Steve Rogers' return is to the film." },
+      { type: "p", text: "The film's writing credits were also confirmed this week by the Writers Guild of America: 'Written by' Stephen McFeely and Michael Waldron, with 'Additional Literary Material' credits for Eric Pearson, Chris McKenna, Erik Sommers, Jeff Loveness, Andrew Lanham, Destin Daniel Cretton, Ryan Reynolds and Hugh Jackman. The Deadpool & Wolverine stars' names on the list strongly suggest their characters appear in the film, though Marvel has not confirmed either casting — and a writing credit alone does not guarantee an on-screen appearance." },
+      { type: "p", text: "The issue is not only about Doomsday. Empire also looks at Robert Eggers' new horror film Werwulf, the Oscar-tipped drama Elsinore and the cult classic Little Shop of Horrors, including a new interview with the rarely interviewed Rick Moranis. But Doomsday is the centrepiece — and the covers are the latest stage of a promotional campaign that is already breaking records." },
+      { type: "h2", text: "Avengers: Doomsday Release Date and the Final Countdown" },
+      { type: "p", text: "The timing is deliberate. Avengers: Doomsday opens in cinemas on December 18, 2026 in the United States — December 16 in the UK and China, and December 17 in India — just five weeks after the Empire reveal. The campaign has been building all week: Marvel released a 'Countdown to Avengers: Doomsday' spot on November 11 listing the essential MCU titles to watch before the film, and Avengers: Endgame: Encore arrives on the streamer on Friday, November 13. Ticket presales have been reported past $125 million worldwide, according to Forbes, citing media tracker figures rather than a Disney number." },
+      { type: "p", text: "Empire's world-exclusive Avengers: Doomsday issue goes on sale on November 19, and collectors who want all four covers can pre-order through Empire's online store. With the film set to kick off the end of the Multiverse Saga before Avengers: Secret Wars arrives on December 17, 2027, this is the moment the marketing machine shifts into its final gear." },
+      { type: "faq", items: [
+        { q: "What are the four Empire Avengers: Doomsday covers?", a: "Empire's world-exclusive Avengers: Doomsday issue has four collectible covers: Cyclops leading Captain America, Magneto and Shuri; Steve Rogers with Loki, Sue Storm, Gambit and Shang-Chi; Thor with Reed Richards, Yelena Belova and Bucky Barnes; and Robert Downey Jr.'s Doctor Doom on a solo cover." },
+        { q: "When does Empire's Avengers: Doomsday issue go on sale?", a: "Empire's Avengers: Doomsday issue goes on sale on November 19, 2026. Collectors can pre-order all four covers through Empire's online store." },
+        { q: "What is in Empire's 22-page Avengers: Doomsday feature?", a: "The 22-page deep dive features Marvel boss Kevin Feige, directors Joe and Anthony Russo, Robert Downey Jr. and many of the film's heroes, discussing the scale of the film and the task of closing out the Multiverse Saga." },
+        { q: "What did the Russos say about Chris Evans in Avengers: Doomsday?", a: "In their Empire interview, the Russo brothers said Chris Evans' presence in Avengers: Doomsday will be a key pillar of the story, confirming how central Steve Rogers' return is to the film." },
+        { q: "When does Avengers: Doomsday release in theatres?", a: "Avengers: Doomsday releases on December 18, 2026 in the United States, December 16 in the UK and China, and December 17 in India. The sequel, Avengers: Secret Wars, follows on December 17, 2027." },
+      ] },
+    ],
+  },
+{
+    slug: "ramayana-crosses-1000-crore-worldwide-day-8-third-fastest-indian-film-november-2026",
+    image: "https://image.tmdb.org/t/p/original/yHVZncPRZr63mezRX20IyKLrSkv.jpg",
+    imageAlt: "Ranbir Kapoor as Lord Rama in Ramayana: Part 1, from the film's official key art (image: TMDB)",
+    title: "Ramayana Crosses ₹1,000 Crore Worldwide in 8 Days: Ranbir Kapoor's Epic Is the Third-Fastest Indian Film to the Milestone",
+    description:
+      "Ramayana crosses ₹1,000 crore worldwide in 8 days, the third-fastest Indian film ever. Ranbir Kapoor's first ₹1,000 crore film — full box office details.",
+    excerpt:
+      "Nitesh Tiwari's Ramayana has crossed ₹1,000 crore in worldwide gross on its eighth day in theatres, becoming only the 11th Indian film ever to enter the ₹1,000 crore club — and the third-fastest to get there.",
+    date: "2026-11-13",
+    category: "Cinema",
+    sections: [
+      { type: "p", text: "Ramayana 1000 crore is now official. Nitesh Tiwari's epic crossed ₹1,000 crore in worldwide gross on its eighth day in theatres, Thursday, November 12, 2026, becoming only the 11th Indian film ever to enter the ₹1,000 crore club — and the third-fastest film to get there. Trade tracker Sacnilk puts the film's worldwide total at ₹1,033.55 crore after eight days." },
+      { type: "h2", text: "Ramayana Day 8 Box Office: How the ₹1,000 Crore Mark Fell" },
+      { type: "p", text: "The film entered its eighth day at ₹944.55 crore worldwide after seven days, needing roughly ₹55 crore more. Day 8 delivered. Sacnilk estimates the film grossed ₹85+ crore worldwide on Thursday, comfortably clearing the mark. In India, Sacnilk reports a Day 8 net of ₹53.50 crore — Hindi ₹43.00 crore, Kannada ₹3.25 crore, Malayalam ₹2.80 crore, Telugu ₹2.30 crore and Tamil ₹2.15 crore — taking the all-India net to ₹564.60 crore and the India gross to ₹675.05 crore. Day 8's ₹53.50 crore net is a 24.3% drop from Day 7's ₹70.65 crore, but the weekday dip did not matter. Overseas, Day 8 added ₹25 crore, taking the international total to ₹358.50 crore. Every tracker agrees on the headline: the ₹1,000 crore line has been crossed. Sacnilk also counts more than 2.18 crore footfalls for the film so far." },
+      { type: "p", text: "The run has been built on an extraordinary first week. Ramayana opened to ₹128 crore worldwide on its first day and collected ₹507 crore across its four-day opening weekend, despite the Diwali festivities initially curbing footfalls. The real surge came from Monday onward, as audiences flocked to cinemas during the Govardhan Puja and Bhai Dooj holidays, with back-to-back days of huge collections carrying the film to a record first-week haul. Monday, Day 5, was the biggest single day in India, with ₹107.50 crore net — ₹128.70 crore gross — up 91.5% on Sunday." },
+      { type: "h2", text: "Third-Fastest Indian Film to ₹1,000 Crore" },
+      { type: "p", text: "Speed is what makes this milestone stand out. Only Pushpa 2: The Rule and Dhurandhar 2 reached ₹1,000 crore faster, doing it within their first week; Ramayana took eight days. Baahubali 2, the previous benchmark for an epic of this scale, needed around 10 days. The 11 films in the club now include Dangal (₹2070.30 crore), Dhurandhar 2 (₹1813.39 crore), Baahubali 2 (₹1788.06 crore), Pushpa 2 (₹1742.10 crore), Dhurandhar (₹1307.35 crore), RRR (₹1230 crore), KGF Chapter 2 (₹1215 crore), Jawan (₹1160 crore), Pathaan (₹1055 crore) and Kalki 2898 AD (₹1042.25 crore) — and now Ramayana at ₹1,033.55 crore and climbing." },
+      { type: "p", text: "It is also a milestone for the scale of the production. Ramayana is reportedly one of the most expensive Indian films ever mounted, with reported budget figures running into thousands of crores — and the worldwide gross has now crossed the ₹1,000 crore mark in just eight days." },
+      { type: "h2", text: "Ranbir Kapoor's First ₹1,000 Crore Film" },
+      { type: "p", text: "For Ranbir Kapoor, the milestone is a career first. His previous biggest worldwide grosser, Animal, finished below the four-digit mark, and Ramayana has now taken him into a new commercial league. The film's ensemble — Sai Pallavi opposite Kapoor, and Yash in a pivotal role — has helped it travel across languages and markets, with strong multilingual demand at home and a robust overseas run. Produced by Namit Malhotra's Prime Focus Studios with DNEG and Yash's Monster Mind Creations, Ramayana is the first chapter of a planned two-part epic." },
+      { type: "h2", text: "What's Next for Ramayana" },
+      { type: "p", text: "With the extended opening week drawing to a close, attention now turns to the second weekend, when the film will look to build on its historic start without the same festive holiday support. Advance bookings are already strong: Sacnilk lists 23,982 shows for Day 9, Friday, November 13, with ₹21.91 crore already booked as of 3:00 AM IST. The second chapter is already in motion: Part 2 is reportedly around 60% shot and targeting a Diwali 2028 release. For now, though, the headline is settled — in eight days, Ramayana has done what only ten Indian films had done before it." },
+      { type: "faq", items: [
+        { q: "How many days did Ramayana take to cross ₹1,000 crore worldwide?", a: "Ramayana crossed ₹1,000 crore in worldwide gross on its eighth day in theatres, Thursday, November 12, 2026 — making it the third-fastest Indian film to the milestone, behind only Pushpa 2 and Dhurandhar 2, which both did it in seven days." },
+        { q: "What is Ramayana's total worldwide box office collection?", a: "Trade tracker Sacnilk puts Ramayana's worldwide gross at ₹1,033.55 crore after eight days — ₹675.05 crore from India and ₹358.50 crore from overseas." },
+        { q: "How many Indian films have crossed ₹1,000 crore worldwide?", a: "Ramayana is the 11th Indian film to cross ₹1,000 crore worldwide. The club includes Dangal, Baahubali 2, Pushpa 2, RRR, KGF Chapter 2, Jawan, Pathaan, Kalki 2898 AD, Dhurandhar, Dhurandhar 2 and now Ramayana." },
+        { q: "Is Ramayana Ranbir Kapoor's first ₹1,000 crore film?", a: "Yes. Ramayana is Ranbir Kapoor's first film to cross ₹1,000 crore worldwide. His previous highest worldwide grosser was Animal, which finished below the four-digit mark." },
+        { q: "When is Ramayana Part 2 releasing?", a: "Part 2 of Nitesh Tiwari's two-part epic is reportedly already around 60% shot and is targeting a Diwali 2028 release, though no date has been officially locked in yet." },
+      ] },
+    ],
+  },
+{
     slug: "wolfenstein-3-confirmed-machinegames-xbox-25th-anniversary-november-2026",
     image: "https://cdn.cloudflare.steamstatic.com/steam/apps/612880/library_hero.jpg",
     imageAlt: "B.J. Blazkowicz in official Wolfenstein II: The New Colossus key art (Bethesda/Steam) — Wolfenstein 3 has no official key art yet",
