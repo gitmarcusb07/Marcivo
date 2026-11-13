@@ -33,6 +33,55 @@
 
 export const posts = [
 {
+    slug: "gurnoor-brar-tim-seifert-viral-send-off-virat-kohli-4th-odi-november-2026",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Virat_Kohli_Batting.jpg/1280px-Virat_Kohli_Batting.jpg",
+    imageAlt: "An India batter in action against New Zealand in an ODI, the fixture at the centre of the viral Gurnoor Brar and Tim Seifert clash",
+    title: "Gurnoor Brar vs Tim Seifert: Virat Kohli Steps In as Fiery Send-Off Goes Viral in India vs New Zealand 4th ODI",
+    description:
+      "Gurnoor Brar's fiery send-off to Tim Seifert went viral in the India vs New Zealand 4th ODI, until Virat Kohli stepped in. What happened and what it means.",
+    excerpt:
+      "Gurnoor Brar dismissed Tim Seifert for 58 and gave him a fiery send-off in the 4th ODI at Bay Oval, until Virat Kohli stepped in to calm things down, and the clips went viral within minutes.",
+    date: "2026-11-13",
+    category: "Sports",
+    sections: [
+      { type: "p", text: "The Gurnoor Brar Tim Seifert clash became the viral moment of the India vs New Zealand 4th ODI on Friday, November 13, 2026, when the young Indian pacer dismissed the New Zealand opener and gave him a fiery send-off, only for Virat Kohli to step in and pull his teammate away before the confrontation could escalate. Clips of the heated exchange spread across social media within minutes, turning a mid-innings wicket into the most talked-about moment of the match at Bay Oval in Mount Maunganui." },
+      { type: "h2", text: "Gurnoor Brar vs Tim Seifert: What Happened in the 12th Over" },
+      { type: "p", text: "The incident came at the end of a bruising start for India. Seifert, opening the batting for New Zealand, had raced to 58 off 48 balls, striking six fours and three sixes, and had put on an 85-run opening stand with Will Young. The New Zealand opener had reached his maiden ODI half-century in just 39 balls, and in doing so he broke a 27-year-old record, posting the highest individual score by a New Zealand batter in the first 10 overs of an ODI against India. The previous mark was Bryan Young's 47 off 35 balls, set in Wellington on January 14, 1999." },
+      { type: "p", text: "Brar finally got his revenge on the sixth ball of the 12th over. The young pacer, bowling at around 144 kmph, dug in a sharp bouncer that caught Seifert by surprise. Seifert went for a big six but failed to connect properly, and the ball looped through to wicketkeeper Ishan Kishan, who completed the catch. It was India's first breakthrough of the morning, and Brar was not about to celebrate quietly." },
+      { type: "p", text: "The tension had been building for a while. Seifert had already hit Brar for a four earlier in the innings, and the pair had exchanged words on the field. After the dismissal, Brar walked straight towards the departing batter and delivered an animated send-off, shouting towards Seifert as he left the crease. Seifert, visibly unhappy with the gesture, stopped and turned back towards the bowler, and for a moment it looked as though the argument could turn into something more serious." },
+      { type: "p", text: "That was when Kohli intervened. The senior India batter, who was fielding nearby, moved quickly between the two players, put an arm around Brar and guided the young pacer away from Seifert. On-field umpire Chris Brown also stepped in, calling Brar over for a conversation and warning him to keep his emotions under control. The moment was captured on camera from several angles, and the official broadcast clips were shared within minutes by Sony Sports Network, the series broadcaster." },
+      { type: "h2", text: "Why the Gurnoor Brar Tim Seifert Video Went Viral" },
+      { type: "p", text: "Part of the reason the clip took off so fast is the role reversal at its heart. Kohli has built a career on being one of the most intense and confrontational players on a cricket field, so seeing him play peacemaker, calming down a young fast bowler, was a sight fans did not expect. Social media was quickly full of reactions, with many supporters praising Kohli for defusing the situation and others debating whether Brar's send-off had crossed the line. Some fans online even suggested that Kohli's quick intervention may have saved the young pacer from a sanction, although no official action had been announced." },
+      { type: "p", text: "The video also landed at the perfect moment for a viral clip. It happened live, in a day-night ODI, with Seifert the story of the morning after his record-breaking fifty and Brar's wicket India's first real moment of the day. A fired-up young bowler, a frustrated batter, and Kohli stepping in between them gave viewers a complete little drama in under a minute, and that is exactly the kind of clip that travels." },
+      { type: "h2", text: "India vs New Zealand 4th ODI: Match Situation" },
+      { type: "p", text: "India won the toss at Bay Oval and chose to bowl first, and they lead the five-match series 2-0 after winning the opener in Auckland and the second ODI, with the third match in Hamilton washed out by rain. New Zealand made the most of being sent in, finishing on 333 all out in their 50 overs. Will Young was the star of the innings, scoring a century and finishing with 125 off 108 balls, while Seifert's 58 gave the hosts their flying start. India need 334 runs to win the match and seal the series with a game to spare." },
+      { type: "h2", text: "What Happens Next for Gurnoor Brar" },
+      { type: "p", text: "For now, Brar's warning from umpire Chris Brown is the only official word on the incident, and no sanction had been announced at the time of writing. Under the ICC code of conduct, aggressive send-offs can draw punishment, so the young pacer will know he needs to keep his celebrations in check for the rest of the series. The fifth and final ODI is scheduled for Sunday, November 15, back at Bay Oval, and Brar will have another chance to make headlines with the ball. Whatever happens next, the 12th over of the fourth ODI has already given him the most famous wicket of his young career." },
+      { type: "faq", items: [
+        {
+          q: "What happened between Gurnoor Brar and Tim Seifert?",
+          a: "Brar dismissed Seifert for 58 in the 12th over of the India vs New Zealand 4th ODI and gave him an aggressive send-off. Seifert turned back towards the bowler, and Virat Kohli stepped in to pull Brar away before the situation escalated.",
+        },
+        {
+          q: "Why did Virat Kohli intervene?",
+          a: "Kohli moved between the two players and guided Brar away after the young pacer walked towards Seifert with an animated send-off. Umpire Chris Brown also warned Brar about his conduct.",
+        },
+        {
+          q: "How many runs did Tim Seifert score?",
+          a: "Seifert scored 58 off 48 balls, with six fours and three sixes, before Brar dismissed him. He reached his maiden ODI fifty in 39 balls.",
+        },
+        {
+          q: "What record did Tim Seifert break?",
+          a: "Seifert broke a 27-year-old record for the highest individual score by a New Zealand batter in the first 10 overs of an ODI against India, passing Bryan Young's 47 off 35 balls from January 1999.",
+        },
+        {
+          q: "What is the score in the India vs New Zealand 4th ODI?",
+          a: "New Zealand scored 333 all out in 50 overs after India won the toss and chose to bowl. India need 334 runs to win, and lead the five-match series 2-0.",
+        },
+      ] },
+    ],
+  },
+{
     slug: "microsoft-outlook-outage-microsoft-365-down-130000-reports-november-2026",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Microsoft_Outlook_Icon_%282025%E2%80%93present%29.svg/1280px-Microsoft_Outlook_Icon_%282025%E2%80%93present%29.svg.png",
     imageAlt: "The official Microsoft Outlook app icon (2025 design) — the email service at the centre of the November 2026 Microsoft 365 outage",
