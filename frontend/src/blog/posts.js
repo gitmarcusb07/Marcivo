@@ -33,6 +33,40 @@
 
 export const posts = [
 {
+    slug: "iran-bahrain-radar-strike-us-denies-drones-shot-down-november-2026",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Strait_of_Hormuz_%28MODIS_2020-12-04%29.jpg",
+    imageAlt: "Satellite view of the Strait of Hormuz, the waterway at the centre of the latest Iran-US clash (NASA MODIS image via Wikimedia Commons)",
+    title: "Iran Claims Bahrain Radar Strike as US Says It Shot Down Two Drones — What We Know",
+    description:
+      "Iran Bahrain radar strike: Tehran claims it destroyed a US radar in Bahrain; the US says it shot down two Iranian drones, with no damage.",
+    excerpt:
+      "Iran says it destroyed a US early-warning radar in Bahrain in retaliation for a strike on its soil — but the US military says it shot down two Iranian drones and suffered no damage, leaving the two accounts in direct conflict.",
+    date: "2026-11-13",
+    category: "News",
+    sections: [
+      { type: "p", text: "The Iran Bahrain radar strike claim has set off a fresh round of conflicting accounts between Tehran and Washington. Iran's Islamic Revolutionary Guard Corps (IRGC) said on Friday that its Aerospace Force destroyed a US early-warning radar installation in Bahrain, in retaliation for what it described as an American attack on a telecommunications tower in southern Iran. Hours later, the US military's Central Command (CENTCOM) said it had shot down two one-way attack drones launched by the IRGC and that no injuries or damage were caused — contradicting Tehran's claim of a successful strike." },
+      { type: "h2", text: "Iran Bahrain Radar Strike: What Tehran Claims Happened" },
+      { type: "p", text: "According to the IRGC statement, carried by the semi-official Tasnim news agency, the radar on Bahrain Island was targeted and destroyed about an hour after the alleged attack on Iranian soil. The IRGC-affiliated Fars news agency used the same wording. The Guards described the operation as a “serious warning” to the United States to end what it called a series of aerial provocations and oil smuggling in the Strait of Hormuz." },
+      { type: "p", text: "The alleged trigger was an attack on a telecommunications tower in Sirik, a coastal county in Iran's southern Hormozgan province. Iran's state news agency IRNA, citing official sources, reported on Thursday that Sirik had come under “enemy fire”. Reuters reported that this is the first time since early September that Iran has claimed an attack on US military assets in a Gulf country. A second, unverified claim said a liquefied petroleum gas tanker struck a mine while trying to cross the Strait of Hormuz." },
+      { type: "h2", text: "What the US Says Happened Instead" },
+      { type: "p", text: "The American account, updated on Friday evening, tells a different story. CENTCOM said its forces shot down two attack drones launched by the IRGC as they headed towards the US position, and that the interception caused no injuries and no damage. Al Jazeera, reporting from the White House, noted that neither the US nor the Iranian claims could be confirmed — the record now holds two incompatible versions of the same incident." },
+      { type: "p", text: "That gap matters because Bahrain is not a minor outpost. The island hosts the headquarters of the US Navy's Fifth Fleet at Naval Support Activity in the capital, Manama — the main command centre for American naval operations across the Middle East. The base was hit in the opening hours of the war on February 28, and a Pentagon report released in September found that Iranian attacks damaged or destroyed hundreds of buildings at US installations in eight countries, including Bahrain, in the first four months of the war." },
+      { type: "h2", text: "Warnings on Both Sides as Tensions Rise Again" },
+      { type: "p", text: "The rhetoric around the incident has been sharp on both sides. IRGC chief commander Major General Ahmad Vahidi warned the United States against any further military action, threatening “devastating and painful strikes”, and Iran's chief of the general staff, Major General Ali Abdollahi, said any miscalculation by the US and Israel would be met with “devastating strikes”. The IRGC statement added that if the violations recur, its Aerospace Force “stands in full readiness to respond without limits”." },
+      { type: "p", text: "The diplomatic track looks fragile too. US President Donald Trump removed Vice President JD Vance from his role as a peace negotiator the day before the radar claim, according to The Times. Iran's lead negotiator, Mohammad Bagher Ghalibaf, told Al Jazeera on Wednesday that the Strait of Hormuz “would never go back to how it was before the war” and that the “ball is now in the American court”. Trump has said he is prepared to return to war if the Qatar-led diplomatic track fails, while Secretary of State Marco Rubio has argued that economic pressure is working and large-scale operations are unnecessary. Israeli media including the public broadcaster KAN reported that Israel's security cabinet has ordered the military to step up preparations for a possible attack on Iran." },
+      { type: "h2", text: "What Happens Next in the Iran-US Standoff" },
+      { type: "p", text: "The claim comes during a fragile lull in a conflict that began on February 28 with US and Israeli strikes on Iran. Iran launched missile and drone attacks on US bases in Gulf states and sought to restrict shipping through the Strait of Hormuz, the vital route for global oil and gas supplies, while CENTCOM says its forces are still enforcing the naval blockade on Iranian ports. What to watch now is whether either side produces evidence for its version of Friday's events — satellite imagery, debris, or a Bahraini statement — and whether the exchange stops at claims and drone interceptions or escalates further." },
+      { type: "faq", items: [
+        { q: "What did Iran claim about the Bahrain radar strike?", a: "Iran's IRGC said its Aerospace Force destroyed a US early-warning radar in Bahrain on Friday, in retaliation for an alleged US strike on a telecom tower in Sirik, southern Iran. The claim has not been independently verified." },
+        { q: "What does the US say happened in Bahrain?", a: "US Central Command said it shot down two one-way attack drones launched by the IRGC on Friday, with no injuries or damage. Washington has not confirmed the radar claim." },
+        { q: "Why is Bahrain important in the Iran-US conflict?", a: "Bahrain hosts the headquarters of the US Navy's Fifth Fleet at Naval Support Activity in Manama, the main command centre for US naval operations in the Middle East." },
+        { q: "Is this the first Iranian attack claim on a Gulf US asset in a while?", a: "According to Reuters, it is the first time since early September that Iran has claimed an attack on US military assets in a Gulf country." },
+        { q: "What did Iran say about the Strait of Hormuz?", a: "The IRGC called the strike a warning to stop what it described as aerial provocations and oil smuggling in the Strait of Hormuz, and Iran's lead negotiator said the strait 'would never go back to how it was before the war'." },
+      ] },
+      { type: "p", text: "For now, the Bahrain incident is a claim against a denial: Iran says it destroyed an American radar, the US says it shot down two drones and nothing was hit. Which account holds up depends on what evidence emerges next." },
+    ],
+  },
+{
     slug: "india-us-trade-deal-tariff-advantage-us-assurance-november-2026",
     image: "https://upload.wikimedia.org/wikipedia/commons/a/ae/President_Donald_Trump_and_Prime_Minister_Narendra_Modi_at_the_White_House_in_Washington_DC.jpg",
     imageAlt: "Prime Minister Narendra Modi with US President Donald Trump at the White House (photo: Wikimedia Commons)",
