@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { api, findVersion, CAT_SITES, isLite, edgeStreamUrl } from "../lib/api";
+import { api, findVersion, CAT_SITES, isLite, edgeStreamUrl, type QualitiesResp } from "../lib/api";
 import { prettyVersion } from "../lib/format";
 import { addToList } from "../store/continueWatching";
 import TeraPlayer from "../components/TeraPlayer";
@@ -40,6 +40,7 @@ export default function Watch() {
   const [exactTitle, setExactTitle] = useState("");
   const timer = useRef<any>(null);
   const hlsTimer = useRef<any>(null);
+  const hlsDelay = useRef<any>(null);
   const videoUrlRef = useRef("");
   const hlsAsked = useRef(false);
 
@@ -58,6 +59,45 @@ export default function Watch() {
     }
   }, [resultIdParam]);
 
+  // One rule for every direct file URL the player gets: unseekable files
+  // go through the Range-capable proxy (Cloudflare /edge/stream in LITE,
+  // Render /api/stream otherwise) so seeking works. Used by resolveOne
+  // AND by quality swaps below.
+  const playable = (u: string, seekable: boolean | null | undefined) =>
+    seekable === false ? (isLite() ? edgeStreamUrl(u) : api.streamUrl(u)) : u;
+
+  // Per-quality options for the playing title (quality + sibling-audio
+  // menus in the player). Fetched once per title, only for direct-file
+  // plays; a failed fetch leaves the menus as they are today.
+  const [qData, setQData] = useState<QualitiesResp | null>(null);
+  const [qActive, setQActive] = useState(0); // resolver plays option 0 by default
+  const qFor = useRef<string | null>(null);
+
+  const loadQualities = useCallback((src: string | null | undefined) => {
+    if (!src || qFor.current === src) return;
+    qFor.current = src;
+    api.qualities(src)
+      .then((r) => { if (qFor.current === src && r?.options?.length) setQData(r); })
+      .catch(() => {}); // silent: menus stay as today
+  }, []);
+
+  const pickDirect = useCallback(async (index: number): Promise<string> => {
+    const src = qFor.current;
+    if (!src) throw new Error("no source");
+    const r = await api.qualitySource(src, index);
+    return playable(r.url, r.seekable);
+  }, []);
+
+  const switchToEmbed = useCallback(() => {
+    if (!qData?.embedUrl) return;
+    clearTimeout(hlsDelay.current);
+    clearInterval(hlsTimer.current);
+    videoUrlRef.current = "";
+    setHlsMaster(null); setHlsAudios([]); setHlsQualities([]); setHlsNote("");
+    setVideo("");
+    setEmbedUrl(qData.embedUrl);
+  }, [qData]);
+
   // Cache-first resolve: the backend returns {status:"ready",url} instantly
   // on a pre-resolved cache hit; otherwise poll the (possibly shared)
   // in-flight job every 2s. Server fails jobs fast (~150s cap), so the
@@ -71,12 +111,10 @@ export default function Watch() {
     // Embed results are the source's own player session (iframe) — served
     // as-is: no proxy, no Range concerns. Files: non-seekable upstreams
     // restart from 0 on seek — route them through the Range-capable proxy
-    // upfront so the timeline just works. A seekable upgrade swaps in later
-    // when the bridge delivers one. Non-LITE uses the Render /api/stream
-    // proxy; LITE (Render proxy answers 501) uses the same-origin Pages
-    // Function proxy /edge/stream instead — never play an unseekable file raw.
+    // upfront so the timeline just works (see `playable` above). A
+    // seekable upgrade swaps in later when the bridge delivers one.
     const map = (u: string, seekable: any, embed?: boolean) =>
-      embed ? { url: u, embed: true } : { url: seekable === false ? (isLite() ? edgeStreamUrl(u) : api.streamUrl(u)) : u, seekable };
+      embed ? { url: u, embed: true } : { url: playable(u, seekable), seekable };
     if (r.status === "ready" && r.url) return map(r.url, (r as any).seekable, (r as any).embed);
     const jobId = r.jobId;
     for (let i = 0; i < 90; i++) {
@@ -167,7 +205,6 @@ export default function Watch() {
   // then, so no CPU fight) plus immediately on 🌐 tap. Once ready: Hindi /
   // English switching, quality ladder, and a seekable timeline even for
   // non-seekable direct links.
-  const hlsDelay = useRef<any>(null);
   function watchHls(mediaUrl: string) {
     if (hlsAsked.current && mediaUrl === videoUrlRef.current) return;
     hlsAsked.current = true;
@@ -220,6 +257,7 @@ export default function Watch() {
     };
     setBusy(true); setErr(""); setFatal(""); setVideo(""); setEmbedUrl("");
     setLastIdentity(ident);
+    setQData(null); setQActive(0); qFor.current = null;
     // Use the clicked result directly — never a stale selectedMovie.
     setVersionTitle(vTitle);
     setStage(0);
@@ -257,6 +295,8 @@ export default function Watch() {
         if (got.seekable === false && sourceUrl) {
           watchUpgrade(sourceUrl, url);
         }
+        // Quality + sibling-audio menu for this title (direct files only).
+        loadQualities(sourceUrl);
         // Engine starts after playback is rolling (never fights resolutions).
         // HLS sources already carry their own quality ladder (the player
         // attaches hls.js) — the file prober/converter doesn't apply.
@@ -470,6 +510,14 @@ export default function Watch() {
               hlsMaster={hlsMaster}
               hlsAudios={hlsAudios}
               hlsQualities={hlsQualities}
+              directOptions={qData?.options ?? null}
+              directActive={qActive}
+              directEmbedUrl={qData?.embedUrl ?? null}
+              directAudioHint={qData?.audioHint ?? null}
+              onPickDirect={pickDirect}
+              onDirectActive={setQActive}
+              onSwitchToEmbed={switchToEmbed}
+              onNote={setHlsNote}
               resumeKey={`${kind}:${id}`}
               autoPlay
               onBack={() => nav(-1)}

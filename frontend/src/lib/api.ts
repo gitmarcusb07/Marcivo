@@ -30,7 +30,7 @@ loadCaps();
 // Session cache: content loads once per app open, then served from memory
 // until the app process dies. Dynamic endpoints are never cached.
 const sessionCache = new Map<string, any>();
-const NO_CACHE = ["/api/resolve", "/api/stream", "/health", "/edge/stream"];
+const NO_CACHE = ["/api/resolve", "/api/stream", "/health", "/edge/stream", "/api/quality-source"];
 
 async function j<T>(path: string, init?: RequestInit, timeoutMs = 60000): Promise<T> {
   const method = (init?.method || "GET").toUpperCase();
@@ -170,12 +170,24 @@ export const api = {
   streamUrl: (mediaUrl: string) => `${BASE}/api/stream?url=${encodeURIComponent(mediaUrl)}`,
   hlsStatus: (mediaUrl: string) => j<any>(`/api/hls-status?url=${encodeURIComponent(mediaUrl)}`),
   hlsFile: (masterPath: string) => `${BASE}${masterPath}`,
+  /** Per-quality options of one source page (quality + sibling-audio
+      switching for direct-file plays). List once per title; resolve ONE
+      picked option lazily — the signed file URLs expire, so never
+      pre-resolve every option. */
+  qualities: (sourceUrl: string) => j<QualitiesResp>(`/api/qualities?url=${encodeURIComponent(sourceUrl)}`),
+  qualitySource: (sourceUrl: string, index: number) =>
+    j<QualitySourceResp>(`/api/quality-source?url=${encodeURIComponent(sourceUrl)}&i=${index}`),
 };
 
-// Same-origin Range-capable media proxy (Cloudflare Pages Function,
-// frontend/functions/edge/stream.ts). Used in LITE mode for unseekable
-// direct files: the Render /api/stream proxy is disabled there (501), so
-// the player routes through this one instead — same domain, no new hosting.
+export type QualityOption = { index: number; label: string; raw: string; height: number | null; size: string | null; audio: string | null };
+export type QualitiesResp = { source: string; embedUrl: string | null; audioHint: string | null; options: QualityOption[] };
+export type QualitySourceResp = { index: number; label: string; audio: string | null; url: string; seekable: boolean | null };
+
+// Same-origin Range-capable media proxy (Cloudflare Worker route
+// /edge/stream in worker.js — NOT a Pages Function). Used in LITE mode
+// for unseekable direct files: the Render /api/stream proxy is disabled
+// there (501), so the player routes through this one instead — same
+// domain, no new hosting.
 export const edgeStreamUrl = (mediaUrl: string): string =>
   `/edge/stream?url=${encodeURIComponent(mediaUrl)}`;
 

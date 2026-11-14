@@ -1,10 +1,10 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Hls from "hls.js";
 import {
   Play, Pause, Volume2, VolumeX, Maximize2, Minimize2, Loader2,
-  Gauge, PictureInPicture2, RotateCcw, RotateCw, AlertCircle, Languages, MonitorPlay,
+  Gauge, PictureInPicture2, RotateCcw, RotateCw, AlertCircle, Languages, MonitorPlay, Check,
 } from "lucide-react";
-import { api, isLite } from "../lib/api";
+import { api, isLite, type QualityOption } from "../lib/api";
 
 // Marcivo port of the teraplayer video player (player only — no info card):
 // direct + HLS attach with position-preserving upgrade, session resume,
@@ -18,6 +18,19 @@ interface Props {
   hlsMaster: string | null;
   hlsAudios: { label: string; flag: string; code: string }[];
   hlsQualities: { label: string; height: number }[];
+  /** Direct-file quality options for this title (from /api/qualities):
+      sibling files per quality/audio. HLS levels take precedence when
+      present; these are the fallback for direct plays. */
+  directOptions?: QualityOption[] | null;
+  directActive?: number;
+  directEmbedUrl?: string | null;
+  directAudioHint?: string | null;
+  /** Lazily resolve ONE picked option to its playable URL (already
+      proxied when unseekable). */
+  onPickDirect?: (index: number) => Promise<string>;
+  onDirectActive?: (index: number) => void;
+  onSwitchToEmbed?: () => void;
+  onNote?: (msg: string) => void;
   /** Stable id (content_id) so resume survives fresh signed URLs. */
   resumeKey?: string;
   autoPlay?: boolean;
@@ -46,7 +59,7 @@ function hashStr(str: string) {
   return h.toString(36);
 }
 
-export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hlsQualities, resumeKey, autoPlay = true, onBack, onFatal, onNeedHls, upgradeUrl }: Props) {
+export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hlsQualities, directOptions, directActive, directEmbedUrl, directAudioHint, onPickDirect, onDirectActive, onSwitchToEmbed, onNote, resumeKey, autoPlay = true, onBack, onFatal, onNeedHls, upgradeUrl }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
   const hlsRef = useRef<Hls | null>(null);
@@ -68,6 +81,62 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
   const [levels, setLevels] = useState<{ label: string }[]>([]);
   const [activeLevel, setActiveLevel] = useState(-1);
   const [hlsOn, setHlsOn] = useState(false);
+  const [swapping, setSwapping] = useState(false);
+
+  // Position-preserving src swap (generalised form of the upgradeUrl
+  // mechanism): swap the playing file at the current position, keeping
+  // play/pause state and speed. Used by quality/audio picks.
+  const swapSource = useCallback((url: string, at?: number, play?: boolean) =>
+    new Promise<void>((resolve, reject) => {
+      const v = videoRef.current;
+      if (!v) return reject(new Error("no video"));
+      const t = at ?? v.currentTime, resume = play ?? !v.paused, rate = v.playbackRate;
+      const done = () => { v.removeEventListener("loadedmetadata", ok); v.removeEventListener("error", bad); clearTimeout(timer); };
+      const ok = () => { done(); try { v.currentTime = t; } catch {} v.playbackRate = rate; if (resume) v.play().catch(() => {}); resolve(); };
+      const bad = () => { done(); reject(new Error("load failed")); };
+      const timer = setTimeout(bad, 20000);
+      v.addEventListener("loadedmetadata", ok);
+      v.addEventListener("error", bad);
+      v.src = url;
+      v.load();
+    }), []);
+
+  // Direct-file menus apply only while HLS has NOT taken over (HLS levels
+  // take precedence when present). In-file audio-track switching is not
+  // possible for direct plays — the Audio menu lists the DISTINCT audio
+  // values across the sibling files instead.
+  const directOn = !hlsRef.current && levels.length === 0 && !!directOptions?.length;
+  const activeOpt = directOptions?.find((o) => o.index === (directActive ?? 0)) ?? directOptions?.[0];
+  const directAudios = useMemo(
+    () => [...new Set((directOptions ?? []).map((o) => o.audio).filter((a): a is string => !!a))],
+    [directOptions]);
+  const canEmbedSwitch = !!directEmbedUrl && !!onSwitchToEmbed && /dual|multi/i.test(directAudioHint ?? "");
+
+  const pickDirectOpt = useCallback(async (i: number) => {
+    setSheet(null);
+    const v = videoRef.current;
+    if (!v || !onPickDirect || swapping || i === (directActive ?? 0)) return;
+    const oldSrc = v.currentSrc || v.src, t = v.currentTime, wasPlaying = !v.paused;
+    setSwapping(true);
+    try {
+      const url = await onPickDirect(i);   // lazy: only the picked option
+      await swapSource(url, t, wasPlaying);
+      onDirectActive?.(i);
+    } catch {
+      onNote?.("Couldn't switch right now, so we kept playing the current version.");
+      if ((v.currentSrc || v.src) !== oldSrc) await swapSource(oldSrc, t, wasPlaying).catch(() => {});
+    } finally {
+      setSwapping(false);
+    }
+  }, [onPickDirect, onDirectActive, onNote, directActive, swapping, swapSource]);
+
+  const pickDirectAudio = (a: string) => {
+    if (!directOptions || a === activeOpt?.audio) return setSheet(null);
+    const h = activeOpt?.height ?? 0;
+    const best = directOptions.filter((o) => o.audio === a)
+      .reduce((b, o) => (Math.abs((o.height ?? 0) - h) < Math.abs((b.height ?? 0) - h) ? o : b));
+    pickDirectOpt(best.index); // sibling file with that audio, closest height
+  };
   const hideTimer = useRef<any>(null);
   const retriesRef = useRef(0);
   const resumeKeyRef = useRef<string | null>(null);
@@ -491,7 +560,7 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
         onClick={togglePlay}
       />
 
-      {buffering && !playbackError && (
+      {(buffering || swapping) && !playbackError && (
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
           <Loader2 className="h-12 w-12 animate-spin text-white/80" />
         </div>
@@ -604,7 +673,32 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
                 {i === activeTrack && <span>✓</span>}
               </button>
             ))}
-            {sheet === "audio" && tracks.length <= 1 && (
+            {sheet === "audio" && tracks.length <= 1 && directOn && (
+              <>
+                {(directAudios.length ? directAudios : [directAudioHint ?? "Default"]).map((a) => (
+                  <button
+                    key={a}
+                    onClick={() => (directAudios.length > 1 ? pickDirectAudio(a) : setSheet(null))}
+                    className={`w-full text-left px-3 py-3 rounded-lg text-base flex items-center justify-between ${(directAudios.length <= 1 || a === activeOpt?.audio) ? "bg-netflix/20 text-white" : "text-gray-200"}`}
+                  >
+                    <span>{a}</span>
+                    {(directAudios.length <= 1 || a === activeOpt?.audio) && <span>✓</span>}
+                  </button>
+                ))}
+                {directAudios.length <= 1 && (
+                  <p className="text-sm text-muted px-1 py-2">This file plays its default audio track only.</p>
+                )}
+                {canEmbedSwitch && (
+                  <button
+                    onClick={() => { setSheet(null); onSwitchToEmbed!(); }}
+                    className="w-full text-left px-3 py-3 rounded-lg text-base flex items-center justify-between text-sky-400"
+                  >
+                    <span>🌐 Switch languages in source player</span>
+                  </button>
+                )}
+              </>
+            )}
+            {sheet === "audio" && tracks.length <= 1 && !directOn && (
               <p className="text-sm text-muted px-1 py-2">🎧 Checking for more audio tracks — options appear here automatically if this file has them.</p>
             )}
             {sheet === "quality" && levels.length > 1 && (
@@ -628,7 +722,17 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
                 ))}
               </>
             )}
-            {sheet === "quality" && levels.length <= 1 && (
+            {sheet === "quality" && levels.length <= 1 && directOn && directOptions!.map((o) => (
+              <button
+                key={o.index}
+                onClick={() => pickDirectOpt(o.index)}
+                className={`w-full text-left px-3 py-3 rounded-lg text-base flex items-center justify-between ${o.index === activeOpt?.index ? "bg-netflix/20 text-white" : "text-gray-200"}`}
+              >
+                <span>📺 {o.label}</span>
+                {o.index === activeOpt?.index && <span>✓</span>}
+              </button>
+            ))}
+            {sheet === "quality" && levels.length <= 1 && !directOn && (
               <div className="w-full text-left px-3 py-3 rounded-lg text-base flex items-center justify-between bg-netflix/20 text-white">
                 <span>📺 Original quality (direct stream)</span>
                 <span>✓</span>
