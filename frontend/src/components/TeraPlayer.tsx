@@ -4,6 +4,7 @@ import {
   Play, Pause, Volume2, VolumeX, Maximize2, Minimize2, Loader2,
   PictureInPicture2, AlertCircle, Languages, MonitorPlay, Check,
   Share2, ListVideo, Monitor, X, ChevronLeft, ChevronRight,
+  EllipsisVertical,
 } from "lucide-react";
 import { api, isLite, type QualityOption } from "../lib/api";
 
@@ -97,7 +98,7 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
   const [swapping, setSwapping] = useState(false);
   // Vegamovies-style chrome state.
   const [displayMode, setDisplayMode] = useState<"fit" | "crop" | "stretch">("fit");
-  const [panel, setPanel] = useState<"speed" | "screen" | "episodes" | null>(null);
+  const [panel, setPanel] = useState<"speed" | "screen" | "episodes" | "more" | null>(null);
   const [copied, setCopied] = useState(false);
 
   // Position-preserving src swap (generalised form of the upgradeUrl
@@ -730,6 +731,11 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
             ) : <span />}
           </div>
         )}
+        {/* Time row (Vegamovies-style): current left, duration right, above the seek line. */}
+        <div className="flex items-center justify-between px-3 pb-1 font-mono text-xs text-white/80">
+          <span>{fmt(current)}</span>
+          <span>{fmt(duration)}</span>
+        </div>
         <input
           type="range" min={0} max={duration || 0} step={0.1} value={Math.min(current, duration || 0)}
           onChange={(e) => { const v = videoRef.current; if (v) v.currentTime = Number(e.target.value); }}
@@ -737,7 +743,7 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
           style={{ background: `linear-gradient(to right, #e50914 0%, #e50914 ${progressPct}%, rgba(255,255,255,0.15) ${progressPct}%, rgba(255,255,255,0.15) 100%)` }}
           aria-label="Seek"
         />
-        <div className="flex items-center gap-1 px-3 pb-3 pt-2 text-white">
+        <div className="flex items-center gap-1 px-2 pb-3 pt-2 text-white sm:px-3">
           <button onClick={togglePlay} className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg hover:bg-white/20" aria-label={playing ? "Pause" : "Play"}>
             {playing ? <Pause className="h-5 w-5" /> : <Play className="h-5 w-5" />}
           </button>
@@ -750,30 +756,30 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
             className="tp-range w-16 hidden sm:block"
             aria-label="Volume"
           />
-          <div className="ml-1 whitespace-nowrap font-mono text-xs text-white/80">
-            {fmt(current)} <span className="text-white/40">/ {fmt(duration)}</span>
-          </div>
           <div className="ml-auto flex items-center gap-1">
             <button onClick={enterPip} className="hidden h-9 w-9 shrink-0 items-center justify-center rounded-lg hover:bg-white/20 sm:flex" aria-label="Picture in picture">
               <PictureInPicture2 className="h-5 w-5" />
             </button>
-            <button onClick={() => { setSheet(null); setPanel(panel === "screen" ? null : "screen"); }} className="flex h-9 shrink-0 items-center justify-center gap-1 rounded-lg px-2 text-sm font-bold hover:bg-white/20" aria-label="Screen mode">
-              <Monitor className="h-4 w-4" /><span className="hidden sm:inline">{displayMode === "fit" ? "Fit" : displayMode === "crop" ? "Crop" : "Stretch"}</span>
+            <button onClick={() => { setSheet(null); setPanel(panel === "screen" ? null : "screen"); }} className="hidden h-9 shrink-0 items-center justify-center gap-1 rounded-lg px-2 text-sm font-bold hover:bg-white/20 sm:flex" aria-label="Screen mode">
+              <Monitor className="h-4 w-4" /><span>{displayMode === "fit" ? "Fit" : displayMode === "crop" ? "Crop" : "Stretch"}</span>
             </button>
             <button onClick={() => { setSheet(null); setPanel(panel === "speed" ? null : "speed"); }} className="flex h-9 min-w-[3rem] shrink-0 items-center justify-center rounded-lg px-2 text-sm font-bold hover:bg-white/20" aria-label="Playback speed">
               {rate === 1 ? "1×" : `${rate}×`}
             </button>
             {episodes && episodes.length > 0 && (
-              <button onClick={() => { setSheet(null); setPanel(panel === "episodes" ? null : "episodes"); }} className="flex h-9 shrink-0 items-center justify-center gap-1 rounded-lg px-2 text-sm font-bold hover:bg-white/20" aria-label="Episodes">
-                <ListVideo className="h-4 w-4" /><span className="hidden sm:inline">EPISODES</span>
+              <button onClick={() => { setSheet(null); setPanel(panel === "episodes" ? null : "episodes"); }} className="hidden h-9 shrink-0 items-center justify-center gap-1 rounded-lg px-2 text-sm font-bold hover:bg-white/20 sm:flex" aria-label="Episodes">
+                <ListVideo className="h-4 w-4" /><span>EPISODES</span>
               </button>
             )}
-            <button onClick={() => openSheet("audio")} className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-lg hover:bg-white/20" aria-label="Audio tracks">
+            <button onClick={() => openSheet("audio")} className="relative hidden h-9 w-9 shrink-0 items-center justify-center rounded-lg hover:bg-white/20 sm:flex" aria-label="Audio tracks">
               <Languages className="h-5 w-5" />
               {tracks.length > 1 && <span className="absolute top-1 right-1 w-2.5 h-2.5 rounded-full bg-netflix" />}
             </button>
             <button onClick={() => openSheet("quality")} disabled={swapping} aria-busy={swapping} className="flex h-9 min-w-[3.5rem] shrink-0 items-center justify-center gap-1 rounded-lg px-2 text-sm font-bold hover:bg-white/20 disabled:cursor-wait disabled:opacity-70" aria-label="Quality">
-              <MonitorPlay className="h-4 w-4" />{qualityLabel}
+              <span className="hidden sm:inline"><MonitorPlay className="h-4 w-4" /></span>{qualityLabel}
+            </button>
+            <button onClick={() => { setSheet(null); setPanel(panel === "more" ? null : "more"); }} className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg hover:bg-white/20 sm:hidden" aria-label="More options">
+              <EllipsisVertical className="h-5 w-5" />
             </button>
             <button onClick={enterFullscreen} className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg hover:bg-white/20" aria-label="Fullscreen">
               {fullscreen ? <Minimize2 className="h-5 w-5" /> : <Maximize2 className="h-5 w-5" />}
@@ -829,6 +835,45 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
             </button>
           ))}
           <p className="px-3 pt-1 text-xs text-white/50">Fit shows the whole frame · Crop fills the screen · Stretch fills without bars.</p>
+        </div>
+      )}
+
+      {/* More menu (phones only — the bar hides Screen / Audio / Episodes / PiP below sm). */}
+      {panel === "more" && (
+        <div className="absolute inset-x-3 bottom-24 z-30 rounded-xl border border-white/10 bg-[#1c1c1e] p-3 shadow-2xl sm:left-auto sm:right-3 sm:w-72">
+          <div className="mb-2 flex items-center justify-between">
+            <span className="text-sm font-bold tracking-wide text-white">MORE</span>
+            <button onClick={() => setPanel(null)} className="flex h-7 w-7 items-center justify-center rounded-full text-white hover:bg-white/10" aria-label="Close"><X className="h-4 w-4" /></button>
+          </div>
+          <button
+            onClick={() => setPanel("screen")}
+            className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left text-base text-gray-200 hover:bg-white/5"
+          >
+            <span className="flex items-center gap-2"><Monitor className="h-4 w-4" /> Screen</span>
+            <span className="text-sm text-[#f5a623]">{displayMode === "fit" ? "Fit" : displayMode === "crop" ? "Crop" : "Stretch"}</span>
+          </button>
+          <button
+            onClick={() => openSheet("audio")}
+            className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left text-base text-gray-200 hover:bg-white/5"
+          >
+            <span className="flex items-center gap-2"><Languages className="h-4 w-4" /> Audio tracks</span>
+            {tracks.length > 1 && <span className="text-sm text-white/50">{tracks.length} tracks</span>}
+          </button>
+          {episodes && episodes.length > 0 && (
+            <button
+              onClick={() => setPanel("episodes")}
+              className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left text-base text-gray-200 hover:bg-white/5"
+            >
+              <span className="flex items-center gap-2"><ListVideo className="h-4 w-4" /> Episodes</span>
+              <span className="text-sm text-white/50">{episodes.length}</span>
+            </button>
+          )}
+          <button
+            onClick={() => { setPanel(null); enterPip(); }}
+            className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left text-base text-gray-200 hover:bg-white/5"
+          >
+            <span className="flex items-center gap-2"><PictureInPicture2 className="h-4 w-4" /> Picture in picture</span>
+          </button>
         </div>
       )}
 
