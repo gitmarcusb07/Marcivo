@@ -33,6 +33,49 @@
 
 export const posts = [
 {
+    slug: "faa-nationwide-ground-stop-november-2026-us-flights-grounded",
+    image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Frontier_Airlines_jet_at_Phoenix_Sky_Harbor_gate_F6.jpg/1280px-Frontier_Airlines_jet_at_Phoenix_Sky_Harbor_gate_F6.jpg",
+    imageAlt: "A commercial jet parked at a gate at a US airport at night — flights were held on the ground during the November 2026 FAA ground stop (Wikimedia Commons)",
+    title: "FAA Ground Stop November 2026: US Halts All Flights After Air Traffic Control Outage",
+    description:
+      "FAA ground stop November 2026: the US halted all departing flights after an air traffic control outage — what caused it and when flights resumed.",
+    excerpt:
+      "The FAA ordered every departing flight in the US to stay on the ground on November 13, 2026, after a communications outage hit air traffic control — the first nationwide halt since January 2023.",
+    date: "2026-11-14",
+    category: "News",
+    sections: [
+      { type: "p", text: "The FAA ground stop on November 13, 2026, brought air travel across the United States to a standstill. The Federal Aviation Administration ordered every departing flight at every US airport to stay on the ground after a communications outage hit air traffic control centres across the country. Flights already in the air were allowed to land, but nothing new could take off. The stop lasted more than four hours before the FAA lifted it on Friday evening, and officials said there was no evidence of a cyberattack." },
+      { type: "h2", text: "FAA Ground Stop: What Happened on November 13" },
+      { type: "p", text: "The FAA issued the nationwide ground stop on Friday afternoon, November 13, 2026, citing “extraordinary circumstances” and “reasons of safety” in an air traffic control advisory. The order covered all US airports and every departing flight. Planes already airborne were not ordered to land immediately — they were allowed to continue to their destinations — but every aircraft still on the ground had to stay put until further notice." },
+      { type: "p", text: "The disruption piled up fast. Flight-tracking data counted more than 10,000 delays and over 4,400 cancellations while the stop was in force. Thousands of travellers were stranded at airports or scrambled to get home in rental cars, trains and buses, and knock-on delays continued long after departures resumed." },
+      { type: "h2", text: "What Caused the FAA Ground Stop?" },
+      { type: "p", text: "Transportation Secretary Sean Duffy said the problem began at 3:36 pm Eastern Time, when radar and communications systems at air traffic control centres and terminal radar facilities across the country became unstable. The FAA said a telecommunications outage was affecting all of its Air Route Traffic Control Centers — the 22 regional centres that guide aircraft flying between airports at high altitude." },
+      { type: "p", text: "Duffy blamed the age of the equipment. Switches and routers in the system’s aging analog technology became overloaded and started sending inconsistent data, he said, and the FAA shut the system down out of caution rather than risk flying with unreliable communications. “What we have is an incredibly old air traffic control system,” Duffy said. It is the latest sign of strain on a system hit by equipment failures, communications problems and controller shortages while the FAA tries to replace aging infrastructure." },
+      { type: "p", text: "Officials were quick to rule out foul play. Homeland Security Secretary Markwayne Mullin told reporters there was no evidence of a cyberattack, and the FBI does not believe the outage was caused by a cyberattack or criminality. Mullin also said the incident had no connection to the Microsoft 365 outage that disrupted Outlook and Teams the same week, and stressed that the public was never in danger. “We didn’t lose all telecom, didn’t lose all radar during ground stop,” Duffy said — the shutdown was a precaution, not a total blackout of the system." },
+      { type: "h2", text: "Only the Third Nationwide Ground Stop in US History" },
+      { type: "p", text: "Nationwide ground stops are extremely rare. The last ones of this scale were on September 11, 2001, and in January 2023, when a failure in the FAA system that distributes flight safety notices — known as NOTAM — grounded departures across the country. Friday’s halt was the second nationwide ground stop of all departures since the September 11 attacks, and the third in American aviation history." },
+      { type: "h2", text: "Trump Declares a National Emergency Over Air Traffic Control" },
+      { type: "p", text: "President Donald Trump has declared the air traffic control failures a “national emergency,” according to Homeland Security Secretary Mullin. Transportation Secretary Duffy renewed the president’s request for Congress to approve $30 billion to upgrade the nation’s air traffic control system, arguing that Friday’s outage showed how old the equipment has become. The White House is expected to use the ground stop as its main argument for the funding." },
+      { type: "h2", text: "What Travellers Should Do Now" },
+      { type: "steps", items: [
+        "Check your flight status before leaving for the airport. Airlines are still working through delays and cancellations from the backlog, so a flight listed as on time can still change.",
+        "Contact your airline, not the airport, to rebook. Airlines handle rebooking and refunds, and most will rebook you free of charge after a disruption like this.",
+        "Keep receipts for meals, hotels and transport if you are stranded. You may be able to claim them back from the airline or your travel insurance, depending on your ticket and policy.",
+        "Allow extra time at the airport for the next few days, and watch for schedule changes, as aircraft and crews are out of position after the halt.",
+      ] },
+      { type: "h2", text: "What Happens Next After the FAA Ground Stop" },
+      { type: "p", text: "FAA technicians are still investigating exactly what failed in the communications network. The stop itself has been lifted and flights are moving again, but the argument it triggered will run much longer: the White House wants $30 billion for a full modernisation of air traffic control. For passengers, the practical question is simpler — check before you travel, and expect knock-on delays while airlines reset their schedules." },
+      { type: "faq", items: [
+        { q: "What is an FAA ground stop?", a: "A ground stop is an FAA order that holds all departing flights on the ground at affected airports. In a nationwide ground stop, no departures are allowed anywhere in the country until the order is lifted; flights already airborne are normally allowed to land." },
+        { q: "How long did the November 2026 FAA ground stop last?", a: "More than four hours. It began on Friday afternoon, November 13, 2026, after communications problems were detected at 3:36 pm Eastern Time, and the FAA announced it had been lifted on Friday evening." },
+        { q: "Was the FAA ground stop caused by a cyberattack?", a: "No. US officials said there was no evidence of a cyberattack or malicious activity, and the FBI does not believe the outage was caused by a cyberattack or criminality. The FAA blamed a telecommunications outage and overloaded equipment in its aging system." },
+        { q: "Was the FAA outage linked to the Microsoft outage?", a: "No. Homeland Security Secretary Markwayne Mullin said there was no connection between the FAA incident and the Microsoft 365 outage affecting Outlook and Teams the same week." },
+        { q: "How many flights were affected by the FAA ground stop?", a: "Flight-tracking data counted more than 10,000 delays and over 4,400 cancellations while the stop was in force, with the total rising as airlines cleared the backlog." },
+      ] },
+      { type: "p", text: "The November 2026 FAA ground stop lasted only a few hours, but it exposed how much of American air travel depends on equipment that officials themselves describe as decades old. Flights are moving again — the argument over how fast to replace the system behind them is only getting started." },
+    ],
+  },
+{
     slug: "iran-bahrain-radar-strike-us-denies-drones-shot-down-november-2026",
     image: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Strait_of_Hormuz_%28MODIS_2020-12-04%29.jpg",
     imageAlt: "Satellite view of the Strait of Hormuz, the waterway at the centre of the latest Iran-US clash (NASA MODIS image via Wikimedia Commons)",
