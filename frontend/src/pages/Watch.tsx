@@ -258,6 +258,9 @@ export default function Watch() {
     setBusy(true); setErr(""); setFatal(""); setVideo(""); setEmbedUrl("");
     setLastIdentity(ident);
     setQData(null); setQActive(0); qFor.current = null;
+    // Qualities fetch runs IN PARALLEL with the resolve (not after playback
+    // starts), for embed and direct plays alike — the pickers need it early.
+    loadQualities(sourceUrl);
     // Use the clicked result directly — never a stale selectedMovie.
     setVersionTitle(vTitle);
     setStage(0);
@@ -295,8 +298,7 @@ export default function Watch() {
         if (got.seekable === false && sourceUrl) {
           watchUpgrade(sourceUrl, url);
         }
-        // Quality + sibling-audio menu for this title (direct files only).
-        loadQualities(sourceUrl);
+        // (Qualities already loading since startFromSource began.)
         // Engine starts after playback is rolling (never fights resolutions).
         // HLS sources already carry their own quality ladder (the player
         // attaches hls.js) — the file prober/converter doesn't apply.
@@ -377,6 +379,17 @@ export default function Watch() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [epParam, hasSource, d]);
+  // Auto-start the chosen source on mount (Marcus 2026-11-14: the version
+  // was already picked on Detail — no second ▶ Watch tap). Once only; the
+  // ref guard is StrictMode-safe. Episode flow (no source) is unaffected.
+  const srcStarted = useRef(false);
+  useEffect(() => {
+    if (hasSource && !srcStarted.current) {
+      srcStarted.current = true;
+      startFromSource(srcParam, labelParam || exactTitle, { result_id: resultIdParam, content_id: contentIdParam, alts: parseAlts(), ...epSE });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hasSource]);
   const rawHeader = d?.title || exactTitle || labelParam || "Watch";
   // Site titles are "Download X (2021) BluRay ... 480p [550MB] | ..." — show
   // the clean title, never the raw file-listing string.
@@ -413,12 +426,12 @@ export default function Watch() {
           className="mt-4 w-full md:w-auto px-8 py-3 rounded-xl bg-netflix font-bold disabled:opacity-50"
         >{busy ? "Fetching…" : `▶ Play ${epParam}`}</button>
       )}
-      {!video && !embedUrl && hasSource && (
+      {hasSource && err && (
         <button
           onClick={() => startFromSource(srcParam, labelParam || exactTitle, { result_id: resultIdParam, content_id: contentIdParam, alts: parseAlts(), ...epSE })}
           disabled={busy}
           className="mt-4 w-full md:w-auto px-8 py-3 rounded-xl bg-netflix font-bold disabled:opacity-50"
-        >{busy ? "Fetching…" : "▶ Watch"}</button>
+        >{busy ? "Fetching…" : "↻ Retry"}</button>
       )}
       {!hasSource && !epParam && <p className="text-muted text-sm mt-2">No source selected. Go back to Detail → pick a version or episode.</p>}
 
