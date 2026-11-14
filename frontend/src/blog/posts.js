@@ -33,6 +33,38 @@
 
 export const posts = [
 {
+    slug: "jr-ntr-anil-ravipudi-film-announced-laugh-riot-november-2026",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Jr-NTR-snapped-promoting-Devara.jpg",
+    imageAlt: "Jr NTR photographed while promoting Devara, wearing sunglasses on a red carpet. Photo via Wikimedia Commons.",
+    title: "Jr NTR Anil Ravipudi Film Announced: NTR Teams Up With Anil Ravipudi for a Full-On Comedy Entertainer",
+    description:
+      "Jr NTR Anil Ravipudi film announced today: NTR and Anil Ravipudi team up for a full-on comedy entertainer under NTR Arts. Details, reactions and what is next.",
+    excerpt:
+      "Jr NTR has announced his next film with director Anil Ravipudi, a full-on comedy entertainer produced by Kalyan Ram under NTR Arts. NTR called it a laugh riot, and the surprise pairing is already trending.",
+    date: "2026-11-14",
+    category: "Cinema",
+    sections: [
+      { type: "p", text: "The Jr NTR Anil Ravipudi film is officially happening. Jr NTR announced his next film with director Anil Ravipudi on Saturday, November 14, 2026, surprising Tollywood with a pairing nobody saw coming. NTR shared a photograph of himself with Ravipudi on X and wrote, \"This one's going to be a laugh riot...\" Ravipudi and NTR Arts confirmed the project within minutes, and #NTRxAnilRavipudi started trending." },
+      { type: "h2", text: "Jr NTR Anil Ravipudi Film: What Was Announced" },
+      { type: "p", text: "The announcement came straight from the people making the film. Jr NTR posted a photo with Anil Ravipudi on X, tagging the director, producer Nandamuri Kalyan Ram, and NTR Arts, with the caption, \"This one's going to be a laugh riot...\" Ravipudi replied that their combination had been long overdue, calling it a full-on entertainer and joking that it would be rolling very soon, or rather, ROFL-ing very soon. NTR Arts then confirmed the project, saying the Man of Masses joins hands with the blockbuster director." },
+      { type: "list", items: ["The film is a full-on comedy entertainer, the first collaboration between Jr NTR and Anil Ravipudi.", "Nandamuri Kalyan Ram will produce the film under the NTR Arts banner.", "The project is untitled for now, with no cast or release date announced yet.", "Ravipudi said the film would go on floors very soon.", "The announcement was made on X on November 14, 2026, by Jr NTR, Anil Ravipudi and NTR Arts."] },
+      { type: "h2", text: "Why the Jr NTR and Anil Ravipudi Pairing Surprised Tollywood" },
+      { type: "p", text: "The surprise is the pairing itself. Jr NTR has spent the last few years on large-scale pan-India projects, from RRR and Devara to War 2, and his current slate is built around action spectacles. Anil Ravipudi, meanwhile, is Tollywood's most reliable maker of family entertainers, with hits such as Sankranthiki Vasthunam, F2, F3, Sarileru Neekevvaru and Bhagavanth Kesari. Nobody expected the two to meet in the middle on a comedy. There were no prior reports of such a film being developed, which is why the announcement landed as a genuine shock rather than a confirmation of a long-rumoured project." },
+      { type: "p", text: "There is also history between the two camps. Ravipudi made his directorial debut with Pataas, produced by Kalyan Ram under NTR Arts, the same banner that will now produce the NTR film. For NTR, it is a change of gear: a lighter commercial film after a run of intense action roles, and a chance to show the comic timing his fans have long wanted to see on the big screen." },
+      { type: "h2", text: "What We Know So Far About the Film" },
+      { type: "p", text: "Beyond the announcement itself, details are thin, and that is worth stating plainly. The film has no title yet, no other cast members have been named, and no release window has been given. What is confirmed is the core of it: Jr NTR in the lead, Anil Ravipudi directing, Kalyan Ram producing under NTR Arts, and a full-on comedy entertainer as the genre. Until the makers share a launch date, any talk of a specific release festival is speculation, not fact." },
+      { type: "h2", text: "Anil Ravipudi Has Two Films in Play, Not One" },
+      { type: "p", text: "One point of confusion is already doing the rounds, so here is the clarification. Dil Raju confirmed at the Ramayana success meet that a separate Ravipudi film under Sri Venkateswara Creations targets Sankranti 2028, with the hero yet to be finalised. That is a different project from the NTR film, which is entirely an NTR Arts production. Ravipudi is also currently wrapping up a film starring Venkatesh and Kalyan Ram that is lined up for the Pongal 2027 window." },
+      { type: "h2", text: "What Is Next for Jr NTR" },
+      { type: "p", text: "The Ravipudi film joins a busy slate for Jr NTR. He is currently filming Dragon, the action drama directed by Prashanth Neel, scheduled for a worldwide theatrical release on June 11, 2027. Dragon also features Rukmini Vasanth, Anil Kapoor and Biju Menon, and is backed by Mythri Movie Makers and NTR Arts. He is also working with Trivikram Srinivas on a film referred to as NTRxTrivikram, reported to be a mythology-inspired project centred on Lord Muruga. With Dragon still in production, the Ravipudi entertainer is most likely to go on floors after Dragon wraps, though the makers have not confirmed an order of work." },
+      { type: "h2", text: "Fan Reaction to the NTR and Anil Ravipudi Announcement" },
+      { type: "p", text: "The reaction online has been loud and immediate. Fans flooded the announcement posts with the #NTRxAnilRavipudi hashtag, many calling it the most unexpected news of the day in Tollywood. The contrast is part of the appeal: NTR, the mass hero of RRR and Devara, doing a laugh riot with the director of Sankranthiki Vasthunam. Until the makers reveal a title and shooting schedule, the excitement rests on the pairing alone." },
+      { type: "h2", text: "Jr NTR Anil Ravipudi Film: Frequently Asked Questions" },
+      { type: "faq", items: [{ q: "Has Jr NTR announced a film with Anil Ravipudi?", a: "Yes. Jr NTR announced it on X on November 14, 2026, calling it a laugh riot. Anil Ravipudi and NTR Arts confirmed it the same day." }, { q: "What kind of film is the Jr NTR and Anil Ravipudi project?", a: "A full-on comedy entertainer, according to the makers. It is the first collaboration between Jr NTR and Anil Ravipudi." }, { q: "Who is producing the Jr NTR Anil Ravipudi film?", a: "Nandamuri Kalyan Ram is producing it under the NTR Arts banner." }, { q: "When will the Jr NTR Anil Ravipudi film release?", a: "No release date has been announced. The film is untitled, and Ravipudi has only said it will go on floors very soon." }, { q: "Is the NTR film the same as Anil Ravipudi's Sankranti 2028 film?", a: "No. The Sankranti 2028 film is a separate project under Dil Raju's Sri Venkateswara Creations, with the hero yet to be finalised." }] },
+      { type: "p", text: "The Jr NTR Anil Ravipudi film is today's surprise Tollywood announcement: a full-on comedy entertainer from a pairing nobody predicted, produced by Kalyan Ram under NTR Arts. With no title, cast or release date yet, the next update to watch for is the official launch and shooting schedule." },
+    ],
+  },
+{
     slug: "aamir-khan-farhan-akhtar-microdrama-platform-india",
     image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Aamir_Khan_%28Berlin_Film_Festival_2011%29.jpg/1280px-Aamir_Khan_%28Berlin_Film_Festival_2011%29.jpg",
     imageAlt: "Aamir Khan at the Berlin Film Festival. Aamir Khan Productions is teaming up with Excel Entertainment to launch a microdrama platform in India.",
