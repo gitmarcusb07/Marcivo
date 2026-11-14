@@ -948,9 +948,20 @@ async function runPipeline(sourceUrl: string, job: Job, background = false, skip
     job.stage = "cinejoy";
     return await cinejoyResolve(sourceUrl, job, season, episode);
   }
-  // Vegamovies: the file lanes below run FIRST (see the embed fallback
-  // after gdirect). Playing the direct file in our own player keeps the
-  // source's player — and its watermark overlay — out of the picture.
+  // Vegamovies (source-specific): pages with a Watch Online button play
+  // through the source's own embed player. Unlike Cinegram this is a
+  // best-effort lane — most pages have no such button, so a miss falls
+  // through to the download lanes below instead of failing the job.
+  // NOTE (2026-11-14): the file lanes were tried FIRST here briefly so
+  // plays would use our own player and dodge the source player's
+  // watermark overlay — reverted the same day because direct files don't
+  // honor Range: seeking restarts the video from the beginning, while
+  // the source's embed player seeks properly. Embed first again.
+  if (isVegamovies(sourceUrl) && !(job as any).cancelled) {
+    job.stage = "fast-path";
+    const embedUrl = await vegamoviesEmbed(sourceUrl, job);
+    if (embedUrl) return embedUrl;
+  }
   const t00 = Date.now();
   const elapsed = () => Date.now() - t00;
   // Validate one candidate: ok → adopt it; dead/invalid → fall through.
@@ -988,18 +999,6 @@ async function runPipeline(sourceUrl: string, job: Job, background = false, skip
     console.log(`[resolve] stage gdirect ${finalUrl ? "hit" : "miss"}: ${hostOf(sourceUrl)} ms=${elapsed()}`);
     if (finalUrl && (await consider("gdirect", finalUrl))) return finalUrl;
     finalUrl = null;
-  }
-  // Vegamovies embed fallback (source-specific): pages with a Watch Online
-  // button play through the source's own embed player. It runs AFTER the
-  // file lanes so a direct file — played in our own player, with no source
-  // watermark — wins whenever one resolves. Unlike Cinegram this is a
-  // best-effort lane: a miss falls through to the browser lanes below
-  // instead of failing the job. (Kept ungated like before, so seekable-
-  // upgrade jobs still get the embed exactly as they did when it ran first.)
-  if (isVegamovies(sourceUrl) && !(job as any).cancelled) {
-    job.stage = "fast-path";
-    const embedUrl = await vegamoviesEmbed(sourceUrl, job);
-    if (embedUrl) return embedUrl;
   }
   // LITE: the seekable upgrade needs the python/bridge lanes — fail fast so
   // the player keeps playing the direct URL it already has (Watch treats a
