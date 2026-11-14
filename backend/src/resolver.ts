@@ -361,6 +361,81 @@ async function cinejoyResolve(sourceUrl: string, job: Job, season?: number, epis
   }
 }
 
+// --- Vegamovies: authorized-embed lane (source-specific) ---------------------
+// Some Vegamovies content pages carry their own "Watch Online" button
+// ("<Title> – Watch Free Online" heading + a "Watch Online" link) pointing
+// at the site's public player (https://playdrive.vip/e/<id>). That player
+// page is a full video player (video element, quality + episode pickers)
+// and explicitly allows framing (CSP frame-ancestors *, no
+// X-Frame-Options), so Marcivo frames the source's own player exactly the
+// way the source does — the session is created inside the user's browser at
+// playback time. Nothing is captured, cached or hardcoded. Pages without a
+// Watch Online button (older titles, most series) return null here and fall
+// through to the normal download lanes unchanged.
+function vegamoviesHosts(): string[] {
+  return (process.env.WATCH_VEGAMOVIES_HOSTS || "vegamovies.lease").split(",").map((s) => s.trim().toLowerCase()).filter(Boolean);
+}
+function playdriveHosts(): string[] {
+  return (process.env.WATCH_PLAYDRIVE_HOSTS || "playdrive.vip").split(",").map((s) => s.trim().toLowerCase()).filter(Boolean);
+}
+export function isVegamovies(u: string): boolean {
+  const h = hostOf(u);
+  return vegamoviesHosts().some((d) => h === d || h.endsWith("." + d));
+}
+
+/** Extract the site's own Watch Online player URL from a Vegamovies content
+    page's HTML. Pure (no network): the "Watch Online" anchor's href must be
+    a playdrive /e/<id> embed URL — any other link (including other "watch"
+    labels) is ignored. Returns null when the page has no such button.
+    Exported for unit tests. */
+export function vegamoviesEmbedUrlFromHtml(html: string): string | null {
+  const $ = cheerio.load(html);
+  let found: string | null = null;
+  $("a[href]").each((_, el) => {
+    if (found) return false;
+    const text = String($(el).text() || "").replace(/\s+/g, " ").trim();
+    if (!/watch online/i.test(text)) return;
+    const href = String($(el).attr("href") || "").trim();
+    if (!href) return;
+    try {
+      const u = new URL(href);
+      const h = u.hostname.toLowerCase();
+      if (!playdriveHosts().some((d) => h === d || h.endsWith("." + d))) return;
+      if (!/^\/e\/[A-Za-z0-9_-]+\/?$/.test(u.pathname)) return;
+      found = u.toString();
+    } catch { /* relative/other hrefs never count */ }
+  });
+  return found;
+}
+
+/** Resolve a Vegamovies content page to the source's own player embed URL.
+    Returns null when the page has no Watch Online button or the embed
+    doesn't respond — the caller falls through to the download lanes. */
+async function vegamoviesEmbed(sourceUrl: string, job: Job): Promise<string | null> {
+  const ua = process.env.SITE_USER_AGENT || "Mozilla/5.0 (Windows NT 10.0; Win64; x64)";
+  let html = "";
+  try {
+    const page = await axios.get(sourceUrl, { timeout: 15000, headers: { "User-Agent": ua }, maxRedirects: 5, validateStatus: () => true });
+    if (page.status >= 400 || typeof page.data !== "string") return null;
+    html = page.data;
+  } catch { return null; }
+  const embedUrl = vegamoviesEmbedUrlFromHtml(html);
+  if (!embedUrl) return null;
+
+  // Reachability check only: the player shell is generic, so this catches
+  // outages — title/episode availability is decided inside the embed at
+  // playback time (nothing here is a captured stream URL or token).
+  job.stage = "validating";
+  try {
+    const er = await axios.get(embedUrl, { timeout: 12000, headers: { "User-Agent": ua, Referer: sourceUrl }, maxRedirects: 5, validateStatus: () => true });
+    if (er.status >= 400 || typeof er.data !== "string" || !/<video/i.test(er.data)) return null;
+  } catch { return null; }
+  job.embed = true;
+  job.stage = "ready";
+  console.log(`[resolve] vegamovies embed ready: ${hostOf(sourceUrl)}`);
+  return embedUrl;
+}
+
 // --- Bounded scheduler: at most N resolutions at once; 1 slot reserved for taps ---
 // Background pre-resolves may only occupy maxConcurrency-1 slots, so a user
 // tap never queues behind 2x165s background jobs (the 3-4min bug).
@@ -859,6 +934,15 @@ async function runPipeline(sourceUrl: string, job: Job, background = false, skip
   if (isCinejoy(sourceUrl) && !(job as any).cancelled) {
     job.stage = "cinejoy";
     return await cinejoyResolve(sourceUrl, job, season, episode);
+  }
+  // Vegamovies (source-specific): pages with a Watch Online button play
+  // through the source's own embed player. Unlike Cinegram this is a
+  // best-effort lane — most pages have no such button, so a miss falls
+  // through to the download lanes below instead of failing the job.
+  if (isVegamovies(sourceUrl) && !(job as any).cancelled) {
+    job.stage = "fast-path";
+    const embedUrl = await vegamoviesEmbed(sourceUrl, job);
+    if (embedUrl) return embedUrl;
   }
   const t00 = Date.now();
   const elapsed = () => Date.now() - t00;

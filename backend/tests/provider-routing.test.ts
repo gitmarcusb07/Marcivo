@@ -2,7 +2,7 @@
 // Run: npx tsx tests/provider-routing.test.ts
 import { strict as assert } from "assert";
 import { exclusiveSiteId, providerSiteIds, isCatalogExact, contentId, groupByContent } from "../src/identity.js";
-import { cinegramEmbedUrlFromHtml, cinejoyWatchUrlFromSource, isCinejoy, resolveKey } from "../src/resolver.js";
+import { cinegramEmbedUrlFromHtml, cinejoyWatchUrlFromSource, isCinejoy, resolveKey, vegamoviesEmbedUrlFromHtml, isVegamovies } from "../src/resolver.js";
 import { siteConfigs, buildSearchUrl, describeFetchFailure, describeFetchError, extractCardResults, cinejoySlug, cinejoyResultsFromTmdb, searchSites } from "../src/siteSearch.js";
 
 let n = 0;
@@ -96,6 +96,42 @@ t("series page without episode anchors → layout error", () => {
   assert.throws(() => cinegramEmbedUrlFromHtml("<html></html>", "/tv/9488-breaking-bad", 1, 1), /No episode list/);
 });
 
+// --- Vegamovies: Watch Online button → the source's own playdrive embed ---
+const VEGA_WATCH_HTML = `<html><body>
+  <h5><strong><span>Cold Storage (2026) – Watch Free Online</span></strong></h5>
+  <p><a href="https://playdrive.vip/e/AQCHfzgACTUV1g" class="click-btn" target="_blank">Watch Online</a></p>
+  <h5><strong>480p BluRay [450MB]</strong></h5>
+  <p><a href="https://nexdrive.beer/genxfm784776520327/" target="_blank">Download Now</a></p>
+</body></html>`;
+const VEGA_NOWATCH_HTML = `<html><body>
+  <h5><strong>480p BluRay [550MB]</strong></h5>
+  <p><a href="https://nexdrive.beer/genxfm784776361249/" target="_blank">Download Now</a></p>
+</body></html>`;
+const VEGA_WRONG_HOST_HTML = `<html><body>
+  <p><a href="https://example-stream.example/e/abc123" target="_blank">Watch Online</a></p>
+</body></html>`;
+
+t("vegamovies page with Watch Online → playdrive embed URL", () => {
+  assert.equal(vegamoviesEmbedUrlFromHtml(VEGA_WATCH_HTML), "https://playdrive.vip/e/AQCHfzgACTUV1g");
+});
+
+t("vegamovies page without Watch Online → null (download lanes take over)", () => {
+  assert.equal(vegamoviesEmbedUrlFromHtml(VEGA_NOWATCH_HTML), null);
+  assert.equal(vegamoviesEmbedUrlFromHtml("<html></html>"), null);
+});
+
+t("Watch Online link to a non-playdrive host → null", () => {
+  assert.equal(vegamoviesEmbedUrlFromHtml(VEGA_WRONG_HOST_HTML), null);
+});
+
+t("isVegamovies matches the lease domain only", () => {
+  withEnv({ WATCH_VEGAMOVIES_HOSTS: undefined }, () => {
+    assert.ok(isVegamovies("https://vegamovies.lease/download-dune-2021-bluray-dual-audio-hindi/"));
+    assert.ok(!isVegamovies("https://vegamovies.gallery/download-dune-2021/"));
+    assert.ok(!isVegamovies("https://rogmovies.autos/download-cold-call-2026/"));
+  });
+});
+
 // --- 3/7: Detail exact-mode matching for catalog-style (yearless) titles ---
 t("catalog-exact: plain provider titles match; spin-offs/extras never", () => {
   assert.ok(isCatalogExact("Inception online free", "Inception"));
@@ -132,6 +168,35 @@ t("SITE4 env reads correctly and builds the Cinegram search URL", () => {
     assert.equal(u.origin + u.pathname, "https://cinegram.tv/index.php");
     assert.equal(u.searchParams.get("menu"), "search");
     assert.equal(u.searchParams.get("query"), "Breaking Bad");
+  });
+});
+
+// --- Domain swap (2026-11-14): unset env → code fallbacks point at the new
+// Vegamovies/RogMovies domains; set env still wins. ---
+t("SITE1/SITE2 fallbacks point at vegamovies.lease / rogmovies.autos; env wins", () => {
+  withEnv({
+    SITE1_BASE_URL: undefined, SITE1_SEARCH_PATH: undefined, SITE1_NAME: undefined,
+    SITE2_BASE_URL: undefined, SITE2_SEARCH_PATH: undefined, SITE2_NAME: undefined,
+  }, () => {
+    const c1 = siteConfigs().find((s) => s.id === 1) as any;
+    const c2 = siteConfigs().find((s) => s.id === 2) as any;
+    assert.ok(c1, "site 1 must be configured by fallback");
+    assert.ok(c2, "site 2 must be configured by fallback");
+    assert.equal(c1.base_url, "https://vegamovies.lease");
+    assert.equal(c1.search_path, "/ts-search.php?q={query}&page=1");
+    assert.equal(c2.base_url, "https://rogmovies.autos");
+    assert.equal(c2.search_path, "/ts-search.php?q={query}&page=1");
+    const u = new URL(buildSearchUrl(c1.base_url, c1.search_path, "Dune"));
+    assert.equal(u.origin + u.pathname, "https://vegamovies.lease/ts-search.php");
+    assert.equal(u.searchParams.get("q"), "Dune");
+  });
+  withEnv({
+    SITE1_BASE_URL: "https://old-vega.example/",
+    SITE1_SEARCH_PATH: "/?s={query}",
+  }, () => {
+    const c1 = siteConfigs().find((s) => s.id === 1) as any;
+    assert.equal(c1.base_url, "https://old-vega.example");
+    assert.equal(c1.search_path, "/?s={query}");
   });
 });
 

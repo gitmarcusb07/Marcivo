@@ -197,7 +197,7 @@ function normalise(href: string, base: string): string | null {
 
 export function siteConfigs(): SiteCfg[] {
   const defaults: Record<number, string> = {
-    1: "/?s={query}",
+    1: "/ts-search.php?q={query}&page=1",
     2: "/ts-search.php?q={query}&page=1",
     3: "/search.php?q={query}&page=1",
     4: "/?s={query}",
@@ -206,9 +206,19 @@ export function siteConfigs(): SiteCfg[] {
     7: "/search?q={query}",
     8: "/ts-search.php?q={query}&page=1",
   };
+  // Code fallbacks for the two domains Marcus owns the swap for (2026-11-14):
+  // Vegamovies moved to vegamovies.lease and RogMovies to rogmovies.autos.
+  // Vegamovies' old /?s= search now 301s to a JS Typesense page with no
+  // server-rendered results, so its search default is the Typesense proxy
+  // path (same shape as RogMovies'). Render dashboard env vars still win
+  // when set; the fallback applies only when an env var is empty/unset.
+  const baseDefaults: Record<number, string> = {
+    1: "https://vegamovies.lease",
+    2: "https://rogmovies.autos",
+  };
   const out: SiteCfg[] = [];
   for (let i = 1; i <= 8; i++) {
-    const b = (process.env[`SITE${i}_BASE_URL`] || "").trim().replace(/\/$/, "");
+    const b = (process.env[`SITE${i}_BASE_URL`] || baseDefaults[i] || "").trim().replace(/\/$/, "");
     const p = (process.env[`SITE${i}_SEARCH_PATH`] || defaults[i]).trim();
     const n = (process.env[`SITE${i}_NAME`] || `Site ${i}`).trim();
     const strict = (process.env[`SITE${i}_STRICT_TITLE`] || "").trim().toLowerCase() === "true";
