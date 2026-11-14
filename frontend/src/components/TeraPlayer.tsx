@@ -361,7 +361,7 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
       }
     };
     const onPlay = () => setPlaying(true);
-    const onPause = () => { setPlaying(false); persist(); };
+    const onPause = () => { setPlaying(false); persist(); revealControls(); };
     const onTime = () => {
       setCurrent(v.currentTime);
       if (v.currentTime > 0) lastTimeRef.current = v.currentTime;
@@ -625,16 +625,6 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
       onMouseMove={revealControls}
       onTouchStart={revealControls}
     >
-      {/* Full-bleed poster backdrop (Vegamovies at-rest look). Fades out once playback starts. */}
-      {poster && (
-        <div
-          className={`pointer-events-none absolute inset-0 bg-cover bg-center transition-opacity duration-500 ${playing && current > 0 ? "opacity-0" : "opacity-100"}`}
-          style={{ backgroundImage: `url(${poster})` }}
-          aria-hidden
-        >
-          <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
-        </div>
-      )}
       <video
         ref={videoRef}
         poster={poster ?? undefined}
@@ -644,6 +634,17 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
         preload="metadata"
         onClick={togglePlay}
       />
+      {/* Full-bleed poster backdrop (Vegamovies at-rest look). Sits above the
+          video so it is visible whenever paused; fades out while playing. */}
+      {poster && (
+        <div
+          className={`pointer-events-none absolute inset-0 bg-cover bg-center transition-opacity duration-500 ${playing ? "opacity-0" : "opacity-100"}`}
+          style={{ backgroundImage: `url(${poster})` }}
+          aria-hidden
+        >
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
+        </div>
+      )}
 
       {(buffering || swapping) && !playbackError && (
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
