@@ -88,6 +88,40 @@ export default function Watch() {
     return playable(r.url, r.seekable);
   }, []);
 
+  // Pending quality/audio pick: chosen before playback starts (picker tap
+  // or ?q=/ ?a= URL params) and applied when the resolve finishes. The ref
+  // is the source of truth inside the in-flight resolve (state is async).
+  const [pendingPick, setPendingPickState] = useState<number | null>(() => {
+    const n = parseInt(sp.get("q") || "", 10);
+    return Number.isFinite(n) && n >= 0 ? n : null;
+  });
+  const pendingPickRef = useRef<number | null>(pendingPick);
+  const setPendingPick = useCallback((i: number | null) => {
+    pendingPickRef.current = i;
+    setPendingPickState(i);
+  }, []);
+
+  const bestAudioIndex = useCallback((audio: string, nearHeight = 720): number | null => {
+    const want = audio.trim().toLowerCase();
+    let best: QualitiesResp["options"][number] | null = null;
+    for (const o of qData?.options ?? []) {
+      if ((o.audio || "").trim().toLowerCase() !== want) continue;
+      if (!best || Math.abs((o.height || 0) - nearHeight) < Math.abs((best.height || 0) - nearHeight)) best = o;
+    }
+    return best ? best.index : null;
+  }, [qData]);
+
+  // `a` URL param (audio label) -> first option with that audio, once qualities arrive.
+  const audioParamDone = useRef(false);
+  useEffect(() => {
+    if (audioParamDone.current || !qData?.options?.length) return;
+    audioParamDone.current = true;
+    const want = (sp.get("a") || "").trim().toLowerCase();
+    if (!want || pendingPickRef.current !== null) return;
+    const o = qData.options.find((x) => (x.audio || "").trim().toLowerCase() === want);
+    if (o) setPendingPick(o.index);
+  }, [qData, sp, setPendingPick]);
+
   const switchToEmbed = useCallback(() => {
     if (!qData?.embedUrl) return;
     clearTimeout(hlsDelay.current);
@@ -97,6 +131,44 @@ export default function Watch() {
     setVideo("");
     setEmbedUrl(qData.embedUrl);
   }, [qData]);
+
+  // Embed → direct file (picker tap while the source player is showing).
+  // Plain function (not useCallback) so it always sees current state.
+  const [switching, setSwitching] = useState(false);
+  const [switchingIdx, setSwitchingIdx] = useState<number | null>(null);
+  const [switchErr, setSwitchErr] = useState("");
+  const switchingRef = useRef(false);
+  const switchToDirect = async (index: number) => {
+    if (switchingRef.current || !embedUrl || !qFor.current) return;
+    const src = qFor.current;
+    switchingRef.current = true;
+    setSwitching(true);
+    setSwitchingIdx(index);
+    setSwitchErr("");
+    try {
+      const r = await api.qualitySource(src, index);
+      const url = playable(r.url, r.seekable);
+      if (!url) throw new Error("no url");
+      videoUrlRef.current = url;
+      hlsAsked.current = false;
+      setUpgradeUrl(null);
+      setEmbedUrl("");
+      setVideo(url);
+      setQActive(index);
+      setPendingPick(null);
+      if (r.seekable === false && lastIdentity?.url) watchUpgrade(lastIdentity.url, url);
+      clearTimeout(hlsDelay.current);
+      if (!/\.m3u8(\?|#|$)/i.test(url)) {
+        hlsDelay.current = setTimeout(() => { try { if (videoUrlRef.current === url) watchHls(url); } catch {} }, 12000);
+      }
+    } catch {
+      setSwitchErr("Couldn't switch right now — still playing the source player.");
+    } finally {
+      switchingRef.current = false;
+      setSwitching(false);
+      setSwitchingIdx(null);
+    }
+  };
 
   // Cache-first resolve: the backend returns {status:"ready",url} instantly
   // on a pre-resolved cache hit; otherwise poll the (possibly shared)
@@ -277,14 +349,28 @@ export default function Watch() {
     if (attempts.length > 1) setStatusLine(`Racing ${attempts.length} sources — fastest wins…`);
     try {
       const got = await resolveIdentity(primary, ident.alts);
-      const url = got.url;
+      let url = got.url;
+      let isEmbed = !!got.embed;
+      const pend = pendingPickRef.current;
+      if (pend !== null) {
+        // Viewer chose a quality/audio while resolving: play that file directly.
+        try {
+          url = await pickDirect(pend);
+          isEmbed = false;
+          setQActive(pend);
+        } catch {
+          url = got.url; // never block playback: fall back to the default
+          isEmbed = !!got.embed;
+        }
+        setPendingPick(null);
+      }
       clearInterval(timer.current);
       setStatusLine("");
       videoUrlRef.current = url;
       hlsAsked.current = false;
       setUpgradeUrl(null);
       setHlsMaster(null); setHlsAudios([]); setHlsQualities([]); setHlsNote("");
-      if (got.embed) {
+      if (isEmbed) {
         // Source's own player (iframe) — nothing to proxy or upgrade.
         setEmbedUrl(url);
         setVideo("");
@@ -293,7 +379,7 @@ export default function Watch() {
         setVideo(url);
       }
       addToList("continue", `${kind}:${id}`);
-      if (!got.embed) {
+      if (!isEmbed) {
         // Non-seekable fast file? Upgrade it behind the scenes.
         if (got.seekable === false && sourceUrl) {
           watchUpgrade(sourceUrl, url);
@@ -461,6 +547,56 @@ export default function Watch() {
         </div>
       )}
 
+      {!!video && !!qData?.embedUrl && (
+        <div className="mt-4 bg-card border border-white/10 rounded-xl px-4 py-3">
+          <button type="button" className="px-4 py-1.5 rounded-full font-semibold border border-white/20" onClick={switchToEmbed}>🌐 Source player</button>
+        </div>
+      )}
+      {!!switchErr && !!embedUrl && !video && (
+        <div role="alert" className="text-red-400 text-sm mt-2">{switchErr}</div>
+      )}
+      {!!qData?.options?.length && !video && (() => {
+        const opts = qData?.options ?? [];
+        const cur = opts.find((o) => o.index === (pendingPick ?? qActive));
+        const audios = Array.from(new Set(opts.map((o) => (o.audio || "").trim()).filter((x): x is string => !!x)));
+        const chip = (on: boolean) =>
+          `px-4 py-1.5 rounded-full font-semibold border ${on ? "bg-netflix border-netflix" : "border-white/20"}`;
+        return (
+          <div className="mt-4 bg-card border border-white/10 rounded-xl px-4 py-3">
+            <div className="text-sm text-white/70 mb-2">Quality</div>
+            <div className="flex flex-wrap gap-2">
+              {opts.map((o) => (
+                <button key={o.index} type="button" className={chip(o.index === (pendingPick ?? qActive))}
+                  disabled={switching}
+                  onClick={() => { if (embedUrl) void switchToDirect(o.index); else setPendingPick(o.index); }}>
+                  {switchingIdx === o.index ? "Switching…" : o.label}
+                </button>
+              ))}
+            </div>
+            {audios.length > 0 && (
+              <>
+                <div className="text-sm text-white/70 mt-3 mb-2">Audio</div>
+                {audios.length === 1 ? (
+                  <div className="text-sm">
+                    <span className="font-semibold">{audios[0]}</span>
+                    <span className="text-white/60"> — This file plays its default audio track only.</span>
+                  </div>
+                ) : (
+                  <div className="flex flex-wrap gap-2">
+                    {audios.map((a) => (
+                      <button key={a} type="button" className={chip(cur?.audio === a)}
+                        disabled={switching}
+                        onClick={() => { const i = bestAudioIndex(a, 720); if (i === null) return; if (embedUrl) void switchToDirect(i); else setPendingPick(i); }}>
+                        {a}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        );
+      })()}
       {busy && (
         <div className="mt-4 bg-card border border-white/10 rounded-xl p-4">
           <div className="flex items-center gap-3">

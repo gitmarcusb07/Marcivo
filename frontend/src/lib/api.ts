@@ -117,7 +117,7 @@ export function prewarm(r: { result_id?: string; url?: string; source_url?: stri
 }
 
 /** Build a Watch URL that carries exact identity (§16/17). Never title-only. */
-export function watchUrl(kind: string, id: string, r: { result_id?: string; content_id?: string; url?: string; source_url?: string; title?: string }, extra = "") {
+export function watchUrl(kind: string, id: string, r: { result_id?: string; content_id?: string; url?: string; source_url?: string; title?: string; q?: number; a?: string }, extra = "") {
   const rid = r.result_id || "";
   const cid = r.content_id || "";
   const src = r.url || (r as any).source_url || "";
@@ -126,7 +126,11 @@ export function watchUrl(kind: string, id: string, r: { result_id?: string; cont
   // titles so Watch can offer a quality picker) follow as `alts` (§26).
   const alts = (r as any)._alts as { result_id: string; url: string; title?: string }[] | undefined;
   const altParam = alts?.length ? `&alts=${encodeURIComponent(JSON.stringify(alts.slice(0, 5).map((a) => ({ result_id: a.result_id, url: a.url, title: (a.title || "").slice(0, 120) }))))}` : "";
-  return `/watch/${kind}/${id}?result_id=${encodeURIComponent(rid)}&content_id=${encodeURIComponent(cid)}&src=${encodeURIComponent(src)}&t=${encodeURIComponent(t)}${altParam}${extra}`;
+  // Exact quality / audio choice from the Detail card (Watch applies it as
+  // the pending pick — plays that file instead of the default option 0).
+  const qParam = typeof r.q === "number" && Number.isInteger(r.q) && r.q >= 0 ? `&q=${r.q}` : "";
+  const aParam = typeof r.a === "string" && r.a ? `&a=${encodeURIComponent(r.a)}` : "";
+  return `/watch/${kind}/${id}?result_id=${encodeURIComponent(rid)}&content_id=${encodeURIComponent(cid)}&src=${encodeURIComponent(src)}&t=${encodeURIComponent(t)}${altParam}${qParam}${aParam}${extra}`;
 }
 
 export const api = {

@@ -111,6 +111,15 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
   // values across the sibling files instead.
   const directOn = !hlsRef.current && levels.length === 0 && !!directOptions?.length;
   const activeOpt = directOptions?.find((o) => o.index === (directActive ?? 0)) ?? directOptions?.[0];
+  // Quality button label: the real active quality (not a flat "HD"), so a
+  // pick is visibly applied. HLS levels keep their Auto/level label.
+  const qualityLabel = swapping
+    ? "Switching…"
+    : levels.length > 1
+      ? (activeLevel === -1 ? "Auto" : levels[activeLevel]?.label || "Auto")
+      : directOn && activeOpt
+        ? (activeOpt.height ? `${activeOpt.height}p` : (activeOpt.label.trim().split(/\s+/)[0] || "HD"))
+        : "HD";
   const directAudios = useMemo(
     () => [...new Set((directOptions ?? []).map((o) => o.audio).filter((a): a is string => !!a))],
     [directOptions]);
@@ -656,8 +665,8 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
               <Languages className="h-5 w-5" />
               {tracks.length > 1 && <span className="absolute top-1 right-1 w-2.5 h-2.5 rounded-full bg-netflix" />}
             </button>
-            <button onClick={() => openSheet("quality")} className="flex h-9 min-w-[3.5rem] shrink-0 items-center justify-center rounded-lg bg-white/10 px-2 text-sm font-bold hover:bg-white/20" aria-label="Quality">
-              <MonitorPlay className="mr-1 h-4 w-4" />{levels.length > 1 ? (activeLevel === -1 ? "Auto" : levels[activeLevel]?.label || "Auto") : "HD"}
+            <button onClick={() => openSheet("quality")} disabled={swapping} aria-busy={swapping} className="flex h-9 min-w-[3.5rem] shrink-0 items-center justify-center rounded-lg bg-white/10 px-2 text-sm font-bold hover:bg-white/20 disabled:cursor-wait disabled:opacity-70" aria-label="Quality">
+              <MonitorPlay className="mr-1 h-4 w-4" />{qualityLabel}
             </button>
             <button onClick={enterPip} className="hidden h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/10 hover:bg-white/20 sm:flex" aria-label="Picture in picture">
               <PictureInPicture2 className="h-5 w-5" />
@@ -669,6 +678,14 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
         </div>
       </div>
 
+      {swapping && (
+        <div className="pointer-events-none absolute inset-0 z-[5] flex items-center justify-center" role="status" aria-live="polite">
+          <div className="flex items-center gap-2 rounded-full bg-black/75 px-4 py-2 text-sm font-semibold text-white shadow-lg">
+            <Loader2 className="h-4 w-4 animate-spin" />
+            Switching quality…
+          </div>
+        </div>
+      )}
       {sheet && (
         <div className="absolute inset-0 z-20 bg-black/70 flex items-end" onClick={() => setSheet(null)}>
           <div className="w-full bg-[#1c1c1e] rounded-t-2xl p-4 max-h-[70%] overflow-y-auto" onClick={(e) => e.stopPropagation()}>

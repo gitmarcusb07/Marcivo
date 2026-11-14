@@ -18,6 +18,28 @@ export default function Detail() {
   const nav = useNavigate();
   const [d, setD] = useState<any>(null);
   const [sites, setSites] = useState<any>(null);
+  // Real per-version quality/audio options (from /api/qualities), keyed by
+  // source URL — the ONLY qualities/audios a card may show. Until a
+  // version's options load (or the fetch fails), the card shows the
+  // title-parsed badges as before.
+  const shortQ = (o: { height: number | null; label: string }) => (o.height ? `${o.height}p` : String(o.label || "").split(" ")[0]);
+  const [qMap, setQMap] = useState<Record<string, import("../lib/api").QualitiesResp | null>>({});
+  const [qInflight] = useState(() => new Set<string>());
+  const [qAlive] = useState(() => ({ v: true }));
+  useEffect(() => { qAlive.v = true; return () => { qAlive.v = false; }; }, [qAlive]);
+  useEffect(() => {
+    const list: any[] = sites?.results || [];
+    for (const r of list) {
+      const u: string = r?.source_url || r?.url || "";
+      if (!u || qInflight.has(u) || u in qMap) continue;
+      qInflight.add(u);
+      api.qualities(u)
+        .then((resp) => { if (qAlive.v) setQMap((m) => ({ ...m, [u]: resp && Array.isArray(resp.options) ? resp : null })); })
+        .catch(() => { if (qAlive.v) setQMap((m) => ({ ...m, [u]: null })); })
+        .finally(() => { qInflight.delete(u); });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sites?.results]);
   const [sitesScope, setSitesScope] = useState("");
   const [loading, setLoading] = useState(true);
   const [saved, setSaved] = useState(false);
@@ -211,25 +233,53 @@ export default function Detail() {
           const pv = prettyVersion(r.title);
           const qm = String(r.quality || r.title || "").match(/\b(2160p|1080p|720p|480p|360p|4K)\b/i);
           const quality = (r.quality || (qm ? qm[1].toUpperCase() : "")).slice(0, 6);
+          const q = qMap[r.source_url || r.url];
+          const opts = q?.options?.length ? q.options : null;
           // Sibling versions ride along so Watch can fall back silently.
           const siblings = (sites?.results || [])
             .filter((s: any) => s.result_id && s.result_id !== r.result_id)
             .slice(0, 5)
             .map((s: any) => ({ result_id: s.result_id, url: s.source_url || s.url, title: s.title }));
+          const go = (extra: { q?: number; a?: string }) => nav(watchUrl(kind, id, { ...r, _alts: siblings, ...extra }));
+          const chip = (key: string, text: string, extra: { q?: number; a?: string }) => (
+            <span
+              key={key}
+              role="button"
+              tabIndex={0}
+              onClick={(e) => { e.stopPropagation(); go(extra); }}
+              onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); e.stopPropagation(); go(extra); } }}
+              className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white/10 text-gray-200 cursor-pointer active:bg-netflix"
+            >{text}</span>
+          );
+          const audios = opts ? Array.from(new Set(opts.map((o) => String(o.audio || "").trim()).filter(Boolean))) : [];
+          const badge = opts ? shortQ(opts[0]) : quality;
           return (
             <button
               key={r.result_id || `${r.site_id}-${r.url}`}
               onClick={() => nav(watchUrl(kind, id, { ...r, _alts: siblings }))}
               onMouseEnter={() => prewarm(r)}
               onFocus={() => prewarm(r)}
+              onPointerDown={() => prewarm(r)}
               className="text-left bg-card border border-netflix/30 rounded-xl px-4 py-3 active:border-netflix flex items-center gap-3"
             >
-              {!!quality && (
-                <span className="shrink-0 px-3 py-1.5 rounded-lg bg-netflix font-black text-sm tracking-wide">{quality}</span>
+              {!!badge && (
+                <span className="shrink-0 px-3 py-1.5 rounded-lg bg-netflix font-black text-sm tracking-wide">{badge}</span>
               )}
               <span className="min-w-0 flex-1">
                 <span className="font-semibold text-sm block truncate">{r.kind === "series" ? "📺" : "🎬"} {pv.title}</span>
-                {!!pv.badges.length && (
+                {opts ? (
+                  <>
+                    <span className="flex flex-wrap items-center gap-1 mt-1.5">
+                      {opts.map((o) => chip(`${r.result_id}-q-${o.index}`, o.label, { q: o.index }))}
+                      {audios.length === 1 && <span className="text-[10px] text-gray-300 ml-1">{audios[0]}</span>}
+                    </span>
+                    {audios.length > 1 && (
+                      <span className="flex flex-wrap gap-1 mt-1">
+                        {audios.map((a) => chip(`${r.result_id}-a-${a}`, a, { a }))}
+                      </span>
+                    )}
+                  </>
+                ) : !!pv.badges.length && (
                   <span className="flex flex-wrap gap-1 mt-1.5">
                     {pv.badges.map((b, j) => (
                       <span key={`${r.result_id}-badge-${j}`} className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white/10 text-gray-200">{b}</span>
