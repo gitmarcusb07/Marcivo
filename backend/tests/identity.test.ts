@@ -153,6 +153,42 @@ t("central priority config: streaming first, never reversed", () => {
   assert.equal(priorityRank("anime", 6), 999);
 });
 
+// Regression (2026-11-14): the Resident Evil (2026) Vegamovies title
+// "Download Resident Evil (2026) PrimeVideo: Dual-Audio ..." was dropped by
+// the detail page's exact matcher — "primevideo" is one token, not the two
+// noise tokens "prime"+"video", so coreSlug became
+// "resident-evil-primevideo" and similarity was diluted to ~0.1 by the
+// quality tags. Compound source tags must be noise too.
+t("exact match: PrimeVideo compound tag does not break identity", () => {
+  const q = { title: "Resident Evil", year: "2026", type: "movie" };
+  assert.ok(
+    isExactVersion(
+      "Download Resident Evil (2026) PrimeVideo: Dual-Audio {Hindi-English} WEB-DL 480p [450MB] | 720p [920MB] | 1080p [1.9GB] & 2160p 4K",
+      "2026",
+      "movie",
+      q
+    )
+  );
+  assert.ok(
+    isExactVersion(
+      "Download Dune (2021) PrimeVideo Hindi Dubbed BluRay 480p [350MB] | 720p [1.2GB]",
+      "2021",
+      "movie",
+      { title: "Dune", year: "2021", type: "movie" }
+    )
+  );
+  // A different film with the same tag still must not match (the title's
+  // own year is 2026, so a 2002 query must be rejected by the year gate).
+  assert.ok(
+    !isExactVersion(
+      "Download Resident Evil (2026) PrimeVideo: Dual-Audio {Hindi-English} WEB-DL 480p",
+      "2026",
+      "movie",
+      { title: "Resident Evil", year: "2002", type: "movie" }
+    )
+  );
+});
+
 t("title similarity sane", () => {
   assert.equal(titleSimilarity("Dune", "Dune"), 1);
   assert.ok(titleSimilarity("Naruto", "Naruto Shippuden") >= 0.5);

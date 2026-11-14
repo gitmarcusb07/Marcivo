@@ -236,7 +236,7 @@ const NOISE_TOKENS = new Set(
     "hindi english tamil telugu malayalam kannada dubbed org hs esub msub sub " +
     "subs subtitle subtitles hevc x264 x265 xvid aac dd5 1 dd2 0 ddp atoms " +
     "hdts hd unrated extended cut directors netflix amazon prime video hotstar " +
-    "zee5 sony liv jio hq line clean PreDvD HDTS HDTC " +
+    "zee5 sony liv jio primevideo webdl jiocinema sonyliv mxplayer hq line clean PreDvD HDTS HDTC " +
     "prehd pre hd sd v1 v2 v3 10bit 8bit 12bit ac3 dts atmos truehd av1 opus " +
     "imax ts tc cam telesync telecine proper repack rerip uncut hqdvd dvdrip " +
     "10b 2160 1080 720 480 360 264 265 x264 x265 h264 h265").split(" ")

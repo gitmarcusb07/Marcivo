@@ -446,6 +446,17 @@ export default function Watch() {
               allowFullScreen
               frameBorder={0}
             />
+            {/* Vegamovies encodes burn their own logo into the top of the
+                frame. The video itself can't be edited (it plays in the
+                source's player), so cover that strip with our own brand bar
+                instead. pointer-events-none so player controls still work.
+                Normal view only: in fullscreen the source's player takes
+                over the frame and its logo can reappear. */}
+            {(lastIdentity?.result_id || "").startsWith("1:") && (
+              <div className="pointer-events-none absolute inset-x-0 top-0 z-10 flex h-[7%] min-h-[30px] items-center justify-center bg-black">
+                <span className="text-[11px] font-bold tracking-[0.35em] text-white/85">MARCIVO</span>
+              </div>
+            )}
           </div>
         </>
       )}
