@@ -659,6 +659,9 @@ export default function Watch() {
           <div className="mt-4">
             <TeraPlayer
               title={versionTitle}
+              poster={d?.poster ?? null}
+              metaLine={epParam || null}
+              audioLine={qData?.options?.find((o) => o.index === qActive)?.audio ?? qData?.audioHint ?? null}
               directUrl={video}
               hlsMaster={hlsMaster}
               hlsAudios={hlsAudios}
