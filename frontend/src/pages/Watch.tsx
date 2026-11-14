@@ -447,12 +447,6 @@ export default function Watch() {
               frameBorder={0}
             />
           </div>
-          <div className="flex items-center justify-between gap-3 mt-2">
-            <p className="text-xs text-muted">Playing via the source's own player — video never passes through Marcivo servers.</p>
-            {lastIdentity?.url ? (
-              <a href={lastIdentity.url} target="_blank" rel="noopener noreferrer" className="text-xs text-muted underline shrink-0">Open on source ↗</a>
-            ) : null}
-          </div>
         </>
       )}
       {video && !fatal && (

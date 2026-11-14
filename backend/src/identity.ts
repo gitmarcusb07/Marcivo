@@ -28,8 +28,8 @@ export const SOURCE_GROUPS: Record<ContentGroup, SourceDef[]> = {
   movie: [
     { id: 7, name: "Cinejoy", type: "streaming", priority: 1 },
     { id: 4, name: "PRMovies", type: "streaming", priority: 2 },
-    { id: 1, name: "Vegamovies", type: "download", priority: 3 },
-    { id: 2, name: "RogMovies", type: "download", priority: 4 },
+    { id: 1, name: "Marcivo", type: "download", priority: 3 },
+    { id: 2, name: "Marcivo", type: "download", priority: 4 },
     { id: 6, name: "BoredFlix", type: "streaming", priority: 5 },
   ],
   anime: [
@@ -40,8 +40,8 @@ export const SOURCE_GROUPS: Record<ContentGroup, SourceDef[]> = {
     { id: 7, name: "Cinejoy", type: "streaming", priority: 1 },
     { id: 4, name: "PRMovies", type: "streaming", priority: 2 },
     { id: 5, name: "PirateXPlay", type: "streaming", priority: 3 },
-    { id: 1, name: "Vegamovies", type: "download", priority: 4 },
-    { id: 2, name: "RogMovies", type: "download", priority: 5 },
+    { id: 1, name: "Marcivo", type: "download", priority: 4 },
+    { id: 2, name: "Marcivo", type: "download", priority: 5 },
     { id: 3, name: "Gokuhd", type: "download", priority: 6 },
     { id: 6, name: "BoredFlix", type: "streaming", priority: 7 },
   ],

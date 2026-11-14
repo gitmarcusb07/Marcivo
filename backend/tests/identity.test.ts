@@ -134,7 +134,7 @@ t("exact year match outranks loose match", () => {
 
 t("central priority config: streaming first, never reversed", () => {
   const m = SOURCE_GROUPS.movie;
-  assert.deepEqual(m.map((s) => s.name), ["Cinejoy", "PRMovies", "Vegamovies", "RogMovies", "BoredFlix"]);
+  assert.deepEqual(m.map((s) => s.name), ["Cinejoy", "PRMovies", "Marcivo", "Marcivo", "BoredFlix"]);
   assert.equal(m[0].type, "streaming");
   const a = SOURCE_GROUPS.anime;
   assert.deepEqual(a.map((s) => s.name), ["PirateXPlay", "Gokuhd"]);
