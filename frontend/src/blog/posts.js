@@ -33,6 +33,48 @@
 
 export const posts = [
 {
+    slug: "fujairah-uae-road-accident-14-killed-4-indians",
+    image: "https://www.siasat.com/wp-content/uploads/2026/11/fujairah-uae-23-vehicle-crash-fire.webp",
+    imageAlt: "Burning vehicles and a container truck at the scene of the Fujairah pile-up on Sheikh Khalifa bin Zayed Road, with a crushed white car in the foreground",
+    title: "Fujairah UAE Road Accident: 14 Killed, Including 4 Indians, in 23-Vehicle Pile-Up",
+    description:
+      "Fujairah UAE road accident: 14 killed and 30 injured in a 23-vehicle pile-up on Sheikh Khalifa Road, including four Indians from one Kerala family.",
+    excerpt:
+      "The UAE Ministry of Interior has confirmed that 14 people, including four Indians, were killed and 30 injured in a 23-vehicle pile-up near Fujairah — and three of the Indian victims belonged to a single Kerala family.",
+    date: "2026-11-14",
+    category: "News",
+    sections: [
+      { type: "p", text: "The Fujairah UAE road accident has claimed 14 lives, including four Indians, after a 23-vehicle pile-up on Sheikh Khalifa bin Zayed Road late on Thursday night. The UAE Ministry of Interior confirmed the final toll and the victims' nationalities early on Saturday, November 14, 2026, as the Federal Public Prosecution opened an investigation into one of the deadliest crashes the emirate has seen. Thirty people were injured, seven of them Indians, and three of the four Indians killed belonged to a single family from Kerala." },
+      { type: "h2", text: "What Happened in the Fujairah UAE Road Accident" },
+      { type: "p", text: "The crash happened shortly before midnight on Thursday, November 12, on Sheikh Khalifa bin Zayed Road (E66), near the entrance to Fujairah. According to preliminary investigations shared by the UAE authorities, it was not a single collision but two consecutive accidents on the same stretch of road. First, a vehicle collided with a stationary truck. Then a truck carrying two shipping containers ploughed into several vehicles and overturned, in a section where the right-hand lane had been closed for maintenance works." },
+      { type: "p", text: "In total, 23 vehicles were involved — 18 cars and five trucks. Several vehicles caught fire after the impact, and the blaze spread to other cars caught in the slow-moving traffic. Police, ambulance and Civil Defence teams rushed to the scene and coordinated rescue and emergency medical assistance through the night, and the injured were taken to hospitals in Fujairah." },
+      { type: "h2", text: "Four Indians Among the Dead: Kerala Family Loses Three" },
+      { type: "p", text: "The Ministry of Interior confirmed on Saturday that 10 of the 14 people killed were Emiratis and four were Indians. The 30 injured included seven Indians, eight Emiratis, six Omanis, three Egyptians, two Jordanians, two Pakistanis and two Brazilians. DNA testing is being used to formally identify some of the victims." },
+      { type: "p", text: "Three of the four Indians killed were members of one family from Malappuram district in Kerala: 21-year-old twin siblings Mohamed Asmil Siddique and Misna Jubin Siddique, and their three-year-old nephew, Muhammed Faiz. An official from the Consulate General of India in Dubai and the Northern Emirates visited hospitals in Fujairah on Friday to meet the victims' families and check on the injured Indians, and the consulate said all possible assistance was being extended to the affected families." },
+      { type: "h2", text: "Investigation Ordered Into the Fujairah Crash" },
+      { type: "p", text: "The Federal Public Prosecution has ordered technical inspections, forensic laboratory testing and formal victim identification procedures to establish the cause of the crash and fix legal responsibility. The ministry has not yet said what caused the truck to lose control, and the investigation is still underway." },
+      { type: "p", text: "The ministry also renewed its appeal to motorists to follow traffic rules, observe speed limits and keep a safe distance — especially when traffic slows down or comes to a halt. It warned drivers to stay alert to sudden slowdowns and stationary traffic, and said road safety is a shared responsibility." },
+      { type: "list", items: [
+        "When: shortly before midnight on Thursday, November 12, 2026.",
+        "Where: Sheikh Khalifa bin Zayed Road (E66), near the entrance to Fujairah, UAE.",
+        "Vehicles involved: 23 — 18 cars and five trucks.",
+        "Killed: 14 — 10 Emiratis and four Indians.",
+        "Injured: 30 — including seven Indians, eight Emiratis and six Omanis.",
+        "Cause: under investigation by the Federal Public Prosecution; preliminary findings point to two consecutive accidents.",
+      ] },
+      { type: "h2", text: "Why the Fujairah Crash Has Drawn So Much Attention" },
+      { type: "p", text: "The pile-up is one of the biggest multi-vehicle road accidents reported in the region, and the scale of the fire — which engulfed several vehicles — is part of why the toll was so high. The crash also comes weeks before new UAE traffic regulations take effect on January 1, introducing a maximum driving limit of nine hours within any 24-hour period." },
+      { type: "faq", items: [
+        { q: "How many people died in the Fujairah UAE road accident?", a: "Fourteen people were killed — 10 Emiratis and four Indians — and 30 others were injured." },
+        { q: "How many vehicles were involved in the Fujairah crash?", a: "Twenty-three vehicles, including 18 cars and five trucks, were involved in the pile-up on Sheikh Khalifa bin Zayed Road." },
+        { q: "Who were the Indian victims of the Fujairah accident?", a: "Three of the four Indians killed were members of one family from Malappuram, Kerala: 21-year-old twins Mohamed Asmil Siddique and Misna Jubin Siddique, and their three-year-old nephew, Muhammed Faiz. Seven Indians were also injured." },
+        { q: "What caused the Fujairah road accident?", a: "The cause is still under investigation. Preliminary findings point to two consecutive accidents: a vehicle hit a stationary truck, and a container truck then collided with several vehicles and overturned. The Federal Public Prosecution has ordered technical and forensic examinations." },
+        { q: "Where did the Fujairah accident happen?", a: "On Sheikh Khalifa bin Zayed Road (E66), near the entrance to Fujairah, shortly before midnight on Thursday, November 12, 2026." },
+      ] },
+      { type: "p", text: "The Fujairah UAE road accident is a reminder of how quickly a routine stretch of highway can turn deadly when traffic stops suddenly. As the investigation continues, the families of the 14 victims — in the UAE and in Kerala — wait for answers about what went wrong on that road on Thursday night." },
+    ],
+  },
+{
     slug: "kpop-demon-hunters-golden-world-tour-2027-dates-tickets",
     image: "https://consequence.net/wp-content/uploads/2026/11/kpop-demon-hunters-golden-world-2027-tour-poster.jpg",
     imageAlt: "Official poster for the Netflix KPop Demon Hunters Golden World Tour, presented by Mastercard — HUNTR/X members Mira, Rumi and Zoey standing in front of a globe",
