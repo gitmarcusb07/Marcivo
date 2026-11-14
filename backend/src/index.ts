@@ -61,9 +61,6 @@ async function generateSitemapXml(): Promise<string> {
       `${SEO_SITE_URL}/category/hollywood`,
       `${SEO_SITE_URL}/category/bollywood`,
       `${SEO_SITE_URL}/blog`,
-      `${SEO_SITE_URL}/blog/simpsons-great-blackout-november-17-truth-explained-november-2026`,
-      `${SEO_SITE_URL}/blog/india-beat-pakistan-u19-asia-cup-2026-final-last-ball-thriller`,
-      `${SEO_SITE_URL}/blog/jr-ntr-anil-ravipudi-film-announced-laugh-riot-november-2026`,
       `${SEO_SITE_URL}/blog/aamir-khan-farhan-akhtar-microdrama-platform-india`,
       `${SEO_SITE_URL}/blog/trump-xi-putin-trilateral-meeting-apec-shenzhen-november-2026`,
       `${SEO_SITE_URL}/blog/fujairah-uae-road-accident-14-killed-4-indians`,
@@ -761,17 +758,26 @@ app.get("/api/qualities", async (req, res) => {
 app.get("/api/quality-source", async (req, res) => {
   const url = String(req.query.url || "");
   const i = Number(req.query.i);
+  const epRaw = String(req.query.episode || "");
+  const episode = /^\d{1,3}$/.test(epRaw) ? parseInt(epRaw, 10) : undefined;
   if (!isSafePublicUrl(url) || !Number.isInteger(i) || i < 0) return res.status(400).json({ error: "bad_params" });
   if (!allowRequest(ipOf(req))) return res.status(429).json({ error: "rate_limited" });
   if (qActive >= 2) return res.set("Retry-After", "5").status(503).json({ error: "busy" });
   qActive++;
   try {
-    const out = await qSources.get(`${url}#${i}`, async () => {
-      const opt = (await loadQualityPage(url)).options[i];
+    const out = await qSources.get(`${url}#${i}${episode ? `:e${episode}` : ""}`, async () => {
+      const opts = (await loadQualityPage(url)).options;
+      const opt = opts[i];
       if (!opt) throw Object.assign(new Error("no_such_option"), { code: 404 });
-      for (const inter of opt.interUrls.slice(0, 2)) {
-        const direct = await gdirectFromIntermediate(inter, url).catch(() => null);
-        if (direct) return { index: i, label: opt.label, audio: opt.audio, url: direct, seekable: await probeSeekable(direct) };
+      // Episode-scoped switch: the chosen quality's part may not carry the
+      // episode (season packs split by part) — fall back to the same
+      // quality in another part, then any part, before giving up.
+      const ordered = [opt, ...opts.filter((o: any) => o.index !== i && o.height === opt.height), ...opts.filter((o: any) => o.index !== i && o.height !== opt.height)];
+      for (const o of ordered) {
+        for (const inter of o.interUrls.slice(0, 2)) {
+          const direct = await gdirectFromIntermediate(inter, url, episode).catch(() => null);
+          if (direct) return { index: o.index, label: o.label, audio: o.audio, url: direct, seekable: await probeSeekable(direct) };
+        }
       }
       throw Object.assign(new Error("unresolved"), { code: 502 });
     });

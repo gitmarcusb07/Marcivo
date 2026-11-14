@@ -100,6 +100,12 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
   const [displayMode, setDisplayMode] = useState<"fit" | "crop" | "stretch">("fit");
   const [panel, setPanel] = useState<"speed" | "screen" | "episodes" | "more" | null>(null);
   const [copied, setCopied] = useState(false);
+  // Episodes panel: which season's list is shown (null = the current
+  // episode's season). Reset whenever the playing episode changes.
+  const [panelSeason, setPanelSeason] = useState<number | null>(null);
+  const epSeasons = Array.from(new Set((episodes || []).map((e) => e.season))).sort((a, b) => a - b);
+  const shownSeason = panelSeason ?? episodes?.[episodeIndex ?? -1]?.season ?? epSeasons[0];
+  useEffect(() => { setPanelSeason(null); }, [episodeIndex]);
 
   // Position-preserving src swap (generalised form of the upgradeUrl
   // mechanism): swap the playing file at the current position, keeping
@@ -884,8 +890,21 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
             <span className="text-sm font-bold tracking-wide text-white">EPISODES</span>
             <button onClick={() => setPanel(null)} className="flex h-7 w-7 items-center justify-center rounded-full text-white hover:bg-white/10" aria-label="Close"><X className="h-4 w-4" /></button>
           </div>
+          {/* Season pills (multi-season shows) — the list below shows the
+              picked season; the current episode's season is the default. */}
+          {epSeasons.length > 1 && (
+            <div className="flex gap-2 px-3 pt-3 pb-1 overflow-x-auto no-scrollbar">
+              {epSeasons.map((s) => (
+                <button
+                  key={s}
+                  onClick={() => setPanelSeason(s)}
+                  className={`shrink-0 px-3 py-1 rounded-full text-sm font-bold ${s === shownSeason ? "bg-[#e50914] text-white" : "bg-white/10 text-gray-200"}`}
+                >S{s}</button>
+              ))}
+            </div>
+          )}
           <div className="p-3">
-            {episodes.map((ep, i) => {
+            {episodes.map((ep, i) => ({ ep, i })).filter(({ ep }) => ep.season === shownSeason).map(({ ep, i }) => {
               const isCurrent = i === (episodeIndex ?? -1);
               return (
                 <button

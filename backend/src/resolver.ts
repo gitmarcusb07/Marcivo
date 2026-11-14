@@ -417,10 +417,28 @@ export function vegamoviesEmbedUrlFromHtml(html: string): string | null {
   return found;
 }
 
+/** Deep-link a bare playdrive embed URL to one episode: /e/<id> becomes
+    /e/<id>/s-SS/ep-EE (zero-padded). The playdrive player opens on that
+    episode — verified live 2026-11-14 (Wednesday S02E05 page title).
+    Returns null when the URL is not a bare /e/<id> embed (already scoped,
+    or a different host). Exported for unit tests. */
+export function playdriveEpisodeUrl(embedUrl: string, season: number, episode: number): string | null {
+  try {
+    const u = new URL(embedUrl);
+    const h = u.hostname.toLowerCase();
+    if (!playdriveHosts().some((d) => h === d || h.endsWith("." + d))) return null;
+    if (!/^\/e\/[A-Za-z0-9_-]+\/?$/.test(u.pathname)) return null;
+    const s = String(season).padStart(2, "0");
+    const e = String(episode).padStart(2, "0");
+    u.pathname = u.pathname.replace(/\/?$/, "") + `/s-${s}/ep-${e}`;
+    return u.toString();
+  } catch { return null; }
+}
+
 /** Resolve a Vegamovies content page to the source's own player embed URL.
     Returns null when the page has no Watch Online button or the embed
     doesn't respond — the caller falls through to the download lanes. */
-async function vegamoviesEmbed(sourceUrl: string, job: Job): Promise<string | null> {
+async function vegamoviesEmbed(sourceUrl: string, job: Job, season?: number, episode?: number): Promise<string | null> {
   // Same browser-like headers as siteSearch.searchOne; a bare UA gets Cloudflare-challenged on Render.
   const miss = (host: string, status: unknown, ct: unknown, body: unknown): null => {
     const snip = (typeof body === "string" ? body : "")
@@ -442,18 +460,115 @@ async function vegamoviesEmbed(sourceUrl: string, job: Job): Promise<string | nu
   } catch (e: any) { return miss(host, "err", "", String(e?.code || "request-failed")); }
   const embedUrl = vegamoviesEmbedUrlFromHtml(html);
   if (!embedUrl) return miss(host, status, ct, html);
+  // Episode deep-link: a season page's single embed opens on its first
+  // episode by default — scope it to the requested S/E so tapping E5 plays
+  // E5, not E1. Falls back to the bare embed when the deep link is refused.
+  let target = embedUrl;
+  if (season && episode) {
+    const deep = playdriveEpisodeUrl(embedUrl, season, episode);
+    if (deep) target = deep;
+  }
 
   // Reachability check only: the player shell is generic, so this catches
   // outages — title/episode availability is decided inside the embed at
   // playback time (nothing here is a captured stream URL or token).
   job.stage = "validating";
-  try {
-    const er = await axios.get(embedUrl, { timeout: 12000, headers: siteBrowserHeaders(sourceUrl), maxRedirects: 5, validateStatus: () => true });
-    if (er.status >= 400 || typeof er.data !== "string" || !/<video/i.test(er.data)) return miss(hostOf(embedUrl), er.status, er.headers?.["content-type"], er.data);
-  } catch (e: any) { return miss(hostOf(embedUrl), "err", "", String(e?.code || "request-failed")); }
+  const checkEmbed = async (u: string): Promise<boolean> => {
+    try {
+      const er = await axios.get(u, { timeout: 12000, headers: siteBrowserHeaders(sourceUrl), maxRedirects: 5, validateStatus: () => true });
+      return !(er.status >= 400 || typeof er.data !== "string" || !/<video/i.test(er.data));
+    } catch { return false; }
+  };
+  if (!(await checkEmbed(target))) {
+    if (target !== embedUrl && (await checkEmbed(embedUrl))) target = embedUrl;
+    else return miss(hostOf(target), "embed-unreachable", "", "");
+  }
   job.embed = true;
   job.stage = "ready";
   console.log(`[resolve] vegamovies embed ready: ${hostOf(sourceUrl)}`);
+  return target;
+}
+
+function piratexplayHosts(): string[] {
+  return (process.env.WATCH_PIRATEXPLAY_HOSTS || "piratexplay.cc").split(",").map((s) => s.trim().toLowerCase()).filter(Boolean);
+}
+export function isPirateXPlay(u: string): boolean {
+  try {
+    const h = new URL(u).hostname.toLowerCase();
+    return piratexplayHosts().some((d) => h === d || h.endsWith("." + d));
+  } catch { return false; }
+}
+
+/** Build a PirateXPlay episode page URL from a series page URL:
+    /series/<slug>-season-<n>-<id> → /episode/<slug>-season-<n>-<id>-<s>x<e>/.
+    An /episode/ URL is re-scoped to the requested S/E. Pure; exported for
+    unit tests. */
+export function piratexplayEpisodeUrl(sourceUrl: string, season: number, episode: number): string | null {
+  try {
+    const u = new URL(sourceUrl);
+    const ep = u.pathname.match(/^\/episode\/(.+)-season-(\d+)-(\d+)-(\d+)x(\d+)\/?$/);
+    if (ep) {
+      u.pathname = `/episode/${ep[1]}-season-${ep[2]}-${ep[3]}-${season}x${episode}/`;
+      return u.toString();
+    }
+    const se = u.pathname.match(/^\/series\/(.+)-season-(\d+)-(\d+)\/?$/);
+    if (!se) return null;
+    u.pathname = `/episode/${se[1]}-season-${se[2]}-${se[3]}-${season}x${episode}/`;
+    return u.toString();
+  } catch { return null; }
+}
+
+/** Extract the active server's player iframe from a PirateXPlay episode
+    page: the <div id="options-N" class="... on"> block is the selected
+    server. Falls back to the first iframe in the player section, then the
+    first iframe on the page. Pure; exported for unit tests. */
+export function piratexplayEmbedUrlFromHtml(html: string): string | null {
+  const $ = cheerio.load(html);
+  const pick = (sel: string): string | null => {
+    const src = $(sel).find("iframe[src]").attr("src") || "";
+    if (!src) return null;
+    try {
+      const u = new URL(src, "https://piratexplay.cc");
+      if (u.protocol !== "http:" && u.protocol !== "https:") return null;
+      return u.toString();
+    } catch { return null; }
+  };
+  return pick("div.video.on") || pick("#aa-options div.video") || pick("section.player") || pick("body");
+}
+
+/** Resolve a PirateXPlay series/episode page to its player embed URL —
+    the source's own multi-server player, the same source-player pattern as
+    the playdrive lane. No reachability check on the iframe itself: the
+    servers are third-party hosts that may refuse datacenter requests while
+    still loading fine in the viewer's browser. */
+async function piratexplayEmbed(sourceUrl: string, job: Job, season?: number, episode?: number): Promise<string | null> {
+  const miss = (): null => {
+    console.log(`[resolve] piratexplay embed miss: ${hostOf(sourceUrl)}`);
+    return null;
+  };
+  // Episode scope: series pages need S/E to build the episode page; an
+  // /episode/ URL already names one. Without any scope, default to the
+  // season in the slug (or 1) episode 1 — the natural "play" for a series.
+  let target = sourceUrl;
+  if (/\/episode\//i.test(sourceUrl)) {
+    if (season && episode) target = piratexplayEpisodeUrl(sourceUrl, season, episode) || sourceUrl;
+  } else {
+    const m = sourceUrl.match(/-season-(\d+)-/);
+    const s = season || (m ? parseInt(m[1], 10) : 1);
+    const e = episode || 1;
+    target = piratexplayEpisodeUrl(sourceUrl, s, e) || sourceUrl;
+  }
+  let html = "";
+  try {
+    const page = await axios.get(target, { timeout: 15000, headers: siteBrowserHeaders(new URL(target).origin + "/"), maxRedirects: 5, validateStatus: () => true });
+    if (page.status >= 400 || typeof page.data !== "string") return miss();
+    html = page.data;
+  } catch { return miss(); }
+  const embedUrl = piratexplayEmbedUrlFromHtml(html);
+  if (!embedUrl) return miss();
+  job.embed = true;
+  job.stage = "ready";
+  console.log(`[resolve] piratexplay embed ready: ${hostOf(sourceUrl)}`);
   return embedUrl;
 }
 
@@ -650,7 +765,7 @@ function absolutize(h: string, base: string): string {
     gdirectResolve's step 3 so /api/quality-source can resolve a single
     quality option on demand. Returns null on any miss. Exported for the
     qualities routes + unit tests. */
-export async function gdirectFromIntermediate(interUrl: string, referer: string): Promise<string | null> {
+export async function gdirectFromIntermediate(interUrl: string, referer: string, episode?: number): Promise<string | null> {
   const UA = process.env.SITE_USER_AGENT || "Mozilla/5.0 (Windows NT 10.0; Win64; x64)";
   const get = async (u: string): Promise<string | null> => {
     try {
@@ -667,23 +782,47 @@ export async function gdirectFromIntermediate(interUrl: string, referer: string)
   const im = await get(interUrl);
   if (!im) return null;
   const $$ = cheerio.load(im);
-  let gdir = "";
+  // All G-Direct candidate anchors in page order.
+  const cands: string[] = [];
   $$("a[href]").each((_, el) => {
-    if (gdir) return false;
     const t = ($$(el).text() || "").toLowerCase();
     const h = absolutize($$(el).attr("href") || "", interUrl);
     if (!h) return;
-    if (/g-direct|instant/.test(t) && h.toLowerCase().includes("fastdl")) gdir = h;
+    if (/g-direct|instant/.test(t) && h.toLowerCase().includes("fastdl")) cands.push(h);
   });
   // Fallback: any fastdl/dl.php anchor even without the label.
-  if (!gdir) {
+  if (!cands.length) {
     $$("a[href]").each((_, el) => {
-      if (gdir) return false;
       const h = absolutize($$(el).attr("href") || "", interUrl);
-      if (h && (h.toLowerCase().includes("fastdl.zip") || h.toLowerCase().includes("dl.php"))) gdir = h;
+      if (h && (h.toLowerCase().includes("fastdl.zip") || h.toLowerCase().includes("dl.php"))) cands.push(h);
     });
   }
-  if (!gdir) return null;
+  if (!cands.length) return null;
+  // Episode-scoped pick: season-pack intermediates list one G-Direct link
+  // per episode, each preceded by an "-:Episodes: NN:-" label. Match the
+  // requested episode's link; when no episode is requested (or the page
+  // carries no labels), keep the old first-anchor behaviour. When labels
+  // exist but the episode is not among them, return null so the caller can
+  // try the next intermediate (another part of the season).
+  let gdir = cands[0];
+  if (episode) {
+    const labels: { idx: number; ep: number }[] = [];
+    const re = /episodes:\s*(\d{1,3})\s*:-/gi;
+    let lm: RegExpExecArray | null;
+    while ((lm = re.exec(im))) labels.push({ idx: lm.index, ep: parseInt(lm[1], 10) });
+    if (labels.length) {
+      const pick = cands.find((c) => {
+        const tok = (/download=([A-Za-z0-9]+)/.exec(c) || [])[1] || "";
+        const at = im.indexOf(c) >= 0 ? im.indexOf(c) : tok ? im.indexOf(tok) : -1;
+        if (at < 0) return false;
+        let ep: number | null = null;
+        for (const l of labels) { if (l.idx < at) ep = l.ep; else break; }
+        return ep === episode;
+      });
+      if (pick) gdir = pick;
+      else return null;
+    }
+  }
   const inner = unwrapFastdl(gdir);
   if (inner) return inner;
   const em = await get(gdir);
@@ -697,7 +836,7 @@ export async function gdirectFromIntermediate(interUrl: string, referer: string)
   return null;
 }
 
-async function gdirectResolve(contentUrl: string, job?: Job): Promise<string | null> {
+async function gdirectResolve(contentUrl: string, job?: Job, episode?: number): Promise<string | null> {
   const UA = process.env.SITE_USER_AGENT || "Mozilla/5.0 (Windows NT 10.0; Win64; x64)";
   const t0 = Date.now();
   const budget = Math.max(20000, Math.min(60000, parseInt(process.env.RESOLVER_GDIRECT_BUDGET || "45000", 10)));
@@ -751,9 +890,12 @@ async function gdirectResolve(contentUrl: string, job?: Job): Promise<string | n
     }
   }
   // 3. Intermediate pages → G-Direct [Instant] anchor → embed → direct URL.
-  for (const ih of interFirst.slice(0, 3)) {
+  // 10 intermediates when an episode is requested: season packs list one
+  // part's qualities first, so the right part may sit further down the
+  // page (e.g. Part 2 entries precede Part 1).
+  for (const ih of interFirst.slice(0, episode ? 10 : 3)) {
     if (dead()) return null;
-    const direct = await gdirectFromIntermediate(ih, contentUrl);
+    const direct = await gdirectFromIntermediate(ih, contentUrl, episode);
     if (direct) return direct;
   }
   return null;
@@ -994,7 +1136,18 @@ async function runPipeline(sourceUrl: string, job: Job, background = false, skip
   // → playdrive button; the embed player has its own quality picker.)
   if (isPlaydriveSite(sourceUrl) && !(job as any).cancelled) {
     job.stage = "fast-path";
-    const embedUrl = await vegamoviesEmbed(sourceUrl, job);
+    const embedUrl = await vegamoviesEmbed(sourceUrl, job, season, episode);
+    if (embedUrl) return embedUrl;
+  }
+
+  // PirateXPlay (anime, source-specific): episode pages carry the source's
+  // own multi-server player (active server iframe). Series pages are one
+  // URL for every episode, so the lane builds the requested episode's page
+  // and returns its player embed — the same source-player pattern as the
+  // playdrive lane.
+  if (isPirateXPlay(sourceUrl) && !(job as any).cancelled) {
+    job.stage = "fast-path";
+    const embedUrl = await piratexplayEmbed(sourceUrl, job, season, episode);
     if (embedUrl) return embedUrl;
   }
   const t00 = Date.now();
@@ -1029,7 +1182,7 @@ async function runPipeline(sourceUrl: string, job: Job, background = false, skip
   let finalUrl: string | null = null;
   if (!skipFast && !(job as any).cancelled) {
     job.stage = "gdirect";
-    try { finalUrl = await gdirectResolve(sourceUrl, job); }
+    try { finalUrl = await gdirectResolve(sourceUrl, job, episode); }
     catch { finalUrl = null; }
     console.log(`[resolve] stage gdirect ${finalUrl ? "hit" : "miss"}: ${hostOf(sourceUrl)} ms=${elapsed()}`);
     if (finalUrl && (await consider("gdirect", finalUrl))) return finalUrl;
@@ -1075,12 +1228,13 @@ function readyJob(url: string, source: string, seekable?: boolean, embed?: boole
 }
 
 /** Cache/dedup key. Whole-series source pages (cinegram /tv/ pages, Cinejoy
-    /series/ pages) carry every episode on ONE URL, so a requested episode
-    must neither share nor read the plain default entry — otherwise S5E3
-    would get the cached S1E1 stream/embed. */
+    /series/ pages, Vegamovies/RogMovies season pages, PirateXPlay series
+    pages) carry every episode on ONE URL, so a requested episode must
+    neither share nor read the plain default entry — otherwise S5E3 would
+    get the cached S1E1 stream/embed. */
 export function resolveKey(sourceUrl: string, season?: number, episode?: number): string {
   const base = normKey(sourceUrl);
-  if (season && episode && (isCinegram(sourceUrl) || isCinejoy(sourceUrl))) return `${base}|s${season}e${episode}`;
+  if (season && episode && (isCinegram(sourceUrl) || isCinejoy(sourceUrl) || isPlaydriveSite(sourceUrl) || isPirateXPlay(sourceUrl))) return `${base}|s${season}e${episode}`;
   return base;
 }
 

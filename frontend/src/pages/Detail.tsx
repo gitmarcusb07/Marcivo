@@ -226,6 +226,23 @@ export default function Detail() {
         </>
       )}
 
+      {/* Episodes (anime — AniList gives a count, one season): a compact
+          grid of episode buttons, like the source's own episode browser. */}
+      {kind === "anime" && typeof d.episodes === "number" && d.episodes > 0 && (
+        <>
+          <h2 className="font-display text-2xl mt-6">Episodes — {d.episodes}</h2>
+          <div className="flex flex-wrap gap-2 mt-3">
+            {Array.from({ length: d.episodes }, (_, i) => i + 1).map((n) => (
+              <button
+                key={n}
+                onClick={() => nav(`/watch/${kind}/${id}?ep=S1E${n}&cat=${cat}&t=${encodeURIComponent(d.title)}`)}
+                className="px-4 py-2 rounded-lg bg-card border border-white/10 font-bold text-sm active:border-netflix"
+              >E{n}</button>
+            ))}
+          </div>
+        </>
+      )}
+
       {/* Exact versions of this title — one button per quality, like the site */}
       <h2 className="font-display text-2xl mt-6">Available versions{sites?.results?.length ? ` — ${sites.results.length} ${sites.results.length === 1 ? "version" : "versions"}` : ""}{sitesScope && sitesScope !== d.title ? ` — ${sitesScope}` : ""}</h2>
       {sites?.results?.length ? (

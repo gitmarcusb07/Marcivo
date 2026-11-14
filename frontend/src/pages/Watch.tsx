@@ -49,6 +49,46 @@ export default function Watch() {
     return () => { clearInterval(timer.current); clearInterval(hlsTimer.current); clearTimeout(hlsDelay.current); };
   }, [kind, id]);
 
+  // Full episode list for in-player navigation (all seasons). TV: one
+  // TMDB season call per season, in parallel. Anime: AniList gives a
+  // count only, so the list is numbered E1..EN in season 1.
+  const [epList, setEpList] = useState<{ season: number; episode: number; title: string; runtime?: string; poster?: string | null }[] | null>(null);
+  useEffect(() => {
+    if (!d) { setEpList(null); return; }
+    if (kind === "tv") {
+      const seasons = (((d as any).seasons || []) as any[]).filter((s: any) => s.n > 0);
+      if (!seasons.length) { setEpList(null); return; }
+      let alive = true;
+      Promise.allSettled(seasons.map((s: any) => api.tvSeason(id, s.n))).then((rs) => {
+        if (!alive) return;
+        const list: { season: number; episode: number; title: string; runtime?: string; poster?: string | null }[] = [];
+        rs.forEach((r, idx) => {
+          if (r.status !== "fulfilled") return;
+          for (const e of ((r.value as any)?.episodes || [])) {
+            list.push({ season: seasons[idx].n, episode: e.n, title: e.name || `Episode ${e.n}`, runtime: e.runtime ? `${e.runtime}m` : undefined, poster: e.still || null });
+          }
+        });
+        list.sort((a, b) => a.season - b.season || a.episode - b.episode);
+        setEpList(list.length ? list : null);
+      });
+      return () => { alive = false; };
+    }
+    if (kind === "anime" && typeof (d as any).episodes === "number" && (d as any).episodes > 0) {
+      setEpList(Array.from({ length: (d as any).episodes }, (_, i) => ({ season: 1, episode: i + 1, title: `Episode ${i + 1}` })));
+      return;
+    }
+    setEpList(null);
+  }, [d, kind, id]);
+
+  // Index of the playing episode in the list, and in-player navigation
+  // (same Watch page, new ?ep= — the restart effect below picks it up).
+  const epIndex = epSE.season && epSE.episode && epList ? epList.findIndex((x) => x.season === epSE.season && x.episode === epSE.episode) : -1;
+  const goEpisode = useCallback((s: number, e: number) => {
+    const q = new URLSearchParams(sp.toString());
+    q.set("ep", `S${s}E${e}`);
+    nav(`/watch/${kind}/${id}?${q.toString()}`);
+  }, [kind, id, nav, sp]);
+
   // Exact-identity header for site-only watches (id=0): show the clicked
   // result's title instead of a stale/empty value. Never re-search by title.
   useEffect(() => {
@@ -84,9 +124,9 @@ export default function Watch() {
   const pickDirect = useCallback(async (index: number): Promise<string> => {
     const src = qFor.current;
     if (!src) throw new Error("no source");
-    const r = await api.qualitySource(src, index);
+    const r = await api.qualitySource(src, index, epSE.episode);
     return playable(r.url, r.seekable);
-  }, []);
+  }, [epSE.episode]);
 
   // Pending quality/audio pick: chosen before playback starts (picker tap
   // or ?q=/ ?a= URL params) and applied when the resolve finishes. The ref
@@ -146,7 +186,7 @@ export default function Watch() {
     setSwitchingIdx(index);
     setSwitchErr("");
     try {
-      const r = await api.qualitySource(src, index);
+      const r = await api.qualitySource(src, index, epSE.episode);
       const url = playable(r.url, r.seekable);
       if (!url) throw new Error("no url");
       videoUrlRef.current = url;
@@ -427,7 +467,7 @@ export default function Watch() {
     setEpChoice(null);
     setStatusLine(`Looking for Season ${s} Episode ${e}…`);
     try {
-      const found = await findVersion(d.title, s, e, CAT_SITES[cat]);
+      const found = await findVersion(d.title, s, e, kind === "anime" ? CAT_SITES.anime : CAT_SITES[cat], kind === "anime" ? "anime" : "movie");
       if (!found) throw new Error(`No versions found for S${s}E${e}. Try another episode.`);
       const base = found.result;
       let variants: any[] = [];
@@ -468,6 +508,23 @@ export default function Watch() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [epParam, hasSource, d]);
+  // In-player episode navigation: ?ep= changed (Episodes panel / Prev /
+  // Next) — restart the episode flow for the new episode. The ref above
+  // guards the mount only; this one handles every later change.
+  const prevEpRef = useRef(epParam);
+  useEffect(() => {
+    if (prevEpRef.current === epParam) return;
+    prevEpRef.current = epParam;
+    if (!epParam || hasSource || !d) return;
+    epStarted.current = false;
+    setVideo(""); setEmbedUrl(""); setErr(""); setFatal(""); setEpChoice(null);
+    setQData(null); setQActive(0); qFor.current = null;
+    videoUrlRef.current = "";
+    setHlsMaster(null); setHlsAudios([]); setHlsQualities([]); setHlsNote("");
+    epStarted.current = true;
+    startFromEpisode();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [epParam]);
   // Auto-start the chosen source on mount (Marcus 2026-11-14: the version
   // was already picked on Detail — no second ▶ Watch tap). Once only; the
   // ref guard is StrictMode-safe. Episode flow (no source) is unaffected.
@@ -677,7 +734,12 @@ export default function Watch() {
               onDirectActive={setQActive}
               onSwitchToEmbed={switchToEmbed}
               onNote={setHlsNote}
-              resumeKey={`${kind}:${id}`}
+              episodes={epList && epIndex >= 0 ? epList : undefined}
+              episodeIndex={epIndex >= 0 ? epIndex : undefined}
+              onSelectEpisode={(s, e) => goEpisode(s, e)}
+              onPrevEpisode={epIndex > 0 && epList ? () => goEpisode(epList[epIndex - 1].season, epList[epIndex - 1].episode) : undefined}
+              onNextEpisode={epIndex >= 0 && epList && epIndex < epList.length - 1 ? () => goEpisode(epList[epIndex + 1].season, epList[epIndex + 1].episode) : undefined}
+              resumeKey={epParam ? `${kind}:${id}:${epParam}` : `${kind}:${id}`}
               autoPlay
               onBack={() => nav(-1)}
               onFatal={(m) => setFatal(m)}

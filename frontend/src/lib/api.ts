@@ -182,8 +182,8 @@ export const api = {
       picked option lazily — the signed file URLs expire, so never
       pre-resolve every option. */
   qualities: (sourceUrl: string) => j<QualitiesResp>(`/api/qualities?url=${encodeURIComponent(sourceUrl)}`),
-  qualitySource: (sourceUrl: string, index: number) =>
-    j<QualitySourceResp>(`/api/quality-source?url=${encodeURIComponent(sourceUrl)}&i=${index}`),
+  qualitySource: (sourceUrl: string, index: number, episode?: number) =>
+    j<QualitySourceResp>(`/api/quality-source?url=${encodeURIComponent(sourceUrl)}&i=${index}${episode ? `&episode=${episode}` : ""}`),
 };
 
 export type QualityOption = { index: number; label: string; raw: string; height: number | null; size: string | null; audio: string | null };
