@@ -91,12 +91,16 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
       const v = videoRef.current;
       if (!v) return reject(new Error("no video"));
       const t = at ?? v.currentTime, resume = play ?? !v.paused, rate = v.playbackRate;
-      const done = () => { v.removeEventListener("loadedmetadata", ok); v.removeEventListener("error", bad); clearTimeout(timer); };
+      const done = () => { suppressResumeRef.current = false; v.removeEventListener("loadedmetadata", ok); v.removeEventListener("error", bad); clearTimeout(timer); };
       const ok = () => { done(); try { v.currentTime = t; } catch {} v.playbackRate = rate; if (resume) v.play().catch(() => {}); resolve(); };
       const bad = () => { done(); reject(new Error("load failed")); };
       const timer = setTimeout(bad, 20000);
       v.addEventListener("loadedmetadata", ok);
       v.addEventListener("error", bad);
+      // Suppress the session-resume prompt for this load: the swap itself
+      // restores position t and resumes playback — the prompt would pause
+      // the video to ask about the same position.
+      suppressResumeRef.current = true;
       v.src = url;
       v.load();
     }), []);
@@ -140,6 +144,10 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
   const hideTimer = useRef<any>(null);
   const retriesRef = useRef(0);
   const resumeKeyRef = useRef<string | null>(null);
+  // Set while a quality/audio swap is changing the source: swapSource
+  // already restores the exact position and resumes playback itself, so
+  // the session-resume prompt must not fire for the swapped-in file.
+  const suppressResumeRef = useRef(false);
   const lastSaveRef = useRef(0);
   const proxiedRef = useRef(false);
   const hlsUpgradedRef = useRef(false);
@@ -306,7 +314,9 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
         if (vw > 0 && vh > 0 && wrapRef.current) wrapRef.current.style.aspectRatio = `${vw} / ${vh}`;
       } catch {}
       let hasResume = false;
-      if (resumeKeyRef.current && Number.isFinite(v.duration)) {
+      // A quality/audio swap sets suppressResumeRef before changing src:
+      // the swap restores the position itself, so never prompt for it.
+      if (!suppressResumeRef.current && resumeKeyRef.current && Number.isFinite(v.duration)) {
         try {
           const raw = sessionStorage.getItem(resumeKeyRef.current);
           if (raw) {
