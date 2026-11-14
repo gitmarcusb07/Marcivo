@@ -100,12 +100,13 @@ export function originOf(tmdb: any[]): ContentOrigin {
   return "";
 }
 
-/** Exclusive provider (default flow): movie/series search AND playback
-    resolve through ONE site slot — caller-supplied pools (origin routing,
-    group pools, frontend source lists) are ignored for every non-anime
-    query. EXCLUSIVE_SITE=<id> selects the slot (default 4, the streaming
-    slot); 0/empty restores the legacy multi-provider routing. Anime always
-    keeps its own pool. */
+/** Exclusive provider knob (legacy): EXCLUSIVE_SITE=<id> used to pin
+    movie/series search AND playback resolve through ONE site slot
+    (default 4, the streaming slot when unset); 0/empty restores the
+    legacy routing. It no longer pins SEARCH pools (see providerSiteIds):
+    Marcus's rule (2026-11-14) is that search is exactly the two content
+    sites. Kept for the /api/site-search exact-mode catalog fallback and
+    the /api/search `provider` response field. */
 export function exclusiveSiteId(): number {
   const raw = process.env.EXCLUSIVE_SITE;
   if (raw === undefined) return 4;
@@ -113,19 +114,21 @@ export function exclusiveSiteId(): number {
   return n >= 1 && n <= 8 ? n : 0;
 }
 
-/** Site pool for one search/playback routing decision. */
-export function providerSiteIds(group: ContentGroup, origin: ContentOrigin = ""): number[] {
-  if (group === "anime") return groupSiteIds(group);
-  const ex = exclusiveSiteId();
-  if (ex) return [ex];
-  const originSites = originSiteIds(origin);
-  const pool = originSites.length ? originSites : groupSiteIds(group);
-  // Cinejoy (slot 7) is searched FIRST for everything non-anime in legacy
-  // multi-provider mode; the pool below stays the fallback order untouched
-  // (origin routing included). An unconfigured slot 7 is filtered out by
-  // siteConfigs(), so this stays inert until SITE7_BASE_URL is set, and an
-  // explicitly configured EXCLUSIVE_SITE (above) is never overridden.
-  return pool.includes(7) ? pool : [7, ...pool];
+/** Site pool for a search decision (only caller: /api/search).
+ *
+ * Marcus's rule (2026-11-14): search results must be exactly the union of
+ * what Vegamovies (site 1) and RogMovies (site 2) return for the query, and
+ * nothing else. For anime the equivalent sources are PirateXPlay (5) +
+ * Gokuhd (3). Origin routing (TMDB top-hit lang en -> Vegamovies only,
+ * hi -> RogMovies only) was removed: it searched only ONE of the two sites
+ * per query, so Bollywood titles on Vegamovies and Hollywood-dubbed titles
+ * on RogMovies were never shown. EXCLUSIVE_SITE no longer pins search
+ * pools either. `origin` is accepted for call-site compatibility and
+ * ignored. */
+export function providerSiteIds(group: ContentGroup, _origin: ContentOrigin = ""): number[] {
+  if (group === "anime") return [5, 3];
+  if (group === "movie") return [1, 2];
+  return [1, 2, 5, 3];
 }
 
 /** Streaming/download orientation for a site id (falls back across groups). */
@@ -487,8 +490,11 @@ export function isExactVersion(
   }
   // Series without a requested season (detail page): same show in any season
   // pack is a valid version — strip season markers and skip the year gate
-  // (S4 packs carry the season year, not the series premiere year).
-  if (query.type === "tv" || query.type === "series" || siteType === "series") {
+  // (S4 packs carry the season year, not the series premiere year). Anime
+  // season packs ("Jujutsu Kaisen Season 1 ...") are the same shape, so
+  // anime joins this branch too — otherwise the "Season 1" marker leaks
+  // into the core slug and real anime versions never match.
+  if (query.type === "tv" || query.type === "series" || query.type === "anime" || siteType === "series" || siteType === "anime") {
     const a = stripSeasonSlug(coreSlug(siteTitle));
     const b = stripSeasonSlug(coreSlug(qTitle));
     if (b && a === b) return true;
@@ -500,6 +506,34 @@ export function isExactVersion(
   const sim = titleSimilarity(qTitle, siteTitle);
   if (query.year) return sim >= 0.8;
   return sim >= 0.85;
+}
+
+/** Search availability filter (Marcus 2026-11-14): keep only metadata cards
+    that have at least one exact site version — no card unless a source site
+    carries that exact title. TMDB items match WITH year (remake guard:
+    Dune 2021 keeps its rows, Dune 1984 keeps its own, neither keeps the
+    other's). AniList items match WITHOUT year (anime site rows often carry
+    none). If `sites` is empty (site search unavailable), the result is
+    empty — there is deliberately no fallback to unfiltered cards. */
+export function filterAvailableMeta<
+  T extends { kind: "movie" | "tv"; title: string; year?: string },
+  A extends { kind: "anime"; title: string },
+>(
+  tmdb: T[],
+  anime: A[],
+  sites: { title: string; year?: string; type?: string; kind?: string }[],
+): { tmdb: T[]; anime: A[] } {
+  if (!sites || !sites.length) return { tmdb: [], anime: [] };
+  const has = (q: { title: string; year?: string; type?: string }) =>
+    sites.some((r) =>
+      isExactVersion(String(r.title || ""), String(r.year || ""), String(r.type || r.kind || ""), q)
+    );
+  return {
+    tmdb: (tmdb || []).filter((it) =>
+      has({ title: it.title, year: it.year, type: it.kind === "tv" ? "tv" : "movie" })
+    ),
+    anime: (anime || []).filter((it) => has({ title: it.title, type: "anime" })),
+  };
 }
 
 /** Catalog-exact match for TMDB-backed sources (the exclusive provider):

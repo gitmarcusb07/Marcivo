@@ -31,16 +31,15 @@ export default function Detail() {
   const loadVersions = useCallback((title: string, scopeLabel: string, meta?: { year?: string; type?: string; lang?: string }) => {
     setSites(null);
     setSitesScope(scopeLabel);
-    // Source-group routing: anime → PirateXPlay/Gokuhd only; Hollywood →
-    // Vegamovies only; Bollywood → RogMovies only; otherwise the movie pool.
-    // The TMDB original language connects even uncategorized pages to their
-    // relevant site (en → Vegamovies, hi → RogMovies).
-    // Exact mode: the backend keeps ONLY versions of this title+year+kind —
-    // every quality (480p/720p/1080p) as its own button, no other movies.
+    // Source-group routing (Marcus 2026-11-14): anime → PirateXPlay/Gokuhd
+    // only; every non-anime title checks BOTH Vegamovies + RogMovies, so a
+    // version on either site is found. Exact mode: the backend keeps ONLY
+    // versions of this title+year+kind — every quality (480p/720p/1080p)
+    // as its own button, no other movies.
     const isAnime = kind === "anime";
     let sites = isAnime ? CAT_SITES.anime : CAT_SITES[cat];
     if (!sites && !isAnime) {
-      sites = meta?.lang === "hi" ? CAT_SITES.bollywood : meta?.lang === "en" ? CAT_SITES.hollywood : [4, 1, 2];
+      sites = [1, 2];
     }
     const priority = isAnime ? "anime" : "movie";
     api.siteSearch(title, { sites, priority, year: meta?.year, type: meta?.type, exact: true }).then(setSites).catch(() => setSites({ status: "unavailable", results: [] }));

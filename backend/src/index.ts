@@ -10,9 +10,9 @@ import { tmdbHome, tmdbSearch, tmdbDetail, tmdbShowcase, tmdbBrowse, tmdbSeason,
 import { anilistHome, anilistSearch, anilistDetail, anilistUpcoming } from "./anilist.js";
 import { searchSites, lookupResult, expandExactVariants, expandOne, registerResults } from "./siteSearch.js";
 import {
-  normalizeQuery, classify, groupForClass, groupForPriority, groupSiteIds,
+  normalizeQuery, classify, groupForClass, groupForPriority,
   originOf, exclusiveSiteId, providerSiteIds, isExactVersion, isCatalogExact,
-  sourceNameFor, logSearch, ContentGroup,
+  filterAvailableMeta, sourceNameFor, logSearch, ContentGroup,
 } from "./identity.js";
 import { enqueueResolve, getJob, preResolve, getMetrics, gdirectFromIntermediate, vegamoviesEmbedUrlFromHtml } from "./resolver.js";
 import { extractQualityOptions, pageAudioHint, fetchHtml, probeSeekable, isSafePublicUrl, TtlCache, allowRequest, toPublic, type QualityOption } from "./qualities.js";
@@ -474,9 +474,14 @@ app.get("/api/search", async (req, res) => {
     try { if ((sites as any)?.status === "ok") preResolve(list.map((r: any) => r.url)); } catch {}
     logSearch(q, nq, cls, group, ((sites as any)?.per_site || []), list.length, grouped.length || list.length,
       (grouped.length ? grouped : list).map((r: any) => `${r.title || ""}`.slice(0, 60)));
+    // Marcus 2026-11-14: the search grid shows ONLY titles a source site
+    // actually carries — filter the TMDB/AniList cards against the site
+    // rows. When the site search is unavailable there are no rows, so no
+    // cards either (no fallback to unfiltered TMDB cards).
+    const avail = filterAvailableMeta(tmdb, anime, (sites as any)?.status === "ok" ? list : []);
     const exId = exclusiveSiteId();
     const out: any = {
-      query: q, tmdb, anime, sites: list, grouped,
+      query: q, tmdb: avail.tmdb, anime: avail.anime, sites: list, grouped,
       siteStatus: (sites as any)?.status || "unavailable", classification: cls, group,
       provider: exId ? sourceNameFor(exId) : "",
       // Specific failure reason when the provider is unreachable (HTTP
@@ -525,14 +530,15 @@ app.get("/api/site-search", async (req, res) => {
   const q = String(req.query.q || "").trim();
   if (!q) return res.json({ status: "empty", results: [] });
   const debug = String(req.query.debug || "") === "1";
-  // Explicit site filter (e.g. Hollywood->[4,1]) wins in legacy mode;
-  // otherwise the content-group pool applies: anime → PirateXPlay/Gokuhd
-  // only, movie → PRMovies/Vega/Rog only. In the default exclusive-provider
-  // mode every non-anime query is pinned to the single provider site, so
-  // caller-supplied pools can never route the default flow elsewhere.
+  // Explicit site filter wins; otherwise the content-site pool applies
+  // (Marcus 2026-11-14: movie → Vegamovies + RogMovies [1,2], anime →
+  // PirateXPlay + Gokuhd [5,3], unknown → all four). In the default
+  // exclusive-provider mode every non-anime query is pinned to the single
+  // provider site, so caller-supplied pools can never route the default
+  // flow elsewhere.
   let sites = String(req.query.sites || "").split(",").map((s) => parseInt(s.trim(), 10)).filter((n) => n >= 1 && n <= 8);
   const group = groupForPriority(String(req.query.priority || ""));
-  if (!sites.length && group) sites = groupSiteIds(group);
+  if (!sites.length && group) sites = providerSiteIds(group);
   const exSite = exclusiveSiteId();
   if (exSite && group !== "anime") sites = [exSite];
   try {

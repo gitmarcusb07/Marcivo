@@ -78,11 +78,14 @@ export async function backendInfo(timeoutMs = 90000): Promise<{ ok: boolean; bui
   }
 }
 
+// Marcus 2026-11-14: search and version-finding check BOTH content sites
+// (Vegamovies 1 + RogMovies 2) for every non-anime title — no more
+// single-site routing by language/category, and no boredflix (4) rows.
 export const CAT_SITES: Record<string, number[] | undefined> = {
-  hollywood: [1],
-  bollywood: [2],
-  movies: [4, 1, 2],
-  series: [4, 1, 2],
+  hollywood: [1, 2],
+  bollywood: [1, 2],
+  movies: [1, 2],
+  series: [1, 2],
   anime: [5, 3],
 };
 

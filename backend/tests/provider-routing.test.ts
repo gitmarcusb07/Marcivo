@@ -21,44 +21,36 @@ function withEnv(vars: Record<string, string | undefined>, fn: () => void) {
   }
 }
 
-// --- 1/2/5: every movie/series search routes to the single provider only ---
-t("default (unset) → movie/series/unknown pin to site 4 (Cinegram)", () => {
-  withEnv({ EXCLUSIVE_SITE: undefined, HOLLYWOOD_SITES: "1", BOLLYWOOD_SITES: "2" }, () => {
-    assert.equal(exclusiveSiteId(), 4);
-    assert.deepEqual(providerSiteIds("movie"), [4]);
-    assert.deepEqual(providerSiteIds("unknown"), [4]);
-  });
+// --- Marcus 2026-11-14: search is exactly the two content sites —
+// movie/series -> Vegamovies + RogMovies [1,2], anime -> PirateXPlay +
+// Gokuhd [5,3], unknown -> all four. No origin routing (it hid the other
+// site's versions) and no EXCLUSIVE_SITE pin for search pools. ---
+t("movie -> [1,2] regardless of origin or EXCLUSIVE_SITE", () => {
+  for (const v of [undefined, "", "0", "4", "1", "7"]) {
+    withEnv({ EXCLUSIVE_SITE: v, HOLLYWOOD_SITES: "1", BOLLYWOOD_SITES: "2" }, () => {
+      assert.deepEqual(providerSiteIds("movie"), [1, 2]);
+      assert.deepEqual(providerSiteIds("movie", "hollywood"), [1, 2]);
+      assert.deepEqual(providerSiteIds("movie", "bollywood"), [1, 2]);
+    });
+  }
 });
 
-t("exclusive mode never selects Vega/Rog — not even for origin titles", () => {
-  withEnv({ EXCLUSIVE_SITE: undefined, HOLLYWOOD_SITES: "1", BOLLYWOOD_SITES: "2" }, () => {
-    assert.deepEqual(providerSiteIds("movie", "hollywood"), [4]);
-    assert.deepEqual(providerSiteIds("movie", "bollywood"), [4]);
-  });
-});
-
-t("anime keeps its own pool (PirateXPlay/Gokuhd) in exclusive mode", () => {
+t("anime keeps its own pool (PirateXPlay/Gokuhd)", () => {
   withEnv({ EXCLUSIVE_SITE: undefined }, () => {
     assert.deepEqual(providerSiteIds("anime"), [5, 3]);
     assert.deepEqual(providerSiteIds("anime", "hollywood"), [5, 3]);
   });
 });
 
-// --- Restore path: a deliberate config change brings legacy routing back,
-// with Cinejoy (SITE7) as the default-FIRST provider for movies/series ---
-t("EXCLUSIVE_SITE=0 restores legacy routing with Cinejoy first", () => {
-  withEnv({ EXCLUSIVE_SITE: "0", HOLLYWOOD_SITES: "1", BOLLYWOOD_SITES: "2" }, () => {
-    assert.equal(exclusiveSiteId(), 0);
-    assert.deepEqual(providerSiteIds("movie"), [7, 4, 1, 2, 6]);
-    assert.deepEqual(providerSiteIds("unknown"), [7, 4, 5, 1, 2, 3, 6]);
-    assert.deepEqual(providerSiteIds("movie", "hollywood"), [7, 1]); // Cinejoy first, origin fallback intact
-    assert.deepEqual(providerSiteIds("movie", "bollywood"), [7, 2]);
-    assert.deepEqual(providerSiteIds("anime"), [5, 3]); // anime pool untouched
+t("unknown -> both movie sites + both anime sites", () => {
+  withEnv({ EXCLUSIVE_SITE: "0" }, () => {
+    assert.deepEqual(providerSiteIds("unknown"), [1, 2, 5, 3]);
   });
 });
 
-t("EXCLUSIVE_SITE is re-pointable; empty/invalid values disable it", () => {
-  withEnv({ EXCLUSIVE_SITE: "2" }, () => assert.deepEqual(providerSiteIds("movie"), [2]));
+t("exclusiveSiteId knob itself is unchanged; empty/invalid values disable it", () => {
+  withEnv({ EXCLUSIVE_SITE: undefined }, () => assert.equal(exclusiveSiteId(), 4));
+  withEnv({ EXCLUSIVE_SITE: "2" }, () => assert.equal(exclusiveSiteId(), 2));
   withEnv({ EXCLUSIVE_SITE: "" }, () => assert.equal(exclusiveSiteId(), 0));
   withEnv({ EXCLUSIVE_SITE: "x" }, () => assert.equal(exclusiveSiteId(), 0));
   withEnv({ EXCLUSIVE_SITE: "9" }, () => assert.equal(exclusiveSiteId(), 0));
@@ -216,19 +208,20 @@ t("fetch diagnostics are meaningful and never dump raw HTML", () => {
   assert.equal(describeFetchError({ code: "ENOTFOUND" }), "ENOTFOUND");
 });
 
-// --- BoredFlix (SITE6): additional provider — config-gated, never exclusive ---
-t("BoredFlix joins movie+unknown pools last; exclusive mode ignores it", () => {
+// --- BoredFlix (SITE6): config-gated slot; search pools never include it
+// (Marcus 2026-11-14: movie/series search is Vegamovies + RogMovies only) ---
+t("BoredFlix never joins search pools, whatever SITE6_BASE_URL is set to", () => {
   withEnv({ EXCLUSIVE_SITE: "0", SITE6_BASE_URL: "https://boredflix.mobi" }, () => {
-    assert.deepEqual(providerSiteIds("movie"), [7, 4, 1, 2, 6]);
-    assert.deepEqual(providerSiteIds("unknown"), [7, 4, 5, 1, 2, 3, 6]);
+    assert.deepEqual(providerSiteIds("movie"), [1, 2]);
+    assert.deepEqual(providerSiteIds("unknown"), [1, 2, 5, 3]);
   });
   withEnv({ EXCLUSIVE_SITE: undefined, SITE6_BASE_URL: "https://boredflix.mobi" }, () => {
-    assert.deepEqual(providerSiteIds("movie"), [4]); // default flow: Cinegram only
+    assert.deepEqual(providerSiteIds("movie"), [1, 2]);
     assert.deepEqual(providerSiteIds("anime"), [5, 3]); // anime pool untouched
   });
   withEnv({ EXCLUSIVE_SITE: "0", SITE6_BASE_URL: "https://boredflix.mobi" }, () => {
-    assert.deepEqual(providerSiteIds("movie", "hollywood"), [7, 1]); // origin fallback intact, Cinejoy first
-    assert.deepEqual(providerSiteIds("movie", "bollywood"), [7, 2]);
+    assert.deepEqual(providerSiteIds("movie", "hollywood"), [1, 2]);
+    assert.deepEqual(providerSiteIds("movie", "bollywood"), [1, 2]);
   });
 });
 
@@ -312,21 +305,23 @@ t("BoredFlix parsing handles missing posters, empty/malformed HTML, junk links",
   assert.deepEqual(extractCardResults(offHost, "https://boredflix.mobi", "pushpa"), []);
 });
 
-// --- Cinejoy (SITE7): default-first provider in multi mode, never exclusive.
-// Its search page is a client-side app querying TMDB in the browser, so the
-// backend adapter mirrors that client (TMDB search → Cinejoy page URLs).
-t("Cinejoy first for movie/series; an explicit EXCLUSIVE_SITE is never overridden", () => {
+// --- Cinejoy (SITE7): its search page is a client-side app querying TMDB
+// in the browser, so the backend adapter mirrors that client (TMDB search →
+// Cinejoy page URLs). It is NOT a search pool member anymore (Marcus
+// 2026-11-14: movie/series search is Vegamovies + RogMovies only); the
+// adapter tests below still cover its URL building. ---
+t("Cinejoy is not a search pool member; EXCLUSIVE_SITE never changes pools", () => {
   withEnv({ EXCLUSIVE_SITE: "4" }, () => {
-    assert.deepEqual(providerSiteIds("movie"), [4]); // configured exclusive provider wins
-    assert.deepEqual(providerSiteIds("movie", "hollywood"), [4]);
-    assert.deepEqual(providerSiteIds("unknown"), [4]);
+    assert.deepEqual(providerSiteIds("movie"), [1, 2]);
+    assert.deepEqual(providerSiteIds("movie", "hollywood"), [1, 2]);
+    assert.deepEqual(providerSiteIds("unknown"), [1, 2, 5, 3]);
   });
   withEnv({ EXCLUSIVE_SITE: "7" }, () => {
-    assert.deepEqual(providerSiteIds("movie"), [7]); // Cinejoy CAN be the exclusive provider
+    assert.deepEqual(providerSiteIds("movie"), [1, 2]);
   });
   withEnv({ EXCLUSIVE_SITE: "0" }, () => {
-    assert.deepEqual(providerSiteIds("movie"), [7, 4, 1, 2, 6]);
-    assert.deepEqual(providerSiteIds("unknown"), [7, 4, 5, 1, 2, 3, 6]);
+    assert.deepEqual(providerSiteIds("movie"), [1, 2]);
+    assert.deepEqual(providerSiteIds("unknown"), [1, 2, 5, 3]);
     assert.deepEqual(providerSiteIds("anime"), [5, 3]); // anime untouched
   });
 });

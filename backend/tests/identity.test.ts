@@ -8,7 +8,7 @@ import {
   groupByContent, contentSlug,
 } from "../src/identity.js";
 import { ARTICLE_TITLE, CONTENT_SIGNAL } from "../src/siteSearch.js";
-import { originOf, originSiteIds, isExactVersion } from "../src/identity.js";
+import { originOf, originSiteIds, isExactVersion, filterAvailableMeta } from "../src/identity.js";
 
 let n = 0;
 const t = (name: string, fn: () => void) => { fn(); n++; console.log(`ok ${n} - ${name}`); };
@@ -325,6 +325,46 @@ t("series exact: season packs match any season year, never other shows", () => {
   assert.ok(isExactVersion("Reacher [Season 1] Single Episodes 720p x264", "2022", "series", { title: "Reacher", type: "tv", season: 1 }));
   assert.ok(!isExactVersion("Reacher [Season 2] Single Episodes 720p", "2023", "series", { title: "Reacher", type: "tv", season: 1 }));
   assert.ok(!isExactVersion("Download Jack Reacher (2012) BluRay 720p", "2012", "movie", q));
+});
+
+// --- filterAvailableMeta (Marcus 2026-11-14): search cards show only
+// titles a source site actually carries ---
+const DUNE_ROWS = [
+  { title: "Download Dune (2021) BluRay Dual Audio {Hindi-English} 480p [550MB]", year: "2021", type: "movie" },
+  { title: "Download Dune: Part Two (2024) Dual Audio [Hindi ORG. (Line) + English] 1080p", year: "2024", type: "movie" },
+  { title: "Download Dune: Prophecy (2024) Season 1 Complete - HBO Original Dual-Audio {Hindi-English} 480p [550MB]", year: "2024", type: "series" },
+];
+const tm = (title: string, year: string, kind: "movie" | "tv" = "movie") => ({ id: "1", kind, title, year }) as any;
+
+t("filterAvailableMeta keeps TMDB items with a matching site row", () => {
+  const r = filterAvailableMeta([tm("Dune", "2021"), tm("Dune: Part Two", "2024")], [], DUNE_ROWS);
+  assert.deepEqual(r.tmdb.map((x) => x.title), ["Dune", "Dune: Part Two"]);
+});
+
+t("filterAvailableMeta drops TMDB items with no site row", () => {
+  const r = filterAvailableMeta([tm("Anatomy of a Fall", "2023"), tm("Dune: Part Three", "2026")], [], DUNE_ROWS);
+  assert.deepEqual(r.tmdb, []);
+});
+
+t("filterAvailableMeta drops same title, different year (remake guard)", () => {
+  const r = filterAvailableMeta([tm("Dune", "1984"), tm("Dune", "2021")], [], DUNE_ROWS);
+  assert.deepEqual(r.tmdb.map((x) => x.year), ["2021"]);
+});
+
+t("filterAvailableMeta keeps a TV item whose site row is a season pack", () => {
+  const r = filterAvailableMeta([tm("Dune: Prophecy", "2024", "tv")], [], DUNE_ROWS);
+  assert.deepEqual(r.tmdb.map((x) => x.title), ["Dune: Prophecy"]);
+});
+
+t("filterAvailableMeta matches anime without a year on the site row", () => {
+  const rows = [{ title: "Jujutsu Kaisen Season 1 Hindi Dubbed 480p", year: "", type: "anime" }];
+  const r = filterAvailableMeta([], [{ id: "9", kind: "anime", title: "Jujutsu Kaisen", year: "2020" } as any], rows);
+  assert.equal(r.anime.length, 1);
+});
+
+t("filterAvailableMeta with no site rows yields nothing (no unfiltered fallback)", () => {
+  const r = filterAvailableMeta([tm("Dune", "2021")], [{ id: "9", kind: "anime", title: "Naruto" } as any], []);
+  assert.deepEqual(r, { tmdb: [], anime: [] });
 });
 
 console.log(`\nAll ${n} identity tests passed.`);
