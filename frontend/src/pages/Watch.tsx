@@ -352,8 +352,11 @@ export default function Watch() {
       let url = got.url;
       let isEmbed = !!got.embed;
       const pend = pendingPickRef.current;
-      if (pend !== null) {
+      if (pend !== null && !got.embed) {
         // Viewer chose a quality/audio while resolving: play that file directly.
+        // Only when the source has no player of its own — when it does, the
+        // source's embed plays first (the pick is dropped; the viewer can
+        // still switch to any direct quality from the picker rail).
         try {
           url = await pickDirect(pend);
           isEmbed = false;
@@ -362,8 +365,8 @@ export default function Watch() {
           url = got.url; // never block playback: fall back to the default
           isEmbed = !!got.embed;
         }
-        setPendingPick(null);
       }
+      setPendingPick(null);
       clearInterval(timer.current);
       setStatusLine("");
       videoUrlRef.current = url;
