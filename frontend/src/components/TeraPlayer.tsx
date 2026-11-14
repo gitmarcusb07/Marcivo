@@ -91,10 +91,19 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
       const v = videoRef.current;
       if (!v) return reject(new Error("no video"));
       const t = at ?? v.currentTime, resume = play ?? !v.paused, rate = v.playbackRate;
-      const done = () => { suppressResumeRef.current = false; v.removeEventListener("loadedmetadata", ok); v.removeEventListener("error", bad); clearTimeout(timer); };
-      const ok = () => { done(); try { v.currentTime = t; } catch {} v.playbackRate = rate; if (resume) v.play().catch(() => {}); resolve(); };
+      // Big direct files (multi-GB MKV via the /edge/stream proxy) can take
+      // well over 20s before loadedmetadata fires — the first play of the
+      // same file takes ~60s to start. A short timeout fails the swap and
+      // strands the player, so give the new file 75s to load its metadata.
+      const done = () => { v.removeEventListener("loadedmetadata", ok); v.removeEventListener("error", bad); clearTimeout(timer); };
+      const ok = () => { done(); suppressResumeRef.current = false; try { v.currentTime = t; } catch {} v.playbackRate = rate; if (resume) v.play().catch(() => {}); resolve(); };
+      // On timeout/error, do NOT clear suppressResumeRef: the load may still
+      // complete late, and a late loadedmetadata with suppress cleared shows
+      // the session-resume prompt and stalls playback — exactly the failure
+      // the swap is meant to avoid. The prompt stays suppressed for the rest
+      // of this page session (a fresh page load resets the ref).
       const bad = () => { done(); reject(new Error("load failed")); };
-      const timer = setTimeout(bad, 20000);
+      const timer = setTimeout(bad, 75000);
       v.addEventListener("loadedmetadata", ok);
       v.addEventListener("error", bad);
       // Suppress the session-resume prompt for this load: the swap itself
@@ -133,11 +142,21 @@ export default function TeraPlayer({ title, directUrl, hlsMaster, hlsAudios, hls
     setSwapping(true);
     try {
       const url = await onPickDirect(i);   // lazy: only the picked option
-      await swapSource(url, t, wasPlaying);
+      // One automatic retry: a first load through the proxy can fail
+      // (slow metadata on a big file) and succeed on the second attempt.
+      try {
+        await swapSource(url, t, wasPlaying);
+      } catch {
+        await swapSource(url, t, wasPlaying);
+      }
       onDirectActive?.(i);
     } catch {
       onNote?.("Couldn't switch right now, so we kept playing the current version.");
+      // Restore the old file; the resume prompt stays suppressed (see
+      // swapSource) so a late load can't stall playback with a prompt.
+      suppressResumeRef.current = true;
       if ((v.currentSrc || v.src) !== oldSrc) await swapSource(oldSrc, t, wasPlaying).catch(() => {});
+      if (wasPlaying) v.play().catch(() => {});
     } finally {
       setSwapping(false);
     }
