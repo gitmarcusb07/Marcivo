@@ -30,7 +30,7 @@ loadCaps();
 // Session cache: content loads once per app open, then served from memory
 // until the app process dies. Dynamic endpoints are never cached.
 const sessionCache = new Map<string, any>();
-const NO_CACHE = ["/api/resolve", "/api/stream", "/health"];
+const NO_CACHE = ["/api/resolve", "/api/stream", "/health", "/edge/stream"];
 
 async function j<T>(path: string, init?: RequestInit, timeoutMs = 60000): Promise<T> {
   const method = (init?.method || "GET").toUpperCase();
@@ -171,6 +171,13 @@ export const api = {
   hlsStatus: (mediaUrl: string) => j<any>(`/api/hls-status?url=${encodeURIComponent(mediaUrl)}`),
   hlsFile: (masterPath: string) => `${BASE}${masterPath}`,
 };
+
+// Same-origin Range-capable media proxy (Cloudflare Pages Function,
+// frontend/functions/edge/stream.ts). Used in LITE mode for unseekable
+// direct files: the Render /api/stream proxy is disabled there (501), so
+// the player routes through this one instead — same domain, no new hosting.
+export const edgeStreamUrl = (mediaUrl: string): string =>
+  `/edge/stream?url=${encodeURIComponent(mediaUrl)}`;
 
 // Episode-scoped version finder (§28): all scope queries fire in PARALLEL.
 // The most specific query wins, but the picked result MUST match the
