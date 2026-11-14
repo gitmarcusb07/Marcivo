@@ -485,8 +485,17 @@ async function searchOne(site: SiteCfg, q: string) {
     const r = await axios.get(url, {
       timeout,
       headers: {
-        "User-Agent": process.env.SITE_USER_AGENT || "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+        // Full browser-like headers: Cloudflare challenges datacenter IPs
+        // (Render) that send a bare UA; a complete header set raises the
+        // bot score enough to get the real search page back.
+        "User-Agent": process.env.SITE_USER_AGENT || "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
         Accept: "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+        Referer: site.base_url + "/",
+        "Upgrade-Insecure-Requests": "1",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Dest": "document",
       },
       maxRedirects: 5,
       validateStatus: () => true,
@@ -511,6 +520,12 @@ async function searchOne(site: SiteCfg, q: string) {
       if (!old || it.score > old.score) best.set(it.url, it);
     }
     const list = [...best.values()].sort((a, b) => b.score - a.score || a.title.localeCompare(b.title)).slice(0, perSite);
+    if (!list.length) {
+      // Self-diagnosing: a 200 with no parseable results is usually a WAF /
+      // bot-check page — log what actually came back so Render logs show it.
+      const head = body.replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ").replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim().slice(0, 160);
+      console.warn(`[site-search] ${site.name} returned 0 results (HTTP ${r.status}, ct=${ct || "?"}, ${Date.now() - t0}ms, ${url}) body: ${head}`);
+    }
     list.forEach((x) => {
       x.site_id = site.id;
       x.site_name = site.name;
