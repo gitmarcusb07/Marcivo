@@ -61,6 +61,7 @@ async function generateSitemapXml(): Promise<string> {
       `${SEO_SITE_URL}/category/hollywood`,
       `${SEO_SITE_URL}/category/bollywood`,
       `${SEO_SITE_URL}/blog`,
+      `${SEO_SITE_URL}/blog/aamir-khan-farhan-akhtar-microdrama-platform-india`,
       `${SEO_SITE_URL}/blog/trump-xi-putin-trilateral-meeting-apec-shenzhen-november-2026`,
       `${SEO_SITE_URL}/blog/fujairah-uae-road-accident-14-killed-4-indians`,
       `${SEO_SITE_URL}/blog/kpop-demon-hunters-golden-world-tour-2027-dates-tickets`,
