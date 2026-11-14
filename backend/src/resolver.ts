@@ -384,6 +384,14 @@ export function isVegamovies(u: string): boolean {
   return vegamoviesHosts().some((d) => h === d || h.endsWith("." + d));
 }
 
+/** RogMovies pages carry the same "Watch Online" → playdrive button as
+    Vegamovies, so the embed lane applies to them too. The extractor
+    (vegamoviesEmbedUrlFromHtml) is host-agnostic — only this gate changes. */
+export function isPlaydriveSite(u: string): boolean {
+  if (isVegamovies(u)) return true;
+  try { return /(^|\.)rogmovies\./i.test(new URL(u).hostname); } catch { return false; }
+}
+
 /** Extract the site's own Watch Online player URL from a Vegamovies content
     page's HTML. Pure (no network): the "Watch Online" anchor's href must be
     a playdrive /e/<id> embed URL — any other link (including other "watch"
@@ -632,6 +640,63 @@ async function fastHttpPath(contentUrl: string): Promise<string | null> {
       → embed HTML contains dl.php?link=<direct file URL> inline.
     Two axios GETs resolve in ~6s when the path is healthy. Falls through to
     the bot bridge on any miss (JS-only pages, login hosts, layout change). */
+function absolutize(h: string, base: string): string {
+  try { return new URL(h, base).toString(); } catch { return ""; }
+}
+
+/** Resolve ONE nexdrive/genxfm/vcloud intermediate link to its direct file
+    URL via the pure-HTTP G-Direct flow (intermediate page → "G-Direct
+    [Instant]" anchor → embed → dl.php?link=). Extracted verbatim from
+    gdirectResolve's step 3 so /api/quality-source can resolve a single
+    quality option on demand. Returns null on any miss. Exported for the
+    qualities routes + unit tests. */
+export async function gdirectFromIntermediate(interUrl: string, referer: string): Promise<string | null> {
+  const UA = process.env.SITE_USER_AGENT || "Mozilla/5.0 (Windows NT 10.0; Win64; x64)";
+  const get = async (u: string): Promise<string | null> => {
+    try {
+      const r = await axios.get(u, {
+        timeout: 12000,
+        headers: { "User-Agent": UA, Accept: "text/html,application/xhtml+xml,*/*", Referer: referer },
+        maxRedirects: 5,
+        validateStatus: () => true,
+      });
+      if (r.status >= 400 || typeof r.data !== "string") return null;
+      return r.data;
+    } catch { return null; }
+  };
+  const im = await get(interUrl);
+  if (!im) return null;
+  const $$ = cheerio.load(im);
+  let gdir = "";
+  $$("a[href]").each((_, el) => {
+    if (gdir) return false;
+    const t = ($$(el).text() || "").toLowerCase();
+    const h = absolutize($$(el).attr("href") || "", interUrl);
+    if (!h) return;
+    if (/g-direct|instant/.test(t) && h.toLowerCase().includes("fastdl")) gdir = h;
+  });
+  // Fallback: any fastdl/dl.php anchor even without the label.
+  if (!gdir) {
+    $$("a[href]").each((_, el) => {
+      if (gdir) return false;
+      const h = absolutize($$(el).attr("href") || "", interUrl);
+      if (h && (h.toLowerCase().includes("fastdl.zip") || h.toLowerCase().includes("dl.php"))) gdir = h;
+    });
+  }
+  if (!gdir) return null;
+  const inner = unwrapFastdl(gdir);
+  if (inner) return inner;
+  const em = await get(gdir);
+  if (!em) return null;
+  const m = em.match(/dl\.php\?link=(https?[^"'\s<>\\]+)/i);
+  if (!m) return null;
+  try {
+    const inner2 = decodeURIComponent(m[1]);
+    if (isDirect(inner2) && !isNonFinal(inner2) && !isTracking(inner2)) return inner2;
+  } catch {}
+  return null;
+}
+
 async function gdirectResolve(contentUrl: string, job?: Job): Promise<string | null> {
   const UA = process.env.SITE_USER_AGENT || "Mozilla/5.0 (Windows NT 10.0; Win64; x64)";
   const t0 = Date.now();
@@ -648,9 +713,6 @@ async function gdirectResolve(contentUrl: string, job?: Job): Promise<string | n
       if (r.status >= 400 || typeof r.data !== "string") return null;
       return r.data;
     } catch { return null; }
-  };
-  const absolutize = (h: string, base: string): string => {
-    try { return new URL(h, base).toString(); } catch { return ""; }
   };
   // 0. The content URL itself may already be a fastdl/dl.php link.
   const direct0 = unwrapFastdl(contentUrl);
@@ -691,37 +753,8 @@ async function gdirectResolve(contentUrl: string, job?: Job): Promise<string | n
   // 3. Intermediate pages → G-Direct [Instant] anchor → embed → direct URL.
   for (const ih of interFirst.slice(0, 3)) {
     if (dead()) return null;
-    const im = await get(ih);
-    if (!im) continue;
-    const $$ = cheerio.load(im);
-    let gdir = "";
-    $$("a[href]").each((_, el) => {
-      if (gdir) return false;
-      const t = ($$(el).text() || "").toLowerCase();
-      const h = absolutize($$(el).attr("href") || "", ih);
-      if (!h) return;
-      if (/g-direct|instant/.test(t) && h.toLowerCase().includes("fastdl")) gdir = h;
-    });
-    // Fallback: any fastdl/dl.php anchor even without the label.
-    if (!gdir) {
-      $$("a[href]").each((_, el) => {
-        if (gdir) return false;
-        const h = absolutize($$(el).attr("href") || "", ih);
-        if (h && (h.toLowerCase().includes("fastdl.zip") || h.toLowerCase().includes("dl.php"))) gdir = h;
-      });
-    }
-    if (!gdir) continue;
-    const inner = unwrapFastdl(gdir);
-    if (inner) return inner;
-    const em = await get(gdir);
-    if (!em || dead()) continue;
-    const m = em.match(/dl\.php\?link=(https?[^"'\s<>\\]+)/i);
-    if (m) {
-      try {
-        const inner2 = decodeURIComponent(m[1]);
-        if (isDirect(inner2) && !isNonFinal(inner2) && !isTracking(inner2)) return inner2;
-      } catch {}
-    }
+    const direct = await gdirectFromIntermediate(ih, contentUrl);
+    if (direct) return direct;
   }
   return null;
 }
@@ -948,16 +981,18 @@ async function runPipeline(sourceUrl: string, job: Job, background = false, skip
     job.stage = "cinejoy";
     return await cinejoyResolve(sourceUrl, job, season, episode);
   }
-  // Vegamovies (source-specific): pages with a Watch Online button play
-  // through the source's own embed player. Unlike Cinegram this is a
-  // best-effort lane — most pages have no such button, so a miss falls
-  // through to the download lanes below instead of failing the job.
+  // Vegamovies / RogMovies (source-specific): pages with a Watch Online
+  // button play through the source's own embed player. Unlike Cinegram
+  // this is a best-effort lane — most pages have no such button, so a miss
+  // falls through to the download lanes below instead of failing the job.
   // NOTE (2026-11-14): the file lanes were tried FIRST here briefly so
   // plays would use our own player and dodge the source player's
   // watermark overlay — reverted the same day because direct files don't
   // honor Range: seeking restarts the video from the beginning, while
   // the source's embed player seeks properly. Embed first again.
-  if (isVegamovies(sourceUrl) && !(job as any).cancelled) {
+  // (2026-11-14: RogMovies added — its pages carry the same Watch Online
+  // → playdrive button; the embed player has its own quality picker.)
+  if (isPlaydriveSite(sourceUrl) && !(job as any).cancelled) {
     job.stage = "fast-path";
     const embedUrl = await vegamoviesEmbed(sourceUrl, job);
     if (embedUrl) return embedUrl;

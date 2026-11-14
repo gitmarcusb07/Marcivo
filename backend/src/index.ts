@@ -14,7 +14,8 @@ import {
   originOf, exclusiveSiteId, providerSiteIds, isExactVersion, isCatalogExact,
   sourceNameFor, logSearch, ContentGroup,
 } from "./identity.js";
-import { enqueueResolve, getJob, preResolve, getMetrics } from "./resolver.js";
+import { enqueueResolve, getJob, preResolve, getMetrics, gdirectFromIntermediate, vegamoviesEmbedUrlFromHtml } from "./resolver.js";
+import { extractQualityOptions, pageAudioHint, fetchHtml, probeSeekable, isSafePublicUrl, TtlCache, allowRequest, toPublic, type QualityOption } from "./qualities.js";
 import { streamProxy } from "./stream.js";
 import { HLSManager } from "./hls.js";
 import { LITE } from "./lite.js";
@@ -712,6 +713,64 @@ app.get("/api/metrics", (_req, res) => {
 app.get("/api/stream", LITE
   ? (_req, res) => res.status(501).json({ error: "stream proxy disabled (lite mode)" })
   : streamProxy);
+
+// Per-quality options for direct-file plays (quality + sibling-audio
+// switching in the player). Pure HTTP only, so it works in LITE: the list
+// call fetches the source page once and parses its download buttons; the
+// resolve call runs the G-Direct flow for ONE option, lazily, only when
+// the viewer picks it (signed links may expire, so pre-resolving every
+// quality would waste free-tier time and go stale). Cache keys are the
+// source-page URL, not result_ids — a Render deploy just empties the
+// cache and the next call recomputes. Rate-limited per IP; at most 2
+// concurrent quality resolves globally.
+interface QualityPage { source: string; embedUrl: string | null; audioHint: string | null; options: QualityOption[] }
+const qPages = new TtlCache<QualityPage>(30 * 60_000);
+const qSources = new TtlCache<{ index: number; label: string; audio: string | null; url: string; seekable: boolean | null }>(15 * 60_000);
+let qActive = 0;
+const ipOf = (req: express.Request) => String(req.headers["x-forwarded-for"] || req.ip || "").split(",")[0].trim();
+
+const loadQualityPage = (url: string) => qPages.get(url, async () => {
+  const html = await fetchHtml(url);
+  return { source: url, embedUrl: vegamoviesEmbedUrlFromHtml(html) || null, audioHint: pageAudioHint(html), options: extractQualityOptions(html, url) };
+});
+
+app.get("/api/qualities", async (req, res) => {
+  const url = String(req.query.url || "");
+  if (!isSafePublicUrl(url)) return res.status(400).json({ error: "bad_url" });
+  if (!allowRequest(ipOf(req))) return res.status(429).json({ error: "rate_limited" });
+  try {
+    const p = await loadQualityPage(url);
+    res.set("Cache-Control", "public, max-age=600");
+    res.json({ source: p.source, embedUrl: p.embedUrl, audioHint: p.audioHint, options: p.options.map(toPublic) });
+  } catch (e: any) {
+    res.status(502).json({ error: "fetch_failed", detail: String(e?.message || e).slice(0, 200) });
+  }
+});
+
+app.get("/api/quality-source", async (req, res) => {
+  const url = String(req.query.url || "");
+  const i = Number(req.query.i);
+  if (!isSafePublicUrl(url) || !Number.isInteger(i) || i < 0) return res.status(400).json({ error: "bad_params" });
+  if (!allowRequest(ipOf(req))) return res.status(429).json({ error: "rate_limited" });
+  if (qActive >= 2) return res.set("Retry-After", "5").status(503).json({ error: "busy" });
+  qActive++;
+  try {
+    const out = await qSources.get(`${url}#${i}`, async () => {
+      const opt = (await loadQualityPage(url)).options[i];
+      if (!opt) throw Object.assign(new Error("no_such_option"), { code: 404 });
+      for (const inter of opt.interUrls.slice(0, 2)) {
+        const direct = await gdirectFromIntermediate(inter, url).catch(() => null);
+        if (direct) return { index: i, label: opt.label, audio: opt.audio, url: direct, seekable: await probeSeekable(direct) };
+      }
+      throw Object.assign(new Error("unresolved"), { code: 502 });
+    });
+    res.json(out);
+  } catch (e: any) {
+    res.status(e?.code === 404 ? 404 : 502).json({ error: String(e?.message || "failed") });
+  } finally {
+    qActive--;
+  }
+});
 
 // Multi-audio HLS: probe + background convert; player polls until ready.
 app.get("/api/hls-status", async (req, res) => {
