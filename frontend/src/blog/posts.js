@@ -33,6 +33,49 @@
 
 export const posts = [
 {
+    slug: "kpop-demon-hunters-golden-world-tour-2027-dates-tickets",
+    image: "https://consequence.net/wp-content/uploads/2026/11/kpop-demon-hunters-golden-world-2027-tour-poster.jpg",
+    imageAlt: "Official poster for the Netflix KPop Demon Hunters Golden World Tour, presented by Mastercard — HUNTR/X members Mira, Rumi and Zoey standing in front of a globe",
+    title: "KPop Demon Hunters Golden World Tour 2027: Dates, Cities and Ticket Sale Details",
+    description:
+      "KPop Demon Hunters Golden World Tour 2027: HUNTR/X play 61 arena shows in 35 cities — dates, venues, presale and ticket sale times.",
+    excerpt:
+      "Netflix and AEG Presents are taking HUNTR/X on the road: the KPop Demon Hunters Golden World Tour opens in Baltimore on June 5, 2027, with 61 arena shows announced across North America, the UK and Europe — and tickets go on sale November 20.",
+    date: "2026-11-14",
+    category: "Pop Culture",
+    sections: [
+      { type: "p", text: "The KPop Demon Hunters Golden World Tour is officially happening. Netflix and AEG Presents announced on Friday, November 13, 2026, that HUNTR/X are leaving the screen for the stage in June 2027. The first leg covers 35 cities and 61 performances across North America, the UK and Europe — with nearly 50 cities and more than 150 shows planned across 2027 and 2028." },
+      { type: "h2", text: "KPop Demon Hunters Golden World Tour Dates and Cities" },
+      { type: "p", text: "The tour kicks off on June 5, 2027, at CFG Bank Arena in Baltimore, Maryland, with two shows on opening day, including a matinee. The North American leg runs through August 14, stopping in Newark, Columbus, Chicago, Indianapolis, Hamilton in Ontario — the only Canadian date announced so far — Belmont Park, Pittsburgh, Charlotte, Atlanta, Orlando, Dallas, Phoenix, Los Angeles, Las Vegas, Oakland and Tacoma. Los Angeles gets three shows at Crypto.com Arena." },
+      { type: "p", text: "The European and UK leg begins on September 1, 2027, in Zurich and runs through October 23, with stops in Milan, Amsterdam, Vienna, Berlin, Hamburg, Copenhagen, Oslo, Cologne, Brussels, Paris, Dublin, Glasgow, Birmingham and Manchester, before closing with three shows at The O2 in London on October 22 and 23. Many dates include a matinee as well as an evening show." },
+      { type: "p", text: "Dates for Asia Pacific and Latin America are yet to be announced; those legs will bring the tour to nearly 50 cities and more than 150 performances in total across 2027 and 2028." },
+      { type: "h2", text: "KPop Demon Hunters Golden World Tour Tickets: Presale and Sale Dates" },
+      { type: "p", text: "Tickets go on sale in three waves, all at 10 a.m. local time. The Mastercard presale begins on Wednesday, November 18, followed by the FOR THE FANS presale on Thursday, November 19 — fans can register for that one now at kpopdemonhunterstour.com. General sale opens on Friday, November 20, via Ticketmaster. Eligible Mastercard World Elite and World Legend cardholders also get access to Preferred Tickets, including some of the best seats in the house, when general tickets go on sale." },
+      { type: "p", text: "A limited number of VIP experiences and packages will also be available, with reserved seats, on-stage photo opportunities, limited-edition memorabilia, preshow parties and custom merchandise. Trip.com has joined the tour as its official travel partner, offering ticket and travel bundles and presale access through its app." },
+      { type: "h2", text: "What the Golden World Tour Show Will Look Like" },
+      { type: "p", text: "The show is built around the songs from the film, with the animated HUNTR/X trio — Rumi, Mira and Zoey — interacting with the audience through cutting-edge performance technology that brings the characters to life on stage. The Saja Boys and Derpy Tiger will be part of the show too, alongside live-action performers, stunts, dance routines and the film's chart-topping soundtrack, including “Golden”, “How It's Done” and “Takedown”. Fans will even help HUNTR/X seal the Honmoon." },
+      { type: "p", text: "Creative direction is led by Amy Tinkham, a director and show designer with more than 25 years of experience in concerts, tours and large-scale live entertainment, whose credits include Disney's Descendants/Zombies tour, Cirque du Soleil's Songblazers and Aerosmith's Peace Out tour. Presented by Mastercard, the show is family-friendly — the official tour site says all ages will enjoy it." },
+      { type: "h2", text: "Why KPop Demon Hunters Is Getting a World Tour" },
+      { type: "p", text: "The film has become Netflix's most popular film of all time, and its music has refused to leave the charts. Netflix chief marketing officer Marian Lee said the film has spent 63 consecutive weeks in Netflix's Global Top 10, that “Golden” has passed 2 billion streams on Spotify, and that the soundtrack holds the record for the longest run at No. 1 on Billboard's Top Soundtracks chart. “This fandom was never about a single moment, and the Golden World Tour is how we keep it going,” Lee said." },
+      { type: "p", text: "“KPop Demon Hunters has become a global phenomenon, with characters and music that already mean so much to fans around the world,” said Rich Schaefer, AEG Presents' president of global touring. The announcement follows the launch of the film's immersive experience at Netflix House in Dallas this week." },
+      { type: "list", items: [
+        "Tour: KPop Demon Hunters Golden World Tour, presented by Mastercard; produced by Netflix and AEG Presents.",
+        "Starts: June 5, 2027, at CFG Bank Arena, Baltimore, Maryland (two shows, including a matinee).",
+        "Announced leg: 61 performances in 35 cities across North America, the UK and Europe, ending October 22–23, 2027, at The O2 in London.",
+        "Full run: nearly 50 cities and 150+ performances planned across 2027 and 2028; Asia Pacific and Latin America dates still to come.",
+        "Tickets: Mastercard presale November 18; FOR THE FANS presale November 19; general sale November 20 — all 10 a.m. local, via Ticketmaster.",
+        "Show: animated HUNTR/X via performance technology, plus the Saja Boys, Derpy Tiger, live-action performers, stunts and the film's songs; creative direction by Amy Tinkham.",
+      ] },
+      { type: "faq", items: [
+        { q: "When does the KPop Demon Hunters Golden World Tour start?", a: "The tour kicks off on June 5, 2027, at CFG Bank Arena in Baltimore. The announced leg runs through October 23, 2027, closing with three shows at The O2 in London." },
+        { q: "How many cities and shows are on the KPop Demon Hunters tour?", a: "The first announcement covers 61 performances in 35 cities across North America, the UK and Europe. Organisers plan nearly 50 cities and more than 150 performances in total across 2027 and 2028, with Asia Pacific and Latin America dates still to come." },
+        { q: "When do KPop Demon Hunters Golden World Tour tickets go on sale?", a: "Mastercard presale starts Wednesday, November 18, the FOR THE FANS presale starts Thursday, November 19, and general sale opens Friday, November 20 — all at 10 a.m. local time, via Ticketmaster." },
+        { q: "Will the original singers from KPop Demon Hunters perform on the tour?", a: "Netflix has not confirmed whether the film's vocalists will take part. The show is built around the animated HUNTR/X characters brought to life with performance technology, plus live-action performers." },
+        { q: "Is the KPop Demon Hunters Golden World Tour family-friendly?", a: "Yes. The official tour site says all ages of fandom will enjoy the show, and many dates include a matinee performance." },
+      ] },
+    ],
+  },
+{
     slug: "spacex-starship-flight-15-booster-explodes-catch-aborted-november-2026",
     image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Starship_Booster_Return_on_Final_Approach_%2854063904149%29.jpg/1920px-Starship_Booster_Return_on_Final_Approach_%2854063904149%29.jpg",
     imageAlt: "A SpaceX Super Heavy booster descends towards the launch tower for a Mechazilla chopstick catch — the manoeuvre aborted on Starship Flight 15 (SpaceX, via Wikimedia Commons)",
