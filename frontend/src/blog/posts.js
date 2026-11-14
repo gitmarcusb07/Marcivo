@@ -33,6 +33,47 @@
 
 export const posts = [
 {
+    slug: "spacex-starship-flight-15-booster-explodes-catch-aborted-november-2026",
+    image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Starship_Booster_Return_on_Final_Approach_%2854063904149%29.jpg/1920px-Starship_Booster_Return_on_Final_Approach_%2854063904149%29.jpg",
+    imageAlt: "A SpaceX Super Heavy booster descends towards the launch tower for a Mechazilla chopstick catch — the manoeuvre aborted on Starship Flight 15 (SpaceX, via Wikimedia Commons)",
+    title: "SpaceX Starship Flight 15: Super Heavy Booster Explodes After Tower Catch Aborted, Ship Reaches Orbit",
+    description:
+      "SpaceX Starship Flight 15: the Super Heavy booster exploded over the Gulf of Mexico after its tower catch was aborted, while Starship reached orbit.",
+    excerpt:
+      "SpaceX's Starship Flight 15 put its upper stage into orbit for only the second time, but the Super Heavy booster was diverted from its tower catch and exploded over the Gulf of Mexico.",
+    date: "2026-11-14",
+    category: "Tech",
+    sections: [
+      { type: "p", text: "SpaceX Starship Flight 15 ended in a split result on Friday, November 13, 2026: the Starship upper stage reached Earth orbit for only the second time ever, but the Super Heavy booster was diverted from its planned tower catch and exploded in a fireball over the Gulf of Mexico. The flight lifted off from Starbase in Texas at 5:47 p.m. Eastern Time — 4:17 a.m. IST on Saturday, November 14." },
+      { type: "h2", text: "SpaceX Starship Flight 15 Booster Explodes After Catch Aborted" },
+      { type: "p", text: "The trouble came minutes into the flight. After a clean liftoff on 33 Raptor engines and a planned hot-staging separation about two and a half minutes after launch, the 236-foot (72-metre) Super Heavy booster flipped around and began its return burn. About six minutes after liftoff, flight controllers ordered a diversion. Instead of descending into the Mechazilla tower's giant chopstick arms, the booster was sent offshore over the Gulf of Mexico, where it hovered briefly and then exploded in a fireball moments before hitting the water, as residual propellants ignited." },
+      { type: "p", text: "SpaceX has not said what went wrong. \"Not sure right now why we weren't able to bring it back,\" the company said on its launch webcast. A catch was never the only option — every flight plan carries a splashdown fallback in case controllers decide a return is unsafe. A successful catch would have been the first recovery of a Version 3 Super Heavy. The company has previously caught three earlier-generation boosters with the tower arms and flown two of them again." },
+      { type: "h2", text: "Starship Reaches Orbit and Deploys 26 Starlink Satellites" },
+      { type: "p", text: "The 171-foot Starship upper stage fired its engines, completed a second engine burn about 26 minutes after launch, and settled into low Earth orbit at an altitude of about 275 kilometres. \"We've got a nominal orbit insertion, so Starship now in orbit around Earth for the second time ever,\" SpaceX's Dan Huot said on the webcast. It was the second time a Starship has reached orbit, after Flight 14 on September 28. Flight 15 is also only the second Starship mission to carry operational Starlink satellites." },
+      { type: "p", text: "Starship began releasing its cargo of 26 Starlink V3 satellites about 36 minutes into the flight. The satellites are the latest generation of SpaceX's internet constellation, and deploying them from Starship is a key part of the test programme." },
+      { type: "h2", text: "What Happens Next: Starship's Own Catch Attempt on Saturday" },
+      { type: "p", text: "Starship is due to circle the Earth 14 times over more than 22 hours before coming home, with a deorbit burn scheduled for about 3:21 p.m. Eastern Time on Saturday and a first-ever tower catch attempt for the ship itself at about 4:17 p.m. Eastern — around 2:47 a.m. IST on Sunday, November 15. If it works, it will be the first recovery of a Starship upper stage." },
+      { type: "p", text: "SpaceX has said it will attempt the catch only if all the systems needed for the return are healthy. If anything looks wrong, the fallback is an early splashdown in the Pacific Ocean. Flight 14, the only previous Starship to reach orbit, ended that way in September: the upper stage splashed down intact into the Pacific before bursting into flames." },
+      { type: "h2", text: "Why Starship Flight 15 Matters" },
+      { type: "p", text: "Flight 15 is the 15th Starship test flight since 2023, built around a single idea: a fully reusable rocket system, with both stages returning to the same launch tower. Recovering the booster and the ship would mark a milestone in the decades-long pursuit of reusable rockets that cut the cost of reaching orbit." },
+      { type: "p", text: "Starship in orbit with a working satellite deployment is a real step forward — but until SpaceX can bring both stages home, the full reusability the programme promises remains unproven. Now the ship itself attempts on Saturday afternoon the catch the booster could not make." },
+      { type: "list", items: [
+        "Liftoff: 5:47 p.m. ET, Friday, November 13, 2026 (4:17 a.m. IST, Saturday, November 14), from Starbase, Texas.",
+        "Booster: Super Heavy, 236 feet tall, 33 Raptor engines. Catch aborted about 6 minutes after liftoff; diverted to the Gulf of Mexico and exploded. Reason not yet known.",
+        "Ship: reached low Earth orbit at about 275 km — only the second time Starship has reached orbit.",
+        "Payload: 26 Starlink V3 satellites deployed, starting about 36 minutes into the flight.",
+        "Next: ship catch attempt about 4:17 p.m. ET Saturday (2:47 a.m. IST Sunday), after 14 orbits and more than 22 hours in space.",
+      ] },
+      { type: "faq", items: [
+        { q: "What happened to the SpaceX Starship Flight 15 booster?", a: "The Super Heavy booster was diverted from its planned tower catch about six minutes after liftoff and sent to a splashdown point in the Gulf of Mexico, where it exploded in a fireball moments before hitting the water. SpaceX has not yet said what caused the diversion." },
+        { q: "Did Starship reach orbit on Flight 15?", a: "Yes. The Starship upper stage reached low Earth orbit at about 275 kilometres, only the second time a Starship has reached orbit, and deployed 26 Starlink V3 satellites." },
+        { q: "When is the Starship Flight 15 ship catch attempt?", a: "SpaceX plans a deorbit burn at about 3:21 p.m. Eastern Time on Saturday, with the first-ever tower catch attempt for the Starship upper stage at about 4:17 p.m. Eastern — around 2:47 a.m. IST on Sunday, November 15. The catch will only go ahead if all systems are healthy." },
+        { q: "Why was the booster catch aborted?", a: "SpaceX has not given a reason yet. The company said on its webcast it was not sure why it could not bring the booster back. Every flight plan includes a splashdown fallback for exactly this situation." },
+        { q: "Has SpaceX caught a Super Heavy booster before?", a: "Yes — SpaceX has caught three earlier-generation (V1) Super Heavy boosters with the launch tower's arms and reflown two of them. Flight 15 would have been the first recovery of a Version 3 booster." },
+      ] },
+    ],
+  },
+{
     slug: "faa-nationwide-ground-stop-november-2026-us-flights-grounded",
     image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Frontier_Airlines_jet_at_Phoenix_Sky_Harbor_gate_F6.jpg/1280px-Frontier_Airlines_jet_at_Phoenix_Sky_Harbor_gate_F6.jpg",
     imageAlt: "A commercial jet parked at a gate at a US airport at night — flights were held on the ground during the November 2026 FAA ground stop (Wikimedia Commons)",
