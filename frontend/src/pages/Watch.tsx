@@ -490,10 +490,10 @@ export default function Watch() {
         description="Pick a version and the player opens right in your browser — no account, no install."
         robots="noindex,follow"
       />
-      <div className="flex gap-4 items-start">
-        {d?.poster && <img src={d.poster} alt={headerTitle} className="w-24 rounded-lg bg-card" />}
+      <div className="mt-2 flex gap-4 items-start rounded-2xl border border-white/10 hero-glow px-4 py-4">
+        {d?.poster && <img src={d.poster} alt={headerTitle} className="w-24 rounded-lg bg-card ring-1 ring-white/20 shadow-xl" />}
         <div className="min-w-0">
-          <h1 className="font-display text-2xl break-words">{headerTitle}</h1>
+          <h1 className="font-display text-3xl md:text-4xl break-words">{headerTitle}</h1>
           {!!headerBadges.length && (
             <div className="flex flex-wrap gap-1 mt-1">
               {headerBadges.map((b) => (
@@ -501,7 +501,7 @@ export default function Watch() {
               ))}
             </div>
           )}
-          <p className="text-xs text-muted break-words">{epParam ? `${epParam} • ` : ""}{prettyVersion(versionTitle || exactTitle).title}</p>
+          <p className="text-xs text-muted break-words">{(video || embedUrl) ? (<><span className="text-netflix font-bold">▶ NOW PLAYING</span>{" • "}</>) : null}{epParam ? `${epParam} • ` : ""}{prettyVersion(versionTitle || exactTitle).title}</p>
         </div>
       </div>
 
@@ -547,13 +547,15 @@ export default function Watch() {
         </div>
       )}
 
+      {(video || embedUrl || busy || err || switchErr || (qData?.options?.length ?? 0) > 0) && (
+      <div className="mt-4 rounded-2xl border border-white/10 bg-black/40 overflow-hidden">
       {!!video && !!qData?.embedUrl && (
-        <div className="mt-4 bg-card border border-white/10 rounded-xl px-4 py-3">
+        <div className="px-4 py-3 border-b border-white/5">
           <button type="button" className="px-4 py-1.5 rounded-full font-semibold border border-white/20" onClick={switchToEmbed}>🌐 Source player</button>
         </div>
       )}
       {!!switchErr && !!embedUrl && !video && (
-        <div role="alert" className="text-red-400 text-sm mt-2">{switchErr}</div>
+        <div role="alert" className="text-red-400 text-sm px-4 py-2">{switchErr}</div>
       )}
       {!!qData?.options?.length && !video && (() => {
         const opts = qData?.options ?? [];
@@ -562,7 +564,9 @@ export default function Watch() {
         const chip = (on: boolean) =>
           `px-4 py-1.5 rounded-full font-semibold border ${on ? "bg-netflix border-netflix" : "border-white/20"}`;
         return (
-          <div className="mt-4 bg-card border border-white/10 rounded-xl px-4 py-3">
+          <div className="px-4 py-3 border-b border-white/5">
+            <div className="font-display text-lg tracking-wide mb-1">Choose quality &amp; audio</div>
+            <div className="text-xs text-muted mb-3">Only the real options for this file are listed — pick one before or during play.</div>
             <div className="text-sm text-white/70 mb-2">Quality</div>
             <div className="flex flex-wrap gap-2">
               {opts.map((o) => (
@@ -598,7 +602,7 @@ export default function Watch() {
         );
       })()}
       {busy && (
-        <div className="mt-4 bg-card border border-white/10 rounded-xl p-4">
+        <div className="px-4 py-4 border-b border-white/5">
           <div className="flex items-center gap-3">
             <div className="w-6 h-6 border-2 border-white/20 border-t-netflix rounded-full animate-spin" />
             <div className="font-semibold">{statusLine || STAGES[stage]}</div>
@@ -626,7 +630,7 @@ export default function Watch() {
 
       {embedUrl && !fatal && (
         <>
-          <div className="mt-4 relative w-full overflow-hidden rounded-xl bg-black" style={{ aspectRatio: "16 / 9" }}>
+          <div className="relative w-full overflow-hidden bg-black" style={{ aspectRatio: "16 / 9" }}>
             <iframe
               src={embedUrl}
               title={versionTitle || "Player"}
@@ -675,8 +679,10 @@ export default function Watch() {
               upgradeUrl={upgradeUrl}
             />
           </div>
-          {hlsNote && <p className="text-xs text-amber-300/90 mt-2">🎧 {hlsNote}</p>}
+          {hlsNote && <p className="text-xs text-amber-300/90 mt-2 px-4 pb-3">🎧 {hlsNote}</p>}
         </>
+      )}
+      </div>
       )}
       {fatal && (
         <div className="mt-3 bg-card border border-netflix/50 rounded-xl p-4">

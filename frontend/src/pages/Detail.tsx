@@ -154,25 +154,39 @@ export default function Detail() {
           <span className="text-gray-300 truncate">{seoName || "Title"}</span>
         </nav>
       </div>
-      <div className="mt-2 flex flex-col md:flex-row gap-4">
-        <img src={d.poster} alt={d.title} className="w-40 md:w-56 rounded-xl bg-card" />
-        <div className="flex-1 min-w-0">
-          <h1 className="font-display text-3xl">{d.title}</h1>
-          <div className="text-muted text-sm mt-1">{[d.year, d.rating ? `★ ${d.rating}` : "", (d.genres || []).join(", ")].filter(Boolean).join(" • ")}</div>
-          <p className="text-sm mt-3 text-gray-200">{d.overview}</p>
-          {d.cast?.length > 0 && <p className="text-xs text-muted mt-2">Cast: {d.cast.join(", ")}</p>}
-          <div className="flex gap-2 mt-4">
-            <button
-              onClick={() => { const n = toggleInList("mylist", `${kind}:${id}`); setSaved(n.includes(`${kind}:${id}`)); }}
-              className={`px-4 py-2 rounded-lg border ${saved ? "bg-netflix border-netflix" : "bg-card border-white/15"}`}
-            >{saved ? "✓ My List" : "+ My List"}</button>
+      <div className="relative mt-2 rounded-2xl overflow-hidden hero-glow border border-white/10">
+        {d.poster && (<img src={d.poster} alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-25 blur-md scale-110" />)}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+        <div className="relative flex flex-col md:flex-row gap-4 p-4 md:p-6">
+          <img src={d.poster} alt={d.title} className="w-40 md:w-56 rounded-xl bg-card shadow-2xl ring-1 ring-white/20" />
+          <div className="flex-1 min-w-0">
+            <h1 className="font-display text-4xl md:text-5xl">{d.title}</h1>
+            {(d.genres || []).length ? (
+              <div className="flex flex-wrap gap-2 mt-2">
+                {d.year ? <span className="px-2 py-0.5 rounded-full bg-white/10 text-xs font-semibold">{d.year}</span> : null}
+                {d.rating ? <span className="px-2 py-0.5 rounded-full bg-white/10 text-xs font-semibold">★ {d.rating}</span> : null}
+                {(d.genres || []).map((g: string) => (
+                  <span key={g} className="px-2 py-0.5 rounded-full bg-white/10 text-xs font-semibold">{g}</span>
+                ))}
+              </div>
+            ) : (
+              <div className="text-muted text-sm mt-1">{[d.year, d.rating ? `★ ${d.rating}` : "", (d.genres || []).join(", ")].filter(Boolean).join(" • ")}</div>
+            )}
+            <p className="text-sm mt-3 text-gray-200">{d.overview}</p>
+            {d.cast?.length > 0 && <p className="text-xs text-muted mt-2">Cast: {d.cast.join(", ")}</p>}
+            <div className="flex gap-2 mt-4">
+              <button
+                onClick={() => { const n = toggleInList("mylist", `${kind}:${id}`); setSaved(n.includes(`${kind}:${id}`)); }}
+                className={`px-4 py-2 rounded-lg border ${saved ? "bg-netflix border-netflix" : "bg-card border-white/15"}`}
+              >{saved ? "✓ My List" : "+ My List"}</button>
+            </div>
           </div>
-        </div>
 
-        {/* Tall skyscraper rail beside the poster + details. */}
-        <aside className="hidden xl:block w-[176px] shrink-0 sticky top-20">
-          <AdSlot name="detail_sidebar" />
-        </aside>
+          {/* Tall skyscraper rail beside the poster + details. */}
+          <aside className="hidden xl:block w-[176px] shrink-0 sticky top-20">
+            <AdSlot name="detail_sidebar" />
+          </aside>
+        </div>
       </div>
 
       {/* Seasons & Episodes (series only) */}
@@ -213,7 +227,10 @@ export default function Detail() {
       )}
 
       {/* Exact versions of this title — one button per quality, like the site */}
-      <h2 className="font-display text-2xl mt-6">Available versions{sitesScope && sitesScope !== d.title ? ` — ${sitesScope}` : ""}</h2>
+      <h2 className="font-display text-2xl mt-6">Available versions{sites?.results?.length ? ` — ${sites.results.length} ${sites.results.length === 1 ? "version" : "versions"}` : ""}{sitesScope && sitesScope !== d.title ? ` — ${sitesScope}` : ""}</h2>
+      {sites?.results?.length ? (
+        <p className="text-xs text-muted mt-1">Tap a quality to play that exact file, or tap an audio to play that language.</p>
+      ) : null}
       {!sites && <div className="skeleton h-12 mt-2" />}
       {sites && sites.status !== "ok" && (
         <p className="text-muted text-sm mt-2">
@@ -260,7 +277,7 @@ export default function Detail() {
               onMouseEnter={() => prewarm(r)}
               onFocus={() => prewarm(r)}
               onPointerDown={() => prewarm(r)}
-              className="text-left bg-card border border-netflix/30 rounded-xl px-4 py-3 active:border-netflix flex items-center gap-3"
+              className="text-left bg-card border border-netflix/30 rounded-xl px-4 py-3 active:border-netflix flex items-center gap-3 hover:border-netflix/70 hover:bg-white/5 transition-colors"
             >
               {!!badge && (
                 <span className="shrink-0 px-3 py-1.5 rounded-lg bg-netflix font-black text-sm tracking-wide">{badge}</span>
@@ -286,8 +303,9 @@ export default function Detail() {
                     ))}
                   </span>
                 )}
-                <span className="text-xs text-muted mt-1 block">{r.site_name}{r.origin && r.origin !== "mixed" ? ` • ${r.origin}` : ""} • tap to play</span>
+                <span className="text-xs text-muted mt-1 block">{r.site_name}{r.origin && r.origin !== "mixed" ? ` • ${r.origin}` : ""} • tap a quality to play</span>
               </span>
+              <span className="shrink-0 w-9 h-9 rounded-full bg-netflix flex items-center justify-center text-sm font-black" aria-hidden="true">▶</span>
             </button>
           );
         })}

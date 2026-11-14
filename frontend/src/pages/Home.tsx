@@ -92,9 +92,23 @@ export default function Home() {
             url: `${SITE_URL}/`,
             logo: { "@type": "ImageObject", url: `${SITE_URL}/icon-512.png`, width: 512, height: 512 },
           },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              { "@type": "Question", name: "Is it free to watch movies on Marcivo?", acceptedAnswer: { "@type": "Answer", text: "Yes. Marcivo is free to use and needs no account: search a title, compare its available versions and press play." } },
+              { "@type": "Question", name: "Can I download movies from Marcivo?", acceptedAnswer: { "@type": "Answer", text: "Marcivo lines up every available version of a title — quality, audio and size — so you can pick the file that fits and save or stream it in your browser." } },
+              { "@type": "Question", name: "Can I watch web series and TV shows online free?", acceptedAnswer: { "@type": "Answer", text: "Yes — search any web series or TV show, open its page and pick an episode to play, free and without an account." } },
+              { "@type": "Question", name: "Can I watch anime online free?", acceptedAnswer: { "@type": "Answer", text: "Yes — anime has its own tab and section, with seasons and episodes lined up the same way." } },
+              { "@type": "Question", name: "Does Marcivo have Hindi dubbed and Bollywood movies?", acceptedAnswer: { "@type": "Answer", text: "Yes — the Bollywood section lists Hindi and Hindi-dubbed titles with their available audio versions." } },
+            ],
+          },
         ]}
       />
-      <h1 className="sr-only">Watch Movies Online Free — Movies, Web Series and Anime on Marcivo</h1>
+      <h1 className="text-center mt-2 mb-3">
+        <span className="block font-display text-4xl md:text-5xl text-white">Watch Movies Online Free</span>
+        <span className="block text-base md:text-lg text-muted mt-1">Movies, Web Series &amp; Anime on Marcivo</span>
+      </h1>
       {/* Content column + tall skyscraper rail. The rail is sticky so the ad
           stays in view while the rows scroll past it. */}
       <div className="flex gap-6 items-start">
@@ -193,6 +207,33 @@ export default function Home() {
           {" · "}
           <Link to="/upcoming/anime" className="hover:text-white underline decoration-white/30">Upcoming anime</Link>
         </div>
+      )}
+
+      {/* FAQ — visible keyword copy, mirrored in the FAQPage JSON-LD in <Seo>. */}
+      {!loading && !err && (
+        <section className="mt-8">
+          <h2 className="font-display text-2xl">Watch movies, shows &amp; anime — questions</h2>
+          <div className="mt-4 bg-card border border-white/10 rounded-xl px-4 py-3">
+            <h3 className="font-bold text-sm">Is it free to watch movies on Marcivo?</h3>
+            <p className="text-sm text-gray-300 mt-1">Yes. Marcivo is free to use and needs no account: search a title, compare its available versions and press play.</p>
+          </div>
+          <div className="mt-4 bg-card border border-white/10 rounded-xl px-4 py-3">
+            <h3 className="font-bold text-sm">Can I download movies from Marcivo?</h3>
+            <p className="text-sm text-gray-300 mt-1">Marcivo lines up every available version of a title — quality, audio and size — so you can pick the file that fits and save or stream it in your browser. See <Link to="/download-movies" className="hover:text-white underline decoration-white/30">Download movies &amp; series</Link>.</p>
+          </div>
+          <div className="mt-4 bg-card border border-white/10 rounded-xl px-4 py-3">
+            <h3 className="font-bold text-sm">Can I watch web series and TV shows online free?</h3>
+            <p className="text-sm text-gray-300 mt-1">Yes — search any <Link to="/category/series" className="hover:text-white underline decoration-white/30">web series</Link> or TV show, open its page and pick an episode to play, free and without an account.</p>
+          </div>
+          <div className="mt-4 bg-card border border-white/10 rounded-xl px-4 py-3">
+            <h3 className="font-bold text-sm">Can I watch anime online free?</h3>
+            <p className="text-sm text-gray-300 mt-1">Yes — <Link to="/?tab=anime" className="hover:text-white underline decoration-white/30">anime</Link> has its own tab and section, with seasons and episodes lined up the same way.</p>
+          </div>
+          <div className="mt-4 bg-card border border-white/10 rounded-xl px-4 py-3">
+            <h3 className="font-bold text-sm">Does Marcivo have Hindi dubbed and Bollywood movies?</h3>
+            <p className="text-sm text-gray-300 mt-1">Yes — the <Link to="/category/bollywood" className="hover:text-white underline decoration-white/30">Bollywood</Link> section lists Hindi and Hindi-dubbed titles with their available audio versions.</p>
+          </div>
+        </section>
       )}
 
       {/* Native banner closes out the home content column, on both tabs. */}
