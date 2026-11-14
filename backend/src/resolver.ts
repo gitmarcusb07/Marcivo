@@ -1,6 +1,7 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
 import { LITE } from "./lite.js";
+import { siteBrowserHeaders } from "./siteSearch.js";
 
 // Optimized resolver: fast HTTP path first, persistent Playwright only when needed.
 // Validation rejects tracking pixels, theme assets and intermediate hosts.
@@ -412,24 +413,36 @@ export function vegamoviesEmbedUrlFromHtml(html: string): string | null {
     Returns null when the page has no Watch Online button or the embed
     doesn't respond — the caller falls through to the download lanes. */
 async function vegamoviesEmbed(sourceUrl: string, job: Job): Promise<string | null> {
-  const ua = process.env.SITE_USER_AGENT || "Mozilla/5.0 (Windows NT 10.0; Win64; x64)";
+  // Same browser-like headers as siteSearch.searchOne; a bare UA gets Cloudflare-challenged on Render.
+  const miss = (host: string, status: unknown, ct: unknown, body: unknown): null => {
+    const snip = (typeof body === "string" ? body : "")
+      .replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, " ")
+      .replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim().slice(0, 160);
+    console.log(`[resolve] vegamovies embed miss: ${host} status=${status} ct=${String(ct || "")} body=${snip}`);
+    return null;
+  };
+  const host = hostOf(sourceUrl);
   let html = "";
+  let status: unknown = 0;
+  let ct: unknown = "";
   try {
-    const page = await axios.get(sourceUrl, { timeout: 15000, headers: { "User-Agent": ua }, maxRedirects: 5, validateStatus: () => true });
-    if (page.status >= 400 || typeof page.data !== "string") return null;
+    const page = await axios.get(sourceUrl, { timeout: 15000, headers: siteBrowserHeaders(new URL(sourceUrl).origin + "/"), maxRedirects: 5, validateStatus: () => true });
+    status = page.status;
+    ct = page.headers?.["content-type"];
+    if (page.status >= 400 || typeof page.data !== "string") return miss(host, status, ct, page.data);
     html = page.data;
-  } catch { return null; }
+  } catch (e: any) { return miss(host, "err", "", String(e?.code || "request-failed")); }
   const embedUrl = vegamoviesEmbedUrlFromHtml(html);
-  if (!embedUrl) return null;
+  if (!embedUrl) return miss(host, status, ct, html);
 
   // Reachability check only: the player shell is generic, so this catches
   // outages — title/episode availability is decided inside the embed at
   // playback time (nothing here is a captured stream URL or token).
   job.stage = "validating";
   try {
-    const er = await axios.get(embedUrl, { timeout: 12000, headers: { "User-Agent": ua, Referer: sourceUrl }, maxRedirects: 5, validateStatus: () => true });
-    if (er.status >= 400 || typeof er.data !== "string" || !/<video/i.test(er.data)) return null;
-  } catch { return null; }
+    const er = await axios.get(embedUrl, { timeout: 12000, headers: siteBrowserHeaders(sourceUrl), maxRedirects: 5, validateStatus: () => true });
+    if (er.status >= 400 || typeof er.data !== "string" || !/<video/i.test(er.data)) return miss(hostOf(embedUrl), er.status, er.headers?.["content-type"], er.data);
+  } catch (e: any) { return miss(hostOf(embedUrl), "err", "", String(e?.code || "request-failed")); }
   job.embed = true;
   job.stage = "ready";
   console.log(`[resolve] vegamovies embed ready: ${hostOf(sourceUrl)}`);

@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
 import { tmdbSearch } from "./tmdb.js";
-import { liteFlag } from "./lite.js";
+import { liteFlag, LITE } from "./lite.js";
 import {
   normalizeQuery, parseMeta, contentId, resultId, matchScore,
   priorityRank, groupForPriority, ContentGroup, groupByContent,
@@ -484,19 +484,7 @@ async function searchOne(site: SiteCfg, q: string) {
   try {
     const r = await axios.get(url, {
       timeout,
-      headers: {
-        // Full browser-like headers: Cloudflare challenges datacenter IPs
-        // (Render) that send a bare UA; a complete header set raises the
-        // bot score enough to get the real search page back.
-        "User-Agent": process.env.SITE_USER_AGENT || "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-        Accept: "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8",
-        "Accept-Language": "en-US,en;q=0.9",
-        Referer: site.base_url + "/",
-        "Upgrade-Insecure-Requests": "1",
-        "Sec-Fetch-Site": "same-origin",
-        "Sec-Fetch-Mode": "navigate",
-        "Sec-Fetch-Dest": "document",
-      },
+      headers: siteBrowserHeaders(site.base_url + "/"),
       maxRedirects: 5,
       validateStatus: () => true,
     });
@@ -723,6 +711,56 @@ export async function searchSites(rawQuery: string, onlySiteIds?: number[], prio
 // the app then shows one button per quality, exactly like the site.
 
 const VARIANT_HOSTS = /nexdrive|genxfm|vcloud|fastdl|dl\.php|gdtot|dropgalaxy|filepress|hubdrive|megaop/i;
+
+/** Browser-like headers (commit 07c30fe) that pass Cloudflare from Render's datacenter IP.
+ *  Shared by searchOne/expandOne here and vegamoviesEmbed in resolver.ts. */
+export function siteBrowserHeaders(referer: string): Record<string, string> {
+  return {
+    "User-Agent": process.env.SITE_USER_AGENT || "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    Accept: "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+    Referer: referer,
+    "Upgrade-Insecure-Requests": "1",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Dest": "document",
+  };
+}
+
+// Variant hosts that only resolve through the Playwright lanes (disabled in LITE mode).
+const BROWSER_ONLY_HOSTS = /nexdrive|genxfm|vcloud/i;
+export function liteSkipsVariant(url: string, lite: boolean = LITE): boolean {
+  return lite && BROWSER_ONLY_HOSTS.test(url);
+}
+
+// Mirrors resolver.ts isVegamovies() + vegamoviesEmbedUrlFromHtml(). It is inlined because
+// resolver.ts imports this module, so importing it back would be a cycle. Keep the rules in sync.
+function vmEnvHosts(name: string, dflt: string): string[] {
+  return (process.env[name] || dflt).split(",").map((s) => s.trim().toLowerCase()).filter(Boolean);
+}
+function vmHostIn(u: string, hosts: string[]): boolean {
+  try {
+    const h = new URL(u).hostname.toLowerCase();
+    return hosts.some((d) => h === d || h.endsWith("." + d));
+  } catch { return false; }
+}
+export function hasVegamoviesWatchOnline(baseUrl: string, html: string): boolean {
+  if (!vmHostIn(baseUrl, vmEnvHosts("WATCH_VEGAMOVIES_HOSTS", "vegamovies.lease"))) return false;
+  const playdrive = vmEnvHosts("WATCH_PLAYDRIVE_HOSTS", "playdrive.vip");
+  const $ = cheerio.load(html);
+  let found = false;
+  $("a[href]").each((_, el) => {
+    if (found) return false;
+    const text = String($(el).text() || "").replace(/\s+/g, " ").trim();
+    if (!/watch online/i.test(text)) return;
+    const href = String($(el).attr("href") || "").trim();
+    try {
+      const u = new URL(href);
+      if (vmHostIn(href, playdrive) && /^\/e\/[A-Za-z0-9_-]+\/?$/.test(u.pathname)) found = true;
+    } catch { /* relative/other hrefs never count */ }
+  });
+  return found;
+}
 const QUALITY_RE = /\b(2160p|1080p|720p|480p|360p|4K)\b/i;
 
 function parseQuality(t: string): string {
@@ -759,7 +797,7 @@ export async function expandOne(
   try {
     const r = await axios.get(base.url, {
       timeout: 12000,
-      headers: { "User-Agent": process.env.SITE_USER_AGENT || "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" },
+      headers: siteBrowserHeaders(new URL(base.url).origin + "/"),
       maxRedirects: 5,
       validateStatus: () => true,
     });
@@ -775,6 +813,7 @@ export async function expandOne(
     if (!VARIANT_HOSTS.test(raw)) return;
     let abs = "";
     try { abs = new URL(raw, base.url).toString(); } catch { return; }
+    if (liteSkipsVariant(abs)) return; // nexdrive/genxfm/vcloud need browser lanes; can never play in LITE
     if (seenUrl.has(abs)) return;
     seenUrl.add(abs);
     const vt = nearbyVariantTitle($, el);
@@ -795,6 +834,26 @@ export async function expandOne(
       quality: quality || "HD",
     });
   });
+  // Prepend the source's own "Watch Online" player. Resolving base.url takes the
+  // vegamoviesEmbed lane in runPipeline, which works in LITE mode.
+  if (hasVegamoviesWatchOnline(base.url, html)) {
+    const meta = parseMeta(base.title);
+    const year = meta.year || base.year || "";
+    const type = String(base.type || base.kind || "movie");
+    const quality = parseQuality(base.title);
+    const title = quality && !base.title.toLowerCase().includes(String(quality).toLowerCase()) ? `${base.title} ${quality}` : base.title;
+    const rid = resultId(base.site_id, base.url);
+    const cid = contentId(type, title, year || undefined, meta.season, meta.episode);
+    const embedRow = {
+      ...base,
+      title, url: base.url, source_url: base.url,
+      year, result_id: rid, source_result_id: rid, content_id: cid,
+      quality: quality || "HD",
+      // Same match as the download rows but a higher score, so it sorts first in expandExactVariants.
+      score: Number((base as any).score ?? 0) + 1,
+    };
+    out.unshift(embedRow);
+  }
   return out;
 }
 
